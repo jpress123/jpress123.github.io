@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Joseph Press, PhD â Strategic Fore sight, AI Collaboration, AI Transformation</title>
-<meta name="description" content="Prof. Joseph Press â advisor, author, and educator helping organizations become future-ready through strategic foresight, AI-human collaboration for innovation, and AI transformation for integration.">
+<title>Joseph Press, PhD — Strategic Foresight, AI Collaboration, AI Transformation</title>
+<meta name="description" content="Prof. Joseph Press — advisor, author, and educator helping organizations become future-ready through strategic foresight, AI-human collaboration for innovation, and AI transformation for integration.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -147,103 +147,95 @@
     margin-bottom: 3rem; line-height: 1.7;
   }
 
-  /* DOMAINS */
-  .domains-section { background: var(--white); }
-  .domain {
+  /* CAPABILITIES */
+  .capabilities-section { background: var(--white); }
+  .capability {
     margin-bottom: 3.5rem; padding-bottom: 3.5rem;
     border-bottom: 1px solid var(--pale);
   }
-  .domain:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
-  .domain-header {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
-    margin-bottom: 1.5rem;
-  }
-  .domain-left {}
-  .domain-number {
+  .capability:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+  .capability-number {
     font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em;
     text-transform: uppercase; color: var(--light); margin-bottom: 0.6rem;
   }
-  .domain-title {
+  .capability-title {
     font-family: 'Playfair Display', serif;
     font-size: 1.5rem; font-weight: 600; color: var(--navy);
     margin-bottom: 0.3rem; line-height: 1.3;
   }
-  .domain-subtitle {
+  .capability-subtitle {
     font-size: 0.92rem; font-weight: 600; color: var(--accent);
     margin-bottom: 1rem; font-style: italic;
   }
-  .domain-text {
+  .capability-text {
     font-size: 0.92rem; color: var(--medium); line-height: 1.7;
+    margin-bottom: 1rem;
   }
-  .domain-right {
-    display: flex; flex-direction: column; gap: 0.4rem; justify-content: center;
+  .capability-text em {
+    font-style: italic; font-weight: 600;
   }
-  .domain-experience {
-    font-size: 0.85rem; color: var(--medium); line-height: 1.5;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #f1f5f9;
+  .capability-keywords {
+    font-size: 0.85rem; color: var(--medium); line-height: 1.6;
+    margin-bottom: 0.75rem; padding: 0.75rem 0;
   }
-  .domain-experience:last-child { border-bottom: none; }
-  .domain-experience strong { color: var(--navy); font-weight: 600; }
-  .domain-experience .org { color: var(--light); }
-  .domain-frameworks {
-    margin-top: 1rem;
-    font-size: 0.82rem; color: var(--light); line-height: 1.6;
-    padding: 1rem; background: #f8fafc; border-radius: 8px;
+  .keyword-tag {
+    display: inline-block;
+    font-size: 0.75rem; font-weight: 600; letter-spacing: 0.03em;
+    padding: 0.3rem 0.65rem; border-radius: 16px;
+    background: #f1f5f9; color: var(--slate);
+    margin-right: 0.5rem; margin-bottom: 0.5rem;
   }
-  .domain-frameworks strong { color: var(--medium); font-weight: 600; }
+  .capability-citation {
+    font-size: 0.85rem; color: var(--light); font-style: italic;
+    padding-top: 0.5rem;
+  }
 
-  /* BOOKS */
-  .books-section { background: var(--bg); }
-  .books-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.5rem; }
-  .book-card { text-align: left; }
-  .book-cover {
-    width: 100%; aspect-ratio: 2/3;
-    border-radius: 6px; margin-bottom: 0.75rem;
-    display: flex; align-items: center; justify-content: center;
-    padding: 1rem;
+  /* ORGANIZATIONAL EXPERIENCE */
+  .experience-section { background: var(--bg); }
+  .experience-table {
+    width: 100%; border-collapse: collapse; margin-top: 1.5rem;
   }
-  .book-cover-text {
-    color: rgba(255,255,255,0.9); font-size: 0.82rem;
-    font-weight: 600; text-align: center; line-height: 1.35;
+  .experience-table th {
+    background: var(--navy); color: var(--white);
+    padding: 1rem; text-align: left;
+    font-size: 0.9rem; font-weight: 600;
+    border: 1px solid var(--pale);
   }
-  .book-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 0.9rem; font-weight: 600; color: var(--navy); margin-bottom: 0.2rem;
+  .experience-table td {
+    padding: 0.85rem 1rem;
+    font-size: 0.88rem; color: var(--medium);
+    border: 1px solid var(--pale);
+    vertical-align: top;
   }
-  .book-meta { font-size: 0.75rem; color: var(--light); margin-bottom: 0.3rem; }
-  .book-desc { font-size: 0.78rem; color: var(--medium); line-height: 1.55; }
+  .experience-table tr:nth-child(even) td {
+    background: var(--white);
+  }
+  .experience-table tr:nth-child(odd) td {
+    background: #f8fafc;
+  }
 
-  /* ENGAGEMENTS */
-  .engagements-section { background: var(--white); }
-  .engagements-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-  .engagement-card {
-    padding: 2rem; border: 1px solid var(--pale); border-radius: 10px;
-    text-align: center; transition: border-color 0.2s, box-shadow 0.2s;
-  }
-  .engagement-card:hover { border-color: #b0c4de; box-shadow: 0 4px 16px rgba(0,0,0,0.04); }
-  .engagement-title {
-    font-size: 1.05rem; font-weight: 600; color: var(--navy); margin-bottom: 0.75rem;
-  }
-  .engagement-text { font-size: 0.88rem; color: var(--medium); line-height: 1.65; }
-
-  /* CREDENTIALS */
-  .credentials-section { background: var(--bg); }
-  .credentials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
-  .credential-group h3 {
+  /* ABOUT ME */
+  .about-section { background: var(--white); }
+  .about-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
+  .about-group h3 {
     font-size: 0.82rem; font-weight: 700; letter-spacing: 0.08em;
     text-transform: uppercase; color: var(--slate); margin-bottom: 0.75rem;
   }
-  .credential-item {
+  .about-item {
     font-size: 0.87rem; color: var(--medium); margin-bottom: 0.5rem; line-height: 1.5;
   }
-  .credential-item strong { color: var(--navy); font-weight: 600; }
+  .about-item strong { color: var(--navy); font-weight: 600; }
+  .about-item a {
+    color: var(--accent); text-decoration: none; font-weight: 500;
+  }
+  .about-item a:hover { text-decoration: underline; }
 
   /* CONTACT */
   .contact-section { background: var(--navy); color: var(--white); text-align: center; }
   .contact-section .section-label { color: rgba(255,255,255,0.5); }
   .contact-section .section-title { color: var(--white); }
   .contact-section .section-intro { color: rgba(255,255,255,0.7); margin: 0 auto 2.5rem; }
+  .contact-extra { color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 2rem; }
   .contact-links { display: flex; justify-content: center; gap: 1.2rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
   .contact-link {
     color: rgba(255,255,255,0.8); text-decoration: none;
@@ -281,10 +273,9 @@
     .hero { grid-template-columns: 1fr; gap: 2rem; padding-top: 7rem; }
     .hero-photo { width: 200px; height: 240px; margin: 0 auto; order: -1; }
     .hero-text h1 { font-size: 2rem; }
-    .domain-header { grid-template-columns: 1fr; }
-    .books-grid { grid-template-columns: repeat(2, 1fr); }
-    .engagements-grid { grid-template-columns: 1fr; }
-    .credentials-grid { grid-template-columns: 1fr; }
+    .about-grid { grid-template-columns: 1fr; }
+    .experience-table { font-size: 0.8rem; }
+    .experience-table th, .experience-table td { padding: 0.6rem 0.5rem; }
     .nav-links { display: none; }
   }
   .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
@@ -312,11 +303,13 @@
   body.zh span[data-lang="zh"] { display: inline; }
   body.zh span[data-lang="en"] { display: none; }
   /* Flex containers that use data-lang */
-  .hero-tags[data-lang="zh"], .hero-ctas[data-lang="zh"], .books-grid[data-lang="zh"], .engagements-grid[data-lang="zh"], .credentials-grid[data-lang="zh"], .contact-links[data-lang="zh"], .email-buttons[data-lang="zh"] { display: none; }
-  body.zh .hero-tags[data-lang="zh"], body.zh .hero-ctas[data-lang="zh"], body.zh .books-grid[data-lang="zh"], body.zh .engagements-grid[data-lang="zh"], body.zh .credentials-grid[data-lang="zh"], body.zh .contact-links[data-lang="zh"], body.zh .email-buttons[data-lang="zh"] { display: flex; }
-  body.zh .hero-tags[data-lang="en"], body.zh .hero-ctas[data-lang="en"], body.zh .books-grid[data-lang="en"], body.zh .engagements-grid[data-lang="en"], body.zh .credentials-grid[data-lang="en"], body.zh .contact-links[data-lang="en"], body.zh .email-buttons[data-lang="en"] { display: none; }
+  .hero-tags[data-lang="zh"], .hero-ctas[data-lang="zh"], .experience-table[data-lang="zh"], .about-grid[data-lang="zh"], .contact-links[data-lang="zh"], .email-buttons[data-lang="zh"] { display: none; }
+  body.zh .hero-tags[data-lang="zh"], body.zh .hero-ctas[data-lang="zh"], body.zh .contact-links[data-lang="zh"], body.zh .email-buttons[data-lang="zh"] { display: flex; }
+  body.zh .hero-tags[data-lang="en"], body.zh .hero-ctas[data-lang="en"], body.zh .contact-links[data-lang="en"], body.zh .email-buttons[data-lang="en"] { display: none; }
   /* Grid containers */
-  body.zh .books-grid[data-lang="zh"], body.zh .credentials-grid[data-lang="zh"] { display: grid; }
+  body.zh .about-grid[data-lang="zh"] { display: grid; }
+  body.zh .experience-table[data-lang="zh"] { display: table; }
+  .experience-table[data-lang="zh"] { display: none; }
 </style>
 </head>
 <body>
@@ -332,15 +325,14 @@
     </div>
     <div class="nav-right">
       <ul class="nav-links" id="navLinks">
-        <li><a href="#expertise"><span data-lang="en">Expertise</span><span data-lang="zh">ä¸ä¸é¢å</span></a></li>
-        <li><a href="#books"><span data-lang="en">Books</span><span data-lang="zh">èä½</span></a></li>
-        <li><a href="#engagements"><span data-lang="en">Work With Me</span><span data-lang="zh">åä½æ¹å¼</span></a></li>
-        <li><a href="#credentials"><span data-lang="en">Background</span><span data-lang="zh">èæ¯</span></a></li>
-        <li><a href="#contact"><span data-lang="en">Contact</span><span data-lang="zh">èç³»</span></a></li>
+        <li><a href="#capabilities"><span data-lang="en">Five AI Capabilities</span><span data-lang="zh">五大AI能力</span></a></li>
+        <li><a href="#experience"><span data-lang="en">Organizational Experience</span><span data-lang="zh">组织经验</span></a></li>
+        <li><a href="#about"><span data-lang="en">About Me</span><span data-lang="zh">关于我</span></a></li>
+        <li><a href="#contact"><span data-lang="en">Contact</span><span data-lang="zh">联系</span></a></li>
       </ul>
       <div class="lang-toggle" id="langToggle">
         <button class="lang-btn active" data-lang-btn="en" onclick="setLang('en')">EN</button>
-        <button class="lang-btn" data-lang-btn="zh" onclick="setLang('zh')">ä¸­æ</button>
+        <button class="lang-btn" data-lang-btn="zh" onclick="setLang('zh')">中文</button>
       </div>
       <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -352,35 +344,35 @@
 <!-- HERO -->
 <header class="hero">
   <div class="hero-text">
-    <h1 data-lang="en">Be Future-Ready<br>for Agents Everywhere</h1>
-    <h1 data-lang="zh" style="font-size:2.4rem">è¿æ¥æºè½ä½æ¶ä»£<br>ææ¡æªæ¥åæº</h1>
+    <h1 data-lang="en">Prepare for the Era<br>of AI Agents</h1>
+    <h1 data-lang="zh" style="font-size:2.4rem">准备迎接<br>AI智能体时代</h1>
     <p class="hero-role">
-      <span data-lang="en">Educator &middot; Author &middot; Advisor</span>
-      <span data-lang="zh">æè²è &middot; ä½è &middot; é¡¾é®</span>
+      <span data-lang="en">Educator · Author · Advisor</span>
+      <span data-lang="zh">教育者 · 作者 · 顾问</span>
     </p>
     <p class="hero-affiliation">
-      <span data-lang="en">Strategy+Management Program Head<br>Shanghai University of Engineering Sciences</span>
-      <span data-lang="zh">æç¥ä¸ç®¡çé¡¹ç®è´è´£äºº<br>ä¸æµ·å·¥ç¨ææ¯å¤§å­¦</span>
+      <span data-lang="en">Full Professor<br>Shanghai University of Engineering Sciences</span>
+      <span data-lang="zh">正教授<br>上海工程技术大学</span>
     </p>
-    <p class="subtitle" data-lang="en">I help organizations navigate AI-driven change through strategic foresight, human-AI collaboration for innovation, and AI transformation for integration. Professor, advisor, author of five books.</p>
-    <p class="subtitle" data-lang="zh">æå¸®å©ç»ç»éè¿æç¥åç»ãäººæºåä½åæ°åAIè½¬åæ´åæ¥åºå¯¹AIé©±å¨çåé©ãææãé¡¾é®ï¼äºæ¬èä½çä½èã</p>
+    <p class="subtitle" data-lang="en">Let's connect research, education, and transformation to prepare for an agentic world.</p>
+    <p class="subtitle" data-lang="zh">让我们连接研究、教育和转型，为智能体的世界做准备。</p>
     <div class="hero-tags" data-lang="en">
-      <span class="hero-tag">Keynote Speaker</span>
       <span class="hero-tag">Executive Educator</span>
       <span class="hero-tag">Strategic Advisor</span>
+      <span class="hero-tag">Future-Ready Leadership</span>
     </div>
     <div class="hero-tags" data-lang="zh">
-      <span class="hero-tag">ä¸»é¢æ¼è®²</span>
-      <span class="hero-tag">é«ç®¡æè²</span>
-      <span class="hero-tag">æç¥é¡¾é®</span>
+      <span class="hero-tag">高管教育</span>
+      <span class="hero-tag">战略顾问</span>
+      <span class="hero-tag">未来就绪领导力</span>
     </div>
     <div class="hero-ctas" data-lang="en">
       <a href="https://calendar.app.google/vZRiTnxbnzyKxUYG6" class="btn btn-primary" target="_blank" rel="noopener">Schedule a Call</a>
-      <a href="#expertise" class="btn btn-outline">View Expertise</a>
+      <a href="#capabilities" class="btn btn-outline">Five AI Capabilities</a>
     </div>
     <div class="hero-ctas" data-lang="zh">
-      <a href="https://calendar.app.google/vZRiTnxbnzyKxUYG6" class="btn btn-primary" target="_blank" rel="noopener">é¢çº¦éè¯</a>
-      <a href="#expertise" class="btn btn-outline">æ¥çä¸ä¸é¢å</a>
+      <a href="https://calendar.app.google/vZRiTnxbnzyKxUYG6" class="btn btn-primary" target="_blank" rel="noopener">预约通话</a>
+      <a href="#capabilities" class="btn btn-outline">五大AI能力</a>
     </div>
   </div>
   <div class="hero-photo">
@@ -388,214 +380,336 @@
   </div>
 </header>
 
-<!-- THREE DOMAINS -->
-<section class="domains-section" id="expertise">
+<!-- FIVE CAPABILITIES -->
+<section class="capabilities-section" id="capabilities">
   <div class="container">
-    <p class="section-label"><span data-lang="en">Expertise</span><span data-lang="zh">ä¸ä¸é¢å</span></p>
-    <h2 class="section-title" data-lang="en">Three domains for the AI era</h2>
-    <h2 class="section-title" data-lang="zh">AIæ¶ä»£çä¸å¤§é¢å</h2>
+    <p class="section-label"><span data-lang="en">Capabilities</span><span data-lang="zh">能力</span></p>
+    <h2 class="section-title" data-lang="en">Five Capabilities for the AI Era</h2>
+    <h2 class="section-title" data-lang="zh">AI时代的五大能力</h2>
 
-    <!-- DOMAIN 1: Strategic Foresight -->
-    <div class="domain">
-      <div class="domain-header">
-        <div class="domain-left">
-          <p class="domain-number"><span data-lang="en">Domain One</span><span data-lang="zh">é¢åä¸</span></p>
-          <h3 class="domain-title" data-lang="en">Strategic Foresight for Impact</h3>
-          <h3 class="domain-title" data-lang="zh">æç¥åçï¼å½±åå</h3>
-          <p class="domain-subtitle" data-lang="en">Imagine &mdash; Design &mdash; Lead</p>
-          <p class="domain-subtitle" data-lang="zh">æ³è±¡ &mdash; è®¾è®¡ &mdash; å¼é¢</p>
-          <p class="domain-text" data-lang="en">Be future-ready for agents everywhere &mdash; across industries, across sectors, across functions. Applied futures thinking for strategic decision-making: using generative AI for scenario simulation, stakeholder engagement, and policy forecasting so leaders can anticipate change and act on it. The Futureback leadership framework guides organizations from a desired future backward to present-day action, turning foresight into strategy with positive impact.</p>
-          <p class="domain-text" data-lang="zh">ä¸ºæ å¤ä¸å¨çæºè½ä½åå¥½åå¤ââè·¨è¡ä¸ãè·¨é¨é¨ãè·¨èè½ãå°åç»æ§æç»´åºç¨äºæç¥å³ç­ï¼å©ç¨çæå¼AIè¿è¡ææ¯æ¨¡æãå©çç¸å³èåä¸åæ¿ç­é¢æµï¼ä½¿é¢å¯¼èè½å¤é¢è§ååå¹¶éåè¡å¨ãFuturebacké¢å¯¼åæ¡æ¶å¼å¯¼ç»ç»ä»ææçæªæ¥åæº¯å°å½åè¡å¨ï¼å°åç»è½¬åä¸ºå·æç§¯æå½±åçæç¥ã</p>
-        </div>
-        <div class="domain-right">
-          <div class="domain-experience"><strong><span data-lang="en">Research Advisor</span><span data-lang="zh">ç ç©¶é¡¾é®</span></strong> <span class="org">&mdash; <span data-lang="en">Institute for the Future (IFTF)</span><span data-lang="zh">æªæ¥ç ç©¶æ (IFTF)</span></span></div>
-          <div class="domain-experience"><strong><span data-lang="en">Associated Partner</span><span data-lang="zh">åä½ä¼ä¼´</span></strong> <span class="org">&mdash; <span data-lang="en">Copenhagen Institute for Futures Studies</span><span data-lang="zh">å¥æ¬åæ ¹æªæ¥ç ç©¶æ</span></span></div>
-          <div class="domain-experience"><strong><span data-lang="en">Cross-industry foresight</span><span data-lang="zh">è·¨è¡ä¸åç»</span></strong> <span class="org">&mdash; John Deere, Westrock, USM</span></div>
-          <div class="domain-experience"><strong><span data-lang="en">Full Professor</span><span data-lang="zh">æ­£ææ</span></strong> <span class="org">&mdash; <span data-lang="en">Shanghai University of Engineering Sciences</span><span data-lang="zh">ä¸æµ·å·¥ç¨ææ¯å¤§å­¦</span></span></div>
-        </div>
+    <!-- CAPABILITY 1 -->
+    <div class="capability">
+      <p class="capability-number"><span data-lang="en">Capability One</span><span data-lang="zh">能力一</span></p>
+      <h3 class="capability-title" data-lang="en">AI-Human Collaboration for Accelerated Innovation</h3>
+      <h3 class="capability-title" data-lang="zh">人机协作加速创新</h3>
+      <p class="capability-subtitle" data-lang="en">Work with agents for greater creativity</p>
+      <p class="capability-subtitle" data-lang="zh">与智能体合作实现更大创意</p>
+      <p class="capability-text" data-lang="en"><em>Agentic Creative Intelligence</em> argues that authentic creativity is even more possible and potent with AI. Most organizations adopt AI faster than they build the capacity to use it well. ACI grounds our intelligence in real practices and platforms to creatively intervene in complex situations — with clarity of expression, embodied judgment, and more meaningful experiences. The book introduces the Creative Council: a model where the human practitioner leads and AI collaborates, so that computational reach never replaces the judgment it was designed to extend.</p>
+      <p class="capability-text" data-lang="zh"><em>Agentic Creative Intelligence</em>认为真实的创意与AI合作会更加可能和强大。大多数组织采用AI的速度快于建立良好使用AI的能力。ACI将我们的智能扎根于真实的实践和平台中，以创意的方式干预复杂情况——具有表达的清晰性、体现的判断力和更有意义的体验。该书介绍了创意委员会模式：人类从业者领导，AI协作，这样计算能力永远不会替代它被设计来扩展的判断。</p>
+      <div class="capability-keywords" data-lang="en">
+        <span class="keyword-tag">Human Agency</span>
+        <span class="keyword-tag">Design Dialogue</span>
+        <span class="keyword-tag">Creative Augmentation</span>
+        <span class="keyword-tag">Responsible AI</span>
+        <span class="keyword-tag">Practitioner-Led</span>
+        <span class="keyword-tag">AI Configuration</span>
       </div>
-      <div class="domain-frameworks">
-        <strong><span data-lang="en">Frameworks:</span><span data-lang="zh">æ¡æ¶ï¼</span></strong> <span data-lang="en">Imagine-Design-Lead Futureback leadership, Augmented Design (Generate Insights, Extend Reality, Connect Experiences, Distribute Impact), six AI opportunity spaces for organizational strategy, Spectrum of Agility and flexive intent</span><span data-lang="zh">æ³è±¡-è®¾è®¡-å¼é¢Futurebacké¢å¯¼åãå¢å¼ºè®¾è®¡ï¼çææ´å¯ãå»¶å±ç°å®ãè¿æ¥ä½éªãåéå½±åï¼ãç»ç»æç¥çå­å¤§AIæºéç©ºé´ãææ·åè°±ä¸ææ§æå¾</span>
+      <div class="capability-keywords" data-lang="zh">
+        <span class="keyword-tag">人类代理</span>
+        <span class="keyword-tag">设计对话</span>
+        <span class="keyword-tag">创意增强</span>
+        <span class="keyword-tag">负责任AI</span>
+        <span class="keyword-tag">从业者驱动</span>
+        <span class="keyword-tag">AI配置</span>
       </div>
+      <p class="capability-citation" data-lang="en">Agentic Creative Intelligence: Designing With AI to Reclaim Human Agency — Routledge, 2026</p>
+      <p class="capability-citation" data-lang="zh">Agentic Creative Intelligence: Designing With AI to Reclaim Human Agency — Routledge, 2026</p>
     </div>
 
-    <!-- DOMAIN 2: AI-Human Collaboration -->
-    <div class="domain">
-      <div class="domain-header">
-        <div class="domain-left">
-          <p class="domain-number"><span data-lang="en">Domain Two</span><span data-lang="zh">é¢åäº</span></p>
-          <h3 class="domain-title" data-lang="en">AI&ndash;Human Collaboration for Innovation</h3>
-          <h3 class="domain-title" data-lang="zh">äººæºåä½ä¸åæ°</h3>
-          <p class="domain-subtitle" data-lang="en">Spark and augment innovation capacity</p>
-          <p class="domain-subtitle" data-lang="zh">æ¿åå¹¶å¢å¼ºåæ°è½å</p>
-          <p class="domain-text" data-lang="en">AI-human collaboration that goes beyond new products and services to include education, applied research, and market creation. The Agentic Creative Intelligence framework provides governance structures and diagnostic tools for how teams adopt AI while preserving judgment, accountability, and the capacity to innovate. Applicable to executive education, R&amp;D, faculty development, and cross-functional innovation programs.</p>
-          <p class="domain-text" data-lang="zh">äººæºåä½ä¸ä»éäºæ°äº§ååæå¡ï¼è¿æ¶µçæè²ãåºç¨ç ç©¶åå¸åºåé ãAgentic Creative Intelligenceæ¡æ¶æä¾æ²»çç»æåè¯æ­å·¥å·ï¼å¸®å©å¢éå¨ä¿æå¤æ­åãè´£ä»»æååæ°è½åçåæ¶éç¨AIãéç¨äºé«ç®¡æè²ãç åãæå¸åå±åè·¨èè½åæ°é¡¹ç®ã</p>
-        </div>
-        <div class="domain-right">
-          <div class="domain-experience"><strong><span data-lang="en">Visiting Professor &amp; Research Director</span><span data-lang="zh">å®¢åº§ææä¸ç ç©¶ä¸»ä»»</span></strong> <span class="org">&mdash; <span data-lang="en">Politecnico di Milano</span><span data-lang="zh">ç±³å°çå·¥å¤§å­¦</span></span></div>
-          <div class="domain-experience"><strong>IDeaLs Research Lab</strong> <span class="org">&mdash; Nestl&eacute;, Philips, Adidas, Stolt</span></div>
-          <div class="domain-experience"><strong>DET Conference</strong> <span class="org">&mdash; AI, XR, IoT, Web3 (<span data-lang="en">25 faculty, 100+ participants</span><span data-lang="zh">25ä½æå¸ï¼100+åä¸è</span>)</span></div>
-          <div class="domain-experience"><strong><span data-lang="en">Vice-Dean</span><span data-lang="zh">å¯é¢é¿</span></strong> <span class="org">&mdash; NACAA Design Institute (EDNA / <span data-lang="en">China Academy of Art</span><span data-lang="zh">ä¸­å½ç¾æ¯å­¦é¢</span>)</span></div>
-          <div class="domain-experience"><strong><span data-lang="en">Program Founder</span><span data-lang="zh">é¡¹ç®åå§äºº</span></strong> <span class="org">&mdash; Parsons New School of Design</span></div>
-        </div>
+    <!-- CAPABILITY 2 -->
+    <div class="capability">
+      <p class="capability-number"><span data-lang="en">Capability Two</span><span data-lang="zh">能力二</span></p>
+      <h3 class="capability-title" data-lang="en">Augmented Foresight for Strategic Impact</h3>
+      <h3 class="capability-title" data-lang="zh">增强预见战略影响</h3>
+      <p class="capability-subtitle" data-lang="en">Imagine — Design — Lead</p>
+      <p class="capability-subtitle" data-lang="zh">想象 — 设计 — 领导</p>
+      <p class="capability-text" data-lang="en">Applied futures thinking for strategic decision-making. <em>Designing Sustainable Futures</em> offers a framework for using generative AI in scenario simulation and policy forecasting so leaders can anticipate change and act on it — across industries, sectors, and functions.</p>
+      <p class="capability-text" data-lang="zh">应用未来思维进行战略决策。<em>Designing Sustainable Futures</em>提供了一个框架，用于在情景模拟和政策预测中使用生成式AI，使领导者能够预期变化并采取行动——跨行业、部门和职能。</p>
+      <div class="capability-keywords" data-lang="en">
+        <span class="keyword-tag">Scenario Planning</span>
+        <span class="keyword-tag">Trend Forecasting</span>
+        <span class="keyword-tag">Futureback Strategy</span>
+        <span class="keyword-tag">Sustainability</span>
+        <span class="keyword-tag">Strategic Resilience</span>
       </div>
-      <div class="domain-frameworks">
-        <strong><span data-lang="en">Frameworks:</span><span data-lang="zh">æ¡æ¶ï¼</span></strong> <span data-lang="en">Agentic Creative Intelligence (human-AI governance, four diagnostic capacities, creative council), Spectrum of Augmentation and superminds, Storymaking for organizational transformation, AI-augmented pedagogy</span><span data-lang="zh">Agentic Creative Intelligenceï¼äººæºæ²»çãåé¡¹è¯æ­è½åãåæå§åä¼ï¼ãå¢å¼ºåè°±ä¸è¶çº§æºè½ãç»ç»è½¬åçæäºåé ãAIå¢å¼ºæå­¦æ³</span>
+      <div class="capability-keywords" data-lang="zh">
+        <span class="keyword-tag">情景规划</span>
+        <span class="keyword-tag">趋势预测</span>
+        <span class="keyword-tag">未来回溯战略</span>
+        <span class="keyword-tag">可持续性</span>
+        <span class="keyword-tag">战略韧性</span>
       </div>
+      <p class="capability-citation" data-lang="en">Designing Sustainable Futures — Routledge, 2024</p>
+      <p class="capability-citation" data-lang="zh">Designing Sustainable Futures — Routledge, 2024</p>
     </div>
 
-    <!-- DOMAIN 3: AI Transformation -->
-    <div class="domain">
-      <div class="domain-header">
-        <div class="domain-left">
-          <p class="domain-number"><span data-lang="en">Domain Three</span><span data-lang="zh">é¢åä¸</span></p>
-          <h3 class="domain-title" data-lang="en">AI Transformation for Integration</h3>
-          <h3 class="domain-title" data-lang="zh">AIè½¬åä¸æ´å</h3>
-          <p class="domain-subtitle" data-lang="en">AI at the core of every offering, process, and function</p>
-          <p class="domain-subtitle" data-lang="zh">AIèå¥æ¯é¡¹ä¸å¡ãæµç¨åèè½çæ ¸å¿</p>
-          <p class="domain-text" data-lang="en">AI needs to be integrated into every offering, every process, every functional unit. That requires use-case identification, process mapping, change management, and deep understanding of existing organizational structure and IT infrastructure &mdash; from ERP to AI. 15 years founding and directing a digital agency and transformation consulting practice, delivering enterprise-scale change across HR, operations, administration, and strategy. Research on why 50%+ of digital transformations stall and engagement-centered models to prevent it.</p>
-          <p class="domain-text" data-lang="zh">AIéè¦æ´åå°æ¯é¡¹ä¸å¡ãæ¯ä¸ªæµç¨ãæ¯ä¸ªèè½é¨é¨ä¸­ãè¿éè¦ç¨ä¾è¯å«ãæµç¨æ å°ãåé©ç®¡çï¼ä»¥åå¯¹ç°æç»ç»ç»æåITåºç¡è®¾æ½çæ·±å¥çè§£ââä»ERPå°AIã15å¹´åååé¢å¯¼æ°å­æºæåè½¬åå¨è¯¢å®è·µçç»éªï¼å¨äººåèµæºãè¿è¥ãè¡æ¿åæç¥é¢åå®æ½ä¼ä¸çº§åé©ãç ç©¶50%ä»¥ä¸æ°å­åè½¬ååæ»çåå åä»¥åä¸ä¸ºä¸­å¿çé¢é²æ¨¡å¼ã</p>
-        </div>
-        <div class="domain-right">
-          <div class="domain-experience"><strong><span data-lang="en">Founder &amp; Director</span><span data-lang="zh">åå§äººä¸æ»ç</span></strong> <span class="org">&mdash; Deloitte Digital Switzerland (EMEA)</span></div>
-          <div class="domain-experience"><strong><span data-lang="en">Executive Education Advisor</span><span data-lang="zh">é«ç®¡æè²é¡¾é®</span></strong> <span class="org">&mdash; Center for Creative Leadership</span></div>
-          <div class="domain-experience"><strong><span data-lang="en">Co-Founder</span><span data-lang="zh">èååå§äºº</span></strong> <span class="org">&mdash; Make Our Future (<span data-lang="en">global consulting cooperative</span><span data-lang="zh">å¨çå¨è¯¢åä½ç¤¾</span>)</span></div>
-          <div class="domain-experience"><strong><span data-lang="en">Innovation center advisory</span><span data-lang="zh">åæ°ä¸­å¿é¡¾é®</span></strong> <span class="org">&mdash; GovLab, Center for the Edge, Federal Innovation</span></div>
-        </div>
+    <!-- CAPABILITY 3 -->
+    <div class="capability">
+      <p class="capability-number"><span data-lang="en">Capability Three</span><span data-lang="zh">能力三</span></p>
+      <h3 class="capability-title" data-lang="en">Design-Driven Entrepreneurship to Start & Scale OPCs</h3>
+      <h3 class="capability-title" data-lang="zh">设计驱动创业初创与扩展</h3>
+      <p class="capability-subtitle" data-lang="en">Build, operate, and scale with AI as co-founder</p>
+      <p class="capability-subtitle" data-lang="zh">与AI合伙人一起建立、运营和扩展</p>
+      <p class="capability-text" data-lang="en">The One Person Company (OPC) is the AI-native venture model — a single founder with the reach of an entire team. <em>A Design Driven Guide for Entrepreneurs</em> grounds this in strategic design as a mindset for framing problems, identifying opportunities, and creating pathways forward at every stage of growth.</p>
+      <p class="capability-text" data-lang="zh">一人公司(OPC)是AI原生创业模式——一个创始人拥有整个团队的触及范围。<em>A Design Driven Guide for Entrepreneurs</em>以战略设计为基础，作为框架问题、识别机会和在每个增长阶段创建前进路径的思维方式。</p>
+      <div class="capability-keywords" data-lang="en">
+        <span class="keyword-tag">Venture Architecture</span>
+        <span class="keyword-tag">Problem Framing</span>
+        <span class="keyword-tag">Lean Validation</span>
+        <span class="keyword-tag">Founder Mindset</span>
+        <span class="keyword-tag">Scalable Design</span>
       </div>
-      <div class="domain-frameworks">
-        <strong><span data-lang="en">Capabilities:</span><span data-lang="zh">è½åï¼</span></strong> <span data-lang="en">Use-case identification, process mapping and redesign, change management (visioning, leadership alignment, communications, training), HR transformation, service design, technology adoption strategy, HRIS/BPO, innovation labs</span><span data-lang="zh">ç¨ä¾è¯å«ãæµç¨æ å°ä¸éæ°è®¾è®¡ãåé©ç®¡çï¼æ¿æ¯å¶å®ãé¢å¯¼ååè°ãæ²éãå¹è®­ï¼ãäººåèµæºè½¬åãæå¡è®¾è®¡ãææ¯éç¨æç¥ãHRIS/BPOãåæ°å®éªå®¤</span>
+      <div class="capability-keywords" data-lang="zh">
+        <span class="keyword-tag">创业架构</span>
+        <span class="keyword-tag">问题框架</span>
+        <span class="keyword-tag">精益验证</span>
+        <span class="keyword-tag">创始人思维</span>
+        <span class="keyword-tag">可扩展设计</span>
       </div>
+      <p class="capability-citation" data-lang="en">A Design Driven Guide for Entrepreneurs — Routledge, 2023</p>
+      <p class="capability-citation" data-lang="zh">A Design Driven Guide for Entrepreneurs — Routledge, 2023</p>
+    </div>
+
+    <!-- CAPABILITY 4 -->
+    <div class="capability">
+      <p class="capability-number"><span data-lang="en">Capability Four</span><span data-lang="zh">能力四</span></p>
+      <h3 class="capability-title" data-lang="en">AI Integration for Systemic Transformation</h3>
+      <h3 class="capability-title" data-lang="zh">AI整合系统性转型</h3>
+      <p class="capability-subtitle" data-lang="en">AI at the core of every offering, process, and function</p>
+      <p class="capability-subtitle" data-lang="zh">AI融入每项业务、流程和职能的核心</p>
+      <p class="capability-text" data-lang="en">Over half of digital transformations underperform because technology outpaces organizational readiness. <em>Office Shock</em> provides frameworks with diagnostic tools that help teams achieve purpose with greater judgment, accountability, and human agency while accelerating transformation.</p>
+      <p class="capability-text" data-lang="zh">超过一半的数字化转型表现不佳，因为技术超过了组织的就绪程度。<em>Office Shock</em>提供了诊断工具框架，帮助团队在加速转型的同时以更大的判断力、责任感和人类代理来实现目标。</p>
+      <div class="capability-keywords" data-lang="en">
+        <span class="keyword-tag">Readiness Assessment</span>
+        <span class="keyword-tag">Process Automation</span>
+        <span class="keyword-tag">Enterprise Rollout</span>
+        <span class="keyword-tag">Stakeholder Alignment</span>
+        <span class="keyword-tag">Purpose-Driven Change</span>
+      </div>
+      <div class="capability-keywords" data-lang="zh">
+        <span class="keyword-tag">就绪度评估</span>
+        <span class="keyword-tag">流程自动化</span>
+        <span class="keyword-tag">企业推广</span>
+        <span class="keyword-tag">利益相关者协调</span>
+        <span class="keyword-tag">目的驱动变革</span>
+      </div>
+      <p class="capability-citation" data-lang="en">Office Shock — Berrett-Koehler, 2023</p>
+      <p class="capability-citation" data-lang="zh">Office Shock — Berrett-Koehler, 2023</p>
+    </div>
+
+    <!-- CAPABILITY 5 -->
+    <div class="capability">
+      <p class="capability-number"><span data-lang="en">Capability Five</span><span data-lang="zh">能力五</span></p>
+      <h3 class="capability-title" data-lang="en">Collective Intelligence for Future-Ready Leadership</h3>
+      <h3 class="capability-title" data-lang="zh">集体智能未来就绪领导力</h3>
+      <p class="capability-subtitle" data-lang="en">Where people and AI learn to think together</p>
+      <p class="capability-subtitle" data-lang="zh">人与AI学会一起思考的地方</p>
+      <p class="capability-text" data-lang="en">Innovation leadership fails when engagement is missing. Drawing on research with seven global companies, <em>IDeaLs</em> shows how corporate university programs and executive education become the proving ground for leaders who harness collective intelligence — the combined capacity of people and AI to think, decide, and act together.</p>
+      <p class="capability-text" data-lang="zh">当缺乏参与时，创新领导力失败。基于与七家全球公司的研究，<em>IDeaLs</em>展示了公司大学项目和高管教育如何成为利用集体智能的领导者的试验场——人与AI思考、决策和一起行动的综合能力。</p>
+      <div class="capability-keywords" data-lang="en">
+        <span class="keyword-tag">Executive Programs</span>
+        <span class="keyword-tag">Innovation Culture</span>
+        <span class="keyword-tag">Storymaking</span>
+        <span class="keyword-tag">Team Engagement</span>
+        <span class="keyword-tag">Shared Decision-Making</span>
+      </div>
+      <div class="capability-keywords" data-lang="zh">
+        <span class="keyword-tag">高管项目</span>
+        <span class="keyword-tag">创新文化</span>
+        <span class="keyword-tag">故事创作</span>
+        <span class="keyword-tag">团队参与</span>
+        <span class="keyword-tag">共享决策</span>
+      </div>
+      <p class="capability-citation" data-lang="en">IDeaLs — Emerald, 2021</p>
+      <p class="capability-citation" data-lang="zh">IDeaLs — Emerald, 2021</p>
     </div>
 
   </div>
 </section>
 
-<!-- BOOKS -->
-<section class="books-section" id="books">
+<!-- ORGANIZATIONAL EXPERIENCE -->
+<section class="experience-section" id="experience">
   <div class="container">
-    <p class="section-label"><span data-lang="en">Books</span><span data-lang="zh">èä½</span></p>
-    <h2 class="section-title" data-lang="en">Five books on intelligence, transformation &amp; leadership</h2>
-    <h2 class="section-title" data-lang="zh">å³äºæºè½ãè½¬åä¸é¢å¯¼åçäºæ¬èä½</h2>
-    <div class="books-grid" data-lang="en">
-      <div class="book-card">
-        <div class="book-cover" style="background: linear-gradient(135deg, #2e4057 0%, #1a1a2e 100%);"><span class="book-cover-text">Agentic<br>Creative<br>Intelligence</span></div>
-        <h3 class="book-title">Designing with Agentic Creative Intelligence</h3>
-        <p class="book-meta">Routledge, Fall 2026</p>
-        <p class="book-desc">AI adoption, human-AI governance, organizational readiness</p>
-      </div>
-      <div class="book-card">
-        <div class="book-cover" style="background: linear-gradient(135deg, #3182ce 0%, #2e4057 100%);"><span class="book-cover-text">Designing<br>Sustainable<br>Futures</span></div>
-        <h3 class="book-title">Designing Sustainable Futures</h3>
-        <p class="book-meta">Routledge, 2024</p>
-        <p class="book-desc">AI for foresight, visualization, and business strategy</p>
-      </div>
-      <div class="book-card">
-        <div class="book-cover" style="background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);"><span class="book-cover-text">Office<br>Shock</span></div>
-        <h3 class="book-title">Office Shock</h3>
-        <p class="book-meta">Berrett-Koehler, 2023</p>
-        <p class="book-desc">AI augmentation, organizational agility, superminds</p>
-      </div>
-      <div class="book-card">
-        <div class="book-cover" style="background: linear-gradient(135deg, #553c9a 0%, #2d3748 100%);"><span class="book-cover-text">Storymaking</span></div>
-        <h3 class="book-title">Storymaking</h3>
-        <p class="book-meta">Routledge, 2022</p>
-        <p class="book-desc">Narrative co-creation for innovation and transformation</p>
-      </div>
-      <div class="book-card">
-        <div class="book-cover" style="background: linear-gradient(135deg, #2c7a7b 0%, #1a365d 100%);"><span class="book-cover-text">Innovation<br>Design &amp;<br>Leadership</span></div>
-        <h3 class="book-title">Innovation, Design and Leadership</h3>
-        <p class="book-meta">Emerald, 2021</p>
-        <p class="book-desc">Why digital transformations fail; engagement-centered adoption</p>
-      </div>
-    </div>
-    <div class="books-grid" data-lang="zh">
-      <div class="book-card">
-        <div class="book-cover" style="background: linear-gradient(135deg, #2e4057 0%, #1a1a2e 100%);"><span class="book-cover-text">Agentic<br>Creative<br>Intelligence</span></div>
-        <h3 class="book-title">Designing with Agentic Creative Intelligence</h3>
-        <p class="book-meta">Routledge, 2026å¹´ç§</p>
-        <p class="book-desc">AIéç¨ãäººæºæ²»çãç»ç»å°±ç»ªåº¦</p>
-      </div>
-      <div class="book-card">
-        <div class="book-cover" style="background: linear-gradient(135deg, #3182ce 0%, #2e4057 100%);"><span class="book-cover-text">Designing<br>Sustainable<br>Futures</span></div>
-        <h3 class="book-title">Designing Sustainable Futures</h3>
-        <p class="book-meta">Routledge, 2024</p>
-        <p class="book-dional transformation, and strategic foresight. Formats include video segments, framework visualizations, and live audience engagement. Business schools, industry conferences, and corporate events worldwide.</p>
-      </div>
-      <div class="engagement-card">
-        <h3 class="engagement-title">Executive Education</h3>
-        <p class="engagement-text">Design and delivery of programs that build innovation and leadership capability across business disciplines. From intensive workshops to multi-session series. Experience across Politecnico di Milano, Center for Creative Leadership, and international business schools.</p>
-      </div>
-      <div class="engagement-card">
-        <h3 class="engagement-title">Strategic Advisory</h3>
-        <p class="engagement-text">AI adoption strategy, organizational change management, and futures-oriented planning. Advisory to C-suite leaders, academic institutions, and innovation centers on integrating AI across operations, education, and leadership.</p>
-      </div>
-    </div>
-    <div class="engagements-grid" data-lang="zh">
-      <div class="engagement-card">
-        <h3 class="engagement-title">ä¸»é¢æ¼è®²</h3>
-        <p class="engagement-text">å³äºAIéç¨ãç»ç»è½¬ååæç¥åç»çæ²æµ¸å¼ä¸»é¢æ¼è®²ãå½¢å¼åæ¬è§é¢çæ®µãæ¡æ¶å¯è§ååç°åºè§ä¼äºå¨ãé¢åå¨çåå­¦é¢ãè¡ä¸ä¼è®®åä¼ä¸æ´»å¨ã</p>
-      </div>
-      <div class="engagement-card">
-        <h3 class="engagement-title">é«ç®¡æè²</h3>
-        <p class="engagement-text">è®¾è®¡åæä¾è·¨åä¸å­¦ç§çåæ°åé¢å¯¼åå¹å»é¡¹ç®ãä»å¯éç è®¨ä¼å°å¤æè¯¾ç¨ç³»åãå¨ç±³å°çå·¥å¤§å­¦ãåæé¢å¯¼åä¸­å¿åå½éåå­¦é¢æ¥æä¸°å¯ç»éªã</p>
-      </div>
-      <div class="engagement-card">
-        <h3 class="engagement-title">æç¥å¨è¯¢</h3>
-        <p class="engagement-text">AIéç¨æç¥ãç»ç»åé©ç®¡çåé¢åæªæ¥çè§åãä¸ºé«ç®¡é¢å¯¼èãå­¦æ¯æºæååæ°ä¸­å¿æä¾AIæ´åè¿è¥ãæè²åé¢å¯¼åæ¹é¢çå¨è¯¢ã</p>
-      </div>
-    </div>
+    <p class="section-label"><span data-lang="en">Experience</span><span data-lang="zh">经验</span></p>
+    <h2 class="section-title" data-lang="en">Organizational Experience</h2>
+    <h2 class="section-title" data-lang="zh">组织经验</h2>
+
+    <table class="experience-table" data-lang="en">
+      <thead>
+        <tr>
+          <th>Technology</th>
+          <th>Pharma & Health</th>
+          <th>Financial Services</th>
+          <th>Consumer & Industry</th>
+          <th>Education & NGO</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Samsung</td>
+          <td>Novartis</td>
+          <td>Credit Suisse</td>
+          <td>Nestlé</td>
+          <td>IMD</td>
+        </tr>
+        <tr>
+          <td>SAP</td>
+          <td>Roche</td>
+          <td>HSBC</td>
+          <td>Coca-Cola</td>
+          <td>UNICEF</td>
+        </tr>
+        <tr>
+          <td>Verizon</td>
+          <td>Pfizer</td>
+          <td>Zurich</td>
+          <td>McDonald's</td>
+          <td>ICRC</td>
+        </tr>
+        <tr>
+          <td>Swisscom</td>
+          <td>Takeda</td>
+          <td>Citibank</td>
+          <td>Walmart</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Honeywell</td>
+          <td></td>
+          <td></td>
+          <td>Porsche</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AOL Time Warner</td>
+          <td></td>
+          <td></td>
+          <td>John Deere</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>Devon</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="experience-table" data-lang="zh">
+      <thead>
+        <tr>
+          <th>技术</th>
+          <th>制药与健康</th>
+          <th>金融服务</th>
+          <th>消费与工业</th>
+          <th>教育与非营利</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Samsung</td>
+          <td>Novartis</td>
+          <td>Credit Suisse</td>
+          <td>Nestlé</td>
+          <td>IMD</td>
+        </tr>
+        <tr>
+          <td>SAP</td>
+          <td>Roche</td>
+          <td>HSBC</td>
+          <td>Coca-Cola</td>
+          <td>UNICEF</td>
+        </tr>
+        <tr>
+          <td>Verizon</td>
+          <td>Pfizer</td>
+          <td>Zurich</td>
+          <td>McDonald's</td>
+          <td>ICRC</td>
+        </tr>
+        <tr>
+          <td>Swisscom</td>
+          <td>Takeda</td>
+          <td>Citibank</td>
+          <td>Walmart</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Honeywell</td>
+          <td></td>
+          <td></td>
+          <td>Porsche</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AOL Time Warner</td>
+          <td></td>
+          <td></td>
+          <td>John Deere</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>Devon</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </section>
 
-<!-- CREDENTIALS -->
-<section class="credentials-section" id="credentials">
+<!-- ABOUT ME -->
+<section class="about-section" id="about">
   <div class="container">
-    <p class="section-label"><span data-lang="en">Background</span><span data-lang="zh">èæ¯</span></p>
-    <h2 class="section-title" data-lang="en">Credentials</h2>
-    <h2 class="section-title" data-lang="zh">èµå</h2>
-    <div class="credentials-grid" data-lang="en">
-      <div class="credential-group">
+    <p class="section-label"><span data-lang="en">Background</span><span data-lang="zh">背景</span></p>
+    <h2 class="section-title" data-lang="en">About Me</h2>
+    <h2 class="section-title" data-lang="zh">关于我</h2>
+    <div class="about-grid" data-lang="en">
+      <div class="about-group">
         <h3>Education</h3>
-        <p class="credential-item"><strong>Ph.D. Design Technology</strong>, MIT &mdash; Knowledge representation, constraint-based reasoning, human&ndash;machine interaction</p>
-        <p class="credential-item"><strong>S.M. Architecture</strong>, MIT</p>
-        <p class="credential-item"><strong>B.S. Managerial Economics</strong>, Carnegie Mellon University</p>
+        <p class="about-item"><strong>Ph.D. Design Technology</strong>, MIT</p>
+        <p class="about-item"><strong>S.M. Architecture</strong>, MIT</p>
+        <p class="about-item"><strong>B.S. Managerial Economics</strong>, Carnegie Mellon</p>
+        <p class="about-item"><a href="https://www.chartwellspeakers.com/" target="_blank" rel="noopener">Chartwell Speaker</a></p>
       </div>
-      <div class="credential-group">
+      <div class="about-group">
         <h3>Current Positions</h3>
-        <p class="credential-item"><strong>Full Professor</strong>, Shanghai University of Engineering Sciences</p>
-        <p class="credential-item"><strong>Associated Partner</strong>, Copenhagen Institute for Futures Studies</p>
-        <p class="credential-item"><strong>Research Advisor</strong>, Institute for the Future</p>
-        <p class="credential-item"><strong>Co-Founder</strong>, Make Our Future</p>
+        <p class="about-item"><strong>Full Professor</strong>, Shanghai University of Engineering Sciences</p>
+        <p class="about-item"><strong>Associated Partner</strong>, Copenhagen Institute for Futures Studies</p>
+        <p class="about-item"><strong>Research Advisor</strong>, Institute for the Future</p>
       </div>
-      <div class="credential-group">
-        <h3>Recognitions</h3>
-        <p class="credential-item">China Foreign National Expert</p>
-        <p class="credential-item">Chartwell Speaker</p>
-        <p class="credential-item">5 books (Routledge, Emerald, Berrett-Koehler)</p>
-        <p class="credential-item">European Journal of Innovation Management, Journal of Knowledge Management</p>
+      <div class="about-group">
+        <h3>Previous Positions</h3>
+        <p class="about-item"><strong>Director</strong>, Deloitte Digital CH</p>
+        <p class="about-item"><strong>Visiting Professor</strong>, Politecnico di Milano</p>
+        <p class="about-item"><strong>Program Lead</strong>, Center for Creative Leadership</p>
+        <p class="about-item"><strong>Architectural Designer</strong></p>
       </div>
     </div>
-    <div class="credentials-grid" data-lang="zh">
-      <div class="credential-group">
-        <h3>æè²èæ¯</h3>
-        <p class="credential-item"><strong>è®¾è®¡ææ¯åå£«</strong>ï¼éº»ççå·¥å­¦é¢ &mdash; ç¥è¯è¡¨å¾ãåºäºçº¦æçæ¨çãäººæºäº¤äº</p>
-        <p class="credential-item"><strong>å»ºç­å­¦ç¡å£«</strong>ï¼éº»ççå·¥å­¦é¢</p>
-        <p class="credential-item"><strong>ç®¡çç»æµå­¦å­¦å£«</strong>ï¼å¡ååºæ¢éå¤§å­¦</p>
+    <div class="about-grid" data-lang="zh">
+      <div class="about-group">
+        <h3>教育背景</h3>
+        <p class="about-item"><strong>设计技术博士</strong>，麻省理工学院</p>
+        <p class="about-item"><strong>建筑学硕士</strong>，麻省理工学院</p>
+        <p class="about-item"><strong>管理经济学学士</strong>，卡内基梅隆大学</p>
+        <p class="about-item"><a href="https://www.chartwellspeakers.com/" target="_blank" rel="noopener">Chartwell演讲人</a></p>
       </div>
-      <div class="credential-group">
-        <h3>ç°ä»»èä½</h3>
-        <p class="credential-item"><strong>æ­£ææ</strong>ï¼ä¸æµ·å·¥ç¨ææ¯å¤§å­¦</p>
-        <p class="credential-item"><strong>åä½ä¼ä¼´</strong>ï¼å¥æ¬åæ ¹æªæ¥ç ç©¶æ</p>
-        <p class="credential-item"><strong>ç ç©¶é¡¾é®</strong>ï¼æªæ¥ç ç©¶æ</p>
-        <p class="credential-item"><strong>èååå§äºº</strong>ï¼Make Our Future</p>
+      <div class="about-group">
+        <h3>现任职位</h3>
+        <p class="about-item"><strong>正教授</strong>，上海工程技术大学</p>
+        <p class="about-item"><strong>合作伙伴</strong>，哥本哈根未来研究所</p>
+        <p class="about-item"><strong>研究顾问</strong>，未来研究所</p>
       </div>
-      <div class="credential-group">
-        <h3>è£èª</h3>
-        <p class="credential-item">ä¸­å½å¤å½ä¸å®¶</p>
-        <p class="credential-item">Chartwellæ¼è®²äºº</p>
-        <p class="credential-item">5æ¬èä½ï¼RoutledgeãEmeraldãBerrett-Koehlerï¼</p>
-        <p class="credential-item">European Journal of Innovation Management, Journal of Knowledge Management</p>
+      <div class="about-group">
+        <h3>以往职位</h3>
+        <p class="about-item"><strong>总监</strong>，Deloitte Digital CH</p>
+        <p class="about-item"><strong>客座教授</strong>，米兰理工大学</p>
+        <p class="about-item"><strong>项目负责人</strong>，创意领导力中心</p>
+        <p class="about-item"><strong>建筑设计师</strong></p>
       </div>
     </div>
   </div>
@@ -604,17 +718,19 @@
 <!-- CONTACT -->
 <section class="contact-section" id="contact">
   <div class="container">
-    <p class="section-label"><span data-lang="en">Contact</span><span data-lang="zh">èç³»</span></p>
-    <h2 class="section-title" data-lang="en">Let's work together</h2>
-    <h2 class="section-title" data-lang="zh">æå¾åä½</h2>
-    <p class="section-intro" data-lang="en">Available for keynote speaking, executive education, and strategic advisory on AI adoption and organizational transformation.</p>
-    <p class="section-intro" data-lang="zh">å¯æä¾AIéç¨åç»ç»è½¬åæ¹é¢çä¸»é¢æ¼è®²ãé«ç®¡æè²åæç¥å¨è¯¢ã</p>
+    <p class="section-label"><span data-lang="en">Connect</span><span data-lang="zh">连接</span></p>
+    <h2 class="section-title" data-lang="en">Let's Collaborate</h2>
+    <h2 class="section-title" data-lang="zh">让我们合作</h2>
+    <p class="section-intro" data-lang="en">Available for executive education, lectures/keynotes, and strategic advisory.</p>
+    <p class="section-intro" data-lang="zh">可提供高管教育、讲座/主题演讲和战略咨询。</p>
+    <p class="contact-extra" data-lang="en">Typically starts with a 30-minute discovery call.</p>
+    <p class="contact-extra" data-lang="zh">通常从30分钟的发现通话开始。</p>
     <div class="contact-links" data-lang="en">
       <a href="https://calendar.app.google/vZRiTnxbnzyKxUYG6" class="contact-link" target="_blank" rel="noopener">Schedule a Call</a>
       <a href="https://www.linkedin.com/in/josephpress/" class="contact-link" target="_blank" rel="noopener">LinkedIn</a>
     </div>
     <div class="contact-links" data-lang="zh">
-      <a href="https://calendar.app.google/vZRiTnxbnzyKxUYG6" class="contact-link" target="_blank" rel="noopener">é¢çº¦éè¯</a>
+      <a href="https://calendar.app.google/vZRiTnxbnzyKxUYG6" class="contact-link" target="_blank" rel="noopener">预约通话</a>
       <a href="https://www.linkedin.com/in/josephpress/" class="contact-link" target="_blank" rel="noopener">LinkedIn</a>
     </div>
     <div style="margin-top: 1.5rem;">
@@ -636,14 +752,14 @@
       </div>
       <div class="email-buttons" data-lang="zh">
         <div style="text-align:center;">
-          <p class="email-label">å¨è¯¢é®ç®±</p>
+          <p class="email-label">咨询邮箱</p>
           <a href="mailto:jp@josephpress.com" class="email-btn">
             <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
             jp@josephpress.com
           </a>
         </div>
         <div style="text-align:center;">
-          <p class="email-label">å­¦æ¯é®ç®±</p>
+          <p class="email-label">学术邮箱</p>
           <a href="mailto:jp@sues.edu.cn" class="email-btn">
             <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
             jp@sues.edu.cn
@@ -654,7 +770,7 @@
   </div>
 </section>
 
-<footer>&copy; 2026 Joseph Press. <span data-lang="en">All rights reserved.</span><span data-lang="zh">çæææã</span></footer>
+<footer>&copy; 2026 Joseph Press. <span data-lang="en">All rights reserved.</span><span data-lang="zh">版权所有。</span></footer>
 
 <script>
   function setLang(lang) {
