@@ -335,28 +335,53 @@
     }
   }
 
-  /* BILINGUAL TOGGLE */
-  [data-lang="zh"] { display: none; }
+  /* TRILINGUAL TOGGLE — hide zh and fr by default, show based on body class */
+  [data-lang="zh"], [data-lang="fr"] { display: none; }
+  div[data-lang="zh"], p[data-lang="zh"], span[data-lang="zh"], h1[data-lang="zh"], h2[data-lang="zh"], h3[data-lang="zh"] { display: none; }
+  div[data-lang="fr"], p[data-lang="fr"], span[data-lang="fr"], h1[data-lang="fr"], h2[data-lang="fr"], h3[data-lang="fr"] { display: none; }
+  /* ZH active */
   body.zh [data-lang="zh"] { display: initial; }
   body.zh [data-lang="en"] { display: none; }
-  div[data-lang="zh"], p[data-lang="zh"], span[data-lang="zh"], h1[data-lang="zh"], h2[data-lang="zh"], h3[data-lang="zh"] { display: none; }
+  body.zh [data-lang="fr"] { display: none; }
   body.zh div[data-lang="zh"], body.zh p[data-lang="zh"], body.zh span[data-lang="zh"], body.zh h1[data-lang="zh"], body.zh h2[data-lang="zh"], body.zh h3[data-lang="zh"] { display: block; }
   body.zh div[data-lang="en"], body.zh p[data-lang="en"], body.zh span[data-lang="en"], body.zh h1[data-lang="en"], body.zh h2[data-lang="en"], body.zh h3[data-lang="en"] { display: none; }
-  span[data-lang="zh"] { display: none; }
+  body.zh div[data-lang="fr"], body.zh p[data-lang="fr"], body.zh span[data-lang="fr"], body.zh h1[data-lang="fr"], body.zh h2[data-lang="fr"], body.zh h3[data-lang="fr"] { display: none; }
+  /* FR active */
+  body.fr [data-lang="fr"] { display: initial; }
+  body.fr [data-lang="en"] { display: none; }
+  body.fr [data-lang="zh"] { display: none; }
+  body.fr div[data-lang="fr"], body.fr p[data-lang="fr"], body.fr span[data-lang="fr"], body.fr h1[data-lang="fr"], body.fr h2[data-lang="fr"], body.fr h3[data-lang="fr"] { display: block; }
+  body.fr div[data-lang="en"], body.fr p[data-lang="en"], body.fr span[data-lang="en"], body.fr h1[data-lang="en"], body.fr h2[data-lang="en"], body.fr h3[data-lang="en"] { display: none; }
+  body.fr div[data-lang="zh"], body.fr p[data-lang="zh"], body.fr span[data-lang="zh"], body.fr h1[data-lang="zh"], body.fr h2[data-lang="zh"], body.fr h3[data-lang="zh"] { display: none; }
+  /* Inline spans */
+  span[data-lang="zh"], span[data-lang="fr"] { display: none; }
   body.zh span[data-lang="zh"] { display: inline; }
   body.zh span[data-lang="en"] { display: none; }
-  .contact-row[data-lang="zh"] { display: none; }
+  body.zh span[data-lang="fr"] { display: none; }
+  body.fr span[data-lang="fr"] { display: inline; }
+  body.fr span[data-lang="en"] { display: none; }
+  body.fr span[data-lang="zh"] { display: none; }
+  /* Flex/grid containers */
+  .contact-row[data-lang="zh"], .contact-row[data-lang="fr"] { display: none; }
   body.zh .contact-row[data-lang="zh"] { display: flex; }
   body.zh .contact-row[data-lang="en"] { display: none; }
-  .credentials-grid[data-lang="zh"] { display: none; }
+  body.fr .contact-row[data-lang="fr"] { display: flex; }
+  body.fr .contact-row[data-lang="en"] { display: none; }
+  .credentials-grid[data-lang="zh"], .credentials-grid[data-lang="fr"] { display: none; }
   body.zh .credentials-grid[data-lang="zh"] { display: grid; }
   body.zh .credentials-grid[data-lang="en"] { display: none; }
-  .sector-cards[data-lang="zh"] { display: none; }
+  body.fr .credentials-grid[data-lang="fr"] { display: grid; }
+  body.fr .credentials-grid[data-lang="en"] { display: none; }
+  .sector-cards[data-lang="zh"], .sector-cards[data-lang="fr"] { display: none; }
   body.zh .sector-cards[data-lang="zh"] { display: grid; }
   body.zh .sector-cards[data-lang="en"] { display: none; }
-  .domain-frameworks[data-lang="zh"] { display: none; }
+  body.fr .sector-cards[data-lang="fr"] { display: grid; }
+  body.fr .sector-cards[data-lang="en"] { display: none; }
+  .domain-frameworks[data-lang="zh"], .domain-frameworks[data-lang="fr"] { display: none; }
   body.zh .domain-frameworks[data-lang="zh"] { display: flex; }
   body.zh .domain-frameworks[data-lang="en"] { display: none; }
+  body.fr .domain-frameworks[data-lang="fr"] { display: flex; }
+  body.fr .domain-frameworks[data-lang="en"] { display: none; }
 </style>
 </head>
 <body>
@@ -372,13 +397,14 @@
     </div>
     <div class="nav-right">
       <ul class="nav-links" id="navLinks">
-        <li><a href="#expertise"><span data-lang="en">Capabilities</span><span data-lang="zh">能力</span></a></li>
-        <li><a href="#organizations"><span data-lang="en">Experience</span><span data-lang="zh">经验</span></a></li>
-        <li><a href="#credentials"><span data-lang="en">About Me</span><span data-lang="zh">关于我</span></a></li>
-        <li><a href="#contact"><span data-lang="en">Collaborate</span><span data-lang="zh">合作</span></a></li>
+        <li><a href="#expertise"><span data-lang="en">Capabilities</span><span data-lang="fr">Comp&eacute;tences</span><span data-lang="zh">能力</span></a></li>
+        <li><a href="#organizations"><span data-lang="en">Experience</span><span data-lang="fr">Exp&eacute;rience</span><span data-lang="zh">经验</span></a></li>
+        <li><a href="#credentials"><span data-lang="en">About Me</span><span data-lang="fr">&Agrave; propos</span><span data-lang="zh">关于我</span></a></li>
+        <li><a href="#contact"><span data-lang="en">Collaborate</span><span data-lang="fr">Collaborer</span><span data-lang="zh">合作</span></a></li>
       </ul>
       <div class="lang-toggle" id="langToggle">
         <button class="lang-btn active" data-lang-btn="en" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" data-lang-btn="fr" onclick="setLang('fr')">FR</button>
         <button class="lang-btn" data-lang-btn="zh" onclick="setLang('zh')">中文</button>
       </div>
       <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
@@ -393,15 +419,19 @@
   <div class="hero-text">
     <p class="byline" style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.08em;">
       <span data-lang="en">Educator &middot; Author &middot; Advisor &middot; Speaker</span>
+      <span data-lang="fr">&Eacute;ducateur &middot; Auteur &middot; Conseiller &middot; Conf&eacute;rencier</span>
       <span data-lang="zh">教育者 &middot; 作者 &middot; 顾问 &middot; 演讲者</span>
     </p>
     <p class="byline" style="margin-top: -0.6rem; margin-bottom: 0.4rem;">
       <span data-lang="en">Full Professor, School of Design<br>Program Head, Strategy+Management<br>Shanghai University of Engineering Sciences</span>
+      <span data-lang="fr">Professeur titulaire, &Eacute;cole de Design<br>Directeur de programme, Strat&eacute;gie+Management<br>Shanghai University of Engineering Sciences</span>
       <span data-lang="zh">正教授，设计学院<br>项目负责人，战略+管理<br>上海工程技术大学</span>
     </p>
     <h1 data-lang="en">Prepare for the Era<br>of AI Agents</h1>
+    <h1 data-lang="fr">Pr&eacute;parez-vous &agrave; l'&egrave;re<br>des agents IA</h1>
     <h1 data-lang="zh" style="font-size:2.4rem">准备迎接<br>AI智能体时代</h1>
     <p class="subtitle" data-lang="en">Let's connect research, education, and transformation to prepare for an agentic world.</p>
+    <p class="subtitle" data-lang="fr">Connectons recherche, &eacute;ducation et transformation pour pr&eacute;parer un monde agentique.</p>
     <p class="subtitle" data-lang="zh">让我们连接研究、教育和转型，为智能体的世界做准备。</p>
   </div>
   <div class="hero-photo">
@@ -413,6 +443,7 @@
 <section class="domains-section" id="expertise">
   <div class="container">
     <h2 class="section-title hero-size" data-lang="en">Five Capabilities for the AI Era</h2>
+    <h2 class="section-title hero-size" data-lang="fr">Cinq comp&eacute;tences pour l'&egrave;re de l'IA</h2>
     <h2 class="section-title hero-size" data-lang="zh">AI时代的五大能力</h2>
 
     <!-- 1. AI-Human Collaboration (ACI) -->
@@ -420,10 +451,13 @@
       <div class="domain-header">
         <div class="domain-left">
           <h3 class="domain-title" data-lang="en">AI-Human Collaboration for Accelerated Innovation</h3>
+          <h3 class="domain-title" data-lang="fr">Collaboration humain-IA pour une innovation acc&eacute;l&eacute;r&eacute;e</h3>
           <h3 class="domain-title" data-lang="zh">人机协作加速创新</h3>
           <p class="domain-subtitle" data-lang="en">Work with agents for greater creativity</p>
+          <p class="domain-subtitle" data-lang="fr">Collaborer avec les agents pour plus de cr&eacute;ativit&eacute;</p>
           <p class="domain-subtitle" data-lang="zh">与智能体合作实现更大创意</p>
           <p class="domain-text" data-lang="en"><strong><em>Agentic Creative Intelligence</em></strong> argues that authentic creativity is even more possible and potent with AI. Most organizations adopt AI faster than they build the capacity to use it well. ACI grounds our intelligence in real practices and platforms to creatively intervene in complex situations &mdash; with clarity of expression, embodied judgment, and more meaningful experiences. The book introduces the Creative Council: a model where the human practitioner leads and AI collaborates, so that computational reach never replaces the judgment it was designed to extend.</p>
+          <p class="domain-text" data-lang="fr"><strong><em>Agentic Creative Intelligence</em></strong> soutient que la cr&eacute;ativit&eacute; authentique est encore plus possible et puissante avec l'IA. La plupart des organisations adoptent l'IA plus vite qu'elles ne d&eacute;veloppent la capacit&eacute; de bien l'utiliser. ACI ancre notre intelligence dans des pratiques et plateformes r&eacute;elles pour intervenir de mani&egrave;re cr&eacute;ative dans des situations complexes &mdash; avec clart&eacute; d'expression, jugement incarn&eacute; et exp&eacute;riences plus significatives. Le livre introduit le Creative Council : un mod&egrave;le o&ugrave; le praticien humain dirige et l'IA collabore, pour que la port&eacute;e computationnelle ne remplace jamais le jugement qu'elle est con&ccedil;ue pour &eacute;tendre.</p>
           <p class="domain-text" data-lang="zh"><strong><em>Agentic Creative Intelligence</em></strong>认为真实的创意与AI合作会更加可能和强大。大多数组织采用AI的速度快于建立良好使用AI的能力。ACI将我们的智能扎根于真实的实践和平台中，以创意的方式干预复杂情况——具有表达的清晰性、体现的判断力和更有意义的体验。该书介绍了创意委员会模式：人类从业者领导，AI协作，这样计算能力永远不会替代它被设计来扩展的判断。</p>
           <div class="domain-frameworks" data-lang="en">
             <span class="framework-tag">Human Agency</span>
@@ -432,6 +466,14 @@
             <span class="framework-tag">Responsible AI Adoption</span>
             <span class="framework-tag">Practitioner-Led AI</span>
             <span class="framework-tag">AI Configuration</span>
+          </div>
+          <div class="domain-frameworks" data-lang="fr">
+            <span class="framework-tag">Agentivit&eacute; humaine</span>
+            <span class="framework-tag">Dialogue de design</span>
+            <span class="framework-tag">Augmentation cr&eacute;ative</span>
+            <span class="framework-tag">Adoption responsable de l'IA</span>
+            <span class="framework-tag">IA pilot&eacute;e par le praticien</span>
+            <span class="framework-tag">Configuration IA</span>
           </div>
           <div class="domain-frameworks" data-lang="zh">
             <span class="framework-tag">人类代理</span>
@@ -456,10 +498,13 @@
       <div class="domain-header">
         <div class="domain-left">
           <h3 class="domain-title" data-lang="en">Augmented Foresight for Strategic Impact</h3>
+          <h3 class="domain-title" data-lang="fr">Prospective augment&eacute;e pour un impact strat&eacute;gique</h3>
           <h3 class="domain-title" data-lang="zh">增强预见战略影响</h3>
           <p class="domain-subtitle" data-lang="en">Imagine &mdash; Design &mdash; Lead</p>
+          <p class="domain-subtitle" data-lang="fr">Imaginer &mdash; Concevoir &mdash; Diriger</p>
           <p class="domain-subtitle" data-lang="zh">想象 — 设计 — 领导</p>
           <p class="domain-text" data-lang="en">Applied futures thinking for strategic decision-making. <strong><em>Designing Sustainable Futures</em></strong> offers a framework for using generative AI in scenario simulation and policy forecasting so leaders can anticipate change and act on it &mdash; across industries, sectors, and functions.</p>
+          <p class="domain-text" data-lang="fr">La pens&eacute;e prospective appliqu&eacute;e &agrave; la prise de d&eacute;cision strat&eacute;gique. <strong><em>Designing Sustainable Futures</em></strong> propose un cadre pour utiliser l'IA g&eacute;n&eacute;rative dans la simulation de sc&eacute;narios et la pr&eacute;vision de politiques, afin que les dirigeants puissent anticiper le changement et agir &mdash; tous secteurs, industries et fonctions confondus.</p>
           <p class="domain-text" data-lang="zh">应用未来思维进行战略决策。<strong><em>Designing Sustainable Futures</em></strong>提供了一个框架，用于在情景模拟和政策预测中使用生成式AI，使领导者能够预期变化并采取行动——跨行业、部门和职能。</p>
           <div class="domain-frameworks" data-lang="en">
             <span class="framework-tag">Scenario Planning</span>
@@ -467,6 +512,13 @@
             <span class="framework-tag">Futureback Strategy</span>
             <span class="framework-tag">Sustainability Roadmaps</span>
             <span class="framework-tag">Strategic Resilience</span>
+          </div>
+          <div class="domain-frameworks" data-lang="fr">
+            <span class="framework-tag">Planification de sc&eacute;narios</span>
+            <span class="framework-tag">Pr&eacute;vision des tendances</span>
+            <span class="framework-tag">Strat&eacute;gie r&eacute;trospective</span>
+            <span class="framework-tag">Feuilles de route durables</span>
+            <span class="framework-tag">R&eacute;silience strat&eacute;gique</span>
           </div>
           <div class="domain-frameworks" data-lang="zh">
             <span class="framework-tag">情景规划</span>
@@ -488,10 +540,13 @@
       <div class="domain-header">
         <div class="domain-left">
           <h3 class="domain-title" data-lang="en">Design-Driven Entrepreneurship to Start &amp; Scale OPCs</h3>
+          <h3 class="domain-title" data-lang="fr">Entrepreneuriat par le design pour cr&eacute;er et d&eacute;velopper des OPC</h3>
           <h3 class="domain-title" data-lang="zh">设计驱动创业初创与扩展</h3>
           <p class="domain-subtitle" data-lang="en">Build, operate, and scale with AI as co-founder</p>
+          <p class="domain-subtitle" data-lang="fr">Cr&eacute;er, op&eacute;rer et d&eacute;velopper avec l'IA comme co-fondateur</p>
           <p class="domain-subtitle" data-lang="zh">与AI合伙人一起建立、运营和扩展</p>
           <p class="domain-text" data-lang="en">The One Person Company (OPC) is the AI-native venture model &mdash; a single founder with the reach of an entire team. <strong><em>A Design Driven Guide for Entrepreneurs</em></strong> grounds this in strategic design as a mindset for framing problems, identifying opportunities, and creating pathways forward at every stage of growth.</p>
+          <p class="domain-text" data-lang="fr">La One Person Company (OPC) est le mod&egrave;le d'entreprise natif IA &mdash; un fondateur unique avec la port&eacute;e d'une &eacute;quipe enti&egrave;re. <strong><em>A Design Driven Guide for Entrepreneurs</em></strong> ancre cette approche dans le design strat&eacute;gique comme &eacute;tat d'esprit pour cadrer les probl&egrave;mes, identifier les opportunit&eacute;s et cr&eacute;er des voies de croissance &agrave; chaque &eacute;tape.</p>
           <p class="domain-text" data-lang="zh">一人公司(OPC)是AI原生创业模式——一个创始人拥有整个团队的触及范围。<strong><em>A Design Driven Guide for Entrepreneurs</em></strong>以战略设计为基础，作为框架问题、识别机会和在每个增长阶段创建前进路径的思维方式。</p>
           <div class="domain-frameworks" data-lang="en">
             <span class="framework-tag">Venture Architecture</span>
@@ -499,6 +554,13 @@
             <span class="framework-tag">Lean Validation</span>
             <span class="framework-tag">Founder Mindset</span>
             <span class="framework-tag">Scalable Design</span>
+          </div>
+          <div class="domain-frameworks" data-lang="fr">
+            <span class="framework-tag">Architecture de venture</span>
+            <span class="framework-tag">Cadrage de probl&egrave;mes</span>
+            <span class="framework-tag">Validation lean</span>
+            <span class="framework-tag">Mentalit&eacute; fondateur</span>
+            <span class="framework-tag">Design &eacute;volutif</span>
           </div>
           <div class="domain-frameworks" data-lang="zh">
             <span class="framework-tag">创业架构</span>
@@ -520,10 +582,13 @@
       <div class="domain-header">
         <div class="domain-left">
           <h3 class="domain-title" data-lang="en">AI Integration for Systemic Transformation</h3>
+          <h3 class="domain-title" data-lang="fr">Int&eacute;gration de l'IA pour une transformation syst&eacute;mique</h3>
           <h3 class="domain-title" data-lang="zh">AI整合系统性转型</h3>
           <p class="domain-subtitle" data-lang="en">AI at the core of every offering, process, and function</p>
+          <p class="domain-subtitle" data-lang="fr">L'IA au c&oelig;ur de chaque offre, processus et fonction</p>
           <p class="domain-subtitle" data-lang="zh">AI融入每项业务、流程和职能的核心</p>
           <p class="domain-text" data-lang="en">Over half of digital transformations underperform because technology outpaces organizational readiness. <strong><em>Office Shock</em></strong> provides frameworks with diagnostic tools that help teams achieve purpose with greater judgment, accountability, and human agency while accelerating transformation.</p>
+          <p class="domain-text" data-lang="fr">Plus de la moiti&eacute; des transformations num&eacute;riques sous-performent parce que la technologie d&eacute;passe la pr&eacute;paration organisationnelle. <strong><em>Office Shock</em></strong> fournit des cadres avec des outils diagnostiques qui aident les &eacute;quipes &agrave; atteindre leurs objectifs avec plus de discernement, de responsabilit&eacute; et d'agentivit&eacute; humaine tout en acc&eacute;l&eacute;rant la transformation.</p>
           <p class="domain-text" data-lang="zh">超过一半的数字化转型表现不佳，因为技术超过了组织的就绪程度。<strong><em>Office Shock</em></strong>提供了诊断工具框架，帮助团队在加速转型的同时以更大的判断力、责任感和人类代理来实现目标。</p>
           <div class="domain-frameworks" data-lang="en">
             <span class="framework-tag">Readiness Assessment</span>
@@ -531,6 +596,13 @@
             <span class="framework-tag">Enterprise Rollout</span>
             <span class="framework-tag">Stakeholder Alignment</span>
             <span class="framework-tag">Purpose-Driven Change</span>
+          </div>
+          <div class="domain-frameworks" data-lang="fr">
+            <span class="framework-tag">&Eacute;valuation de maturit&eacute;</span>
+            <span class="framework-tag">Automatisation des processus</span>
+            <span class="framework-tag">D&eacute;ploiement entreprise</span>
+            <span class="framework-tag">Alignement des parties prenantes</span>
+            <span class="framework-tag">Changement orient&eacute; mission</span>
           </div>
           <div class="domain-frameworks" data-lang="zh">
             <span class="framework-tag">就绪度评估</span>
@@ -552,10 +624,13 @@
       <div class="domain-header">
         <div class="domain-left">
           <h3 class="domain-title" data-lang="en">Collective Intelligence for Future-Ready Leadership</h3>
+          <h3 class="domain-title" data-lang="fr">Intelligence collective pour un leadership tourn&eacute; vers l'avenir</h3>
           <h3 class="domain-title" data-lang="zh">集体智能未来就绪领导力</h3>
           <p class="domain-subtitle" data-lang="en">Where people and AI learn to think together</p>
+          <p class="domain-subtitle" data-lang="fr">L&agrave; o&ugrave; humains et IA apprennent &agrave; penser ensemble</p>
           <p class="domain-subtitle" data-lang="zh">人与AI学会一起思考的地方</p>
           <p class="domain-text" data-lang="en">Innovation leadership fails when engagement is missing. Drawing on research with seven global companies, <strong><em>IDeaLs</em></strong> shows how corporate university programs and executive education become the proving ground for leaders who harness collective intelligence &mdash; the combined capacity of people and AI to think, decide, and act together.</p>
+          <p class="domain-text" data-lang="fr">Le leadership en innovation &eacute;choue sans engagement. S'appuyant sur des recherches avec sept entreprises mondiales, <strong><em>IDeaLs</em></strong> montre comment les programmes d'universit&eacute; d'entreprise et la formation des dirigeants deviennent le terrain d'&eacute;preuve pour les leaders qui exploitent l'intelligence collective &mdash; la capacit&eacute; combin&eacute;e des humains et de l'IA &agrave; penser, d&eacute;cider et agir ensemble.</p>
           <p class="domain-text" data-lang="zh">当缺乏参与时，创新领导力失败。基于与七家全球公司的研究，<strong><em>IDeaLs</em></strong>展示了公司大学项目和高管教育如何成为利用集体智能的领导者的试验场——人与AI思考、决策和一起行动的综合能力。</p>
           <div class="domain-frameworks" data-lang="en">
             <span class="framework-tag">Executive Programs</span>
@@ -563,6 +638,13 @@
             <span class="framework-tag">Storymaking</span>
             <span class="framework-tag">Team Engagement</span>
             <span class="framework-tag">Shared Decision-Making</span>
+          </div>
+          <div class="domain-frameworks" data-lang="fr">
+            <span class="framework-tag">Programmes dirigeants</span>
+            <span class="framework-tag">Culture d'innovation</span>
+            <span class="framework-tag">Storymaking</span>
+            <span class="framework-tag">Engagement d'&eacute;quipe</span>
+            <span class="framework-tag">D&eacute;cision partag&eacute;e</span>
           </div>
           <div class="domain-frameworks" data-lang="zh">
             <span class="framework-tag">高管项目</span>
@@ -586,6 +668,7 @@
 <section class="logo-bar" id="organizations">
   <div class="logo-bar-inner">
     <h2 class="section-title hero-size" style="margin-bottom: 2rem;" data-lang="en">Industry Experience</h2>
+    <h2 class="section-title hero-size" style="margin-bottom: 2rem;" data-lang="fr">Exp&eacute;rience sectorielle</h2>
     <h2 class="section-title hero-size" style="margin-bottom: 2rem;" data-lang="zh">行业经验</h2>
     <div class="sector-cards" data-lang="en">
       <div class="sector-card">
@@ -635,6 +718,57 @@
           <span class="sector-name">IMD</span>
           <span class="sector-name">UNICEF</span>
           <span class="sector-name">ICRC</span>
+        </div>
+      </div>
+    </div>
+    <div class="sector-cards" data-lang="fr">
+      <div class="sector-card">
+        <p class="sector-label">Technologie</p>
+        <div class="sector-names">
+          <span class="sector-name">Samsung</span>
+          <span class="sector-name">SAP</span>
+          <span class="sector-name">Verizon</span>
+          <span class="sector-name">Swisscom</span>
+          <span class="sector-name">Honeywell</span>
+          <span class="sector-name">AOL Time Warner</span>
+        </div>
+      </div>
+      <div class="sector-card">
+        <p class="sector-label">Pharma &amp; Sant&eacute;</p>
+        <div class="sector-names">
+          <span class="sector-name">Novartis</span>
+          <span class="sector-name">Roche</span>
+          <span class="sector-name">Pfizer</span>
+          <span class="sector-name">Takeda</span>
+        </div>
+      </div>
+      <div class="sector-card">
+        <p class="sector-label">Services financiers</p>
+        <div class="sector-names">
+          <span class="sector-name">Credit Suisse</span>
+          <span class="sector-name">HSBC</span>
+          <span class="sector-name">Zurich</span>
+          <span class="sector-name">Citibank</span>
+        </div>
+      </div>
+      <div class="sector-card">
+        <p class="sector-label">Grande conso &amp; Industrie</p>
+        <div class="sector-names">
+          <span class="sector-name">Nestl&eacute;</span>
+          <span class="sector-name">Coca-Cola</span>
+          <span class="sector-name">McDonald's</span>
+          <span class="sector-name">Walmart</span>
+          <span class="sector-name">Porsche</span>
+          <span class="sector-name">John Deere</span>
+          <span class="sector-name">Devon</span>
+        </div>
+      </div>
+      <div class="sector-card">
+        <p class="sector-label">&Eacute;ducation &amp; ONG</p>
+        <div class="sector-names">
+          <span class="sector-name">IMD</span>
+          <span class="sector-name">UNICEF</span>
+          <span class="sector-name">CICR</span>
         </div>
       </div>
     </div>
@@ -696,6 +830,7 @@
 <section class="credentials-section" id="credentials">
   <div class="container">
     <h2 class="section-title hero-size" data-lang="en">About Me</h2>
+    <h2 class="section-title hero-size" data-lang="fr">&Agrave; propos</h2>
     <h2 class="section-title hero-size" data-lang="zh">关于我</h2>
     <div class="credentials-grid" data-lang="en">
       <div class="credential-group">
@@ -722,6 +857,33 @@
         <p class="credential-item"><strong>Program Lead</strong>, Center for Creative Leadership</p>
         <p class="credential-item"><strong>Research Advisor</strong>, MIT Media Lab</p>
         <p class="credential-item"><strong>Architectural Designer</strong></p>
+      </div>
+    </div>
+    <div class="credentials-grid" data-lang="fr">
+      <div class="credential-group">
+        <h3>Formation</h3>
+        <p class="credential-item"><strong>Doctorat en technologie du design</strong>, MIT</p>
+        <p class="credential-item"><strong>Ma&icirc;trise en architecture</strong>, MIT</p>
+        <p class="credential-item"><strong>Licence en &eacute;conomie manag&eacute;riale</strong>, Carnegie Mellon</p>
+        <div style="margin-top: 1.5rem;">
+          <a href="https://www.chartwellspeakers.com/speaker/joseph-press/?event=eyJldmVudE5hbWUiOiJDbGlja2VkIiwiaW5kZXgiOiJ3cF9wb3N0c19zcGVha2VyX25hbWUiLCJvYmplY3RJRHMiOlsiNTQ4MDctMCJdLCJwb3NpdGlvbnMiOlsxXSwicXVlcnlJRCI6IjEwZTNmYTlmMGJkYjI1N2Q4MGViZWYyMDFkMjgwYWMyIn0=" target="_blank" class="btn btn-primary" style="font-size: 1rem; padding: 1rem 2.5rem;">Conf&eacute;rencier Chartwell</a>
+        </div>
+      </div>
+      <div class="credential-group">
+        <h3>Postes actuels</h3>
+        <p class="credential-item"><strong>Professeur titulaire</strong>, Shanghai University of Engineering Sciences</p>
+        <p class="credential-item"><strong>Expert national &eacute;tranger</strong>, Donghua University</p>
+        <p class="credential-item"><strong>Partenaire associ&eacute;</strong>, Copenhagen Institute for Futures Studies</p>
+        <p class="credential-item"><strong>Conseiller scientifique</strong>, Institute for the Future</p>
+      </div>
+      <div class="credential-group">
+        <h3>Postes pr&eacute;c&eacute;dents</h3>
+        <p class="credential-item"><strong>Directeur</strong>, Deloitte Digital CH</p>
+        <p class="credential-item"><strong>Professeur invit&eacute;</strong>, Politecnico di Milano</p>
+        <p class="credential-item"><strong>Enseignant invit&eacute;</strong>, Parsons New School of Design</p>
+        <p class="credential-item"><strong>Responsable de programme</strong>, Center for Creative Leadership</p>
+        <p class="credential-item"><strong>Conseiller scientifique</strong>, MIT Media Lab</p>
+        <p class="credential-item"><strong>Architecte designer</strong></p>
       </div>
     </div>
     <div class="credentials-grid" data-lang="zh">
@@ -758,8 +920,10 @@
 <section class="contact-section" id="contact">
   <div class="container">
     <h2 class="section-title hero-size" data-lang="en">Let's Collaborate</h2>
+    <h2 class="section-title hero-size" data-lang="fr">Collaborons</h2>
     <h2 class="section-title hero-size" data-lang="zh">让我们合作</h2>
     <p class="section-intro" data-lang="en">Available for executive education, lectures/keynotes, and strategic advisory.</p>
+    <p class="section-intro" data-lang="fr">Disponible pour la formation des dirigeants, conf&eacute;rences et conseil strat&eacute;gique.</p>
     <p class="section-intro" data-lang="zh">可提供高管教育、讲座/主题演讲和战略咨询。</p>
     <div class="contact-row" data-lang="en">
       <div class="contact-card">
@@ -777,6 +941,28 @@
       </div>
       <div class="contact-card">
         <p class="contact-card-label">Academic</p>
+        <a href="mailto:jp@sues.edu.cn" class="contact-btn">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          jp@sues.edu.cn
+        </a>
+      </div>
+    </div>
+    <div class="contact-row" data-lang="fr">
+      <div class="contact-card">
+        <a href="https://calendar.app.google/vZRiTnxbnzyKxUYG6" class="contact-btn" target="_blank" rel="noopener">Planifier un appel</a>
+      </div>
+      <div class="contact-card">
+        <a href="https://www.chartwellspeakers.com/speaker/joseph-press/?event=eyJldmVudE5hbWUiOiJDbGlja2VkIiwiaW5kZXgiOiJ3cF9wb3N0c19zcGVha2VyX25hbWUiLCJvYmplY3RJRHMiOlsiNTQ4MDctMCJdLCJwb3NpdGlvbnMiOlsxXSwicXVlcnlJRCI6IjEwZTNmYTlmMGJkYjI1N2Q4MGViZWYyMDFkMjgwYWMyIn0=" class="contact-btn" target="_blank" rel="noopener">Agence de conf&eacute;rences</a>
+      </div>
+      <div class="contact-card">
+        <p class="contact-card-label">Conseil</p>
+        <a href="mailto:jp@josephpress.com" class="contact-btn">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          jp@josephpress.com
+        </a>
+      </div>
+      <div class="contact-card">
+        <p class="contact-card-label">Acad&eacute;mique</p>
         <a href="mailto:jp@sues.edu.cn" class="contact-btn">
           <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
           jp@sues.edu.cn
@@ -808,15 +994,15 @@
   </div>
 </section>
 
-<footer>&copy; 2026 Joseph Press. <span data-lang="en">All rights reserved.</span><span data-lang="zh">版权所有。</span></footer>
+<footer>&copy; 2026 Joseph Press. <span data-lang="en">All rights reserved.</span><span data-lang="fr">Tous droits r&eacute;serv&eacute;s.</span><span data-lang="zh">版权所有。</span></footer>
 
 <script>
   function setLang(lang) {
-    document.body.classList.toggle('zh', lang === 'zh');
+    document.body.className = (lang === 'en') ? '' : lang;
     document.querySelectorAll('[data-lang-btn]').forEach(btn => {
       btn.classList.toggle('active', btn.getAttribute('data-lang-btn') === lang);
     });
-    document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+    document.documentElement.lang = lang === 'zh' ? 'zh-CN' : lang === 'fr' ? 'fr' : 'en';
   }
   window.addEventListener('scroll', () => {
     document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
