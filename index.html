@@ -152,8 +152,47 @@
   .capability {
     margin-bottom: 3.5rem; padding-bottom: 3.5rem;
     border-bottom: 1px solid var(--pale);
+    display: grid; grid-template-columns: 1fr auto; gap: 2.5rem; align-items: start;
   }
   .capability:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+  .capability-content { }
+  .capability-cover {
+    display: flex; flex-direction: column; align-items: center; gap: 0.8rem;
+    justify-content: flex-start; padding-top: 1.5rem;
+  }
+  .capability-cover img {
+    width: 160px; border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  }
+  .capability-cover-placeholder {
+    width: 160px; aspect-ratio: 2/3; border-radius: 4px;
+    background: linear-gradient(135deg, #2e4057 0%, #1a1a2e 100%);
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    padding: 1rem;
+  }
+  .book-cover-text {
+    color: rgba(255,255,255,0.9); font-size: 0.82rem;
+    font-weight: 600; text-align: center; line-height: 1.35;
+  }
+  .book-cover-text small {
+    font-size: 0.62rem; font-weight: 400; opacity: 0.8;
+    display: block; margin-top: 0.3rem; line-height: 1.3;
+  }
+  .capability-book-meta {
+    font-size: 0.75rem; color: var(--light); text-align: center;
+  }
+  .capability-book-meta a {
+    color: var(--light); text-decoration: underline;
+    text-decoration-color: rgba(0,0,0,0.2);
+  }
+  .capability-book-meta a:hover { color: var(--accent); }
+  @media (max-width: 768px) {
+    .capability { grid-template-columns: 1fr; }
+    .capability-cover { order: -1; padding-top: 0; }
+    .capability-cover img { width: 120px; }
+    .capability-cover-placeholder { width: 120px; }
+  }
   .capability-number {
     font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em;
     text-transform: uppercase; color: var(--light); margin-bottom: 0.6rem;
@@ -389,139 +428,161 @@
 
     <!-- CAPABILITY 1 -->
     <div class="capability">
-      <p class="capability-number"><span data-lang="en">Capability One</span><span data-lang="zh">能力一</span></p>
-      <h3 class="capability-title" data-lang="en">AI-Human Collaboration for Accelerated Innovation</h3>
-      <h3 class="capability-title" data-lang="zh">人机协作加速创新</h3>
-      <p class="capability-subtitle" data-lang="en">Work with agents for greater creativity</p>
-      <p class="capability-subtitle" data-lang="zh">与智能体合作实现更大创意</p>
-      <p class="capability-text" data-lang="en"><em>Agentic Creative Intelligence</em> argues that authentic creativity is even more possible and potent with AI. Most organizations adopt AI faster than they build the capacity to use it well. ACI grounds our intelligence in real practices and platforms to creatively intervene in complex situations — with clarity of expression, embodied judgment, and more meaningful experiences. The book introduces the Creative Council: a model where the human practitioner leads and AI collaborates, so that computational reach never replaces the judgment it was designed to extend.</p>
-      <p class="capability-text" data-lang="zh"><em>Agentic Creative Intelligence</em>认为真实的创意与AI合作会更加可能和强大。大多数组织采用AI的速度快于建立良好使用AI的能力。ACI将我们的智能扎根于真实的实践和平台中，以创意的方式干预复杂情况——具有表达的清晰性、体现的判断力和更有意义的体验。该书介绍了创意委员会模式：人类从业者领导，AI协作，这样计算能力永远不会替代它被设计来扩展的判断。</p>
-      <div class="capability-keywords" data-lang="en">
-        <span class="keyword-tag">Human Agency</span>
-        <span class="keyword-tag">Design Dialogue</span>
-        <span class="keyword-tag">Creative Augmentation</span>
-        <span class="keyword-tag">Responsible AI</span>
-        <span class="keyword-tag">Practitioner-Led</span>
-        <span class="keyword-tag">AI Configuration</span>
+      <div class="capability-content">
+        <p class="capability-number"><span data-lang="en">Capability One</span><span data-lang="zh">能力一</span></p>
+        <h3 class="capability-title" data-lang="en">AI-Human Collaboration for Accelerated Innovation</h3>
+        <h3 class="capability-title" data-lang="zh">人机协作加速创新</h3>
+        <p class="capability-subtitle" data-lang="en">Work with agents for greater creativity</p>
+        <p class="capability-subtitle" data-lang="zh">与智能体合作实现更大创意</p>
+        <p class="capability-text" data-lang="en"><em>Agentic Creative Intelligence</em> argues that authentic creativity is even more possible and potent with AI. Most organizations adopt AI faster than they build the capacity to use it well. ACI grounds our intelligence in real practices and platforms to creatively intervene in complex situations — with clarity of expression, embodied judgment, and more meaningful experiences. The book introduces the Creative Council: a model where the human practitioner leads and AI collaborates, so that computational reach never replaces the judgment it was designed to extend.</p>
+        <p class="capability-text" data-lang="zh"><em>Agentic Creative Intelligence</em>认为真实的创意与AI合作会更加可能和强大。大多数组织采用AI的速度快于建立良好使用AI的能力。ACI将我们的智能扎根于真实的实践和平台中，以创意的方式干预复杂情况——具有表达的清晰性、体现的判断力和更有意义的体验。该书介绍了创意委员会模式：人类从业者领导，AI协作，这样计算能力永远不会替代它被设计来扩展的判断。</p>
+        <div class="capability-keywords" data-lang="en">
+          <span class="keyword-tag">Human Agency</span>
+          <span class="keyword-tag">Design Dialogue</span>
+          <span class="keyword-tag">Creative Augmentation</span>
+          <span class="keyword-tag">Responsible AI</span>
+          <span class="keyword-tag">Practitioner-Led</span>
+          <span class="keyword-tag">AI Configuration</span>
+        </div>
+        <div class="capability-keywords" data-lang="zh">
+          <span class="keyword-tag">人类代理</span>
+          <span class="keyword-tag">设计对话</span>
+          <span class="keyword-tag">创意增强</span>
+          <span class="keyword-tag">负责任AI</span>
+          <span class="keyword-tag">从业者驱动</span>
+          <span class="keyword-tag">AI配置</span>
+        </div>
       </div>
-      <div class="capability-keywords" data-lang="zh">
-        <span class="keyword-tag">人类代理</span>
-        <span class="keyword-tag">设计对话</span>
-        <span class="keyword-tag">创意增强</span>
-        <span class="keyword-tag">负责任AI</span>
-        <span class="keyword-tag">从业者驱动</span>
-        <span class="keyword-tag">AI配置</span>
+      <div class="capability-cover">
+        <div class="capability-cover-placeholder">
+          <span class="book-cover-text">Agentic<br>Creative<br>Intelligence:<br><small>Designing With AI<br>to Reclaim<br>Human Agency</small></span>
+        </div>
+        <p class="capability-book-meta">Forthcoming, Routledge 2026</p>
       </div>
-      <p class="capability-citation" data-lang="en">Agentic Creative Intelligence: Designing With AI to Reclaim Human Agency — Routledge, 2026</p>
-      <p class="capability-citation" data-lang="zh">Agentic Creative Intelligence: Designing With AI to Reclaim Human Agency — Routledge, 2026</p>
     </div>
 
     <!-- CAPABILITY 2 -->
     <div class="capability">
-      <p class="capability-number"><span data-lang="en">Capability Two</span><span data-lang="zh">能力二</span></p>
-      <h3 class="capability-title" data-lang="en">Augmented Foresight for Strategic Impact</h3>
-      <h3 class="capability-title" data-lang="zh">增强预见战略影响</h3>
-      <p class="capability-subtitle" data-lang="en">Imagine — Design — Lead</p>
-      <p class="capability-subtitle" data-lang="zh">想象 — 设计 — 领导</p>
-      <p class="capability-text" data-lang="en">Applied futures thinking for strategic decision-making. <em>Designing Sustainable Futures</em> offers a framework for using generative AI in scenario simulation and policy forecasting so leaders can anticipate change and act on it — across industries, sectors, and functions.</p>
-      <p class="capability-text" data-lang="zh">应用未来思维进行战略决策。<em>Designing Sustainable Futures</em>提供了一个框架，用于在情景模拟和政策预测中使用生成式AI，使领导者能够预期变化并采取行动——跨行业、部门和职能。</p>
-      <div class="capability-keywords" data-lang="en">
-        <span class="keyword-tag">Scenario Planning</span>
-        <span class="keyword-tag">Trend Forecasting</span>
-        <span class="keyword-tag">Futureback Strategy</span>
-        <span class="keyword-tag">Sustainability</span>
-        <span class="keyword-tag">Strategic Resilience</span>
+      <div class="capability-content">
+        <p class="capability-number"><span data-lang="en">Capability Two</span><span data-lang="zh">能力二</span></p>
+        <h3 class="capability-title" data-lang="en">Augmented Foresight for Strategic Impact</h3>
+        <h3 class="capability-title" data-lang="zh">增强预见战略影响</h3>
+        <p class="capability-subtitle" data-lang="en">Imagine — Design — Lead</p>
+        <p class="capability-subtitle" data-lang="zh">想象 — 设计 — 领导</p>
+        <p class="capability-text" data-lang="en">Applied futures thinking for strategic decision-making. <em>Designing Sustainable Futures</em> offers a framework for using generative AI in scenario simulation and policy forecasting so leaders can anticipate change and act on it — across industries, sectors, and functions.</p>
+        <p class="capability-text" data-lang="zh">应用未来思维进行战略决策。<em>Designing Sustainable Futures</em>提供了一个框架，用于在情景模拟和政策预测中使用生成式AI，使领导者能够预期变化并采取行动——跨行业、部门和职能。</p>
+        <div class="capability-keywords" data-lang="en">
+          <span class="keyword-tag">Scenario Planning</span>
+          <span class="keyword-tag">Trend Forecasting</span>
+          <span class="keyword-tag">Futureback Strategy</span>
+          <span class="keyword-tag">Sustainability</span>
+          <span class="keyword-tag">Strategic Resilience</span>
+        </div>
+        <div class="capability-keywords" data-lang="zh">
+          <span class="keyword-tag">情景规划</span>
+          <span class="keyword-tag">趋势预测</span>
+          <span class="keyword-tag">未来回溯战略</span>
+          <span class="keyword-tag">可持续性</span>
+          <span class="keyword-tag">战略韧性</span>
+        </div>
       </div>
-      <div class="capability-keywords" data-lang="zh">
-        <span class="keyword-tag">情景规划</span>
-        <span class="keyword-tag">趋势预测</span>
-        <span class="keyword-tag">未来回溯战略</span>
-        <span class="keyword-tag">可持续性</span>
-        <span class="keyword-tag">战略韧性</span>
+      <div class="capability-cover">
+        <img src="cover-dsf.jpg" alt="Designing Sustainable Futures">
+        <p class="capability-book-meta"><a href="https://www.routledge.com/Designing-Sustainable-Futures-How-to-Imagine-Create-and-Lead-the-Transition-to-a-Better-World/Press-Celi/p/book/9781032588384" target="_blank">Routledge, 2024</a></p>
       </div>
-      <p class="capability-citation" data-lang="en">Designing Sustainable Futures — Routledge, 2024</p>
-      <p class="capability-citation" data-lang="zh">Designing Sustainable Futures — Routledge, 2024</p>
     </div>
 
     <!-- CAPABILITY 3 -->
     <div class="capability">
-      <p class="capability-number"><span data-lang="en">Capability Three</span><span data-lang="zh">能力三</span></p>
-      <h3 class="capability-title" data-lang="en">Design-Driven Entrepreneurship to Start & Scale OPCs</h3>
-      <h3 class="capability-title" data-lang="zh">设计驱动创业初创与扩展</h3>
-      <p class="capability-subtitle" data-lang="en">Build, operate, and scale with AI as co-founder</p>
-      <p class="capability-subtitle" data-lang="zh">与AI合伙人一起建立、运营和扩展</p>
-      <p class="capability-text" data-lang="en">The One Person Company (OPC) is the AI-native venture model — a single founder with the reach of an entire team. <em>A Design Driven Guide for Entrepreneurs</em> grounds this in strategic design as a mindset for framing problems, identifying opportunities, and creating pathways forward at every stage of growth.</p>
-      <p class="capability-text" data-lang="zh">一人公司(OPC)是AI原生创业模式——一个创始人拥有整个团队的触及范围。<em>A Design Driven Guide for Entrepreneurs</em>以战略设计为基础，作为框架问题、识别机会和在每个增长阶段创建前进路径的思维方式。</p>
-      <div class="capability-keywords" data-lang="en">
-        <span class="keyword-tag">Venture Architecture</span>
-        <span class="keyword-tag">Problem Framing</span>
-        <span class="keyword-tag">Lean Validation</span>
-        <span class="keyword-tag">Founder Mindset</span>
-        <span class="keyword-tag">Scalable Design</span>
+      <div class="capability-content">
+        <p class="capability-number"><span data-lang="en">Capability Three</span><span data-lang="zh">能力三</span></p>
+        <h3 class="capability-title" data-lang="en">Design-Driven Entrepreneurship to Start &amp; Scale OPCs</h3>
+        <h3 class="capability-title" data-lang="zh">设计驱动创业初创与扩展</h3>
+        <p class="capability-subtitle" data-lang="en">Build, operate, and scale with AI as co-founder</p>
+        <p class="capability-subtitle" data-lang="zh">与AI合伙人一起建立、运营和扩展</p>
+        <p class="capability-text" data-lang="en">The One Person Company (OPC) is the AI-native venture model — a single founder with the reach of an entire team. <em>A Design Driven Guide for Entrepreneurs</em> grounds this in strategic design as a mindset for framing problems, identifying opportunities, and creating pathways forward at every stage of growth.</p>
+        <p class="capability-text" data-lang="zh">一人公司(OPC)是AI原生创业模式——一个创始人拥有整个团队的触及范围。<em>A Design Driven Guide for Entrepreneurs</em>以战略设计为基础，作为框架问题、识别机会和在每个增长阶段创建前进路径的思维方式。</p>
+        <div class="capability-keywords" data-lang="en">
+          <span class="keyword-tag">Venture Architecture</span>
+          <span class="keyword-tag">Problem Framing</span>
+          <span class="keyword-tag">Lean Validation</span>
+          <span class="keyword-tag">Founder Mindset</span>
+          <span class="keyword-tag">Scalable Design</span>
+        </div>
+        <div class="capability-keywords" data-lang="zh">
+          <span class="keyword-tag">创业架构</span>
+          <span class="keyword-tag">问题框架</span>
+          <span class="keyword-tag">精益验证</span>
+          <span class="keyword-tag">创始人思维</span>
+          <span class="keyword-tag">可扩展设计</span>
+        </div>
       </div>
-      <div class="capability-keywords" data-lang="zh">
-        <span class="keyword-tag">创业架构</span>
-        <span class="keyword-tag">问题框架</span>
-        <span class="keyword-tag">精益验证</span>
-        <span class="keyword-tag">创始人思维</span>
-        <span class="keyword-tag">可扩展设计</span>
+      <div class="capability-cover">
+        <img src="cover-entrepreneur.jpg" alt="A Design Driven Guide for Entrepreneurs">
+        <p class="capability-book-meta"><a href="https://www.routledge.com/A-Design-Driven-Guide-for-Entrepreneurs/Press/p/book/9781032129945" target="_blank">Routledge, 2023</a></p>
       </div>
-      <p class="capability-citation" data-lang="en">A Design Driven Guide for Entrepreneurs — Routledge, 2023</p>
-      <p class="capability-citation" data-lang="zh">A Design Driven Guide for Entrepreneurs — Routledge, 2023</p>
     </div>
 
     <!-- CAPABILITY 4 -->
     <div class="capability">
-      <p class="capability-number"><span data-lang="en">Capability Four</span><span data-lang="zh">能力四</span></p>
-      <h3 class="capability-title" data-lang="en">AI Integration for Systemic Transformation</h3>
-      <h3 class="capability-title" data-lang="zh">AI整合系统性转型</h3>
-      <p class="capability-subtitle" data-lang="en">AI at the core of every offering, process, and function</p>
-      <p class="capability-subtitle" data-lang="zh">AI融入每项业务、流程和职能的核心</p>
-      <p class="capability-text" data-lang="en">Over half of digital transformations underperform because technology outpaces organizational readiness. <em>Office Shock</em> provides frameworks with diagnostic tools that help teams achieve purpose with greater judgment, accountability, and human agency while accelerating transformation.</p>
-      <p class="capability-text" data-lang="zh">超过一半的数字化转型表现不佳，因为技术超过了组织的就绪程度。<em>Office Shock</em>提供了诊断工具框架，帮助团队在加速转型的同时以更大的判断力、责任感和人类代理来实现目标。</p>
-      <div class="capability-keywords" data-lang="en">
-        <span class="keyword-tag">Readiness Assessment</span>
-        <span class="keyword-tag">Process Automation</span>
-        <span class="keyword-tag">Enterprise Rollout</span>
-        <span class="keyword-tag">Stakeholder Alignment</span>
-        <span class="keyword-tag">Purpose-Driven Change</span>
+      <div class="capability-content">
+        <p class="capability-number"><span data-lang="en">Capability Four</span><span data-lang="zh">能力四</span></p>
+        <h3 class="capability-title" data-lang="en">AI Integration for Systemic Transformation</h3>
+        <h3 class="capability-title" data-lang="zh">AI整合系统性转型</h3>
+        <p class="capability-subtitle" data-lang="en">AI at the core of every offering, process, and function</p>
+        <p class="capability-subtitle" data-lang="zh">AI融入每项业务、流程和职能的核心</p>
+        <p class="capability-text" data-lang="en">Over half of digital transformations underperform because technology outpaces organizational readiness. <em>Office Shock</em> provides frameworks with diagnostic tools that help teams achieve purpose with greater judgment, accountability, and human agency while accelerating transformation.</p>
+        <p class="capability-text" data-lang="zh">超过一半的数字化转型表现不佳，因为技术超过了组织的就绪程度。<em>Office Shock</em>提供了诊断工具框架，帮助团队在加速转型的同时以更大的判断力、责任感和人类代理来实现目标。</p>
+        <div class="capability-keywords" data-lang="en">
+          <span class="keyword-tag">Readiness Assessment</span>
+          <span class="keyword-tag">Process Automation</span>
+          <span class="keyword-tag">Enterprise Rollout</span>
+          <span class="keyword-tag">Stakeholder Alignment</span>
+          <span class="keyword-tag">Purpose-Driven Change</span>
+        </div>
+        <div class="capability-keywords" data-lang="zh">
+          <span class="keyword-tag">就绪度评估</span>
+          <span class="keyword-tag">流程自动化</span>
+          <span class="keyword-tag">企业推广</span>
+          <span class="keyword-tag">利益相关者协调</span>
+          <span class="keyword-tag">目的驱动变革</span>
+        </div>
       </div>
-      <div class="capability-keywords" data-lang="zh">
-        <span class="keyword-tag">就绪度评估</span>
-        <span class="keyword-tag">流程自动化</span>
-        <span class="keyword-tag">企业推广</span>
-        <span class="keyword-tag">利益相关者协调</span>
-        <span class="keyword-tag">目的驱动变革</span>
+      <div class="capability-cover">
+        <img src="cover-officeshock.jpg" alt="Office Shock">
+        <p class="capability-book-meta"><a href="https://bkconnection.com/products/9781523003679_office-shock" target="_blank">Berrett-Koehler, 2023</a></p>
       </div>
-      <p class="capability-citation" data-lang="en">Office Shock — Berrett-Koehler, 2023</p>
-      <p class="capability-citation" data-lang="zh">Office Shock — Berrett-Koehler, 2023</p>
     </div>
 
     <!-- CAPABILITY 5 -->
     <div class="capability">
-      <p class="capability-number"><span data-lang="en">Capability Five</span><span data-lang="zh">能力五</span></p>
-      <h3 class="capability-title" data-lang="en">Collective Intelligence for Future-Ready Leadership</h3>
-      <h3 class="capability-title" data-lang="zh">集体智能未来就绪领导力</h3>
-      <p class="capability-subtitle" data-lang="en">Where people and AI learn to think together</p>
-      <p class="capability-subtitle" data-lang="zh">人与AI学会一起思考的地方</p>
-      <p class="capability-text" data-lang="en">Innovation leadership fails when engagement is missing. Drawing on research with seven global companies, <em>IDeaLs</em> shows how corporate university programs and executive education become the proving ground for leaders who harness collective intelligence — the combined capacity of people and AI to think, decide, and act together.</p>
-      <p class="capability-text" data-lang="zh">当缺乏参与时，创新领导力失败。基于与七家全球公司的研究，<em>IDeaLs</em>展示了公司大学项目和高管教育如何成为利用集体智能的领导者的试验场——人与AI思考、决策和一起行动的综合能力。</p>
-      <div class="capability-keywords" data-lang="en">
-        <span class="keyword-tag">Executive Programs</span>
-        <span class="keyword-tag">Innovation Culture</span>
-        <span class="keyword-tag">Storymaking</span>
-        <span class="keyword-tag">Team Engagement</span>
-        <span class="keyword-tag">Shared Decision-Making</span>
+      <div class="capability-content">
+        <p class="capability-number"><span data-lang="en">Capability Five</span><span data-lang="zh">能力五</span></p>
+        <h3 class="capability-title" data-lang="en">Collective Intelligence for Future-Ready Leadership</h3>
+        <h3 class="capability-title" data-lang="zh">集体智能未来就绪领导力</h3>
+        <p class="capability-subtitle" data-lang="en">Where people and AI learn to think together</p>
+        <p class="capability-subtitle" data-lang="zh">人与AI学会一起思考的地方</p>
+        <p class="capability-text" data-lang="en">Innovation leadership fails when engagement is missing. Drawing on research with seven global companies, <em>IDeaLs</em> shows how corporate university programs and executive education become the proving ground for leaders who harness collective intelligence — the combined capacity of people and AI to think, decide, and act together.</p>
+        <p class="capability-text" data-lang="zh">当缺乏参与时，创新领导力失败。基于与七家全球公司的研究，<em>IDeaLs</em>展示了公司大学项目和高管教育如何成为利用集体智能的领导者的试验场——人与AI思考、决策和一起行动的综合能力。</p>
+        <div class="capability-keywords" data-lang="en">
+          <span class="keyword-tag">Executive Programs</span>
+          <span class="keyword-tag">Innovation Culture</span>
+          <span class="keyword-tag">Storymaking</span>
+          <span class="keyword-tag">Team Engagement</span>
+          <span class="keyword-tag">Shared Decision-Making</span>
+        </div>
+        <div class="capability-keywords" data-lang="zh">
+          <span class="keyword-tag">高管项目</span>
+          <span class="keyword-tag">创新文化</span>
+          <span class="keyword-tag">故事创作</span>
+          <span class="keyword-tag">团队参与</span>
+          <span class="keyword-tag">共享决策</span>
+        </div>
       </div>
-      <div class="capability-keywords" data-lang="zh">
-        <span class="keyword-tag">高管项目</span>
-        <span class="keyword-tag">创新文化</span>
-        <span class="keyword-tag">故事创作</span>
-        <span class="keyword-tag">团队参与</span>
-        <span class="keyword-tag">共享决策</span>
+      <div class="capability-cover">
+        <img src="cover-ideals.jpg" alt="IDeaLs: Innovation and Design as Leadership">
+        <p class="capability-book-meta"><a href="https://bookstore.emerald.com/ideals-innovation-and-design-as-leadership.html" target="_blank">Emerald, 2021</a></p>
       </div>
-      <p class="capability-citation" data-lang="en">IDeaLs — Emerald, 2021</p>
-      <p class="capability-citation" data-lang="zh">IDeaLs — Emerald, 2021</p>
     </div>
 
   </div>
