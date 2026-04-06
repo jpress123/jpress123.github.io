@@ -124,100 +124,84 @@
     background: linear-gradient(180deg, var(--white) 0%, var(--bg) 100%);
     border-bottom: 1px solid var(--pale);
   }
-  .site-header h1 {
+  .header-layout {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: flex-start;
+  }
+  .header-left h1 {
     font-family: 'Playfair Display', serif;
     font-size: 2.8rem; font-weight: 700; line-height: 1.15;
     color: var(--navy); margin-bottom: 0.75rem;
   }
-  .site-header .tagline {
+  .header-tagline {
     font-size: 1.05rem; color: var(--medium); line-height: 1.65;
-    max-width: 600px; margin-bottom: 1rem;
+    margin-bottom: 2rem; max-width: 600px;
   }
-  .site-header .byline {
-    font-size: 0.85rem; color: var(--light);
-  }
-  .site-header .byline a { color: var(--medium); }
-  .header-manifesto {
-    margin-top: 2rem; max-width: 720px;
-  }
-  .header-manifesto p {
+  .header-intro {
     font-size: 0.92rem; color: var(--medium); line-height: 1.75;
+    margin-bottom: 0;
+  }
+  .header-intro p {
     margin-bottom: 1rem;
   }
-  .four-questions {
-    border-left: 2px solid var(--accent); padding-left: 1.2rem;
-    margin-top: 0.5rem;
+  .header-intro p:last-child {
+    margin-bottom: 0;
   }
-  .four-questions p {
-    font-size: 0.88rem; color: var(--medium); line-height: 1.6;
-    margin-bottom: 0.5rem;
-  }
-  .four-questions strong { color: var(--navy); }
-
-  /* HERO SIGNAL */
-  .hero-signal {
-    padding: 3rem 0; border-bottom: 1px solid var(--pale);
-  }
-  .hero-signal-card {
+  .header-right {
     background: var(--white); border: 1px solid var(--pale);
-    border-radius: var(--radius-lg); padding: 2.5rem;
-    cursor: pointer; box-shadow: var(--shadow-md);
-    transition: box-shadow 0.2s, border-color 0.2s;
+    border-radius: var(--radius-lg); padding: 1.5rem;
+    box-shadow: var(--shadow-md); height: fit-content;
   }
-  .hero-signal-card:hover { border-color: var(--border-hover); box-shadow: var(--shadow-lg); }
-  .hero-signal-meta {
-    display: flex; align-items: center; gap: 1rem;
-    margin-bottom: 1.2rem; flex-wrap: wrap;
+  .dashboard-widget {
+    background: var(--white);
   }
-  .signal-date {
-    font-size: 0.78rem; color: var(--text-tertiary); font-weight: 500;
-    letter-spacing: 0.05em; text-transform: uppercase;
-  }
-  .badge {
-    font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em;
-    text-transform: uppercase; padding: 0.25rem 0.6rem;
-    border: 1px solid var(--pale); border-radius: 16px;
-    display: inline-flex; align-items: center; gap: 0.35rem;
-  }
-  .badge-category { color: var(--accent); border-color: var(--accent-dim); background: rgba(49,130,206,0.06); }
-  .badge-strength-weak { color: var(--strength-weak); border-color: rgba(184,134,11,0.2); background: rgba(184,134,11,0.06); }
-  .badge-strength-emerging { color: var(--strength-emerging); border-color: rgba(210,105,30,0.2); background: rgba(210,105,30,0.06); }
-  .badge-strength-strong { color: var(--strength-strong); border-color: rgba(192,57,43,0.2); background: rgba(192,57,43,0.06); }
-  .hero-signal-card h2 {
+  .dashboard-title {
     font-family: 'Playfair Display', serif;
-    font-size: 2rem; font-weight: 600; color: var(--text-primary);
-    line-height: 1.25; margin-bottom: 0.4rem;
+    font-size: 1.2rem; font-weight: 600; color: var(--navy);
+    margin-bottom: 1.2rem;
   }
-  .title-cn {
-    font-size: 0.95rem; color: var(--text-cn); margin-bottom: 1rem;
+  .dashboard-grid {
+    display: table; width: 100%;
   }
-  .hero-signal-summary {
-    font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7;
-    max-width: 750px; margin-bottom: 1.2rem;
+  .dashboard-row {
+    display: table-row;
   }
-  .hero-monday {
-    font-size: 0.88rem; color: var(--text-primary); font-weight: 500;
-    border-left: 2px solid var(--accent); padding-left: 1rem;
-    margin-bottom: 1rem;
+  .dashboard-cell {
+    display: table-cell; padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--pale);
+    font-size: 0.82rem; color: var(--medium); text-align: left;
   }
-  .hero-monday-label {
-    font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em;
-    text-transform: uppercase; color: var(--accent); margin-bottom: 0.3rem;
+  .dashboard-cell.category {
+    font-weight: 500;
   }
-  .signal-source {
-    font-size: 0.78rem; color: var(--text-tertiary);
+  .dashboard-strength-dot {
+    display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin: 0 0.4rem;
   }
-  .signal-source a { color: var(--text-secondary); }
+
+  @media (max-width: 1024px) {
+    .header-layout { grid-template-columns: 1fr; }
+    .header-right { margin-top: 2rem; }
+  }
 
   /* FILTER BAR */
   .filter-bar {
     padding: 2rem 0; border-bottom: 1px solid var(--pale);
-    position: sticky; top: 52px; z-index: 50;
-    background: rgba(250,250,250,0.95); backdrop-filter: blur(12px);
+    background: rgba(250,250,250,0.95); position: static;
   }
   .filter-bar-inner {
     display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;
   }
+  .filter-search-row {
+    width: 100%; display: flex;
+  }
+  .search-input {
+    background: var(--white); color: var(--navy);
+    border: 1px solid var(--pale); padding: 0.5rem 0.8rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem; font-family: inherit; font-weight: 400;
+    flex: 1; min-width: 200px;
+    box-shadow: var(--shadow-sm); transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .search-input::placeholder { color: var(--light); }
+  .search-input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-dim); }
   .filter-select {
     background: var(--white); color: var(--medium);
     border: 1px solid var(--pale); padding: 0.5rem 0.8rem;
@@ -230,25 +214,19 @@
     padding-right: 2rem; transition: border-color 0.2s, box-shadow 0.2s;
   }
   .filter-select:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-dim); }
-  .search-input {
-    background: var(--white); color: var(--navy);
-    border: 1px solid var(--pale); padding: 0.5rem 0.8rem;
-    border-radius: var(--radius-sm);
-    font-size: 0.8rem; font-family: inherit; font-weight: 400;
-    flex: 1; min-width: 200px;
-    box-shadow: var(--shadow-sm); transition: border-color 0.2s, box-shadow 0.2s;
+  .filter-controls {
+    display: flex; gap: 1rem; flex-wrap: wrap; width: 100%;
   }
-  .search-input::placeholder { color: var(--light); }
-  .search-input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-dim); }
   .filter-count {
     font-size: 0.78rem; color: var(--text-tertiary); font-weight: 500;
-    margin-left: auto;
+    margin-left: 0;
   }
 
   @media (max-width: 768px) {
     .filter-bar-inner { flex-direction: column; align-items: stretch; }
     .search-input { min-width: auto; }
-    .filter-count { margin-left: 0; }
+    .filter-controls { flex-direction: column; align-items: stretch; }
+    .filter-select { width: 100%; }
   }
 
   /* SIGNAL GRID */
@@ -317,6 +295,19 @@
     display: flex; align-items: center; gap: 0.3rem;
   }
 
+  .show-more-btn {
+    display: block; margin: 2rem auto 0;
+    background: var(--white); border: 1px solid var(--pale);
+    padding: 0.75rem 1.5rem; border-radius: var(--radius-sm);
+    font-size: 0.82rem; font-weight: 600; color: var(--medium);
+    cursor: pointer; font-family: inherit;
+    transition: all 0.2s;
+  }
+  .show-more-btn:hover {
+    background: var(--white); border-color: var(--border-hover);
+    box-shadow: var(--shadow-md); color: var(--navy);
+  }
+
   @media (max-width: 1024px) {
     .signal-grid { grid-template-columns: repeat(2, 1fr); }
   }
@@ -331,12 +322,15 @@
   }
   .signal-expanded.active { display: block; }
   .expanded-back {
-    font-size: 0.78rem; color: var(--text-tertiary); font-weight: 500;
-    letter-spacing: 0.05em; text-transform: uppercase;
-    cursor: pointer; margin-bottom: 2rem; display: inline-block;
-    border: none; background: none; font-family: inherit;
+    font-size: 0.82rem; color: var(--accent); font-weight: 600;
+    letter-spacing: 0.03em;
+    cursor: pointer; margin-bottom: 2rem; display: inline-flex;
+    align-items: center; gap: 0.4rem;
+    border: 1px solid var(--accent-dim); border-radius: var(--radius-sm);
+    background: rgba(49,130,206,0.04); font-family: inherit;
+    padding: 0.5rem 1rem; transition: all 0.2s;
   }
-  .expanded-back:hover { color: var(--text-secondary); }
+  .expanded-back:hover { background: rgba(49,130,206,0.1); border-color: var(--accent); }
   .expanded-meta {
     display: flex; align-items: center; gap: 1rem;
     margin-bottom: 1.2rem; flex-wrap: wrap;
@@ -392,47 +386,29 @@
   }
   .share-btn:hover { color: var(--navy); border-color: var(--border-hover); box-shadow: var(--shadow-md); }
 
-  /* ABOUT / MY TAKE */
-  .about-section { border-bottom: 1px solid var(--pale); background: var(--white); }
-  .about-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem; font-weight: 600; color: var(--text-primary);
-    margin-bottom: 1.5rem; line-height: 1.3;
+  /* BADGE STYLES */
+  .badge {
+    font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; padding: 0.25rem 0.6rem;
+    border: 1px solid var(--pale); border-radius: 16px;
+    display: inline-flex; align-items: center; gap: 0.35rem;
   }
-  .about-text {
-    font-size: 0.92rem; color: var(--text-secondary); line-height: 1.75;
-    max-width: 750px; margin-bottom: 1.5rem;
+  .badge-category { color: var(--accent); border-color: var(--accent-dim); background: rgba(49,130,206,0.06); }
+  .badge-strength-weak { color: var(--strength-weak); border-color: rgba(184,134,11,0.2); background: rgba(184,134,11,0.06); }
+  .badge-strength-emerging { color: var(--strength-emerging); border-color: rgba(210,105,30,0.2); background: rgba(210,105,30,0.06); }
+  .badge-strength-strong { color: var(--strength-strong); border-color: rgba(192,57,43,0.2); background: rgba(192,57,43,0.06); }
+
+  .signal-date {
+    font-size: 0.78rem; color: var(--text-tertiary); font-weight: 500;
+    letter-spacing: 0.05em; text-transform: uppercase;
   }
-  .about-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
-    margin-top: 2rem;
+  .title-cn {
+    font-size: 0.95rem; color: var(--text-cn); margin-bottom: 1rem;
   }
-  @media (max-width: 768px) {
-    .about-grid { grid-template-columns: 1fr; }
+  .signal-source {
+    font-size: 0.78rem; color: var(--text-tertiary);
   }
-  .about-block h3 {
-    font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em;
-    text-transform: uppercase; color: var(--accent); margin-bottom: 0.8rem;
-  }
-  .rotation-table {
-    width: 100%; border-collapse: collapse; font-size: 0.82rem;
-  }
-  .rotation-table th {
-    text-align: left; font-weight: 600; color: var(--light);
-    padding: 0.5rem 0; border-bottom: 1px solid var(--pale);
-    font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase;
-  }
-  .rotation-table td {
-    padding: 0.5rem 0; border-bottom: 1px solid var(--pale);
-    color: var(--medium);
-  }
-  .strength-legend {
-    list-style: none; padding: 0;
-  }
-  .strength-legend li {
-    font-size: 0.85rem; color: var(--medium);
-    padding: 0.4rem 0; border-bottom: 1px solid var(--pale);
-  }
+  .signal-source a { color: var(--text-secondary); }
 
   /* SUBSCRIBE */
   .subscribe-section {
@@ -492,9 +468,8 @@
 
   /* RESPONSIVE */
   @media (max-width: 768px) {
-    .site-header h1 { font-size: 2.1rem; }
-    .hero-signal-card h2 { font-size: 1.5rem; }
-    .hero-signal-card { padding: 1.5rem; }
+    .site-header { padding: 6rem 0 2rem; }
+    .header-layout h1 { font-size: 2.1rem; }
     .expanded-title { font-size: 1.5rem; }
     section { padding: 3rem 0; }
   }
@@ -532,57 +507,69 @@
 <header class="site-header">
   <div class="container">
     <p class="section-label">Intelligence Briefing</p>
-    <h1>Sino-Signals</h1>
-    <p class="tagline">The AI signals shaping your industry are in China.</p>
-    <p class="byline">By Joseph Press &middot; <a href="https://www.josephpress.com">josephpress.com</a></p>
-    <div class="header-manifesto">
-      <p>China is the world's largest signal amplifier for AI deployment. While frontier research grabs headlines in the West, the signals that will reshape your industry over the next 3&ndash;5 years are appearing in China first&mdash;not because China is ahead in foundational research, but because it operates at a scale and speed of deployment that has no Western equivalent.</p>
-      <p>Sino-Signals applies foresight techniques to scan Chinese-language sources, then evaluates them through four questions:</p>
-      <div class="four-questions">
-        <p><strong>What is the signal?</strong> What happened, with verified sourcing.</p>
-        <p><strong>Why can it scale in China?</strong> Structural factors enabling rapid deployment.</p>
-        <p><strong>How might it impact the world?</strong> Second- and third-order effects.</p>
-        <p><strong>So what would you do Monday morning?</strong> Actionable response for leaders.</p>
+    <div class="header-layout">
+      <div class="header-left">
+        <h1>Sino-Signals:</h1>
+        <p class="header-tagline">The AI signals shaping your industry are in China.</p>
+        <div class="header-intro">
+          <p>China is the world's largest signal amplifier for AI deployment. While frontier research grabs headlines in the West, they often fall between unscalable and slop. The signals that will reshape your industry over the next 3–5 years are appearing in China, now. Not only is China pulling ahead in foundational research, it operates at a scale and speed of deployment that has no Western equivalent.</p>
+          <p>Sino-Signals scanning aims to put AI disruption at the forefront of strategic decision-making. Anticipate the future to be ready for any future.</p>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="dashboard-widget">
+          <div class="dashboard-title">This Week</div>
+          <div class="dashboard-grid" id="dashboardGrid">
+            <!-- Filled by JS -->
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </header>
 
-<!-- HERO SIGNAL (populated by JS) -->
-<section class="hero-signal" id="heroSignal">
-  <div class="container" id="heroContent">
-    <!-- Filled by JS -->
-  </div>
-</section>
-
 <!-- FILTER BAR -->
 <div class="filter-bar" id="filterBar">
   <div class="container">
     <div class="filter-bar-inner">
-      <select class="filter-select" id="filterCategory" aria-label="Filter by category">
-        <option value="all">All Categories</option>
-        <option value="Industry & Enterprise">Industry & Enterprise</option>
-        <option value="Policy & Governance">Policy & Governance</option>
-        <option value="Technology & Research">Technology & Research</option>
-        <option value="Talent & Education">Talent & Education</option>
-        <option value="Investment & Capital">Investment & Capital</option>
-        <option value="Consumer & Society">Consumer & Society</option>
-        <option value="Infrastructure & Compute">Infrastructure & Compute</option>
-      </select>
-      <select class="filter-select" id="filterStrength" aria-label="Filter by signal strength">
-        <option value="all">All Strengths</option>
-        <option value="weak">Weak</option>
-        <option value="emerging">Emerging</option>
-        <option value="strong">Strong</option>
-      </select>
-      <select class="filter-select" id="filterType" aria-label="Filter by content type">
-        <option value="all">All Types</option>
-        <option value="daily">Daily Signal</option>
-        <option value="monthly_synthesis">Monthly Synthesis</option>
-        <option value="quarterly_report">Quarterly Report</option>
-      </select>
-      <input type="text" class="search-input" id="searchInput" placeholder="Search signals..." aria-label="Search signals">
-      <span class="filter-count" id="filterCount"></span>
+      <div class="filter-search-row">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search signals..." aria-label="Search signals">
+      </div>
+      <div class="filter-controls">
+        <select class="filter-select" id="filterIndustry" aria-label="Filter by industry">
+          <option value="all">All Industries</option>
+          <option value="Policy & Governance">Policy & Governance</option>
+          <option value="Industry & Enterprise">Industry & Enterprise</option>
+          <option value="Creative & Culture">Creative & Culture</option>
+          <option value="Climate & Sustainability">Climate & Sustainability</option>
+          <option value="Deep Tech & Research">Deep Tech & Research</option>
+          <option value="Robotics & Embodied AI">Robotics & Embodied AI</option>
+          <option value="Platform & Society">Platform & Society</option>
+        </select>
+        <select class="filter-select" id="filterType" aria-label="Filter by signal type">
+          <option value="all">All Types</option>
+          <option value="social">Social</option>
+          <option value="cultural">Cultural</option>
+          <option value="legal">Legal</option>
+          <option value="policy">Policy</option>
+          <option value="technology">Technology</option>
+          <option value="environmental">Environmental</option>
+          <option value="economic">Economic</option>
+        </select>
+        <select class="filter-select" id="filterStrength" aria-label="Filter by signal strength">
+          <option value="all">All Strengths</option>
+          <option value="weak">Early</option>
+          <option value="emerging">Emerging</option>
+          <option value="strong">Accelerating</option>
+        </select>
+        <select class="filter-select" id="filterFreshness" aria-label="Filter by freshness">
+          <option value="today">Today</option>
+          <option value="this_week">This Week</option>
+          <option value="this_month">This Month</option>
+          <option value="this_year">This Year</option>
+        </select>
+        <span class="filter-count" id="filterCount"></span>
+      </div>
     </div>
   </div>
 </div>
@@ -593,7 +580,8 @@
     <div class="signal-grid" id="signalGrid">
       <!-- Filled by JS -->
     </div>
-    <div class="no-results" id="noResults" style="display:none;">No signals match your filters.</div>
+    <button class="show-more-btn" id="showMoreBtn" style="display:none;">Show more signals</button>
+    <div class="no-results" id="noResults" style="display:none;">No signals today. Try expanding to This Week.</div>
   </div>
 </section>
 
@@ -608,7 +596,7 @@
 <section class="subscribe-section" id="subscribe">
   <div class="container">
     <h2>Stay Ahead</h2>
-    <p>Weekly digest every Sunday &mdash; 7 signals + the editorial pick of the week.</p>
+    <p>Weekly digest every Sunday — 7 signals + the editorial pick of the week.</p>
     <form class="subscribe-form" action="https://formspree.io/f/placeholder" method="POST">
       <input type="email" name="email" class="subscribe-input" placeholder="your@email.com" required aria-label="Email address">
       <button type="submit" class="subscribe-btn">Subscribe</button>
@@ -633,20 +621,22 @@
   'use strict';
 
   let signals = [];
-  let currentView = 'grid'; // 'grid' or 'expanded'
+  let currentView = 'grid';
+  let visibleCount = 5;
+  const MAX_VISIBLE = 10;
 
   // Load data
   fetch('signals-data.json')
     .then(function(r) { return r.json(); })
     .then(function(data) {
       signals = data.sort(function(a, b) { return b.date.localeCompare(a.date); });
-      renderHero();
-      renderGrid(signals.slice(1));
-      updateCount(signals.length - 1);
+      renderDashboard();
+      setFilterFreshnessDefault();
+      applyFilters();
       bindFilters();
     })
     .catch(function(err) {
-      document.getElementById('heroContent').innerHTML = '<p style="color:var(--text-tertiary)">Failed to load signal data.</p>';
+      document.getElementById('signalGrid').innerHTML = '<p style="color:var(--text-tertiary)">Failed to load signal data.</p>';
     });
 
   function strengthClass(s) {
@@ -657,9 +647,9 @@
   }
 
   function strengthLabel(s) {
-    if (s === 'weak') return '\ud83d\udfe1 Weak';
-    if (s === 'emerging') return '\ud83d\udfe0 Emerging';
-    if (s === 'strong') return '\ud83d\udd34 Strong';
+    if (s === 'weak') return '🟡 Early';
+    if (s === 'emerging') return '🟠 Emerging';
+    if (s === 'strong') return '🔴 Accelerating';
     return s;
   }
 
@@ -669,50 +659,120 @@
     return months[parseInt(parts[1],10)-1] + ' ' + parseInt(parts[2],10) + ', ' + parts[0];
   }
 
+  function getTodayDate() {
+    var now = new Date();
+    var year = now.getFullYear();
+    var month = String(now.getMonth() + 1).padStart(2, '0');
+    var day = String(now.getDate()).padStart(2, '0');
+    return year + '-' + month + '-' + day;
+  }
+
+  function isDateInRange(dateStr, freshnessValue) {
+    var today = getTodayDate();
+    var signalDate = new Date(dateStr);
+    var todayDate = new Date(today);
+
+    if (freshnessValue === 'today') {
+      return dateStr === today;
+    }
+    if (freshnessValue === 'this_week') {
+      var sevenDaysAgo = new Date(todayDate);
+      sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+      return signalDate >= sevenDaysAgo && signalDate <= todayDate;
+    }
+    if (freshnessValue === 'this_month') {
+      var thirtyDaysAgo = new Date(todayDate);
+      thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+      return signalDate >= thirtyDaysAgo && signalDate <= todayDate;
+    }
+    if (freshnessValue === 'this_year') {
+      var yearAgo = new Date(todayDate);
+      yearAgo.setFullYear(yearAgo.getFullYear() - 1);
+      return signalDate >= yearAgo && signalDate <= todayDate;
+    }
+    return true;
+  }
+
+  function renderDashboard() {
+    var today = getTodayDate();
+    var thisWeekStart = new Date();
+    thisWeekStart.setDate(thisWeekStart.getDate() - 7);
+
+    var weekSignals = signals.filter(function(s) {
+      var sDate = new Date(s.date);
+      return sDate >= thisWeekStart;
+    });
+
+    var categoryMap = {};
+    weekSignals.forEach(function(s) {
+      if (!categoryMap[s.category]) {
+        categoryMap[s.category] = [];
+      }
+      categoryMap[s.category].push(s.signal_strength);
+    });
+
+    var grid = document.getElementById('dashboardGrid');
+    var html = '';
+    for (var cat in categoryMap) {
+      if (categoryMap.hasOwnProperty(cat)) {
+        var strengths = categoryMap[cat];
+        var maxStrength = 'weak';
+        if (strengths.some(function(s) { return s === 'strong'; })) {
+          maxStrength = 'strong';
+        } else if (strengths.some(function(s) { return s === 'emerging'; })) {
+          maxStrength = 'emerging';
+        }
+
+        var dotColor = '#B8860B';
+        if (maxStrength === 'emerging') dotColor = '#D2691E';
+        if (maxStrength === 'strong') dotColor = '#C0392B';
+
+        html += '<div class="dashboard-row">';
+        html += '<div class="dashboard-cell category">' + cat + '</div>';
+        html += '<div class="dashboard-cell"><span class="dashboard-strength-dot" style="background:' + dotColor + '"></span></div>';
+        html += '</div>';
+      }
+    }
+    grid.innerHTML = html || '<div style="color:var(--text-tertiary);padding:0.8rem;text-align:center;font-size:0.8rem;">No signals this week</div>';
+  }
+
+  function setFilterFreshnessDefault() {
+    document.getElementById('filterFreshness').value = 'today';
+  }
+
   function truncate(text, len) {
     if (!text) return '';
     return text.length > len ? text.substring(0, len) + '...' : text;
   }
 
-  function renderHero() {
-    var s = signals[0];
-    if (!s) return;
-    var html = '<div class="hero-signal-card" data-signal-id="' + s.id + '" onclick="window.showExpanded(\'' + s.id + '\')">';
-    html += '<div class="hero-signal-meta">';
-    html += '<span class="signal-date">' + formatDate(s.date) + '</span>';
-    html += '<span class="badge badge-category">' + s.category_emoji + ' ' + s.category + '</span>';
-    html += '<span class="badge ' + strengthClass(s.signal_strength) + '">' + strengthLabel(s.signal_strength) + '</span>';
-    if (s.content_type !== 'daily') {
-      html += '<span class="badge" style="color:var(--accent);border-color:var(--accent-dim)">' + s.content_type.replace('_',' ').toUpperCase() + '</span>';
-    }
-    html += '</div>';
-    html += '<h2>' + s.title_en + '</h2>';
-    html += '<p class="title-cn">' + s.title_cn + '</p>';
-    html += '<p class="hero-signal-summary">' + truncate(s.body.signal, 250) + '</p>';
-    html += '<div class="hero-monday"><p class="hero-monday-label">Monday Morning</p><p>' + truncate(s.body.monday_morning, 200) + '</p></div>';
-    if (s.source_url) {
-      html += '<p class="signal-source">Source: <a href="' + s.source_url + '" target="_blank" rel="noopener">' + s.source_name + '</a></p>';
-    } else {
-      html += '<p class="signal-source">Source: ' + s.source_name + '</p>';
-    }
-    html += '</div>';
-    document.getElementById('heroContent').innerHTML = html;
+  function typeMatchesFilter(typeFilter, signal) {
+    if (typeFilter === 'all') return true;
+
+    var searchIn = (signal.category + ' ' + (signal.tags || []).join(' ') + ' ' + (signal.content_type || '')).toLowerCase();
+    return searchIn.indexOf(typeFilter.toLowerCase()) !== -1;
   }
 
   function renderGrid(list) {
     var grid = document.getElementById('signalGrid');
     var noResults = document.getElementById('noResults');
+    var showMoreBtn = document.getElementById('showMoreBtn');
+
+    visibleCount = 5;
+
     if (list.length === 0) {
       grid.style.display = 'none';
+      showMoreBtn.style.display = 'none';
       noResults.style.display = 'block';
       return;
     }
+
     grid.style.display = '';
     noResults.style.display = 'none';
 
+    var toDisplay = list.slice(0, visibleCount);
     var html = '';
-    for (var i = 0; i < list.length; i++) {
-      var s = list[i];
+    for (var i = 0; i < toDisplay.length; i++) {
+      var s = toDisplay[i];
       var isSynthesis = s.content_type === 'monthly_synthesis' || s.content_type === 'quarterly_report';
       html += '<div class="signal-tile' + (isSynthesis ? ' synthesis' : '') + '" data-signal-id="' + s.id + '" onclick="window.showExpanded(\'' + s.id + '\')">';
       html += '<div class="tile-meta">';
@@ -739,26 +799,78 @@
       html += '</div>';
       html += '</div>';
     }
+
     grid.innerHTML = html;
+
+    if (list.length > visibleCount) {
+      showMoreBtn.style.display = 'block';
+    } else {
+      showMoreBtn.style.display = 'none';
+    }
   }
+
+  document.getElementById('showMoreBtn').addEventListener('click', function() {
+    visibleCount += MAX_VISIBLE;
+    var freshness = document.getElementById('filterFreshness').value;
+    var filtered = getFiltered(freshness);
+    var grid = document.getElementById('signalGrid');
+    var toDisplay = filtered.slice(0, visibleCount);
+
+    var html = '';
+    for (var i = 0; i < toDisplay.length; i++) {
+      var s = toDisplay[i];
+      var isSynthesis = s.content_type === 'monthly_synthesis' || s.content_type === 'quarterly_report';
+      html += '<div class="signal-tile' + (isSynthesis ? ' synthesis' : '') + '" data-signal-id="' + s.id + '" onclick="window.showExpanded(\'' + s.id + '\')">';
+      html += '<div class="tile-meta">';
+      html += '<span class="tile-date">' + formatDate(s.date) + '</span>';
+      html += '<span class="tile-badge badge-category">' + s.category_emoji + '</span>';
+      html += '<span class="tile-badge ' + strengthClass(s.signal_strength) + '">' + strengthLabel(s.signal_strength) + '</span>';
+      if (isSynthesis) {
+        html += '<span class="tile-badge" style="color:var(--accent);border-color:var(--accent-dim)">' + s.content_type.replace('_',' ').toUpperCase() + '</span>';
+      }
+      html += '</div>';
+      html += '<h3>' + s.title_en + '</h3>';
+      html += '<p class="tile-title-cn">' + s.title_cn + '</p>';
+      html += '<p class="tile-summary">' + truncate(s.body.signal, 180) + '</p>';
+      html += '<div class="tile-footer">';
+      html += '<span class="tile-source">' + s.source_name + '</span>';
+      if (s.related_signals && s.related_signals.length > 0) {
+        html += '<span class="tile-trajectory">&harr; Trajectory</span>';
+      }
+      html += '</div>';
+      html += '<div class="tile-tags">';
+      for (var t = 0; t < s.tags.length && t < 4; t++) {
+        html += '<span class="tag">' + s.tags[t] + '</span>';
+      }
+      html += '</div>';
+      html += '</div>';
+    }
+
+    grid.innerHTML = html;
+
+    if (filtered.length > visibleCount) {
+      document.getElementById('showMoreBtn').style.display = 'block';
+    } else {
+      document.getElementById('showMoreBtn').style.display = 'none';
+    }
+  });
 
   function updateCount(n) {
     document.getElementById('filterCount').textContent = n + ' signal' + (n !== 1 ? 's' : '');
   }
 
-  function getFiltered() {
-    var cat = document.getElementById('filterCategory').value;
+  function getFiltered(freshnessValue) {
+    var ind = document.getElementById('filterIndustry').value;
     var str = document.getElementById('filterStrength').value;
     var typ = document.getElementById('filterType').value;
     var q = document.getElementById('searchInput').value.toLowerCase().trim();
+    var fresh = freshnessValue || document.getElementById('filterFreshness').value;
 
-    // Exclude the hero signal (first/most recent)
-    var pool = signals.slice(1);
-
-    return pool.filter(function(s) {
-      if (cat !== 'all' && s.category !== cat) return false;
+    return signals.filter(function(s) {
+      if (ind !== 'all' && s.category !== ind) return false;
       if (str !== 'all' && s.signal_strength !== str) return false;
-      if (typ !== 'all' && s.content_type !== typ) return false;
+      if (typ !== 'all' && !typeMatchesFilter(typ, s)) return false;
+      if (!isDateInRange(s.date, fresh)) return false;
       if (q) {
         var haystack = (s.title_en + ' ' + s.title_cn + ' ' + s.body.signal + ' ' + s.tags.join(' ')).toLowerCase();
         if (haystack.indexOf(q) === -1) return false;
@@ -774,9 +886,10 @@
   }
 
   function bindFilters() {
-    document.getElementById('filterCategory').addEventListener('change', applyFilters);
+    document.getElementById('filterIndustry').addEventListener('change', applyFilters);
     document.getElementById('filterStrength').addEventListener('change', applyFilters);
     document.getElementById('filterType').addEventListener('change', applyFilters);
+    document.getElementById('filterFreshness').addEventListener('change', applyFilters);
     document.getElementById('searchInput').addEventListener('input', applyFilters);
   }
 
@@ -787,7 +900,7 @@
     }
     if (!s) return;
 
-    var html = '<button class="expanded-back" onclick="window.hideExpanded()">&larr; Back to all signals</button>';
+    var html = '<button class="expanded-back" onclick="window.hideExpanded()">&larr; Back to Sino-Signals</button>';
     html += '<div class="expanded-meta">';
     html += '<span class="signal-date">' + formatDate(s.date) + '</span>';
     html += '<span class="badge badge-category">' + s.category_emoji + ' ' + s.category + '</span>';
@@ -833,7 +946,6 @@
     }
     html += '</div>';
 
-    // Related signal cards
     if (s.related_signals && s.related_signals.length > 0) {
       html += '<div class="expanded-related">';
       html += '<p class="expanded-section-label">Signal Trajectory</p>';
@@ -853,14 +965,12 @@
       html += '</div>';
     }
 
-    // Share
     html += '<div class="expanded-share">';
     html += '<button class="share-btn" onclick="window.shareSignal(\'' + encodeURIComponent(s.title_en) + '\')">Share Signal</button>';
     html += '</div>';
 
     document.getElementById('expandedContent').innerHTML = html;
     document.getElementById('expandedView').classList.add('active');
-    document.getElementById('heroSignal').style.display = 'none';
     document.getElementById('filterBar').style.display = 'none';
     document.querySelector('.signal-grid-wrapper').style.display = 'none';
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -868,7 +978,6 @@
 
   window.hideExpanded = function() {
     document.getElementById('expandedView').classList.remove('active');
-    document.getElementById('heroSignal').style.display = '';
     document.getElementById('filterBar').style.display = '';
     document.querySelector('.signal-grid-wrapper').style.display = '';
   };
@@ -888,7 +997,6 @@
     }
   };
 
-  // Nav scroll
   window.addEventListener('scroll', function() {
     document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 20);
   });
