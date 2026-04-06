@@ -156,25 +156,58 @@
   }
   .dashboard-title {
     font-family: 'Playfair Display', serif;
-    font-size: 1.2rem; font-weight: 600; color: var(--navy);
-    margin-bottom: 1.2rem;
+    font-size: 1.1rem; font-weight: 600; color: var(--navy);
+    margin-bottom: 0.8rem;
   }
   .dashboard-grid {
-    display: table; width: 100%;
+    display: table; width: 100%; border-collapse: collapse;
   }
   .dashboard-row {
     display: table-row;
   }
+  .dashboard-header-row .dashboard-cell {
+    font-size: 0.65rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--light); padding: 0.3rem 0.5rem 0.5rem;
+    border-bottom: 2px solid var(--pale); text-align: center;
+  }
+  .dashboard-header-row .dashboard-cell.category { text-align: left; }
   .dashboard-cell {
-    display: table-cell; padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--pale);
-    font-size: 0.82rem; color: var(--medium); text-align: left;
+    display: table-cell; padding: 0.45rem 0.5rem;
+    border-bottom: 1px solid rgba(226,232,240,0.5);
+    font-size: 0.78rem; color: var(--medium); text-align: center;
+    vertical-align: middle;
   }
   .dashboard-cell.category {
-    font-weight: 500;
+    font-weight: 500; text-align: left; font-size: 0.72rem;
+    white-space: nowrap; padding-right: 0.8rem;
   }
-  .dashboard-strength-dot {
-    display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin: 0 0.4rem;
+  .heatmap-cell {
+    border-radius: 4px; min-width: 2.2rem; transition: all 0.2s;
   }
+  .heatmap-cell[data-count="0"] { background: transparent; color: transparent; }
+  .heatmap-cell[data-count="1"].strength-weak { background: rgba(184,134,11,0.15); color: #B8860B; }
+  .heatmap-cell[data-count="2"].strength-weak { background: rgba(184,134,11,0.3); color: #B8860B; }
+  .heatmap-cell[data-count="3"].strength-weak { background: rgba(184,134,11,0.5); color: #fff; }
+  .heatmap-cell[data-count="1"].strength-emerging { background: rgba(210,105,30,0.15); color: #D2691E; }
+  .heatmap-cell[data-count="2"].strength-emerging { background: rgba(210,105,30,0.3); color: #D2691E; }
+  .heatmap-cell[data-count="3"].strength-emerging { background: rgba(210,105,30,0.5); color: #fff; }
+  .heatmap-cell[data-count="1"].strength-strong { background: rgba(192,57,43,0.15); color: #C0392B; }
+  .heatmap-cell[data-count="2"].strength-strong { background: rgba(192,57,43,0.3); color: #C0392B; }
+  .heatmap-cell[data-count="3"].strength-strong { background: rgba(192,57,43,0.5); color: #fff; }
+  .dashboard-legend {
+    display: flex; gap: 1rem; margin-top: 0.8rem; align-items: center;
+    flex-wrap: wrap;
+  }
+  .legend-item {
+    display: flex; align-items: center; gap: 0.3rem;
+    font-size: 0.65rem; color: var(--light); letter-spacing: 0.02em;
+  }
+  .legend-dot {
+    width: 8px; height: 8px; border-radius: 2px;
+  }
+  .legend-dot.early { background: rgba(184,134,11,0.4); }
+  .legend-dot.emerging { background: rgba(210,105,30,0.4); }
+  .legend-dot.accelerating { background: rgba(192,57,43,0.4); }
 
   @media (max-width: 1024px) {
     .header-layout { grid-template-columns: 1fr; }
@@ -519,9 +552,14 @@
       </div>
       <div class="header-right">
         <div class="dashboard-widget">
-          <div class="dashboard-title">This Week</div>
+          <div class="dashboard-title">AI Sino-Signals Scan</div>
           <div class="dashboard-grid" id="dashboardGrid">
             <!-- Filled by JS -->
+          </div>
+          <div class="dashboard-legend">
+            <span class="legend-item"><span class="legend-dot early"></span> Early</span>
+            <span class="legend-item"><span class="legend-dot emerging"></span> Emerging</span>
+            <span class="legend-item"><span class="legend-dot accelerating"></span> Accelerating</span>
           </div>
         </div>
       </div>
@@ -695,46 +733,52 @@
   }
 
   function renderDashboard() {
-    var today = getTodayDate();
-    var thisWeekStart = new Date();
-    thisWeekStart.setDate(thisWeekStart.getDate() - 7);
+    var allCategories = [
+      'Policy & Governance',
+      'Industry & Enterprise',
+      'Creative & Culture',
+      'Climate & Sustainability',
+      'Deep Tech & Research',
+      'Robotics & Embodied AI'
+    ];
+    var strengthLevels = ['weak', 'emerging', 'strong'];
 
-    var weekSignals = signals.filter(function(s) {
-      var sDate = new Date(s.date);
-      return sDate >= thisWeekStart;
+    var matrix = {};
+    allCategories.forEach(function(cat) {
+      matrix[cat] = { weak: 0, emerging: 0, strong: 0 };
     });
 
-    var categoryMap = {};
-    weekSignals.forEach(function(s) {
-      if (!categoryMap[s.category]) {
-        categoryMap[s.category] = [];
+    signals.forEach(function(s) {
+      if (s.content_type === 'monthly_synthesis' || s.content_type === 'quarterly_report') return;
+      var cat = s.category;
+      var str = s.signal_strength;
+      if (matrix[cat] && matrix[cat][str] !== undefined) {
+        matrix[cat][str]++;
       }
-      categoryMap[s.category].push(s.signal_strength);
     });
 
     var grid = document.getElementById('dashboardGrid');
     var html = '';
-    for (var cat in categoryMap) {
-      if (categoryMap.hasOwnProperty(cat)) {
-        var strengths = categoryMap[cat];
-        var maxStrength = 'weak';
-        if (strengths.some(function(s) { return s === 'strong'; })) {
-          maxStrength = 'strong';
-        } else if (strengths.some(function(s) { return s === 'emerging'; })) {
-          maxStrength = 'emerging';
-        }
 
-        var dotColor = '#B8860B';
-        if (maxStrength === 'emerging') dotColor = '#D2691E';
-        if (maxStrength === 'strong') dotColor = '#C0392B';
+    html += '<div class="dashboard-row dashboard-header-row">';
+    html += '<div class="dashboard-cell category"></div>';
+    html += '<div class="dashboard-cell">Early</div>';
+    html += '<div class="dashboard-cell">Emerging</div>';
+    html += '<div class="dashboard-cell">Accelerating</div>';
+    html += '</div>';
 
-        html += '<div class="dashboard-row">';
-        html += '<div class="dashboard-cell category">' + cat + '</div>';
-        html += '<div class="dashboard-cell"><span class="dashboard-strength-dot" style="background:' + dotColor + '"></span></div>';
-        html += '</div>';
-      }
-    }
-    grid.innerHTML = html || '<div style="color:var(--text-tertiary);padding:0.8rem;text-align:center;font-size:0.8rem;">No signals this week</div>';
+    allCategories.forEach(function(cat) {
+      html += '<div class="dashboard-row">';
+      html += '<div class="dashboard-cell category">' + cat + '</div>';
+      strengthLevels.forEach(function(str) {
+        var count = matrix[cat][str];
+        var displayCount = Math.min(count, 3);
+        html += '<div class="dashboard-cell"><span class="heatmap-cell strength-' + str + '" data-count="' + displayCount + '">' + (count > 0 ? count : '') + '</span></div>';
+        });
+      html += '</div>';
+    });
+
+    grid.innerHTML = html;
   }
 
   function setFilterFreshnessDefault() {
