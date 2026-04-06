@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sino-Signals — AI Intelligence from China | Joseph Press</title>
+<meta name="description" content="Daily AI signals from China with strategic forecasts for the West. Curated by Joseph Press using IFTF signal scanning methods applied to Chinese-language sources.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Sino-Signals — AI Intelligence from China">
+<meta property="og:description" content="The signals shaping your industry are appearing in China first. Daily AI intelligence with strategic forecasts.">
+<meta property="og:url" content="https://www.josephpress.com/sino-signals/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Favicon -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0a0a0a;
+    --bg-card: #111111;
+    --bg-card-hover: #181818;
+    --bg-elevated: #1a1a1a;
+    --text-primary: #f0f0f0;
+    --text-secondary: #888888;
+    --text-tertiary: #555555;
+    --text-cn: #666666;
+    --border: #1e1e1e;
+    --border-hover: #333333;
+    --accent: #3182ce;
+    --accent-dim: rgba(49,130,206,0.15);
+    --strength-weak: #EAB308;
+    --strength-emerging: #F97316;
+    --strength-strong: #EF4444;
+    --navy: #1a1a2e;
+  }
+
+  html { scroll-behavior: smooth; font-size: 16px; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text-primary); background: var(--bg);
+    line-height: 1.65; -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(10,10,10,0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    max-width: 1100px; margin: 0 auto; padding: 0.9rem 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-left { display: flex; align-items: center; gap: 0.75rem; }
+  .nav-name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600; font-size: 1.15rem; color: var(--text-primary);
+    text-decoration: none; letter-spacing: 0.02em;
+  }
+  .nav-right { display: flex; align-items: center; gap: 1.5rem; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    text-decoration: none; color: var(--text-secondary);
+    font-size: 0.85rem; font-weight: 500; letter-spacing: 0.03em;
+  }
+  .nav-links a:hover { color: var(--text-primary); text-decoration: none; }
+  .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: var(--text-primary); margin: 5px 0; }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hamburger { display: block; }
+    .nav-links.open {
+      display: flex; flex-direction: column;
+      position: absolute; top: 100%; left: 0; right: 0;
+      background: var(--bg); padding: 1.5rem 2rem;
+      border-bottom: 1px solid var(--border); gap: 1rem;
+    }
+  }
+
+  /* LAYOUT */
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+  section { padding: 5rem 0; }
+  .section-label {
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem;
+  }
+
+  /* HERO HEADER */
+  .site-header {
+    padding: 8rem 0 3rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .site-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem; font-weight: 700; line-height: 1.15;
+    color: var(--text-primary); margin-bottom: 0.75rem;
+  }
+  .site-header .tagline {
+    font-size: 1.05rem; color: var(--text-secondary); line-height: 1.65;
+    max-width: 600px; margin-bottom: 1rem;
+  }
+  .site-header .byline {
+    font-size: 0.85rem; color: var(--text-tertiary);
+  }
+  .site-header .byline a { color: var(--text-secondary); }
+
+  /* HERO SIGNAL */
+  .hero-signal {
+    padding: 3rem 0; border-bottom: 1px solid var(--border);
+  }
+  .hero-signal-card {
+    background: var(--bg-card); border: 1px solid var(--border);
+    padding: 2.5rem; cursor: pointer;
+  }
+  .hero-signal-card:hover { border-color: var(--border-hover); }
+  .hero-signal-meta {
+    display: flex; align-items: center; gap: 1rem;
+    margin-bottom: 1.2rem; flex-wrap: wrap;
+  }
+  .signal-date {
+    font-size: 0.78rem; color: var(--text-tertiary); font-weight: 500;
+    letter-spacing: 0.05em; text-transform: uppercase;
+  }
+  .badge {
+    font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; padding: 0.25rem 0.6rem;
+    border: 1px solid var(--border); display: inline-flex;
+    align-items: center; gap: 0.35rem;
+  }
+  .badge-category { color: var(--accent); border-color: var(--accent-dim); }
+  .badge-strength-weak { color: var(--strength-weak); border-color: rgba(234,179,8,0.2); }
+  .badge-strength-emerging { color: var(--strength-emerging); border-color: rgba(249,115,22,0.2); }
+  .badge-strength-strong { color: var(--strength-strong); border-color: rgba(239,68,68,0.2); }
+  .hero-signal-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem; font-weight: 600; color: var(--text-primary);
+    line-height: 1.25; margin-bottom: 0.4rem;
+  }
+  .title-cn {
+    font-size: 0.95rem; color: var(--text-cn); margin-bottom: 1rem;
+  }
+  .hero-signal-summary {
+    font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7;
+    max-width: 750px; margin-bottom: 1.2rem;
+  }
+  .hero-monday {
+    font-size: 0.88rem; color: var(--text-primary); font-weight: 500;
+    border-left: 2px solid var(--accent); padding-left: 1rem;
+    margin-bottom: 1rem;
+  }
+  .hero-monday-label {
+    font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 0.3rem;
+  }
+  .signal-source {
+    font-size: 0.78rem; color: var(--text-tertiary);
+  }
+  .signal-source a { color: var(--text-secondary); }
+
+  /* FILTER BAR */
+  .filter-bar {
+    padding: 2rem 0; border-bottom: 1px solid var(--border);
+    position: sticky; top: 52px; z-index: 50;
+    background: rgba(10,10,10,0.95); backdrop-filter: blur(12px);
+  }
+  .filter-bar-inner {
+    display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;
+  }
+  .filter-select {
+    background: var(--bg-card); color: var(--text-secondary);
+    border: 1px solid var(--border); padding: 0.5rem 0.8rem;
+    font-size: 0.8rem; font-family: inherit; font-weight: 500;
+    cursor: pointer; appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23888'%3E%3Cpath d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 0.6rem center;
+    padding-right: 2rem;
+  }
+  .filter-select:focus { outline: none; border-color: var(--accent); }
+  .search-input {
+    background: var(--bg-card); color: var(--text-primary);
+    border: 1px solid var(--border); padding: 0.5rem 0.8rem;
+    font-size: 0.8rem; font-family: inherit; font-weight: 400;
+    flex: 1; min-width: 200px;
+  }
+  .search-input::placeholder { color: var(--text-tertiary); }
+  .search-input:focus { outline: none; border-color: var(--accent); }
+  .filter-count {
+    font-size: 0.78rem; color: var(--text-tertiary); font-weight: 500;
+    margin-left: auto;
+  }
+
+  @media (max-width: 768px) {
+    .filter-bar-inner { flex-direction: column; align-items: stretch; }
+    .search-input { min-width: auto; }
+    .filter-count { margin-left: 0; }
+  }
+
+  /* SIGNAL GRID */
+  .signal-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+    background: var(--border); padding: 3rem 0;
+  }
+  .signal-grid-wrapper { padding: 3rem 0; }
+
+  .signal-tile {
+    background: var(--bg-card); padding: 1.8rem;
+    cursor: pointer; border: 1px solid transparent;
+  }
+  .signal-tile:hover { background: var(--bg-card-hover); border-color: var(--border-hover); }
+  .signal-tile.synthesis {
+    grid-column: 1 / -1;
+    border-left: 3px solid var(--accent);
+  }
+  .tile-meta {
+    display: flex; align-items: center; gap: 0.6rem;
+    margin-bottom: 0.8rem; flex-wrap: wrap;
+  }
+  .tile-date {
+    font-size: 0.72rem; color: var(--text-tertiary); font-weight: 500;
+    letter-spacing: 0.05em;
+  }
+  .tile-badge {
+    font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em;
+    text-transform: uppercase; padding: 0.15rem 0.45rem;
+    border: 1px solid var(--border);
+  }
+  .signal-tile h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem; font-weight: 600; color: var(--text-primary);
+    line-height: 1.3; margin-bottom: 0.3rem;
+  }
+  .tile-title-cn {
+    font-size: 0.8rem; color: var(--text-cn); margin-bottom: 0.7rem;
+  }
+  .tile-summary {
+    font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+    overflow: hidden; margin-bottom: 0.8rem;
+  }
+  .tile-footer {
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 0.5rem;
+  }
+  .tile-source {
+    font-size: 0.72rem; color: var(--text-tertiary);
+  }
+  .tile-tags {
+    display: flex; gap: 0.3rem; flex-wrap: wrap;
+  }
+  .tag {
+    font-size: 0.65rem; font-weight: 500; padding: 0.15rem 0.5rem;
+    background: var(--bg-elevated); color: var(--text-tertiary);
+    letter-spacing: 0.02em;
+  }
+  .tile-trajectory {
+    font-size: 0.65rem; color: var(--accent); font-weight: 600;
+    letter-spacing: 0.05em; text-transform: uppercase;
+    display: flex; align-items: center; gap: 0.3rem;
+  }
+
+  @media (max-width: 1024px) {
+    .signal-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 768px) {
+    .signal-grid { grid-template-columns: 1fr; }
+    .signal-tile.synthesis { grid-column: 1; }
+  }
+
+  /* EXPANDED SIGNAL VIEW */
+  .signal-expanded {
+    display: none; padding: 3rem 0; border-bottom: 1px solid var(--border);
+  }
+  .signal-expanded.active { display: block; }
+  .expanded-back {
+    font-size: 0.78rem; color: var(--text-tertiary); font-weight: 500;
+    letter-spacing: 0.05em; text-transform: uppercase;
+    cursor: pointer; margin-bottom: 2rem; display: inline-block;
+    border: none; background: none; font-family: inherit;
+  }
+  .expanded-back:hover { color: var(--text-secondary); }
+  .expanded-meta {
+    display: flex; align-items: center; gap: 1rem;
+    margin-bottom: 1.2rem; flex-wrap: wrap;
+  }
+  .expanded-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem; font-weight: 600; color: var(--text-primary);
+    line-height: 1.25; margin-bottom: 0.4rem;
+  }
+  .expanded-title-cn {
+    font-size: 1rem; color: var(--text-cn); margin-bottom: 2rem;
+  }
+  .expanded-section {
+    margin-bottom: 2rem;
+  }
+  .expanded-section-label {
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem;
+  }
+  .expanded-section p {
+    font-size: 0.92rem; color: var(--text-secondary); line-height: 1.75;
+  }
+  .expanded-tags {
+    display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 2rem;
+  }
+  .expanded-related {
+    border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 2rem;
+  }
+  .related-card {
+    background: var(--bg-card); border: 1px solid var(--border);
+    padding: 1.2rem; cursor: pointer; margin-bottom: 0.5rem;
+  }
+  .related-card:hover { border-color: var(--border-hover); }
+  .related-card h4 {
+    font-size: 0.88rem; font-weight: 600; color: var(--text-primary);
+    margin-bottom: 0.2rem;
+  }
+  .related-card .related-date {
+    font-size: 0.72rem; color: var(--text-tertiary);
+  }
+  .expanded-share {
+    display: flex; gap: 1rem; margin-top: 2rem;
+  }
+  .share-btn {
+    font-size: 0.78rem; font-weight: 600; color: var(--text-secondary);
+    background: var(--bg-card); border: 1px solid var(--border);
+    padding: 0.5rem 1rem; cursor: pointer; font-family: inherit;
+    letter-spacing: 0.03em;
+  }
+  .share-btn:hover { color: var(--text-primary); border-color: var(--border-hover); }
+
+  /* ABOUT / MY TAKE */
+  .about-section { border-bottom: 1px solid var(--border); }
+  .about-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem; font-weight: 600; color: var(--text-primary);
+    margin-bottom: 1.5rem; line-height: 1.3;
+  }
+  .about-text {
+    font-size: 0.92rem; color: var(--text-secondary); line-height: 1.75;
+    max-width: 750px; margin-bottom: 1.5rem;
+  }
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
+    margin-top: 2rem;
+  }
+  @media (max-width: 768px) {
+    .about-grid { grid-template-columns: 1fr; }
+  }
+  .about-block h3 {
+    font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 0.8rem;
+  }
+  .rotation-table {
+    width: 100%; border-collapse: collapse; font-size: 0.82rem;
+  }
+  .rotation-table th {
+    text-align: left; font-weight: 600; color: var(--text-tertiary);
+    padding: 0.5rem 0; border-bottom: 1px solid var(--border);
+    font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase;
+  }
+  .rotation-table td {
+    padding: 0.5rem 0; border-bottom: 1px solid var(--border);
+    color: var(--text-secondary);
+  }
+  .strength-legend {
+    list-style: none; padding: 0;
+  }
+  .strength-legend li {
+    font-size: 0.85rem; color: var(--text-secondary);
+    padding: 0.4rem 0; border-bottom: 1px solid var(--border);
+  }
+
+  /* SUBSCRIBE */
+  .subscribe-section {
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+  }
+  .subscribe-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem; font-weight: 600; color: var(--text-primary);
+    margin-bottom: 0.6rem;
+  }
+  .subscribe-section p {
+    font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1.5rem;
+  }
+  .subscribe-form {
+    display: flex; gap: 0; max-width: 480px; margin: 0 auto;
+  }
+  .subscribe-input {
+    flex: 1; background: var(--bg-card); color: var(--text-primary);
+    border: 1px solid var(--border); border-right: none;
+    padding: 0.7rem 1rem; font-size: 0.85rem; font-family: inherit;
+  }
+  .subscribe-input::placeholder { color: var(--text-tertiary); }
+  .subscribe-input:focus { outline: none; border-color: var(--accent); }
+  .subscribe-btn {
+    background: var(--text-primary); color: var(--bg);
+    border: 1px solid var(--text-primary);
+    padding: 0.7rem 1.5rem; font-size: 0.82rem; font-weight: 700;
+    font-family: inherit; cursor: pointer; letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .subscribe-btn:hover { background: #ddd; border-color: #ddd; }
+
+  @media (max-width: 768px) {
+    .subscribe-form { flex-direction: column; }
+    .subscribe-input { border-right: 1px solid var(--border); border-bottom: none; }
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center; padding: 2rem;
+    font-size: 0.75rem; color: var(--text-tertiary);
+    border-top: 1px solid var(--border);
+  }
+  footer a { color: var(--text-secondary); }
+
+  /* NO RESULTS */
+  .no-results {
+    padding: 4rem 2rem; text-align: center;
+    font-size: 0.92rem; color: var(--text-tertiary);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .site-header h1 { font-size: 2.1rem; }
+    .hero-signal-card h2 { font-size: 1.5rem; }
+    .hero-signal-card { padding: 1.5rem; }
+    .expanded-title { font-size: 1.5rem; }
+    section { padding: 3rem 0; }
+  }
+
+  /* NOSCRIPT FALLBACK */
+  noscript .signal-tile { display: block; margin-bottom: 1rem; padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-left">
+      <a href="../" class="nav-name">Joseph Press</a>
+    </div>
+    <div class="nav-right">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#signals">All Signals</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#subscribe">Subscribe</a></li>
+        <li><a href="../">Home</a></li>
+        <li><a href="../aci-academy/">ACI Academy</a></li>
+      </ul>
+      <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- SITE HEADER -->
+<header class="site-header">
+  <div class="container">
+    <p class="section-label">Intelligence Briefing</p>
+    <h1>Sino-Signals</h1>
+    <p class="tagline">The signals shaping your industry are appearing in China first.</p>
+    <p class="byline">By Joseph Press &middot; <a href="https://www.josephpress.com">josephpress.com</a></p>
+  </div>
+</header>
+
+<!-- HERO SIGNAL (populated by JS) -->
+<section class="hero-signal" id="heroSignal">
+  <div class="container" id="heroContent">
+    <!-- Filled by JS -->
+  </div>
+</section>
+
+<!-- FILTER BAR -->
+<div class="filter-bar" id="filterBar">
+  <div class="container">
+    <div class="filter-bar-inner">
+      <select class="filter-select" id="filterCategory" aria-label="Filter by category">
+        <option value="all">All Categories</option>
+        <option value="Industry & Enterprise">Industry & Enterprise</option>
+        <option value="Policy & Governance">Policy & Governance</option>
+        <option value="Technology & Research">Technology & Research</option>
+        <option value="Talent & Education">Talent & Education</option>
+        <option value="Investment & Capital">Investment & Capital</option>
+        <option value="Consumer & Society">Consumer & Society</option>
+        <option value="Infrastructure & Compute">Infrastructure & Compute</option>
+      </select>
+      <select class="filter-select" id="filterStrength" aria-label="Filter by signal strength">
+        <option value="all">All Strengths</option>
+        <option value="weak">Weak</option>
+        <option value="emerging">Emerging</option>
+        <option value="strong">Strong</option>
+      </select>
+      <select class="filter-select" id="filterType" aria-label="Filter by content type">
+        <option value="all">All Types</option>
+        <option value="daily">Daily Signal</option>
+        <option value="monthly_synthesis">Monthly Synthesis</option>
+        <option value="quarterly_report">Quarterly Report</option>
+      </select>
+      <input type="text" class="search-input" id="searchInput" placeholder="Search signals..." aria-label="Search signals">
+      <span class="filter-count" id="filterCount"></span>
+    </div>
+  </div>
+</div>
+
+<!-- SIGNAL GRID -->
+<section class="signal-grid-wrapper" id="signals">
+  <div class="container">
+    <div class="signal-grid" id="signalGrid">
+      <!-- Filled by JS -->
+    </div>
+    <div class="no-results" id="noResults" style="display:none;">No signals match your filters.</div>
+  </div>
+</section>
+
+<!-- EXPANDED SIGNAL VIEW -->
+<section class="signal-expanded" id="expandedView">
+  <div class="container" id="expandedContent">
+    <!-- Filled by JS -->
+  </div>
+</section>
+
+<!-- ABOUT / MY TAKE -->
+<section class="about-section" id="about">
+  <div class="container">
+    <p class="section-label">About This Project</p>
+    <h2 class="about-title">My Take</h2>
+    <p class="about-text">China is the world's largest signal amplifier for AI deployment. While frontier research grabs headlines in the West, the signals that will reshape your industry over the next 3&ndash;5 years are appearing in China first&mdash;not because China is ahead in foundational research, but because it operates at a scale and speed of deployment that has no Western equivalent.</p>
+    <p class="about-text">Sino-Signals applies the signal scanning methodology developed at the Institute for the Future (IFTF) to Chinese-language sources. Each signal is evaluated through four questions:</p>
+    <p class="about-text" style="border-left: 2px solid var(--accent); padding-left: 1rem;">
+      <strong style="color: var(--text-primary);">What is the signal?</strong> &mdash; What happened, with verified sourcing.<br>
+      <strong style="color: var(--text-primary);">Why can it scale in China?</strong> &mdash; Structural factors enabling rapid deployment.<br>
+      <strong style="color: var(--text-primary);">How might it impact the world?</strong> &mdash; Second- and third-order effects.<br>
+      <strong style="color: var(--text-primary);">So what would you do Monday morning?</strong> &mdash; Actionable response for leaders.
+    </p>
+    <p class="about-text">Methodology: IFTF Foresight Essentials signal scanning, applied to Chinese-language sources including government portals, industry media (36Kr, CLS, Caixin), WeChat official accounts, and research databases.</p>
+
+    <div class="about-grid">
+      <div class="about-block">
+        <h3>Category Rotation</h3>
+        <table class="rotation-table">
+          <thead><tr><th>Day</th><th>Category</th></tr></thead>
+          <tbody>
+            <tr><td>Monday</td><td>&#127963;&#65039; Policy & Governance</td></tr>
+            <tr><td>Tuesday</td><td>&#128300; Technology & Research</td></tr>
+            <tr><td>Wednesday</td><td>&#127981; Industry & Enterprise</td></tr>
+            <tr><td>Thursday</td><td>&#128176; Investment & Capital</td></tr>
+            <tr><td>Friday</td><td>&#127891; Talent & Education</td></tr>
+            <tr><td>Saturday</td><td>&#127968; Consumer & Society</td></tr>
+            <tr><td>Sunday</td><td>&#128421;&#65039; Infrastructure & Compute</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="about-block">
+        <h3>Signal Strength</h3>
+        <ul class="strength-legend">
+          <li><span style="color:var(--strength-weak)">&#x1f7e1; Weak</span> &mdash; Early indicator, single source, unconfirmed trajectory</li>
+          <li><span style="color:var(--strength-emerging)">&#x1f7e0; Emerging</span> &mdash; Multiple sources, pattern forming, 6&ndash;18 month impact window</li>
+          <li><span style="color:var(--strength-strong)">&#x1f534; Strong</span> &mdash; Confirmed pattern, immediate strategic relevance, act now</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUBSCRIBE -->
+<section class="subscribe-section" id="subscribe">
+  <div class="container">
+    <h2>Stay Ahead</h2>
+    <p>Weekly digest every Sunday &mdash; 7 signals + the editorial pick of the week.</p>
+    <form class="subscribe-form" action="https://formspree.io/f/placeholder" method="POST">
+      <input type="email" name="email" class="subscribe-input" placeholder="your@email.com" required aria-label="Email address">
+      <button type="submit" class="subscribe-btn">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  &copy; 2026 Joseph Press &middot; <a href="https://www.josephpress.com">josephpress.com</a> &middot; <a href="https://www.linkedin.com/in/josephpress/" target="_blank" rel="noopener">LinkedIn</a> &middot; Methodology: IFTF Foresight Essentials
+</footer>
+
+<!-- NOSCRIPT FALLBACK -->
+<noscript>
+  <div class="container" style="padding:2rem;">
+    <p style="color:var(--text-secondary);font-size:0.92rem;">This page requires JavaScript for filtering and search. The signal data is loaded from <code>signals-data.json</code>.</p>
+  </div>
+</noscript>
+
+<script>
+(function() {
+  'use strict';
+
+  let signals = [];
+  let currentView = 'grid'; // 'grid' or 'expanded'
+
+  // Load data
+  fetch('signals-data.json')
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      signals = data.sort(function(a, b) { return b.date.localeCompare(a.date); });
+      renderHero();
+      renderGrid(signals.slice(1));
+      updateCount(signals.length - 1);
+      bindFilters();
+    })
+    .catch(function(err) {
+      document.getElementById('heroContent').innerHTML = '<p style="color:var(--text-tertiary)">Failed to load signal data.</p>';
+    });
+
+  function strengthClass(s) {
+    if (s === 'weak') return 'badge-strength-weak';
+    if (s === 'emerging') return 'badge-strength-emerging';
+    if (s === 'strong') return 'badge-strength-strong';
+    return '';
+  }
+
+  function strengthLabel(s) {
+    if (s === 'weak') return '\ud83d\udfe1 Weak';
+    if (s === 'emerging') return '\ud83d\udfe0 Emerging';
+    if (s === 'strong') return '\ud83d\udd34 Strong';
+    return s;
+  }
+
+  function formatDate(d) {
+    var parts = d.split('-');
+    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    return months[parseInt(parts[1],10)-1] + ' ' + parseInt(parts[2],10) + ', ' + parts[0];
+  }
+
+  function truncate(text, len) {
+    if (!text) return '';
+    return text.length > len ? text.substring(0, len) + '...' : text;
+  }
+
+  function renderHero() {
+    var s = signals[0];
+    if (!s) return;
+    var html = '<div class="hero-signal-card" data-signal-id="' + s.id + '" onclick="window.showExpanded(\'' + s.id + '\')">';
+    html += '<div class="hero-signal-meta">';
+    html += '<span class="signal-date">' + formatDate(s.date) + '</span>';
+    html += '<span class="badge badge-category">' + s.category_emoji + ' ' + s.category + '</span>';
+    html += '<span class="badge ' + strengthClass(s.signal_strength) + '">' + strengthLabel(s.signal_strength) + '</span>';
+    if (s.content_type !== 'daily') {
+      html += '<span class="badge" style="color:var(--accent);border-color:var(--accent-dim)">' + s.content_type.replace('_',' ').toUpperCase() + '</span>';
+    }
+    html += '</div>';
+    html += '<h2>' + s.title_en + '</h2>';
+    html += '<p class="title-cn">' + s.title_cn + '</p>';
+    html += '<p class="hero-signal-summary">' + truncate(s.body.signal, 250) + '</p>';
+    html += '<div class="hero-monday"><p class="hero-monday-label">Monday Morning</p><p>' + truncate(s.body.monday_morning, 200) + '</p></div>';
+    if (s.source_url) {
+      html += '<p class="signal-source">Source: <a href="' + s.source_url + '" target="_blank" rel="noopener">' + s.source_name + '</a></p>';
+    } else {
+      html += '<p class="signal-source">Source: ' + s.source_name + '</p>';
+    }
+    html += '</div>';
+    document.getElementById('heroContent').innerHTML = html;
+  }
+
+  function renderGrid(list) {
+    var grid = document.getElementById('signalGrid');
+    var noResults = document.getElementById('noResults');
+    if (list.length === 0) {
+      grid.style.display = 'none';
+      noResults.style.display = 'block';
+      return;
+    }
+    grid.style.display = '';
+    noResults.style.display = 'none';
+
+    var html = '';
+    for (var i = 0; i < list.length; i++) {
+      var s = list[i];
+      var isSynthesis = s.content_type === 'monthly_synthesis' || s.content_type === 'quarterly_report';
+      html += '<div class="signal-tile' + (isSynthesis ? ' synthesis' : '') + '" data-signal-id="' + s.id + '" onclick="window.showExpanded(\'' + s.id + '\')">';
+      html += '<div class="tile-meta">';
+      html += '<span class="tile-date">' + formatDate(s.date) + '</span>';
+      html += '<span class="tile-badge badge-category">' + s.category_emoji + '</span>';
+      html += '<span class="tile-badge ' + strengthClass(s.signal_strength) + '">' + strengthLabel(s.signal_strength) + '</span>';
+      if (isSynthesis) {
+        html += '<span class="tile-badge" style="color:var(--accent);border-color:var(--accent-dim)">' + s.content_type.replace('_',' ').toUpperCase() + '</span>';
+      }
+      html += '</div>';
+      html += '<h3>' + s.title_en + '</h3>';
+      html += '<p class="tile-title-cn">' + s.title_cn + '</p>';
+      html += '<p class="tile-summary">' + truncate(s.body.signal, 180) + '</p>';
+      html += '<div class="tile-footer">';
+      html += '<span class="tile-source">' + s.source_name + '</span>';
+      if (s.related_signals && s.related_signals.length > 0) {
+        html += '<span class="tile-trajectory">&harr; Trajectory</span>';
+      }
+      html += '</div>';
+      html += '<div class="tile-tags">';
+      for (var t = 0; t < s.tags.length && t < 4; t++) {
+        html += '<span class="tag">' + s.tags[t] + '</span>';
+      }
+      html += '</div>';
+      html += '</div>';
+    }
+    grid.innerHTML = html;
+  }
+
+  function updateCount(n) {
+    document.getElementById('filterCount').textContent = n + ' signal' + (n !== 1 ? 's' : '');
+  }
+
+  function getFiltered() {
+    var cat = document.getElementById('filterCategory').value;
+    var str = document.getElementById('filterStrength').value;
+    var typ = document.getElementById('filterType').value;
+    var q = document.getElementById('searchInput').value.toLowerCase().trim();
+
+    // Exclude the hero signal (first/most recent)
+    var pool = signals.slice(1);
+
+    return pool.filter(function(s) {
+      if (cat !== 'all' && s.category !== cat) return false;
+      if (str !== 'all' && s.signal_strength !== str) return false;
+      if (typ !== 'all' && s.content_type !== typ) return false;
+      if (q) {
+        var haystack = (s.title_en + ' ' + s.title_cn + ' ' + s.body.signal + ' ' + s.tags.join(' ')).toLowerCase();
+        if (haystack.indexOf(q) === -1) return false;
+      }
+      return true;
+    });
+  }
+
+  function applyFilters() {
+    var filtered = getFiltered();
+    renderGrid(filtered);
+    updateCount(filtered.length);
+  }
+
+  function bindFilters() {
+    document.getElementById('filterCategory').addEventListener('change', applyFilters);
+    document.getElementById('filterStrength').addEventListener('change', applyFilters);
+    document.getElementById('filterType').addEventListener('change', applyFilters);
+    document.getElementById('searchInput').addEventListener('input', applyFilters);
+  }
+
+  window.showExpanded = function(id) {
+    var s = null;
+    for (var i = 0; i < signals.length; i++) {
+      if (signals[i].id === id) { s = signals[i]; break; }
+    }
+    if (!s) return;
+
+    var html = '<button class="expanded-back" onclick="window.hideExpanded()">&larr; Back to all signals</button>';
+    html += '<div class="expanded-meta">';
+    html += '<span class="signal-date">' + formatDate(s.date) + '</span>';
+    html += '<span class="badge badge-category">' + s.category_emoji + ' ' + s.category + '</span>';
+    html += '<span class="badge ' + strengthClass(s.signal_strength) + '">' + strengthLabel(s.signal_strength) + '</span>';
+    if (s.content_type !== 'daily') {
+      html += '<span class="badge" style="color:var(--accent);border-color:var(--accent-dim)">' + s.content_type.replace('_',' ').toUpperCase() + '</span>';
+    }
+    html += '</div>';
+    html += '<h2 class="expanded-title">' + s.title_en + '</h2>';
+    html += '<p class="expanded-title-cn">' + s.title_cn + '</p>';
+
+    if (s.source_url) {
+      html += '<p class="signal-source" style="margin-bottom:2rem">Source: <a href="' + s.source_url + '" target="_blank" rel="noopener">' + s.source_name + '</a></p>';
+    } else {
+      html += '<p class="signal-source" style="margin-bottom:2rem">Source: ' + s.source_name + '</p>';
+    }
+
+    var sections = [
+      { key: 'signal', label: 'What is the signal?' },
+      { key: 'china_scale', label: 'Why can it scale in China?' },
+      { key: 'global_impact', label: 'How might it impact the world?' },
+      { key: 'monday_morning', label: 'So what would you do Monday morning?' }
+    ];
+    for (var i = 0; i < sections.length; i++) {
+      if (s.body[sections[i].key]) {
+        html += '<div class="expanded-section">';
+        html += '<p class="expanded-section-label">' + sections[i].label + '</p>';
+        html += '<p>' + s.body[sections[i].key] + '</p>';
+        html += '</div>';
+      }
+    }
+
+    if (s.body.related_notes) {
+      html += '<div class="expanded-section">';
+      html += '<p class="expanded-section-label">Related Signals</p>';
+      html += '<p>' + s.body.related_notes + '</p>';
+      html += '</div>';
+    }
+
+    html += '<div class="expanded-tags">';
+    for (var t = 0; t < s.tags.length; t++) {
+      html += '<span class="tag">' + s.tags[t] + '</span>';
+    }
+    html += '</div>';
+
+    // Related signal cards
+    if (s.related_signals && s.related_signals.length > 0) {
+      html += '<div class="expanded-related">';
+      html += '<p class="expanded-section-label">Signal Trajectory</p>';
+      for (var r = 0; r < s.related_signals.length; r++) {
+        var relId = s.related_signals[r];
+        var rel = null;
+        for (var j = 0; j < signals.length; j++) {
+          if (signals[j].id === relId) { rel = signals[j]; break; }
+        }
+        if (rel) {
+          html += '<div class="related-card" onclick="window.showExpanded(\'' + rel.id + '\')">';
+          html += '<h4>' + rel.title_en + '</h4>';
+          html += '<span class="related-date">' + formatDate(rel.date) + ' &middot; ' + rel.category + '</span>';
+          html += '</div>';
+        }
+      }
+      html += '</div>';
+    }
+
+    // Share
+    html += '<div class="expanded-share">';
+    html += '<button class="share-btn" onclick="window.shareLinkedIn(\'' + encodeURIComponent(s.title_en) + '\')">Share on LinkedIn</button>';
+    html += '<button class="share-btn" onclick="window.copyURL()">Copy Link</button>';
+    html += '</div>';
+
+    document.getElementById('expandedContent').innerHTML = html;
+    document.getElementById('expandedView').classList.add('active');
+    document.getElementById('heroSignal').style.display = 'none';
+    document.getElementById('filterBar').style.display = 'none';
+    document.querySelector('.signal-grid-wrapper').style.display = 'none';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  window.hideExpanded = function() {
+    document.getElementById('expandedView').classList.remove('active');
+    document.getElementById('heroSignal').style.display = '';
+    document.getElementById('filterBar').style.display = '';
+    document.querySelector('.signal-grid-wrapper').style.display = '';
+  };
+
+  window.shareLinkedIn = function(title) {
+    var url = encodeURIComponent(window.location.href);
+    window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + url, '_blank');
+  };
+
+  window.copyURL = function() {
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(window.location.href);
+    }
+  };
+
+  // Nav scroll
+  window.addEventListener('scroll', function() {
+    // Close mobile nav on scroll
+  });
+  document.querySelectorAll('.nav-links a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      document.getElementById('navLinks').classList.remove('open');
+    });
+  });
+})();
+</script>
+</body>
+</html>
