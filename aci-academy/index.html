@@ -233,6 +233,19 @@
   .rolemodel-vignette {
     font-size: 0.82rem; color: var(--medium); line-height: 1.55;
   }
+  .rolemodel-skills {
+    display: flex; flex-wrap: wrap; gap: 0.4rem;
+    margin-bottom: 0.6rem;
+  }
+  .iii-tag {
+    font-size: 0.65rem; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.04em; padding: 0.2rem 0.55rem;
+    border-radius: 3px; background: #edf2f7; color: var(--slate);
+    line-height: 1.3;
+  }
+  .iii-tag[data-domain="thinking"] { background: #ebf4ff; color: #2b6cb0; }
+  .iii-tag[data-domain="making"] { background: #f0fff4; color: #276749; }
+  .iii-tag[data-domain="being"] { background: #faf5ff; color: #6b46c1; }
   .rolemodel-empty {
     grid-column: 1 / -1; text-align: center; padding: 2rem;
     font-size: 0.9rem; color: var(--light); font-style: italic;
@@ -709,9 +722,16 @@
       <span data-lang="zh">选择您的榜样</span>
     </h2>
     <p class="section-intro">
-      <span data-lang="en">Study practitioners who demonstrate ACI at its most developed — from Miyazaki to Miles. Choose the one whose capabilities you want to develop. Some practitioners appear across multiple archetypes — ACI capacity is not archetype-locked.</span>
-      <span data-lang="fr">&Eacute;tudiez des praticiens qui d&eacute;montrent l'ACI &agrave; son plus haut niveau — de Miyazaki &agrave; Miles. Choisissez celui dont les capacit&eacute;s vous inspirent. Certains praticiens apparaissent dans plusieurs arch&eacute;types.</span>
-      <span data-lang="zh">研究展现最成熟ACI的实践者——从宫崎骏到迈尔斯。选择您想要发展的能力方向。部分实践者跨越多个原型——ACI能力不受原型限制。</span>
+      <span data-lang="en">Each practitioner below is drawn from Part II of <em>Agentic Creative Intelligence</em>. Their Innovation Intelligence skills — colour-coded by domain — show how studying their practice develops your own creative capacities.</span>
+      <span data-lang="fr">Chaque praticien ci-dessous est issu de la partie II d'<em>Agentic Creative Intelligence</em>. Leurs comp&eacute;tences d'Intelligence de l'Innovation montrent comment &eacute;tudier leur pratique d&eacute;veloppe vos propres capacit&eacute;s.</span>
+      <span data-lang="zh">以下每位实践者均出自《能动创造智能》第二部分。他们的创新智能技能——按领域用颜色标注——展示了研究其实践如何发展您自身的创造力。</span>
+    </p>
+    <p style="font-size: 0.72rem; color: var(--light); margin-bottom: 1.8rem;">
+      <span data-lang="en">
+        <span class="iii-tag" data-domain="thinking" style="font-size: 0.6rem;">Innovation Thinking</span>
+        <span class="iii-tag" data-domain="making" style="font-size: 0.6rem;">Design Making</span>
+        <span class="iii-tag" data-domain="being" style="font-size: 0.6rem;">Leadership Being</span>
+      </span>
     </p>
 
     <p id="roleModelPrompt" style="font-size: 0.88rem; color: var(--light); font-style: italic; margin-bottom: 1.5rem; display: none;">
@@ -724,150 +744,374 @@
 
       <!-- CREATIVE ARCHETYPE ROLE MODELS -->
 
-      <div class="rolemodel-card" data-archetypes="creative innovator" onclick="selectRoleModel(this, 'calatrava')">
-        <div class="rolemodel-name">Santiago Calatrava</div>
-        <div class="rolemodel-domain">Built Arts &middot; Engineering</div>
-        <div class="rolemodel-vignette">Trained as both architect and structural engineer, Calatrava draws every day to maintain the somatic connection between hand, eye, and structural intuition. His tools extend his engagement with physical forces rather than replacing it.</div>
-      </div>
-
-      <div class="rolemodel-card" data-archetypes="creative" onclick="selectRoleModel(this, 'miyazaki')">
-        <div class="rolemodel-name">Hayao Miyazaki</div>
-        <div class="rolemodel-domain">Film &middot; Animation</div>
-        <div class="rolemodel-vignette">Miyazaki storyboards by hand before any dialogue is written, insisting that embodied drawing — not scripting — is where the story lives. Studio Ghibli's resistance to digital shortcuts is a deliberate stance on creative integrity.</div>
-      </div>
-
-      <div class="rolemodel-card" data-archetypes="creative educator leader-org leader-community" onclick="selectRoleModel(this, 'davis')">
-        <div class="rolemodel-name">Miles Davis</div>
-        <div class="rolemodel-domain">Music &middot; Mentoring</div>
-        <div class="rolemodel-vignette">Davis assembled bands as developmental incubators — Coltrane, Hancock, Shorter all emerged from his ensembles. He knew when to direct, when to withhold, and when to reinvent entirely. Each era was a new creative ecology.</div>
-      </div>
-
-      <div class="rolemodel-card" data-archetypes="creative changemaker leader-org leader-community" onclick="selectRoleModel(this, 'bowie')">
-        <div class="rolemodel-name">David Bowie</div>
-        <div class="rolemodel-domain">Music &middot; Performance &middot; Culture</div>
-        <div class="rolemodel-vignette">Bowie spanned painting, kabuki, internet ventures, and financial innovation across a single career. He built collaborative ecologies with Eno, Visconti, and Fripp — each collaborator's entry point complementing his own.</div>
-      </div>
-
-      <div class="rolemodel-card" data-archetypes="creative" onclick="selectRoleModel(this, 'bausch')">
-        <div class="rolemodel-name">Pina Bausch</div>
-        <div class="rolemodel-domain">Dance &middot; Theatre</div>
-        <div class="rolemodel-vignette">Bausch's dancers drew on their own lived experience as choreographic material. Tanztheater was not performance of a script but embodied research — the body as the primary instrument of creative knowledge.</div>
-      </div>
-
-      <div class="rolemodel-card" data-archetypes="creative" onclick="selectRoleModel(this, 'barragan')">
-        <div class="rolemodel-name">Luis Barrag&aacute;n</div>
-        <div class="rolemodel-domain">Architecture</div>
-        <div class="rolemodel-vignette">Barrag&aacute;n treated colour and light as spatial materials with emotional weight. His architecture demonstrates that aesthetic awareness is not decoration — it is the primary structure of how a space makes you feel.</div>
+      <div class="rolemodel-card" data-archetypes="creative innovator" onclick="selectRoleModel(this, 'anadol')">
+        <div class="rolemodel-name">Refik Anadol</div>
+        <div class="rolemodel-domain">Digital Art &middot; Data Visualisation</div>
+        <div class="rolemodel-skills">
+          <span class="iii-tag" data-domain="making">Represent Intentions</span>
+          <span class="iii-tag" data-domain="making">Tinker with Tech</span>
+        </div>
+        <div class="rolemodel-vignette">Anadol curates AI outputs into immersive spatial experiences — feeding 200 years of art history into fluid visualisations at MoMA. Studying his practice develops your capacity to represent creative intentions through technology while keeping human aesthetic judgment in command.</div>
       </div>
 
       <div class="rolemodel-card" data-archetypes="creative innovator" onclick="selectRoleModel(this, 'herndon')">
         <div class="rolemodel-name">Holly Herndon</div>
-        <div class="rolemodel-domain">Music &middot; AI</div>
-        <div class="rolemodel-vignette">Herndon trained an AI on her own vocal tradition — liturgical singing, choral practice — creating a collaborator that extends rather than replaces her embodied voice. A working model of human-AI creative partnership.</div>
+        <div class="rolemodel-domain">Music &middot; AI Collaboration</div>
+        <div class="rolemodel-skills">
+          <span class="iii-tag" data-domain="making">Represent Intentions</span>
+          <span class="iii-tag" data-domain="making">Cultivate Opportunities</span>
+        </div>
+        <div class="rolemodel-vignette">Herndon trained Holly+ on her own vocal tradition — liturgical singing, choral practice — creating a decentralised voice instrument governed by a community of stewards. Her work models how to cultivate new creative opportunities while maintaining vocal sovereignty.</div>
       </div>
 
-      <div class="rolemodel-card" data-archetypes="creative educator" onclick="selectRoleModel(this, 'abramovic')">
-        <div class="rolemodel-name">Marina Abramovi&cacute;</div>
-        <div class="rolemodel-domain">Performance Art</div>
-        <div class="rolemodel-vignette">Abramovi&cacute; made duration and physical endurance the medium itself. Her performances demand sustained presence from both artist and audience — an extended engagement that no shortcut can replicate.</div>
+      <div class="rolemodel-card" data-archetypes="creative" onclick="selectRoleModel(this, 'chung')">
+        <div class="rolemodel-name">Sougwen Chung</div>
+        <div class="rolemodel-domain">Performance Art &middot; Robotics</div>
+        <div class="rolemodel-skills">
+          <span class="iii-tag" data-domain="making">Represent Intentions</span>
+          <span class="iii-tag" data-domain="making">Tinker with Tech</span>
+        </div>
+        <div class="rolemodel-vignette">Chung has performed with D.O.U.G. — a robotic arm that mirrors and counters their drawing movements — since 2015, treating machine departures as native vocabulary of a different sensory architecture. Their practice strengthens your ability to represent intentions through embodied human-machine dialogue.</div>
       </div>
 
-      <div class="rolemodel-card" data-archetypes="creative" onclick="selectRoleModel(this, 'adjaye')">
-        <div class="rolemodel-name">David Adjaye</div>
-        <div class="rolemodel-domain">Architecture &middot; Culture</div>
-        <div class="rolemodel-vignette">Adjaye draws on African spatial traditions, material culture, and communal memory to shape buildings that carry meaning beyond function. His work demonstrates aesthetic awareness rooted in cultural specificity.</div>
+      <div class="rolemodel-card" data-archetypes="creative" onclick="selectRoleModel(this, 'mcgregor')">
+        <div class="rolemodel-name">Wayne McGregor</div>
+        <div class="rolemodel-domain">Choreography &middot; AI</div>
+        <div class="rolemodel-skills">
+          <span class="iii-tag" data-domain="making">Represent Intentions</span>
+          <span class="iii-tag" data-domain="thinking">Cognitive Awareness</span>
+        </div>
+        <div class="rolemodel-vignette">McGregor uses AI to generate movement possibilities from video archives of his company's repertoire — then selects, rejects, and recombines through embodied judgment. His practice develops cognitive awareness of how decisions shape choreographic meaning.</div>
       </div>
 
-      <div class="rolemodel-card" data-archetypes="creative changemaker" onclick="selectRoleModel(this, 'salgado')">
-        <div class="rolemodel-name">Sebasti&atilde;o Salgado</div>
-        <div class="rolemodel-domain">Photography &middot; Environmentalism</div>
-        <div class="rolemodel-vignette">Salgado spent years embedded in the communities he photographed — workers, migrants, landscapes. His expressive influence comes from sustained engagement, not from capturing moments but from inhabiting them.</div>
+      <div class="rolemodel-card" data-archetypes="creative innovator" onclick="selectRoleModel(this, 'goldstein')">
+        <div class="rolemodel-name">Ganit Goldstein</div>
+        <div class="rolemodel-domain">Textile &middot; Wearable Technology</div>
+        <div class="rolemodel-skills">
+          <span class="iii-tag" data-domain="making">Tinker with Tech</span>
+          <span class="iii-tag" data-domain="making">Represent Intentions</span>
+        </div>
+        <div class="rolemodel-vignette">Goldstein's collaboration with MIT on spacesuit textiles produces a single continuous weave with millimetre-by-millimetre variable properties — holding computational precision in tension with awareness of bodies that sweat and flex. Her work teaches how technology extends rather than replaces embodied design.</div>
+      </div>
+
+      <div class="rolemodel-card" data-archetypes="creative" onclick="selectRoleModel(this, 'delcampo')">
+        <div class="rolemodel-name">Matias del Campo</div>
+        <div class="rolemodel-domain">Architecture &middot; Neural Aesthetics</div>
+        <div class="rolemodel-skills">
+          <span class="iii-tag" data-domain="thinking">Future Focus</span>
+          <span class="iii-tag" data-domain="making">Represent Intentions</span>
+        </div>
+        <div class="rolemodel-vignette">Del Campo uses neural networks to remix architectural ornament into post-human forms that estrange the familiar. His practice at SPAN Studio develops your future focus — the ability to envision and represent directions that spark entirely new innovation trajectories.</div>
+      </div>
+
+      <div class="rolemodel-card" data-archetypes="creative" onclick="selectRoleModel(this, 'stiles')">
+        <div class="rolemodel-name">Sasha Stiles</div>
+        <div class="rolemodel-domain">Poetry &middot; AI</div>
+        <div class="rolemodel-skills">
+          <span class="iii-tag" data-domain="making">Represent Intentions</span>
+          <span class="iii-tag" data-domain="thinking">Cognitive Awareness</span>
+        </div>
+        <div class="rolemodel-vignette">Stiles trained AI on her own poetry corpus and discovered the collaboration produces a "third voice" — one requiring the poet's body to carry meaning. Her practice develops cognitive awareness of how human and machine language interact, and the ability to represent poetic intention through hybrid authorship.</div>
+      </div>
+
+      <div class="rolemodel-card" data-archetypes="creative educator" onclick="selectRoleModel(this, 'min')">
+        <div class="rolemodel-name">Jiajian Min</div>
+        <div class="rolemodel-domain">Performance &middot; Multimedia &middot; AI/XR</div>
+        <div class="rolemodel-skills">
+          <span class="iii-tag" data-domain="making">Represent Intentions</span>
+          <span class="iii-tag" data-domain="making">Tinker with Tech</span>
+        </div>
+        <div class="rolemodel-vignette">Min integrates dance, calligraphy, projection mapping, and generative systems — translating Chinese calligraphy stroke-body motion into generative visuals through motion capture and biometric feedback. His practice deepens embodied creative reach through computational tools without severing the body's authority.</div>
+      </div>
+
+      <div class="rolemodel-card" data-archetypes="creative innovator leader-community" onclick="selectRoleModel(this, 'collier')">
+        <div class="rolemodel-name">Jacob Collier</div>
+        <div class="rolemodel-domain">Music &middot; Production &middot; Community</div>
+        <div class="rolemodel-skills">
+          <span class="iii-tag" data-domain="making">Represent Intentions</span>
+          <span class="iii-tag" data-domain="thinking">Social Orchestration</span>
+        </div>
+        <div class="rolemodel-vignette">Collier builds layered harmonic worlds from his bedroom, orchestrating global collaborations and audience participation into complex musical architectures. His practice develops your ability to represent sophisticated creative intentions through technology while orchestrating social situations that build shared meaning from the ground up.</div>
+      </div>
+
+      <div class="rolemodel-card" data-archetypes="creative" onclick="selectRoleModel(this, 'johnston')">
+        <div class="rolemodel-name">David Jhave Johnston</div>
+        <div class="rolemodel-domain">Digital Poetry &middot; AI</div>
+        <div class="rolemodel-skills">
+          <span class="iii-tag" data-domain="making">Represent Intentions</span>
+          <span class="iii-tag" data-domain="being">Mindful Encouragement</span>
+        </div>
+        <div class="rolemodel-vignette">Johnston generated 4,500 poems with neural networks, then carved them by hand into twelve volumes over twelve months — proving that curation is authorship. His practice develops your ability to represent creative intentions through AI while maintaining the mindful resilience required to sustain a long creative arc.</div>
+      </div>
+
+      <div class="rolemodel-card" data-archetypes="creative innovator" onclick="selectRoleModel(this, 'gaudi')">
+        <div class="rolemodel-name">Antoni Gaud&iacute;</div>
+        <div class="rolemodel-domain">Architecture &middot; Organic Structure</div>
+        <div class="rolemodel-skills">
+          <span class="iii-tag" data-domain="making">Represent Intentions</span>
+          <span class="iii-tag" data-domain="thinking">Future Focus</span>
+        </div>
+        <div class="rolemodel-vignette">Gaud&iacute; derived structural logic from natural forms — catenary arches, hyperboloid geometries, bone-like branching — decades before computation could model them. His practice develops your ability to represent creative intentions through material intelligence and to envision futures that reconcile engineering with organic life.</div>
+      </div>
+
+      <div class="rolemodel-card" data-archetypes="creative innovator leader-org" onclick="selectRoleModel(this, 'hadid')">
+        <div class="rolemodel-name">Zaha Hadid</div>
+        <div class="rolemodel-domain">Architecture &middot; Parametric Design</div>
+        <div class="rolemodel-skills">
+          <span class="iii-tag" data-domain="making">Represent Intentions</span>
+          <span class="iii-tag" data-domain="making">Cultivate Opportunities</span>
+        </div>
+        <div class="rolemodel-vignette">Hadid's paintings preceded her buildings — radical spatial visions that no existing technology could realise until computational tools caught up. Her practice develops your ability to represent intentions that exceed current possibility and to cultivate opportunities through sheer force of creative conviction.</div>
       </div>
 
       <!-- INNOVATOR ARCHETYPE ROLE MODELS -->
 
-      <div class="rolemodel-card" data-archetypes="innovator" onclick="selectRoleModel(this, 'eliasson')">
-        <div class="rolemodel-name">Olafur Eliasson</div>
-        <div class="rolemodel-domain">Art &middot; Technology</div>
-        <div class="rolemodel-vignette">Eliasson runs his studio as a laboratory where technology serves perceptual experience. Every installation is an experiment in how people sense space, light, and atmosphere — innovation grounded in embodied perception.</div>
+      <div class="rolemodel-card" data-archetypes="innovator leader-org" onclick="selectRoleModel(this, 'oxman')">
+        <div class="rolemodel-name">Neri Oxman</div>
+        <div class="rolemodel-domain">Material Ecology &middot; Design Science</div>
+        <div class="rolemodel-skills">
+          <span class="iii-tag" data-domain="making">Cultivate Opportunities</span>
+          <span class="iii-tag" data-domain="making">Create the Environment</span>
+        </div>
+        <div class="rolemodel-vignette">Oxman pioneered Material Ecology — design operating simultaneously at cellular and macroscopic scales, treating materials as programmable substrates. Studying her work develops your capacity to cultivate opportunities by thinking holistically and to create environments that encourage innovative action.</div>
       </div>
 
-      <div class="rolemodel-card" data-archetypes="innovator" onclick="selectRoleModel(this, 'evans')">
-        <div class="rolemodel-name">Bill Evans</div>
-        <div class="rolemodel-domain">Music &middot; Recording</div>
-        <div class="rolemodel-vignette">Evans described his approach to improvisation through sumi-e painting — you must know the gesture before the brush touches paper. His recordings with Scott LaFaro demonstrate &ldquo;sympathy to bend&rdquo; in real-time collaboration.</div>
+      <div class="rolemodel-card" data-archetypes="innovator leader-org" onclick="selectRoleModel(this, 'maeda')">
+        <div class="rolemodel-name">John Maeda</div>
+        <div class="rolemodel-domain">Design &middot; AI &middot; Technology</div>
+        <div class="rolemodel-skills">
+          <span class="iii-tag" data-domain="thinking">Future Focus</span>
+          <span class="iii-tag" data-domain="making">Cultivate Opportunities</span>
+        </div>
+        <div class="rolemodel-vignette">Maeda advocates the shift from User Experience to Agent Experience, positioning designers as orchestrators of agent goals and guardrails. His practice develops your future focus and your capacity to cultivate new innovation opportunities at the convergence of design and technology.</div>
       </div>
 
-      <div class="rolemodel-card" data-archetypes="innovator educator" onclick="selectRoleModel(this, 'papert')">
-        <div class="rolemodel-name">Seymour Papert</div>
-        <div class="rolemodel-domain">Computing &middot; Education</div>
-        <div class="rolemodel-vignette">Papert built Logo and the concept of constructionism — the idea that people learn by making things in the world, not by receiving information. His tools extended children's engagement with mathematical thinking through play.</div>
+      <div class="rolemodel-card" data-archetypes="innovator creative" onclick="selectRoleModel(this, 'rebaudengo')">
+        <div class="rolemodel-name">Simone Rebaudengo</div>
+        <div class="rolemodel-domain">Product Design &middot; Artisanal Intelligence</div>
+        <div class="rolemodel-skills">
+          <span class="iii-tag" data-domain="being">Innovator's Identity</span>
+          <span class="iii-tag" data-domain="making">Tinker with Tech</span>
+        </div>
+        <div class="rolemodel-vignette">Rebaudengo's Oio Studio brings AI-generated hallucinations to Pampaloni — a silversmithing atelier founded in 1702 — where master craftspeople determine which curves can actually exist in metal. His approach develops your innovator's identity: fusing craft tradition with computational tools.</div>
       </div>
 
-      <div class="rolemodel-card" data-archetypes="innovator changemaker" onclick="selectRoleModel(this, 'mazzucato')">
-        <div class="rolemodel-name">Mariana Mazzucato</div>
-        <div class="rolemodel-domain">Economics &middot; Innovation Policy</div>
-        <div class="rolemodel-vignette">Mazzucato reframed who creates value in innovation systems, challenging the assumption that only the private sector takes creative risk. Her work reshapes how institutions understand their own adaptive intention.</div>
+      <div class="rolemodel-card" data-archetypes="innovator" onclick="selectRoleModel(this, 'chartier')">
+        <div class="rolemodel-name">Fran&ccedil;ois Chartier</div>
+        <div class="rolemodel-domain">Molecular Gastronomy &middot; Computational Cuisine</div>
+        <div class="rolemodel-skills">
+          <span class="iii-tag" data-domain="thinking">Cognitive Awareness</span>
+          <span class="iii-tag" data-domain="making">Cultivate Opportunities</span>
+        </div>
+        <div class="rolemodel-vignette">Chartier develops computational gastronomy principles — using molecular analysis to discover flavour harmonies invisible to intuition alone. His practice develops cognitive awareness of how sensory data shapes creative decisions and the ability to cultivate opportunities through scientific rigour.</div>
+      </div>
+
+      <div class="rolemodel-card" data-archetypes="innovator creative" onclick="selectRoleModel(this, 'ueda')">
+        <div class="rolemodel-name">Fumito Ueda</div>
+        <div class="rolemodel-domain">Game Design &middot; Interactive Narrative</div>
+        <div class="rolemodel-skills">
+          <span class="iii-tag" data-domain="making">Represent Intentions</span>
+          <span class="iii-tag" data-domain="being">Mindful Encouragement</span>
+        </div>
+        <div class="rolemodel-vignette">Ueda's philosophy — expressed through <em>ICO</em>, <em>Shadow of the Colossus</em>, and <em>The Last Guardian</em> — centres on constraint as emotional investment. Moments given once and never repeated create weight. His practice develops your capacity to represent intention through restraint and to sustain creative commitment.</div>
+      </div>
+
+      <div class="rolemodel-card" data-archetypes="innovator creative" onclick="selectRoleModel(this, 'kudan')">
+        <div class="rolemodel-name">Rie Kudan</div>
+        <div class="rolemodel-domain">Fiction &middot; AI-Augmented Writing</div>
+        <div class="rolemodel-skills">
+          <span class="iii-tag" data-domain="thinking">Cognitive Awareness</span>
+          <span class="iii-tag" data-domain="making">Tinker with Tech</span>
+        </div>
+        <div class="rolemodel-vignette">Kudan disclosed ChatGPT use (5% verbatim text) in her Akutagawa Prize-winning novel, confronting the boundary between human and machine authorship head-on. Her transparency develops cognitive awareness of how AI shapes literary meaning and the courage to tinker with technology in public view.</div>
+      </div>
+
+      <div class="rolemodel-card" data-archetypes="innovator creative" onclick="selectRoleModel(this, 'michaels')">
+        <div class="rolemodel-name">Sean Michaels</div>
+        <div class="rolemodel-domain">Fiction &middot; Hybrid Authorship</div>
+        <div class="rolemodel-skills">
+          <span class="iii-tag" data-domain="making">Represent Intentions</span>
+          <span class="iii-tag" data-domain="thinking">Cognitive Awareness</span>
+        </div>
+        <div class="rolemodel-vignette">Michaels wrote <em>Do You Remember Being Born?</em> — a novel itself "infiltrated" by AI-generated text — enacting the blurred authorship it describes. His work develops your ability to represent creative intentions through hybrid processes and cognitive awareness of how authorship is changing.</div>
       </div>
 
       <!-- EDUCATOR ARCHETYPE ROLE MODELS -->
 
-      <div class="rolemodel-card" data-archetypes="educator changemaker" onclick="selectRoleModel(this, 'freire')">
-        <div class="rolemodel-name">Paulo Freire</div>
-        <div class="rolemodel-domain">Education &middot; Social Change</div>
-        <div class="rolemodel-vignette">Freire rejected the &ldquo;banking model&rdquo; of education where knowledge is deposited into passive recipients. His pedagogy of the oppressed is a blueprint for cultivating agency — the learner as active creator of meaning.</div>
+      <div class="rolemodel-card" data-archetypes="educator leader-community" onclick="selectRoleModel(this, 'antonelli')">
+        <div class="rolemodel-name">Paola Antonelli</div>
+        <div class="rolemodel-domain">Museum Curation &middot; Design</div>
+        <div class="rolemodel-skills">
+          <span class="iii-tag" data-domain="being">Engage the Community</span>
+          <span class="iii-tag" data-domain="thinking">Cognitive Awareness</span>
+        </div>
+        <div class="rolemodel-vignette">Antonelli views design as an "enzyme" for metabolising change, positioning museums as R&amp;D labs for the ethical implications of creative agents. Her work develops your capacity to engage communities in meaningful reflection and cognitive awareness of how design shapes collective understanding.</div>
       </div>
 
-      <div class="rolemodel-card" data-archetypes="educator" onclick="selectRoleModel(this, 'montessori')">
-        <div class="rolemodel-name">Maria Montessori</div>
-        <div class="rolemodel-domain">Education &middot; Child Development</div>
-        <div class="rolemodel-vignette">Montessori designed learning environments where the child's hands, senses, and movement drive understanding — not instruction. Her method is a century-old argument that embodied engagement is the foundation of intelligence.</div>
+      <div class="rolemodel-card" data-archetypes="educator innovator" onclick="selectRoleModel(this, 'sanchez')">
+        <div class="rolemodel-name">Jose Sanchez</div>
+        <div class="rolemodel-domain">Architecture &middot; Game Design &middot; Education</div>
+        <div class="rolemodel-skills">
+          <span class="iii-tag" data-domain="thinking">Social Orchestration</span>
+          <span class="iii-tag" data-domain="making">Create the Environment</span>
+        </div>
+        <div class="rolemodel-vignette">Sanchez gamifies urbanism through Block'hood, teaching discrete architecture and systems thinking to mass audiences via simulation. His practice develops your ability to orchestrate social learning situations and to create environments where innovative thinking emerges through play.</div>
       </div>
 
-      <div class="rolemodel-card" data-archetypes="educator leader-org leader-community" onclick="selectRoleModel(this, 'hooks')">
-        <div class="rolemodel-name">bell hooks</div>
-        <div class="rolemodel-domain">Education &middot; Cultural Criticism</div>
-        <div class="rolemodel-vignette">hooks treated the classroom as a space of radical possibility where engaged pedagogy demands the teacher's full presence. Teaching is not transmission but a practice of freedom — adaptive intention embodied in relationship.</div>
+      <div class="rolemodel-card" data-archetypes="educator creative" onclick="selectRoleModel(this, 'dorsen')">
+        <div class="rolemodel-name">Annie Dorsen</div>
+        <div class="rolemodel-domain">Theatre &middot; Algorithmic Performance</div>
+        <div class="rolemodel-skills">
+          <span class="iii-tag" data-domain="thinking">Cognitive Awareness</span>
+          <span class="iii-tag" data-domain="making">Represent Intentions</span>
+        </div>
+        <div class="rolemodel-vignette">Dorsen uses GPT to reconstruct lost plays, treating the algorithm as dramaturgical collaborator rather than content generator. Her practice develops cognitive awareness of how algorithmic decisions shape meaning and the ability to represent creative intentions through unconventional means.</div>
+      </div>
+
+      <div class="rolemodel-card" data-archetypes="educator" onclick="selectRoleModel(this, 'rau')">
+        <div class="rolemodel-name">Michael Rau</div>
+        <div class="rolemodel-domain">Theatre &middot; AI Live-Scripts</div>
+        <div class="rolemodel-skills">
+          <span class="iii-tag" data-domain="thinking">Social Orchestration</span>
+          <span class="iii-tag" data-domain="making">Represent Intentions</span>
+        </div>
+        <div class="rolemodel-vignette">Rau uses LLM live-scripts to enhance theatrical performance at Stanford, treating AI as improvisational partner rather than author. His work develops social orchestration — coordinating human and machine participants — and the ability to represent evolving intentions in real time.</div>
+      </div>
+
+      <div class="rolemodel-card" data-archetypes="educator creative" onclick="selectRoleModel(this, 'short')">
+        <div class="rolemodel-name">Emily Short</div>
+        <div class="rolemodel-domain">Interactive Narrative &middot; Game Design</div>
+        <div class="rolemodel-skills">
+          <span class="iii-tag" data-domain="thinking">Social Orchestration</span>
+          <span class="iii-tag" data-domain="making">Represent Intentions</span>
+        </div>
+        <div class="rolemodel-vignette">Short pioneered interactive narrative systems with Versu, creating story architectures where characters have genuine agency rather than scripted responses. Her work develops your ability to orchestrate social dynamics and represent narrative intentions through computational systems.</div>
+      </div>
+
+      <div class="rolemodel-card" data-archetypes="educator leader-community changemaker" onclick="selectRoleModel(this, 'boal')">
+        <div class="rolemodel-name">Augusto Boal</div>
+        <div class="rolemodel-domain">Theatre &middot; Community Performance</div>
+        <div class="rolemodel-skills">
+          <span class="iii-tag" data-domain="thinking">Social Orchestration</span>
+          <span class="iii-tag" data-domain="being">Engage the Community</span>
+        </div>
+        <div class="rolemodel-vignette">Boal's Theatre of the Oppressed understood the obstacle as rehearsal space — the wall as the condition through which participants practice new encounter. His practice develops your ability to orchestrate social situations that build shared meaning and to engage communities as active creators rather than passive audiences.</div>
       </div>
 
       <!-- CHANGEMAKER ARCHETYPE ROLE MODELS -->
 
-      <div class="rolemodel-card" data-archetypes="changemaker" onclick="selectRoleModel(this, 'aiweiwei')">
-        <div class="rolemodel-name">Ai Weiwei</div>
-        <div class="rolemodel-domain">Art &middot; Activism</div>
-        <div class="rolemodel-vignette">Ai Weiwei uses creativity as the power to reject the status quo and reveal what systems would prefer to hide. His expressive influence operates at the intersection of art, architecture, and political disruption.</div>
+      <div class="rolemodel-card" data-archetypes="changemaker innovator" onclick="selectRoleModel(this, 'pasquero')">
+        <div class="rolemodel-name">Claudia Pasquero</div>
+        <div class="rolemodel-domain">Bio-Digital Architecture &middot; Ecology</div>
+        <div class="rolemodel-skills">
+          <span class="iii-tag" data-domain="being">Sustain an Ecosystem</span>
+          <span class="iii-tag" data-domain="thinking">Future Focus</span>
+        </div>
+        <div class="rolemodel-vignette">Pasquero demonstrated metabolic architecture at the 2026 Venice Biennale — AI agents tracking microbial fluctuations to drive real-time growth of biopolymer structures. Her practice redefines the architect as gardener who designs conditions rather than final forms.</div>
       </div>
 
-      <div class="rolemodel-card" data-archetypes="changemaker leader-community" onclick="selectRoleModel(this, 'maathai')">
-        <div class="rolemodel-name">Wangari Maathai</div>
-        <div class="rolemodel-domain">Environmentalism &middot; Civic Leadership</div>
-        <div class="rolemodel-vignette">Maathai's Green Belt Movement connected tree planting to women's empowerment, democratic governance, and ecological restoration. She demonstrated that creative conviction at scale requires working through communities, not above them.</div>
+      <div class="rolemodel-card" data-archetypes="changemaker creative" onclick="selectRoleModel(this, 'kere')">
+        <div class="rolemodel-name">Francis K&eacute;r&eacute;</div>
+        <div class="rolemodel-domain">Architecture &middot; Community Building</div>
+        <div class="rolemodel-skills">
+          <span class="iii-tag" data-domain="being">Engage the Community</span>
+          <span class="iii-tag" data-domain="making">Create the Environment</span>
+        </div>
+        <div class="rolemodel-vignette">Pritzker Prize laureate K&eacute;r&eacute; builds with local clay and passive ventilation in Gando, Burkina Faso — making quality-based choices regardless of resource constraints. His practice develops your ability to engage communities and create environments for innovation rooted in local knowledge rather than imported solutions.</div>
       </div>
 
-      <div class="rolemodel-card" data-archetypes="changemaker innovator" onclick="selectRoleModel(this, 'yunus')">
-        <div class="rolemodel-name">Muhammad Yunus</div>
-        <div class="rolemodel-domain">Social Enterprise &middot; Finance</div>
-        <div class="rolemodel-vignette">Yunus built microfinance by staying immersed in the lives of people the formal system excluded. Grameen Bank emerged from extended engagement with a problem — not from optimising existing models but from seeing what they missed.</div>
+      <div class="rolemodel-card" data-archetypes="changemaker leader-community" onclick="selectRoleModel(this, 'lari')">
+        <div class="rolemodel-name">Yasmeen Lari</div>
+        <div class="rolemodel-domain">Architecture &middot; Humanitarian Design</div>
+        <div class="rolemodel-skills">
+          <span class="iii-tag" data-domain="being">Engage the Community</span>
+          <span class="iii-tag" data-domain="being">Sustain an Ecosystem</span>
+        </div>
+        <div class="rolemodel-vignette">Pakistan's first female architect, Lari distributes design intelligence to villagers' hands through flood-resistant shelters built from earth, lime, and bamboo. Her practice develops your capacity to engage communities as co-designers and sustain ecosystems of shared knowledge transfer.</div>
       </div>
 
-      <!-- LEADER ARCHETYPE ROLE MODELS -->
-
-      <div class="rolemodel-card" data-archetypes="leader-org leader-community" onclick="selectRoleModel(this, 'ardern')">
-        <div class="rolemodel-name">Jacinda Ardern</div>
-        <div class="rolemodel-domain">Political Leadership</div>
-        <div class="rolemodel-vignette">Ardern led through crisis by combining empathetic presence with decisive action — holding the ecology of a nation's grief, safety, and collective identity together. Leadership as the integration of all four capacities under pressure.</div>
+      <div class="rolemodel-card" data-archetypes="changemaker creative" onclick="selectRoleModel(this, 'young')">
+        <div class="rolemodel-name">Liam Young</div>
+        <div class="rolemodel-domain">Speculative Architecture &middot; Urbanism</div>
+        <div class="rolemodel-skills">
+          <span class="iii-tag" data-domain="thinking">Future Focus</span>
+          <span class="iii-tag" data-domain="thinking">Cognitive Awareness</span>
+        </div>
+        <div class="rolemodel-vignette">Young uses data-driven world-building to visualise hyper-dense urbanisation through projects like Planet City. His practice develops your future focus — the ability to create compelling visions of alternative futures — and cognitive awareness of the forces shaping urban life.</div>
       </div>
 
-      <div class="rolemodel-card" data-archetypes="leader-org innovator" onclick="selectRoleModel(this, 'ive')">
-        <div class="rolemodel-name">Jony Ive</div>
-        <div class="rolemodel-domain">Design &middot; Industry</div>
-        <div class="rolemodel-vignette">Ive coordinated engineers, materials scientists, and interaction designers toward products where every decision served a coherent sensory experience. His leadership held aesthetic awareness and adaptive intention in constant tension.</div>
+      <div class="rolemodel-card" data-archetypes="changemaker" onclick="selectRoleModel(this, 'formafantasma')">
+        <div class="rolemodel-name">Formafantasma</div>
+        <div class="rolemodel-domain">Ecological Design &middot; Supply Chains</div>
+        <div class="rolemodel-skills">
+          <span class="iii-tag" data-domain="being">Sustain an Ecosystem</span>
+          <span class="iii-tag" data-domain="making">Cultivate Opportunities</span>
+        </div>
+        <div class="rolemodel-vignette">Andrea Trimarchi and Simone Farresin function as "ecological mediators," using agents to expose supply chain provenance and prevent designer complicity in exploitation. Their work develops your capacity to sustain ethical ecosystems and to cultivate opportunities for innovation impact.</div>
       </div>
 
-      <div class="rolemodel-card" data-archetypes="leader-org leader-community educator" onclick="selectRoleModel(this, 'senge')">
-        <div class="rolemodel-name">Peter Senge</div>
-        <div class="rolemodel-domain">Systems Thinking &middot; Organisational Learning</div>
-        <div class="rolemodel-vignette">Senge's learning organisation is a framework for leaders who coordinate others' creative work. His five disciplines describe the conditions under which collective intelligence develops rather than fragments.</div>
+      <!-- ORGANISATIONAL LEADER ROLE MODELS -->
+
+      <div class="rolemodel-card" data-archetypes="leader-org innovator" onclick="selectRoleModel(this, 'andrasek')">
+        <div class="rolemodel-name">Alisa Andrasek</div>
+        <div class="rolemodel-domain">Computational Architecture</div>
+        <div class="rolemodel-skills">
+          <span class="iii-tag" data-domain="thinking">Method + Process</span>
+          <span class="iii-tag" data-domain="making">Tinker with Tech</span>
+        </div>
+        <div class="rolemodel-vignette">Andrasek pioneers "high-resolution synthesis" — combining computational design with material intelligence at architectural scale. Her practice develops your method and process skills for organising teams around technology-driven innovation and your ability to leverage new tools to stimulate invention.</div>
+      </div>
+
+      <div class="rolemodel-card" data-archetypes="leader-org innovator" onclick="selectRoleModel(this, 'gramazio')">
+        <div class="rolemodel-name">Gramazio Kohler</div>
+        <div class="rolemodel-domain">Robotic Architecture &middot; Construction</div>
+        <div class="rolemodel-skills">
+          <span class="iii-tag" data-domain="thinking">Method + Process</span>
+          <span class="iii-tag" data-domain="making">Tinker with Tech</span>
+        </div>
+        <div class="rolemodel-vignette">Fabio Gramazio and Matthias Kohler's robotic construction projects at ETH Zurich place heavy timber and boulders in equilibrium states no human hand could achieve — yet the structural logic remains embodied. Their practice develops your method and process for scaling innovation while preserving material intelligence.</div>
+      </div>
+
+      <div class="rolemodel-card" data-archetypes="leader-org leader-community changemaker" onclick="selectRoleModel(this, 'rawsthorn')">
+        <div class="rolemodel-name">Alice Rawsthorn</div>
+        <div class="rolemodel-domain">Design Criticism &middot; Social Design</div>
+        <div class="rolemodel-skills">
+          <span class="iii-tag" data-domain="being">Engage the Community</span>
+          <span class="iii-tag" data-domain="thinking">Future Focus</span>
+        </div>
+        <div class="rolemodel-vignette">Rawsthorn frames design as a tool for addressing wicked problems through her Design Emergency initiative, insisting that agent design must embed ethical responsibility. Her work develops your capacity to engage communities and to focus innovation on futures that matter.</div>
+      </div>
+
+      <div class="rolemodel-card" data-archetypes="leader-org creative" onclick="selectRoleModel(this, 'bawa')">
+        <div class="rolemodel-name">Geoffrey Bawa</div>
+        <div class="rolemodel-domain">Architecture &middot; Landscape</div>
+        <div class="rolemodel-skills">
+          <span class="iii-tag" data-domain="making">Create the Environment</span>
+          <span class="iii-tag" data-domain="being">Mindful Encouragement</span>
+        </div>
+        <div class="rolemodel-vignette">Bawa spent 50 years cultivating the Lunuganga estate as "gardening-as-architecture" — demonstrating that a building is never finished but always growing. His practice develops your ability to create environments for innovation and to sustain mindful commitment across a lifetime of iterative making.</div>
+      </div>
+
+      <!-- COMMUNITY LEADER ROLE MODELS -->
+
+      <div class="rolemodel-card" data-archetypes="leader-community creative" onclick="selectRoleModel(this, 'newsome')">
+        <div class="rolemodel-name">Rashaad Newsome</div>
+        <div class="rolemodel-domain">Film &middot; Decolonial AI</div>
+        <div class="rolemodel-skills">
+          <span class="iii-tag" data-domain="being">Engage the Community</span>
+          <span class="iii-tag" data-domain="being">Mindful Encouragement</span>
+        </div>
+        <div class="rolemodel-vignette">Newsome creates decolonial AI avatars, building computational systems that centre marginalised narratives rather than reinforcing dominant ones. His practice develops your ability to engage communities meaningfully and to maintain mindful encouragement through the volatility of cultural transformation.</div>
+      </div>
+
+      <div class="rolemodel-card" data-archetypes="leader-community educator" onclick="selectRoleModel(this, 'mirowski')">
+        <div class="rolemodel-name">Piotr Mirowski</div>
+        <div class="rolemodel-domain">AI Improvisation &middot; Performance</div>
+        <div class="rolemodel-skills">
+          <span class="iii-tag" data-domain="thinking">Social Orchestration</span>
+          <span class="iii-tag" data-domain="being">Engage the Community</span>
+        </div>
+        <div class="rolemodel-vignette">Mirowski co-founded Improbotics, treating AI as an improvisational stage partner in live theatre. His practice develops social orchestration — the ability to coordinate human-AI ensembles — and the capacity to engage audiences as active participants in emergent creative meaning.</div>
       </div>
 
       <div class="rolemodel-empty" id="roleModelEmpty">
