@@ -400,7 +400,8 @@
   body.fr span[data-lang="zh"] { display: none; }
 
   /* ASSESSMENT */
-  .assessment-section { background: var(--white); }
+  .assessment-section { background: var(--white); display: none; }
+  .assessment-section.revealed { display: block; }
   .capacity-group { margin-bottom: 2.5rem; }
   .capacity-group-header {
     display: flex; align-items: center; gap: 0.6rem;
@@ -1416,6 +1417,7 @@
 
   function proceedToStage3() {
     if (!selectedRoleModel) return;
+    document.getElementById('assessment').classList.add('revealed');
     document.getElementById('assessment').scrollIntoView({ behavior: 'smooth' });
   }
 
