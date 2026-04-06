@@ -398,6 +398,111 @@
   body.fr span[data-lang="fr"] { display: inline; }
   body.fr span[data-lang="en"] { display: none; }
   body.fr span[data-lang="zh"] { display: none; }
+
+  /* ASSESSMENT */
+  .assessment-section { background: var(--white); }
+  .capacity-group { margin-bottom: 2.5rem; }
+  .capacity-group-header {
+    display: flex; align-items: center; gap: 0.6rem;
+    margin-bottom: 1.2rem; padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--pale);
+  }
+  .capacity-group-icon { font-size: 1.2rem; }
+  .capacity-group-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem; font-weight: 600; color: var(--navy);
+  }
+  .assessment-question {
+    margin-bottom: 1.4rem; padding: 1.2rem 1.4rem;
+    border: 1px solid var(--pale); border-radius: 8px;
+    background: var(--bg); transition: border-color 0.2s;
+  }
+  .assessment-question:hover { border-color: #b0c4de; }
+  .assessment-question.answered { border-color: var(--accent); background: #f7fafd; }
+  .question-text {
+    font-size: 0.9rem; color: var(--navy); line-height: 1.6;
+    margin-bottom: 0.8rem; font-weight: 500;
+  }
+  .likert-scale {
+    display: flex; gap: 0.5rem; flex-wrap: wrap;
+  }
+  .likert-option {
+    flex: 1; min-width: 80px; padding: 0.5rem 0.4rem;
+    border: 1px solid var(--pale); border-radius: 6px;
+    background: var(--white); text-align: center; cursor: pointer;
+    font-size: 0.76rem; font-weight: 500; color: var(--medium);
+    transition: all 0.2s; font-family: inherit;
+    line-height: 1.3;
+  }
+  .likert-option:hover { border-color: var(--accent); color: var(--navy); }
+  .likert-option.selected {
+    border-color: var(--accent); background: var(--accent);
+    color: var(--white); font-weight: 600;
+  }
+  .assessment-progress {
+    font-size: 0.82rem; color: var(--light); text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  .progress-bar-track {
+    width: 100%; max-width: 400px; height: 4px;
+    background: var(--pale); border-radius: 2px;
+    margin: 0.5rem auto 0; overflow: hidden;
+  }
+  .progress-bar-fill {
+    height: 100%; background: var(--accent);
+    border-radius: 2px; transition: width 0.3s ease;
+    width: 0%;
+  }
+  .calculate-area { text-align: center; margin-top: 2rem; }
+
+  /* RESULTS */
+  .results-panel {
+    display: none; margin-top: 3rem;
+    border: 1px solid var(--pale); border-radius: 12px;
+    padding: 2.5rem 2rem; background: var(--bg);
+  }
+  .results-panel.visible { display: block; }
+  .results-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem; font-weight: 600; color: var(--navy);
+    text-align: center; margin-bottom: 0.4rem;
+  }
+  .results-subtitle {
+    font-size: 0.88rem; color: var(--light); text-align: center;
+    margin-bottom: 2rem;
+  }
+  .radar-container {
+    display: flex; justify-content: center; margin-bottom: 2rem;
+  }
+  .radar-container svg { max-width: 100%; height: auto; }
+  .score-grid {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.8rem;
+    margin-bottom: 2rem;
+  }
+  .score-card {
+    text-align: center; padding: 1rem 0.5rem;
+    border: 1px solid var(--pale); border-radius: 8px;
+    background: var(--white);
+  }
+  .score-card .score-icon { font-size: 1.1rem; margin-bottom: 0.3rem; }
+  .score-card .score-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem; font-weight: 700; color: var(--accent);
+    margin-bottom: 0.2rem;
+  }
+  .score-card .score-label {
+    font-size: 0.7rem; font-weight: 600; color: var(--medium);
+    text-transform: uppercase; letter-spacing: 0.04em;
+  }
+  .results-narrative {
+    font-size: 0.92rem; color: var(--medium); line-height: 1.7;
+    max-width: 680px; margin: 0 auto 2rem; text-align: center;
+  }
+  @media (max-width: 768px) {
+    .score-grid { grid-template-columns: repeat(2, 1fr); }
+    .likert-scale { gap: 0.3rem; }
+    .likert-option { min-width: 60px; font-size: 0.7rem; padding: 0.45rem 0.3rem; }
+  }
 </style>
 </head>
 <body>
@@ -1133,24 +1238,71 @@
   </div>
 </section>
 
-<!-- STAGE 3 PLACEHOLDER -->
-<div id="assessment" class="coming-soon-section">
-  <div class="coming-soon-badge">
-    <span data-lang="en">Coming Soon</span>
-    <span data-lang="fr">Bient&ocirc;t</span>
-    <span data-lang="zh">即将推出</span>
+<!-- STAGE 3: ACI ASSESSMENT -->
+<section id="assessment" class="assessment-section">
+  <div class="container">
+    <div class="section-label">
+      <span data-lang="en">Stage 3</span>
+      <span data-lang="fr">&Eacute;tape 3</span>
+      <span data-lang="zh">第三阶段</span>
+    </div>
+    <h2 class="section-title">
+      <span data-lang="en">Assess Your Capacities</span>
+      <span data-lang="fr">&Eacute;valuez vos capacit&eacute;s</span>
+      <span data-lang="zh">评估您的能力</span>
+    </h2>
+    <p class="section-intro">
+      <span data-lang="en">Rate each statement honestly. There are no right answers — only an honest map of where you stand today. Your results will combine with your archetype and role model to shape your Creative Council.</span>
+      <span data-lang="fr">&Eacute;valuez chaque &eacute;nonc&eacute; honn&ecirc;tement. Il n'y a pas de bonnes r&eacute;ponses — seulement une carte honn&ecirc;te de votre situation actuelle. Vos r&eacute;sultats se combineront avec votre arch&eacute;type et mod&egrave;le pour fa&ccedil;onner votre Conseil Cr&eacute;atif.</span>
+      <span data-lang="zh">请诚实评价每个陈述。没有正确答案——只有对您当前状态的真实描绘。您的结果将与原型和榜样结合，塑造您的创意理事会。</span>
+    </p>
+
+    <div class="assessment-progress" id="assessmentProgress">
+      <span data-lang="en"><span id="answeredCount">0</span> of 20 answered</span>
+      <span data-lang="fr"><span id="answeredCountFr">0</span> sur 20 r&eacute;pondu</span>
+      <span data-lang="zh">已回答 <span id="answeredCountZh">0</span> / 20</span>
+      <div class="progress-bar-track"><div class="progress-bar-fill" id="progressFill"></div></div>
+    </div>
+
+    <div id="questionContainer"></div>
+
+    <!-- CALCULATE -->
+    <div class="calculate-area">
+      <button class="btn btn-primary" id="calculateBtn" disabled onclick="calculateResults()">
+        <span data-lang="en">Calculate My Results</span>
+        <span data-lang="fr">Calculer mes r&eacute;sultats</span>
+        <span data-lang="zh">计算我的结果</span>
+      </button>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="results-panel" id="resultsPanel">
+      <h3 class="results-title">
+        <span data-lang="en">Your Capacity Profile</span>
+        <span data-lang="fr">Votre profil de capacit&eacute;s</span>
+        <span data-lang="zh">您的能力档案</span>
+      </h3>
+      <p class="results-subtitle" id="resultsSubtitle"></p>
+
+      <div class="radar-container">
+        <svg id="radarChart" viewBox="0 0 400 400" width="380" height="380"></svg>
+      </div>
+
+      <div class="score-grid" id="scoreGrid"></div>
+
+      <div class="results-narrative" id="resultsNarrative"></div>
+
+      <div class="proceed-area">
+        <button class="btn btn-primary" onclick="document.getElementById('council').scrollIntoView({behavior:'smooth'})">
+          <span data-lang="en">Continue to Creative Council →</span>
+          <span data-lang="fr">Continuer vers le Conseil Cr&eacute;atif →</span>
+          <span data-lang="zh">继续创建创意理事会 →</span>
+        </button>
+      </div>
+    </div>
+
   </div>
-  <div class="coming-soon-title">
-    <span data-lang="en">Stage 3: ACI Assessment</span>
-    <span data-lang="fr">&Eacute;tape 3 : &Eacute;valuation ACI</span>
-    <span data-lang="zh">第三阶段：ACI 评估</span>
-  </div>
-  <div class="coming-soon-desc">
-    <span data-lang="en">20 questions across five capacities. See your strengths and gaps on a radar chart.</span>
-    <span data-lang="fr">20 questions &agrave; travers cinq capacit&eacute;s. Visualisez vos forces et lacunes.</span>
-    <span data-lang="zh">五种能力的20个问题。通过雷达图查看您的优势与差距。</span>
-  </div>
-</div>
+</section>
 
 <!-- STAGE 4 PLACEHOLDER -->
 <div id="council" class="coming-soon-section">
@@ -1213,6 +1365,7 @@
     document.getElementById('proceedBtn').disabled = false;
     document.getElementById('selectionLabel').textContent = 'Selected: ' + (archetypeNames[archetype] || archetype);
     filterRoleModels(archetype);
+    renderQuestions();
   }
 
   function filterRoleModels(archetype) {
@@ -1269,6 +1422,7 @@
   // On load: hide all role model cards, show empty prompt
   document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.rolemodel-card').forEach(c => c.classList.add('hidden'));
+    renderQuestions();
   });
 
   // Language toggle
@@ -1278,6 +1432,7 @@
       btn.classList.toggle('active', btn.getAttribute('data-lang-btn') === lang);
     });
     document.documentElement.lang = lang === 'zh' ? 'zh-CN' : lang === 'fr' ? 'fr' : 'en';
+    if (document.getElementById('questionContainer') && document.getElementById('questionContainer').innerHTML !== '') renderQuestions();
   }
 
   // Nav scroll shadow
@@ -1289,6 +1444,826 @@
   document.querySelectorAll('.nav-links a').forEach(a => {
     a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
   });
+
+  /* ── STAGE 3: ASSESSMENT ── */
+  const questionBank = {
+    ee: {
+      name: { en: 'Extended Engagement', fr: 'Engagement \u00C9tendu', zh: '\u5EF6\u5C55\u53C2\u4E0E' },
+      icon: '\uD83D\uDD0D',
+      questions: [
+        { // Q1: AI Awareness
+          creative: {
+            en: 'When I use AI to generate options for my creative work, I notice myself spending less time with materials before deciding.',
+            fr: 'Quand j\u2019utilise l\u2019IA pour g\u00E9n\u00E9rer des options pour mon travail cr\u00E9atif, je remarque que je passe moins de temps avec les mat\u00E9riaux avant de d\u00E9cider.',
+            zh: '\u5F53\u6211\u4F7F\u7528AI\u4E3A\u521B\u4F5C\u751F\u6210\u9009\u9879\u65F6\uFF0C\u6211\u6CE8\u610F\u5230\u81EA\u5DF1\u5728\u505A\u51B3\u5B9A\u524D\u82B1\u5728\u6750\u6599\u4E0A\u7684\u65F6\u95F4\u51CF\u5C11\u4E86\u3002'
+          },
+          innovator: {
+            en: 'When I prototype with AI assistance, I notice myself testing fewer physical iterations before committing to a direction.',
+            fr: 'Quand je prototype avec l\u2019aide de l\u2019IA, je remarque que je teste moins d\u2019it\u00E9rations physiques avant de m\u2019engager dans une direction.',
+            zh: '\u5F53\u6211\u5728AI\u8F85\u52A9\u4E0B\u8FDB\u884C\u539F\u578B\u8BBE\u8BA1\u65F6\uFF0C\u6211\u6CE8\u610F\u5230\u81EA\u5DF1\u5728\u786E\u5B9A\u65B9\u5411\u524D\u6D4B\u8BD5\u7684\u7269\u7406\u8FED\u4EE3\u6B21\u6570\u51CF\u5C11\u4E86\u3002'
+          },
+          educator: {
+            en: 'When I use AI to prepare learning materials, I notice myself spending less time understanding the learner\u2019s starting point.',
+            fr: 'Quand j\u2019utilise l\u2019IA pour pr\u00E9parer du mat\u00E9riel p\u00E9dagogique, je remarque que je passe moins de temps \u00E0 comprendre le point de d\u00E9part de l\u2019apprenant.',
+            zh: '\u5F53\u6211\u4F7F\u7528AI\u51C6\u5907\u5B66\u4E60\u6750\u6599\u65F6\uFF0C\u6211\u6CE8\u610F\u5230\u81EA\u5DF1\u82B1\u5728\u7406\u89E3\u5B66\u4E60\u8005\u8D77\u70B9\u4E0A\u7684\u65F6\u95F4\u51CF\u5C11\u4E86\u3002'
+          },
+          changemaker: {
+            en: 'When I use AI to draft advocacy or policy materials, I notice myself spending less time in the communities I am working with.',
+            fr: 'Quand j\u2019utilise l\u2019IA pour r\u00E9diger des documents de plaidoyer, je remarque que je passe moins de temps dans les communaut\u00E9s concern\u00E9es.',
+            zh: '\u5F53\u6211\u4F7F\u7528AI\u8D77\u8349\u5021\u5BFC\u6216\u653F\u7B56\u6750\u6599\u65F6\uFF0C\u6211\u6CE8\u610F\u5230\u81EA\u5DF1\u82B1\u5728\u76F8\u5173\u793E\u533A\u7684\u65F6\u95F4\u51CF\u5C11\u4E86\u3002'
+          },
+          leader: {
+            en: 'When I use AI to coordinate my team\u2019s work, I notice myself spending less time understanding each contributor\u2019s creative process.',
+            fr: 'Quand j\u2019utilise l\u2019IA pour coordonner le travail de mon \u00E9quipe, je remarque que je passe moins de temps \u00E0 comprendre le processus cr\u00E9atif de chaque contributeur.',
+            zh: '\u5F53\u6211\u4F7F\u7528AI\u534F\u8C03\u56E2\u961F\u5DE5\u4F5C\u65F6\uFF0C\u6211\u6CE8\u610F\u5230\u81EA\u5DF1\u82B1\u5728\u7406\u89E3\u6BCF\u4F4D\u8D21\u732E\u8005\u521B\u4F5C\u8FC7\u7A0B\u4E0A\u7684\u65F6\u95F4\u51CF\u5C11\u4E86\u3002'
+          }
+        },
+        { // Q2: Skill Baseline
+          creative: {
+            en: 'I invest sufficient time to explore, connect, and iterate, gaining new insights in each creative cycle.',
+            fr: 'J\u2019investis suffisamment de temps pour explorer, connecter et it\u00E9rer, acquérant de nouvelles perspectives \u00E0 chaque cycle cr\u00E9atif.',
+            zh: '\u6211\u6295\u5165\u8DB3\u591F\u7684\u65F6\u95F4\u53BB\u63A2\u7D22\u3001\u8FDE\u63A5\u548C\u8FED\u4EE3\uFF0C\u5728\u6BCF\u4E2A\u521B\u4F5C\u5468\u671F\u4E2D\u83B7\u5F97\u65B0\u7684\u6D1E\u5BDF\u3002'
+          },
+          innovator: {
+            en: 'I invest sufficient time to test, build, and refine prototypes, gaining new technical insights in each iteration.',
+            fr: 'J\u2019investis suffisamment de temps pour tester, construire et affiner des prototypes, gagnant de nouvelles perspectives techniques \u00E0 chaque it\u00E9ration.',
+            zh: '\u6211\u6295\u5165\u8DB3\u591F\u7684\u65F6\u95F4\u6D4B\u8BD5\u3001\u6784\u5EFA\u548C\u5B8C\u5584\u539F\u578B\uFF0C\u5728\u6BCF\u6B21\u8FED\u4EE3\u4E2D\u83B7\u5F97\u65B0\u7684\u6280\u672F\u6D1E\u5BDF\u3002'
+          },
+          educator: {
+            en: 'I invest sufficient time to observe, understand, and respond to learners, gaining new pedagogical insights in each cycle.',
+            fr: 'J\u2019investis suffisamment de temps pour observer, comprendre et r\u00E9pondre aux apprenants, gagnant de nouvelles perspectives p\u00E9dagogiques \u00E0 chaque cycle.',
+            zh: '\u6211\u6295\u5165\u8DB3\u591F\u7684\u65F6\u95F4\u89C2\u5BDF\u3001\u7406\u89E3\u548C\u56DE\u5E94\u5B66\u4E60\u8005\uFF0C\u5728\u6BCF\u4E2A\u5468\u671F\u4E2D\u83B7\u5F97\u65B0\u7684\u6559\u5B66\u6D1E\u5BDF\u3002'
+          },
+          changemaker: {
+            en: 'I invest sufficient time to engage, listen, and build trust within communities, gaining new insights with each sustained interaction.',
+            fr: 'J\u2019investis suffisamment de temps pour m\u2019engager, \u00E9couter et \u00E9tablir la confiance au sein des communaut\u00E9s, gagnant de nouvelles perspectives \u00E0 chaque interaction soutenue.',
+            zh: '\u6211\u6295\u5165\u8DB3\u591F\u7684\u65F6\u95F4\u53C2\u4E0E\u3001\u503E\u542C\u548C\u5728\u793E\u533A\u5185\u5EFA\u7ACB\u4FE1\u4EFB\uFF0C\u5728\u6BCF\u6B21\u6301\u7EED\u4E92\u52A8\u4E2D\u83B7\u5F97\u65B0\u7684\u6D1E\u5BDF\u3002'
+          },
+          leader: {
+            en: 'I invest sufficient time to understand each team member\u2019s process, gaining new insights into how the group\u2019s creative ecology functions.',
+            fr: 'J\u2019investis suffisamment de temps pour comprendre le processus de chaque membre, gagnant de nouvelles perspectives sur le fonctionnement de l\u2019\u00E9cologie cr\u00E9ative du groupe.',
+            zh: '\u6211\u6295\u5165\u8DB3\u591F\u7684\u65F6\u95F4\u7406\u89E3\u6BCF\u4F4D\u56E2\u961F\u6210\u5458\u7684\u8FC7\u7A0B\uFF0C\u4ECE\u4E2D\u83B7\u5F97\u5BF9\u56E2\u961F\u521B\u9020\u751F\u6001\u8FD0\u4F5C\u7684\u65B0\u6D1E\u5BDF\u3002'
+          }
+        },
+        { // Q3: Yin — Engagement (depth, immersion)
+          creative: {
+            en: 'I stay immersed in my creative material long enough to understand it through direct experience, not just analysis.',
+            fr: 'Je reste immerg\u00E9 dans mon mat\u00E9riau cr\u00E9atif assez longtemps pour le comprendre par l\u2019exp\u00E9rience directe, pas seulement l\u2019analyse.',
+            zh: '\u6211\u5728\u521B\u4F5C\u6750\u6599\u4E2D\u6C89\u6D78\u8DB3\u591F\u4E45\uFF0C\u901A\u8FC7\u76F4\u63A5\u4F53\u9A8C\u800C\u975E\u4EC5\u4EC5\u5206\u6790\u6765\u7406\u89E3\u5B83\u3002'
+          },
+          innovator: {
+            en: 'I stay immersed in a technical problem long enough to understand its deep structure, not just its surface symptoms.',
+            fr: 'Je reste immerg\u00E9 dans un probl\u00E8me technique assez longtemps pour comprendre sa structure profonde, pas seulement ses sympt\u00F4mes de surface.',
+            zh: '\u6211\u5728\u6280\u672F\u95EE\u9898\u4E2D\u6C89\u6D78\u8DB3\u591F\u4E45\uFF0C\u4EE5\u7406\u89E3\u5176\u6DF1\u5C42\u7ED3\u6784\uFF0C\u800C\u4E0D\u4EC5\u4EC5\u662F\u8868\u9762\u75C7\u72B6\u3002'
+          },
+          educator: {
+            en: 'I stay immersed in a learning challenge long enough to understand its roots, not just its visible symptoms in the classroom.',
+            fr: 'Je reste immerg\u00E9 dans un d\u00E9fi d\u2019apprentissage assez longtemps pour comprendre ses racines, pas seulement ses sympt\u00F4mes visibles en classe.',
+            zh: '\u6211\u5728\u5B66\u4E60\u6311\u6218\u4E2D\u6C89\u6D78\u8DB3\u591F\u4E45\uFF0C\u4EE5\u7406\u89E3\u5176\u6839\u6E90\uFF0C\u800C\u4E0D\u4EC5\u4EC5\u662F\u8BFE\u5802\u4E2D\u7684\u53EF\u89C1\u75C7\u72B6\u3002'
+          },
+          changemaker: {
+            en: 'I stay immersed in a community\u2019s lived experience long enough to understand it from within, not just from external data.',
+            fr: 'Je reste immerg\u00E9 dans l\u2019exp\u00E9rience v\u00E9cue d\u2019une communaut\u00E9 assez longtemps pour la comprendre de l\u2019int\u00E9rieur, pas seulement \u00E0 partir de donn\u00E9es externes.',
+            zh: '\u6211\u5728\u793E\u533A\u7684\u751F\u6D3B\u4F53\u9A8C\u4E2D\u6C89\u6D78\u8DB3\u591F\u4E45\uFF0C\u4ECE\u5185\u90E8\u7406\u89E3\u5B83\uFF0C\u800C\u4E0D\u4EC5\u4EC5\u4F9D\u8D56\u5916\u90E8\u6570\u636E\u3002'
+          },
+          leader: {
+            en: 'I stay immersed in my team\u2019s working dynamics long enough to understand the creative tensions, not just the deliverables.',
+            fr: 'Je reste immerg\u00E9 dans les dynamiques de travail de mon \u00E9quipe assez longtemps pour comprendre les tensions cr\u00E9atives, pas seulement les livrables.',
+            zh: '\u6211\u5728\u56E2\u961F\u7684\u5DE5\u4F5C\u52A8\u6001\u4E2D\u6C89\u6D78\u8DB3\u591F\u4E45\uFF0C\u4EE5\u7406\u89E3\u521B\u9020\u6027\u5F20\u529B\uFF0C\u800C\u4E0D\u4EC5\u4EC5\u662F\u4EA4\u4ED8\u7269\u3002'
+          }
+        },
+        { // Q4: Yang — Extension (reach, tools)
+          creative: {
+            en: 'I use tools and technologies to extend my creative reach without letting them replace my own embodied exploration.',
+            fr: 'J\u2019utilise des outils et technologies pour \u00E9tendre ma port\u00E9e cr\u00E9ative sans les laisser remplacer ma propre exploration corporelle.',
+            zh: '\u6211\u4F7F\u7528\u5DE5\u5177\u548C\u6280\u672F\u6765\u6269\u5C55\u521B\u9020\u529B\u8303\u56F4\uFF0C\u540C\u65F6\u4E0D\u8BA9\u5B83\u4EEC\u53D6\u4EE3\u6211\u81EA\u5DF1\u7684\u5177\u8EAB\u63A2\u7D22\u3002'
+          },
+          innovator: {
+            en: 'I leverage new technologies to extend my innovation reach without letting them shortcut the learning that comes from hands-on building.',
+            fr: 'J\u2019exploite de nouvelles technologies pour \u00E9tendre ma port\u00E9e d\u2019innovation sans les laisser court-circuiter l\u2019apprentissage de la construction pratique.',
+            zh: '\u6211\u5229\u7528\u65B0\u6280\u672F\u6269\u5C55\u521B\u65B0\u8303\u56F4\uFF0C\u540C\u65F6\u4E0D\u8BA9\u5B83\u4EEC\u8DF3\u8FC7\u52A8\u624B\u6784\u5EFA\u5E26\u6765\u7684\u5B66\u4E60\u3002'
+          },
+          educator: {
+            en: 'I use educational technologies to extend my teaching reach without letting them replace the relational depth of learning.',
+            fr: 'J\u2019utilise les technologies \u00E9ducatives pour \u00E9tendre ma port\u00E9e p\u00E9dagogique sans les laisser remplacer la profondeur relationnelle de l\u2019apprentissage.',
+            zh: '\u6211\u4F7F\u7528\u6559\u80B2\u6280\u672F\u6269\u5C55\u6559\u5B66\u8303\u56F4\uFF0C\u540C\u65F6\u4E0D\u8BA9\u5B83\u4EEC\u53D6\u4EE3\u5B66\u4E60\u7684\u5173\u7CFB\u6DF1\u5EA6\u3002'
+          },
+          changemaker: {
+            en: 'I use platforms and networks to extend my influence without letting them replace the trust built through sustained community presence.',
+            fr: 'J\u2019utilise des plateformes et r\u00E9seaux pour \u00E9tendre mon influence sans les laisser remplacer la confiance construite par une pr\u00E9sence communautaire soutenue.',
+            zh: '\u6211\u4F7F\u7528\u5E73\u53F0\u548C\u7F51\u7EDC\u6269\u5C55\u5F71\u54CD\u529B\uFF0C\u540C\u65F6\u4E0D\u8BA9\u5B83\u4EEC\u53D6\u4EE3\u901A\u8FC7\u6301\u7EED\u793E\u533A\u5B58\u5728\u5EFA\u7ACB\u7684\u4FE1\u4EFB\u3002'
+          },
+          leader: {
+            en: 'I use coordination tools to extend my organisational reach without letting them replace my direct understanding of each contributor\u2019s work.',
+            fr: 'J\u2019utilise des outils de coordination pour \u00E9tendre ma port\u00E9e organisationnelle sans les laisser remplacer ma compr\u00E9hension directe du travail de chaque contributeur.',
+            zh: '\u6211\u4F7F\u7528\u534F\u8C03\u5DE5\u5177\u6269\u5C55\u7EC4\u7EC7\u8303\u56F4\uFF0C\u540C\u65F6\u4E0D\u8BA9\u5B83\u4EEC\u53D6\u4EE3\u6211\u5BF9\u6BCF\u4F4D\u8D21\u732E\u8005\u5DE5\u4F5C\u7684\u76F4\u63A5\u7406\u89E3\u3002'
+          }
+        }
+      ]
+    },
+    aa: {
+      name: { en: 'Aesthetic Awareness', fr: 'Conscience Esth\u00E9tique', zh: '\u5BA1\u7F8E\u610F\u8BC6' },
+      icon: '\uD83D\uDC41\uFE0F',
+      questions: [
+        { // Q5: AI Awareness
+          creative: {
+            en: 'When AI rates or selects options for my creative work, I notice it flattening qualities my body had already registered.',
+            fr: 'Quand l\u2019IA \u00E9value ou s\u00E9lectionne des options pour mon travail cr\u00E9atif, je remarque qu\u2019elle aplatit des qualit\u00E9s que mon corps avait d\u00E9j\u00E0 enregistr\u00E9es.',
+            zh: '\u5F53AI\u4E3A\u6211\u7684\u521B\u4F5C\u8BC4\u4F30\u6216\u7B5B\u9009\u9009\u9879\u65F6\uFF0C\u6211\u6CE8\u610F\u5230\u5B83\u62B9\u5E73\u4E86\u6211\u8EAB\u4F53\u5DF2\u7ECF\u611F\u77E5\u5230\u7684\u7279\u8D28\u3002'
+          },
+          innovator: {
+            en: 'When AI evaluates design options, I notice it missing sensory qualities that my hands or eyes had already detected.',
+            fr: 'Quand l\u2019IA \u00E9value des options de conception, je remarque qu\u2019elle manque des qualit\u00E9s sensorielles que mes mains ou yeux avaient d\u00E9j\u00E0 d\u00E9tect\u00E9es.',
+            zh: '\u5F53AI\u8BC4\u4F30\u8BBE\u8BA1\u9009\u9879\u65F6\uFF0C\u6211\u6CE8\u610F\u5230\u5B83\u9057\u6F0F\u4E86\u6211\u7684\u53CC\u624B\u6216\u773C\u775B\u5DF2\u7ECF\u5BDF\u89C9\u7684\u611F\u5B98\u7279\u8D28\u3002'
+          },
+          educator: {
+            en: 'When AI assesses learner work, I notice it missing the felt qualities that signal genuine engagement or understanding.',
+            fr: 'Quand l\u2019IA \u00E9value le travail des apprenants, je remarque qu\u2019elle manque les qualit\u00E9s ressenties qui signalent un engagement ou une compr\u00E9hension authentique.',
+            zh: '\u5F53AI\u8BC4\u4F30\u5B66\u4E60\u8005\u4F5C\u54C1\u65F6\uFF0C\u6211\u6CE8\u610F\u5230\u5B83\u9057\u6F0F\u4E86\u90A3\u4E9B\u8868\u660E\u771F\u6B63\u53C2\u4E0E\u6216\u7406\u89E3\u7684\u611F\u89C9\u7279\u8D28\u3002'
+          },
+          changemaker: {
+            en: 'When AI analyses community sentiment, I notice it missing the embodied signals — tone, energy, presence — that reveal what people actually feel.',
+            fr: 'Quand l\u2019IA analyse le sentiment communautaire, je remarque qu\u2019elle manque les signaux corporels — ton, \u00E9nergie, pr\u00E9sence — qui r\u00E9v\u00E8lent ce que les gens ressentent vraiment.',
+            zh: '\u5F53AI\u5206\u6790\u793E\u533A\u60C5\u7EEA\u65F6\uFF0C\u6211\u6CE8\u610F\u5230\u5B83\u9057\u6F0F\u4E86\u8EAB\u4F53\u4FE1\u53F7\u2014\u2014\u8BED\u6C14\u3001\u80FD\u91CF\u3001\u5B58\u5728\u611F\u2014\u2014\u8FD9\u4E9B\u63ED\u793A\u4E86\u4EBA\u4EEC\u7684\u771F\u5B9E\u611F\u53D7\u3002'
+          },
+          leader: {
+            en: 'When AI summarises team dynamics, I notice it missing the interpersonal qualities — tension, energy, trust — my presence in the room had detected.',
+            fr: 'Quand l\u2019IA r\u00E9sume les dynamiques d\u2019\u00E9quipe, je remarque qu\u2019elle manque les qualit\u00E9s interpersonnelles — tension, \u00E9nergie, confiance — que ma pr\u00E9sence avait d\u00E9tect\u00E9es.',
+            zh: '\u5F53AI\u603B\u7ED3\u56E2\u961F\u52A8\u6001\u65F6\uFF0C\u6211\u6CE8\u610F\u5230\u5B83\u9057\u6F0F\u4E86\u6211\u5728\u573A\u65F6\u5BDF\u89C9\u7684\u4EBA\u9645\u7279\u8D28\u2014\u2014\u7D27\u5F20\u3001\u80FD\u91CF\u3001\u4FE1\u4EFB\u3002'
+          }
+        },
+        { // Q6: Skill Baseline
+          creative: {
+            en: 'I have a sense of colour, texture, and form, and use it to convey feeling or intention in my creative work.',
+            fr: 'J\u2019ai le sens de la couleur, de la texture et de la forme, et je l\u2019utilise pour transmettre sentiments ou intentions dans mon travail cr\u00E9atif.',
+            zh: '\u6211\u5BF9\u8272\u5F69\u3001\u8D28\u611F\u548C\u5F62\u5F0F\u6709\u611F\u77E5\u529B\uFF0C\u5E76\u7528\u5B83\u4EEC\u5728\u521B\u4F5C\u4E2D\u4F20\u8FBE\u60C5\u611F\u6216\u610F\u56FE\u3002'
+          },
+          innovator: {
+            en: 'I have a sense of how materials, interfaces, and systems feel to use, and draw on that sense when designing solutions.',
+            fr: 'J\u2019ai le sens de la fa\u00E7on dont les mat\u00E9riaux, interfaces et syst\u00E8mes se ressentent \u00E0 l\u2019usage, et je m\u2019en sers pour concevoir des solutions.',
+            zh: '\u6211\u5BF9\u6750\u6599\u3001\u754C\u9762\u548C\u7CFB\u7EDF\u7684\u4F7F\u7528\u611F\u53D7\u6709\u8BA4\u77E5\uFF0C\u5E76\u5728\u8BBE\u8BA1\u89E3\u51B3\u65B9\u6848\u65F6\u501F\u52A9\u8FD9\u79CD\u611F\u77E5\u3002'
+          },
+          educator: {
+            en: 'I can read a room — sensing energy, attention, and confusion through observation before any assessment confirms it.',
+            fr: 'Je peux lire une salle — percevant l\u2019\u00E9nergie, l\u2019attention et la confusion par l\u2019observation avant qu\u2019une \u00E9valuation ne le confirme.',
+            zh: '\u6211\u80FD\u89C2\u5BDF\u73AF\u5883\u2014\u2014\u901A\u8FC7\u89C2\u5BDF\u611F\u77E5\u80FD\u91CF\u3001\u6CE8\u610F\u529B\u548C\u56F0\u60D1\uFF0C\u5148\u4E8E\u4EFB\u4F55\u8BC4\u4F30\u786E\u8BA4\u3002'
+          },
+          changemaker: {
+            en: 'I can sense the quality of a gathering — distinguishing genuine engagement from performative participation — before any metric confirms it.',
+            fr: 'Je peux sentir la qualit\u00E9 d\u2019un rassemblement — distinguant l\u2019engagement authentique de la participation performative — avant qu\u2019une m\u00E9trique ne le confirme.',
+            zh: '\u6211\u80FD\u611F\u77E5\u805A\u4F1A\u7684\u8D28\u91CF\u2014\u2014\u533A\u5206\u771F\u6B63\u7684\u53C2\u4E0E\u548C\u8868\u6F14\u6027\u53C2\u4E0E\u2014\u2014\u5148\u4E8E\u4EFB\u4F55\u6307\u6807\u786E\u8BA4\u3002'
+          },
+          leader: {
+            en: 'I can sense when a team is creatively alive versus going through the motions, before any productivity metric reveals the difference.',
+            fr: 'Je peux sentir quand une \u00E9quipe est cr\u00E9ativement vivante plut\u00F4t que de suivre les mouvements, avant qu\u2019une m\u00E9trique ne r\u00E9v\u00E8le la diff\u00E9rence.',
+            zh: '\u6211\u80FD\u611F\u77E5\u56E2\u961F\u662F\u5145\u6EE1\u521B\u9020\u6D3B\u529B\u8FD8\u662F\u5728\u8D70\u8FC7\u573A\uFF0C\u5148\u4E8E\u4EFB\u4F55\u751F\u4EA7\u529B\u6307\u6807\u63ED\u793A\u5DEE\u5F02\u3002'
+          }
+        },
+        { // Q7: Yin — Awareness (somatic perception)
+          creative: {
+            en: 'I perceive what matters in my creative work through embodied feeling before my mind categorises it.',
+            fr: 'Je per\u00E7ois ce qui compte dans mon travail cr\u00E9atif par le ressenti corporel avant que mon esprit ne le cat\u00E9gorise.',
+            zh: '\u6211\u901A\u8FC7\u8EAB\u4F53\u611F\u53D7\u611F\u77E5\u521B\u4F5C\u4E2D\u7684\u91CD\u8981\u4E8B\u7269\uFF0C\u5148\u4E8E\u601D\u7EF4\u5BF9\u5176\u5206\u7C7B\u3002'
+          },
+          innovator: {
+            en: 'I perceive when a prototype or system feels wrong through embodied intuition before diagnostic data confirms it.',
+            fr: 'Je per\u00E7ois quand un prototype ou syst\u00E8me ne va pas par l\u2019intuition corporelle avant que les donn\u00E9es diagnostiques ne le confirment.',
+            zh: '\u6211\u901A\u8FC7\u8EAB\u4F53\u76F4\u89C9\u611F\u77E5\u539F\u578B\u6216\u7CFB\u7EDF\u4F55\u65F6\u4E0D\u5BF9\uFF0C\u5148\u4E8E\u8BCA\u65AD\u6570\u636E\u786E\u8BA4\u3002'
+          },
+          educator: {
+            en: 'I perceive when learning has genuinely taken hold through felt observation before assessment scores confirm it.',
+            fr: 'Je per\u00E7ois quand l\u2019apprentissage a v\u00E9ritablement pris racine par l\u2019observation ressentie avant que les notes ne le confirment.',
+            zh: '\u6211\u901A\u8FC7\u611F\u89C9\u89C2\u5BDF\u611F\u77E5\u5B66\u4E60\u4F55\u65F6\u771F\u6B63\u751F\u6839\uFF0C\u5148\u4E8E\u8BC4\u4F30\u5206\u6570\u786E\u8BA4\u3002'
+          },
+          changemaker: {
+            en: 'I perceive the difference between conflict and encounter in a room through felt presence before any data names it.',
+            fr: 'Je per\u00E7ois la diff\u00E9rence entre conflit et rencontre dans une salle par la pr\u00E9sence ressentie avant que les donn\u00E9es ne la nomment.',
+            zh: '\u6211\u901A\u8FC7\u5728\u573A\u611F\u77E5\u5C40\u4E2D\u51B2\u7A81\u4E0E\u76F8\u9047\u7684\u5DEE\u5F02\uFF0C\u5148\u4E8E\u4EFB\u4F55\u6570\u636E\u547D\u540D\u5B83\u3002'
+          },
+          leader: {
+            en: 'I perceive when a team discussion has shifted from productive to performative through felt attention before the minutes record it.',
+            fr: 'Je per\u00E7ois quand une discussion d\u2019\u00E9quipe passe de productive \u00E0 performative par l\u2019attention ressentie avant que le compte-rendu ne le note.',
+            zh: '\u6211\u901A\u8FC7\u611F\u89C9\u6CE8\u610F\u529B\u611F\u77E5\u56E2\u961F\u8BA8\u8BBA\u4F55\u65F6\u4ECE\u6709\u6548\u8F6C\u53D8\u4E3A\u8868\u6F14\u6027\uFF0C\u5148\u4E8E\u4F1A\u8BAE\u8BB0\u5F55\u3002'
+          }
+        },
+        { // Q8: Yang — Aesthetic (expressive form)
+          creative: {
+            en: 'I express subtle perceptual distinctions — between what is technically correct and what carries genuine aesthetic weight — in my creative decisions.',
+            fr: 'J\u2019exprime des distinctions perceptives subtiles — entre ce qui est techniquement correct et ce qui porte un v\u00E9ritable poids esth\u00E9tique — dans mes d\u00E9cisions cr\u00E9atives.',
+            zh: '\u6211\u5728\u521B\u4F5C\u51B3\u7B56\u4E2D\u8868\u8FBE\u5FAE\u5999\u7684\u611F\u77E5\u533A\u5206\u2014\u2014\u533A\u5206\u6280\u672F\u4E0A\u6B63\u786E\u7684\u4E0E\u771F\u6B63\u5177\u6709\u5BA1\u7F8E\u5206\u91CF\u7684\u3002'
+          },
+          innovator: {
+            en: 'I make design decisions based on how something should feel to use, not just how it should function on paper.',
+            fr: 'Je prends des d\u00E9cisions de conception bas\u00E9es sur la sensation d\u2019utilisation, pas seulement le fonctionnement th\u00E9orique.',
+            zh: '\u6211\u57FA\u4E8E\u4F7F\u7528\u611F\u53D7\u800C\u975E\u4EC5\u4EC5\u7EB8\u9762\u529F\u80FD\u6765\u505A\u8BBE\u8BA1\u51B3\u7B56\u3002'
+          },
+          educator: {
+            en: 'I shape learning experiences with attention to their aesthetic qualities — pacing, rhythm, emotional arc — not just their informational content.',
+            fr: 'Je fa\u00E7onne les exp\u00E9riences d\u2019apprentissage en portant attention \u00E0 leurs qualit\u00E9s esth\u00E9tiques — rythme, cadence, arc \u00E9motionnel — pas seulement leur contenu informatif.',
+            zh: '\u6211\u5851\u9020\u5B66\u4E60\u4F53\u9A8C\u65F6\u5173\u6CE8\u5176\u5BA1\u7F8E\u7279\u8D28\u2014\u2014\u8282\u594F\u3001\u97F5\u5F8B\u3001\u60C5\u611F\u5F27\u7EBF\u2014\u2014\u800C\u4E0D\u4EC5\u4EC5\u662F\u4FE1\u606F\u5185\u5BB9\u3002'
+          },
+          changemaker: {
+            en: 'I shape community processes with attention to their felt quality — dignity, belonging, respect — not just their functional outcomes.',
+            fr: 'Je fa\u00E7onne les processus communautaires en portant attention \u00E0 leur qualit\u00E9 ressentie — dignit\u00E9, appartenance, respect — pas seulement leurs r\u00E9sultats fonctionnels.',
+            zh: '\u6211\u5851\u9020\u793E\u533A\u8FC7\u7A0B\u65F6\u5173\u6CE8\u5176\u611F\u53D7\u8D28\u91CF\u2014\u2014\u5C0A\u4E25\u3001\u5F52\u5C5E\u611F\u3001\u5C0A\u91CD\u2014\u2014\u800C\u4E0D\u4EC5\u4EC5\u662F\u529F\u80FD\u6027\u7ED3\u679C\u3002'
+          },
+          leader: {
+            en: 'I shape team culture with attention to its experiential quality — psychological safety, creative energy, mutual respect — not just its productivity.',
+            fr: 'Je fa\u00E7onne la culture d\u2019\u00E9quipe en portant attention \u00E0 sa qualit\u00E9 exp\u00E9rientielle — s\u00E9curit\u00E9 psychologique, \u00E9nergie cr\u00E9ative, respect mutuel — pas seulement sa productivit\u00E9.',
+            zh: '\u6211\u5851\u9020\u56E2\u961F\u6587\u5316\u65F6\u5173\u6CE8\u5176\u4F53\u9A8C\u8D28\u91CF\u2014\u2014\u5FC3\u7406\u5B89\u5168\u611F\u3001\u521B\u9020\u80FD\u91CF\u3001\u76F8\u4E92\u5C0A\u91CD\u2014\u2014\u800C\u4E0D\u4EC5\u4EC5\u662F\u751F\u4EA7\u529B\u3002'
+          }
+        }
+      ]
+    },
+    ai: {
+      name: { en: 'Adaptive Intention', fr: 'Intention Adaptative', zh: '\u9002\u5E94\u6027\u610F\u56FE' },
+      icon: '\uD83E\uDDED',
+      questions: [
+        { // Q9: AI Awareness
+          creative: {
+            en: 'When AI optimises my creative work, I notice it resolving tensions I had not yet understood deeply enough.',
+            fr: 'Quand l\u2019IA optimise mon travail cr\u00E9atif, je remarque qu\u2019elle r\u00E9sout des tensions que je n\u2019avais pas encore comprises assez profond\u00E9ment.',
+            zh: '\u5F53AI\u4F18\u5316\u6211\u7684\u521B\u4F5C\u65F6\uFF0C\u6211\u6CE8\u610F\u5230\u5B83\u89E3\u51B3\u4E86\u6211\u5C1A\u672A\u6DF1\u5165\u7406\u89E3\u7684\u5F20\u529B\u3002'
+          },
+          innovator: {
+            en: 'When AI optimises my designs, I notice it converging on solutions before I have fully explored the problem space.',
+            fr: 'Quand l\u2019IA optimise mes conceptions, je remarque qu\u2019elle converge vers des solutions avant que j\u2019aie pleinement explor\u00E9 l\u2019espace du probl\u00E8me.',
+            zh: '\u5F53AI\u4F18\u5316\u6211\u7684\u8BBE\u8BA1\u65F6\uFF0C\u6211\u6CE8\u610F\u5230\u5B83\u5728\u6211\u5145\u5206\u63A2\u7D22\u95EE\u9898\u7A7A\u95F4\u4E4B\u524D\u5C31\u6536\u655B\u4E86\u89E3\u51B3\u65B9\u6848\u3002'
+          },
+          educator: {
+            en: 'When AI personalises learning paths, I notice it closing down exploration before learners have discovered their own questions.',
+            fr: 'Quand l\u2019IA personnalise les parcours d\u2019apprentissage, je remarque qu\u2019elle ferme l\u2019exploration avant que les apprenants n\u2019aient d\u00E9couvert leurs propres questions.',
+            zh: '\u5F53AI\u4E2A\u6027\u5316\u5B66\u4E60\u8DEF\u5F84\u65F6\uFF0C\u6211\u6CE8\u610F\u5230\u5B83\u5728\u5B66\u4E60\u8005\u53D1\u73B0\u81EA\u5DF1\u7684\u95EE\u9898\u4E4B\u524D\u5C31\u5173\u95ED\u4E86\u63A2\u7D22\u3002'
+          },
+          changemaker: {
+            en: 'When AI proposes policy solutions, I notice it resolving complexity before the affected community has had voice in framing the problem.',
+            fr: 'Quand l\u2019IA propose des solutions politiques, je remarque qu\u2019elle r\u00E9sout la complexit\u00E9 avant que la communaut\u00E9 concern\u00E9e n\u2019ait eu voix au chapitre pour cadrer le probl\u00E8me.',
+            zh: '\u5F53AI\u63D0\u51FA\u653F\u7B56\u89E3\u51B3\u65B9\u6848\u65F6\uFF0C\u6211\u6CE8\u610F\u5230\u5B83\u5728\u53D7\u5F71\u54CD\u793E\u533A\u5BF9\u95EE\u9898\u6846\u67B6\u53D1\u8A00\u4E4B\u524D\u5C31\u89E3\u51B3\u4E86\u590D\u6742\u6027\u3002'
+          },
+          leader: {
+            en: 'When AI recommends team decisions, I notice it optimising for efficiency before the creative tensions have been fully explored.',
+            fr: 'Quand l\u2019IA recommande des d\u00E9cisions d\u2019\u00E9quipe, je remarque qu\u2019elle optimise l\u2019efficacit\u00E9 avant que les tensions cr\u00E9atives n\u2019aient \u00E9t\u00E9 pleinement explor\u00E9es.',
+            zh: '\u5F53AI\u63A8\u8350\u56E2\u961F\u51B3\u7B56\u65F6\uFF0C\u6211\u6CE8\u610F\u5230\u5B83\u5728\u521B\u9020\u6027\u5F20\u529B\u5145\u5206\u63A2\u7D22\u4E4B\u524D\u5C31\u4F18\u5316\u4E86\u6548\u7387\u3002'
+          }
+        },
+        { // Q10: Skill Baseline
+          creative: {
+            en: 'I continually improve my creative ideas through iteration, treating each cycle as a chance to discover something I could not have planned.',
+            fr: 'J\u2019am\u00E9liore continuellement mes id\u00E9es cr\u00E9atives par l\u2019it\u00E9ration, traitant chaque cycle comme une chance de d\u00E9couvrir ce que je n\u2019aurais pu planifier.',
+            zh: '\u6211\u901A\u8FC7\u8FED\u4EE3\u4E0D\u65AD\u6539\u8FDB\u521B\u610E\uFF0C\u5C06\u6BCF\u4E2A\u5468\u671F\u89C6\u4E3A\u53D1\u73B0\u8BA1\u5212\u4E4B\u5916\u4E8B\u7269\u7684\u673A\u4F1A\u3002'
+          },
+          innovator: {
+            en: 'I build ideas to test, experiment, fail, and learn, treating each prototype as a question rather than an answer.',
+            fr: 'Je construis des id\u00E9es pour tester, exp\u00E9rimenter, \u00E9chouer et apprendre, traitant chaque prototype comme une question plut\u00F4t qu\u2019une r\u00E9ponse.',
+            zh: '\u6211\u6784\u5EFA\u60F3\u6CD5\u6765\u6D4B\u8BD5\u3001\u5B9E\u9A8C\u3001\u5931\u8D25\u548C\u5B66\u4E60\uFF0C\u5C06\u6BCF\u4E2A\u539F\u578B\u89C6\u4E3A\u95EE\u9898\u800C\u975E\u7B54\u6848\u3002'
+          },
+          educator: {
+            en: 'I adjust my teaching approach in real time, treating each session as an opportunity to discover what this group of learners actually needs.',
+            fr: 'J\u2019adapte mon approche p\u00E9dagogique en temps r\u00E9el, traitant chaque session comme une opportunit\u00E9 de d\u00E9couvrir ce dont ce groupe d\u2019apprenants a vraiment besoin.',
+            zh: '\u6211\u5B9E\u65F6\u8C03\u6574\u6559\u5B66\u65B9\u6CD5\uFF0C\u5C06\u6BCF\u6B21\u8BFE\u7A0B\u89C6\u4E3A\u53D1\u73B0\u8FD9\u7EC4\u5B66\u4E60\u8005\u5B9E\u9645\u9700\u8981\u7684\u673A\u4F1A\u3002'
+          },
+          changemaker: {
+            en: 'I adapt my approach to systemic change through iterative engagement, treating each community encounter as a chance to reframe the problem.',
+            fr: 'J\u2019adapte mon approche du changement syst\u00E9mique par un engagement it\u00E9ratif, traitant chaque rencontre communautaire comme une chance de recadrer le probl\u00E8me.',
+            zh: '\u6211\u901A\u8FC7\u8FED\u4EE3\u53C2\u4E0E\u8C03\u6574\u7CFB\u7EDF\u6027\u53D8\u9769\u65B9\u6CD5\uFF0C\u5C06\u6BCF\u6B21\u793E\u533A\u76F8\u9047\u89C6\u4E3A\u91CD\u65B0\u6846\u67B6\u95EE\u9898\u7684\u673A\u4F1A\u3002'
+          },
+          leader: {
+            en: 'I adjust my leadership approach based on what the team\u2019s creative process reveals, treating each project phase as an opportunity to learn how the ecology functions.',
+            fr: 'J\u2019adapte mon approche de leadership en fonction de ce que le processus cr\u00E9atif de l\u2019\u00E9quipe r\u00E9v\u00E8le, traitant chaque phase de projet comme une opportunit\u00E9 de comprendre le fonctionnement de l\u2019\u00E9cologie.',
+            zh: '\u6211\u6839\u636E\u56E2\u961F\u521B\u4F5C\u8FC7\u7A0B\u7684\u63ED\u793A\u8C03\u6574\u9886\u5BFC\u65B9\u6CD5\uFF0C\u5C06\u6BCF\u4E2A\u9879\u76EE\u9636\u6BB5\u89C6\u4E3A\u4E86\u89E3\u751F\u6001\u8FD0\u4F5C\u7684\u673A\u4F1A\u3002'
+          }
+        },
+        { // Q11: Yin — Intelligence (earned understanding)
+          creative: {
+            en: 'I build deep understanding of a creative problem before committing to a direction, even when faster paths are available.',
+            fr: 'Je construis une compr\u00E9hension profonde d\u2019un probl\u00E8me cr\u00E9atif avant de m\u2019engager, m\u00EAme quand des voies plus rapides existent.',
+            zh: '\u5373\u4F7F\u6709\u66F4\u5FEB\u7684\u8DEF\u5F84\uFF0C\u6211\u4E5F\u4F1A\u5728\u786E\u5B9A\u65B9\u5411\u524D\u6DF1\u5165\u7406\u89E3\u521B\u4F5C\u95EE\u9898\u3002'
+          },
+          innovator: {
+            en: 'I build deep understanding of a technical problem\u2019s structure before optimising, even when quick fixes are available.',
+            fr: 'Je construis une compr\u00E9hension profonde de la structure d\u2019un probl\u00E8me technique avant d\u2019optimiser, m\u00EAme quand des corrections rapides existent.',
+            zh: '\u5373\u4F7F\u6709\u5FEB\u901F\u4FEE\u590D\uFF0C\u6211\u4E5F\u4F1A\u5728\u4F18\u5316\u524D\u6DF1\u5165\u7406\u89E3\u6280\u672F\u95EE\u9898\u7684\u7ED3\u6784\u3002'
+          },
+          educator: {
+            en: 'I build deep understanding of why learners are struggling before intervening, even when a quick answer would resolve the immediate confusion.',
+            fr: 'Je construis une compr\u00E9hension profonde des difficult\u00E9s des apprenants avant d\u2019intervenir, m\u00EAme quand une r\u00E9ponse rapide r\u00E9soudrait la confusion imm\u00E9diate.',
+            zh: '\u5373\u4F7F\u5FEB\u901F\u56DE\u7B54\u80FD\u89E3\u51B3\u5373\u65F6\u56F0\u60D1\uFF0C\u6211\u4E5F\u4F1A\u5728\u5E72\u9884\u524D\u6DF1\u5165\u7406\u89E3\u5B66\u4E60\u8005\u56F0\u96BE\u7684\u539F\u56E0\u3002'
+          },
+          changemaker: {
+            en: 'I build deep understanding of a community\u2019s situation before proposing solutions, even when urgency pushes for immediate action.',
+            fr: 'Je construis une compr\u00E9hension profonde de la situation d\u2019une communaut\u00E9 avant de proposer des solutions, m\u00EAme quand l\u2019urgence pousse \u00E0 l\u2019action imm\u00E9diate.',
+            zh: '\u5373\u4F7F\u7D27\u8FEB\u6027\u8981\u6C42\u7ACB\u5373\u884C\u52A8\uFF0C\u6211\u4E5F\u4F1A\u5728\u63D0\u51FA\u89E3\u51B3\u65B9\u6848\u524D\u6DF1\u5165\u7406\u89E3\u793E\u533A\u7684\u60C5\u51B5\u3002'
+          },
+          leader: {
+            en: 'I build deep understanding of what my team needs before restructuring, even when organisational pressure demands swift change.',
+            fr: 'Je construis une compr\u00E9hension profonde des besoins de mon \u00E9quipe avant de restructurer, m\u00EAme quand la pression organisationnelle exige un changement rapide.',
+            zh: '\u5373\u4F7F\u7EC4\u7EC7\u538B\u529B\u8981\u6C42\u5FEB\u901F\u53D8\u9769\uFF0C\u6211\u4E5F\u4F1A\u5728\u91CD\u7EC4\u524D\u6DF1\u5165\u7406\u89E3\u56E2\u961F\u7684\u9700\u6C42\u3002'
+          }
+        },
+        { // Q12: Yang — Adaptation (responsive change)
+          creative: {
+            en: 'When unexpected material or knowledge arrives during a creative project, I treat it as a design constraint that reshapes my approach.',
+            fr: 'Quand un mat\u00E9riau ou une connaissance inattendue arrive pendant un projet cr\u00E9atif, je le traite comme une contrainte de conception qui refac\u0327onne mon approche.',
+            zh: '\u5F53\u521B\u4F5C\u9879\u76EE\u4E2D\u51FA\u73B0\u610F\u5916\u7684\u6750\u6599\u6216\u77E5\u8BC6\u65F6\uFF0C\u6211\u5C06\u5176\u89C6\u4E3A\u91CD\u5851\u65B9\u6CD5\u7684\u8BBE\u8BA1\u7EA6\u675F\u3002'
+          },
+          innovator: {
+            en: 'When a prototype fails in unexpected ways, I treat the failure as a source of new information that reshapes my design direction.',
+            fr: 'Quand un prototype \u00E9choue de mani\u00E8re inattendue, je traite l\u2019\u00E9chec comme une source de nouvelles informations qui refac\u0327onne ma direction de conception.',
+            zh: '\u5F53\u539F\u578B\u4EE5\u610F\u60F3\u4E0D\u5230\u7684\u65B9\u5F0F\u5931\u8D25\u65F6\uFF0C\u6211\u5C06\u5931\u8D25\u89C6\u4E3A\u91CD\u5851\u8BBE\u8BA1\u65B9\u5411\u7684\u65B0\u4FE1\u606F\u6765\u6E90\u3002'
+          },
+          educator: {
+            en: 'When learners respond in ways I did not anticipate, I treat their response as information that reshapes my pedagogical approach.',
+            fr: 'Quand les apprenants r\u00E9pondent de mani\u00E8re impr\u00E9vue, je traite leur r\u00E9ponse comme une information qui refac\u0327onne mon approche p\u00E9dagogique.',
+            zh: '\u5F53\u5B66\u4E60\u8005\u4EE5\u6211\u672A\u9884\u6599\u7684\u65B9\u5F0F\u56DE\u5E94\u65F6\uFF0C\u6211\u5C06\u5176\u56DE\u5E94\u89C6\u4E3A\u91CD\u5851\u6559\u5B66\u65B9\u6CD5\u7684\u4FE1\u606F\u3002'
+          },
+          changemaker: {
+            en: 'When community dynamics shift unexpectedly, I treat the shift as information that reshapes my approach to systemic change.',
+            fr: 'Quand les dynamiques communautaires changent de mani\u00E8re inattendue, je traite ce changement comme une information qui refac\u0327onne mon approche du changement syst\u00E9mique.',
+            zh: '\u5F53\u793E\u533A\u52A8\u6001\u610F\u5916\u53D8\u5316\u65F6\uFF0C\u6211\u5C06\u8FD9\u79CD\u53D8\u5316\u89C6\u4E3A\u91CD\u5851\u7CFB\u7EDF\u6027\u53D8\u9769\u65B9\u6CD5\u7684\u4FE1\u606F\u3002'
+          },
+          leader: {
+            en: 'When team dynamics shift unexpectedly, I treat the disruption as information that reshapes how I coordinate the group\u2019s creative process.',
+            fr: 'Quand les dynamiques d\u2019\u00E9quipe changent de mani\u00E8re inattendue, je traite la perturbation comme une information qui refac\u0327onne ma coordination du processus cr\u00E9atif du groupe.',
+            zh: '\u5F53\u56E2\u961F\u52A8\u6001\u610F\u5916\u53D8\u5316\u65F6\uFF0C\u6211\u5C06\u5E72\u6270\u89C6\u4E3A\u91CD\u5851\u56E2\u961F\u521B\u4F5C\u8FC7\u7A0B\u534F\u8C03\u65B9\u5F0F\u7684\u4FE1\u606F\u3002'
+          }
+        }
+      ]
+    },
+    ei: {
+      name: { en: 'Expressive Influence', fr: 'Influence Expressive', zh: '\u8868\u8FBE\u5F71\u54CD\u529B' },
+      icon: '\uD83D\uDCE3',
+      questions: [
+        { // Q13: AI Awareness
+          creative: {
+            en: 'When AI generates content for me, I notice it producing work before I have found my own voice on the matter.',
+            fr: 'Quand l\u2019IA g\u00E9n\u00E8re du contenu pour moi, je remarque qu\u2019elle produit du travail avant que j\u2019aie trouv\u00E9 ma propre voix sur le sujet.',
+            zh: '\u5F53AI\u4E3A\u6211\u751F\u6210\u5185\u5BB9\u65F6\uFF0C\u6211\u6CE8\u610F\u5230\u5B83\u5728\u6211\u627E\u5230\u81EA\u5DF1\u7684\u58F0\u97F3\u4E4B\u524D\u5C31\u5DF2\u4EA7\u51FA\u3002'
+          },
+          innovator: {
+            en: 'When AI generates solution proposals, I notice it producing plausible outputs before I have formed my own technical conviction.',
+            fr: 'Quand l\u2019IA g\u00E9n\u00E8re des propositions de solutions, je remarque qu\u2019elle produit des r\u00E9sultats plausibles avant que j\u2019aie form\u00E9 ma propre conviction technique.',
+            zh: '\u5F53AI\u751F\u6210\u89E3\u51B3\u65B9\u6848\u65F6\uFF0C\u6211\u6CE8\u610F\u5230\u5B83\u5728\u6211\u5F62\u6210\u81EA\u5DF1\u7684\u6280\u672F\u4FE1\u5FF5\u4E4B\u524D\u5C31\u4EA7\u51FA\u4E86\u770B\u4F3C\u5408\u7406\u7684\u8F93\u51FA\u3002'
+          },
+          educator: {
+            en: 'When AI generates teaching materials, I notice it producing content before I have developed my own pedagogical perspective on the topic.',
+            fr: 'Quand l\u2019IA g\u00E9n\u00E8re du mat\u00E9riel p\u00E9dagogique, je remarque qu\u2019elle produit du contenu avant que j\u2019aie d\u00E9velopp\u00E9 ma propre perspective p\u00E9dagogique sur le sujet.',
+            zh: '\u5F53AI\u751F\u6210\u6559\u5B66\u6750\u6599\u65F6\uFF0C\u6211\u6CE8\u610F\u5230\u5B83\u5728\u6211\u53D1\u5C55\u51FA\u81EA\u5DF1\u7684\u6559\u5B66\u89C2\u70B9\u4E4B\u524D\u5C31\u4EA7\u51FA\u4E86\u5185\u5BB9\u3002'
+          },
+          changemaker: {
+            en: 'When AI drafts advocacy messaging, I notice it producing polished language before I have formed my own conviction about what this community needs to hear.',
+            fr: 'Quand l\u2019IA r\u00E9dige des messages de plaidoyer, je remarque qu\u2019elle produit un langage poli avant que j\u2019aie form\u00E9 ma propre conviction sur ce que cette communaut\u00E9 doit entendre.',
+            zh: '\u5F53AI\u8D77\u8349\u5021\u5BFC\u4FE1\u606F\u65F6\uFF0C\u6211\u6CE8\u610F\u5230\u5B83\u5728\u6211\u5BF9\u8FD9\u4E2A\u793E\u533A\u9700\u8981\u542C\u5230\u4EC0\u4E48\u5F62\u6210\u81EA\u5DF1\u7684\u4FE1\u5FF5\u4E4B\u524D\u5C31\u4EA7\u51FA\u4E86\u7CBE\u6DA6\u7684\u8BED\u8A00\u3002'
+          },
+          leader: {
+            en: 'When AI drafts team communications, I notice it producing compelling language before I have formed my own conviction about what needs to be said.',
+            fr: 'Quand l\u2019IA r\u00E9dige des communications d\u2019\u00E9quipe, je remarque qu\u2019elle produit un langage convaincant avant que j\u2019aie form\u00E9 ma propre conviction sur ce qui doit \u00EAtre dit.',
+            zh: '\u5F53AI\u8D77\u8349\u56E2\u961F\u6C9F\u901A\u65F6\uFF0C\u6211\u6CE8\u610F\u5230\u5B83\u5728\u6211\u5BF9\u9700\u8981\u8BF4\u4EC0\u4E48\u5F62\u6210\u81EA\u5DF1\u7684\u4FE1\u5FF5\u4E4B\u524D\u5C31\u4EA7\u51FA\u4E86\u6709\u8BF4\u670D\u529B\u7684\u8BED\u8A00\u3002'
+          }
+        },
+        { // Q14: Skill Baseline
+          creative: {
+            en: 'I freely express my ideas, opinions, and perspectives using whatever medium or method the creative situation demands.',
+            fr: 'J\u2019exprime librement mes id\u00E9es, opinions et perspectives en utilisant le m\u00E9dium ou la m\u00E9thode que la situation cr\u00E9ative exige.',
+            zh: '\u6211\u81EA\u7531\u5730\u4F7F\u7528\u521B\u4F5C\u60C5\u5883\u6240\u9700\u7684\u4EFB\u4F55\u5A92\u4ECB\u6216\u65B9\u6CD5\u8868\u8FBE\u60F3\u6CD5\u3001\u89C2\u70B9\u548C\u89C1\u89E3\u3002'
+          },
+          innovator: {
+            en: 'I can promote and pitch innovative concepts convincingly, translating technical insight into compelling vision.',
+            fr: 'Je peux promouvoir et pr\u00E9senter des concepts innovants de mani\u00E8re convaincante, traduisant l\u2019insight technique en vision percutante.',
+            zh: '\u6211\u80FD\u4EE4\u4EBA\u4FE1\u670D\u5730\u63A8\u5E7F\u548C\u5C55\u793A\u521B\u65B0\u6982\u5FF5\uFF0C\u5C06\u6280\u672F\u6D1E\u5BDF\u8F6C\u5316\u4E3A\u5F15\u4EBA\u5165\u80DC\u7684\u613F\u666F\u3002'
+          },
+          educator: {
+            en: 'I communicate complex ideas in ways that engage learners and inspire them to develop their own perspective.',
+            fr: 'Je communique des id\u00E9es complexes de mani\u00E8re \u00E0 engager les apprenants et les inspirer \u00E0 d\u00E9velopper leur propre perspective.',
+            zh: '\u6211\u4EE5\u5438\u5F15\u5B66\u4E60\u8005\u5E76\u6FC0\u52B1\u4ED6\u4EEC\u53D1\u5C55\u81EA\u5DF1\u89C2\u70B9\u7684\u65B9\u5F0F\u4F20\u8FBE\u590D\u6742\u601D\u60F3\u3002'
+          },
+          changemaker: {
+            en: 'I engage communities with transparent, compelling communication that connects local experience to larger systemic change.',
+            fr: 'J\u2019engage les communaut\u00E9s avec une communication transparente et percutante qui relie l\u2019exp\u00E9rience locale au changement syst\u00E9mique plus large.',
+            zh: '\u6211\u4EE5\u900F\u660E\u3001\u6709\u8BF4\u670D\u529B\u7684\u6C9F\u901A\u53C2\u4E0E\u793E\u533A\uFF0C\u5C06\u672C\u5730\u7ECF\u9A8C\u4E0E\u66F4\u5927\u7684\u7CFB\u7EDF\u6027\u53D8\u9769\u8FDE\u63A5\u8D77\u6765\u3002'
+          },
+          leader: {
+            en: 'I articulate a compelling vision for my team\u2019s creative work that inspires contributors while leaving room for their own voices.',
+            fr: 'J\u2019articule une vision percutante pour le travail cr\u00E9atif de mon \u00E9quipe qui inspire les contributeurs tout en laissant place \u00E0 leurs propres voix.',
+            zh: '\u6211\u4E3A\u56E2\u961F\u7684\u521B\u4F5C\u5DE5\u4F5C\u9610\u8FF0\u4EE4\u4EBA\u4FE1\u670D\u7684\u613F\u666F\uFF0C\u6FC0\u52B1\u8D21\u732E\u8005\u7684\u540C\u65F6\u7559\u51FA\u4ED6\u4EEC\u81EA\u5DF1\u58F0\u97F3\u7684\u7A7A\u95F4\u3002'
+          }
+        },
+        { // Q15: Yin — Agency (intention through resistance)
+          creative: {
+            en: 'I act with creative conviction even when facing resistance, holding my artistic intentions steady through difficulty.',
+            fr: 'J\u2019agis avec conviction cr\u00E9ative m\u00EAme face \u00E0 la r\u00E9sistance, maintenant mes intentions artistiques fermes malgr\u00E9 les difficult\u00E9s.',
+            zh: '\u5373\u4F7F\u9762\u5BF9\u963B\u529B\uFF0C\u6211\u4E5F\u4EE5\u521B\u4F5C\u4FE1\u5FF5\u884C\u52A8\uFF0C\u5728\u56F0\u96BE\u4E2D\u575A\u6301\u81EA\u5DF1\u7684\u827A\u672F\u610F\u56FE\u3002'
+          },
+          innovator: {
+            en: 'I hold my technical convictions when facing institutional resistance, advocating for approaches I know are sound even when they are unfamiliar.',
+            fr: 'Je maintiens mes convictions techniques face \u00E0 la r\u00E9sistance institutionnelle, d\u00E9fendant des approches que je sais pertinentes m\u00EAme quand elles sont inhabituelles.',
+            zh: '\u9762\u5BF9\u5236\u5EA6\u6027\u963B\u529B\u65F6\u6211\u575A\u6301\u6280\u672F\u4FE1\u5FF5\uFF0C\u5373\u4F7F\u65B9\u6CD5\u4E0D\u719F\u6089\u4E5F\u4E3A\u6211\u77E5\u9053\u6B63\u786E\u7684\u65B9\u5411\u8FA9\u62A4\u3002'
+          },
+          educator: {
+            en: 'I hold my pedagogical convictions when institutional metrics push for shortcuts, defending the conditions genuine learning requires.',
+            fr: 'Je maintiens mes convictions p\u00E9dagogiques quand les m\u00E9triques institutionnelles poussent aux raccourcis, d\u00E9fendant les conditions que l\u2019apprentissage authentique exige.',
+            zh: '\u5F53\u5236\u5EA6\u6307\u6807\u63A8\u52A8\u6377\u5F84\u65F6\u6211\u575A\u6301\u6559\u5B66\u4FE1\u5FF5\uFF0C\u6350\u536B\u771F\u6B63\u5B66\u4E60\u6240\u9700\u7684\u6761\u4EF6\u3002'
+          },
+          changemaker: {
+            en: 'I hold my conviction about what a community needs when powerful stakeholders push for compromise, maintaining the position through difficulty.',
+            fr: 'Je maintiens ma conviction sur les besoins d\u2019une communaut\u00E9 quand des parties prenantes puissantes poussent au compromis, tenant la position malgr\u00E9 les difficult\u00E9s.',
+            zh: '\u5F53\u5F3A\u52BF\u5229\u76CA\u76F8\u5173\u8005\u63A8\u52A8\u59A5\u534F\u65F6\uFF0C\u6211\u575A\u6301\u5BF9\u793E\u533A\u9700\u6C42\u7684\u4FE1\u5FF5\uFF0C\u5728\u56F0\u96BE\u4E2D\u4FDD\u6301\u7ACB\u573A\u3002'
+          },
+          leader: {
+            en: 'I hold my conviction about how the team\u2019s creative ecology should function when organisational pressure pushes for expedient compromise.',
+            fr: 'Je maintiens ma conviction sur le fonctionnement de l\u2019\u00E9cologie cr\u00E9ative de l\u2019\u00E9quipe quand la pression organisationnelle pousse au compromis exp\u00E9dient.',
+            zh: '\u5F53\u7EC4\u7EC7\u538B\u529B\u63A8\u52A8\u6743\u5B9C\u59A5\u534F\u65F6\uFF0C\u6211\u575A\u6301\u5BF9\u56E2\u961F\u521B\u9020\u751F\u6001\u5E94\u5982\u4F55\u8FD0\u4F5C\u7684\u4FE1\u5FF5\u3002'
+          }
+        },
+        { // Q16: Yang — Creation (expression into the world)
+          creative: {
+            en: 'I encode my values into creative work so they shape outcomes beyond my direct involvement.',
+            fr: 'J\u2019encode mes valeurs dans mon travail cr\u00E9atif pour qu\u2019elles fa\u00E7onnent les r\u00E9sultats au-del\u00E0 de mon implication directe.',
+            zh: '\u6211\u5C06\u4EF7\u503C\u89C6\u878D\u5165\u521B\u4F5C\u4E2D\uFF0C\u4F7F\u5176\u5728\u6211\u4E0D\u518D\u76F4\u63A5\u53C2\u4E0E\u540E\u4ECD\u5F71\u54CD\u7ED3\u679C\u3002'
+          },
+          innovator: {
+            en: 'I encode my design principles into systems and products so they carry my values forward even after I have moved on.',
+            fr: 'J\u2019encode mes principes de conception dans les syst\u00E8mes et produits pour qu\u2019ils portent mes valeurs m\u00EAme apr\u00E8s mon d\u00E9part.',
+            zh: '\u6211\u5C06\u8BBE\u8BA1\u539F\u5219\u878D\u5165\u7CFB\u7EDF\u548C\u4EA7\u54C1\u4E2D\uFF0C\u4F7F\u5176\u5728\u6211\u79BB\u5F00\u540E\u4ECD\u627F\u8F7D\u6211\u7684\u4EF7\u503C\u89C2\u3002'
+          },
+          educator: {
+            en: 'I shape learning experiences that develop capacities in learners that persist long after the course is over.',
+            fr: 'Je fa\u00E7onne des exp\u00E9riences d\u2019apprentissage qui d\u00E9veloppent des capacit\u00E9s chez les apprenants qui persistent bien apr\u00E8s la fin du cours.',
+            zh: '\u6211\u5851\u9020\u5B66\u4E60\u4F53\u9A8C\uFF0C\u57F9\u517B\u5B66\u4E60\u8005\u5728\u8BFE\u7A0B\u7ED3\u675F\u540E\u4E45\u4E45\u5EF6\u7EED\u7684\u80FD\u529B\u3002'
+          },
+          changemaker: {
+            en: 'I shape conditions and structures that carry community values forward even after my direct involvement ends.',
+            fr: 'Je fa\u00E7onne des conditions et structures qui portent les valeurs communautaires m\u00EAme apr\u00E8s la fin de mon implication directe.',
+            zh: '\u6211\u5851\u9020\u5728\u6211\u76F4\u63A5\u53C2\u4E0E\u7ED3\u675F\u540E\u4ECD\u627F\u8F7D\u793E\u533A\u4EF7\u503C\u89C2\u7684\u6761\u4EF6\u548C\u7ED3\u6784\u3002'
+          },
+          leader: {
+            en: 'I build team culture and creative practices that sustain the organisation\u2019s creative capacity beyond my tenure.',
+            fr: 'Je construis une culture d\u2019\u00E9quipe et des pratiques cr\u00E9atives qui soutiennent la capacit\u00E9 cr\u00E9ative de l\u2019organisation au-del\u00E0 de mon mandat.',
+            zh: '\u6211\u5EFA\u7ACB\u56E2\u961F\u6587\u5316\u548C\u521B\u4F5C\u5B9E\u8DF5\uFF0C\u4F7F\u7EC4\u7EC7\u7684\u521B\u9020\u529B\u8D85\u8D8A\u6211\u7684\u4EFB\u671F\u3002'
+          }
+        }
+      ]
+    },
+    conv: {
+      name: { en: 'ACI Convergence', fr: 'Convergence ACI', zh: 'ACI \u878D\u5408' },
+      icon: '\u25C6',
+      questions: [
+        { // Q17: AI Awareness
+          creative: {
+            en: 'I notice when AI fragments my creative process into disconnected tasks, losing the coherence between perception, intention, expression, and sustained practice.',
+            fr: 'Je remarque quand l\u2019IA fragmente mon processus cr\u00E9atif en t\u00E2ches d\u00E9connect\u00E9es, perdant la coh\u00E9rence entre perception, intention, expression et pratique soutenue.',
+            zh: '\u6211\u6CE8\u610F\u5230AI\u4F55\u65F6\u5C06\u6211\u7684\u521B\u9020\u8FC7\u7A0B\u788E\u7247\u5316\u4E3A\u8131\u8282\u7684\u4EFB\u52A1\uFF0C\u5931\u53BB\u611F\u77E5\u3001\u610F\u56FE\u3001\u8868\u8FBE\u548C\u6301\u7EED\u5B9E\u8DF5\u4E4B\u95F4\u7684\u8FDE\u8D2F\u6027\u3002'
+          },
+          innovator: {
+            en: 'I notice when AI tools fragment my innovation process into isolated workflows, losing the connections between research, prototyping, testing, and vision.',
+            fr: 'Je remarque quand les outils d\u2019IA fragmentent mon processus d\u2019innovation en flux de travail isol\u00E9s, perdant les connexions entre recherche, prototypage, tests et vision.',
+            zh: '\u6211\u6CE8\u610F\u5230AI\u5DE5\u5177\u4F55\u65F6\u5C06\u6211\u7684\u521B\u65B0\u8FC7\u7A0B\u788E\u7247\u5316\u4E3A\u5B64\u7ACB\u7684\u5DE5\u4F5C\u6D41\uFF0C\u5931\u53BB\u7814\u7A76\u3001\u539F\u578B\u3001\u6D4B\u8BD5\u548C\u613F\u666F\u4E4B\u95F4\u7684\u8054\u7CFB\u3002'
+          },
+          educator: {
+            en: 'I notice when AI fragments the learning experience into disconnected modules, losing the coherence between understanding, practice, and reflection.',
+            fr: 'Je remarque quand l\u2019IA fragmente l\u2019exp\u00E9rience d\u2019apprentissage en modules d\u00E9connect\u00E9s, perdant la coh\u00E9rence entre compr\u00E9hension, pratique et r\u00E9flexion.',
+            zh: '\u6211\u6CE8\u610F\u5230AI\u4F55\u65F6\u5C06\u5B66\u4E60\u4F53\u9A8C\u788E\u7247\u5316\u4E3A\u8131\u8282\u7684\u6A21\u5757\uFF0C\u5931\u53BB\u7406\u89E3\u3001\u5B9E\u8DF5\u548C\u53CD\u601D\u4E4B\u95F4\u7684\u8FDE\u8D2F\u6027\u3002'
+          },
+          changemaker: {
+            en: 'I notice when AI fragments systemic change work into disconnected interventions, losing the coherence between listening, organising, acting, and sustaining.',
+            fr: 'Je remarque quand l\u2019IA fragmente le travail de changement syst\u00E9mique en interventions d\u00E9connect\u00E9es, perdant la coh\u00E9rence entre \u00E9coute, organisation, action et p\u00E9rennit\u00E9.',
+            zh: '\u6211\u6CE8\u610F\u5230AI\u4F55\u65F6\u5C06\u7CFB\u7EDF\u6027\u53D8\u9769\u5DE5\u4F5C\u788E\u7247\u5316\u4E3A\u8131\u8282\u7684\u5E72\u9884\uFF0C\u5931\u53BB\u503E\u542C\u3001\u7EC4\u7EC7\u3001\u884C\u52A8\u548C\u7EF4\u6301\u4E4B\u95F4\u7684\u8FDE\u8D2F\u6027\u3002'
+          },
+          leader: {
+            en: 'I notice when AI fragments team coordination into disconnected management tasks, losing the creative ecology that holds the group\u2019s work together.',
+            fr: 'Je remarque quand l\u2019IA fragmente la coordination d\u2019\u00E9quipe en t\u00E2ches de gestion d\u00E9connect\u00E9es, perdant l\u2019\u00E9cologie cr\u00E9ative qui unit le travail du groupe.',
+            zh: '\u6211\u6CE8\u610F\u5230AI\u4F55\u65F6\u5C06\u56E2\u961F\u534F\u8C03\u788E\u7247\u5316\u4E3A\u8131\u8282\u7684\u7BA1\u7406\u4EFB\u52A1\uFF0C\u5931\u53BB\u7EF4\u7CFB\u56E2\u961F\u5DE5\u4F5C\u7684\u521B\u9020\u751F\u6001\u3002'
+          }
+        },
+        { // Q18: Skill Baseline
+          creative: {
+            en: 'I integrate perception, intention, expression, and sustained practice into a coherent creative process rather than treating them as separate activities.',
+            fr: 'J\u2019int\u00E8gre perception, intention, expression et pratique soutenue en un processus cr\u00E9atif coh\u00E9rent plut\u00F4t que de les traiter comme des activit\u00E9s s\u00E9par\u00E9es.',
+            zh: '\u6211\u5C06\u611F\u77E5\u3001\u610F\u56FE\u3001\u8868\u8FBE\u548C\u6301\u7EED\u5B9E\u8DF5\u6574\u5408\u4E3A\u8FDE\u8D2F\u7684\u521B\u9020\u8FC7\u7A0B\uFF0C\u800C\u975E\u5C06\u5176\u89C6\u4E3A\u72EC\u7ACB\u6D3B\u52A8\u3002'
+          },
+          innovator: {
+            en: 'I integrate research, design, prototyping, and user insight into a coherent innovation process rather than treating them as sequential handoffs.',
+            fr: 'J\u2019int\u00E8gre recherche, conception, prototypage et insight utilisateur en un processus d\u2019innovation coh\u00E9rent plut\u00F4t que de les traiter comme des transferts s\u00E9quentiels.',
+            zh: '\u6211\u5C06\u7814\u7A76\u3001\u8BBE\u8BA1\u3001\u539F\u578B\u548C\u7528\u6237\u6D1E\u5BDF\u6574\u5408\u4E3A\u8FDE\u8D2F\u7684\u521B\u65B0\u8FC7\u7A0B\uFF0C\u800C\u975E\u89C6\u4E3A\u987A\u5E8F\u4EA4\u63A5\u3002'
+          },
+          educator: {
+            en: 'I integrate instruction, facilitation, assessment, and relationship into a coherent pedagogical practice rather than separate professional functions.',
+            fr: 'J\u2019int\u00E8gre instruction, facilitation, \u00E9valuation et relation en une pratique p\u00E9dagogique coh\u00E9rente plut\u00F4t que des fonctions professionnelles s\u00E9par\u00E9es.',
+            zh: '\u6211\u5C06\u6559\u5B66\u3001\u4FC3\u8FDB\u3001\u8BC4\u4F30\u548C\u5173\u7CFB\u6574\u5408\u4E3A\u8FDE\u8D2F\u7684\u6559\u5B66\u5B9E\u8DF5\uFF0C\u800C\u975E\u72EC\u7ACB\u7684\u4E13\u4E1A\u529F\u80FD\u3002'
+          },
+          changemaker: {
+            en: 'I integrate listening, organising, advocating, and sustaining into a coherent practice of systemic change rather than separate campaign phases.',
+            fr: 'J\u2019int\u00E8gre \u00E9coute, organisation, plaidoyer et p\u00E9rennit\u00E9 en une pratique coh\u00E9rente de changement syst\u00E9mique plut\u00F4t que des phases de campagne s\u00E9par\u00E9es.',
+            zh: '\u6211\u5C06\u503E\u542C\u3001\u7EC4\u7EC7\u3001\u5021\u5BFC\u548C\u7EF4\u6301\u6574\u5408\u4E3A\u8FDE\u8D2F\u7684\u7CFB\u7EDF\u6027\u53D8\u9769\u5B9E\u8DF5\uFF0C\u800C\u975E\u72EC\u7ACB\u7684\u8FD0\u52A8\u9636\u6BB5\u3002'
+          },
+          leader: {
+            en: 'I integrate vision-setting, team development, creative facilitation, and organisational advocacy into a coherent leadership ecology rather than separate management tasks.',
+            fr: 'J\u2019int\u00E8gre d\u00E9finition de vision, d\u00E9veloppement d\u2019\u00E9quipe, facilitation cr\u00E9ative et plaidoyer organisationnel en une \u00E9cologie de leadership coh\u00E9rente plut\u00F4t que des t\u00E2ches de gestion s\u00E9par\u00E9es.',
+            zh: '\u6211\u5C06\u613F\u666F\u8BBE\u5B9A\u3001\u56E2\u961F\u53D1\u5C55\u3001\u521B\u610F\u4FC3\u8FDB\u548C\u7EC4\u7EC7\u5021\u5BFC\u6574\u5408\u4E3A\u8FDE\u8D2F\u7684\u9886\u5BFC\u751F\u6001\uFF0C\u800C\u975E\u72EC\u7ACB\u7684\u7BA1\u7406\u4EFB\u52A1\u3002'
+          }
+        },
+        { // Q19: Yin — Integration
+          creative: {
+            en: 'I maintain human agency over creative decisions even when delegating execution to automated tools.',
+            fr: 'Je maintiens l\u2019agentivit\u00E9 humaine sur les d\u00E9cisions cr\u00E9atives m\u00EAme en d\u00E9l\u00E9guant l\u2019ex\u00E9cution \u00E0 des outils automatis\u00E9s.',
+            zh: '\u5373\u4F7F\u5C06\u6267\u884C\u59D4\u6258\u7ED9\u81EA\u52A8\u5316\u5DE5\u5177\uFF0C\u6211\u4E5F\u4FDD\u6301\u5BF9\u521B\u610E\u51B3\u7B56\u7684\u4EBA\u7C7B\u80FD\u52A8\u6027\u3002'
+          },
+          innovator: {
+            en: 'I maintain human judgment over design decisions even when AI systems handle implementation and optimisation.',
+            fr: 'Je maintiens le jugement humain sur les d\u00E9cisions de conception m\u00EAme quand les syst\u00E8mes d\u2019IA g\u00E8rent l\u2019impl\u00E9mentation et l\u2019optimisation.',
+            zh: '\u5373\u4F7F AI \u7CFB\u7EDF\u5904\u7406\u5B9E\u65BD\u548C\u4F18\u5316\uFF0C\u6211\u4E5F\u4FDD\u6301\u5BF9\u8BBE\u8BA1\u51B3\u7B56\u7684\u4EBA\u7C7B\u5224\u65AD\u3002'
+          },
+          educator: {
+            en: 'I maintain pedagogical judgment over learning design even when AI systems handle content delivery and assessment.',
+            fr: 'Je maintiens le jugement p\u00E9dagogique sur la conception d\u2019apprentissage m\u00EAme quand les syst\u00E8mes d\u2019IA g\u00E8rent la livraison de contenu et l\u2019\u00E9valuation.',
+            zh: '\u5373\u4F7F AI \u7CFB\u7EDF\u5904\u7406\u5185\u5BB9\u4F20\u9012\u548C\u8BC4\u4F30\uFF0C\u6211\u4E5F\u4FDD\u6301\u5BF9\u5B66\u4E60\u8BBE\u8BA1\u7684\u6559\u5B66\u5224\u65AD\u3002'
+          },
+          changemaker: {
+            en: 'I maintain community voice over change strategy even when AI systems handle data analysis and planning.',
+            fr: 'Je maintiens la voix communautaire sur la strat\u00E9gie de changement m\u00EAme quand les syst\u00E8mes d\u2019IA g\u00E8rent l\u2019analyse de donn\u00E9es et la planification.',
+            zh: '\u5373\u4F7F AI \u7CFB\u7EDF\u5904\u7406\u6570\u636E\u5206\u6790\u548C\u89C4\u5212\uFF0C\u6211\u4E5F\u4FDD\u6301\u793E\u533A\u58F0\u97F3\u5BF9\u53D8\u9769\u7B56\u7565\u7684\u4E3B\u5BFC\u6743\u3002'
+          },
+          leader: {
+            en: 'I maintain leadership judgment over organisational creative direction even when AI systems handle coordination and reporting.',
+            fr: 'Je maintiens le jugement de leadership sur la direction cr\u00E9ative organisationnelle m\u00EAme quand les syst\u00E8mes d\u2019IA g\u00E8rent la coordination et le reporting.',
+            zh: '\u5373\u4F7F AI \u7CFB\u7EDF\u5904\u7406\u534F\u8C03\u548C\u62A5\u544A\uFF0C\u6211\u4E5F\u4FDD\u6301\u5BF9\u7EC4\u7EC7\u521B\u610F\u65B9\u5411\u7684\u9886\u5BFC\u5224\u65AD\u3002'
+          }
+        },
+        { // Q20: Yang — Ecology
+          creative: {
+            en: 'I cultivate an ecology of creative practice — reflecting on how my work as a whole develops over time, not just individual outputs.',
+            fr: 'Je cultive une \u00E9cologie de pratique cr\u00E9ative — r\u00E9fl\u00E9chissant \u00E0 la fa\u00E7on dont l\u2019ensemble de mon travail \u00E9volue, pas seulement les productions individuelles.',
+            zh: '\u6211\u57F9\u80B2\u521B\u9020\u5B9E\u8DF5\u7684\u751F\u6001\u2014\u2014\u53CD\u601D\u6211\u7684\u6574\u4F53\u5DE5\u4F5C\u5982\u4F55\u968F\u65F6\u95F4\u53D1\u5C55\uFF0C\u800C\u4E0D\u4EC5\u4EC5\u662F\u5355\u4E2A\u6210\u679C\u3002'
+          },
+          innovator: {
+            en: 'I cultivate an ecology of innovation practice — reflecting on how my technical judgment and creative approach develop over time, not just individual projects.',
+            fr: 'Je cultive une \u00E9cologie de pratique d\u2019innovation — r\u00E9fl\u00E9chissant \u00E0 la fa\u00E7on dont mon jugement technique et mon approche cr\u00E9ative \u00E9voluent, pas seulement les projets individuels.',
+            zh: '\u6211\u57F9\u80B2\u521B\u65B0\u5B9E\u8DF5\u7684\u751F\u6001\u2014\u2014\u53CD\u601D\u6211\u7684\u6280\u672F\u5224\u65AD\u548C\u521B\u9020\u65B9\u6CD5\u5982\u4F55\u968F\u65F6\u95F4\u53D1\u5C55\uFF0C\u800C\u4E0D\u4EC5\u4EC5\u662F\u5355\u4E2A\u9879\u76EE\u3002'
+          },
+          educator: {
+            en: 'I cultivate an ecology of pedagogical practice — reflecting on how my teaching philosophy and methods develop over time, not just individual courses.',
+            fr: 'Je cultive une \u00E9cologie de pratique p\u00E9dagogique — r\u00E9fl\u00E9chissant \u00E0 la fa\u00E7on dont ma philosophie et mes m\u00E9thodes d\u2019enseignement \u00E9voluent, pas seulement les cours individuels.',
+            zh: '\u6211\u57F9\u80B2\u6559\u5B66\u5B9E\u8DF5\u7684\u751F\u6001\u2014\u2014\u53CD\u601D\u6211\u7684\u6559\u5B66\u54F2\u5B66\u548C\u65B9\u6CD5\u5982\u4F55\u968F\u65F6\u95F4\u53D1\u5C55\uFF0C\u800C\u4E0D\u4EC5\u4EC5\u662F\u5355\u4E2A\u8BFE\u7A0B\u3002'
+          },
+          changemaker: {
+            en: 'I cultivate an ecology of change practice — reflecting on how my systemic understanding and community relationships develop over time, not just individual campaigns.',
+            fr: 'Je cultive une \u00E9cologie de pratique du changement — r\u00E9fl\u00E9chissant \u00E0 la fa\u00E7on dont ma compr\u00E9hension syst\u00E9mique et mes relations communautaires \u00E9voluent, pas seulement les campagnes individuelles.',
+            zh: '\u6211\u57F9\u80B2\u53D8\u9769\u5B9E\u8DF5\u7684\u751F\u6001\u2014\u2014\u53CD\u601D\u6211\u7684\u7CFB\u7EDF\u6027\u7406\u89E3\u548C\u793E\u533A\u5173\u7CFB\u5982\u4F55\u968F\u65F6\u95F4\u53D1\u5C55\uFF0C\u800C\u4E0D\u4EC5\u4EC5\u662F\u5355\u4E2A\u8FD0\u52A8\u3002'
+          },
+          leader: {
+            en: 'I cultivate an ecology of leadership practice — reflecting on how my capacity to hold a team\u2019s creative tensions develops over time, not just individual project outcomes.',
+            fr: 'Je cultive une \u00E9cologie de pratique de leadership — r\u00E9fl\u00E9chissant \u00E0 la fa\u00E7on dont ma capacit\u00E9 \u00E0 tenir les tensions cr\u00E9atives d\u2019une \u00E9quipe \u00E9volue, pas seulement les r\u00E9sultats de projets individuels.',
+            zh: '\u6211\u57F9\u80B2\u9886\u5BFC\u5B9E\u8DF5\u7684\u751F\u6001\u2014\u2014\u53CD\u601D\u6211\u4FDD\u6301\u56E2\u961F\u521B\u9020\u6027\u5F20\u529B\u7684\u80FD\u529B\u5982\u4F55\u968F\u65F6\u95F4\u53D1\u5C55\uFF0C\u800C\u4E0D\u4EC5\u4EC5\u662F\u5355\u4E2A\u9879\u76EE\u7ED3\u679C\u3002'
+          }
+        }
+      ]
+    }
+  };
+
+  const assessmentAnswers = {};
+
+  function getArchetypeVariant(archetype) {
+    if (!archetype) return 'creative';
+    if (archetype === 'leader-org' || archetype === 'leader-community') return 'leader';
+    return archetype;
+  }
+
+  function getLang() {
+    if (document.body.classList.contains('zh')) return 'zh';
+    if (document.body.classList.contains('fr')) return 'fr';
+    return 'en';
+  }
+
+  function renderQuestions() {
+    const container = document.getElementById('questionContainer');
+    if (!container) return;
+    const variant = getArchetypeVariant(selectedArchetype);
+    const lang = getLang();
+    const capKeys = ['ee', 'aa', 'ai', 'ei', 'conv'];
+    let qNum = 0;
+    let html = '';
+
+    capKeys.forEach(capKey => {
+      const cap = questionBank[capKey];
+      html += '<div class="capacity-group">';
+      html += '<div class="capacity-group-header">';
+      html += '<span class="capacity-group-icon">' + cap.icon + '</span>';
+      html += '<span class="capacity-group-name">';
+      html += '<span data-lang="en">' + cap.name.en + '</span>';
+      html += '<span data-lang="fr">' + cap.name.fr + '</span>';
+      html += '<span data-lang="zh">' + cap.name.zh + '</span>';
+      html += '</span></div>';
+
+      cap.questions.forEach(q => {
+        qNum++;
+        const text = q[variant] || q.creative;
+        const answered = assessmentAnswers[capKey + '-' + qNum] ? ' answered' : '';
+        const selectedVal = assessmentAnswers[capKey + '-' + qNum] || 0;
+        html += '<div class="assessment-question' + answered + '" data-capacity="' + capKey + '" data-q="' + qNum + '">';
+        html += '<div class="question-text">';
+        html += '<span data-lang="en">' + text.en + '</span>';
+        html += '<span data-lang="fr">' + text.fr + '</span>';
+        html += '<span data-lang="zh">' + text.zh + '</span>';
+        html += '</div>';
+        html += '<div class="likert-scale">';
+        [{v:1, en:'Never', fr:'Jamais', zh:'\u4ECE\u4E0D'},
+         {v:2, en:'Sometimes', fr:'Parfois', zh:'\u5076\u5C14'},
+         {v:3, en:'Often', fr:'Souvent', zh:'\u7ECF\u5E38'},
+         {v:4, en:'Always', fr:'Toujours', zh:'\u603B\u662F'}].forEach(opt => {
+          const sel = selectedVal === opt.v ? ' selected' : '';
+          html += '<button class="likert-option' + sel + '" onclick="answer(this,' + opt.v + ')" data-val="' + opt.v + '">';
+          html += '<span data-lang="en">' + opt.en + '</span>';
+          html += '<span data-lang="fr">' + opt.fr + '</span>';
+          html += '<span data-lang="zh">' + opt.zh + '</span>';
+          html += '</button>';
+        });
+        html += '</div></div>';
+      });
+      html += '</div>';
+    });
+
+    container.innerHTML = html;
+    // Re-apply language visibility
+    setLang(document.body.classList.contains('zh') ? 'zh' : document.body.classList.contains('fr') ? 'fr' : 'en');
+  }
+
+  function answer(btn, value) {
+    const qEl = btn.closest('.assessment-question');
+    const qKey = qEl.dataset.capacity + '-' + qEl.dataset.q;
+    assessmentAnswers[qKey] = value;
+    qEl.querySelectorAll('.likert-option').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+    qEl.classList.add('answered');
+    updateProgress();
+  }
+
+  function updateProgress() {
+    const total = 20;
+    const count = Object.keys(assessmentAnswers).length;
+    const el = document.getElementById('answeredCount');
+    const elFr = document.getElementById('answeredCountFr');
+    const elZh = document.getElementById('answeredCountZh');
+    if (el) el.textContent = count;
+    if (elFr) elFr.textContent = count;
+    if (elZh) elZh.textContent = count;
+    document.getElementById('progressFill').style.width = ((count / total) * 100) + '%';
+    document.getElementById('calculateBtn').disabled = (count < total);
+  }
+
+  function calculateResults() {
+    const caps = {
+      ee: { name: 'Extended Engagement', nameFr: 'Engagement \u00C9tendu', nameZh: '\u5EF6\u5C55\u53C2\u4E0E', icon: '\uD83D\uDD0D', sum: 0, count: 0 },
+      aa: { name: 'Aesthetic Awareness', nameFr: 'Conscience Esth\u00E9tique', nameZh: '\u5BA1\u7F8E\u610F\u8BC6', icon: '\uD83D\uDC41\uFE0F', sum: 0, count: 0 },
+      ai: { name: 'Adaptive Intention', nameFr: 'Intention Adaptative', nameZh: '\u9002\u5E94\u6027\u610F\u56FE', icon: '\uD83E\uDDED', sum: 0, count: 0 },
+      ei: { name: 'Expressive Influence', nameFr: 'Influence Expressive', nameZh: '\u8868\u8FBE\u5F71\u54CD\u529B', icon: '\uD83D\uDCE3', sum: 0, count: 0 },
+      conv: { name: 'ACI Convergence', nameFr: 'Convergence ACI', nameZh: 'ACI \u878D\u5408', icon: '\u25C6', sum: 0, count: 0 }
+    };
+
+    for (const [key, val] of Object.entries(assessmentAnswers)) {
+      const cap = key.split('-')[0];
+      if (caps[cap]) { caps[cap].sum += val; caps[cap].count++; }
+    }
+
+    const scores = {};
+    for (const [k, c] of Object.entries(caps)) {
+      scores[k] = c.count > 0 ? Math.round((c.sum / (c.count * 4)) * 100) : 0;
+    }
+
+    drawRadar(scores, caps);
+    drawScoreCards(scores, caps);
+    writeNarrative(scores, caps);
+
+    const panel = document.getElementById('resultsPanel');
+    panel.classList.add('visible');
+    setTimeout(() => panel.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+  }
+
+  function drawRadar(scores, caps) {
+    const svg = document.getElementById('radarChart');
+    const cx = 200, cy = 200, R = 150;
+    const keys = ['ee', 'aa', 'ai', 'ei', 'conv'];
+    const n = keys.length;
+    const angleStep = (2 * Math.PI) / n;
+    const startAngle = -Math.PI / 2;
+
+    // Compute vertices for each axis at radius r
+    function vertices(r) {
+      return keys.map((_, i) => {
+        const a = startAngle + i * angleStep;
+        return [cx + r * Math.cos(a), cy + r * Math.sin(a)];
+      });
+    }
+
+    let html = '';
+    // Grid rings
+    const rings = [0.25, 0.5, 0.75, 1.0];
+    const accentColor = '#3182ce';
+    const paleColor = '#e2e8f0';
+    const navyColor = '#1a1a2e';
+    const medColor = '#4a5568';
+
+    rings.forEach(frac => {
+      const pts = vertices(R * frac).map(p => p.join(',')).join(' ');
+      html += '<polygon points="' + pts + '" fill="none" stroke="' + paleColor + '" stroke-width="1" />';
+    });
+
+    // Axis lines
+    const outerPts = vertices(R);
+    outerPts.forEach(p => {
+      html += '<line x1="' + cx + '" y1="' + cy + '" x2="' + p[0] + '" y2="' + p[1] + '" stroke="' + navyColor + '" stroke-width="1" />';
+    });
+
+    // Data polygon
+    const dataPts = keys.map((k, i) => {
+      const frac = scores[k] / 100;
+      const a = startAngle + i * angleStep;
+      return [cx + R * frac * Math.cos(a), cy + R * frac * Math.sin(a)];
+    });
+    const dataStr = dataPts.map(p => p.join(',')).join(' ');
+    html += '<polygon points="' + dataStr + '" fill="' + accentColor + '" fill-opacity="0.2" stroke="' + accentColor + '" stroke-width="2.5" />';
+
+    // Data dots
+    dataPts.forEach(p => {
+      html += '<circle cx="' + p[0] + '" cy="' + p[1] + '" r="4" fill="' + accentColor + '" />';
+    });
+
+    // Labels
+    const labelR = R + 28;
+    keys.forEach((k, i) => {
+      const a = startAngle + i * angleStep;
+      const lx = cx + labelR * Math.cos(a);
+      const ly = cy + labelR * Math.sin(a);
+      const anchor = Math.abs(lx - cx) < 5 ? 'middle' : (lx > cx ? 'start' : 'end');
+      const dy = ly < cy ? '-0.3em' : (ly > cy + 5 ? '1em' : '0.35em');
+      html += '<text x="' + lx + '" y="' + ly + '" text-anchor="' + anchor + '" dy="' + dy + '" fill="' + medColor + '" font-size="11" font-weight="600" font-family="Inter, sans-serif">' + caps[k].icon + ' ' + scores[k] + '</text>';
+    });
+
+    svg.innerHTML = html;
+  }
+
+  function drawScoreCards(scores, caps) {
+    const grid = document.getElementById('scoreGrid');
+    const keys = ['ee', 'aa', 'ai', 'ei', 'conv'];
+    const lang = document.body.classList.contains('zh') ? 'zh' : document.body.classList.contains('fr') ? 'fr' : 'en';
+    grid.innerHTML = keys.map(k => {
+      const c = caps[k];
+      const label = lang === 'fr' ? c.nameFr : lang === 'zh' ? c.nameZh : c.name;
+      return '<div class="score-card"><div class="score-icon">' + c.icon + '</div><div class="score-value">' + scores[k] + '</div><div class="score-label">' + label + '</div></div>';
+    }).join('');
+  }
+
+  // Map capacities to III skill domains for narrative
+  const capacityToIII = {
+    ee: { skills: ['Future Focus', 'Tinker with Tech', 'Represent Intentions'], domain: 'sustained creative reach' },
+    aa: { skills: ['Cognitive Awareness', 'Represent Intentions'], domain: 'embodied perception and form' },
+    ai: { skills: ['Method + Process', 'Cultivate Opportunities'], domain: 'adaptive understanding and responsive change' },
+    ei: { skills: ['Social Orchestration', 'Engage the Community'], domain: 'creative conviction and expression' },
+    conv: { skills: ["Innovator's Identity", 'Sustain an Ecosystem', 'Mindful Encouragement'], domain: 'integrated creative ecology' }
+  };
+
+  function writeNarrative(scores, caps) {
+    const keys = ['ee', 'aa', 'ai', 'ei', 'conv'];
+    const sorted = [...keys].sort((a, b) => scores[b] - scores[a]);
+    const strongestKey = sorted[0];
+    const developingKey = sorted[sorted.length - 1];
+    const strongest = caps[strongestKey].name;
+    const developing = caps[developingKey].name;
+
+    const archName = selectedArchetype ? (archetypeNames[selectedArchetype] || selectedArchetype) : null;
+    const roleCard = document.querySelector('.rolemodel-card.selected');
+    const roleName = roleCard ? roleCard.querySelector('.rolemodel-name').textContent : null;
+
+    // Extract III skills from the selected role model card
+    let roleSkills = [];
+    if (roleCard) {
+      roleCard.querySelectorAll('.iii-tag').forEach(tag => {
+        roleSkills.push(tag.textContent.trim());
+      });
+    }
+
+    let text = 'Your strongest capacity is ' + strongest + ' (' + scores[strongestKey] + '), and the capacity with the most room for growth is ' + developing + ' (' + scores[developingKey] + ').';
+
+    if (archName) {
+      text += ' As a ' + archName + ', developing ' + developing + ' — the domain of ' + capacityToIII[developingKey].domain + ' — will strengthen the foundation your archetype depends on.';
+    }
+
+    if (roleName && roleSkills.length > 0) {
+      const devSkills = capacityToIII[developingKey].skills;
+      const matching = roleSkills.filter(s => devSkills.some(ds => s.includes(ds)));
+      if (matching.length > 0) {
+        text += ' Your role model ' + roleName + ' demonstrates ' + matching.join(' and ') + ' — skills that directly address your developing capacity.';
+      } else {
+        text += ' Studying the practice of ' + roleName + ' (' + roleSkills.join(', ') + ') offers a complementary perspective to strengthen your ' + developing + '.';
+      }
+    } else if (roleName) {
+      text += ' Studying the practice of ' + roleName + ' offers a concrete path for that development.';
+    }
+
+    const overall = Math.round(keys.reduce((s, k) => s + scores[k], 0) / keys.length);
+    text += ' Your overall ACI score is ' + overall + '.';
+
+    document.getElementById('resultsNarrative').textContent = text;
+    document.getElementById('resultsSubtitle').textContent = archName ? archName + ' Profile' : 'Your Profile';
+  }
 </script>
 </body>
 </html>
