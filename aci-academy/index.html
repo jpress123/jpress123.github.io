@@ -158,83 +158,35 @@
 
   /* ARCHETYPE CARDS */
   .archetype-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;
     margin-bottom: 2rem;
   }
   .archetype-card {
     border: 2px solid var(--pale); border-radius: 10px;
-    padding: 2rem 1.6rem; cursor: pointer;
+    padding: 1.2rem 1rem; cursor: pointer; text-align: center;
     transition: border-color 0.25s, box-shadow 0.25s, transform 0.2s;
     background: var(--white); position: relative;
   }
   .archetype-card:hover {
-    border-color: var(--accent); box-shadow: 0 6px 24px rgba(49,130,206,0.1);
+    border-color: var(--accent); box-shadow: 0 4px 16px rgba(49,130,206,0.1);
     transform: translateY(-2px);
   }
   .archetype-card.selected {
-    border-color: var(--accent); box-shadow: 0 6px 24px rgba(49,130,206,0.15);
+    border-color: var(--accent); box-shadow: 0 4px 16px rgba(49,130,206,0.15);
   }
   .archetype-card.selected::after {
-    content: '✓'; position: absolute; top: 1rem; right: 1rem;
-    width: 24px; height: 24px; border-radius: 50%;
+    content: '✓'; position: absolute; top: 0.6rem; right: 0.6rem;
+    width: 22px; height: 22px; border-radius: 50%;
     background: var(--accent); color: var(--white);
     display: flex; align-items: center; justify-content: center;
-    font-size: 0.75rem; font-weight: 700;
+    font-size: 0.7rem; font-weight: 700;
   }
   .archetype-icon {
-    font-size: 1.6rem; margin-bottom: 0.8rem;
+    font-size: 1.5rem; margin-bottom: 0.4rem;
   }
   .archetype-name {
     font-family: 'Playfair Display', serif;
-    font-size: 1.25rem; font-weight: 600; color: var(--navy);
-    margin-bottom: 0.4rem;
-  }
-  .archetype-capacities {
-    font-size: 0.72rem; font-weight: 600; color: var(--accent);
-    text-transform: uppercase; letter-spacing: 0.08em;
-    margin-bottom: 0.8rem;
-  }
-  .archetype-question {
-    font-size: 0.88rem; color: var(--medium); line-height: 1.6;
-    font-style: italic;
-  }
-
-  /* LEADER ROW */
-  .leader-row {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
-    margin-bottom: 2rem;
-  }
-  .leader-card {
-    border: 2px solid var(--pale); border-radius: 10px;
-    padding: 1.6rem 1.4rem; cursor: pointer;
-    transition: border-color 0.25s, box-shadow 0.25s, transform 0.2s;
-    background: var(--white); position: relative;
-  }
-  .leader-card:hover {
-    border-color: var(--accent); box-shadow: 0 6px 24px rgba(49,130,206,0.1);
-    transform: translateY(-2px);
-  }
-  .leader-card.selected {
-    border-color: var(--accent); box-shadow: 0 6px 24px rgba(49,130,206,0.15);
-  }
-  .leader-card.selected::after {
-    content: '✓'; position: absolute; top: 1rem; right: 1rem;
-    width: 24px; height: 24px; border-radius: 50%;
-    background: var(--accent); color: var(--white);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 0.75rem; font-weight: 700;
-  }
-  .leader-label {
-    font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em;
-    text-transform: uppercase; color: var(--light); margin-bottom: 0.3rem;
-  }
-  .leader-name {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.1rem; font-weight: 600; color: var(--navy);
-    margin-bottom: 0.3rem;
-  }
-  .leader-desc {
-    font-size: 0.82rem; color: var(--medium); line-height: 1.55;
+    font-size: 1.05rem; font-weight: 600; color: var(--navy);
   }
 
   /* PROCEED BUTTON */
@@ -339,8 +291,7 @@
   @media (max-width: 768px) {
     .hero { padding-top: 7rem; }
     .hero h1 { font-size: 2.1rem; }
-    .archetype-grid { grid-template-columns: 1fr; }
-    .leader-row { grid-template-columns: 1fr; }
+    .archetype-grid { grid-template-columns: repeat(2, 1fr); }
     .nav-links { display: none; }
     .capacities-bar { gap: 1rem; }
     .capacity-pip { max-width: 120px; }
@@ -416,19 +367,19 @@
 <!-- HERO -->
 <header class="hero">
   <div class="hero-badge">
-    <span data-lang="en">From the book <em>Agentic Creative Intelligence</em></span>
-    <span data-lang="fr">Issu du livre <em>Agentic Creative Intelligence</em></span>
-    <span data-lang="zh">源自著作《能动创造智能》</span>
+    <span data-lang="en">From the forthcoming book <em>Agentic Creative Intelligence</em> (Fall, 2026)</span>
+    <span data-lang="fr">Issu du livre &agrave; para&icirc;tre <em>Agentic Creative Intelligence</em> (automne 2026)</span>
+    <span data-lang="zh">源自即将出版的著作《能动创造智能》（2026年秋）</span>
   </div>
   <h1 data-lang="en">ACI Academy</h1>
   <h1 data-lang="fr">Acad&eacute;mie ACI</h1>
   <h1 data-lang="zh">ACI 学院</h1>
-  <p class="subtitle" data-lang="en">Develop the five creative capacities AI cannot replicate. Assess where you stand, study a role model, and generate a personalised Creative Council you can upload to any AI.</p>
-  <p class="subtitle" data-lang="fr">D&eacute;veloppez les cinq capacit&eacute;s cr&eacute;atives que l'IA ne peut pas reproduire. &Eacute;valuez votre niveau, &eacute;tudiez un mod&egrave;le, et g&eacute;n&eacute;rez un Conseil Cr&eacute;atif personnalis&eacute;.</p>
-  <p class="subtitle" data-lang="zh">培养人工智能无法复制的五种创造力。评估现状，研究榜样，生成可上传至任何AI的个人创意理事会。</p>
-  <p class="tagline" data-lang="en">AI makes cognitive retreat effortless. ACI Academy makes the response practical.</p>
-  <p class="tagline" data-lang="fr">L'IA rend le retrait cognitif sans effort. L'Acad&eacute;mie ACI rend la r&eacute;ponse pratique.</p>
-  <p class="tagline" data-lang="zh">AI 让认知退缩变得毫不费力。ACI 学院让应对变得切实可行。</p>
+  <p class="subtitle" data-lang="en">Develop the five creative capacities of Agentic Creative Intelligence to ensure your engagement with AI is meaningful. Assess where you stand, be inspired by a role model, and generate a personalised Creative Council to guide your creative collaboration with any AI.</p>
+  <p class="subtitle" data-lang="fr">D&eacute;veloppez les cinq capacit&eacute;s cr&eacute;atives de l'Intelligence Cr&eacute;ative Agentique pour garantir que votre engagement avec l'IA soit significatif. &Eacute;valuez votre niveau, inspirez-vous d'un mod&egrave;le, et g&eacute;n&eacute;rez un Conseil Cr&eacute;atif personnalis&eacute; pour guider votre collaboration cr&eacute;ative avec toute IA.</p>
+  <p class="subtitle" data-lang="zh">培养能动创造智能的五种创造力，确保您与AI的互动富有意义。评估现状，从榜样中获得启发，生成个人创意理事会来指导您与任何AI的创造性协作。</p>
+  <p class="tagline" data-lang="en">AI makes prompting frictionless, and cognitive retreat effortless. The ACI Academy aims to reclaim human agency with practices for the agentic era.</p>
+  <p class="tagline" data-lang="fr">L'IA rend le prompting sans friction et le retrait cognitif sans effort. L'Acad&eacute;mie ACI vise &agrave; reconqu&eacute;rir l'agentivit&eacute; humaine avec des pratiques pour l'&egrave;re agentique.</p>
+  <p class="tagline" data-lang="zh">AI 让提示变得无摩擦，让认知退缩变得毫不费力。ACI 学院旨在通过智能体时代的实践重塑人类能动性。</p>
 </header>
 
 <!-- JOURNEY MAP -->
@@ -515,30 +466,36 @@
       <span data-lang="zh">选择您的原型</span>
     </h2>
     <p class="section-intro">
-      <span data-lang="en">Each archetype represents a distinct entry point into creative work. Choose the one whose question resonates with your situation — not as a personality label, but as where you stand right now.</span>
-      <span data-lang="fr">Chaque arch&eacute;type repr&eacute;sente un point d'entr&eacute;e distinct dans le travail cr&eacute;atif. Choisissez celui dont la question correspond &agrave; votre situation actuelle.</span>
-      <span data-lang="zh">每个原型代表进入创造性工作的独特切入点。选择与您当前处境最相符的那个问题。</span>
+      <span data-lang="en">Each archetype represents a distinct positioning on creative work. Choose the one whose question resonates with the role you anticipate playing — not as a personality label, but how you or others perceive who you need to be in this situation.</span>
+      <span data-lang="fr">Chaque arch&eacute;type repr&eacute;sente un positionnement distinct sur le travail cr&eacute;atif. Choisissez celui dont la question correspond au r&ocirc;le que vous anticipez — non pas comme une &eacute;tiquette de personnalit&eacute;, mais comme la fa&ccedil;on dont vous ou les autres percevez qui vous devez &ecirc;tre dans cette situation.</span>
+      <span data-lang="zh">每个原型代表对创造性工作的独特定位。选择与您预期扮演的角色最相符的问题——不是作为性格标签，而是您或他人认为您在这种情境中需要成为的角色。</span>
     </p>
 
-    <!-- PROFESSIONAL ARCHETYPES (3-col) -->
+    <!-- 6 ARCHETYPES (3x2 grid) -->
     <div class="archetype-grid" data-lang="en">
       <div class="archetype-card" onclick="selectArchetype(this, 'creative')">
         <div class="archetype-icon">🎨</div>
         <div class="archetype-name">Creative</div>
-        <div class="archetype-capacities">Aesthetic Awareness + Expressive Influence</div>
-        <div class="archetype-question">"I make things. How do I protect the embodied skills AI threatens to replace?"</div>
       </div>
       <div class="archetype-card" onclick="selectArchetype(this, 'innovator')">
         <div class="archetype-icon">⚙️</div>
         <div class="archetype-name">Innovator</div>
-        <div class="archetype-capacities">Extended Engagement + Adaptive Intention</div>
-        <div class="archetype-question">"I build tools and systems. How do I ensure they serve human meaning?"</div>
       </div>
       <div class="archetype-card" onclick="selectArchetype(this, 'educator')">
         <div class="archetype-icon">📖</div>
         <div class="archetype-name">Educator</div>
-        <div class="archetype-capacities">Adaptive Intention + Aesthetic Awareness</div>
-        <div class="archetype-question">"I develop people. How do I cultivate capacity AI cannot shortcut?"</div>
+      </div>
+      <div class="archetype-card" onclick="selectArchetype(this, 'changemaker')">
+        <div class="archetype-icon">🌍</div>
+        <div class="archetype-name">Changemaker</div>
+      </div>
+      <div class="archetype-card" onclick="selectArchetype(this, 'leader-org')">
+        <div class="archetype-icon">🏛️</div>
+        <div class="archetype-name">Organisational Leader</div>
+      </div>
+      <div class="archetype-card" onclick="selectArchetype(this, 'leader-community')">
+        <div class="archetype-icon">🤝</div>
+        <div class="archetype-name">Community Leader</div>
       </div>
     </div>
 
@@ -546,20 +503,26 @@
       <div class="archetype-card" onclick="selectArchetype(this, 'creative')">
         <div class="archetype-icon">🎨</div>
         <div class="archetype-name">Cr&eacute;atif</div>
-        <div class="archetype-capacities">Conscience Esth&eacute;tique + Influence Expressive</div>
-        <div class="archetype-question">&laquo; Je cr&eacute;e. Comment prot&eacute;ger les comp&eacute;tences incarn&eacute;es que l'IA menace de remplacer ? &raquo;</div>
       </div>
       <div class="archetype-card" onclick="selectArchetype(this, 'innovator')">
         <div class="archetype-icon">⚙️</div>
         <div class="archetype-name">Innovateur</div>
-        <div class="archetype-capacities">Engagement &Eacute;tendu + Intention Adaptative</div>
-        <div class="archetype-question">&laquo; Je construis des outils et des syst&egrave;mes. Comment m'assurer qu'ils servent le sens humain ? &raquo;</div>
       </div>
       <div class="archetype-card" onclick="selectArchetype(this, 'educator')">
         <div class="archetype-icon">📖</div>
         <div class="archetype-name">&Eacute;ducateur</div>
-        <div class="archetype-capacities">Intention Adaptative + Conscience Esth&eacute;tique</div>
-        <div class="archetype-question">&laquo; Je d&eacute;veloppe les gens. Comment cultiver des capacit&eacute;s que l'IA ne peut pas court-circuiter ? &raquo;</div>
+      </div>
+      <div class="archetype-card" onclick="selectArchetype(this, 'changemaker')">
+        <div class="archetype-icon">🌍</div>
+        <div class="archetype-name">Acteur du changement</div>
+      </div>
+      <div class="archetype-card" onclick="selectArchetype(this, 'leader-org')">
+        <div class="archetype-icon">🏛️</div>
+        <div class="archetype-name">Leader Organisationnel</div>
+      </div>
+      <div class="archetype-card" onclick="selectArchetype(this, 'leader-community')">
+        <div class="archetype-icon">🤝</div>
+        <div class="archetype-name">Leader Communautaire</div>
       </div>
     </div>
 
@@ -567,99 +530,26 @@
       <div class="archetype-card" onclick="selectArchetype(this, 'creative')">
         <div class="archetype-icon">🎨</div>
         <div class="archetype-name">创作者</div>
-        <div class="archetype-capacities">审美意识 + 表达影响力</div>
-        <div class="archetype-question">"我创造事物。如何保护AI威胁取代的具身技能？"</div>
       </div>
       <div class="archetype-card" onclick="selectArchetype(this, 'innovator')">
         <div class="archetype-icon">⚙️</div>
         <div class="archetype-name">创新者</div>
-        <div class="archetype-capacities">延展参与 + 适应性意图</div>
-        <div class="archetype-question">"我构建工具和系统。如何确保它们服务于人类意义？"</div>
       </div>
       <div class="archetype-card" onclick="selectArchetype(this, 'educator')">
         <div class="archetype-icon">📖</div>
         <div class="archetype-name">教育者</div>
-        <div class="archetype-capacities">适应性意图 + 审美意识</div>
-        <div class="archetype-question">"我培养人才。如何培育AI无法走捷径的能力？"</div>
       </div>
-    </div>
-
-    <!-- CHANGEMAKER (standalone to bridge 3-col and 2-col) -->
-    <div class="archetype-grid" style="grid-template-columns: 1fr; max-width: 380px; margin: 0 auto 2rem;" data-lang="en">
-      <div class="archetype-card" onclick="selectArchetype(this, 'changemaker')">
-        <div class="archetype-icon">🌍</div>
-        <div class="archetype-name">Changemaker</div>
-        <div class="archetype-capacities">Expressive Influence + Extended Engagement</div>
-        <div class="archetype-question">"I reshape systems. How do I maintain creative conviction at scale?"</div>
-      </div>
-    </div>
-
-    <div class="archetype-grid" style="grid-template-columns: 1fr; max-width: 380px; margin: 0 auto 2rem;" data-lang="fr">
-      <div class="archetype-card" onclick="selectArchetype(this, 'changemaker')">
-        <div class="archetype-icon">🌍</div>
-        <div class="archetype-name">Acteur du changement</div>
-        <div class="archetype-capacities">Influence Expressive + Engagement &Eacute;tendu</div>
-        <div class="archetype-question">&laquo; Je transforme les syst&egrave;mes. Comment maintenir la conviction cr&eacute;ative &agrave; grande &eacute;chelle ? &raquo;</div>
-      </div>
-    </div>
-
-    <div class="archetype-grid" style="grid-template-columns: 1fr; max-width: 380px; margin: 0 auto 2rem;" data-lang="zh">
       <div class="archetype-card" onclick="selectArchetype(this, 'changemaker')">
         <div class="archetype-icon">🌍</div>
         <div class="archetype-name">变革者</div>
-        <div class="archetype-capacities">表达影响力 + 延展参与</div>
-        <div class="archetype-question">"我重塑系统。如何在规模化中保持创造性信念？"</div>
       </div>
-    </div>
-
-    <!-- LEADER SUB-VARIANTS (2-col) -->
-    <div class="section-label" style="margin-top: 1rem;">
-      <span data-lang="en">Leader Archetypes</span>
-      <span data-lang="fr">Arch&eacute;types de Leader</span>
-      <span data-lang="zh">领导者原型</span>
-    </div>
-    <p style="font-size: 0.88rem; color: var(--light); margin-bottom: 1.5rem; max-width: 580px;">
-      <span data-lang="en">Leaders coordinate others' creative work across all four capacities. Choose the context that fits.</span>
-      <span data-lang="fr">Les leaders coordonnent le travail cr&eacute;atif des autres &agrave; travers les quatre capacit&eacute;s.</span>
-      <span data-lang="zh">领导者在四种能力之间协调他人的创造性工作。选择适合您的情境。</span>
-    </p>
-
-    <div class="leader-row" data-lang="en">
-      <div class="leader-card" onclick="selectArchetype(this, 'leader-org')">
-        <div class="leader-label">Leader</div>
-        <div class="leader-name">Organisational Leader</div>
-        <div class="leader-desc">"I coordinate Innovators and Educators within institutions. How do I hold the ecology together?"</div>
+      <div class="archetype-card" onclick="selectArchetype(this, 'leader-org')">
+        <div class="archetype-icon">🏛️</div>
+        <div class="archetype-name">组织领导者</div>
       </div>
-      <div class="leader-card" onclick="selectArchetype(this, 'leader-community')">
-        <div class="leader-label">Leader</div>
-        <div class="leader-name">Community Leader</div>
-        <div class="leader-desc">"I coordinate Changemakers and Creatives across civic contexts. How do I hold the ecology together?"</div>
-      </div>
-    </div>
-
-    <div class="leader-row" data-lang="fr">
-      <div class="leader-card" onclick="selectArchetype(this, 'leader-org')">
-        <div class="leader-label">Leader</div>
-        <div class="leader-name">Leader Organisationnel</div>
-        <div class="leader-desc">&laquo; Je coordonne des Innovateurs et des &Eacute;ducateurs au sein d'institutions. Comment maintenir l'&eacute;cologie ? &raquo;</div>
-      </div>
-      <div class="leader-card" onclick="selectArchetype(this, 'leader-community')">
-        <div class="leader-label">Leader</div>
-        <div class="leader-name">Leader Communautaire</div>
-        <div class="leader-desc">&laquo; Je coordonne des Acteurs du changement et des Cr&eacute;atifs dans des contextes civiques. Comment maintenir l'&eacute;cologie ? &raquo;</div>
-      </div>
-    </div>
-
-    <div class="leader-row" data-lang="zh">
-      <div class="leader-card" onclick="selectArchetype(this, 'leader-org')">
-        <div class="leader-label">领导者</div>
-        <div class="leader-name">组织领导者</div>
-        <div class="leader-desc">"我在机构内协调创新者和教育者。如何维系这个生态？"</div>
-      </div>
-      <div class="leader-card" onclick="selectArchetype(this, 'leader-community')">
-        <div class="leader-label">领导者</div>
-        <div class="leader-name">社区领导者</div>
-        <div class="leader-desc">"我在公民情境中协调变革者和创作者。如何维系这个生态？"</div>
+      <div class="archetype-card" onclick="selectArchetype(this, 'leader-community')">
+        <div class="archetype-icon">🤝</div>
+        <div class="archetype-name">社区领导者</div>
       </div>
     </div>
 
@@ -762,7 +652,7 @@
 
   function selectArchetype(card, archetype) {
     // Clear all selections across all language versions
-    document.querySelectorAll('.archetype-card, .leader-card').forEach(c => c.classList.remove('selected'));
+    document.querySelectorAll('.archetype-card').forEach(c => c.classList.remove('selected'));
     // Select all cards with same archetype across languages
     document.querySelectorAll(`[onclick*="'${archetype}'"]`).forEach(c => c.classList.add('selected'));
     selectedArchetype = archetype;
