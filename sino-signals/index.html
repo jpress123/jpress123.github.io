@@ -986,6 +986,19 @@
     document.querySelector('.signal-grid-wrapper').style.display = '';
   };
 
+  window.printSignal = function() {
+    var content = document.getElementById('expandedContent').innerHTML;
+    var win = window.open('', '_blank');
+    win.document.write('<html><head><title>Sino-Signals</title>');
+    win.document.write('<style>body{font-family:Inter,sans-serif;max-width:700px;margin:2rem auto;padding:0 1rem;color:#1a1a2e;line-height:1.7}h2{font-family:"Playfair Display",serif}button,.expanded-back,.expanded-back-bottom,.share-btn,.related-card{display:none!important}.badge,.tag{font-size:0.72rem;padding:0.2rem 0.5rem;border:1px solid #e2e8f0;border-radius:12px;display:inline-block;margin-right:0.4rem}.expanded-section{margin-bottom:1.5rem}.expanded-section-label{font-weight:700;margin-bottom:0.3rem}</style>');
+    win.document.write('</head><body>');
+    win.document.write(content);
+    win.document.write('<hr style="margin-top:2rem;border:none;border-top:1px solid #e2e8f0"><p style="font-size:0.75rem;color:#718096">Sino-Signals &middot; josephpress.com/sino-signals</p>');
+    win.document.write('</body></html>');
+    win.document.close();
+    win.print();
+  };
+
   window.shareSignal = function(encodedTitle) {
     var title = decodeURIComponent(encodedTitle);
     var text = title + ' // Sino-Signals by Joseph Press\nhttps://www.josephpress.com/sino-signals/';
