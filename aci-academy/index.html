@@ -194,6 +194,50 @@
     font-size: 1.05rem; font-weight: 600; color: var(--navy);
   }
 
+  /* ROLE MODEL CARDS */
+  .rolemodel-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  .rolemodel-card {
+    border: 2px solid var(--pale); border-radius: 10px;
+    padding: 1.4rem 1.4rem; cursor: pointer; text-align: left;
+    transition: border-color 0.25s, box-shadow 0.25s, transform 0.2s;
+    background: var(--white); position: relative;
+  }
+  .rolemodel-card:hover {
+    border-color: var(--accent); box-shadow: 0 4px 16px rgba(49,130,206,0.1);
+    transform: translateY(-2px);
+  }
+  .rolemodel-card.selected {
+    border-color: var(--accent); box-shadow: 0 4px 16px rgba(49,130,206,0.15);
+  }
+  .rolemodel-card.selected::after {
+    content: '✓'; position: absolute; top: 0.8rem; right: 0.8rem;
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--accent); color: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.7rem; font-weight: 700;
+  }
+  .rolemodel-card.hidden { display: none; }
+  .rolemodel-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem; font-weight: 600; color: var(--navy);
+    margin-bottom: 0.15rem;
+  }
+  .rolemodel-domain {
+    font-size: 0.72rem; font-weight: 600; color: var(--accent);
+    text-transform: uppercase; letter-spacing: 0.06em;
+    margin-bottom: 0.5rem;
+  }
+  .rolemodel-vignette {
+    font-size: 0.82rem; color: var(--medium); line-height: 1.55;
+  }
+  .rolemodel-empty {
+    grid-column: 1 / -1; text-align: center; padding: 2rem;
+    font-size: 0.9rem; color: var(--light); font-style: italic;
+  }
+
   /* PROCEED BUTTON */
   .proceed-area {
     text-align: center; margin-top: 2.5rem;
@@ -301,6 +345,7 @@
     .hero h1 { font-size: 2.1rem; }
     .archetype-grid { grid-template-columns: repeat(2, 1fr); }
     .capacities-grid { grid-template-columns: repeat(2, 1fr); }
+    .rolemodel-grid { grid-template-columns: 1fr; }
     .nav-links { display: none; }
     .journey-steps { gap: 0; }
     .journey-connector { width: 16px; }
@@ -650,24 +695,199 @@
   </div>
 </section>
 
-<!-- STAGE 2 PLACEHOLDER -->
-<div id="role-model" class="coming-soon-section">
-  <div class="coming-soon-badge">
-    <span data-lang="en">Coming Soon</span>
-    <span data-lang="fr">Bient&ocirc;t</span>
-    <span data-lang="zh">即将推出</span>
+<!-- STAGE 2: PICK YOUR ROLE MODEL -->
+<section id="role-model" style="background: var(--bg);">
+  <div class="container">
+    <div class="section-label">
+      <span data-lang="en">Stage 2</span>
+      <span data-lang="fr">&Eacute;tape 2</span>
+      <span data-lang="zh">第二阶段</span>
+    </div>
+    <h2 class="section-title">
+      <span data-lang="en">Pick Your Role Model</span>
+      <span data-lang="fr">Choisissez votre mod&egrave;le</span>
+      <span data-lang="zh">选择您的榜样</span>
+    </h2>
+    <p class="section-intro">
+      <span data-lang="en">Study practitioners who demonstrate ACI at its most developed — from Miyazaki to Miles. Choose the one whose capabilities you want to develop. Some practitioners appear across multiple archetypes — ACI capacity is not archetype-locked.</span>
+      <span data-lang="fr">&Eacute;tudiez des praticiens qui d&eacute;montrent l'ACI &agrave; son plus haut niveau — de Miyazaki &agrave; Miles. Choisissez celui dont les capacit&eacute;s vous inspirent. Certains praticiens apparaissent dans plusieurs arch&eacute;types.</span>
+      <span data-lang="zh">研究展现最成熟ACI的实践者——从宫崎骏到迈尔斯。选择您想要发展的能力方向。部分实践者跨越多个原型——ACI能力不受原型限制。</span>
+    </p>
+
+    <p id="roleModelPrompt" style="font-size: 0.88rem; color: var(--light); font-style: italic; margin-bottom: 1.5rem; display: none;">
+      <span data-lang="en">Showing role models for: <strong id="roleModelArchLabel"></strong></span>
+      <span data-lang="fr">Mod&egrave;les pour : <strong id="roleModelArchLabelFr"></strong></span>
+      <span data-lang="zh">显示原型的榜样：<strong id="roleModelArchLabelZh"></strong></span>
+    </p>
+
+    <div id="roleModelGrid" class="rolemodel-grid">
+
+      <!-- CREATIVE ARCHETYPE ROLE MODELS -->
+
+      <div class="rolemodel-card" data-archetypes="creative innovator" onclick="selectRoleModel(this, 'calatrava')">
+        <div class="rolemodel-name">Santiago Calatrava</div>
+        <div class="rolemodel-domain">Built Arts &middot; Engineering</div>
+        <div class="rolemodel-vignette">Trained as both architect and structural engineer, Calatrava draws every day to maintain the somatic connection between hand, eye, and structural intuition. His tools extend his engagement with physical forces rather than replacing it.</div>
+      </div>
+
+      <div class="rolemodel-card" data-archetypes="creative" onclick="selectRoleModel(this, 'miyazaki')">
+        <div class="rolemodel-name">Hayao Miyazaki</div>
+        <div class="rolemodel-domain">Film &middot; Animation</div>
+        <div class="rolemodel-vignette">Miyazaki storyboards by hand before any dialogue is written, insisting that embodied drawing — not scripting — is where the story lives. Studio Ghibli's resistance to digital shortcuts is a deliberate stance on creative integrity.</div>
+      </div>
+
+      <div class="rolemodel-card" data-archetypes="creative educator leader-org leader-community" onclick="selectRoleModel(this, 'davis')">
+        <div class="rolemodel-name">Miles Davis</div>
+        <div class="rolemodel-domain">Music &middot; Mentoring</div>
+        <div class="rolemodel-vignette">Davis assembled bands as developmental incubators — Coltrane, Hancock, Shorter all emerged from his ensembles. He knew when to direct, when to withhold, and when to reinvent entirely. Each era was a new creative ecology.</div>
+      </div>
+
+      <div class="rolemodel-card" data-archetypes="creative changemaker leader-org leader-community" onclick="selectRoleModel(this, 'bowie')">
+        <div class="rolemodel-name">David Bowie</div>
+        <div class="rolemodel-domain">Music &middot; Performance &middot; Culture</div>
+        <div class="rolemodel-vignette">Bowie spanned painting, kabuki, internet ventures, and financial innovation across a single career. He built collaborative ecologies with Eno, Visconti, and Fripp — each collaborator's entry point complementing his own.</div>
+      </div>
+
+      <div class="rolemodel-card" data-archetypes="creative" onclick="selectRoleModel(this, 'bausch')">
+        <div class="rolemodel-name">Pina Bausch</div>
+        <div class="rolemodel-domain">Dance &middot; Theatre</div>
+        <div class="rolemodel-vignette">Bausch's dancers drew on their own lived experience as choreographic material. Tanztheater was not performance of a script but embodied research — the body as the primary instrument of creative knowledge.</div>
+      </div>
+
+      <div class="rolemodel-card" data-archetypes="creative" onclick="selectRoleModel(this, 'barragan')">
+        <div class="rolemodel-name">Luis Barrag&aacute;n</div>
+        <div class="rolemodel-domain">Architecture</div>
+        <div class="rolemodel-vignette">Barrag&aacute;n treated colour and light as spatial materials with emotional weight. His architecture demonstrates that aesthetic awareness is not decoration — it is the primary structure of how a space makes you feel.</div>
+      </div>
+
+      <div class="rolemodel-card" data-archetypes="creative innovator" onclick="selectRoleModel(this, 'herndon')">
+        <div class="rolemodel-name">Holly Herndon</div>
+        <div class="rolemodel-domain">Music &middot; AI</div>
+        <div class="rolemodel-vignette">Herndon trained an AI on her own vocal tradition — liturgical singing, choral practice — creating a collaborator that extends rather than replaces her embodied voice. A working model of human-AI creative partnership.</div>
+      </div>
+
+      <div class="rolemodel-card" data-archetypes="creative educator" onclick="selectRoleModel(this, 'abramovic')">
+        <div class="rolemodel-name">Marina Abramovi&cacute;</div>
+        <div class="rolemodel-domain">Performance Art</div>
+        <div class="rolemodel-vignette">Abramovi&cacute; made duration and physical endurance the medium itself. Her performances demand sustained presence from both artist and audience — an extended engagement that no shortcut can replicate.</div>
+      </div>
+
+      <div class="rolemodel-card" data-archetypes="creative" onclick="selectRoleModel(this, 'adjaye')">
+        <div class="rolemodel-name">David Adjaye</div>
+        <div class="rolemodel-domain">Architecture &middot; Culture</div>
+        <div class="rolemodel-vignette">Adjaye draws on African spatial traditions, material culture, and communal memory to shape buildings that carry meaning beyond function. His work demonstrates aesthetic awareness rooted in cultural specificity.</div>
+      </div>
+
+      <div class="rolemodel-card" data-archetypes="creative changemaker" onclick="selectRoleModel(this, 'salgado')">
+        <div class="rolemodel-name">Sebasti&atilde;o Salgado</div>
+        <div class="rolemodel-domain">Photography &middot; Environmentalism</div>
+        <div class="rolemodel-vignette">Salgado spent years embedded in the communities he photographed — workers, migrants, landscapes. His expressive influence comes from sustained engagement, not from capturing moments but from inhabiting them.</div>
+      </div>
+
+      <!-- INNOVATOR ARCHETYPE ROLE MODELS -->
+
+      <div class="rolemodel-card" data-archetypes="innovator" onclick="selectRoleModel(this, 'eliasson')">
+        <div class="rolemodel-name">Olafur Eliasson</div>
+        <div class="rolemodel-domain">Art &middot; Technology</div>
+        <div class="rolemodel-vignette">Eliasson runs his studio as a laboratory where technology serves perceptual experience. Every installation is an experiment in how people sense space, light, and atmosphere — innovation grounded in embodied perception.</div>
+      </div>
+
+      <div class="rolemodel-card" data-archetypes="innovator" onclick="selectRoleModel(this, 'evans')">
+        <div class="rolemodel-name">Bill Evans</div>
+        <div class="rolemodel-domain">Music &middot; Recording</div>
+        <div class="rolemodel-vignette">Evans described his approach to improvisation through sumi-e painting — you must know the gesture before the brush touches paper. His recordings with Scott LaFaro demonstrate &ldquo;sympathy to bend&rdquo; in real-time collaboration.</div>
+      </div>
+
+      <div class="rolemodel-card" data-archetypes="innovator educator" onclick="selectRoleModel(this, 'papert')">
+        <div class="rolemodel-name">Seymour Papert</div>
+        <div class="rolemodel-domain">Computing &middot; Education</div>
+        <div class="rolemodel-vignette">Papert built Logo and the concept of constructionism — the idea that people learn by making things in the world, not by receiving information. His tools extended children's engagement with mathematical thinking through play.</div>
+      </div>
+
+      <div class="rolemodel-card" data-archetypes="innovator changemaker" onclick="selectRoleModel(this, 'mazzucato')">
+        <div class="rolemodel-name">Mariana Mazzucato</div>
+        <div class="rolemodel-domain">Economics &middot; Innovation Policy</div>
+        <div class="rolemodel-vignette">Mazzucato reframed who creates value in innovation systems, challenging the assumption that only the private sector takes creative risk. Her work reshapes how institutions understand their own adaptive intention.</div>
+      </div>
+
+      <!-- EDUCATOR ARCHETYPE ROLE MODELS -->
+
+      <div class="rolemodel-card" data-archetypes="educator changemaker" onclick="selectRoleModel(this, 'freire')">
+        <div class="rolemodel-name">Paulo Freire</div>
+        <div class="rolemodel-domain">Education &middot; Social Change</div>
+        <div class="rolemodel-vignette">Freire rejected the &ldquo;banking model&rdquo; of education where knowledge is deposited into passive recipients. His pedagogy of the oppressed is a blueprint for cultivating agency — the learner as active creator of meaning.</div>
+      </div>
+
+      <div class="rolemodel-card" data-archetypes="educator" onclick="selectRoleModel(this, 'montessori')">
+        <div class="rolemodel-name">Maria Montessori</div>
+        <div class="rolemodel-domain">Education &middot; Child Development</div>
+        <div class="rolemodel-vignette">Montessori designed learning environments where the child's hands, senses, and movement drive understanding — not instruction. Her method is a century-old argument that embodied engagement is the foundation of intelligence.</div>
+      </div>
+
+      <div class="rolemodel-card" data-archetypes="educator leader-org leader-community" onclick="selectRoleModel(this, 'hooks')">
+        <div class="rolemodel-name">bell hooks</div>
+        <div class="rolemodel-domain">Education &middot; Cultural Criticism</div>
+        <div class="rolemodel-vignette">hooks treated the classroom as a space of radical possibility where engaged pedagogy demands the teacher's full presence. Teaching is not transmission but a practice of freedom — adaptive intention embodied in relationship.</div>
+      </div>
+
+      <!-- CHANGEMAKER ARCHETYPE ROLE MODELS -->
+
+      <div class="rolemodel-card" data-archetypes="changemaker" onclick="selectRoleModel(this, 'aiweiwei')">
+        <div class="rolemodel-name">Ai Weiwei</div>
+        <div class="rolemodel-domain">Art &middot; Activism</div>
+        <div class="rolemodel-vignette">Ai Weiwei uses creativity as the power to reject the status quo and reveal what systems would prefer to hide. His expressive influence operates at the intersection of art, architecture, and political disruption.</div>
+      </div>
+
+      <div class="rolemodel-card" data-archetypes="changemaker leader-community" onclick="selectRoleModel(this, 'maathai')">
+        <div class="rolemodel-name">Wangari Maathai</div>
+        <div class="rolemodel-domain">Environmentalism &middot; Civic Leadership</div>
+        <div class="rolemodel-vignette">Maathai's Green Belt Movement connected tree planting to women's empowerment, democratic governance, and ecological restoration. She demonstrated that creative conviction at scale requires working through communities, not above them.</div>
+      </div>
+
+      <div class="rolemodel-card" data-archetypes="changemaker innovator" onclick="selectRoleModel(this, 'yunus')">
+        <div class="rolemodel-name">Muhammad Yunus</div>
+        <div class="rolemodel-domain">Social Enterprise &middot; Finance</div>
+        <div class="rolemodel-vignette">Yunus built microfinance by staying immersed in the lives of people the formal system excluded. Grameen Bank emerged from extended engagement with a problem — not from optimising existing models but from seeing what they missed.</div>
+      </div>
+
+      <!-- LEADER ARCHETYPE ROLE MODELS -->
+
+      <div class="rolemodel-card" data-archetypes="leader-org leader-community" onclick="selectRoleModel(this, 'ardern')">
+        <div class="rolemodel-name">Jacinda Ardern</div>
+        <div class="rolemodel-domain">Political Leadership</div>
+        <div class="rolemodel-vignette">Ardern led through crisis by combining empathetic presence with decisive action — holding the ecology of a nation's grief, safety, and collective identity together. Leadership as the integration of all four capacities under pressure.</div>
+      </div>
+
+      <div class="rolemodel-card" data-archetypes="leader-org innovator" onclick="selectRoleModel(this, 'ive')">
+        <div class="rolemodel-name">Jony Ive</div>
+        <div class="rolemodel-domain">Design &middot; Industry</div>
+        <div class="rolemodel-vignette">Ive coordinated engineers, materials scientists, and interaction designers toward products where every decision served a coherent sensory experience. His leadership held aesthetic awareness and adaptive intention in constant tension.</div>
+      </div>
+
+      <div class="rolemodel-card" data-archetypes="leader-org leader-community educator" onclick="selectRoleModel(this, 'senge')">
+        <div class="rolemodel-name">Peter Senge</div>
+        <div class="rolemodel-domain">Systems Thinking &middot; Organisational Learning</div>
+        <div class="rolemodel-vignette">Senge's learning organisation is a framework for leaders who coordinate others' creative work. His five disciplines describe the conditions under which collective intelligence develops rather than fragments.</div>
+      </div>
+
+      <div class="rolemodel-empty" id="roleModelEmpty">
+        <span data-lang="en">Select an archetype in Stage 1 to see relevant role models.</span>
+        <span data-lang="fr">S&eacute;lectionnez un arch&eacute;type &agrave; l'&eacute;tape 1 pour voir les mod&egrave;les correspondants.</span>
+        <span data-lang="zh">请在第一阶段选择原型以查看相关榜样。</span>
+      </div>
+    </div>
+
+    <!-- PROCEED -->
+    <div class="proceed-area" id="proceedArea2">
+      <button class="btn btn-primary" id="proceedBtn2" disabled onclick="proceedToStage3()">
+        <span data-lang="en">Continue to Assessment →</span>
+        <span data-lang="fr">Continuer vers l'&eacute;valuation →</span>
+        <span data-lang="zh">继续评估 →</span>
+      </button>
+      <p id="roleModelLabel" style="font-size: 0.82rem; color: var(--light); margin-top: 0.8rem;"></p>
+    </div>
   </div>
-  <div class="coming-soon-title">
-    <span data-lang="en">Stage 2: Choose a Role Model</span>
-    <span data-lang="fr">&Eacute;tape 2 : Choisissez un mod&egrave;le</span>
-    <span data-lang="zh">第二阶段：选择榜样</span>
-  </div>
-  <div class="coming-soon-desc">
-    <span data-lang="en">Study practitioners who demonstrate ACI at its most developed — from Miyazaki to Miles Davis.</span>
-    <span data-lang="fr">&Eacute;tudiez des praticiens qui d&eacute;montrent l'ACI &agrave; son plus haut niveau.</span>
-    <span data-lang="zh">研究展现最成熟ACI的实践者——从宫崎骏到迈尔斯·戴维斯。</span>
-  </div>
-</div>
+</section>
 
 <!-- STAGE 3 PLACEHOLDER -->
 <div id="assessment" class="coming-soon-section">
@@ -734,28 +954,78 @@
 
 <script>
   let selectedArchetype = null;
+  let selectedRoleModel = null;
+
+  const archetypeNames = {
+    'creative': 'Creative', 'innovator': 'Innovator', 'educator': 'Educator',
+    'changemaker': 'Changemaker', 'leader-org': 'Organisational Leader',
+    'leader-community': 'Community Leader'
+  };
 
   function selectArchetype(card, archetype) {
-    // Clear all selections across all language versions
     document.querySelectorAll('.archetype-card').forEach(c => c.classList.remove('selected'));
-    // Select all cards with same archetype across languages
     document.querySelectorAll(`[onclick*="'${archetype}'"]`).forEach(c => c.classList.add('selected'));
     selectedArchetype = archetype;
     document.getElementById('proceedBtn').disabled = false;
+    document.getElementById('selectionLabel').textContent = 'Selected: ' + (archetypeNames[archetype] || archetype);
+    filterRoleModels(archetype);
+  }
 
-    const names = {
-      'creative': 'Creative', 'innovator': 'Innovator', 'educator': 'Educator',
-      'changemaker': 'Changemaker', 'leader-org': 'Organisational Leader',
-      'leader-community': 'Community Leader'
-    };
-    document.getElementById('selectionLabel').textContent = 'Selected: ' + (names[archetype] || archetype);
+  function filterRoleModels(archetype) {
+    const cards = document.querySelectorAll('.rolemodel-card');
+    let visibleCount = 0;
+    cards.forEach(card => {
+      const archetypes = card.getAttribute('data-archetypes').split(' ');
+      if (archetypes.includes(archetype)) {
+        card.classList.remove('hidden');
+        visibleCount++;
+      } else {
+        card.classList.add('hidden');
+        card.classList.remove('selected');
+      }
+    });
+    const empty = document.getElementById('roleModelEmpty');
+    empty.style.display = visibleCount > 0 ? 'none' : 'block';
+
+    const prompt = document.getElementById('roleModelPrompt');
+    prompt.style.display = 'block';
+    const name = archetypeNames[archetype] || archetype;
+    document.getElementById('roleModelArchLabel').textContent = name;
+    const frEl = document.getElementById('roleModelArchLabelFr');
+    const zhEl = document.getElementById('roleModelArchLabelZh');
+    if (frEl) frEl.textContent = name;
+    if (zhEl) zhEl.textContent = name;
+
+    // Clear role model selection if it was for a different archetype
+    selectedRoleModel = null;
+    document.querySelectorAll('.rolemodel-card').forEach(c => c.classList.remove('selected'));
+    document.getElementById('proceedBtn2').disabled = true;
+    document.getElementById('roleModelLabel').textContent = '';
+  }
+
+  function selectRoleModel(card, model) {
+    document.querySelectorAll('.rolemodel-card').forEach(c => c.classList.remove('selected'));
+    card.classList.add('selected');
+    selectedRoleModel = model;
+    document.getElementById('proceedBtn2').disabled = false;
+    const name = card.querySelector('.rolemodel-name').textContent;
+    document.getElementById('roleModelLabel').textContent = 'Selected: ' + name;
   }
 
   function proceedToStage2() {
     if (!selectedArchetype) return;
-    // Stage 2 not yet built — scroll to placeholder
-    document.querySelector('.coming-soon-section').scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('role-model').scrollIntoView({ behavior: 'smooth' });
   }
+
+  function proceedToStage3() {
+    if (!selectedRoleModel) return;
+    document.getElementById('assessment').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  // On load: hide all role model cards, show empty prompt
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.rolemodel-card').forEach(c => c.classList.add('hidden'));
+  });
 
   // Language toggle
   function setLang(lang) {

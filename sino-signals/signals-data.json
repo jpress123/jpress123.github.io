@@ -1,5 +1,74 @@
 [
   {
+    "id": "2026-04-06-government-work-report-intelligent-economy",
+    "date": "2026-04-06",
+    "day_number": 14,
+    "category": "Policy & Governance",
+    "category_emoji": "🏛️",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "title_en": "Government Work Report Writes AI Agents and 'Intelligent Economy' into Top National Policy for the First Time",
+    "title_cn": "政府工作报告首次写入智能体和智能经济新形态",
+    "source_url": "https://finance.sina.com.cn/roll/2026-03-06/doc-inhpzeqx2688764.shtml",
+    "source_name": "新浪财经 (Sina Finance)",
+    "tags": [
+      "government work report",
+      "intelligent economy",
+      "AI agents",
+      "State Council",
+      "NPC",
+      "15th Five-Year Plan"
+    ],
+    "related_signals": [
+      "2026-04-06-eight-ministry-ai-manufacturing",
+      "2026-04-06-nda-30-ai-agent-standards",
+      "2026-04-06-openclaw-agent-safety"
+    ],
+    "industry_lens": "education",
+    "content_type": "daily",
+    "body": {
+      "signal": "China's 2026 Government Work Report, delivered at the National People's Congress on March 5, wrote AI agents (智能体) and 'intelligent economy' (智能经济新形态) into the country's top annual policy document for the first time. The report calls for 'deepening and expanding AI+' and 'accelerating the rollout of next-generation intelligent terminals and AI agents.' The State Council set a three-phase roadmap: by 2027, rapid growth of core intelligent economy industries; by 2030, intelligent economy becomes a major growth engine; by 2035, full transition to an intelligent economy and society. China's embodied AI market reached 973.1 billion yuan in 2025, growing 12.7% year-on-year, and is projected to exceed 1.25 trillion yuan by 2027.",
+      "china_scale": "The Government Work Report is not a vision paper. It is the binding operational directive that every ministry, province, and state enterprise must implement. When AI agents appear in this document, they enter the mandatory planning, budgeting, and performance evaluation cycle of the entire state apparatus. The three-year progression tells the story: 'AI+' entered the report in 2024 as a concept, expanded in 2025, and now in 2026 has evolved into 'intelligent economy' with quantified milestones. Provincial governments will translate these targets into local implementation plans within 90 days, triggering procurement cycles across manufacturing, healthcare, education, and logistics.",
+      "global_impact": "No other national government has placed AI agents at the center of its annual economic policy directive with phased deployment targets through 2035. The US has executive orders on AI; the EU has the AI Act. Neither has published an equivalent economic transformation roadmap that makes AI agents a named instrument of national economic strategy. The 2030 target of intelligent economy as a 'major growth engine' implies AI agent integration across a GDP that will exceed $25 trillion. Western companies competing in any sector where Chinese firms operate should expect AI-augmented competitors within 24 months.",
+      "monday_morning": "If you lead strategy at a multinational with Chinese operations, map your business units against the State Council's three-phase roadmap and identify where AI agent adoption by Chinese competitors will reach your sector first. If you work in education technology, note that AI agents are now a named national priority across all grade levels, with 509 AI education base schools already designated and pilot programs running in 27 provinces and universities. Budget accordingly.",
+      "related_notes": "Elevates the eight-ministry AI+Manufacturing targets (Signal #3) and the NDA's 30+ standards (Signal #4) from sectoral directives to components of a unified national economic strategy. The OpenClaw agent safety crisis (Signal #1) likely accelerated the governance provisions accompanying this rollout."
+    }
+  },
+  {
+    "id": "2026-04-06-miit-autonomous-driving-safety-standards",
+    "date": "2026-04-06",
+    "day_number": 13,
+    "category": "Policy & Governance",
+    "category_emoji": "🏛️",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "title_en": "MIIT Drafts First Mandatory Safety Standards for Autonomous Driving That Push L3 Toward L4",
+    "title_cn": "工信部起草首个自动驾驶强制安全标准将L3推向L4能力",
+    "source_url": "https://carnewschina.com/2026/02/26/new-chinese-regulations-push-l3-autonomous-vehicles-closer-to-l4-capabilities-with-enhanced-safety-protocols/",
+    "source_name": "CarNewsChina",
+    "tags": [
+      "MIIT",
+      "autonomous driving",
+      "L3 autonomy",
+      "L4 autonomy",
+      "vehicle safety standards",
+      "DSSAD"
+    ],
+    "related_signals": [
+      "2026-04-06-eight-ministry-ai-manufacturing",
+      "2026-04-06-humanoid-robot-mass-production"
+    ],
+    "industry_lens": "automotive",
+    "content_type": "daily",
+    "body": {
+      "signal": "On February 12, 2026, the Ministry of Industry and Information Technology released for public comment the draft 'Intelligent Connected Vehicles, Safety Requirements for Autonomous Driving Systems,' China's first mandatory safety standard for higher-level autonomous driving. The draft requires that if a driver fails to respond to a takeover request, Level 3 systems must independently execute minimal risk maneuvers including lane changes and safe parking without obstructing traffic. All autonomous vehicles must carry a Data Storage System for Autonomous Driving (DSSAD), a 'black box' recording critical operational data. Implementation is proposed for July 1, 2027, with a 13-month compliance window for previously approved models.",
+      "china_scale": "China is the world's largest auto market, with over 26 million vehicles sold in 2025. The mandatory standard does something no other jurisdiction has done: it effectively requires L3 vehicles to possess L4-level fallback capabilities, raising the functional floor for every autonomous vehicle sold in China. MIIT will also formulate a new development plan for the 15th Five-Year Plan period (2026 to 2030) covering intelligent connected and new energy vehicles, integrating AI deeply into automotive architecture. With BYD, NIO, XPeng, and Huawei all shipping L2+ systems at scale, the standard will push the entire Chinese auto industry toward higher autonomy faster than voluntary adoption would.",
+      "global_impact": "China's mandatory standard will become the de facto global baseline for autonomous driving safety because of market size. No automaker can ignore a market of 26 million annual sales. The DSSAD requirement alone creates a data infrastructure standard that will propagate to the EU and US through bilateral regulatory recognition processes. The L3-to-L4 functional bridge embedded in the standard means Chinese autonomous vehicles will be engineered to a higher safety threshold than vehicles built to current European or American voluntary standards. This gives Chinese automakers a regulatory compliance advantage in markets that eventually adopt similar requirements.",
+      "monday_morning": "If you lead autonomous vehicle development, align your L3 system architecture with MIIT's fallback requirements now, before the July 2027 deadline locks in compliance costs. If you manufacture or supply ADAS components, the DSSAD mandate creates immediate demand for automotive-grade data recording hardware across the Chinese fleet. If you advise transportation policy, study the MIIT draft as a template: mandatory standards that functionally bridge L3 and L4 may be the regulatory approach that unlocks mass autonomous deployment.",
+      "related_notes": "Connects to the broader AI+Manufacturing directive (Signal #3) and the 15th Five-Year Plan's automotive provisions. The humanoid robot mass production signal (Signal #6) shares the same industrial AI trajectory: China using regulation to accelerate, not constrain, technology deployment."
+    }
+  },
+  {
     "id": "2026-04-06-nmpa-ai-drug-regulation",
     "date": "2026-04-06",
     "day_number": 12,
