@@ -959,6 +959,7 @@
       if (signals[i].id === id) { s = signals[i]; break; }
     }
     if (!s) return;
+    history.replaceState(null, '', '#' + id);
 
     var html = '<button class="expanded-back" onclick="window.hideExpanded()">&larr; Back to Sino-Signals</button>';
     html += '<div class="expanded-meta">';
@@ -1043,7 +1044,16 @@
     document.getElementById('expandedView').classList.remove('active');
     document.getElementById('filterBar').style.display = '';
     document.querySelector('.signal-grid-wrapper').style.display = '';
+    history.replaceState(null, '', window.location.pathname);
   };
+
+  // Deep link: open signal from URL hash on page load
+  (function() {
+    var hash = window.location.hash.replace('#', '');
+    if (hash && hash.length > 0) {
+      setTimeout(function() { window.showExpanded(hash); }, 300);
+    }
+  })();
 
   window.printSignal = function() {
     var content = document.getElementById('expandedContent').innerHTML;
