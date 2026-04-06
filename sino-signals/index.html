@@ -154,10 +154,17 @@
   .dashboard-widget {
     background: var(--white);
   }
+  .dashboard-title-row {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 0.8rem;
+  }
   .dashboard-title {
     font-family: 'Playfair Display', serif;
     font-size: 1.1rem; font-weight: 600; color: var(--navy);
-    margin-bottom: 0.8rem;
+  }
+  .dashboard-date {
+    font-size: 0.68rem; font-weight: 500; color: var(--light);
+    letter-spacing: 0.03em;
   }
   .dashboard-grid {
     display: table; width: 100%; border-collapse: collapse;
@@ -185,12 +192,12 @@
     border-radius: 4px; min-width: 2.2rem; transition: all 0.2s;
   }
   .heatmap-cell[data-count="0"] { background: transparent; color: transparent; }
-  .heatmap-cell[data-count="1"].strength-weak { background: rgba(184,134,11,0.15); color: #B8860B; }
-  .heatmap-cell[data-count="2"].strength-weak { background: rgba(184,134,11,0.3); color: #B8860B; }
-  .heatmap-cell[data-count="3"].strength-weak { background: rgba(184,134,11,0.5); color: #fff; }
-  .heatmap-cell[data-count="1"].strength-emerging { background: rgba(210,105,30,0.15); color: #D2691E; }
-  .heatmap-cell[data-count="2"].strength-emerging { background: rgba(210,105,30,0.3); color: #D2691E; }
-  .heatmap-cell[data-count="3"].strength-emerging { background: rgba(210,105,30,0.5); color: #fff; }
+  .heatmap-cell[data-count="1"].strength-weak { background: rgba(34,139,34,0.15); color: #228B22; }
+  .heatmap-cell[data-count="2"].strength-weak { background: rgba(34,139,34,0.3); color: #228B22; }
+  .heatmap-cell[data-count="3"].strength-weak { background: rgba(34,139,34,0.5); color: #fff; }
+  .heatmap-cell[data-count="1"].strength-emerging { background: rgba(49,130,206,0.15); color: #3182CE; }
+  .heatmap-cell[data-count="2"].strength-emerging { background: rgba(49,130,206,0.3); color: #3182CE; }
+  .heatmap-cell[data-count="3"].strength-emerging { background: rgba(49,130,206,0.5); color: #fff; }
   .heatmap-cell[data-count="1"].strength-strong { background: rgba(192,57,43,0.15); color: #C0392B; }
   .heatmap-cell[data-count="2"].strength-strong { background: rgba(192,57,43,0.3); color: #C0392B; }
   .heatmap-cell[data-count="3"].strength-strong { background: rgba(192,57,43,0.5); color: #fff; }
@@ -205,8 +212,8 @@
   .legend-dot {
     width: 8px; height: 8px; border-radius: 2px;
   }
-  .legend-dot.early { background: rgba(184,134,11,0.4); }
-  .legend-dot.emerging { background: rgba(210,105,30,0.4); }
+  .legend-dot.early { background: rgba(34,139,34,0.4); }
+  .legend-dot.emerging { background: rgba(49,130,206,0.4); }
   .legend-dot.accelerating { background: rgba(192,57,43,0.4); }
 
   @media (max-width: 1024px) {
@@ -552,14 +559,17 @@
       </div>
       <div class="header-right">
         <div class="dashboard-widget">
-          <div class="dashboard-title">AI Sino-Signals Scan</div>
+          <div class="dashboard-title-row">
+            <div class="dashboard-title">AI Sino-Signals Scan</div>
+            <div class="dashboard-date" id="dashboardDate"></div>
+          </div>
           <div class="dashboard-grid" id="dashboardGrid">
             <!-- Filled by JS -->
           </div>
           <div class="dashboard-legend">
             <span class="legend-item"><span class="legend-dot early"></span> Early</span>
-            <span class="legend-item"><span class="legend-dot emerging"></span> Emerging</span>
-            <span class="legend-item"><span class="legend-dot accelerating"></span> Accelerating</span>
+            <span class="legend-item"><span class="legend-dot emerging"></span> Track</span>
+            <span class="legend-item"><span class="legend-dot accelerating"></span> Urgent</span>
           </div>
         </div>
       </div>
@@ -733,6 +743,11 @@
   }
 
   function renderDashboard() {
+    var now = new Date();
+    var oneJan = new Date(now.getFullYear(), 0, 1);
+    var weekNum = Math.ceil(((now - oneJan) / 86400000 + oneJan.getDay() + 1) / 7);
+    document.getElementById('dashboardDate').textContent = 'Week ' + weekNum + ', ' + now.getFullYear();
+
     var allCategories = [
       'Policy & Governance',
       'Industry & Enterprise',
@@ -763,8 +778,8 @@
     html += '<div class="dashboard-row dashboard-header-row">';
     html += '<div class="dashboard-cell category"></div>';
     html += '<div class="dashboard-cell">Early</div>';
-    html += '<div class="dashboard-cell">Emerging</div>';
-    html += '<div class="dashboard-cell">Accelerating</div>';
+    html += '<div class="dashboard-cell">Track</div>';
+    html += '<div class="dashboard-cell">Urgent</div>';
     html += '</div>';
 
     allCategories.forEach(function(cat) {
