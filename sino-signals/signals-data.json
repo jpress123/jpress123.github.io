@@ -1,5 +1,72 @@
 [
   {
+    "id": "2026-04-08-ai-realistic-short-drama-470-per-day",
+    "date": "2026-04-08",
+    "day_number": 24,
+    "category": "Creative & Culture",
+    "category_emoji": "🎨",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "title_en": "China Produces 470 AI Short Dramas Per Day as Realistic AI Actors Capture 38% of Top Charts",
+    "title_cn": "中国日均上新470部AI短剧，AI仿真人剧占漫剧百强榜38%",
+    "source_url": "https://36kr.com/p/3740893913231876",
+    "source_name": "36氪 (36Kr)",
+    "tags": [
+      "AI short drama",
+      "AI仿真人",
+      "Douyin",
+      "Seedance 2.0",
+      "content creation",
+      "digital actors"
+    ],
+    "related_signals": [
+      "2026-04-06-ai-manga-industrialization"
+    ],
+    "industry_lens": "consumer",
+    "content_type": "daily",
+    "body": {
+      "signal": "In January 2026, China averaged 470 new AI-generated short dramas per day, roughly one every 90 seconds. AI realistic short dramas (AI仿真人剧) surged from 7% to 38% of the top-100 manga drama chart in three months, with combined plays of 2.548 billion. The breakout title 'Zhanxiantai AI Real Person Edition' hit 180 million Douyin plays within six days, produced by a 12-person team at roughly 100,000 yuan in compute cost. Director Tang Jili's AI short drama reached 100 million plays on Douyin within 12 hours. The AI manga and short drama market reached 100 billion yuan in 2025 and is projected to exceed 120 billion yuan in 2026, with the AI realistic sub-segment alone projected at 240 billion yuan.",
+      "china_scale": "China's short-video platforms (Douyin, Kuaishou) have over one billion daily active users consuming serial content. ByteDance's Seedance 2.0 and Kuaishou's Kling 3.0 provide the generative video infrastructure as platform services, meaning any creator with a script can produce studio-grade output. Douyin's revenue-sharing policy now assigns AI realistic dramas the highest coefficient (60), actively incentivizing production. Red Fruit (红果) increased its AI short drama budget allocation from 15% to 35% of total spend in 2026, signaling platform-level commitment to the format.",
+      "global_impact": "At 470 new titles per day, China is generating more AI video content in a week than most national film industries produce in a year. The production economics are transformative: AI tools cut production cycles by 80 to 90% and costs by up to 90%. As these tools and workflows mature, they will export to Southeast Asian and Latin American short-drama markets where Chinese platforms already operate. Western studios and streamers face a structural cost asymmetry: a 12-person Chinese team now produces content that previously required 50-person crews, at a fraction of the budget.",
+      "monday_morning": "If you lead content strategy at a streaming platform or media company, pilot one short-form series using Chinese AI video generation tools (Seedance 2.0, Kling 3.0) to benchmark cost and turnaround against your current production pipeline. If you invest in entertainment or advertising, model the revenue impact when AI-generated content captures 30% or more of short-form viewership, as China's charts already suggest is happening.",
+      "related_notes": "Extends the AI manga industrialization trend (Signal #10) from animated content into realistic AI-generated human actors. The production cost compression mirrors the pattern seen across China's autonomous delivery and robotics sectors: once unit economics cross a threshold, adoption curves steepen dramatically."
+    }
+  },
+  {
+    "id": "2026-04-08-mureka-v8-ai-music-global-number-one",
+    "date": "2026-04-08",
+    "day_number": 23,
+    "category": "Creative & Culture",
+    "category_emoji": "🎨",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "title_en": "Kunlun's Mureka V8 Tops Global AI Music Rankings and Partners With Taihe Music Group for Industrial Distribution",
+    "title_cn": "昆仑万维Mureka V8登顶全球AI音乐榜，与太合音乐达成战略合作进入工业发行",
+    "source_url": "https://finance.sina.com.cn/stock/t/2026-01-30/doc-inhkacxp3725846.shtml",
+    "source_name": "新浪财经 (Sina Finance)",
+    "tags": [
+      "AI music",
+      "Mureka V8",
+      "Kunlun Wanwei",
+      "MusiCoT",
+      "Taihe Music Group",
+      "music generation"
+    ],
+    "related_signals": [
+      "2026-04-08-ai-realistic-short-drama-470-per-day",
+      "2026-04-06-chinese-llm-global-surge"
+    ],
+    "industry_lens": "education",
+    "content_type": "daily",
+    "body": {
+      "signal": "On January 28, 2026, Kunlun Wanwei (昆仑万维) released Mureka V8, which topped the Artificial Analysis global AI music model leaderboard as the number-one model for both vocals and instrumental generation, surpassing Suno V4.5 and Udio v1.5. The model is built on MusiCoT (Music Chain-of-Thought) technology that models musical structure, segment logic, and creative intent rather than simply concatenating audio fragments. Kunlun signed a strategic partnership with Taihe Music Group to integrate AI-generated music into mainstream production and distribution workflows. Mureka reached profitability (gross margin positive after marketing costs) in November 2025 and now serves nearly 10 million users globally. The platform launched M:RA, an AI-generated girl group whose debut single was released on major Chinese music platforms.",
+      "china_scale": "Kunlun iterated from SkyMusic 1.0 in February 2024 to Mureka V8 in January 2026, shipping eight major versions in under two years. This iteration speed reflects China's AI development cadence: compressed timelines driven by intense domestic competition among Kunlun, MiniMax (Music 2.5 with 14 structure variants and 100+ instrument timbres), and Tencent (open-source SongGeneration 3B). The Taihe Music Group partnership gives Mureka access to one of China's largest music label ecosystems, meaning AI-composed tracks will enter the same distribution pipeline as human artists across QQ Music, NetEase Cloud Music, and Kuwo.",
+      "global_impact": "A Chinese model now holds the top position in global AI music generation, repeating the pattern seen in LLM token consumption (Signal #9) where Chinese models moved from trailing to leading within 12 months. Kunlun's stated ambition to build an 'AI Spotify' for overseas markets signals a platform play, not just a model play. For the global music industry valued at $28.6 billion in recorded revenue, AI-generated tracks entering mainstream distribution through a major Chinese label partnership marks the beginning of a structural shift in how music is produced, credited, and monetized.",
+      "monday_morning": "If you lead A&R or catalog strategy at a music label, evaluate Mureka V8 and MiniMax Music 2.5 as production tools for sync licensing, background music, and artist demo workflows. The cost and speed advantages are large enough to reshape catalog economics. If you work in music education, note that MusiCoT's structural modeling approach, which reasons through verse-chorus architecture, emotional progression, and instrumentation, represents a new pedagogical resource for teaching composition and arrangement.",
+      "related_notes": "Parallels the Chinese LLM global surge (Signal #9): a Chinese AI model moves from follower to global leader within a compressed timeline. The creative industry pattern, from AI manga (Signal #10) to AI short dramas (Signal #24) to AI music, shows China building end-to-end AI content creation infrastructure across every media format."
+    }
+  },
+  {
     "id": "2026-04-08-evtol-low-altitude-economy-commercial-operations",
     "date": "2026-04-08",
     "day_number": 22,
