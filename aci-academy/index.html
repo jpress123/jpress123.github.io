@@ -97,8 +97,9 @@
   .hero {
     padding: 8rem 2rem 4rem;
     max-width: 1100px; margin: 0 auto;
-    text-align: center;
+    display: flex; align-items: center; gap: 3rem;
   }
+  .hero-text { flex: 1; }
   .hero-badge {
     display: inline-block;
     font-size: 0.68rem; font-weight: 700; letter-spacing: 0.15em;
@@ -112,11 +113,18 @@
   }
   .hero .subtitle {
     font-size: 1.05rem; color: var(--medium); line-height: 1.7;
-    max-width: 640px; margin: 0 auto 2rem;
+    max-width: 640px; margin-bottom: 2rem;
   }
   .hero .tagline {
     font-size: 0.9rem; color: var(--light); font-style: italic;
-    max-width: 560px; margin: 0 auto;
+    max-width: 560px;
+  }
+  .hero-cover {
+    flex: 0 0 240px; height: 320px;
+    border: 2px dashed var(--pale); border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--light); font-size: 0.82rem; font-weight: 500;
+    background: var(--bg);
   }
 
   /* SECTIONS */
@@ -354,8 +362,9 @@
 
   /* RESPONSIVE */
   @media (max-width: 768px) {
-    .hero { padding-top: 7rem; }
+    .hero { padding-top: 7rem; flex-direction: column; text-align: center; }
     .hero h1 { font-size: 2.1rem; }
+    .hero-cover { flex: 0 0 auto; width: 180px; height: 240px; order: -1; }
     .archetype-grid { grid-template-columns: repeat(2, 1fr); }
     .capacities-grid { grid-template-columns: repeat(2, 1fr); }
     .rolemodel-grid { grid-template-columns: 1fr; }
@@ -400,14 +409,18 @@
   body.fr span[data-lang="zh"] { display: none; }
 
   /* ASSESSMENT */
-  .assessment-section { background: var(--white); display: none; }
+  .assessment-section { background: var(--white); display: none; text-align: left; }
   .assessment-section.revealed { display: block; }
+
+  /* ROLE MODEL */
+  #role-model { display: none; }
+  #role-model.revealed { display: block; }
   .capacity-group { margin-bottom: 2.5rem; display: none; }
   .capacity-group.active { display: block; animation: fadeInCap 0.4s ease; }
   .capacity-group.completed-cap { display: none; }
   @keyframes fadeInCap { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
   .capacity-step-indicator {
-    text-align: center; font-size: 0.82rem; color: var(--light);
+    text-align: left; font-size: 0.82rem; color: var(--light);
     margin-bottom: 1rem; font-weight: 500;
   }
   .capacity-step-indicator strong { color: var(--accent); }
@@ -449,13 +462,13 @@
     color: var(--white); font-weight: 600;
   }
   .assessment-progress {
-    font-size: 0.82rem; color: var(--light); text-align: center;
+    font-size: 0.82rem; color: var(--light); text-align: left;
     margin-bottom: 1.5rem;
   }
   .progress-bar-track {
     width: 100%; max-width: 400px; height: 4px;
     background: var(--pale); border-radius: 2px;
-    margin: 0.5rem auto 0; overflow: hidden;
+    margin: 0.5rem 0 0; overflow: hidden;
   }
   .progress-bar-fill {
     height: 100%; background: var(--accent);
@@ -546,20 +559,27 @@
 
 <!-- HERO -->
 <header class="hero">
-  <div class="hero-badge">
-    <span data-lang="en">From the forthcoming book <em>Agentic Creative Intelligence</em> (Fall, 2026)</span>
-    <span data-lang="fr">Issu du livre &agrave; para&icirc;tre <em>Agentic Creative Intelligence</em> (automne 2026)</span>
-    <span data-lang="zh">源自即将出版的著作《能动创造智能》（2026年秋）</span>
+  <div class="hero-text">
+    <div class="hero-badge">
+      <span data-lang="en">From the forthcoming book <em>Agentic Creative Intelligence</em> (Fall, 2026)</span>
+      <span data-lang="fr">Issu du livre &agrave; para&icirc;tre <em>Agentic Creative Intelligence</em> (automne 2026)</span>
+      <span data-lang="zh">源自即将出版的著作《能动创造智能》（2026年秋）</span>
+    </div>
+    <h1 data-lang="en">ACI Academy</h1>
+    <h1 data-lang="fr">Acad&eacute;mie ACI</h1>
+    <h1 data-lang="zh">ACI 学院</h1>
+    <p class="subtitle" data-lang="en">Develop the five creative capacities of Agentic Creative Intelligence to ensure your engagement with AI is meaningful. Assess where you stand, be inspired by a role model, and generate a personalised Creative Council to guide your creative collaboration with any AI.</p>
+    <p class="subtitle" data-lang="fr">D&eacute;veloppez les cinq capacit&eacute;s cr&eacute;atives de l'Intelligence Cr&eacute;ative Agentique pour garantir que votre engagement avec l'IA soit significatif. &Eacute;valuez votre niveau, inspirez-vous d'un mod&egrave;le, et g&eacute;n&eacute;rez un Conseil Cr&eacute;atif personnalis&eacute; pour guider votre collaboration cr&eacute;ative avec toute IA.</p>
+    <p class="subtitle" data-lang="zh">培养能动创造智能的五种创造力，确保您与AI的互动富有意义。评估现状，从榜样中获得启发，生成个人创意理事会来指导您与任何AI的创造性协作。</p>
+    <p class="tagline" data-lang="en">AI makes prompting frictionless, and cognitive retreat effortless. The ACI Academy aims to reclaim human agency with practices for the agentic era.</p>
+    <p class="tagline" data-lang="fr">L'IA rend le prompting sans friction et le retrait cognitif sans effort. L'Acad&eacute;mie ACI vise &agrave; reconqu&eacute;rir l'agentivit&eacute; humaine avec des pratiques pour l'&egrave;re agentique.</p>
+    <p class="tagline" data-lang="zh">AI 让提示变得无摩擦，让认知退缩变得毫不费力。ACI 学院旨在通过智能体时代的实践重塑人类能动性。</p>
   </div>
-  <h1 data-lang="en">ACI Academy</h1>
-  <h1 data-lang="fr">Acad&eacute;mie ACI</h1>
-  <h1 data-lang="zh">ACI 学院</h1>
-  <p class="subtitle" data-lang="en">Develop the five creative capacities of Agentic Creative Intelligence to ensure your engagement with AI is meaningful. Assess where you stand, be inspired by a role model, and generate a personalised Creative Council to guide your creative collaboration with any AI.</p>
-  <p class="subtitle" data-lang="fr">D&eacute;veloppez les cinq capacit&eacute;s cr&eacute;atives de l'Intelligence Cr&eacute;ative Agentique pour garantir que votre engagement avec l'IA soit significatif. &Eacute;valuez votre niveau, inspirez-vous d'un mod&egrave;le, et g&eacute;n&eacute;rez un Conseil Cr&eacute;atif personnalis&eacute; pour guider votre collaboration cr&eacute;ative avec toute IA.</p>
-  <p class="subtitle" data-lang="zh">培养能动创造智能的五种创造力，确保您与AI的互动富有意义。评估现状，从榜样中获得启发，生成个人创意理事会来指导您与任何AI的创造性协作。</p>
-  <p class="tagline" data-lang="en">AI makes prompting frictionless, and cognitive retreat effortless. The ACI Academy aims to reclaim human agency with practices for the agentic era.</p>
-  <p class="tagline" data-lang="fr">L'IA rend le prompting sans friction et le retrait cognitif sans effort. L'Acad&eacute;mie ACI vise &agrave; reconqu&eacute;rir l'agentivit&eacute; humaine avec des pratiques pour l'&egrave;re agentique.</p>
-  <p class="tagline" data-lang="zh">AI 让提示变得无摩擦，让认知退缩变得毫不费力。ACI 学院旨在通过智能体时代的实践重塑人类能动性。</p>
+  <div class="hero-cover">
+    <span data-lang="en">Book Cover</span>
+    <span data-lang="fr">Couverture</span>
+    <span data-lang="zh">封面</span>
+  </div>
 </header>
 
 <!-- THE FIVE CAPACITIES -->
@@ -686,16 +706,16 @@
       </div>
       <div class="journey-connector"></div>
       <div class="journey-step">
-        <a href="#role-model">
+        <a href="#assessment">
           <div class="step-num">2</div>
-          <div class="step-label"><span data-lang="en">Pick Your Role Model</span><span data-lang="fr">Choisissez votre mod&egrave;le</span><span data-lang="zh">选择榜样</span></div>
+          <div class="step-label"><span data-lang="en">Assess Your Capacities</span><span data-lang="fr">&Eacute;valuez vos capacit&eacute;s</span><span data-lang="zh">评估能力</span></div>
         </a>
       </div>
       <div class="journey-connector"></div>
       <div class="journey-step">
-        <a href="#assessment">
+        <a href="#role-model">
           <div class="step-num">3</div>
-          <div class="step-label"><span data-lang="en">Assess Your Capacities</span><span data-lang="fr">&Eacute;valuez vos capacit&eacute;s</span><span data-lang="zh">评估能力</span></div>
+          <div class="step-label"><span data-lang="en">Pick Your Role Model</span><span data-lang="fr">Choisissez votre mod&egrave;le</span><span data-lang="zh">选择榜样</span></div>
         </a>
       </div>
       <div class="journey-connector"></div>
@@ -813,22 +833,93 @@
     <!-- PROCEED -->
     <div class="proceed-area" id="proceedArea">
       <button class="btn btn-primary" id="proceedBtn" disabled onclick="proceedToStage2()">
-        <span data-lang="en">Continue to Role Model Selection →</span>
-        <span data-lang="fr">Continuer vers le choix du mod&egrave;le →</span>
-        <span data-lang="zh">继续选择榜样 →</span>
+        <span data-lang="en">Continue to Assessment →</span>
+        <span data-lang="fr">Continuer vers l'&eacute;valuation →</span>
+        <span data-lang="zh">继续评估 →</span>
       </button>
       <p id="selectionLabel" style="font-size: 0.82rem; color: var(--light); margin-top: 0.8rem;"></p>
     </div>
   </div>
 </section>
 
-<!-- STAGE 2: PICK YOUR ROLE MODEL -->
-<section id="role-model" style="background: var(--bg);">
+<!-- STAGE 2: ACI ASSESSMENT -->
+<section id="assessment" class="assessment-section">
   <div class="container">
     <div class="section-label">
       <span data-lang="en">Stage 2</span>
       <span data-lang="fr">&Eacute;tape 2</span>
       <span data-lang="zh">第二阶段</span>
+    </div>
+    <h2 class="section-title">
+      <span data-lang="en">Assess Your Capacities</span>
+      <span data-lang="fr">&Eacute;valuez vos capacit&eacute;s</span>
+      <span data-lang="zh">评估您的能力</span>
+    </h2>
+    <p class="section-intro">
+      <span data-lang="en">Rate each statement honestly. There are no right answers — only an honest map of where you stand today. Your results will combine with your archetype and role model to shape your Creative Council.</span>
+      <span data-lang="fr">&Eacute;valuez chaque &eacute;nonc&eacute; honn&ecirc;tement. Il n'y a pas de bonnes r&eacute;ponses — seulement une carte honn&ecirc;te de votre situation actuelle. Vos r&eacute;sultats se combineront avec votre arch&eacute;type et mod&egrave;le pour fa&ccedil;onner votre Conseil Cr&eacute;atif.</span>
+      <span data-lang="zh">请诚实评价每个陈述。没有正确答案——只有对您当前状态的真实描绘。您的结果将与原型和榜样结合，塑造您的创意理事会。</span>
+    </p>
+
+    <div class="assessment-progress" id="assessmentProgress">
+      <span data-lang="en"><span id="answeredCount">0</span> of 20 answered</span>
+      <span data-lang="fr"><span id="answeredCountFr">0</span> sur 20 r&eacute;pondu</span>
+      <span data-lang="zh">已回答 <span id="answeredCountZh">0</span> / 20</span>
+      <div class="progress-bar-track"><div class="progress-bar-fill" id="progressFill"></div></div>
+    </div>
+
+    <div class="capacity-step-indicator" id="capStepIndicator">
+      <span data-lang="en">Capacity <strong id="capStepEn">1</strong> of 5</span>
+      <span data-lang="fr">Capacit&eacute; <strong id="capStepFr">1</strong> sur 5</span>
+      <span data-lang="zh">能力 <strong id="capStepZh">1</strong> / 5</span>
+    </div>
+    <div id="questionContainer"></div>
+
+    <!-- CALCULATE -->
+    <div class="calculate-area">
+      <button class="btn btn-primary" id="calculateBtn" disabled onclick="calculateResults()">
+        <span data-lang="en">Calculate My Results</span>
+        <span data-lang="fr">Calculer mes r&eacute;sultats</span>
+        <span data-lang="zh">计算我的结果</span>
+      </button>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="results-panel" id="resultsPanel">
+      <h3 class="results-title">
+        <span data-lang="en">Your Capacity Profile</span>
+        <span data-lang="fr">Votre profil de capacit&eacute;s</span>
+        <span data-lang="zh">您的能力档案</span>
+      </h3>
+      <p class="results-subtitle" id="resultsSubtitle"></p>
+
+      <div class="radar-container">
+        <svg id="radarChart" viewBox="0 0 400 400" width="380" height="380"></svg>
+      </div>
+
+      <div class="score-grid" id="scoreGrid"></div>
+
+      <div class="results-narrative" id="resultsNarrative"></div>
+
+      <div class="proceed-area">
+        <button class="btn btn-primary" onclick="document.getElementById('role-model').classList.add('revealed'); document.getElementById('role-model').scrollIntoView({behavior:'smooth'})">
+          <span data-lang="en">Continue to Role Model Selection →</span>
+          <span data-lang="fr">Continuer vers le choix du mod&egrave;le →</span>
+          <span data-lang="zh">继续选择榜样 →</span>
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STAGE 3: PICK YOUR ROLE MODEL -->
+<section id="role-model" style="background: var(--bg);">
+  <div class="container">
+    <div class="section-label">
+      <span data-lang="en">Stage 3</span>
+      <span data-lang="fr">&Eacute;tape 3</span>
+      <span data-lang="zh">第三阶段</span>
     </div>
     <h2 class="section-title">
       <span data-lang="en">Pick Your Role Model</span>
@@ -1237,84 +1328,13 @@
 
     <!-- PROCEED -->
     <div class="proceed-area" id="proceedArea2">
-      <button class="btn btn-primary" id="proceedBtn2" disabled onclick="proceedToStage3()">
-        <span data-lang="en">Continue to Assessment →</span>
-        <span data-lang="fr">Continuer vers l'&eacute;valuation →</span>
-        <span data-lang="zh">继续评估 →</span>
+      <button class="btn btn-primary" id="proceedBtn2" disabled onclick="proceedToCouncil()">
+        <span data-lang="en">Continue to Creative Council →</span>
+        <span data-lang="fr">Continuer vers le Conseil Cr&eacute;atif →</span>
+        <span data-lang="zh">继续创建创意理事会 →</span>
       </button>
       <p id="roleModelLabel" style="font-size: 0.82rem; color: var(--light); margin-top: 0.8rem;"></p>
     </div>
-  </div>
-</section>
-
-<!-- STAGE 3: ACI ASSESSMENT -->
-<section id="assessment" class="assessment-section">
-  <div class="container">
-    <div class="section-label">
-      <span data-lang="en">Stage 3</span>
-      <span data-lang="fr">&Eacute;tape 3</span>
-      <span data-lang="zh">第三阶段</span>
-    </div>
-    <h2 class="section-title">
-      <span data-lang="en">Assess Your Capacities</span>
-      <span data-lang="fr">&Eacute;valuez vos capacit&eacute;s</span>
-      <span data-lang="zh">评估您的能力</span>
-    </h2>
-    <p class="section-intro">
-      <span data-lang="en">Rate each statement honestly. There are no right answers — only an honest map of where you stand today. Your results will combine with your archetype and role model to shape your Creative Council.</span>
-      <span data-lang="fr">&Eacute;valuez chaque &eacute;nonc&eacute; honn&ecirc;tement. Il n'y a pas de bonnes r&eacute;ponses — seulement une carte honn&ecirc;te de votre situation actuelle. Vos r&eacute;sultats se combineront avec votre arch&eacute;type et mod&egrave;le pour fa&ccedil;onner votre Conseil Cr&eacute;atif.</span>
-      <span data-lang="zh">请诚实评价每个陈述。没有正确答案——只有对您当前状态的真实描绘。您的结果将与原型和榜样结合，塑造您的创意理事会。</span>
-    </p>
-
-    <div class="assessment-progress" id="assessmentProgress">
-      <span data-lang="en"><span id="answeredCount">0</span> of 20 answered</span>
-      <span data-lang="fr"><span id="answeredCountFr">0</span> sur 20 r&eacute;pondu</span>
-      <span data-lang="zh">已回答 <span id="answeredCountZh">0</span> / 20</span>
-      <div class="progress-bar-track"><div class="progress-bar-fill" id="progressFill"></div></div>
-    </div>
-
-    <div class="capacity-step-indicator" id="capStepIndicator">
-      <span data-lang="en">Capacity <strong id="capStepEn">1</strong> of 5</span>
-      <span data-lang="fr">Capacit&eacute; <strong id="capStepFr">1</strong> sur 5</span>
-      <span data-lang="zh">能力 <strong id="capStepZh">1</strong> / 5</span>
-    </div>
-    <div id="questionContainer"></div>
-
-    <!-- CALCULATE -->
-    <div class="calculate-area">
-      <button class="btn btn-primary" id="calculateBtn" disabled onclick="calculateResults()">
-        <span data-lang="en">Calculate My Results</span>
-        <span data-lang="fr">Calculer mes r&eacute;sultats</span>
-        <span data-lang="zh">计算我的结果</span>
-      </button>
-    </div>
-
-    <!-- RESULTS -->
-    <div class="results-panel" id="resultsPanel">
-      <h3 class="results-title">
-        <span data-lang="en">Your Capacity Profile</span>
-        <span data-lang="fr">Votre profil de capacit&eacute;s</span>
-        <span data-lang="zh">您的能力档案</span>
-      </h3>
-      <p class="results-subtitle" id="resultsSubtitle"></p>
-
-      <div class="radar-container">
-        <svg id="radarChart" viewBox="0 0 400 400" width="380" height="380"></svg>
-      </div>
-
-      <div class="score-grid" id="scoreGrid"></div>
-
-      <div class="results-narrative" id="resultsNarrative"></div>
-
-      <div class="proceed-area">
-        <button class="btn btn-primary" onclick="document.getElementById('council').scrollIntoView({behavior:'smooth'})">
-          <span data-lang="en">Continue to Creative Council →</span>
-          <span data-lang="fr">Continuer vers le Conseil Cr&eacute;atif →</span>
-          <span data-lang="zh">继续创建创意理事会 →</span>
-        </button>
-      </div>
-    </div>
-
   </div>
 </section>
 
@@ -1425,13 +1445,13 @@
 
   function proceedToStage2() {
     if (!selectedArchetype) return;
-    document.getElementById('role-model').scrollIntoView({ behavior: 'smooth' });
-  }
-
-  function proceedToStage3() {
-    if (!selectedRoleModel) return;
     document.getElementById('assessment').classList.add('revealed');
     document.getElementById('assessment').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function proceedToCouncil() {
+    if (!selectedRoleModel) return;
+    document.getElementById('council').scrollIntoView({ behavior: 'smooth' });
   }
 
   // On load: hide all role model cards, show empty prompt
