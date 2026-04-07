@@ -1,5 +1,72 @@
 [
   {
+    "id": "2026-04-07-alibaba-wukong-enterprise-agent-platform",
+    "date": "2026-04-07",
+    "day_number": 16,
+    "category": "Industry & Enterprise",
+    "category_emoji": "🏭",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "title_en": "Alibaba Launches WuKong, an Enterprise AI Agent Platform Reaching 20 Million Organizations Through DingTalk",
+    "title_cn": "阿里巴巴发布企业级AI智能体平台悟空，覆盖钉钉超2000万企业",
+    "source_url": "https://www.cls.cn/detail/2315621",
+    "source_name": "财联社 (CLS)",
+    "tags": [
+      "Alibaba",
+      "WuKong",
+      "DingTalk",
+      "enterprise AI agents",
+      "AI-native work platform",
+      "one-person company"
+    ],
+    "related_signals": [
+      "2026-04-06-government-work-report-intelligent-economy"
+    ],
+    "industry_lens": "consumer",
+    "content_type": "daily",
+    "body": {
+      "signal": "On March 17, 2026, Alibaba's newly formed Token Hub (ATH) business group launched WuKong, an enterprise-level AI-native work platform with AI agents at its core. WuKong will be embedded into DingTalk, reaching over 20 million enterprise organizations. It ships with ready-made agent solutions for 10 industry verticals, including e-commerce, cross-border trade, manufacturing, legal services, and accounting. Alibaba's full ecosystem, spanning Taobao, Tmall, 1688, Alipay, and Alibaba Cloud, will progressively integrate into the platform as callable Skills.",
+      "china_scale": "DingTalk's 20-million-organization footprint gives WuKong a distribution channel that no Western enterprise AI platform can match in a single market. China's enterprise SaaS adoption has historically lagged the US, but AI agents bundled into an existing workplace super-app bypass the traditional SaaS sales cycle entirely. Alibaba is positioning WuKong as the operating system for the 'one-person company' model, where a single operator manages an AI workforce across procurement, design, compliance, and fulfillment.",
+      "global_impact": "WuKong's integration of commerce infrastructure (Taobao, 1688, Alipay) with workplace agents creates a closed loop from product sourcing to payment settlement that Western competitors like Microsoft Copilot and Salesforce Agentforce do not offer. If millions of small Chinese exporters adopt WuKong's cross-border trade agents, Western importers and marketplace sellers will face AI-optimized competitors operating at lower overhead. The platform also plans Slack and WeChat integration, signaling ambitions beyond the Chinese market.",
+      "monday_morning": "If you run procurement or sourcing from Chinese suppliers, expect your counterparts to be AI-augmented within 12 months. Start evaluating your own agent-assisted negotiation and order management workflows now. If you compete with Chinese sellers on Amazon or other global marketplaces, monitor WuKong's cross-border trade module closely, as it could compress your competitors' operational costs by enabling one person to manage what previously required a team.",
+      "related_notes": "Directly implements the Government Work Report's directive to 'accelerate the rollout of AI agents' (Signal #14). WuKong represents the private-sector response to the national intelligent economy mandate, with Alibaba restructuring an entire business group around enterprise agent delivery."
+    }
+  },
+  {
+    "id": "2026-04-07-state-banks-130b-fintech-ai-agents",
+    "date": "2026-04-07",
+    "day_number": 15,
+    "category": "Industry & Enterprise",
+    "category_emoji": "🏭",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "title_en": "China's Six Largest State Banks Spent 130 Billion Yuan on Fintech in 2025 and Are Deploying AI Agents Across 398 Banking Scenarios",
+    "title_cn": "国有六大行2025年金融科技投入超1300亿元，建行已在398个场景部署大模型",
+    "source_url": "https://finance.sina.com.cn/jjxw/2026-04-02/doc-inhtaemy2089451.shtml",
+    "source_name": "新浪财经 (Sina Finance)",
+    "tags": [
+      "state-owned banks",
+      "fintech investment",
+      "AI agents in banking",
+      "CCB",
+      "ICBC",
+      "large language models"
+    ],
+    "related_signals": [
+      "2026-04-06-government-work-report-intelligent-economy",
+      "2026-04-06-ten-ministry-ai-ethics-review"
+    ],
+    "industry_lens": "financial services",
+    "content_type": "daily",
+    "body": {
+      "signal": "China's six largest state-owned banks collectively invested over 130 billion yuan (approximately $18 billion) in financial technology during 2025, up from 125.5 billion yuan in 2024. China Construction Bank has deployed large language models across 398 business scenarios. Agricultural Bank of China launched a company-wide 'AI+ platform' for enterprise application rollout. ICBC allocated 28.6 billion yuan alone, with fintech staff now comprising 9.8% of its total workforce. Bank of Communications dedicated the highest share of operating revenue to fintech at 5.78%.",
+      "china_scale": "These are not venture-funded startups experimenting with AI. They are state-owned institutions holding combined assets exceeding 180 trillion yuan, serving over a billion customers. When Construction Bank deploys LLMs across 398 scenarios, those scenarios span credit approval, wealth management, risk monitoring, anti-fraud detection, and customer service for the world's second-largest bank by assets. The 'AI+ platform' model at Agricultural Bank means standardized agent deployment across 23,000 branches reaching deep into rural China, where traditional fintech penetration has been limited.",
+      "global_impact": "Global banks are piloting AI in 5 to 15 use cases. China's state banks are deploying across hundreds of scenarios simultaneously, creating an experience gap that compounds over time. Western financial institutions partnering with or competing against Chinese banks should expect AI-augmented counterparts in trade finance, cross-border settlement, and syndicated lending within 18 months. The 130-billion-yuan annual spend also feeds a domestic AI vendor ecosystem, from Baidu's financial agents to Ant Group's model infrastructure, that will export fintech AI tools to Southeast Asia and the Middle East.",
+      "monday_morning": "If you lead technology strategy at a global bank, benchmark your AI deployment count against Construction Bank's 398 scenarios and ask whether your institution's pilot-to-production pipeline can close the gap. If you advise financial regulators, study how China's banking supervisors are managing LLM risk across hundreds of simultaneous deployments, as their governance frameworks will likely influence international standards through the Financial Stability Board.",
+      "related_notes": "The scale of state bank AI investment operationalizes the Government Work Report's intelligent economy directive (Signal #14) in the financial sector. Combined with the ten-ministry ethics review mandate (Signal #11), Chinese banks are deploying at speed while building compliance infrastructure in parallel."
+    }
+  },
+  {
     "id": "2026-04-06-government-work-report-intelligent-economy",
     "date": "2026-04-06",
     "day_number": 14,
