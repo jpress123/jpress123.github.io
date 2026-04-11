@@ -1,17 +1,17 @@
 Sino-Signals | April 8, 2026
 
-China's low-altitude economy hit 1.5 trillion yuan last year. Over 25,000 new companies registered in the sector in 2025 alone. Is your airspace strategy ready for what comes next?
+What happens when a country produces 470 AI-generated short dramas every single day?
 
-EHang holds China's first passenger eVTOL type certificate, production permit, and airworthiness certificate. Meituan has completed over 600,000 drone deliveries. Shenzhen is building 1,200+ low-altitude landing pads by year-end. Guangzhou has planned 100+ permanent landing sites. The sector now has over 100,000 operating enterprises and 17.9 million patent filings, with 56% classified as invention patents.
+In January 2026, China averaged one new AI short drama every 90 seconds. AI "realistic human" dramas, generated entirely by AI actors rather than filmed with real people, surged from 7% to 38% of the top-100 chart in three months, accumulating 2.5 billion plays. The breakout hit "Zhanxiantai AI Real Person Edition" reached 180 million Douyin views in six days, produced by a 12-person team for roughly 100,000 yuan in compute costs. The combined AI manga and short drama market hit 100 billion yuan in 2025.
 
-This is not a research program. The State Council wrote low-altitude economy into the 15th Five-Year Plan as a strategic emerging industry cluster. Five ministries mandated 90%+ ground communications coverage for low-altitude air routes by 2027. China is building the regulatory, infrastructure, and commercial framework for urban air mobility faster than any other country.
+China's short-video platforms serve over one billion daily active users hungry for serial content. ByteDance's Seedance 2.0 and Kuaishou's Kling 3.0 provide generative video as platform infrastructure, meaning any creator with a script now has access to studio-grade production tools. Douyin's revenue-sharing policy assigns AI realistic dramas the highest payout coefficient, actively accelerating production. This is not an experiment. It is an industrial-scale content machine with built-in distribution.
 
-While Joby and Archer remain in pre-commercial testing phases in the US, EHang is already deploying in Thailand with plans for 100+ aircraft across 20 sandbox zones by end of 2026. Chinese eVTOL standards and operational protocols are on track to become the reference framework for Southeast Asian and Middle Eastern markets that lack domestic alternatives.
+For Western media companies, the cost asymmetry is the story. AI tools compress production cycles by 80 to 90% and costs by up to 90%. A 12-person Chinese team now produces what previously required a 50-person crew. As these workflows mature, they will export to Southeast Asian and Latin American markets where Chinese platforms already operate. Every content business model built on traditional production economics needs stress-testing against this reality.
 
-If you work in urban logistics, real estate development, or infrastructure planning, study Shenzhen's 1,200-pad buildout as a template for what low-altitude infrastructure demands look like at city scale. If you invest in or compete with aerospace suppliers, track China's patent portfolio. 17.9 million filings indicate that licensing and standards-setting leverage is accumulating fast.
+If you lead content strategy at a streaming platform or media company, pilot one short-form series using Chinese AI video generation tools to benchmark cost and turnaround against your current pipeline. The gap will be instructive.
 
-Read the full analysis: https://www.josephpress.com/sino-signals/#2026-04-08-evtol-low-altitude-economy-commercial-operations
+Read the full analysis: https://www.josephpress.com/sino-signals/#2026-04-08-ai-realistic-short-drama-470-per-day
 
-#SinoSignals #eVTOL #LowAltitudeEconomy #ChinaTech
+#SinoSignals #AIContent #CreativeAI #DigitalMedia
 
-https://m.thepaper.cn/newsDetail_forward_32390487
+https://36kr.com/p/3740893913231876

@@ -1,17 +1,17 @@
-Sino-Signals | April 7, 2026
+Sino-Signals | April 10, 2026
 
-How many packages did your last-mile fleet deliver today? In Hangzhou, 20 autonomous vehicles are handling 1,500 parcels each, every single day, with no driver onboard.
+China just trained a state-of-the-art AI model without a single foreign chip. What does that mean for the $500 billion global semiconductor supply chain?
 
-Cainiao Group has now logged over 5 million autonomous kilometers and delivered more than 40 million parcels using Level 4 driverless vehicles across 30 regions. JD Logistics operates 600+ autonomous vehicles in 30 cities and plans to procure 1 million more over five years. Industry projections put 200,000 unmanned delivery vehicles on Chinese roads within three to five years.
+In January 2026, Zhipu AI and Huawei open-sourced GLM-Image, the first SOTA multimodal model trained entirely on domestic Huawei Ascend silicon. China Telecom followed with TeleChat3, a hundred-billion-parameter model trained on a domestic 10,000-card computing pool. Meanwhile, Muxi's C600 GPU entered mass production, and all four of China's leading GPU companies filed for IPOs simultaneously. 36Kr calls 2026 the "first year of domestic AI chip training implementation," marking the shift from isolated inference deployments to full-scale training capability.
 
-The scale advantage here is structural. China moves 130 billion parcels per year, more than triple the US volume. Cainiao feeds directly into Alibaba's commerce ecosystem. JD Logistics serves JD.com, 7Fresh, Sam's Club, and Yonghui through its Dada partnership. No Western market combines this parcel density with this level of platform-owned autonomous infrastructure.
+Why this matters in China specifically: domestic intelligent computing is projected to exceed 35% of total national computing infrastructure in 2026. The AI core industry surpassed 1.2 trillion yuan in 2025 with over 5,300 companies. Huawei Ascend has built full-stack integration from chip to training framework, and the four concurrent GPU IPOs signal that capital markets now view domestic AI silicon as a standalone industry sector, not a temporary workaround.
 
-The second-order effects matter most. When autonomous delivery reaches cost parity with human couriers in China's densest corridors, it resets the labor-cost baseline for global e-commerce fulfillment. The technology stack being refined on Chinese roads, real-time fleet orchestration AI and drone-to-ground coordination, will export to Southeast Asia and the Middle East within 24 months.
+For Western leaders, this changes the calculus on export controls. China achieving training-grade domestic chips means the leverage of restricting Nvidia H100/A100 access is declining structurally. Global chip vendors face a shrinking addressable market in China as domestic alternatives reach frontier-model performance. The bifurcation of the global AI compute supply chain is no longer hypothetical.
 
-If you manage e-commerce fulfillment, benchmark your per-parcel cost against Cainiao's autonomous fleet in Yuhang. If you lead product strategy for a brand selling into China, factor unmanned delivery windows into your distribution planning. The shift from human couriers to autonomous fleets changes speed guarantees, return logistics, and customer touchpoints.
+Monday morning action: model what a two-track chip supply chain means for your AI infrastructure procurement over the next three years. If you advise semiconductor companies with China exposure, reassess revenue forecasts given that four domestic GPU vendors are now competing for training workloads, not just inference.
 
-Read the full analysis: https://www.josephpress.com/sino-signals/#2026-04-07-cainiao-jd-autonomous-delivery-vehicles-scale
+Read the full analysis: https://www.josephpress.com/sino-signals/#2026-04-10-domestic-ai-chips-inference-to-training
 
-#SinoSignals #AutonomousDelivery #ChinaTech #SupplyChain
+#ChinaAI #Semiconductors #AIChips #DeepTech
 
-http://global.chinadaily.com.cn/a/202504/08/WS67f49114a3104d9fd381e1a6.html
+https://36kr.com/p/3696839539338881
