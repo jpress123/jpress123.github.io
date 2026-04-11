@@ -1,5 +1,29 @@
 [
   {
+    "id": "2026-04-11-china-draft-rules-human-like-ai-services",
+    "date": "2026-04-11",
+    "day_number": 11,
+    "category": "Policy & Governance",
+    "category_emoji": "🏛️",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "title_en": "China Drafts Rules Requiring Emotional Risk Monitoring for Human-Like AI Services",
+    "title_cn": "中国起草类人交互AI服务管理办法，要求监测用户情绪风险",
+    "source_url": "https://www.chinalawtranslate.com/en/chatbot-measures-draft/",
+    "source_name": "China Law Translate",
+    "tags": ["AI regulation", "digital humans", "emotional AI", "CAC"],
+    "related_signals": [],
+    "industry_lens": "consumer",
+    "content_type": "daily",
+    "body": {
+      "signal": "The Cyberspace Administration of China released draft Interim Measures on Human-like Interactive AI Services, open for public comment until May 6. The rules target AI that simulates human personality, emotional interaction, or communication styles. Providers must monitor users' emotional states and intervene if users exhibit extreme emotions or addictive behavior toward AI companions.",
+      "china_scale": "China already has over 200 million users of AI chatbot and companion apps. ByteDance's Doubao, Baidu's Wenxiaoyan, and dozens of smaller players offer AI companions with emotional bonding features. Regulating emotional dependency at this scale is unprecedented and will force product redesigns across the entire sector.",
+      "global_impact": "No Western regulator has attempted to mandate emotional risk monitoring in AI products. China is creating a regulatory template that the EU and others will study closely. Companies like Character.AI, Replika, and Meta's AI personas face the prospect of similar rules spreading internationally.",
+      "monday_morning": "If your product roadmap includes AI assistants with personality or emotional engagement features, read the draft measures now. Map your planned features against the prohibited activities list and build compliance checkpoints into your development cycle before these rules become the global norm.",
+      "related_notes": ""
+    }
+  },
+  {
     "id": "2026-04-11-deepseek-v4-huawei-ascend-cuda-independence",
     "date": "2026-04-11",
     "day_number": 10,
