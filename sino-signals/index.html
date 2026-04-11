@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sino-Signals — AI Intelligence from China | Joseph Press</title>
+<meta name="description" content="Daily AI signals from China with strategic forecasts for the West. Curated by Joseph Press using IFTF signal scanning methods applied to Chinese-language sources.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Sino-Signals — AI Intelligence from China">
+<meta property="og:description" content="The signals shaping your industry are appearing in China first. Daily AI intelligence with strategic forecasts.">
+<meta property="og:url" content="https://www.josephpress.com/sino-signals/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Favicon -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #1a1a2e;
+    --slate: #2e4057;
+    --medium: #4a5568;
+    --light: #718096;
+    --pale: #e2e8f0;
+    --bg: #fafafa;
+    --bg-card: #ffffff;
+    --bg-card-hover: #f7f9fc;
+    --bg-elevated: #f0f4f8;
+    --white: #ffffff;
+    --text-primary: #1a1a2e;
+    --text-secondary: #4a5568;
+    --text-tertiary: #718096;
+    --text-cn: #a0aec0;
+    --border: #e2e8f0;
+    --border-hover: #cbd5e0;
+    --accent: #3182ce;
+    --accent-dim: rgba(49,130,206,0.1);
+    --warm: #f7f5f2;
+    --strength-weak: #B8860B;
+    --strength-emerging: #D2691E;
+    --strength-strong: #C0392B;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.06), 0 2px 6px rgba(0,0,0,0.04);
+    --shadow-lg: 0 10px 30px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04);
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+  }
+
+  html { scroll-behavior: smooth; font-size: 16px; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text-primary); background: var(--bg);
+    line-height: 1.65; -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection { background: rgba(49,130,206,0.15); }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--pale); transition: box-shadow 0.3s;
+  }
+  nav.scrolled { box-shadow: var(--shadow-sm); }
+  .nav-inner {
+    max-width: 1100px; margin: 0 auto; padding: 0.9rem 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-left { display: flex; align-items: center; gap: 0.75rem; }
+  .nav-name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600; font-size: 1.15rem; color: var(--navy);
+    text-decoration: none; letter-spacing: 0.02em;
+  }
+  .nav-linkedin {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 28px; height: 28px; border-radius: 4px;
+    background: #0077b5; color: #fff; text-decoration: none;
+    transition: background 0.2s;
+  }
+  .nav-linkedin:hover { background: #005f8d; }
+  .nav-right { display: flex; align-items: center; gap: 1.5rem; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    text-decoration: none; color: var(--text-secondary);
+    font-size: 0.85rem; font-weight: 500; letter-spacing: 0.03em;
+  }
+  .nav-links a:hover { color: var(--text-primary); text-decoration: none; }
+  .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); margin: 5px 0; transition: 0.3s; }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hamburger { display: block; }
+    .nav-links.open {
+      display: flex; flex-direction: column;
+      position: absolute; top: 100%; left: 0; right: 0;
+      background: var(--white); padding: 1.5rem 2rem;
+      border-bottom: 1px solid var(--pale); gap: 1rem;
+    }
+  }
+
+  /* LAYOUT */
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+  section { padding: 5rem 0; }
+  .section-label {
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem;
+  }
+
+  /* HERO HEADER */
+  .site-header {
+    padding: 8rem 0 3rem;
+    background: linear-gradient(180deg, var(--white) 0%, var(--bg) 100%);
+    border-bottom: 1px solid var(--pale);
+  }
+  .header-layout {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: flex-start;
+  }
+  .header-left h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem; font-weight: 700; line-height: 1.15;
+    color: var(--navy); margin-bottom: 0.75rem;
+  }
+  .header-tagline {
+    font-size: 1.05rem; color: var(--medium); line-height: 1.65;
+    margin-bottom: 2rem; max-width: 600px;
+  }
+  .header-intro {
+    font-size: 0.92rem; color: var(--medium); line-height: 1.75;
+    margin-bottom: 0;
+  }
+  .header-intro p {
+    margin-bottom: 1rem;
+  }
+  .header-intro p:last-child {
+    margin-bottom: 0;
+  }
+  .header-right {
+    background: var(--white); border: 1px solid var(--pale);
+    border-radius: var(--radius-lg); padding: 1.5rem;
+    box-shadow: var(--shadow-md); height: fit-content;
+  }
+  .dashboard-widget {
+    background: var(--white);
+  }
+  .dashboard-title-row {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 0.8rem;
+  }
+  .dashboard-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem; font-weight: 600; color: var(--navy);
+  }
+  .dashboard-date {
+    font-size: 0.68rem; font-weight: 500; color: var(--light);
+    letter-spacing: 0.03em;
+  }
+  .dashboard-grid {
+    display: table; width: 100%; border-collapse: collapse;
+  }
+  .dashboard-row {
+    display: table-row;
+  }
+  .dashboard-header-row .dashboard-cell {
+    font-size: 0.65rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--light); padding: 0.3rem 0.5rem 0.5rem;
+    border-bottom: 2px solid var(--pale); text-align: center;
+  }
+  .dashboard-header-row .dashboard-cell.category { text-align: left; }
+  .dashboard-cell {
+    display: table-cell; padding: 0.45rem 0.5rem;
+    border-bottom: 1px solid rgba(226,232,240,0.5);
+    font-size: 0.78rem; color: var(--medium); text-align: center;
+    vertical-align: middle;
+  }
+  .dashboard-cell.category {
+    font-weight: 500; text-align: left; font-size: 0.72rem;
+    white-space: nowrap; padding-right: 0.8rem;
+  }
+  .heatmap-cell {
+    border-radius: 4px; min-width: 2.2rem; transition: all 0.2s;
+  }
+  .heatmap-cell[data-count="0"] { background: transparent; color: transparent; }
+  .heatmap-cell[data-count="1"].strength-weak { background: rgba(34,139,34,0.15); color: #228B22; }
+  .heatmap-cell[data-count="2"].strength-weak { background: rgba(34,139,34,0.3); color: #228B22; }
+  .heatmap-cell[data-count="3"].strength-weak { background: rgba(34,139,34,0.5); color: #fff; }
+  .heatmap-cell[data-count="1"].strength-emerging { background: rgba(49,130,206,0.15); color: #3182CE; }
+  .heatmap-cell[data-count="2"].strength-emerging { background: rgba(49,130,206,0.3); color: #3182CE; }
+  .heatmap-cell[data-count="3"].strength-emerging { background: rgba(49,130,206,0.5); color: #fff; }
+  .heatmap-cell[data-count="1"].strength-strong { background: rgba(192,57,43,0.15); color: #C0392B; }
+  .heatmap-cell[data-count="2"].strength-strong { background: rgba(192,57,43,0.3); color: #C0392B; }
+  .heatmap-cell[data-count="3"].strength-strong { background: rgba(192,57,43,0.5); color: #fff; }
+  .dashboard-legend {
+    display: flex; gap: 1rem; margin-top: 0.8rem; align-items: center;
+    flex-wrap: wrap;
+  }
+  .legend-item {
+    display: flex; align-items: center; gap: 0.3rem;
+    font-size: 0.65rem; color: var(--light); letter-spacing: 0.02em;
+  }
+  .legend-dot {
+    width: 8px; height: 8px; border-radius: 2px;
+  }
+  .legend-dot.early { background: rgba(34,139,34,0.4); }
+  .legend-dot.emerging { background: rgba(49,130,206,0.4); }
+  .legend-dot.accelerating { background: rgba(192,57,43,0.4); }
+
+  @media (max-width: 1024px) {
+    .header-layout { grid-template-columns: 1fr; }
+    .header-right { margin-top: 2rem; }
+  }
+
+  /* FILTER BAR */
+  .filter-bar {
+    padding: 2rem 0; border-bottom: 1px solid var(--pale);
+    background: rgba(250,250,250,0.95); position: static;
+  }
+  .filter-bar-inner {
+    display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;
+  }
+  .filter-search-row {
+    width: 100%; display: flex;
+  }
+  .search-input {
+    background: var(--white); color: var(--navy);
+    border: 1px solid var(--pale); padding: 0.5rem 0.8rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem; font-family: inherit; font-weight: 400;
+    flex: 1; min-width: 200px;
+    box-shadow: var(--shadow-sm); transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .search-input::placeholder { color: var(--light); }
+  .search-input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-dim); }
+  .filter-select {
+    background: var(--white); color: var(--medium);
+    border: 1px solid var(--pale); padding: 0.5rem 0.8rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem; font-family: inherit; font-weight: 500;
+    cursor: pointer; appearance: none;
+    box-shadow: var(--shadow-sm);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23718096'%3E%3Cpath d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 0.6rem center;
+    padding-right: 2rem; transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .filter-select:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-dim); }
+  .filter-controls {
+    display: flex; gap: 1rem; flex-wrap: wrap; width: 100%;
+  }
+  .filter-count {
+    font-size: 0.78rem; color: var(--text-tertiary); font-weight: 500;
+    margin-left: 0;
+  }
+
+  @media (max-width: 768px) {
+    .filter-bar-inner { flex-direction: column; align-items: stretch; }
+    .search-input { min-width: auto; }
+    .filter-controls { flex-direction: column; align-items: stretch; }
+    .filter-select { width: 100%; }
+  }
+
+  /* SIGNAL GRID */
+  .signal-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem;
+    padding: 0;
+  }
+  .signal-grid-wrapper { padding: 3rem 0; }
+
+  .signal-tile {
+    background: var(--white); padding: 1.8rem;
+    cursor: pointer; border: 1px solid var(--pale);
+    border-radius: var(--radius-md); box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
+  }
+  .signal-tile:hover { box-shadow: var(--shadow-md); border-color: var(--border-hover); transform: translateY(-2px); }
+  .signal-tile.synthesis {
+    grid-column: 1 / -1;
+    border-left: 3px solid var(--accent);
+    background: linear-gradient(90deg, rgba(49,130,206,0.03) 0%, var(--white) 15%);
+  }
+  .tile-meta {
+    display: flex; align-items: center; gap: 0.6rem;
+    margin-bottom: 0.8rem; flex-wrap: wrap;
+  }
+  .tile-date {
+    font-size: 0.72rem; color: var(--text-tertiary); font-weight: 500;
+    letter-spacing: 0.05em;
+  }
+  .tile-badge {
+    font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em;
+    text-transform: uppercase; padding: 0.15rem 0.45rem;
+    border: 1px solid var(--pale); border-radius: 16px;
+  }
+  .signal-tile h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem; font-weight: 600; color: var(--text-primary);
+    line-height: 1.3; margin-bottom: 0.3rem;
+  }
+  .tile-title-cn {
+    font-size: 0.8rem; color: var(--text-cn); margin-bottom: 0.7rem;
+  }
+  .tile-summary {
+    font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+    overflow: hidden; margin-bottom: 0.8rem;
+  }
+  .tile-footer {
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 0.5rem;
+  }
+  .tile-source {
+    font-size: 0.72rem; color: var(--text-tertiary);
+  }
+  .tile-tags {
+    display: flex; gap: 0.3rem; flex-wrap: wrap;
+  }
+  .tag {
+    font-size: 0.65rem; font-weight: 500; padding: 0.2rem 0.6rem;
+    background: var(--bg-elevated); color: var(--slate);
+    letter-spacing: 0.02em; border-radius: 16px;
+  }
+  .tile-trajectory {
+    font-size: 0.65rem; color: var(--accent); font-weight: 600;
+    letter-spacing: 0.05em; text-transform: uppercase;
+    display: flex; align-items: center; gap: 0.3rem;
+  }
+
+  .show-more-btn {
+    display: block; margin: 2rem auto 0;
+    background: var(--white); border: 1px solid var(--pale);
+    padding: 0.75rem 1.5rem; border-radius: var(--radius-sm);
+    font-size: 0.82rem; font-weight: 600; color: var(--medium);
+    cursor: pointer; font-family: inherit;
+    transition: all 0.2s;
+  }
+  .show-more-btn:hover {
+    background: var(--white); border-color: var(--border-hover);
+    box-shadow: var(--shadow-md); color: var(--navy);
+  }
+
+  @media (max-width: 1024px) {
+    .signal-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 768px) {
+    .signal-grid { grid-template-columns: 1fr; }
+    .signal-tile.synthesis { grid-column: 1; }
+  }
+
+  /* EXPANDED SIGNAL VIEW */
+  .signal-expanded {
+    display: none; padding: 3rem 0; border-bottom: 1px solid var(--pale);
+  }
+  .signal-expanded.active { display: block; }
+  .expanded-back {
+    font-size: 0.82rem; color: var(--accent); font-weight: 600;
+    letter-spacing: 0.03em;
+    cursor: pointer; margin-bottom: 2rem; display: inline-flex;
+    align-items: center; gap: 0.4rem;
+    border: 1px solid var(--accent-dim); border-radius: var(--radius-sm);
+    background: rgba(49,130,206,0.04); font-family: inherit;
+    padding: 0.5rem 1rem; transition: all 0.2s;
+  }
+  .expanded-back:hover { background: rgba(49,130,206,0.1); border-color: var(--accent); }
+  .expanded-back-bottom { margin-top: 2.5rem; margin-bottom: 1rem; }
+  .expanded-meta {
+    display: flex; align-items: center; gap: 1rem;
+    margin-bottom: 1.2rem; flex-wrap: wrap;
+  }
+  .expanded-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem; font-weight: 600; color: var(--text-primary);
+    line-height: 1.25; margin-bottom: 0.4rem;
+  }
+  .expanded-title-cn {
+    font-size: 1rem; color: var(--text-cn); margin-bottom: 2rem;
+  }
+  .expanded-section {
+    margin-bottom: 2rem;
+  }
+  .expanded-section-label {
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem;
+  }
+  .expanded-section p {
+    font-size: 0.92rem; color: var(--text-secondary); line-height: 1.75;
+  }
+  .expanded-tags {
+    display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 2rem;
+  }
+  .expanded-related {
+    border-top: 1px solid var(--pale); padding-top: 2rem; margin-top: 2rem;
+  }
+  .related-card {
+    background: var(--white); border: 1px solid var(--pale);
+    border-radius: var(--radius-sm); padding: 1.2rem;
+    cursor: pointer; margin-bottom: 0.5rem;
+    box-shadow: var(--shadow-sm); transition: box-shadow 0.2s, border-color 0.2s;
+  }
+  .related-card:hover { border-color: var(--border-hover); box-shadow: var(--shadow-md); }
+  .related-card h4 {
+    font-size: 0.88rem; font-weight: 600; color: var(--text-primary);
+    margin-bottom: 0.2rem;
+  }
+  .related-card .related-date {
+    font-size: 0.72rem; color: var(--text-tertiary);
+  }
+  .expanded-share {
+    display: flex; gap: 1rem; margin-top: 2rem;
+  }
+  .share-btn {
+    font-size: 0.78rem; font-weight: 600; color: var(--medium);
+    background: var(--white); border: 1px solid var(--pale);
+    border-radius: var(--radius-sm); padding: 0.5rem 1rem;
+    cursor: pointer; font-family: inherit;
+    letter-spacing: 0.03em; box-shadow: var(--shadow-sm);
+    transition: all 0.2s;
+  }
+  .share-btn:hover { color: var(--navy); border-color: var(--border-hover); box-shadow: var(--shadow-md); }
+
+  /* BADGE STYLES */
+  .badge {
+    font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; padding: 0.25rem 0.6rem;
+    border: 1px solid var(--pale); border-radius: 16px;
+    display: inline-flex; align-items: center; gap: 0.35rem;
+  }
+  .badge-category { color: var(--accent); border-color: var(--accent-dim); background: rgba(49,130,206,0.06); }
+  .badge-strength-weak { color: var(--strength-weak); border-color: rgba(184,134,11,0.2); background: rgba(184,134,11,0.06); }
+  .badge-strength-emerging { color: var(--strength-emerging); border-color: rgba(210,105,30,0.2); background: rgba(210,105,30,0.06); }
+  .badge-strength-strong { color: var(--strength-strong); border-color: rgba(192,57,43,0.2); background: rgba(192,57,43,0.06); }
+
+  .signal-date {
+    font-size: 0.78rem; color: var(--text-tertiary); font-weight: 500;
+    letter-spacing: 0.05em; text-transform: uppercase;
+  }
+  .title-cn {
+    font-size: 0.95rem; color: var(--text-cn); margin-bottom: 1rem;
+  }
+  .signal-source {
+    font-size: 0.78rem; color: var(--text-tertiary);
+  }
+  .signal-source a { color: var(--text-secondary); }
+
+  /* SUBSCRIBE */
+  .subscribe-section {
+    border-bottom: 1px solid var(--pale);
+    text-align: center;
+    background: linear-gradient(180deg, var(--bg) 0%, var(--warm) 100%);
+  }
+  .subscribe-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem; font-weight: 600; color: var(--navy);
+    margin-bottom: 0.6rem;
+  }
+  .subscribe-section p {
+    font-size: 0.88rem; color: var(--medium); margin-bottom: 1.5rem;
+  }
+  .subscribe-form {
+    display: flex; gap: 0; max-width: 480px; margin: 0 auto;
+    box-shadow: var(--shadow-md); border-radius: var(--radius-sm); overflow: hidden;
+  }
+  .subscribe-input {
+    flex: 1; background: var(--white); color: var(--navy);
+    border: 1px solid var(--pale); border-right: none;
+    padding: 0.75rem 1rem; font-size: 0.85rem; font-family: inherit;
+    border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+  }
+  .subscribe-input::placeholder { color: var(--light); }
+  .subscribe-input:focus { outline: none; border-color: var(--accent); }
+  .subscribe-btn {
+    background: var(--navy); color: var(--white);
+    border: 2px solid var(--navy);
+    padding: 0.75rem 1.5rem; font-size: 0.82rem; font-weight: 700;
+    font-family: inherit; cursor: pointer; letter-spacing: 0.05em;
+    text-transform: uppercase; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    transition: background 0.2s;
+  }
+  .subscribe-btn:hover { background: var(--slate); border-color: var(--slate); }
+
+  @media (max-width: 768px) {
+    .subscribe-form { flex-direction: column; border-radius: var(--radius-sm); }
+    .subscribe-input { border-right: 1px solid var(--pale); border-bottom: none; border-radius: var(--radius-sm) var(--radius-sm) 0 0; }
+    .subscribe-btn { border-radius: 0 0 var(--radius-sm) var(--radius-sm); }
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center; padding: 2rem;
+    font-size: 0.75rem; color: var(--light);
+    border-top: 1px solid var(--pale);
+  }
+  footer a { color: var(--medium); }
+
+  /* NO RESULTS */
+  .no-results {
+    padding: 4rem 2rem; text-align: center;
+    font-size: 0.92rem; color: var(--text-tertiary);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .site-header { padding: 6rem 0 2rem; }
+    .header-layout h1 { font-size: 2.1rem; }
+    .expanded-title { font-size: 1.5rem; }
+    section { padding: 3rem 0; }
+  }
+
+  /* NOSCRIPT FALLBACK */
+  noscript .signal-tile { display: block; margin-bottom: 1rem; padding: 1.5rem; background: var(--white); border: 1px solid var(--pale); border-radius: var(--radius-md); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-left">
+      <a href="../" class="nav-name">Prof. Joseph Press, Ph.D.</a>
+      <a href="https://www.linkedin.com/in/josephpress/" class="nav-linkedin" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+    </div>
+    <div class="nav-right">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#signals">All Signals</a></li>
+        <li><a href="#subscribe">Subscribe</a></li>
+        <li><a href="../">Home</a></li>
+      </ul>
+      <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- SITE HEADER -->
+<header class="site-header">
+  <div class="container">
+    <p class="section-label">Intelligence Briefing</p>
+    <div class="header-layout">
+      <div class="header-left">
+        <h1>Sino-Signals:</h1>
+        <p class="header-tagline">The AI signals shaping your industry are in China.</p>
+        <div class="header-intro">
+          <p>China is the world's largest signal amplifier for AI deployment. While frontier research grabs headlines in the West, they often fall between unscalable and slop. The signals that will reshape your industry over the next 3–5 years are appearing in China, now. Not only is China pulling ahead in foundational research, it operates at a scale and speed of deployment that has no Western equivalent.</p>
+          <p>Sino-Signals scanning aims to put AI disruption at the forefront of strategic decision-making. Anticipate the future to be ready for any future.</p>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="dashboard-widget">
+          <div class="dashboard-title-row">
+            <div class="dashboard-title">AI Sino-Signals Scan</div>
+            <div class="dashboard-date" id="dashboardDate"></div>
+          </div>
+          <div class="dashboard-grid" id="dashboardGrid">
+            <!-- Filled by JS -->
+          </div>
+          <div class="dashboard-legend">
+            <span class="legend-item"><span class="legend-dot early"></span> Early</span>
+            <span class="legend-item"><span class="legend-dot emerging"></span> Track</span>
+            <span class="legend-item"><span class="legend-dot accelerating"></span> Urgent</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- FILTER BAR -->
+<div class="filter-bar" id="filterBar">
+  <div class="container">
+    <div class="filter-bar-inner">
+      <div class="filter-search-row">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search signals..." aria-label="Search signals">
+      </div>
+      <div class="filter-controls">
+        <select class="filter-select" id="filterIndustry" aria-label="Filter by industry">
+          <option value="all">All Industries</option>
+          <option value="Policy & Governance">Policy & Governance</option>
+          <option value="Industry & Enterprise">Industry & Enterprise</option>
+          <option value="Creative & Culture">Creative & Culture</option>
+          <option value="Climate & Sustainability">Climate & Sustainability</option>
+          <option value="Deep Tech & Research">Deep Tech & Research</option>
+          <option value="Robotics & Embodied AI">Robotics & Embodied AI</option>
+          <option value="Platform & Society">Platform & Society</option>
+        </select>
+        <select class="filter-select" id="filterType" aria-label="Filter by signal type">
+          <option value="all">All Types</option>
+          <option value="social">Social</option>
+          <option value="cultural">Cultural</option>
+          <option value="legal">Legal</option>
+          <option value="policy">Policy</option>
+          <option value="technology">Technology</option>
+          <option value="environmental">Environmental</option>
+          <option value="economic">Economic</option>
+        </select>
+        <select class="filter-select" id="filterStrength" aria-label="Filter by signal strength">
+          <option value="all">All Strengths</option>
+          <option value="weak">Early</option>
+          <option value="emerging">Emerging</option>
+          <option value="strong">Accelerating</option>
+        </select>
+        <select class="filter-select" id="filterFreshness" aria-label="Filter by freshness">
+          <option value="today">Today</option>
+          <option value="this_week">This Week</option>
+          <option value="this_month">This Month</option>
+          <option value="this_year">This Year</option>
+        </select>
+        <span class="filter-count" id="filterCount"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SIGNAL GRID -->
+<section class="signal-grid-wrapper" id="signals">
+  <div class="container">
+    <div class="signal-grid" id="signalGrid">
+      <!-- Filled by JS -->
+    </div>
+    <button class="show-more-btn" id="showMoreBtn" style="display:none;">Show more signals</button>
+    <div class="no-results" id="noResults" style="display:none;">No signals today. Try expanding to This Week.</div>
+  </div>
+</section>
+
+<!-- EXPANDED SIGNAL VIEW -->
+<section class="signal-expanded" id="expandedView">
+  <div class="container" id="expandedContent">
+    <!-- Filled by JS -->
+  </div>
+</section>
+
+<!-- SUBSCRIBE -->
+<section class="subscribe-section" id="subscribe">
+  <div class="container">
+    <h2>Stay Ahead</h2>
+    <p>Weekly digest every Sunday — 7 signals + the editorial pick of the week.</p>
+    <form class="subscribe-form" action="https://formspree.io/f/placeholder" method="POST">
+      <input type="email" name="email" class="subscribe-input" placeholder="your@email.com" required aria-label="Email address">
+      <button type="submit" class="subscribe-btn">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  Vibe-Coded by JP &amp; Claude &middot; <a href="https://www.josephpress.com">josephpress.com</a> &middot; <a href="https://www.linkedin.com/in/josephpress/" target="_blank" rel="noopener">LinkedIn</a>
+</footer>
+
+<!-- NOSCRIPT FALLBACK -->
+<noscript>
+  <div class="container" style="padding:2rem;">
+    <p style="color:var(--text-secondary);font-size:0.92rem;">This page requires JavaScript for filtering and search. The signal data is loaded from <code>signals-data.json</code>.</p>
+  </div>
+</noscript>
+
+<script>
+(function() {
+  'use strict';
+
+  let signals = [];
+  let currentView = 'grid';
+  let visibleCount = 5;
+  const MAX_VISIBLE = 10;
+
+  // Load data
+  fetch('signals-data.json')
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      signals = data.sort(function(a, b) { return b.date.localeCompare(a.date); });
+      renderDashboard();
+      setFilterFreshnessDefault();
+      applyFilters();
+      bindFilters();
+    })
+    .catch(function(err) {
+      document.getElementById('signalGrid').innerHTML = '<p style="color:var(--text-tertiary)">Failed to load signal data.</p>';
+    });
+
+  function strengthClass(s) {
+    if (s === 'weak') return 'badge-strength-weak';
+    if (s === 'emerging') return 'badge-strength-emerging';
+    if (s === 'strong') return 'badge-strength-strong';
+    return '';
+  }
+
+  function strengthLabel(s) {
+    if (s === 'weak') return '🟡 Early';
+    if (s === 'emerging') return '🟠 Emerging';
+    if (s === 'strong') return '🔴 Accelerating';
+    return s;
+  }
+
+  function formatDate(d) {
+    var parts = d.split('-');
+    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    return months[parseInt(parts[1],10)-1] + ' ' + parseInt(parts[2],10) + ', ' + parts[0];
+  }
+
+  function getTodayDate() {
+    var now = new Date();
+    var year = now.getFullYear();
+    var month = String(now.getMonth() + 1).padStart(2, '0');
+    var day = String(now.getDate()).padStart(2, '0');
+    return year + '-' + month + '-' + day;
+  }
+
+  function isDateInRange(dateStr, freshnessValue) {
+    var today = getTodayDate();
+    var signalDate = new Date(dateStr);
+    var todayDate = new Date(today);
+
+    if (freshnessValue === 'today') {
+      return dateStr === today;
+    }
+    if (freshnessValue === 'this_week') {
+      var sevenDaysAgo = new Date(todayDate);
+      sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+      return signalDate >= sevenDaysAgo && signalDate <= todayDate;
+    }
+    if (freshnessValue === 'this_month') {
+      var thirtyDaysAgo = new Date(todayDate);
+      thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+      return signalDate >= thirtyDaysAgo && signalDate <= todayDate;
+    }
+    if (freshnessValue === 'this_year') {
+      var yearAgo = new Date(todayDate);
+      yearAgo.setFullYear(yearAgo.getFullYear() - 1);
+      return signalDate >= yearAgo && signalDate <= todayDate;
+    }
+    return true;
+  }
+
+  function renderDashboard() {
+    var now = new Date();
+    var oneJan = new Date(now.getFullYear(), 0, 1);
+    var weekNum = Math.ceil(((now - oneJan) / 86400000 + oneJan.getDay() + 1) / 7);
+    document.getElementById('dashboardDate').textContent = 'Week ' + weekNum + ', ' + now.getFullYear();
+
+    var allCategories = [
+      'Policy & Governance',
+      'Industry & Enterprise',
+      'Creative & Culture',
+      'Climate & Sustainability',
+      'Deep Tech & Research',
+      'Robotics & Embodied AI'
+    ];
+    var strengthLevels = ['weak', 'emerging', 'strong'];
+
+    var matrix = {};
+    allCategories.forEach(function(cat) {
+      matrix[cat] = { weak: 0, emerging: 0, strong: 0 };
+    });
+
+    signals.forEach(function(s) {
+      if (s.content_type === 'monthly_synthesis' || s.content_type === 'quarterly_report') return;
+      var cat = s.category;
+      var str = s.signal_strength;
+      if (matrix[cat] && matrix[cat][str] !== undefined) {
+        matrix[cat][str]++;
+      }
+    });
+
+    var grid = document.getElementById('dashboardGrid');
+    var html = '';
+
+    html += '<div class="dashboard-row dashboard-header-row">';
+    html += '<div class="dashboard-cell category"></div>';
+    html += '<div class="dashboard-cell">Early</div>';
+    html += '<div class="dashboard-cell">Track</div>';
+    html += '<div class="dashboard-cell">Urgent</div>';
+    html += '</div>';
+
+    allCategories.forEach(function(cat) {
+      html += '<div class="dashboard-row">';
+      html += '<div class="dashboard-cell category">' + cat + '</div>';
+      strengthLevels.forEach(function(str) {
+        var count = matrix[cat][str];
+        var displayCount = Math.min(count, 3);
+        html += '<div class="dashboard-cell"><span class="heatmap-cell strength-' + str + '" data-count="' + displayCount + '">' + (count > 0 ? count : '') + '</span></div>';
+        });
+      html += '</div>';
+    });
+
+    grid.innerHTML = html;
+  }
+
+  function setFilterFreshnessDefault() {
+    document.getElementById('filterFreshness').value = 'this_week';
+  }
+
+  function truncate(text, len) {
+    if (!text) return '';
+    return text.length > len ? text.substring(0, len) + '...' : text;
+  }
+
+  function typeMatchesFilter(typeFilter, signal) {
+    if (typeFilter === 'all') return true;
+
+    var searchIn = (signal.category + ' ' + (signal.tags || []).join(' ') + ' ' + (signal.content_type || '')).toLowerCase();
+    return searchIn.indexOf(typeFilter.toLowerCase()) !== -1;
+  }
+
+  function renderGrid(list) {
+    var grid = document.getElementById('signalGrid');
+    var noResults = document.getElementById('noResults');
+    var showMoreBtn = document.getElementById('showMoreBtn');
+
+    visibleCount = 5;
+
+    if (list.length === 0) {
+      grid.style.display = 'none';
+      showMoreBtn.style.display = 'none';
+      noResults.style.display = 'block';
+      return;
+    }
+
+    grid.style.display = '';
+    noResults.style.display = 'none';
+
+    var toDisplay = list.slice(0, visibleCount);
+    var html = '';
+    for (var i = 0; i < toDisplay.length; i++) {
+      var s = toDisplay[i];
+      var isSynthesis = s.content_type === 'monthly_synthesis' || s.content_type === 'quarterly_report';
+      html += '<div class="signal-tile' + (isSynthesis ? ' synthesis' : '') + '" data-signal-id="' + s.id + '" onclick="window.showExpanded(\'' + s.id + '\')">';
+      html += '<div class="tile-meta">';
+      html += '<span class="tile-date">' + formatDate(s.date) + '</span>';
+      html += '<span class="tile-badge badge-category">' + s.category_emoji + '</span>';
+      html += '<span class="tile-badge ' + strengthClass(s.signal_strength) + '">' + strengthLabel(s.signal_strength) + '</span>';
+      if (isSynthesis) {
+        html += '<span class="tile-badge" style="color:var(--accent);border-color:var(--accent-dim)">' + s.content_type.replace('_',' ').toUpperCase() + '</span>';
+      }
+      html += '</div>';
+      html += '<h3>' + s.title_en + '</h3>';
+      html += '<p class="tile-title-cn">' + s.title_cn + '</p>';
+      html += '<p class="tile-summary">' + truncate(s.body.signal, 180) + '</p>';
+      html += '<div class="tile-footer">';
+      html += '<span class="tile-source">' + s.source_name + '</span>';
+      if (s.related_signals && s.related_signals.length > 0) {
+        html += '<span class="tile-trajectory">&harr; Trajectory</span>';
+      }
+      html += '</div>';
+      html += '<div class="tile-tags">';
+      for (var t = 0; t < s.tags.length && t < 4; t++) {
+        html += '<span class="tag">' + s.tags[t] + '</span>';
+      }
+      html += '</div>';
+      html += '</div>';
+    }
+
+    grid.innerHTML = html;
+
+    if (list.length > visibleCount) {
+      showMoreBtn.style.display = 'block';
+    } else {
+      showMoreBtn.style.display = 'none';
+    }
+  }
+
+  document.getElementById('showMoreBtn').addEventListener('click', function() {
+    visibleCount += MAX_VISIBLE;
+    var freshness = document.getElementById('filterFreshness').value;
+    var filtered = getFiltered(freshness);
+    var grid = document.getElementById('signalGrid');
+    var toDisplay = filtered.slice(0, visibleCount);
+
+    var html = '';
+    for (var i = 0; i < toDisplay.length; i++) {
+      var s = toDisplay[i];
+      var isSynthesis = s.content_type === 'monthly_synthesis' || s.content_type === 'quarterly_report';
+      html += '<div class="signal-tile' + (isSynthesis ? ' synthesis' : '') + '" data-signal-id="' + s.id + '" onclick="window.showExpanded(\'' + s.id + '\')">';
+      html += '<div class="tile-meta">';
+      html += '<span class="tile-date">' + formatDate(s.date) + '</span>';
+      html += '<span class="tile-badge badge-category">' + s.category_emoji + '</span>';
+      html += '<span class="tile-badge ' + strengthClass(s.signal_strength) + '">' + strengthLabel(s.signal_strength) + '</span>';
+      if (isSynthesis) {
+        html += '<span class="tile-badge" style="color:var(--accent);border-color:var(--accent-dim)">' + s.content_type.replace('_',' ').toUpperCase() + '</span>';
+      }
+      html += '</div>';
+      html += '<h3>' + s.title_en + '</h3>';
+      html += '<p class="tile-title-cn">' + s.title_cn + '</p>';
+      html += '<p class="tile-summary">' + truncate(s.body.signal, 180) + '</p>';
+      html += '<div class="tile-footer">';
+      html += '<span class="tile-source">' + s.source_name + '</span>';
+      if (s.related_signals && s.related_signals.length > 0) {
+        html += '<span class="tile-trajectory">&harr; Trajectory</span>';
+      }
+      html += '</div>';
+      html += '<div class="tile-tags">';
+      for (var t = 0; t < s.tags.length && t < 4; t++) {
+        html += '<span class="tag">' + s.tags[t] + '</span>';
+      }
+      html += '</div>';
+      html += '</div>';
+    }
+
+    grid.innerHTML = html;
+
+    if (filtered.length > visibleCount) {
+      document.getElementById('showMoreBtn').style.display = 'block';
+    } else {
+      document.getElementById('showMoreBtn').style.display = 'none';
+    }
+  });
+
+  function updateCount(n) {
+    document.getElementById('filterCount').textContent = n + ' signal' + (n !== 1 ? 's' : '');
+  }
+
+  function getFiltered(freshnessValue) {
+    var ind = document.getElementById('filterIndustry').value;
+    var str = document.getElementById('filterStrength').value;
+    var typ = document.getElementById('filterType').value;
+    var q = document.getElementById('searchInput').value.toLowerCase().trim();
+    var fresh = freshnessValue || document.getElementById('filterFreshness').value;
+
+    return signals.filter(function(s) {
+      if (ind !== 'all' && s.category !== ind) return false;
+      if (str !== 'all' && s.signal_strength !== str) return false;
+      if (typ !== 'all' && !typeMatchesFilter(typ, s)) return false;
+      if (!isDateInRange(s.date, fresh)) return false;
+      if (q) {
+        var haystack = (s.title_en + ' ' + s.title_cn + ' ' + s.body.signal + ' ' + s.tags.join(' ')).toLowerCase();
+        if (haystack.indexOf(q) === -1) return false;
+      }
+      return true;
+    });
+  }
+
+  function applyFilters() {
+    var filtered = getFiltered();
+    renderGrid(filtered);
+    updateCount(filtered.length);
+  }
+
+  function bindFilters() {
+    document.getElementById('filterIndustry').addEventListener('change', applyFilters);
+    document.getElementById('filterStrength').addEventListener('change', applyFilters);
+    document.getElementById('filterType').addEventListener('change', applyFilters);
+    document.getElementById('filterFreshness').addEventListener('change', applyFilters);
+    document.getElementById('searchInput').addEventListener('input', applyFilters);
+  }
+
+  window.showExpanded = function(id) {
+    var s = null;
+    for (var i = 0; i < signals.length; i++) {
+      if (signals[i].id === id) { s = signals[i]; break; }
+    }
+    if (!s) return;
+    history.replaceState(null, '', '#' + id);
+
+    var html = '<button class="expanded-back" onclick="window.hideExpanded()">&larr; Back to Sino-Signals</button>';
+    html += '<div class="expanded-meta">';
+    html += '<span class="signal-date">' + formatDate(s.date) + '</span>';
+    html += '<span class="badge badge-category">' + s.category_emoji + ' ' + s.category + '</span>';
+    html += '<span class="badge ' + strengthClass(s.signal_strength) + '">' + strengthLabel(s.signal_strength) + '</span>';
+    if (s.content_type !== 'daily') {
+      html += '<span class="badge" style="color:var(--accent);border-color:var(--accent-dim)">' + s.content_type.replace('_',' ').toUpperCase() + '</span>';
+    }
+    html += '</div>';
+    html += '<h2 class="expanded-title">' + s.title_en + '</h2>';
+    html += '<p class="expanded-title-cn">' + s.title_cn + '</p>';
+
+    if (s.source_url) {
+      html += '<p class="signal-source" style="margin-bottom:2rem">Source: <a href="' + s.source_url + '" target="_blank" rel="noopener">' + s.source_name + '</a></p>';
+    } else {
+      html += '<p class="signal-source" style="margin-bottom:2rem">Source: ' + s.source_name + '</p>';
+    }
+
+    var sections = [
+      { key: 'signal', label: 'What is the signal?' },
+      { key: 'china_scale', label: 'Why can it scale in China?' },
+      { key: 'global_impact', label: 'How might it impact the world?' },
+      { key: 'monday_morning', label: 'So what might you do?' }
+    ];
+    for (var i = 0; i < sections.length; i++) {
+      if (s.body[sections[i].key]) {
+        html += '<div class="expanded-section">';
+        html += '<p class="expanded-section-label">' + sections[i].label + '</p>';
+        html += '<p>' + s.body[sections[i].key] + '</p>';
+        html += '</div>';
+      }
+    }
+
+    if (s.body.related_notes) {
+      html += '<div class="expanded-section">';
+      html += '<p class="expanded-section-label">Related Signals</p>';
+      html += '<p>' + s.body.related_notes + '</p>';
+      html += '</div>';
+    }
+
+    html += '<div class="expanded-tags">';
+    for (var t = 0; t < s.tags.length; t++) {
+      html += '<span class="tag">' + s.tags[t] + '</span>';
+    }
+    html += '</div>';
+
+    if (s.related_signals && s.related_signals.length > 0) {
+      html += '<div class="expanded-related">';
+      html += '<p class="expanded-section-label">Signal Trajectory</p>';
+      for (var r = 0; r < s.related_signals.length; r++) {
+        var relId = s.related_signals[r];
+        var rel = null;
+        for (var j = 0; j < signals.length; j++) {
+          if (signals[j].id === relId) { rel = signals[j]; break; }
+        }
+        if (rel) {
+          html += '<div class="related-card" onclick="window.showExpanded(\'' + rel.id + '\')">';
+          html += '<h4>' + rel.title_en + '</h4>';
+          html += '<span class="related-date">' + formatDate(rel.date) + ' &middot; ' + rel.category + '</span>';
+          html += '</div>';
+        }
+      }
+      html += '</div>';
+    }
+
+    html += '<div class="expanded-share">';
+    html += '<button class="share-btn" onclick="window.shareSignal(\'' + encodeURIComponent(s.title_en) + '\')">Share Signal</button>';
+    html += '<button class="share-btn" onclick="window.printSignal()">Print Signal</button>';
+    html += '</div>';
+    html += '<button class="expanded-back expanded-back-bottom" onclick="window.hideExpanded()">&larr; Back to Sino-Signals</button>';
+
+    document.getElementById('expandedContent').innerHTML = html;
+    document.getElementById('expandedView').classList.add('active');
+    document.getElementById('filterBar').style.display = 'none';
+    document.querySelector('.signal-grid-wrapper').style.display = 'none';
+    var expEl = document.getElementById('expandedView');
+    expEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  window.hideExpanded = function() {
+    document.getElementById('expandedView').classList.remove('active');
+    document.getElementById('filterBar').style.display = '';
+    document.querySelector('.signal-grid-wrapper').style.display = '';
+    history.replaceState(null, '', window.location.pathname);
+  };
+
+  // Deep link: open signal from URL hash on page load
+  (function() {
+    var hash = window.location.hash.replace('#', '');
+    if (hash && hash.length > 0) {
+      setTimeout(function() { window.showExpanded(hash); }, 300);
+    }
+  })();
+
+  window.printSignal = function() {
+    var content = document.getElementById('expandedContent').innerHTML;
+    var win = window.open('', '_blank');
+    win.document.write('<html><head><title>Sino-Signals</title>');
+    win.document.write('<style>body{font-family:Inter,sans-serif;max-width:700px;margin:2rem auto;padding:0 1rem;color:#1a1a2e;line-height:1.7}h2{font-family:"Playfair Display",serif}button,.expanded-back,.expanded-back-bottom,.share-btn,.related-card{display:none!important}.badge,.tag{font-size:0.72rem;padding:0.2rem 0.5rem;border:1px solid #e2e8f0;border-radius:12px;display:inline-block;margin-right:0.4rem}.expanded-section{margin-bottom:1.5rem}.expanded-section-label{font-weight:700;margin-bottom:0.3rem}</style>');
+    win.document.write('</head><body>');
+    win.document.write(content);
+    win.document.write('<hr style="margin-top:2rem;border:none;border-top:1px solid #e2e8f0"><p style="font-size:0.75rem;color:#718096">Sino-Signals &middot; josephpress.com/sino-signals</p>');
+    win.document.write('</body></html>');
+    win.document.close();
+    win.print();
+  };
+
+  window.shareSignal = function(encodedTitle) {
+    var title = decodeURIComponent(encodedTitle);
+    var text = title + ' // Sino-Signals by Joseph Press\nhttps://www.josephpress.com/sino-signals/';
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(text).then(function() {
+        var btns = document.querySelectorAll('.share-btn');
+        if (btns.length > 0) {
+          var btn = btns[0];
+          btn.textContent = 'Copied';
+          setTimeout(function() { btn.textContent = 'Share Signal'; }, 2000);
+        }
+      });
+    }
+  };
+
+  window.addEventListener('scroll', function() {
+    document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 20);
+  });
+  document.querySelectorAll('.nav-links a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      document.getElementById('navLinks').classList.remove('open');
+    });
+  });
+})();
+</script>
+</body>
+</html>
