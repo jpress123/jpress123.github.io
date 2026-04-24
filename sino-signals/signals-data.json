@@ -1,5 +1,69 @@
 [
   {
+    "id": "2026-04-24-deepseek-v4-huawei-ascend-trillion-parameter",
+    "date": "2026-04-24",
+    "day_number": 13,
+    "category": "Deep Tech & Research",
+    "category_emoji": "🔬",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "title_en": "DeepSeek V4 Launches on Huawei Ascend 950PR with One Trillion Parameters, Abandoning NVIDIA Entirely",
+    "title_cn": "DeepSeek V4全面换装华为昇腾950PR芯片，万亿参数完全告别英伟达",
+    "source_url": "https://finance.sina.com.cn/wm/2026-04-15/doc-inhuqsme4656391.shtml",
+    "source_name": "新浪财经 (Sina Finance)",
+    "tags": [
+      "DeepSeek",
+      "Huawei Ascend",
+      "domestic AI chips",
+      "trillion-parameter model",
+      "CUDA independence",
+      "Cambricon"
+    ],
+    "related_signals": [
+      "2026-04-11-deepseek-v4-huawei-ascend-950pr"
+    ],
+    "industry_lens": "education",
+    "content_type": "daily",
+    "body": {
+      "signal": "DeepSeek's next-generation flagship model, V4, is launching in late April 2026 running entirely on Huawei's Ascend 950PR chip, with zero NVIDIA dependency. The model uses a Mixture of Experts architecture with one trillion total parameters, activating approximately 37 billion per inference, and supports multimodal input across text, image, and code. DeepSeek delayed its original February release to collaborate with Huawei and Cambricon on substantial code rewrites, rebuilding the model's infrastructure from CUDA to Huawei's CANN framework.",
+      "china_scale": "V4 is not a proof-of-concept running on domestic hardware for demonstration purposes. It is a frontier model, built by the lab that produced R1 and V3, choosing to ship its flagship product on Chinese silicon. DeepSeek's decision validates Huawei Ascend as a training-grade platform for trillion-parameter models, a threshold that no other domestic chip had crossed with a top-tier model maker. China's domestic intelligent computing is projected to exceed 35% of total national computing infrastructure in 2026, and V4 accelerates that shift from policy aspiration to technical reality.",
+      "global_impact": "This fundamentally changes the calculus on semiconductor export controls. The strategic logic of restricting NVIDIA H100 and A100 access assumed China could not train frontier models on domestic hardware. V4 on Ascend 950PR demonstrates a real, validated non-CUDA path for trillion-parameter training. NVIDIA's addressable market in China is now shrinking structurally, not just from regulation but from a competing ecosystem that top Chinese labs actively prefer. Every open-source model that follows DeepSeek's lead onto Ascend compounds the ecosystem shift.",
+      "monday_morning": "If you lead AI infrastructure strategy, model what a two-track chip supply chain means for your procurement over the next three years. If you advise semiconductor companies with China revenue exposure, reassess forecasts given that China's most prominent AI lab has publicly abandoned NVIDIA for its flagship release. If you build on open-source models, prepare for a future where leading Chinese models are optimized for CANN first and CUDA second.",
+      "related_notes": "Extends the earlier signal on domestic AI chips crossing the training threshold (Signal #10). V4's release is the concrete proof point that the inference-to-training transition for Chinese silicon is complete at the frontier level."
+    }
+  },
+  {
+    "id": "2026-04-24-iflytek-quantum-ai-summit-intelligent-agent-quantum-computer",
+    "date": "2026-04-24",
+    "day_number": 12,
+    "category": "Deep Tech & Research",
+    "category_emoji": "🔬",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "title_en": "iFlytek and Tsinghua Launch 'Intelligent Agent Quantum Computer' Project, Embedding LLMs into Quantum Control Systems",
+    "title_cn": "科大讯飞与清华启动智能体量子计算机项目，将大模型嵌入量子控制系统",
+    "source_url": "https://finance.sina.com.cn/tech/roll/2026-04-23/doc-inhvnnwy5008983.shtml",
+    "source_name": "新浪财经 (Sina Finance) / 经济参考报",
+    "tags": [
+      "iFlytek",
+      "Tsinghua University",
+      "quantum computing",
+      "intelligent agent quantum computer",
+      "quantum error correction",
+      "atom arrays"
+    ],
+    "related_signals": [],
+    "industry_lens": "pharma",
+    "content_type": "daily",
+    "body": {
+      "signal": "On April 22, 2026, the Intelligent Quantum Summit in Beijing unveiled 'Liangzhi Kaiwu,' a joint venture between iFlytek and Liangyi Wanxiang, and announced the construction of an 'intelligent agent quantum computer' that embeds large language model capabilities directly into quantum computing control systems. The summit also released two algorithms: 'Zhuifeng,' a large-scale atomic fast rearrangement algorithm for controlling quantum atom arrays, and 'Bian Que,' a quantum error correction decoder. Tsinghua University's team has captured 10,064 atoms in a single experiment, surpassing Caltech's prior record of 6,100 and crossing the 10,000-qubit-resource threshold for the first time.",
+      "china_scale": "China's quantum computing investment is surging. Q1 2026 quantum computing funding reached levels approaching all of 2025, with leading firms like Turing Quantum exceeding 1 billion yuan in cumulative funding at a 7 billion yuan valuation. The iFlytek partnership is significant because it brings China's largest voice AI and enterprise AI company into quantum computing, connecting quantum hardware to the commercial AI application layer. The four research directions announced, including AI-powered quantum algorithms, agent-based quantum computers, quantum-enhanced precision instruments, and quantum-accelerated AI, define a bilateral integration roadmap rather than a one-directional dependency.",
+      "global_impact": "Western quantum-AI integration efforts remain largely academic or confined to cloud-access programs from IBM and Google. China is taking a different path: embedding autonomous AI agents into quantum control systems to enable self-learning and self-optimization. The Tsinghua 10,064-atom record demonstrates that China's neutral-atom quantum computing capabilities now lead globally in scale. For pharmaceutical companies that depend on molecular simulation, the 'Bian Que' error correction decoder signals that fault-tolerant quantum chemistry calculations are moving closer to practical deployment.",
+      "monday_morning": "If you lead R&D strategy in pharma or materials science, track the Liangzhi Kaiwu platform's development timeline. Autonomous quantum computers that can self-optimize through embedded AI agents could compress the timeline for practical quantum chemistry from 'someday' to a specific planning horizon. If you invest in quantum computing, note that China's Q1 2026 funding trajectory suggests the sector is entering a growth phase that mirrors early-stage AI venture funding patterns from 2023.",
+      "related_notes": ""
+    }
+  },
+  {
     "id": "2026-04-11-china-draft-rules-human-like-ai-services",
     "date": "2026-04-11",
     "day_number": 11,
@@ -11,7 +75,12 @@
     "title_cn": "中国起草类人交互AI服务管理办法，要求监测用户情绪风险",
     "source_url": "https://www.chinalawtranslate.com/en/chatbot-measures-draft/",
     "source_name": "China Law Translate",
-    "tags": ["AI regulation", "digital humans", "emotional AI", "CAC"],
+    "tags": [
+      "AI regulation",
+      "digital humans",
+      "emotional AI",
+      "CAC"
+    ],
     "related_signals": [],
     "industry_lens": "consumer",
     "content_type": "daily",
@@ -35,7 +104,12 @@
     "title_cn": "DeepSeek V4将原生运行于华为昇腾950 PR，摆脱CUDA依赖",
     "source_url": "https://www.trendforce.com/news/2026/04/07/news-decoding-deepseek-v4-how-huaweis-ascend-950-pr-is-powering-chinas-push-to-break-cuda-dependence/",
     "source_name": "TrendForce",
-    "tags": ["DeepSeek", "Huawei Ascend", "AI chips", "CUDA"],
+    "tags": [
+      "DeepSeek",
+      "Huawei Ascend",
+      "AI chips",
+      "CUDA"
+    ],
     "related_signals": [],
     "industry_lens": "financial services",
     "content_type": "daily",
@@ -59,7 +133,11 @@
     "title_cn": "五部门发布《人工智能+教育》行动计划，AI课程覆盖小学到大学",
     "source_url": "http://en.people.cn/n3/2026/0410/c90000-20445476.html",
     "source_name": "People's Daily",
-    "tags": ["education policy", "AI literacy", "workforce"],
+    "tags": [
+      "education policy",
+      "AI literacy",
+      "workforce"
+    ],
     "related_signals": [],
     "industry_lens": "education",
     "content_type": "daily",
@@ -83,7 +161,11 @@
     "title_cn": "十部门联合发布人工智能科技伦理审查与服务办法（试行）",
     "source_url": "https://news.cgtn.com/news/2026-04-03/China-issues-guideline-for-AI-ethics-governance-1M32wkvCAWA/p.html",
     "source_name": "CGTN",
-    "tags": ["AI ethics", "regulation", "governance"],
+    "tags": [
+      "AI ethics",
+      "regulation",
+      "governance"
+    ],
     "related_signals": [],
     "industry_lens": "financial services",
     "content_type": "daily",
@@ -107,7 +189,11 @@
     "title_cn": "中国人形机器人企业2026年目标出货6.25万台，全球前六均为中国企业",
     "source_url": "http://www.news.cn/tech/20260108/46b1220e159d4f80bc6a4240eb3b47b5/c.html",
     "source_name": "Xinhua",
-    "tags": ["humanoid robots", "manufacturing", "embodied AI"],
+    "tags": [
+      "humanoid robots",
+      "manufacturing",
+      "embodied AI"
+    ],
     "related_signals": [],
     "industry_lens": "automotive",
     "content_type": "daily",
@@ -131,7 +217,12 @@
     "title_cn": "华为发布Atlas 350搭载自研HBM，性能号称达NVIDIA H20的2.8倍",
     "source_url": "https://www.trendforce.com/news/2026/03/23/news-huawei-debuts-atlas-350-on-ascend-950pr-with-in-house-hbm-touting-2-8x-h20-performance/",
     "source_name": "TrendForce",
-    "tags": ["Huawei", "AI chips", "HBM", "semiconductor"],
+    "tags": [
+      "Huawei",
+      "AI chips",
+      "HBM",
+      "semiconductor"
+    ],
     "related_signals": [],
     "industry_lens": "financial services",
     "content_type": "daily",
@@ -155,7 +246,11 @@
     "title_cn": "中国机器人产业突破2100亿元，工业机器人产量达42.2万台",
     "source_url": "https://finance.sina.com.cn/stock/relnews/cn/2026-02-09/doc-inhmfcpk2210749.shtml",
     "source_name": "Sina Finance",
-    "tags": ["industrial robots", "manufacturing", "automation"],
+    "tags": [
+      "industrial robots",
+      "manufacturing",
+      "automation"
+    ],
     "related_signals": [],
     "industry_lens": "automotive",
     "content_type": "daily",
@@ -179,7 +274,12 @@
     "title_cn": "清华大学联合小米推出无姿态前馈三维重建框架DGGT",
     "source_url": "https://air.tsinghua.edu.cn/",
     "source_name": "Tsinghua AIR",
-    "tags": ["autonomous driving", "3D reconstruction", "Tsinghua", "Xiaomi"],
+    "tags": [
+      "autonomous driving",
+      "3D reconstruction",
+      "Tsinghua",
+      "Xiaomi"
+    ],
     "related_signals": [],
     "industry_lens": "automotive",
     "content_type": "daily",
@@ -203,7 +303,11 @@
     "title_cn": "清华大学《紫荆AI医院》进入临床内部测试",
     "source_url": "https://www.tsinghua.edu.cn/info/1182/124190.htm",
     "source_name": "Tsinghua University",
-    "tags": ["AI healthcare", "LLM agents", "clinical AI"],
+    "tags": [
+      "AI healthcare",
+      "LLM agents",
+      "clinical AI"
+    ],
     "related_signals": [],
     "industry_lens": "pharma",
     "content_type": "daily",
@@ -227,7 +331,11 @@
     "title_cn": "\"十四五\"期间中国创造世界一半以上太阳能电池效率纪录",
     "source_url": "https://finance.sina.com.cn/stock/roll/2026-02-05/doc-inhktwvm5921376.shtml",
     "source_name": "Sina Finance",
-    "tags": ["solar energy", "clean tech", "efficiency records"],
+    "tags": [
+      "solar energy",
+      "clean tech",
+      "efficiency records"
+    ],
     "related_signals": [],
     "industry_lens": "consumer",
     "content_type": "daily",
@@ -251,7 +359,11 @@
     "title_cn": "77%中国消费者高频使用AI，60后群体中占比也达57%",
     "source_url": "https://m.thepaper.cn/newsDetail_forward_32186494",
     "source_name": "The Paper",
-    "tags": ["consumer AI", "adoption", "demographics"],
+    "tags": [
+      "consumer AI",
+      "adoption",
+      "demographics"
+    ],
     "related_signals": [],
     "industry_lens": "consumer",
     "content_type": "daily",
