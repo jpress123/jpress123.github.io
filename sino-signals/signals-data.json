@@ -1,5 +1,71 @@
 [
   {
+    "id": "2026-04-27-china-personal-information-protection-special-action-2026",
+    "date": "2026-04-27",
+    "day_number": 15,
+    "category": "Policy & Governance",
+    "category_emoji": "🏛️",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "title_en": "Three Chinese Ministries Launch Seven-Sector Personal Information Protection Crackdown for 2026",
+    "title_cn": "中央网信办、工信部、公安部联合发布2026年个人信息保护系列专项行动",
+    "source_url": "https://www.cac.gov.cn/2026-04/02/c_1776867645836849.htm",
+    "source_name": "Cyberspace Administration of China (中央网信办)",
+    "tags": [
+      "personal information protection",
+      "PIPL enforcement",
+      "facial recognition",
+      "CAC",
+      "MIIT",
+      "Ministry of Public Security",
+      "data privacy"
+    ],
+    "related_signals": [
+      "2026-04-10-ten-ministries-ai-ethics-review-framework"
+    ],
+    "industry_lens": "consumer",
+    "content_type": "daily",
+    "body": {
+      "signal": "On April 2, 2026, the Cyberspace Administration of China, the Ministry of Industry and Information Technology, and the Ministry of Public Security jointly issued a public notice launching a 2026 Personal Information Protection Special Action Series. The campaign covers seven sectors, namely apps and SDKs, internet advertising, education institutions, transportation operators, healthcare providers, financial institutions, and a dedicated track for personal information criminal cases. Authorities will sanction non-compliant operators, with severe cases triggering forced service suspensions.",
+      "china_scale": "Three central agencies acting jointly across seven sectors creates the broadest cross-vertical personal information enforcement pass since the Personal Information Protection Law took effect in 2021. The notice specifies, for the first time at this scope, that organizations cannot make facial recognition the sole verification method when other methods can verify identity. It also formalizes parental consent requirements for processing data of users under 14 across schools, after-school training programs, and healthcare apps, and forces lenders, hospitals, and schools to disclose every third-party data recipient by name, purpose, and method.",
+      "global_impact": "China is now setting an enforcement bar that exceeds GDPR in vertical specificity and pace. The facial recognition rule sets a precedent that EU and California regulators will study, since it directly addresses biometric over-collection that GDPR enforcement has struggled to operationalize. Multinational operators in China face a compliance cycle measured in weeks, not the multi-year transition periods Western jurisdictions typically grant. Internet advertising rules requiring named disclosure of every downstream PI recipient will complicate global ad-tech graphs that route through Chinese platforms.",
+      "monday_morning": "If your organization processes Chinese user data through any of the seven named sectors, commission a gap analysis against the action's specific items by mid-May. Prioritize three workstreams, the facial recognition stack (audit any deployment as the sole verification method), the third-party SDK inventory (every embedded SDK is now in scope), and the parental consent documentation trail for users under 14. Treat this as a six-week sprint, not an annual compliance refresh.",
+      "related_notes": "Extends the AI ethics review framework signal (Signal #8) from policy formation to active enforcement. The PI Protection Action is the operational arm of China's three-layer governance stack, executed jointly by the regulatory, industrial, and law-enforcement ministries."
+    }
+  },
+  {
+    "id": "2026-04-27-data-center-decarbonization-guideline-central-committee-state-council",
+    "date": "2026-04-27",
+    "day_number": 14,
+    "category": "Climate & Sustainability",
+    "category_emoji": "🌱",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "title_en": "Central Committee and State Council Issue Energy-Efficiency Guideline Naming Data Centers as Priority Sector",
+    "title_cn": "中共中央办公厅、国务院办公厅印发节能降碳指导意见，数据中心列为重点领域",
+    "source_url": "http://www.china.org.cn/2026-04/23/content_118458229.shtml",
+    "source_name": "China.org.cn / Xinhua",
+    "tags": [
+      "data center decarbonization",
+      "carbon peak 2030",
+      "Dual Control",
+      "renewable energy mandate",
+      "PUE",
+      "AI infrastructure",
+      "Central Committee"
+    ],
+    "related_signals": [],
+    "industry_lens": "financial services",
+    "content_type": "daily",
+    "body": {
+      "signal": "On April 23, 2026, the General Office of the Communist Party Central Committee and the General Office of the State Council jointly issued a guideline on advancing energy conservation and carbon reduction. Data centers and digital infrastructure are named as priority sectors alongside steel, non-ferrous metals, chemicals, construction, and transportation. The guideline calls for cooling-system upgrades and other measures to improve energy efficiency per unit of computing power. The same day, both offices released new evaluation measures requiring provincial governments to file action plans and accept periodic carbon-target audits.",
+      "china_scale": "The 2025 rule already required new data centers to source 80% of electricity from renewables, the highest obligation among China's energy-intensive industries. The April 23 guideline extends that pressure to existing facilities and ties compliance to provincial-level performance reviews under China's Dual Control carbon emissions framework. With AI data center electricity consumption projected to surpass 1,000 TWh by 2030, Beijing is moving to lock in efficiency gains before the demand curve steepens, paired with the East-West Computing Resources Transmission program that routes new compute build-out to renewable-rich western provinces.",
+      "global_impact": "China is making AI infrastructure efficiency a measurable national priority before Western jurisdictions have agreed on disclosure standards. Hyperscalers operating in China will face stricter Power Usage Effectiveness benchmarks and renewable sourcing rules than they face in the US or EU. Equipment vendors selling liquid cooling, immersion cooling, and energy management software gain a clear addressable market over the next two years. Western ESG investors will need to recalibrate AI-related disclosures once Chinese provincial efficiency benchmarks set a global reference point.",
+      "monday_morning": "If you operate or rely on data center capacity in China, request an updated PUE benchmark from your providers and confirm which efficiency upgrades are scheduled before year-end. If you sell cooling, power management, or efficiency software, prioritize Chinese hyperscaler accounts now, while the procurement window opens. If you set ESG or AI sustainability metrics, draft scenarios for what your reported numbers look like once Chinese provincial benchmarks become an external comparator.",
+      "related_notes": ""
+    }
+  },
+  {
     "id": "2026-04-24-deepseek-v4-huawei-ascend-trillion-parameter",
     "date": "2026-04-24",
     "day_number": 13,
