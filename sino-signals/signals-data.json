@@ -1,5 +1,72 @@
 [
   {
+    "id": "2026-04-29-jimeng-octo-vibe-create-collaborative-ai-narrative",
+    "date": "2026-04-29",
+    "day_number": 19,
+    "category": "Creative & Culture",
+    "category_emoji": "🎨",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "title_en": "ByteDance Jimeng AI Launches Octo, the First Collaborative AI Narrative Tool, Defining the Vibe Create Paradigm",
+    "title_cn": "字节即梦推出全球首款协作型AI叙事创作工具Octo（小章鱼），首创Vibe Create范式",
+    "source_url": "https://news.qq.com/rain/a/20260409A04U4200",
+    "source_name": "腾讯新闻 (Tencent News) / 即梦 AI",
+    "tags": [
+      "Jimeng AI",
+      "ByteDance",
+      "Octo",
+      "Vibe Create",
+      "Seedance 2.0",
+      "Seedream 5.0 Lite",
+      "AI narrative",
+      "AIGC"
+    ],
+    "related_signals": [
+      "2026-04-28-china-ai-film-tv-development-report-2025-2026"
+    ],
+    "industry_lens": "consumer",
+    "content_type": "daily",
+    "body": {
+      "signal": "On April 8 to 9, 2026, ByteDance's Jimeng AI opened beta access to Octo, branded 小章鱼, the first collaborative AI narrative creation tool. Octo introduces the Vibe Create paradigm, replacing the conventional instruct-then-deliver workflow with a multimodal canvas where the agent and the creator iterate on outline, characters, world, storyboards, and final video at the same time. The tool plugs directly into Seedance 2.0 and Seedream 5.0 Lite, covering story outline, asset construction, storyboard generation, and short film output in one workspace.",
+      "china_scale": "Jimeng anchors the largest Chinese-language AI creator base, fed by ByteDance's Douyin distribution graph and the existing CapCut editor footprint. Vibe Create lowers the threshold from writing prompts to thinking aloud, which collapses onboarding for the country's 14,000-plus AI manga drama studios that shipped an average of 470 new shorts per day in Q1 2026. The Web beta gates demand while Seedance 2.0, the model that topped the Artificial Analysis Video Arena at Elo 1,269, supplies the generation engine. ByteDance can ship Octo's interaction model into Douyin, CapCut, and Lark stacks within one quarter once beta data normalizes.",
+      "global_impact": "Sora, Runway, Veo, and Kling export still ship as prompt-and-render front ends. Octo recasts AI from executor to co-author and pairs that paradigm with a video model that benchmarks above Sora 2 and Veo 3. Hollywood studios, ad agencies, and Western platform product teams now face a category move, not a feature gap, because the agent is taking creative authorship surface, not just rendering surface. Western competitors will reposition product UX around co-creation within the next two release cycles.",
+      "monday_morning": "If you run a creative tool product, audit whether your roadmap still treats the prompt box as the primary surface, and prototype a multimodal canvas where the agent senses screen state and acts in parallel. If you commission AI creative work, shorten your turnaround SLA assumptions to days, not weeks, because Octo plus Seedance 2.0 collapses outline-to-render into one session. If you teach AI literacy, update your curriculum so students learn to direct a co-author agent, not write longer prompts.",
+      "related_notes": "Extends the April 28 signal on China's AI Film and TV Development Report. The report documented six commercial models proven; Octo provides the production stack those models need at the creator tier."
+    }
+  },
+  {
+    "id": "2026-04-29-tsinghua-iflytek-quantum-ai-10064-atoms",
+    "date": "2026-04-29",
+    "day_number": 18,
+    "category": "Deep Tech & Research",
+    "category_emoji": "🔬",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "title_en": "Tsinghua Captures 10,064 Atoms in World-First Qubit Resource Breakthrough as iFlytek Launches AI-Quantum Joint Venture",
+    "title_cn": "清华团队首次实验捕获10064个原子刷新世界纪录，科大讯飞携手成立量智开物公司",
+    "source_url": "https://www.stdaily.com/web/gdxw/2026-04/23/content_506526.html",
+    "source_name": "科技日报 (Science and Technology Daily)",
+    "tags": [
+      "quantum computing",
+      "atom qubits",
+      "Tsinghua University",
+      "iFlytek",
+      "AI quantum decoder",
+      "Liangzhi Kaiwu",
+      "intelligent agent quantum computer"
+    ],
+    "related_signals": [],
+    "industry_lens": "pharma",
+    "content_type": "daily",
+    "body": {
+      "signal": "At the 2026 Smart Quantum Summit on April 22 in Hefei, Tsinghua University Institute for Advanced Study Professor Zhai Huai disclosed that his team captured 10,064 atoms in a single experiment, the first time atom qubit resources have crossed the 10,000 mark and a clean break above Caltech's prior 6,100-atom record. iFlytek Chairman Liu Qingfeng announced that iFlytek and Liangyi Wanxiang, the Tsinghua atom-quantum-computing spinoff, jointly founded Liangzhi Kaiwu Technology to commercialize AI-quantum integration. The team also released an AI-based quantum error correction decoder that resolves qubit loss at the algorithm layer without added hardware, plus a large-scale atom rearrangement algorithm called Zhuifeng and a decoder called Bianque.",
+      "china_scale": "China's daily token consumption reached 140 trillion in March 2026, up from 100 billion in early 2024, a 1,000-fold rise that classical compute and energy infrastructure cannot sustain at the next decade's rates. Liangzhi Kaiwu pairs iFlytek's deployed AI infrastructure with Tsinghua's atom-quantum hardware lead, and is hiring across Tsinghua, USTC, Fudan, and the CAS Institute of Physics through a joint advisory board. Cross-institution staffing plus matched capital removes the funding-fragmentation pattern that slowed prior Chinese quantum ventures, and the AI-quantum decoder lets the platform scale qubit count without rebuilding hardware.",
+      "global_impact": "US quantum programs at IBM, Google, IonQ, and Atom Computing have led on cumulative atom and gate counts. This announcement places Tsinghua ahead on raw atom-qubit capture in a single experiment by roughly 65 percent. The intelligent agent quantum computer framing, embedding LLM-style perception, planning, and decision into the quantum control system, opens a software-side competitive front that does not currently have a clear US analog. Sovereign cloud, defense, and pharma R&D buyers will start tracking Liangzhi Kaiwu deliverables as a hedge against US-supplier-only quantum roadmaps.",
+      "monday_morning": "If you run R&D in pharma or materials, brief your computational chemistry team on Liangzhi Kaiwu and add a milestone tracker to your quantum-readiness plan, because the algorithmic decoder lowers near-term hardware barriers for molecular simulation pilots. If you sit on a tech board, ask whether your AI capacity plan still assumes classical compute scaling, given the 1,000-fold token jump iFlytek cited as the trigger for this venture. If you allocate sovereign R&D budget, study the iFlytek-plus-academic-spinoff structure, because it is the model China is now copying across vertical AI plays.",
+      "related_notes": "First Deep Tech & Research signal in the recent archive. Signals a structural shift in how China stages quantum scale, with industry-academy pairing at the core."
+    }
+  },
+  {
     "id": "2026-04-28-agibot-g2-longcheer-tablet-mass-production",
     "date": "2026-04-28",
     "day_number": 17,
