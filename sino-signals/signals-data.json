@@ -1,5 +1,148 @@
 [
   {
+    "id": "2026-05-01-wsi2n4-wafer-scale-p-type-2d-semiconductor",
+    "date": "2026-05-01",
+    "day_number": 23,
+    "category": "Deep Tech & Research",
+    "category_emoji": "🔬",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "title_en": "NUDT and CAS Institute of Metal Research Achieve First Wafer-Scale P-Type WSi2N4 Growth, Breaking Sub-5nm 2D Semiconductor Bottleneck",
+    "title_cn": "国防科大与中科院金属所首次实现P型WSi2N4晶圆级生长，突破亚5纳米二维半导体瓶颈",
+    "source_url": "https://caifuhao.eastmoney.com/news/20260409124700038099490",
+    "source_name": "东方财富 (Eastmoney) / National University of Defense Technology + CAS Institute of Metal Research",
+    "tags": [
+      "post-Moore semiconductors",
+      "2D materials",
+      "WSi2N4",
+      "P-type semiconductor",
+      "NUDT",
+      "Chinese Academy of Sciences",
+      "wafer-scale CVD",
+      "sub-3nm CMOS"
+    ],
+    "related_signals": [
+      "2026-04-29-tsinghua-iflytek-quantum-ai-10064-atoms"
+    ],
+    "industry_lens": "education",
+    "content_type": "daily",
+    "body": {
+      "signal": "A joint research team from National University of Defense Technology and the Chinese Academy of Sciences Institute of Metal Research achieved the first wafer-scale controlled growth of monolayer WSi2N4, a P-type two-dimensional semiconductor, using chemical vapor deposition on a liquid gold and tungsten dual-metal substrate. The team reports single-crystal domain sizes at the sub-millimeter level and growth rates approximately 1,000 times faster than prior literature. Optimized P-type WSi2N4 MOSFETs hold International Technology Roadmap for Semiconductors performance targets down to a 3 nm gate length, addressing the structural P-type imbalance that has constrained sub-5 nm 2D CMOS development.",
+      "china_scale": "China's domestic chip industry treats post-Moore materials as a national priority, with NSFC funding earmarked for next-generation AI compute substrates and SMIC, Hua Hong, and CXMT actively scouting alternatives to silicon below 3 nm. Pairing NUDT, a defense-affiliated research powerhouse, with the CAS Institute of Metal Research consolidates two of the country's strongest 2D-materials labs under one process recipe. Domestic foundries are positioned to begin pilot wafer integration tests inside the next four to six quarters, since the CVD recipe scales on existing 200 mm wafer infrastructure.",
+      "global_impact": "TSMC, Samsung, Intel, and IMEC have all backed MoS2 and WSe2 as the dominant 2D candidates for sub-3 nm CMOS. China's WSi2N4 result places a different P-type compound in pole position, with hole mobility, on-state current density, and chemical stability competitive with the existing Western roadmaps. Western foundry roadmaps that assume access to a single global 2D-materials toolchain now need to plan for a second, divergent process stack emerging from China that domestic foundries can adopt without paying any IP toll.",
+      "monday_morning": "If you run R&D at a foundry or equipment maker, brief your 2D-materials team on the WSi2N4 growth recipe and pull forward your evaluation roadmap by two quarters. If you sit on a chip-investment committee, treat post-Moore divergence as the new base case rather than a tail risk. If you advise on US export-control policy, assume Chinese sub-3 nm process viability via 2D materials and adjust the chokepoint analysis.",
+      "related_notes": "Pairs with the April 29 signal on Tsinghua's 10,064-atom quantum capture and iFlytek's Liangzhi Kaiwu venture. China is now publishing material-layer and quantum-layer breakthroughs in tandem, and both routes target the same post-Moore compute frontier."
+    }
+  },
+  {
+    "id": "2026-05-01-state-grid-8500-robots-6-8-billion-yuan-procurement",
+    "date": "2026-05-01",
+    "day_number": 22,
+    "category": "Robotics & Embodied AI",
+    "category_emoji": "🤖",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "title_en": "State Grid Commits 6.8 Billion Yuan to Procure 8,500 Robots in 2026 in Largest Embodied AI Industrial Order on Record",
+    "title_cn": "国家电网2026年68亿元采购8500台机器人，刷新具身智能产业最大订单",
+    "source_url": "https://www.humanoidsdaily.com/news/state-grid-s-995-million-bet-8-500-robots-to-spearhead-deployment-year-one-in-energy",
+    "source_name": "Humanoids Daily / State Grid Corporation of China",
+    "tags": [
+      "State Grid",
+      "embodied AI",
+      "humanoid robots",
+      "robot dogs",
+      "Unitree",
+      "Deep Robotics",
+      "AGIBOT",
+      "UBTech",
+      "Fourier Intelligence",
+      "power grid automation"
+    ],
+    "related_signals": [
+      "2026-04-28-agibot-g2-longcheer-tablet-mass-production",
+      "2026-04-09-china-robot-industry-2100-billion-yuan"
+    ],
+    "industry_lens": "financial services",
+    "content_type": "daily",
+    "body": {
+      "signal": "State Grid Corporation of China announced 2026 procurement of approximately 8,500 embodied AI systems totaling 6.8 billion yuan, the largest single-year industrial robot order in the sector's history. The fleet includes 5,000 quadruped robot dogs at a 1.5 billion yuan budget, 500 humanoid robots at 2.5 billion yuan, and dual-arm units assigned to substation patrol, transmission-line maintenance, and high-voltage live-line work. State Grid expects each robot unit to save 500,000 to 800,000 yuan in annual labor costs, with payback inside two to three years and inspection efficiency up roughly 5x. Selected suppliers include Unitree Robotics, Deep Robotics, AGIBOT, UBTech, and Fourier Intelligence.",
+      "china_scale": "State Grid serves more than 1.1 billion people across 26 provinces, the largest electric utility in the world by customers. Procurement runs in three waves through 2026: pilot in Q1, large-scale order in Q3, supplementary in Q4. China Southern Power Grid is following with its own program, lifting total Chinese utility-sector embodied AI capex above 10 billion yuan for the year. Domestic humanoid suppliers now have a one-year, 8,500-unit baseload order that lets them industrialize unit cost and reliability data inside a single procurement cycle.",
+      "global_impact": "Western utility procurement still treats humanoid robots as pilot-scale technology three to five years from production deployment. State Grid is contracting at production scale today, and the per-robot economics, with payback inside three years, will set the global benchmark for utility automation business cases. EPRI, ENTSO-E, and US ISO operators will face board questions about why their inspection workforce models still assume human-only field operations. Western humanoid platforms competing without a comparable utility customer base will struggle to match Chinese suppliers on unit cost.",
+      "monday_morning": "If you run a US or European utility, ask procurement to model live-line and substation inspection automation at State Grid's 5x productivity baseline and bring a three-year deployment plan to your next operating committee. If you sit on a humanoid-platform board, ask whether your sales pipeline includes a single utility customer at production scale, because the cost curve is being set right now in Beijing. If you advise on grid reliability policy, treat embodied AI as a labor-substituting infrastructure category and update workforce planning accordingly.",
+      "related_notes": "Builds on the April 28 signal on AGIBOT G2 humanoids running Longcheer's tablet line and the April 9 signal on the 2.1 trillion yuan Chinese robot industry. AGIBOT moves from consumer electronics manufacturing into utility grid maintenance, and State Grid's procurement order anchors the demand side at industrial scale."
+    }
+  },
+  {
+    "id": "2026-04-30-april-lithium-record-storage-cells-41-3",
+    "date": "2026-04-30",
+    "day_number": 21,
+    "category": "Climate & Sustainability",
+    "category_emoji": "🌱",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "title_en": "China April Lithium Battery Output Hits 235GWh Record as Storage Cells Cross 41.3% Threshold",
+    "title_cn": "4月中国锂电池排产创235GWh新高，储能电池占比首破41.3%",
+    "source_url": "https://finance.sina.com.cn/wm/2026-04-10/doc-inhtznzw0204124.shtml",
+    "source_name": "新浪财经 (Sina Finance) / GGII",
+    "tags": [
+      "energy storage",
+      "lithium battery",
+      "manufacturing scale",
+      "GGII",
+      "stationary storage",
+      "grid",
+      "CATL",
+      "BYD"
+    ],
+    "related_signals": [
+      "2026-04-27-china-renewable-energy-2035-target"
+    ],
+    "industry_lens": "automotive",
+    "content_type": "daily",
+    "body": {
+      "signal": "April 2026 lithium battery production in China reached 235GWh, the highest monthly output on record, up 7.3 percent month over month and 38.2 percent year over year, according to Gaogong Industry Research (GGII). Energy storage cells accounted for 41.3 percent of total output, breaking the 40 percent threshold for the first time and rising 12.5 percentage points from a year earlier. Power batteries fell to 44.1 percent of mix and consumer cells to 14.6 percent, marking the closest convergence between stationary storage and EV battery volumes in the industry's history.",
+      "china_scale": "GGII forecasts 2026 stationary-storage cell shipments above 850GWh, growing more than 35 percent and overtaking the absolute increment of power batteries for the first time. Lithium carbonate, electrolyte, separator, and anode supply tightened in April, with several materials on temporary allocation. CATL, BYD, EVE, and CALB are expanding three-shift operations across Ningde, Yibin, Hefei, and Huizhou, while grid-tied storage projects in Inner Mongolia, Xinjiang, and Gansu draw the bulk of new contracts.",
+      "global_impact": "The 41.3 percent crossover means China's lithium industrial base now scales to grid storage as fast as it scales to EVs. Western utilities and IPPs procuring four-hour and eight-hour storage face a supply pool that can absorb a multi-hundred-GWh order book without diluting EV throughput. CBAM, IRA domestic-content rules, and tariff regimes will not slow Chinese cell deliveries to the rest of the world, because the same factories produce both EV and storage chemistries. Western cell makers planning storage gigafactories now compete against a tier-one cost curve that has already crossed the EV-to-storage diversification threshold.",
+      "monday_morning": "If you run utility procurement, lock multi-year storage cell contracts now and write delivery floors into the schedule, because allocation pressure on lithium carbonate and electrolyte is real this quarter. If you sit on a battery investment committee, reweight your storage-versus-EV thesis toward storage given the 850GWh shipment trajectory. If you advise Western policy, assume Chinese supply elasticity for storage exceeds your prior assumptions and adjust trade-policy modeling accordingly.",
+      "related_notes": "Extends the April 27 signal on China's plan to double non-fossil energy by 2035. The 41.3 percent storage share supplies the cell capacity that the 2035 target requires."
+    }
+  },
+  {
+    "id": "2026-04-30-china-ets-steel-cement-aluminum-quota-pre-allocation",
+    "date": "2026-04-30",
+    "day_number": 20,
+    "category": "Policy & Governance",
+    "category_emoji": "🏛️",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "title_en": "Steel, Cement, and Aluminum Sectors Receive First National ETS Quota Pre-Allocation Under April 10 Deadline",
+    "title_cn": "钢铁、水泥、铝冶炼行业首获全国碳市场配额预分配，4月10日截止",
+    "source_url": "https://www.mee.gov.cn/xxgk2018/xxgk/xxgk06/202602/t20260209_1143900.html",
+    "source_name": "中华人民共和国生态环境部 (Ministry of Ecology and Environment)",
+    "tags": [
+      "carbon market",
+      "ETS",
+      "steel",
+      "cement",
+      "aluminum",
+      "MEE",
+      "CBAM",
+      "compliance"
+    ],
+    "related_signals": [
+      "2026-04-30-april-lithium-record-storage-cells-41-3"
+    ],
+    "industry_lens": "financial services",
+    "content_type": "daily",
+    "body": {
+      "signal": "Under MEE Climate Office Letter 2026 No. 32, provincial ecological environment authorities completed pre-allocation of 2025 carbon emission allowances to steel, cement, and aluminum smelting key emitters by April 10, 2026. The threshold for inclusion is 26,000 tonnes of CO2 equivalent in annual direct emissions. Final quota verification follows by September 20, allocation by September 30, and compliance settlement by December 31, 2026. The notice also brings petrochemicals, chemicals, flat glass, copper smelting, paper, and civil aviation under reporting requirements ahead of full ETS inclusion.",
+      "china_scale": "China's national ETS now covers an additional roughly 1,500 companies and approximately 3 billion tonnes of CO2 equivalent, lifting market coverage to about 60 percent of national emissions, the largest carbon market in the world. Phase 1 through 2026 uses output-based intensity benchmarks; Phase 2 from 2027 tightens toward an absolute cap. The same MEE platform handles monthly data attestation and quarterly verification, giving Beijing a unified emissions-data backbone across heavy industry that no other jurisdiction operates at this scale.",
+      "global_impact": "EU CBAM importers can now point to a domestic Chinese carbon price for steel, cement, and aluminum, reducing the pass-through penalty on Chinese exporters once the price differential narrows. Western producers lose the argument that Chinese heavy industry is uncovered by carbon pricing, which reshapes the WTO subsidy debate and the negotiation posture for any US-EU-China carbon-club arrangement. Asia ex-China emerging markets now have a working template for ETS expansion into heavy industry, and Korea, Indonesia, and Vietnam will cite this rollout in their own 2026 to 2027 reforms.",
+      "monday_morning": "If you import steel, cement, or aluminum from China into the EU, request your supplier's 2025 ETS quota and verified emissions report this week, because that document now reduces your CBAM certificate liability. If you run climate strategy at a Western industrial, model the price convergence between EU ETS and China ETS in your 2027 capex plan. If you advise on trade, treat the China ETS expansion as a precondition for any future carbon-border negotiation, not as a counterfactual.",
+      "related_notes": "Pairs with the April 30 signal on China's lithium battery storage crossover. Heavy-industry decarbonization and grid storage scale-up are now operating under aligned compliance and market signals."
+    }
+  },
+  {
     "id": "2026-04-29-jimeng-octo-vibe-create-collaborative-ai-narrative",
     "date": "2026-04-29",
     "day_number": 19,
