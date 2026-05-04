@@ -745,7 +745,7 @@
     var now = new Date();
     var oneJan = new Date(now.getFullYear(), 0, 1);
     var weekNum = Math.ceil(((now - oneJan) / 86400000 + oneJan.getDay() + 1) / 7);
-    document.getElementById('dashboardDate').textContent = 'Week ' + weekNum + ', ' + now.getFullYear();
+    document.getElementById('dashboardDate').textContent = 'Total ' + now.getFullYear() + ' — Week ' + weekNum;
 
     var allCategories = [
       'Policy & Governance',
