@@ -1,5 +1,73 @@
 [
   {
+    "id": "2026-05-04-cac-order-21-personified-ai-companions",
+    "date": "2026-05-04",
+    "day_number": 25,
+    "category": "Policy & Governance",
+    "category_emoji": "🏛️",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "title_en": "China Five Ministries Issue Order 21 Regulating Personified AI Companions, Banning Virtual Intimate Services for Minors and Mandating Two-Hour Use Alerts from July 15",
+    "title_cn": "五部门联合公布人工智能拟人化互动服务管理暂行办法，禁止向未成年人提供虚拟伴侣服务，2小时使用提醒制度7月15日施行",
+    "source_url": "https://www.cac.gov.cn/2026-04/10/c_1777558395078289.htm",
+    "source_name": "中央网信办 (Cyberspace Administration of China) Order No. 21, joint with NDRC, MIIT, MPS, SAMR",
+    "tags": [
+      "AI governance",
+      "personified AI",
+      "virtual companions",
+      "minor protection",
+      "CAC Order 21",
+      "addiction safeguards",
+      "emotional dependence",
+      "five-ministry rule",
+      "AI sandbox"
+    ],
+    "related_signals": [],
+    "industry_lens": "consumer",
+    "content_type": "daily",
+    "body": {
+      "signal": "On April 10, 2026, the Cyberspace Administration of China, NDRC, MIIT, Ministry of Public Security, and State Administration for Market Regulation jointly issued Order No. 21, the Interim Measures on the Administration of AI Personified Interactive Services, effective July 15, 2026. The 32-article rule covers any AI service that simulates a natural person's personality, thinking, or communication style for sustained emotional interaction. Providers cannot offer virtual relatives or virtual companion services to minors, must obtain parental consent for users under 14, must trigger pop-up time-use alerts every two hours of continuous use, and must intervene with users showing extreme emotional or self-harm signals by contacting guardians or emergency contacts. Safety assessments are mandatory for services with 1 million registered users or 100,000 monthly active users. Penalties run to 100,000 yuan for non-compliance and 200,000 yuan where harm to user life or health occurs.",
+      "china_scale": "China hosts the world's largest market for AI companion apps, with platforms such as Xingye, Zhumeng Dao, and Doubao's character mode aggregating tens of millions of monthly users. Joint sign-off across CAC, NDRC, MIIT, MPS, and SAMR moves enforcement out of pure cyberspace remit into product safety, public security, and industrial policy in one stroke. Application stores must verify safety assessments before listing, so distribution-layer enforcement begins on July 15 alongside platform-side rules. The sandbox provision in Article 28 routes new entrants through a state-supervised testing environment before public launch.",
+      "global_impact": "China is the first major jurisdiction to regulate AI companion products as a distinct category with binding minor-protection, time-use, and emotional-intervention requirements. The EU AI Act treats companion AI under general-purpose risk tiers, and the US has no federal equivalent. Western platforms with Chinese-market exposure, including Character.AI, Replika, and Talkie, now face a hard compliance deadline of July 15 or de-listing. The minor-protection ceiling on virtual intimate services will become a reference text for EU DSA implementing acts and California SB-243 follow-on legislation.",
+      "monday_morning": "If you run product or trust-and-safety at a companion-AI platform, audit your minor-mode controls and two-hour-alert mechanics against Articles 14 and 18 this week and brief legal on the safety-assessment threshold under Article 22. If you sit on a venture board investing in companion or wellness AI, ask portfolio companies for a Beijing-readiness memo before July 15. If you advise on global AI policy, treat Order 21 as the new floor for companion-AI rules and update your comparative-regulation tracker accordingly.",
+      "related_notes": "Order 21 follows the December 2025 draft consultation by CAC, expanding the original three-ministry list to five and tightening minor-protection language. Pairs with the State Council's April 21 services-sector document, which explicitly endorses procurement of large models and intelligent agents while Order 21 sets the consumer-facing safety floor."
+    }
+  },
+  {
+    "id": "2026-05-04-state-council-document-7-services-100-trillion-yuan",
+    "date": "2026-05-04",
+    "day_number": 24,
+    "category": "Industry & Enterprise",
+    "category_emoji": "🏭",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "title_en": "State Council Document 7 Targets 100 Trillion Yuan Service Sector by 2030 With First Explicit Mandate to Procure Large Models and Intelligent Agents",
+    "title_cn": "国务院国发〔2026〕7号《关于推进服务业扩能提质的意见》：2030年服务业总规模迈上100万亿元台阶，首次明确支持采购大模型与智能体服务",
+    "source_url": "https://www.news.cn/politics/20260421/3f7ff7029a064f388f25e1a4d2767d70/c.html",
+    "source_name": "新华网 / 国务院 (Xinhua / State Council Document Guofa No. 7, 2026)",
+    "tags": [
+      "State Council",
+      "services policy",
+      "AI procurement",
+      "large model adoption",
+      "intelligent agents",
+      "supply chain finance",
+      "fifteenth Five-Year Plan",
+      "industrial roadmap",
+      "100 trillion yuan"
+    ],
+    "related_signals": [],
+    "industry_lens": "financial services",
+    "content_type": "daily",
+    "body": {
+      "signal": "On April 21, 2026, the State Council issued Document Guofa No. 7, twenty articles directing China's service sector to reach 100 trillion yuan in scale by 2030, up from 80.9 trillion yuan in 2025 and a 57.7 percent share of GDP. Article 3 of the software and information services section explicitly tells central and local government bodies to deepen the AI-Plus action by procuring large models and intelligent agent services and accelerating intelligent programming tool deployment. The document also instructs banks, insurers, and leasing firms to expand supply-chain finance using inventory, orders, and warehouse receipts as collateral, expand product R&D liability insurance, scale pilot insurance, and explore cross-border supply chain finance standards. Pilot AI-application incubation bases are to be built nationwide as connectors between R&D and deployment.",
+      "china_scale": "Document 7 is the first State Council policy that converts AI from a research priority into a public-procurement category, with explicit budget authority for ministries and SOEs to buy commercial large models and agent services. State-owned banks, the big-three telecoms, State Grid, and provincial governments operate combined annual procurement budgets above 5 trillion yuan, so even a 1 percent allocation toward agent and model procurement creates a 50 billion yuan baseload demand pool. The document pairs with the January 2026 AI-Plus Manufacturing implementation opinion from eight ministries, which set a 2027 target of 1,000 industrial agents and 100 quality industrial datasets.",
+      "global_impact": "Western governments still treat large-model procurement as a contested capability ladder, with US OMB M-24-10 and EU AI Act compliance frameworks slowing federal deployment. China is moving in the opposite direction, naming agent procurement as an explicit industrial-policy lever. Domestic vendors including Zhipu, Moonshot, MiniMax, Baichuan, DeepSeek, and Alibaba's Tongyi gain a guaranteed government and SOE demand pool, accelerating unit-economics improvement against US frontier vendors. Western enterprise software incumbents selling into Chinese state-linked customers will face a structural preference for domestic agents through 2030.",
+      "monday_morning": "If you run enterprise sales into Chinese state-linked customers, refresh your competitive matrix against domestic agent vendors named in the AI-Plus pilot lists and brief commercial leadership on the procurement shift. If you sit on a frontier-model board, ask whether your China revenue model assumes shrinking rather than growing share through 2030. If you advise on industrial policy, study Document 7's procurement-mandate language as a possible template for US and EU sovereign-AI demand creation.",
+      "related_notes": "Issued ten days after Order 21 on personified AI services, Document 7 sets the demand-side counterpart to the consumer-safety floor. Together they form the May 2026 stack of Chinese AI policy: production rules and procurement mandates released within two weeks of one another."
+    }
+  },
+  {
     "id": "2026-05-01-wsi2n4-wafer-scale-p-type-2d-semiconductor",
     "date": "2026-05-01",
     "day_number": 23,
