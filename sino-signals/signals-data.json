@@ -1,5 +1,76 @@
 [
   {
+    "id": "2026-05-05-geely-1-2-n-eva-cab-auto-china",
+    "date": "2026-05-05",
+    "day_number": 27,
+    "category": "Industry & Enterprise",
+    "category_emoji": "🏭",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "title_en": "Geely Unveils 1+2+N Full-Domain AI Architecture with Super Eva Agent and EVA Cab L4 Robotaxi at Auto China 2026, CaoCao Mobility Commercial Edition Scheduled for 2027",
+    "title_cn": "吉利汽车在2026北京车展发布1+2+N全域智能体架构和Super Eva超级智能体，首款专属机器人出租车EVA Cab亮相，曹操出行定制版2027年量产投运",
+    "source_url": "https://www.globenewswire.com/news-release/2026/04/24/3280986/0/en/Geely-Technology-Ecosystem-on-Full-Display-and-Debut-of-China-s-First-Purpose-Built-Robotaxi-at-Auto-China-2026.html",
+    "source_name": "GlobeNewswire (Geely Auto Group press release, Beijing Auto Show, April 24, 2026)",
+    "tags": [
+      "automotive AI",
+      "vehicle agent",
+      "robotaxi",
+      "Geely",
+      "Super Eva",
+      "1+2+N architecture",
+      "EVA Cab",
+      "CaoCao Mobility",
+      "L4 autonomous",
+      "AFARI G-ASD",
+      "WAM World Action Model"
+    ],
+    "related_signals": [],
+    "industry_lens": "automotive",
+    "content_type": "daily",
+    "body": {
+      "signal": "On April 24, 2026, Geely Auto Group used its first direct exhibition at Auto China 2026 (Beijing Auto Show) to unveil the EVA Cab Robotaxi prototype, jointly developed with AFARI Technology and CaoCao Mobility, alongside its 1+2+N Full-Domain Intelligent Agent architecture. WAM (World Action Model) acts as the vehicle brain, with Super Eva as the central intelligent agent, two domain agents (Smart Egg cockpit and AFARI G-ASD 4.0 driving), and N sub-domain agents covering chassis, powertrain, and body control. EVA Cab carries the world's first 2,160-line digital LiDAR (25.92 million points per second, 600m detection range), three flagship chips (NVIDIA SuperChip, NVIDIA Thor U, Qualcomm Snapdragon 8397) totalling more than 3,000 TOPS, and Geely's mass-production-ready L4 software AFARI G-ASD L4. The CaoCao Mobility customised edition is scheduled for 2027 commercial launch, building on pilot operations already running in Hangzhou and Suzhou.",
+      "china_scale": "Geely sold 3,024,567 vehicles in 2025 with 90% NEV growth, giving the 1+2+N stack an immediate path into a mass installed base. The Xingrui Intelligent Computing Center reached 23.5 EFLOPS in 2025, ranking first among Chinese automakers, and feeds WAM with the 7x parameter and 3x inference frame-rate gains that L4 deployment requires. CaoCao Mobility, Geely's ride-hail subsidiary, supplies the deployment channel, and multi-city pilots already running in Hangzhou and Suzhou give the 2027 commercial date a verified runway.",
+      "global_impact": "Geely is the first global automaker certified to ISO 8800 AI Safety, setting a reference standard for L4 software validation that European and Japanese OEMs will need to match for cross-border deployment. The 1+2+N pattern (one vehicle brain, two domain agents, N sub-agents) gives Western automakers a template to copy or contest, and Volkswagen has already licensed XPeng's competing VLA 2.0 stack for its China fleet. Robotaxi capex bets at Waymo, Cruise, and Zoox now face a Chinese OEM moving directly from passenger-car sales into mass-production L4 hardware on a 2027 calendar.",
+      "monday_morning": "If you set autonomy strategy at a global OEM, ask your engineering team for a side-by-side benchmark of Geely's WAM, XPeng's VLA 2.0, and Tesla FSD this quarter and a licensing-versus-build memo by end of Q2. If you supply Tier 1 modules, audit which slot into a 1+2+N hierarchy and which become redundant when Super Eva centralises decision-making. If you advise on smart-city procurement, treat 2027 EVA Cab as the year robotaxi unit economics get tested at OEM volume rather than pure-play AV scale.",
+      "related_notes": "Pairs with the State Council April 21 Document 7 services-sector signal (May 4 archive entry), which authorises procurement of large models and intelligent agents, including for transport. Geely's 1+2+N stack and XPeng's VLA 2.0 (with Volkswagen as first global licensee, announced February 2026) anchor two competing patterns for vehicle agent architecture."
+    }
+  },
+  {
+    "id": "2026-05-05-china-ai-microdrama-95-percent-q1-hongguo-500m",
+    "date": "2026-05-05",
+    "day_number": 26,
+    "category": "Creative & Culture",
+    "category_emoji": "🎨",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "title_en": "China Network Audio-Visual Association Reports AI Micro-Dramas at 95% of Q1 2026 Releases with 122,000 AI Episodes Online While ByteDance Hongguo Pledges 500 Million Yuan to Defend Live-Action Production",
+    "title_cn": "中国网络视听协会发布2026年第一季度《微短剧创作指引》，AI微短剧约12.2万部占比超95%，字节跳动旗下红果短剧投入5亿元专项扶持真人短剧",
+    "source_url": "https://finance.sina.com.cn/jjxw/2026-05-01/doc-inhwkimm0713326.shtml",
+    "source_name": "Sina Finance (新浪财经) reporting on the China Network Audio-Visual Association Q1 Micro-Drama Creation Guide, released April 30, 2026 in Shanghai",
+    "tags": [
+      "micro-drama",
+      "AI video generation",
+      "Douyin Hongguo",
+      "Kuaishou",
+      "ByteDance",
+      "China Network Audio-Visual Association",
+      "creative AI",
+      "Q1 2026 industry data",
+      "live-action subsidy",
+      "Tomato Novels IP"
+    ],
+    "related_signals": [],
+    "industry_lens": "consumer",
+    "content_type": "daily",
+    "body": {
+      "signal": "On April 30, 2026, at the Shanghai Spring AI Season micro-drama gathering, the China Network Audio-Visual Association released its Q1 2026 Micro-Drama Creation Guide, reporting that approximately 128,000 micro-drama series went online in Q1, of which roughly 122,000 (more than 95%) were AI-generated. On April 15, ByteDance's Hongguo (红果短剧) committed 500 million yuan in dedicated funds to live-action micro-drama production. Kuaishou's Inspiration New Era AIGC programme offers up to 90% revenue share and 100 million yuan in traffic credits, while Douyin's Manhua Galaxy plan opens 60,000 IPs from Tomato Novels for AI adaptation with a 90% net-revenue share to creators.",
+      "china_scale": "China's micro-drama market crossed 50 billion yuan in 2025, and AI production has compressed unit costs from roughly 500,000 yuan per live-action series to under 30,000 yuan per AI series. Hongguo, Tencent, Kuaishou, Youku, and iQiyi run end-to-end stacks that take a script through asset generation, storyboarding, video synthesis, dubbing, editing, and distribution within days. More than ten provinces and cities have layered local subsidy programmes on top of platform incentives, anchoring AI micro-drama inside the cultural-industry plan.",
+      "global_impact": "China is the first major market where generative-AI video crossed the 90% threshold inside a mainstream entertainment vertical, ahead of US and European studios still negotiating SAG-AFTRA-style guardrails. Netflix, Amazon Prime, and TikTok face a Chinese export wave of AI micro-dramas with 2026 overseas revenue forecast at 650 million USD. The 50-to-1 viewership advantage of live-action over AI during Spring Festival 2026 (despite a 1-to-50 supply ratio) tells US studios where audience preference still sits and where AI scales without crowding out human-led work.",
+      "monday_morning": "If you sit at a streaming platform or studio, commission a Q1 unit-economics teardown of a Hongguo or Kuaishou AI micro-drama and compare it to your live-action greenlight model this week. If you advise creative-talent unions, brief members on the Hongguo 500 million yuan live-action commitment as a template for AI-versus-human revenue protection. If you set IP strategy, audit which catalogue titles map onto Tomato Novels' 60,000-IP open list and which would be vulnerable to fan-driven AI adaptation in markets that lack comparable platform deals.",
+      "related_notes": "Builds on the April 29 Jimeng / Octo Vibe Create signal (collaborative AI narrative tools at platform layer) in the archive. Pairs with the May 4 CAC Order 21 personified-AI signal: AI micro-drama production sits one rule cycle away from the emotional-attachment safeguards now imposed on companion AI under that order."
+    }
+  },
+  {
     "id": "2026-05-04-cac-order-21-personified-ai-companions",
     "date": "2026-05-04",
     "day_number": 25,
