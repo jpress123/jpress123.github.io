@@ -18,6 +18,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -125,8 +126,9 @@
     border-bottom: 1px solid var(--pale);
   }
   .header-layout {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: flex-start;
+    display: block;
   }
+  .header-left { max-width: 820px; }
   .header-left h1 {
     font-family: 'Playfair Display', serif;
     font-size: 2.8rem; font-weight: 700; line-height: 1.15;
@@ -146,79 +148,90 @@
   .header-intro p:last-child {
     margin-bottom: 0;
   }
-  .header-right {
+  /* DASHBOARD SECTION */
+  .dashboard-section {
+    padding: 0.5rem 0 3rem;
+    background: var(--bg);
+    border-bottom: 1px solid var(--pale);
+  }
+  .kpi-strip {
+    display: grid; grid-template-columns: repeat(5, 1fr);
+    gap: 1rem; margin-bottom: 1.75rem;
+  }
+  .kpi-tile {
     background: var(--white); border: 1px solid var(--pale);
-    border-radius: var(--radius-lg); padding: 1.5rem;
-    box-shadow: var(--shadow-md); height: fit-content;
+    border-radius: var(--radius-md); padding: 1.1rem 1rem;
+    text-align: center; box-shadow: var(--shadow-sm);
   }
-  .dashboard-widget {
-    background: var(--white);
-  }
-  .dashboard-title-row {
-    display: flex; justify-content: space-between; align-items: baseline;
-    margin-bottom: 0.8rem;
-  }
-  .dashboard-title {
+  .kpi-num {
     font-family: 'Playfair Display', serif;
-    font-size: 1.1rem; font-weight: 600; color: var(--navy);
+    font-size: 2.3rem; font-weight: 600; color: var(--navy);
+    line-height: 1; margin-bottom: 0.35rem;
   }
-  .dashboard-date {
-    font-size: 0.68rem; font-weight: 500; color: var(--light);
-    letter-spacing: 0.03em;
+  .kpi-label {
+    font-size: 0.64rem; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--text-tertiary);
   }
-  .dashboard-grid {
-    display: table; width: 100%; border-collapse: collapse;
+  .lens-switcher {
+    display: flex; flex-wrap: wrap; gap: 0.5rem;
+    margin-bottom: 1.5rem; align-items: center;
   }
-  .dashboard-row {
-    display: table-row;
+  .lens-label {
+    font-size: 0.66rem; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--text-tertiary); margin-right: 0.4rem;
   }
-  .dashboard-header-row .dashboard-cell {
-    font-size: 0.65rem; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 0.08em; color: var(--light); padding: 0.3rem 0.5rem 0.5rem;
-    border-bottom: 2px solid var(--pale); text-align: center;
+  .lens-chip {
+    background: var(--white); border: 1px solid var(--pale);
+    border-radius: 999px; padding: 0.4rem 0.95rem;
+    font-size: 0.78rem; font-weight: 500; color: var(--text-secondary);
+    font-family: inherit; cursor: pointer;
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
   }
-  .dashboard-header-row .dashboard-cell.category { text-align: left; }
-  .dashboard-cell {
-    display: table-cell; padding: 0.45rem 0.5rem;
-    border-bottom: 1px solid rgba(226,232,240,0.5);
-    font-size: 0.78rem; color: var(--medium); text-align: center;
-    vertical-align: middle;
+  .lens-chip:hover { border-color: var(--border-hover); color: var(--navy); }
+  .lens-chip.active {
+    background: var(--navy); color: var(--white); border-color: var(--navy);
   }
-  .dashboard-cell.category {
-    font-weight: 500; text-align: left; font-size: 0.72rem;
-    white-space: nowrap; padding-right: 0.8rem;
+  .lens-count { font-size: 0.68rem; opacity: 0.7; margin-left: 0.3rem; }
+  .dashboard-main {
+    display: grid; grid-template-columns: 1.7fr 1fr;
+    gap: 1.25rem;
   }
-  .heatmap-cell {
-    border-radius: 4px; min-width: 2.2rem; transition: all 0.2s;
+  .panel {
+    background: var(--white); border: 1px solid var(--pale);
+    border-radius: var(--radius-md); padding: 1.4rem;
+    box-shadow: var(--shadow-sm);
   }
-  .heatmap-cell[data-count="0"] { background: transparent; color: transparent; }
-  .heatmap-cell[data-count="1"].strength-weak { background: rgba(34,139,34,0.15); color: #228B22; }
-  .heatmap-cell[data-count="2"].strength-weak { background: rgba(34,139,34,0.3); color: #228B22; }
-  .heatmap-cell[data-count="3"].strength-weak { background: rgba(34,139,34,0.5); color: #fff; }
-  .heatmap-cell[data-count="1"].strength-emerging { background: rgba(49,130,206,0.15); color: #3182CE; }
-  .heatmap-cell[data-count="2"].strength-emerging { background: rgba(49,130,206,0.3); color: #3182CE; }
-  .heatmap-cell[data-count="3"].strength-emerging { background: rgba(49,130,206,0.5); color: #fff; }
-  .heatmap-cell[data-count="1"].strength-strong { background: rgba(192,57,43,0.15); color: #C0392B; }
-  .heatmap-cell[data-count="2"].strength-strong { background: rgba(192,57,43,0.3); color: #C0392B; }
-  .heatmap-cell[data-count="3"].strength-strong { background: rgba(192,57,43,0.5); color: #fff; }
-  .dashboard-legend {
-    display: flex; gap: 1rem; margin-top: 0.8rem; align-items: center;
-    flex-wrap: wrap;
+  .panel-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem; font-weight: 600; color: var(--navy);
+    margin-bottom: 0.2rem;
   }
-  .legend-item {
-    display: flex; align-items: center; gap: 0.3rem;
-    font-size: 0.65rem; color: var(--light); letter-spacing: 0.02em;
+  .panel-subtitle {
+    font-size: 0.72rem; color: var(--text-tertiary); letter-spacing: 0.03em;
+    margin-bottom: 1rem;
   }
-  .legend-dot {
-    width: 8px; height: 8px; border-radius: 2px;
+  .chart-canvas-wrap { position: relative; height: 290px; }
+  .wordcloud {
+    display: flex; flex-wrap: wrap; gap: 0.35rem 0.55rem;
+    align-items: baseline; line-height: 1.55;
+    max-height: 290px; overflow: hidden;
   }
-  .legend-dot.early { background: rgba(34,139,34,0.4); }
-  .legend-dot.emerging { background: rgba(49,130,206,0.4); }
-  .legend-dot.accelerating { background: rgba(192,57,43,0.4); }
+  .word {
+    display: inline-block; cursor: pointer;
+    color: var(--slate); transition: color 0.15s, transform 0.15s;
+    font-weight: 500; letter-spacing: 0.01em;
+  }
+  .word:hover { color: var(--accent); transform: translateY(-1px); }
+  .word.cn { color: var(--medium); font-weight: 400; }
 
   @media (max-width: 1024px) {
-    .header-layout { grid-template-columns: 1fr; }
-    .header-right { margin-top: 2rem; }
+    .dashboard-main { grid-template-columns: 1fr; }
+    .kpi-strip { grid-template-columns: repeat(5, 1fr); }
+  }
+  @media (max-width: 768px) {
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .kpi-num { font-size: 1.7rem; }
+    .kpi-tile { padding: 0.8rem 0.6rem; }
   }
 
   /* FILTER BAR */
@@ -556,25 +569,34 @@
           <p>Sino-Signals scanning aims to put AI disruption at the forefront of strategic decision-making. Anticipate the future to be ready for any future.</p>
         </div>
       </div>
-      <div class="header-right">
-        <div class="dashboard-widget">
-          <div class="dashboard-title-row">
-            <div class="dashboard-title">AI Sino-Signals Scan</div>
-            <div class="dashboard-date" id="dashboardDate"></div>
-          </div>
-          <div class="dashboard-grid" id="dashboardGrid">
-            <!-- Filled by JS -->
-          </div>
-          <div class="dashboard-legend">
-            <span class="legend-item"><span class="legend-dot early"></span> Early</span>
-            <span class="legend-item"><span class="legend-dot emerging"></span> Track</span>
-            <span class="legend-item"><span class="legend-dot accelerating"></span> Urgent</span>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </header>
+
+<!-- DASHBOARD -->
+<section class="dashboard-section">
+  <div class="container">
+    <div class="kpi-strip" id="kpiStrip">
+      <!-- Filled by JS -->
+    </div>
+    <div class="lens-switcher" id="lensSwitcher">
+      <span class="lens-label">Industry Lens</span>
+      <!-- Chips filled by JS -->
+    </div>
+    <div class="dashboard-main">
+      <div class="panel chart-panel">
+        <div class="panel-title">Signal accumulation by category</div>
+        <div class="panel-subtitle" id="chartSubtitle">Cumulative count over the scan window</div>
+        <div class="chart-canvas-wrap"><canvas id="categoryChart"></canvas></div>
+      </div>
+      <div class="panel wordcloud-panel">
+        <div class="panel-title">Recurring actors</div>
+        <div class="panel-subtitle">Top tags by frequency · click to filter</div>
+        <div class="wordcloud" id="wordcloud"></div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- FILTER BAR -->
 <div class="filter-bar" id="filterBar">
@@ -671,14 +693,38 @@
   let signals = [];
   let currentView = 'grid';
   let visibleCount = 5;
+  let currentLens = 'all';
+  let categoryChart = null;
   const MAX_VISIBLE = 10;
+
+  const CATEGORY_COLORS = {
+    'Policy & Governance':       '#1a1a2e',
+    'Industry & Enterprise':     '#2e4057',
+    'Deep Tech & Research':      '#3182ce',
+    'Robotics & Embodied AI':    '#B8860B',
+    'Creative & Culture':        '#C0392B',
+    'Climate & Sustainability':  '#228B22',
+    'Platform & Society':        '#D2691E'
+  };
+
+  const LENS_LABELS = {
+    'all':                'All Industries',
+    'financial services': 'Financial Services',
+    'consumer':           'Consumer',
+    'education':          'Education',
+    'automotive':         'Automotive',
+    'pharma':             'Pharma'
+  };
 
   // Load data
   fetch('signals-data.json')
     .then(function(r) { return r.json(); })
     .then(function(data) {
       signals = data.sort(function(a, b) { return b.date.localeCompare(a.date); });
-      renderDashboard();
+      renderKPIs();
+      renderLensSwitcher();
+      renderCategoryChart(signals);
+      renderWordcloud(signals);
       setFilterFreshnessDefault();
       applyFilters();
       bindFilters();
@@ -741,58 +787,208 @@
     return true;
   }
 
-  function renderDashboard() {
-    var now = new Date();
-    var oneJan = new Date(now.getFullYear(), 0, 1);
-    var weekNum = Math.ceil(((now - oneJan) / 86400000 + oneJan.getDay() + 1) / 7);
-    document.getElementById('dashboardDate').textContent = 'Total ' + now.getFullYear() + ' — Week ' + weekNum;
+  function hexToRgba(hex, a) {
+    var h = hex.replace('#','');
+    var r = parseInt(h.substring(0,2), 16);
+    var g = parseInt(h.substring(2,4), 16);
+    var b = parseInt(h.substring(4,6), 16);
+    return 'rgba(' + r + ',' + g + ',' + b + ',' + a + ')';
+  }
 
-    var allCategories = [
-      'Policy & Governance',
-      'Industry & Enterprise',
-      'Creative & Culture',
-      'Climate & Sustainability',
-      'Deep Tech & Research',
-      'Robotics & Embodied AI'
+  function getDateRange(sigs) {
+    if (!sigs.length) return [];
+    var dates = sigs.map(function(s){ return s.date; }).sort();
+    var start = new Date(dates[0]);
+    var end = new Date(dates[dates.length - 1]);
+    var days = [];
+    for (var d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) {
+      days.push(d.toISOString().slice(0,10));
+    }
+    return days;
+  }
+
+  function uniqueTagCount(sigs) {
+    var set = {};
+    sigs.forEach(function(s){ (s.tags || []).forEach(function(t){ set[t] = 1; }); });
+    return Object.keys(set).length;
+  }
+
+  function uniqueCategoryCount(sigs) {
+    var set = {};
+    sigs.forEach(function(s){ set[s.category] = 1; });
+    return Object.keys(set).length;
+  }
+
+  function uniqueLensCount(sigs) {
+    var set = {};
+    sigs.forEach(function(s){ if (s.industry_lens) set[s.industry_lens] = 1; });
+    return Object.keys(set).length;
+  }
+
+  function renderKPIs() {
+    var days = getDateRange(signals);
+    var tiles = [
+      { num: signals.length,             label: 'Signals' },
+      { num: days.length,                label: 'Days Tracked' },
+      { num: uniqueCategoryCount(signals), label: 'Categories' },
+      { num: uniqueLensCount(signals),   label: 'Industry Lenses' },
+      { num: uniqueTagCount(signals),    label: 'Tags · EN+中文' }
     ];
-    var strengthLevels = ['weak', 'emerging', 'strong'];
+    var html = tiles.map(function(t){
+      return '<div class="kpi-tile"><div class="kpi-num">' + t.num + '</div><div class="kpi-label">' + t.label + '</div></div>';
+    }).join('');
+    document.getElementById('kpiStrip').innerHTML = html;
+  }
 
-    var matrix = {};
-    allCategories.forEach(function(cat) {
-      matrix[cat] = { weak: 0, emerging: 0, strong: 0 };
+  function renderLensSwitcher() {
+    var counts = { all: signals.length };
+    signals.forEach(function(s){
+      if (s.industry_lens) counts[s.industry_lens] = (counts[s.industry_lens] || 0) + 1;
+    });
+    var keys = Object.keys(LENS_LABELS);
+    var sw = document.getElementById('lensSwitcher');
+    var labelHTML = sw.querySelector('.lens-label').outerHTML;
+    var chipsHTML = keys.map(function(k){
+      var c = counts[k] || 0;
+      return '<button class="lens-chip' + (k === currentLens ? ' active' : '') +
+             '" data-lens="' + k + '">' + LENS_LABELS[k] +
+             '<span class="lens-count">' + c + '</span></button>';
+    }).join('');
+    sw.innerHTML = labelHTML + chipsHTML;
+    sw.querySelectorAll('.lens-chip').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        currentLens = btn.getAttribute('data-lens');
+        sw.querySelectorAll('.lens-chip').forEach(function(b){ b.classList.remove('active'); });
+        btn.classList.add('active');
+        applyFilters();
+      });
+    });
+  }
+
+  function lensFilter(sigs) {
+    if (currentLens === 'all') return sigs;
+    return sigs.filter(function(s){ return s.industry_lens === currentLens; });
+  }
+
+  function renderCategoryChart(filtered) {
+    var allDays = getDateRange(signals);
+    var orderedCats = Object.keys(CATEGORY_COLORS);
+
+    // Order by total count in current filtered set (largest on bottom)
+    var catCounts = {};
+    orderedCats.forEach(function(c){ catCounts[c] = 0; });
+    filtered.forEach(function(s){ if (catCounts[s.category] !== undefined) catCounts[s.category]++; });
+    orderedCats.sort(function(a,b){ return catCounts[b] - catCounts[a]; });
+
+    var datasets = orderedCats.map(function(cat){
+      var cum = 0;
+      var data = allDays.map(function(d){
+        cum += filtered.filter(function(s){ return s.date === d && s.category === cat; }).length;
+        return cum;
+      });
+      return {
+        label: cat,
+        data: data,
+        backgroundColor: hexToRgba(CATEGORY_COLORS[cat], 0.55),
+        borderColor: CATEGORY_COLORS[cat],
+        borderWidth: 1,
+        fill: true,
+        tension: 0.2,
+        pointRadius: 0,
+        pointHoverRadius: 4
+      };
     });
 
-    signals.forEach(function(s) {
-      if (s.content_type === 'monthly_synthesis' || s.content_type === 'quarterly_report') return;
-      var cat = s.category;
-      var str = s.signal_strength;
-      if (matrix[cat] && matrix[cat][str] !== undefined) {
-        matrix[cat][str]++;
+    var labels = allDays.map(function(d){
+      var parts = d.split('-');
+      var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      return months[parseInt(parts[1],10)-1] + ' ' + parseInt(parts[2],10);
+    });
+
+    var ctx = document.getElementById('categoryChart').getContext('2d');
+    if (categoryChart) categoryChart.destroy();
+    categoryChart = new Chart(ctx, {
+      type: 'line',
+      data: { labels: labels, datasets: datasets },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: { intersect: false, mode: 'index' },
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: { boxWidth: 10, boxHeight: 10, font: { size: 10, family: 'Inter' }, padding: 8, color: '#4a5568' }
+          },
+          tooltip: {
+            backgroundColor: 'rgba(26,26,46,0.95)',
+            titleFont: { size: 11, family: 'Inter' },
+            bodyFont: { size: 11, family: 'Inter' },
+            padding: 8,
+            cornerRadius: 4
+          }
+        },
+        scales: {
+          x: {
+            ticks: { maxTicksLimit: 8, font: { size: 10, family: 'Inter' }, color: '#718096' },
+            grid: { display: false }
+          },
+          y: {
+            stacked: true, beginAtZero: true,
+            ticks: { font: { size: 10, family: 'Inter' }, color: '#718096', stepSize: 5 },
+            grid: { color: 'rgba(226,232,240,0.6)' }
+          }
+        }
       }
     });
 
-    var grid = document.getElementById('dashboardGrid');
-    var html = '';
+    var sub = document.getElementById('chartSubtitle');
+    if (sub) {
+      sub.textContent = 'Cumulative count, ' + (allDays[0] || '') + ' → ' + (allDays[allDays.length - 1] || '') +
+        (currentLens === 'all' ? '' : ' · ' + LENS_LABELS[currentLens] + ' lens');
+    }
+  }
 
-    html += '<div class="dashboard-row dashboard-header-row">';
-    html += '<div class="dashboard-cell category"></div>';
-    html += '<div class="dashboard-cell">Early</div>';
-    html += '<div class="dashboard-cell">Track</div>';
-    html += '<div class="dashboard-cell">Urgent</div>';
-    html += '</div>';
-
-    allCategories.forEach(function(cat) {
-      html += '<div class="dashboard-row">';
-      html += '<div class="dashboard-cell category">' + cat + '</div>';
-      strengthLevels.forEach(function(str) {
-        var count = matrix[cat][str];
-        var displayCount = Math.min(count, 3);
-        html += '<div class="dashboard-cell"><span class="heatmap-cell strength-' + str + '" data-count="' + displayCount + '">' + (count > 0 ? count : '') + '</span></div>';
-        });
-      html += '</div>';
+  function renderWordcloud(filtered) {
+    var freq = {};
+    filtered.forEach(function(s){
+      (s.tags || []).forEach(function(t){
+        if (!t) return;
+        freq[t] = (freq[t] || 0) + 1;
+      });
     });
+    var minFreq = filtered.length >= 20 ? 2 : 1;
+    var entries = Object.keys(freq).map(function(t){ return { tag: t, n: freq[t] }; })
+      .filter(function(e){ return e.n >= minFreq; })
+      .sort(function(a,b){ return b.n - a.n; })
+      .slice(0, 40);
 
-    grid.innerHTML = html;
+    if (!entries.length) {
+      document.getElementById('wordcloud').innerHTML = '<span style="font-size:0.8rem;color:var(--text-tertiary)">No recurring tags in this view.</span>';
+      return;
+    }
+
+    var maxN = entries[0].n;
+    var minN = entries[entries.length - 1].n;
+    var range = Math.max(maxN - minN, 1);
+
+    var html = entries.map(function(e){
+      var scale = (e.n - minN) / range;
+      var size = (0.78 + scale * 0.85).toFixed(2);
+      var isCN = /[一-鿿]/.test(e.tag);
+      var cls = 'word' + (isCN ? ' cn' : '');
+      var safe = e.tag.replace(/"/g, '&quot;');
+      return '<span class="' + cls + '" style="font-size:' + size + 'rem" data-tag="' + safe + '" title="' + e.n + ' signals">' + e.tag + '</span>';
+    }).join('');
+    var cloud = document.getElementById('wordcloud');
+    cloud.innerHTML = html;
+    cloud.querySelectorAll('.word').forEach(function(w){
+      w.addEventListener('click', function(){
+        var tag = w.getAttribute('data-tag');
+        document.getElementById('searchInput').value = tag;
+        applyFilters();
+        document.getElementById('filterBar').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
   }
 
   function setFilterFreshnessDefault() {
@@ -926,6 +1122,7 @@
     var fresh = freshnessValue || document.getElementById('filterFreshness').value;
 
     return signals.filter(function(s) {
+      if (currentLens !== 'all' && s.industry_lens !== currentLens) return false;
       if (ind !== 'all' && s.category !== ind) return false;
       if (str !== 'all' && s.signal_strength !== str) return false;
       if (typ !== 'all' && !typeMatchesFilter(typ, s)) return false;
@@ -939,6 +1136,9 @@
   }
 
   function applyFilters() {
+    var lensScoped = lensFilter(signals);
+    renderCategoryChart(lensScoped);
+    renderWordcloud(lensScoped);
     var filtered = getFiltered();
     renderGrid(filtered);
     updateCount(filtered.length);
