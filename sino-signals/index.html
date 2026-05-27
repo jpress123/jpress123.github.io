@@ -153,26 +153,29 @@
     margin-bottom: 0;
   }
   .header-kpis {
-    float: right;
-    width: 340px;
-    /* margin-top aligns top of KPI block with the tagline line, not the h1 */
-    margin: 4.6rem 0 1.25rem 2rem;
+    /* Top strip above the Intelligence Briefing label: 4 KPI cards in a row */
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.75rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 0 0 2rem 0;
   }
   @media (max-width: 760px) {
-    .header-kpis {
-      width: 200px;
-      grid-template-columns: 1fr;
-      margin-left: 1.25rem;
-      gap: 0.5rem;
-    }
+    .header-kpis { grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
   }
-  @media (max-width: 480px) {
-    .header-kpis {
-      width: 150px;
-      margin-left: 1rem;
+  /* MegaTrends panel floated to the right within the header */
+  .header-wordcloud {
+    float: right;
+    width: 360px;
+    margin: 0 0 1.5rem 2rem;
+  }
+  @media (max-width: 900px) {
+    .header-wordcloud { width: 280px; margin-left: 1.5rem; }
+  }
+  @media (max-width: 760px) {
+    .header-wordcloud {
+      float: none;
+      width: 100%;
+      margin: 0 0 1.5rem 0;
     }
   }
   /* DASHBOARD SECTION */
@@ -239,8 +242,11 @@
   }
   .lens-count { font-size: 0.68rem; opacity: 0.7; margin-left: 0.3rem; }
   .dashboard-main {
-    display: grid; grid-template-columns: 1.7fr 1fr;
-    gap: 1.25rem;
+    /* Heat map takes the full container width now that the cloud is in the header */
+    display: block;
+  }
+  .heatmap-panel {
+    width: 100%;
   }
   .panel {
     background: var(--white); border: 1px solid var(--pale);
@@ -274,7 +280,7 @@
   }
 
   @media (max-width: 1024px) {
-    .dashboard-main { grid-template-columns: 1fr; }
+    /* heat map already full width by default; cells just shrink */
   }
   @media (max-width: 768px) {
     .header-kpis { grid-template-columns: repeat(2, 1fr); }
@@ -377,8 +383,18 @@
     display: flex; gap: 1rem; flex-wrap: wrap; width: 100%;
   }
   .filter-count {
-    font-size: 0.78rem; color: var(--text-tertiary); font-weight: 500;
-    margin-left: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.95rem; font-weight: 600; color: var(--navy);
+    line-height: 1; letter-spacing: 0;
+    margin-right: 0.5rem;
+    display: inline-flex; align-items: center;
+    min-width: 2.5rem;
+  }
+  .filter-count .filter-count-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.6rem; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--text-tertiary);
+    margin-left: 0.45rem; line-height: 1.2;
   }
 
   @media (max-width: 768px) {
@@ -665,17 +681,22 @@
 <!-- SITE HEADER -->
 <header class="site-header">
   <div class="container">
+    <div class="header-kpis" id="kpiStrip">
+      <!-- Filled by JS -->
+    </div>
     <p class="section-label">Intelligence Briefing</p>
     <div class="header-layout">
-      <div class="header-kpis" id="kpiStrip">
-        <!-- Filled by JS -->
+      <div class="panel wordcloud-panel header-wordcloud">
+        <div class="panel-title">MegaTrends</div>
+        <div class="panel-subtitle">Most frequent tags across all signals · click any word to filter</div>
+        <div class="wordcloud-wrap"><canvas id="wordcloud"></canvas></div>
       </div>
       <div class="header-left">
         <h1>Sino-Signals:</h1>
-        <p class="header-tagline">The AI signals shaping your industry are already in China.</p>
+        <p class="header-tagline">AI disruption at the forefront of strategic decision-making.</p>
         <div class="header-intro">
-          <p>China is the world's largest signal amplifier for AI deployment. While frontier research grabs headlines in the West, they often fall between unscalable and slop. The signals that will reshape your industry over the next 3–5 years are appearing in China, now. Not only is China pulling ahead in foundational research, it operates at a scale and speed of deployment that has no Western equivalent.</p>
-          <p>Sino-Signals scanning aims to put AI disruption at the forefront of strategic decision-making. Anticipate the future to be ready for any future.</p>
+          <p>China is the world's largest signal amplifier for AI deployment. While frontier research grabs headlines in the West, they often fall between unscalable and slop. The signals that will reshape your industry over the next 3 to 5 years are appearing in China, now. Not only is China pulling ahead in foundational research, it operates at a scale and speed of deployment that has no Western equivalent.</p>
+          <p>Anticipate the future to be ready for any future.</p>
         </div>
       </div>
     </div>
@@ -695,11 +716,6 @@
         <div class="heatmap-wrap" id="heatmap"></div>
         <div class="heatmap-legend"><span>Fewer</span><span class="heatmap-legend-bar"></span><span>More signals</span></div>
       </div>
-      <div class="panel wordcloud-panel">
-        <div class="panel-title">MegaTrends</div>
-        <div class="panel-subtitle">Most frequent tags across all signals · click any word to filter</div>
-        <div class="wordcloud-wrap"><canvas id="wordcloud"></canvas></div>
-      </div>
     </div>
   </div>
 </section>
@@ -712,6 +728,7 @@
         <input type="text" class="search-input" id="searchInput" placeholder="Search signals..." aria-label="Search signals">
       </div>
       <div class="filter-controls">
+        <span class="filter-count" id="filterCount" aria-live="polite"></span>
         <select class="filter-select" id="filterFreshness" aria-label="Filter by freshness">
           <option value="today">Today</option>
           <option value="this_week">This Week</option>
@@ -743,7 +760,6 @@
           <option value="emerging">Emerging</option>
           <option value="strong">Accelerating</option>
         </select>
-        <span class="filter-count" id="filterCount"></span>
       </div>
     </div>
   </div>
@@ -1351,7 +1367,8 @@
   });
 
   function updateCount(n) {
-    document.getElementById('filterCount').textContent = n + ' signal' + (n !== 1 ? 's' : '');
+    document.getElementById('filterCount').innerHTML =
+      n + '<span class="filter-count-label">Signal' + (n !== 1 ? 's' : '') + '</span>';
   }
 
   function getFiltered(freshnessValue) {
