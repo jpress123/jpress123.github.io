@@ -19,6 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wordcloud2.js/1.2.2/wordcloud2.min.js"></script>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -154,7 +155,8 @@
   .header-kpis {
     float: right;
     width: 340px;
-    margin: 0.3rem 0 1.25rem 2rem;
+    /* margin-top aligns top of KPI block with the tagline line, not the h1 */
+    margin: 4.6rem 0 1.25rem 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.75rem;
@@ -197,6 +199,19 @@
     /* For non-numeric KPI values (industry names, tags) */
     font-size: 1.05rem; letter-spacing: 0;
     line-height: 1.2;
+  }
+  .kpi-num .kpi-prefix {
+    /* "Week" prefix before the number — slightly smaller, same color */
+    font-size: 0.75em; font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-right: 0.18em;
+  }
+  .kpi-num .kpi-divider {
+    /* Slash between two numbers — smaller, lighter, visually balances 8 / 57 */
+    font-size: 0.72em; font-weight: 400;
+    color: var(--text-tertiary);
+    margin: 0 0.18em;
+    vertical-align: baseline;
   }
   .kpi-label {
     font-size: 0.6rem; font-weight: 700; letter-spacing: 0.1em;
@@ -242,18 +257,21 @@
     margin-bottom: 1rem;
   }
   .chart-canvas-wrap { position: relative; height: 290px; }
-  .wordcloud {
-    display: flex; flex-wrap: wrap; gap: 0.35rem 0.55rem;
-    align-items: baseline; line-height: 1.55;
-    max-height: 290px; overflow: hidden;
+  .wordcloud-wrap {
+    position: relative;
+    width: 100%;
+    height: 290px;
   }
-  .word {
-    display: inline-block; cursor: pointer;
-    color: var(--slate); transition: color 0.15s, transform 0.15s;
-    font-weight: 500; letter-spacing: 0.01em;
+  #wordcloud {
+    width: 100%; height: 100%;
+    display: block;
+    cursor: pointer;
   }
-  .word:hover { color: var(--accent); transform: translateY(-1px); }
-  .word.cn { color: var(--medium); font-weight: 400; }
+  .wordcloud-empty {
+    display: flex; align-items: center; justify-content: center;
+    height: 100%;
+    font-size: 0.8rem; color: var(--text-tertiary);
+  }
 
   @media (max-width: 1024px) {
     .dashboard-main { grid-template-columns: 1fr; }
@@ -268,7 +286,7 @@
   /* HEAT MAP */
   .heatmap-wrap {
     display: grid;
-    grid-template-columns: minmax(150px, 1.4fr) repeat(5, 1fr);
+    grid-template-columns: minmax(150px, 1.4fr) repeat(6, 1fr);
     gap: 4px;
     font-family: inherit;
   }
@@ -316,7 +334,7 @@
     background: linear-gradient(to right, #f5f6f8, #2e4057);
   }
   @media (max-width: 768px) {
-    .heatmap-wrap { grid-template-columns: minmax(100px, 1.1fr) repeat(5, 1fr); gap: 3px; }
+    .heatmap-wrap { grid-template-columns: minmax(100px, 1.1fr) repeat(6, 1fr); gap: 3px; }
     .heatmap-rowlabel { font-size: 0.62rem; padding-right: 0.3rem; }
     .heatmap-collabel { font-size: 0.5rem; }
     .heatmap-cell { font-size: 0.85rem; }
@@ -673,14 +691,14 @@
     </div>
     <div class="dashboard-main">
       <div class="panel heatmap-panel">
-        <div class="panel-title">Industry Verticals × Systemic Influencers</div>
+        <div class="panel-title">Influencers × Industries</div>
         <div class="heatmap-wrap" id="heatmap"></div>
         <div class="heatmap-legend"><span>Fewer</span><span class="heatmap-legend-bar"></span><span>More signals</span></div>
       </div>
       <div class="panel wordcloud-panel">
-        <div class="panel-title">Recurring actors</div>
-        <div class="panel-subtitle">Top tags by frequency · click to filter</div>
-        <div class="wordcloud" id="wordcloud"></div>
+        <div class="panel-title">MegaTrends</div>
+        <div class="panel-subtitle">Most frequent tags across all signals · click any word to filter</div>
+        <div class="wordcloud-wrap"><canvas id="wordcloud"></canvas></div>
       </div>
     </div>
   </div>
@@ -694,8 +712,23 @@
         <input type="text" class="search-input" id="searchInput" placeholder="Search signals..." aria-label="Search signals">
       </div>
       <div class="filter-controls">
-        <select class="filter-select" id="filterIndustry" aria-label="Filter by industry">
+        <select class="filter-select" id="filterFreshness" aria-label="Filter by freshness">
+          <option value="today">Today</option>
+          <option value="this_week">This Week</option>
+          <option value="this_month">This Month</option>
+          <option value="this_year">This Year</option>
+        </select>
+        <select class="filter-select" id="filterLens" aria-label="Filter by industry">
           <option value="all">All Industries</option>
+          <option value="automotive">Mobility</option>
+          <option value="consumer">Consumer Products</option>
+          <option value="pharma">Health &amp; Pharma</option>
+          <option value="education">Education</option>
+          <option value="financial services">Financial Services</option>
+          <option value="entertainment">Entertainment</option>
+        </select>
+        <select class="filter-select" id="filterCategory" aria-label="Filter by influencer category">
+          <option value="all">All Influencers</option>
           <option value="Policy & Governance">Policy & Governance</option>
           <option value="Industry & Enterprise">Industry & Enterprise</option>
           <option value="Creative & Culture">Creative & Culture</option>
@@ -704,27 +737,11 @@
           <option value="Robotics & Embodied AI">Robotics & Embodied AI</option>
           <option value="Platform & Society">Platform & Society</option>
         </select>
-        <select class="filter-select" id="filterType" aria-label="Filter by signal type">
-          <option value="all">All Types</option>
-          <option value="social">Social</option>
-          <option value="cultural">Cultural</option>
-          <option value="legal">Legal</option>
-          <option value="policy">Policy</option>
-          <option value="technology">Technology</option>
-          <option value="environmental">Environmental</option>
-          <option value="economic">Economic</option>
-        </select>
         <select class="filter-select" id="filterStrength" aria-label="Filter by signal strength">
           <option value="all">All Strengths</option>
           <option value="weak">Early</option>
           <option value="emerging">Emerging</option>
           <option value="strong">Accelerating</option>
-        </select>
-        <select class="filter-select" id="filterFreshness" aria-label="Filter by freshness">
-          <option value="today">Today</option>
-          <option value="this_week">This Week</option>
-          <option value="this_month">This Month</option>
-          <option value="this_year">This Year</option>
         </select>
         <span class="filter-count" id="filterCount"></span>
       </div>
@@ -798,10 +815,11 @@
   const LENS_LABELS = {
     'all':                'All Industries',
     'financial services': 'Financial Services',
-    'consumer':           'Consumer',
+    'consumer':           'Consumer Products',
     'education':          'Education',
-    'automotive':         'Automotive',
-    'pharma':             'Pharma'
+    'automotive':         'Mobility',
+    'pharma':             'Health & Pharma',
+    'entertainment':      'Entertainment'
   };
 
   // Load data
@@ -973,10 +991,26 @@
     var topTrend = topTrendTag();
 
     var tiles = [
-      { num: iso.week,                          label: 'Week ' + iso.year,                      isText: false },
-      { num: weekCount + ' / ' + totalSignals,  label: 'New This Week / Total to Date',          isText: false },
-      { num: trendingIndustry,                  label: 'Trending',                               isText: true  },
-      { num: topTrend,                          label: 'Top Trend from the word cloud',          isText: true  }
+      {
+        num: '<span class="kpi-prefix">Week</span>' + iso.week,
+        label: String(iso.year),
+        isText: false
+      },
+      {
+        num: weekCount + '<span class="kpi-divider">/</span>' + totalSignals,
+        label: 'New This Week / Total to Date',
+        isText: false
+      },
+      {
+        num: trendingIndustry,
+        label: 'Trending',
+        isText: true
+      },
+      {
+        num: topTrend,
+        label: 'Top Trend from the word cloud',
+        isText: true
+      }
     ];
     var html = tiles.map(function(t){
       var numCls = 'kpi-num' + (t.isText ? ' kpi-num-text' : '');
@@ -1005,6 +1039,9 @@
         currentLens = btn.getAttribute('data-lens');
         sw.querySelectorAll('.lens-chip').forEach(function(b){ b.classList.remove('active'); });
         btn.classList.add('active');
+        // Sync the Industry dropdown in the filter bar
+        var lensSelect = document.getElementById('filterLens');
+        if (lensSelect) lensSelect.value = currentLens;
         applyFilters();
       });
     });
@@ -1078,7 +1115,11 @@
         var cat = cell.getAttribute('data-cat');
         var lens = cell.getAttribute('data-lens');
 
-        document.getElementById('filterIndustry').value = cat;
+        // Set the Influencer (category) dropdown
+        document.getElementById('filterCategory').value = cat;
+        // Set the Industry (lens) dropdown
+        var lensSelect = document.getElementById('filterLens');
+        if (lensSelect) lensSelect.value = lens;
         currentLens = lens;
 
         // Sync the lens chip row
@@ -1093,46 +1134,100 @@
 
   }
 
+  // Map each tag to a representative category color (the category of the first signal it appears in)
+  function buildTagColorMap(filtered) {
+    var map = {};
+    filtered.forEach(function(s){
+      (s.tags || []).forEach(function(t){
+        if (!t || /[一-鿿]/.test(t)) return;
+        if (!map[t]) map[t] = CATEGORY_COLORS[s.category] || '#2e4057';
+      });
+    });
+    return map;
+  }
+
   function renderWordcloud(filtered) {
+    var canvas = document.getElementById('wordcloud');
+    var wrap = canvas && canvas.parentNode;
+    if (!canvas || !wrap) return;
+
+    // Tally frequencies, English tags only, excluding category-name tags
+    var categorySet = {};
+    Object.keys(CATEGORY_COLORS).forEach(function(c){ categorySet[c.toLowerCase()] = 1; });
     var freq = {};
     filtered.forEach(function(s){
       (s.tags || []).forEach(function(t){
         if (!t) return;
+        if (/[一-鿿]/.test(t)) return;
+        if (categorySet[t.toLowerCase()]) return;
         freq[t] = (freq[t] || 0) + 1;
       });
     });
+
     var minFreq = filtered.length >= 20 ? 2 : 1;
-    var entries = Object.keys(freq).map(function(t){ return { tag: t, n: freq[t] }; })
-      .filter(function(e){ return e.n >= minFreq; })
-      .sort(function(a,b){ return b.n - a.n; })
-      .slice(0, 40);
+    var entries = Object.keys(freq)
+      .map(function(t){ return [t, freq[t]]; })
+      .filter(function(e){ return e[1] >= minFreq; })
+      .sort(function(a,b){ return b[1] - a[1]; })
+      .slice(0, 60);
 
     if (!entries.length) {
-      document.getElementById('wordcloud').innerHTML = '<span style="font-size:0.8rem;color:var(--text-tertiary)">No recurring tags in this view.</span>';
+      wrap.innerHTML = '<div class="wordcloud-empty">No recurring tags in this view.</div>';
       return;
     }
 
-    var maxN = entries[0].n;
-    var minN = entries[entries.length - 1].n;
-    var range = Math.max(maxN - minN, 1);
+    // Ensure the canvas is present (we may have replaced it with the empty div on a previous render)
+    if (!wrap.querySelector('canvas')) {
+      wrap.innerHTML = '<canvas id="wordcloud"></canvas>';
+      canvas = document.getElementById('wordcloud');
+    }
 
-    var html = entries.map(function(e){
-      var scale = (e.n - minN) / range;
-      var size = (0.78 + scale * 0.85).toFixed(2);
-      var isCN = /[一-鿿]/.test(e.tag);
-      var cls = 'word' + (isCN ? ' cn' : '');
-      var safe = e.tag.replace(/"/g, '&quot;');
-      return '<span class="' + cls + '" style="font-size:' + size + 'rem" data-tag="' + safe + '" title="' + e.n + ' signals">' + e.tag + '</span>';
-    }).join('');
-    var cloud = document.getElementById('wordcloud');
-    cloud.innerHTML = html;
-    cloud.querySelectorAll('.word').forEach(function(w){
-      w.addEventListener('click', function(){
-        var tag = w.getAttribute('data-tag');
-        document.getElementById('searchInput').value = tag;
+    // Size canvas to its container (accounting for devicePixelRatio for crisp text)
+    var rect = wrap.getBoundingClientRect();
+    var dpr = window.devicePixelRatio || 1;
+    canvas.width  = Math.max(300, Math.floor(rect.width * dpr));
+    canvas.height = Math.max(200, Math.floor(rect.height * dpr));
+    canvas.style.width  = rect.width + 'px';
+    canvas.style.height = rect.height + 'px';
+
+    var tagColors = buildTagColorMap(filtered);
+
+    var maxN = entries[0][1];
+    // Tuned so the largest word fills ~22% of canvas height, smallest is ~5%
+    var basePx = Math.max(10, Math.floor(canvas.height * 0.05));
+    var maxPx  = Math.max(basePx + 8, Math.floor(canvas.height * 0.22));
+
+    if (typeof WordCloud !== 'function') {
+      // Library failed to load — fall back to a simple inline list
+      wrap.innerHTML = '<div class="wordcloud-empty">' +
+        entries.slice(0, 30).map(function(e){ return e[0]; }).join(', ') + '</div>';
+      return;
+    }
+
+    WordCloud(canvas, {
+      list: entries,
+      gridSize: Math.round(8 * dpr),
+      weightFactor: function(n){
+        return basePx + (maxPx - basePx) * (n / maxN);
+      },
+      fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif',
+      fontWeight: '500',
+      color: function(word){ return tagColors[word] || '#2e4057'; },
+      backgroundColor: 'transparent',
+      rotateRatio: 0.25,
+      rotationSteps: 2,
+      shuffle: false,
+      drawOutOfBound: false,
+      shrinkToFit: true,
+      click: function(item){
+        if (!item || !item[0]) return;
+        document.getElementById('searchInput').value = item[0];
         applyFilters();
         document.getElementById('filterBar').scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
+      },
+      hover: function(item, dimension, event){
+        canvas.style.cursor = item ? 'pointer' : 'default';
+      }
     });
   }
 
@@ -1260,17 +1355,15 @@
   }
 
   function getFiltered(freshnessValue) {
-    var ind = document.getElementById('filterIndustry').value;
+    var cat = document.getElementById('filterCategory').value;
     var str = document.getElementById('filterStrength').value;
-    var typ = document.getElementById('filterType').value;
     var q = document.getElementById('searchInput').value.toLowerCase().trim();
     var fresh = freshnessValue || document.getElementById('filterFreshness').value;
 
     return signals.filter(function(s) {
       if (currentLens !== 'all' && s.industry_lens !== currentLens) return false;
-      if (ind !== 'all' && s.category !== ind) return false;
+      if (cat !== 'all' && s.category !== cat) return false;
       if (str !== 'all' && s.signal_strength !== str) return false;
-      if (typ !== 'all' && !typeMatchesFilter(typ, s)) return false;
       if (!isDateInRange(s.date, fresh)) return false;
       if (q) {
         var haystack = (s.title_en + ' ' + s.title_cn + ' ' + s.body.signal + ' ' + s.tags.join(' ')).toLowerCase();
@@ -1290,11 +1383,22 @@
     updateCount(filtered.length);
   }
 
+  function setLensFromDropdown(value) {
+    currentLens = value;
+    // Sync chip row active state
+    document.querySelectorAll('.lens-chip').forEach(function(b){
+      b.classList.toggle('active', b.getAttribute('data-lens') === value);
+    });
+  }
+
   function bindFilters() {
-    document.getElementById('filterIndustry').addEventListener('change', applyFilters);
+    document.getElementById('filterCategory').addEventListener('change', applyFilters);
     document.getElementById('filterStrength').addEventListener('change', applyFilters);
-    document.getElementById('filterType').addEventListener('change', applyFilters);
     document.getElementById('filterFreshness').addEventListener('change', applyFilters);
+    document.getElementById('filterLens').addEventListener('change', function(){
+      setLensFromDropdown(this.value);
+      applyFilters();
+    });
     document.getElementById('searchInput').addEventListener('input', applyFilters);
   }
 
