@@ -155,7 +155,7 @@
     border-bottom: 1px solid var(--pale);
   }
   .kpi-strip {
-    display: grid; grid-template-columns: repeat(5, 1fr);
+    display: grid; grid-template-columns: repeat(4, 1fr);
     gap: 1rem; margin-bottom: 1.75rem;
   }
   .kpi-tile {
@@ -226,12 +226,69 @@
 
   @media (max-width: 1024px) {
     .dashboard-main { grid-template-columns: 1fr; }
-    .kpi-strip { grid-template-columns: repeat(5, 1fr); }
+    .kpi-strip { grid-template-columns: repeat(4, 1fr); }
   }
   @media (max-width: 768px) {
     .kpi-strip { grid-template-columns: repeat(2, 1fr); }
     .kpi-num { font-size: 1.7rem; }
     .kpi-tile { padding: 0.8rem 0.6rem; }
+  }
+
+  /* HEAT MAP */
+  .heatmap-wrap {
+    display: grid;
+    grid-template-columns: minmax(150px, 1.4fr) repeat(5, 1fr);
+    gap: 4px;
+    font-family: inherit;
+  }
+  .heatmap-corner { /* top-left blank */ }
+  .heatmap-collabel {
+    font-size: 0.6rem; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--text-tertiary);
+    text-align: center; padding: 0 0.2rem 0.45rem;
+    align-self: end; line-height: 1.2;
+  }
+  .heatmap-rowlabel {
+    display: flex; align-items: center; justify-content: flex-end;
+    font-size: 0.74rem; font-weight: 500;
+    color: var(--text-secondary); padding-right: 0.55rem;
+    text-align: right; line-height: 1.2;
+  }
+  .heatmap-cell {
+    aspect-ratio: 1.5;
+    border-radius: 4px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem; font-weight: 600; color: var(--navy);
+    transition: transform 0.12s, box-shadow 0.15s, filter 0.15s;
+    border: 1px solid rgba(0,0,0,0.04);
+  }
+  .heatmap-cell.empty {
+    background: #f5f6f8; color: #cbd5e0; cursor: default;
+    font-family: inherit; font-size: 0.75rem; font-weight: 400;
+    border-color: transparent;
+  }
+  .heatmap-cell:not(.empty):hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-sm);
+    filter: brightness(0.96);
+  }
+  .heatmap-legend {
+    display: flex; align-items: center; gap: 0.5rem;
+    margin-top: 0.9rem;
+    font-size: 0.66rem; color: var(--text-tertiary);
+    letter-spacing: 0.08em; text-transform: uppercase;
+  }
+  .heatmap-legend-bar {
+    flex: 0 0 130px; height: 8px; border-radius: 4px;
+    background: linear-gradient(to right, #f5f6f8, #2e4057);
+  }
+  @media (max-width: 768px) {
+    .heatmap-wrap { grid-template-columns: minmax(100px, 1.1fr) repeat(5, 1fr); gap: 3px; }
+    .heatmap-rowlabel { font-size: 0.62rem; padding-right: 0.3rem; }
+    .heatmap-collabel { font-size: 0.5rem; }
+    .heatmap-cell { font-size: 0.85rem; }
   }
 
   /* FILTER BAR */
@@ -584,10 +641,11 @@
       <!-- Chips filled by JS -->
     </div>
     <div class="dashboard-main">
-      <div class="panel chart-panel">
-        <div class="panel-title">Signal accumulation by category</div>
-        <div class="panel-subtitle" id="chartSubtitle">Cumulative count over the scan window</div>
-        <div class="chart-canvas-wrap"><canvas id="categoryChart"></canvas></div>
+      <div class="panel heatmap-panel">
+        <div class="panel-title">Category × Industry heat map</div>
+        <div class="panel-subtitle" id="heatmapSubtitle">Where the signals cluster · click any cell to filter</div>
+        <div class="heatmap-wrap" id="heatmap"></div>
+        <div class="heatmap-legend"><span>Fewer</span><span class="heatmap-legend-bar"></span><span>More signals</span></div>
       </div>
       <div class="panel wordcloud-panel">
         <div class="panel-title">Recurring actors</div>
@@ -723,7 +781,7 @@
       signals = data.sort(function(a, b) { return b.date.localeCompare(a.date); });
       renderKPIs();
       renderLensSwitcher();
-      renderCategoryChart(signals);
+      renderHeatMap(signals);
       renderWordcloud(signals);
       setFilterFreshnessDefault();
       applyFilters();
@@ -826,13 +884,29 @@
   }
 
   function renderKPIs() {
-    var days = getDateRange(signals);
+    var totalSignals = signals.length;
+
+    var weekCount = signals.filter(function(s){
+      return isDateInRange(s.date, 'this_week');
+    }).length;
+
+    var strongCount = signals.filter(function(s){
+      return s.signal_strength === 'strong';
+    }).length;
+    var strongShare = totalSignals > 0 ? Math.round((strongCount / totalSignals) * 100) : 0;
+
+    var monthCats = {};
+    signals.forEach(function(s){
+      if (isDateInRange(s.date, 'this_month')) monthCats[s.category] = 1;
+    });
+    var catsActive = Object.keys(monthCats).length;
+    var totalCats = Object.keys(CATEGORY_COLORS).length;
+
     var tiles = [
-      { num: signals.length,             label: 'Signals' },
-      { num: days.length,                label: 'Days Tracked' },
-      { num: uniqueCategoryCount(signals), label: 'Categories' },
-      { num: uniqueLensCount(signals),   label: 'Industry Lenses' },
-      { num: uniqueTagCount(signals),    label: 'Tags · EN+中文' }
+      { num: totalSignals,                    label: 'Signals Tracked' },
+      { num: weekCount,                       label: 'New This Week' },
+      { num: strongShare + '%',               label: 'Strong Signals Share' },
+      { num: catsActive + '/' + totalCats,    label: 'Categories Active · 30d' }
     ];
     var html = tiles.map(function(t){
       return '<div class="kpi-tile"><div class="kpi-num">' + t.num + '</div><div class="kpi-label">' + t.label + '</div></div>';
@@ -870,81 +944,88 @@
     return sigs.filter(function(s){ return s.industry_lens === currentLens; });
   }
 
-  function renderCategoryChart(filtered) {
-    var allDays = getDateRange(signals);
-    var orderedCats = Object.keys(CATEGORY_COLORS);
+  function renderHeatMap(filtered) {
+    var categories = Object.keys(CATEGORY_COLORS); // 7 rows
+    var lenses = Object.keys(LENS_LABELS).filter(function(k){ return k !== 'all'; }); // 5 cols
 
-    // Order by total count in current filtered set (largest on bottom)
-    var catCounts = {};
-    orderedCats.forEach(function(c){ catCounts[c] = 0; });
-    filtered.forEach(function(s){ if (catCounts[s.category] !== undefined) catCounts[s.category]++; });
-    orderedCats.sort(function(a,b){ return catCounts[b] - catCounts[a]; });
+    // Build [category][lens] -> { n, actors }
+    var grid = {};
+    categories.forEach(function(c){
+      grid[c] = {};
+      lenses.forEach(function(l){ grid[c][l] = { n: 0, actors: [] }; });
+    });
 
-    var datasets = orderedCats.map(function(cat){
-      var cum = 0;
-      var data = allDays.map(function(d){
-        cum += filtered.filter(function(s){ return s.date === d && s.category === cat; }).length;
-        return cum;
+    filtered.forEach(function(s){
+      if (!s.industry_lens || !grid[s.category]) return;
+      var cell = grid[s.category][s.industry_lens];
+      if (!cell) return;
+      cell.n++;
+      // Capture first non-Chinese tag as actor proxy; cap at 3 unique
+      (s.tags || []).forEach(function(t){
+        if (!t || /[一-鿿]/.test(t)) return;
+        if (cell.actors.length < 3 && cell.actors.indexOf(t) === -1) cell.actors.push(t);
       });
-      return {
-        label: cat,
-        data: data,
-        backgroundColor: hexToRgba(CATEGORY_COLORS[cat], 0.55),
-        borderColor: CATEGORY_COLORS[cat],
-        borderWidth: 1,
-        fill: true,
-        tension: 0.2,
-        pointRadius: 0,
-        pointHoverRadius: 4
-      };
     });
 
-    var labels = allDays.map(function(d){
-      var parts = d.split('-');
-      var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-      return months[parseInt(parts[1],10)-1] + ' ' + parseInt(parts[2],10);
+    // Max for intensity normalization
+    var max = 0;
+    categories.forEach(function(c){
+      lenses.forEach(function(l){ if (grid[c][l].n > max) max = grid[c][l].n; });
     });
 
-    var ctx = document.getElementById('categoryChart').getContext('2d');
-    if (categoryChart) categoryChart.destroy();
-    categoryChart = new Chart(ctx, {
-      type: 'line',
-      data: { labels: labels, datasets: datasets },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        interaction: { intersect: false, mode: 'index' },
-        plugins: {
-          legend: {
-            position: 'bottom',
-            labels: { boxWidth: 10, boxHeight: 10, font: { size: 10, family: 'Inter' }, padding: 8, color: '#4a5568' }
-          },
-          tooltip: {
-            backgroundColor: 'rgba(26,26,46,0.95)',
-            titleFont: { size: 11, family: 'Inter' },
-            bodyFont: { size: 11, family: 'Inter' },
-            padding: 8,
-            cornerRadius: 4
-          }
-        },
-        scales: {
-          x: {
-            ticks: { maxTicksLimit: 8, font: { size: 10, family: 'Inter' }, color: '#718096' },
-            grid: { display: false }
-          },
-          y: {
-            stacked: true, beginAtZero: true,
-            ticks: { font: { size: 10, family: 'Inter' }, color: '#718096', stepSize: 5 },
-            grid: { color: 'rgba(226,232,240,0.6)' }
-          }
+    var html = '';
+    // Header row: corner + lens column labels
+    html += '<div class="heatmap-corner"></div>';
+    lenses.forEach(function(l){
+      html += '<div class="heatmap-collabel">' + LENS_LABELS[l] + '</div>';
+    });
+
+    // Body rows
+    categories.forEach(function(c){
+      html += '<div class="heatmap-rowlabel">' + c + '</div>';
+      lenses.forEach(function(l){
+        var cell = grid[c][l];
+        if (cell.n === 0) {
+          html += '<div class="heatmap-cell empty" title="' + c + ' × ' + LENS_LABELS[l] + ' · 0">·</div>';
+        } else {
+          var intensity = max > 0 ? cell.n / max : 0;
+          var bg = hexToRgba(CATEGORY_COLORS[c], 0.18 + intensity * 0.62);
+          var tip = c + ' × ' + LENS_LABELS[l] + ' · ' + cell.n + ' signal' + (cell.n === 1 ? '' : 's');
+          if (cell.actors.length) tip += '\nTop tags: ' + cell.actors.join(', ');
+          var safeTip = tip.replace(/"/g, '&quot;');
+          html += '<div class="heatmap-cell" style="background:' + bg + '" title="' + safeTip + '" data-cat="' + c + '" data-lens="' + l + '">' + cell.n + '</div>';
         }
-      }
+      });
     });
 
-    var sub = document.getElementById('chartSubtitle');
+    var wrap = document.getElementById('heatmap');
+    wrap.innerHTML = html;
+
+    // Click filtering
+    wrap.querySelectorAll('.heatmap-cell:not(.empty)').forEach(function(cell){
+      cell.addEventListener('click', function(){
+        var cat = cell.getAttribute('data-cat');
+        var lens = cell.getAttribute('data-lens');
+
+        document.getElementById('filterIndustry').value = cat;
+        currentLens = lens;
+
+        // Sync the lens chip row
+        document.querySelectorAll('.lens-chip').forEach(function(b){
+          b.classList.toggle('active', b.getAttribute('data-lens') === lens);
+        });
+
+        applyFilters();
+        document.getElementById('filterBar').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    var sub = document.getElementById('heatmapSubtitle');
     if (sub) {
-      sub.textContent = 'Cumulative count, ' + (allDays[0] || '') + ' → ' + (allDays[allDays.length - 1] || '') +
-        (currentLens === 'all' ? '' : ' · ' + LENS_LABELS[currentLens] + ' lens');
+      var totalCells = 0;
+      categories.forEach(function(c){ lenses.forEach(function(l){ if (grid[c][l].n > 0) totalCells++; }); });
+      sub.textContent = totalCells + ' of ' + (categories.length * lenses.length) +
+        ' cells active · click any cell to filter the grid below';
     }
   }
 
@@ -1137,7 +1218,8 @@
 
   function applyFilters() {
     var lensScoped = lensFilter(signals);
-    renderCategoryChart(lensScoped);
+    // Heat map is an atlas: always show the full universe so cells stay navigable
+    renderHeatMap(signals);
     renderWordcloud(lensScoped);
     var filtered = getFiltered();
     renderGrid(filtered);
