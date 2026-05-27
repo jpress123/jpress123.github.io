@@ -182,7 +182,6 @@
   .dashboard-section {
     padding: 0.5rem 0 3rem;
     background: var(--bg);
-    border-bottom: 1px solid var(--pale);
   }
   /* KPI tiles (used inside .header-kpis container) */
   .kpi-tile {
@@ -266,7 +265,8 @@
   .wordcloud-wrap {
     position: relative;
     width: 100%;
-    height: 170px;
+    flex: 1 1 auto;
+    min-height: 120px;
   }
   #wordcloud {
     width: 100%; height: 100%;
@@ -278,13 +278,16 @@
     height: 100%;
     font-size: 0.78rem; color: var(--text-tertiary);
   }
-  /* The "Trending" panel is compact since it lives inside the header */
+  /* The "Trending" panel matches the header text block height (sized via JS) */
   .header-wordcloud.panel {
     padding: 0.9rem 1rem;
+    display: flex;
+    flex-direction: column;
   }
   .header-wordcloud .panel-title {
     font-size: 0.95rem;
     margin-bottom: 0.4rem;
+    flex: 0 0 auto;
   }
 
   @media (max-width: 1024px) {
@@ -337,15 +340,70 @@
     box-shadow: var(--shadow-sm);
     filter: brightness(0.96);
   }
+  .heatmap-header {
+    display: flex; align-items: flex-start; justify-content: space-between;
+    gap: 1rem; margin-bottom: 0.9rem;
+  }
+  .heatmap-titlegroup { min-width: 0; }
+  .heatmap-titlegroup .panel-title { margin-bottom: 0.15rem; }
+  .heatmap-titlegroup .panel-subtitle { margin-bottom: 0; }
+  .heatmap-meta {
+    display: flex; align-items: center; gap: 0.85rem;
+    flex-shrink: 0;
+  }
+  .heatmap-weekyear {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem; font-weight: 700; color: var(--navy);
+    text-align: right; line-height: 1.15;
+    letter-spacing: 0;
+  }
+  .heatmap-print {
+    background: var(--white); color: var(--navy);
+    border: 1px solid var(--pale); border-radius: var(--radius-sm);
+    padding: 0.45rem 0.95rem; font-size: 0.72rem; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    font-family: inherit; cursor: pointer;
+    transition: background 0.15s, border-color 0.15s, color 0.15s;
+  }
+  .heatmap-print:hover {
+    background: var(--navy); color: var(--white); border-color: var(--navy);
+  }
   .heatmap-legend {
-    display: flex; align-items: center; gap: 0.5rem;
+    display: flex; align-items: center; gap: 0.55rem;
     margin-top: 0.9rem;
     font-size: 0.66rem; color: var(--text-tertiary);
     letter-spacing: 0.08em; text-transform: uppercase;
   }
+  .heatmap-legend .legend-label { white-space: nowrap; }
   .heatmap-legend-bar {
-    flex: 0 0 130px; height: 8px; border-radius: 4px;
-    background: linear-gradient(to right, #f5f6f8, #2e4057);
+    flex: 0 0 180px; height: 10px; border-radius: 5px;
+    /* Strength gradient: weak/Early -> emerging -> strong/Accelerating */
+    background: linear-gradient(to right,
+      var(--strength-weak) 0%,
+      var(--strength-emerging) 50%,
+      var(--strength-strong) 100%);
+  }
+  .heatmap-copyright {
+    margin-top: 1.1rem;
+    font-size: 0.66rem; letter-spacing: 0.06em;
+    color: var(--text-tertiary); text-align: right;
+  }
+  /* Print mode: hide everything except the heat map panel */
+  @media print {
+    body * { visibility: hidden; }
+    .heatmap-panel, .heatmap-panel * { visibility: visible; }
+    .heatmap-panel {
+      position: absolute; top: 0; left: 0; right: 0;
+      width: 100%; box-shadow: none; border: none;
+      padding: 1rem;
+    }
+    .heatmap-print { display: none; }
+    .dashboard-section { padding: 0; }
+  }
+  @media (max-width: 600px) {
+    .heatmap-header { flex-direction: column; align-items: stretch; }
+    .heatmap-meta { justify-content: space-between; }
+    .heatmap-weekyear { text-align: left; }
   }
   @media (max-width: 768px) {
     .heatmap-wrap { grid-template-columns: minmax(100px, 1.1fr) repeat(6, 1fr); gap: 3px; }
@@ -718,9 +776,23 @@
     </div>
     <div class="dashboard-main">
       <div class="panel heatmap-panel">
-        <div class="panel-title">Influencers × Industries</div>
+        <div class="heatmap-header">
+          <div class="heatmap-titlegroup">
+            <div class="panel-title">Sino-Signals Heat Map</div>
+            <div class="panel-subtitle">Influencers × Industries</div>
+          </div>
+          <div class="heatmap-meta">
+            <div class="heatmap-weekyear" id="heatmapWeekYear"></div>
+            <button class="heatmap-print" onclick="window.print()" aria-label="Print this heat map">Print</button>
+          </div>
+        </div>
         <div class="heatmap-wrap" id="heatmap"></div>
-        <div class="heatmap-legend"><span>Fewer</span><span class="heatmap-legend-bar"></span><span>More signals</span></div>
+        <div class="heatmap-legend">
+          <span class="legend-label">Early</span>
+          <span class="heatmap-legend-bar"></span>
+          <span class="legend-label">Accelerating</span>
+        </div>
+        <div class="heatmap-copyright">© Joseph Press 2026</div>
       </div>
     </div>
   </div>
@@ -752,13 +824,13 @@
         </select>
         <select class="filter-select" id="filterCategory" aria-label="Filter by influencer category">
           <option value="all">All Influencers</option>
-          <option value="Policy & Governance">Policy & Governance</option>
-          <option value="Industry & Enterprise">Industry & Enterprise</option>
-          <option value="Creative & Culture">Creative & Culture</option>
-          <option value="Climate & Sustainability">Climate & Sustainability</option>
+          <option value="Intelligent Production">Intelligent Production</option>
           <option value="Deep Tech & Research">Deep Tech & Research</option>
           <option value="Robotics & Embodied AI">Robotics & Embodied AI</option>
-          <option value="Platform & Society">Platform & Society</option>
+          <option value="Creative & Culture">Creative & Culture</option>
+          <option value="Climate & Sustainability">Climate & Sustainability</option>
+          <option value="Platforms & Social">Platforms & Social</option>
+          <option value="Policy & Governance">Policy & Governance</option>
         </select>
         <select class="filter-select" id="filterStrength" aria-label="Filter by signal strength">
           <option value="all">All Strengths</option>
@@ -825,13 +897,13 @@
   const MAX_VISIBLE = 10;
 
   const CATEGORY_COLORS = {
-    'Policy & Governance':       '#1a1a2e',
-    'Industry & Enterprise':     '#2e4057',
+    'Intelligent Production':    '#2e4057',
     'Deep Tech & Research':      '#3182ce',
     'Robotics & Embodied AI':    '#B8860B',
     'Creative & Culture':        '#C0392B',
     'Climate & Sustainability':  '#228B22',
-    'Platform & Society':        '#D2691E'
+    'Platforms & Social':        '#D2691E',
+    'Policy & Governance':       '#1a1a2e'
   };
 
   const LENS_LABELS = {
@@ -852,14 +924,39 @@
       renderKPIs();
       renderLensSwitcher();
       renderHeatMap(signals);
+      // Match the wordcloud panel height to the text block, then render the cloud into the resulting box
+      syncWordcloudPanelHeight();
       renderWordcloud(signals);
       setFilterFreshnessDefault();
       applyFilters();
       bindFilters();
+      bindWordcloudResize();
     })
     .catch(function(err) {
       document.getElementById('signalGrid').innerHTML = '<p style="color:var(--text-tertiary)">Failed to load signal data.</p>';
     });
+
+  function syncWordcloudPanelHeight() {
+    var left = document.querySelector('.header-left');
+    var cloud = document.querySelector('.header-wordcloud');
+    if (!left || !cloud) return;
+    // Reset before measuring to avoid feedback loops
+    cloud.style.height = '';
+    var leftHeight = left.getBoundingClientRect().height;
+    if (leftHeight < 120) return;
+    cloud.style.height = leftHeight + 'px';
+  }
+
+  var _cloudResizeTimer = null;
+  function bindWordcloudResize() {
+    window.addEventListener('resize', function(){
+      clearTimeout(_cloudResizeTimer);
+      _cloudResizeTimer = setTimeout(function(){
+        syncWordcloudPanelHeight();
+        renderWordcloud(signals);
+      }, 180);
+    });
+  }
 
   function strengthClass(s) {
     if (s === 'weak') return 'badge-strength-weak';
@@ -1011,6 +1108,10 @@
     var iso = getISOWeek(new Date());
     var trendingIndustry = topIndustryThisMonth();
     var topTrend = topTrendTag();
+
+    // Populate the heat map's Week / Year header
+    var hwy = document.getElementById('heatmapWeekYear');
+    if (hwy) hwy.textContent = 'Week ' + iso.week + ' / ' + iso.year;
 
     var tiles = [
       {
