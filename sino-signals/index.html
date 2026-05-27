@@ -117,7 +117,7 @@
   section { padding: 5rem 0; }
   .section-label {
     font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em;
-    text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 1.4rem;
   }
 
   /* HERO HEADER */
@@ -162,7 +162,7 @@
   @media (max-width: 760px) {
     .header-kpis { grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
   }
-  /* MegaTrends panel floated to the right within the header */
+  /* "Trending" panel floated to the right within the header */
   .header-wordcloud {
     float: right;
     width: 360px;
@@ -266,7 +266,7 @@
   .wordcloud-wrap {
     position: relative;
     width: 100%;
-    height: 290px;
+    height: 170px;
   }
   #wordcloud {
     width: 100%; height: 100%;
@@ -276,7 +276,15 @@
   .wordcloud-empty {
     display: flex; align-items: center; justify-content: center;
     height: 100%;
-    font-size: 0.8rem; color: var(--text-tertiary);
+    font-size: 0.78rem; color: var(--text-tertiary);
+  }
+  /* The "Trending" panel is compact since it lives inside the header */
+  .header-wordcloud.panel {
+    padding: 0.9rem 1rem;
+  }
+  .header-wordcloud .panel-title {
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
   }
 
   @media (max-width: 1024px) {
@@ -681,18 +689,17 @@
 <!-- SITE HEADER -->
 <header class="site-header">
   <div class="container">
+    <p class="section-label">Intelligence Briefing</p>
     <div class="header-kpis" id="kpiStrip">
       <!-- Filled by JS -->
     </div>
-    <p class="section-label">Intelligence Briefing</p>
     <div class="header-layout">
       <div class="panel wordcloud-panel header-wordcloud">
-        <div class="panel-title">MegaTrends</div>
-        <div class="panel-subtitle">Most frequent tags across all signals · click any word to filter</div>
+        <div class="panel-title">Trending</div>
         <div class="wordcloud-wrap"><canvas id="wordcloud"></canvas></div>
       </div>
       <div class="header-left">
-        <h1>Sino-Signals:</h1>
+        <h1>Sino-Signals</h1>
         <p class="header-tagline">AI disruption at the forefront of strategic decision-making.</p>
         <div class="header-intro">
           <p>China is the world's largest signal amplifier for AI deployment. While frontier research grabs headlines in the West, they often fall between unscalable and slop. The signals that will reshape your industry over the next 3 to 5 years are appearing in China, now. Not only is China pulling ahead in foundational research, it operates at a scale and speed of deployment that has no Western equivalent.</p>
@@ -707,7 +714,6 @@
 <section class="dashboard-section">
   <div class="container">
     <div class="lens-switcher" id="lensSwitcher">
-      <span class="lens-label">Industry Lens</span>
       <!-- Chips filled by JS -->
     </div>
     <div class="dashboard-main">
@@ -1036,25 +1042,32 @@
   }
 
   function renderLensSwitcher() {
-    var counts = { all: signals.length };
+    var counts = {};
     signals.forEach(function(s){
       if (s.industry_lens) counts[s.industry_lens] = (counts[s.industry_lens] || 0) + 1;
     });
-    var keys = Object.keys(LENS_LABELS);
+    // Skip the synthetic "all" key — no "All Industries" chip, no header label
+    var keys = Object.keys(LENS_LABELS).filter(function(k){ return k !== 'all'; });
     var sw = document.getElementById('lensSwitcher');
-    var labelHTML = sw.querySelector('.lens-label').outerHTML;
     var chipsHTML = keys.map(function(k){
       var c = counts[k] || 0;
       return '<button class="lens-chip' + (k === currentLens ? ' active' : '') +
              '" data-lens="' + k + '">' + LENS_LABELS[k] +
              '<span class="lens-count">' + c + '</span></button>';
     }).join('');
-    sw.innerHTML = labelHTML + chipsHTML;
+    sw.innerHTML = chipsHTML;
     sw.querySelectorAll('.lens-chip').forEach(function(btn){
       btn.addEventListener('click', function(){
-        currentLens = btn.getAttribute('data-lens');
-        sw.querySelectorAll('.lens-chip').forEach(function(b){ b.classList.remove('active'); });
-        btn.classList.add('active');
+        var clicked = btn.getAttribute('data-lens');
+        // Toggle: clicking the active chip clears the filter (acts as the implicit "all")
+        if (currentLens === clicked) {
+          currentLens = 'all';
+          btn.classList.remove('active');
+        } else {
+          currentLens = clicked;
+          sw.querySelectorAll('.lens-chip').forEach(function(b){ b.classList.remove('active'); });
+          btn.classList.add('active');
+        }
         // Sync the Industry dropdown in the filter bar
         var lensSelect = document.getElementById('filterLens');
         if (lensSelect) lensSelect.value = currentLens;
