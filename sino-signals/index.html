@@ -371,6 +371,89 @@
   .heatmap-print:hover {
     background: var(--navy); color: var(--white); border-color: var(--navy);
   }
+  /* HEAT MAP CONTROLS — toggle + slider */
+  .heatmap-controls {
+    display: flex; align-items: center; gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    padding: 0.65rem 0.9rem;
+    background: rgba(49,130,206,0.04);
+    border: 1px solid var(--pale);
+    border-radius: var(--radius-sm);
+  }
+  .impact-toggle {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    cursor: pointer; user-select: none;
+    font-size: 0.78rem; font-weight: 500; color: var(--text-secondary);
+  }
+  .impact-toggle input { display: none; }
+  .impact-toggle-track {
+    position: relative;
+    width: 36px; height: 20px;
+    background: #d1d5db; border-radius: 999px;
+    transition: background 0.2s;
+    flex-shrink: 0;
+  }
+  .impact-toggle-thumb {
+    position: absolute; top: 2px; left: 2px;
+    width: 16px; height: 16px;
+    background: var(--white); border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    transition: left 0.2s, background 0.2s;
+  }
+  .impact-toggle input:checked + .impact-toggle-track {
+    background: var(--accent);
+  }
+  .impact-toggle input:checked + .impact-toggle-track .impact-toggle-thumb {
+    left: 18px;
+  }
+  .impact-toggle-text { font-weight: 600; color: var(--navy); letter-spacing: 0.02em; }
+  .impact-slider-group {
+    display: flex; align-items: center; gap: 0.55rem;
+    flex: 1; min-width: 200px; max-width: 360px;
+    opacity: 0.5; transition: opacity 0.2s;
+  }
+  .impact-slider-group.active { opacity: 1; }
+  .impact-slider-label {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem; font-weight: 700; color: var(--navy);
+  }
+  #impactSlider {
+    flex: 1;
+    -webkit-appearance: none; appearance: none;
+    height: 6px; border-radius: 3px;
+    background: linear-gradient(to right,
+      #ffffff 0%, #fde68a 30%, #f59e0b 65%, #b91c1c 100%);
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.08);
+  }
+  #impactSlider::-webkit-slider-thumb {
+    -webkit-appearance: none; appearance: none;
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    background: var(--white); border: 2px solid var(--navy);
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  }
+  #impactSlider::-moz-range-thumb {
+    width: 18px; height: 18px; border-radius: 50%;
+    background: var(--white); border: 2px solid var(--navy);
+    cursor: pointer;
+  }
+  #impactSlider:disabled { cursor: not-allowed; }
+  .impact-slider-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem; font-weight: 700; color: var(--navy);
+    min-width: 1rem; text-align: center;
+  }
+  .impact-slider-hint {
+    font-size: 0.72rem; color: var(--text-tertiary);
+    letter-spacing: 0.05em;
+  }
+  @media (max-width: 600px) {
+    .heatmap-controls { flex-direction: column; align-items: stretch; gap: 0.75rem; }
+    .impact-slider-group { max-width: none; }
+  }
   .heatmap-footer {
     display: flex; align-items: center; justify-content: space-between;
     gap: 1rem; margin-top: 1.1rem;
@@ -381,13 +464,19 @@
     letter-spacing: 0.08em; text-transform: uppercase;
   }
   .heatmap-legend .legend-label { white-space: nowrap; }
+  .heatmap-legend .legend-prefix {
+    font-weight: 700; color: var(--text-secondary);
+    margin-right: 0.15rem;
+  }
   .heatmap-legend-bar {
-    flex: 0 0 180px; height: 10px; border-radius: 5px;
-    /* Strength gradient: Early -> Emerging -> Impact */
+    flex: 0 0 280px; height: 10px; border-radius: 5px;
+    /* Impact gradient: white -> yellow -> orange -> red */
     background: linear-gradient(to right,
-      var(--strength-weak) 0%,
-      var(--strength-emerging) 50%,
-      var(--strength-strong) 100%);
+      #ffffff 0%,
+      #fde68a 30%,
+      #f59e0b 65%,
+      #b91c1c 100%);
+    border: 1px solid rgba(0,0,0,0.08);
   }
   .heatmap-copyright {
     font-size: 0.66rem; letter-spacing: 0.06em;
@@ -645,6 +734,11 @@
     display: inline-flex; align-items: center; gap: 0.35rem;
   }
   .badge-category { color: var(--accent); border-color: var(--accent-dim); background: rgba(49,130,206,0.06); }
+  .badge-impact {
+    color: var(--navy); font-weight: 700;
+    background: linear-gradient(90deg, #ffffff 0%, #fde68a 40%, #f59e0b 75%, #b91c1c 100%);
+    border-color: rgba(0,0,0,0.1);
+  }
   .badge-strength-weak { color: var(--strength-weak); border-color: rgba(184,134,11,0.2); background: rgba(184,134,11,0.06); }
   .badge-strength-emerging { color: var(--strength-emerging); border-color: rgba(210,105,30,0.2); background: rgba(210,105,30,0.06); }
   .badge-strength-strong { color: var(--strength-strong); border-color: rgba(192,57,43,0.2); background: rgba(192,57,43,0.06); }
@@ -795,12 +889,28 @@
             <button class="heatmap-print" onclick="window.print()" aria-label="Print this heat map">Print</button>
           </div>
         </div>
+        <div class="heatmap-controls">
+          <label class="impact-toggle" for="impactToggle">
+            <input type="checkbox" id="impactToggle" aria-label="Filter by impact threshold">
+            <span class="impact-toggle-track"><span class="impact-toggle-thumb"></span></span>
+            <span class="impact-toggle-text">Drill into impact</span>
+          </label>
+          <div class="impact-slider-group">
+            <span class="impact-slider-label">≥</span>
+            <input type="range" id="impactSlider" min="1" max="5" step="1" value="3"
+                   aria-label="Minimum impact score"
+                   disabled>
+            <span class="impact-slider-value" id="impactSliderValue">3</span>
+            <span class="impact-slider-hint">of 5</span>
+          </div>
+        </div>
         <div class="heatmap-wrap" id="heatmap"></div>
         <div class="heatmap-footer">
           <div class="heatmap-legend">
+            <span class="legend-prefix">Impacts:</span>
             <span class="legend-label">Early</span>
             <span class="heatmap-legend-bar"></span>
-            <span class="legend-label">Impact</span>
+            <span class="legend-label">Urgent</span>
           </div>
           <div class="heatmap-copyright">© Joseph Press 2026</div>
         </div>
@@ -1193,33 +1303,62 @@
     return sigs.filter(function(s){ return s.industry_lens === currentLens; });
   }
 
+  // Impact gradient stops: 1=white, 5=red
+  // Used to color heat map cells by max impact in each cell.
+  var IMPACT_GRADIENT_STOPS = [
+    { v: 1, c: [255, 255, 255] }, // white
+    { v: 2, c: [253, 230, 138] }, // light yellow
+    { v: 3, c: [245, 158, 11]  }, // orange
+    { v: 4, c: [220, 38, 38]   }, // red
+    { v: 5, c: [127, 29, 29]   }  // deep red (urgent)
+  ];
+  function impactColor(score) {
+    if (!score || score < 1) return '#f5f6f8';
+    if (score >= 5) return 'rgb(127,29,29)';
+    var stops = IMPACT_GRADIENT_STOPS;
+    for (var i = 0; i < stops.length - 1; i++) {
+      var a = stops[i], b = stops[i+1];
+      if (score >= a.v && score <= b.v) {
+        var t = (score - a.v) / (b.v - a.v);
+        var r = Math.round(a.c[0] + (b.c[0] - a.c[0]) * t);
+        var g = Math.round(a.c[1] + (b.c[1] - a.c[1]) * t);
+        var bl = Math.round(a.c[2] + (b.c[2] - a.c[2]) * t);
+        return 'rgb(' + r + ',' + g + ',' + bl + ')';
+      }
+    }
+    return '#f5f6f8';
+  }
+
   function renderHeatMap(filtered) {
     var categories = Object.keys(CATEGORY_COLORS); // 7 rows
-    var lenses = Object.keys(LENS_LABELS).filter(function(k){ return k !== 'all'; }); // 5 cols
+    var lenses = Object.keys(LENS_LABELS).filter(function(k){ return k !== 'all'; }); // 6 cols
 
-    // Build [category][lens] -> { n, actors }
+    // Read the optional impact threshold (slider)
+    var impactToggle = document.getElementById('impactToggle');
+    var impactSlider = document.getElementById('impactSlider');
+    var threshold = (impactToggle && impactToggle.checked && impactSlider) ? parseInt(impactSlider.value, 10) : 0;
+
+    // Build [category][lens] -> { n, maxImpact, sumImpact, actors }
     var grid = {};
     categories.forEach(function(c){
       grid[c] = {};
-      lenses.forEach(function(l){ grid[c][l] = { n: 0, actors: [] }; });
+      lenses.forEach(function(l){ grid[c][l] = { n: 0, maxImpact: 0, actors: [] }; });
     });
 
     filtered.forEach(function(s){
       if (!s.industry_lens || !grid[s.category]) return;
       var cell = grid[s.category][s.industry_lens];
       if (!cell) return;
+      var imp = parseInt(s.impact_score, 10) || 0;
+      // If a threshold is active, exclude signals below it from the cell count
+      if (threshold > 0 && imp < threshold) return;
       cell.n++;
+      if (imp > cell.maxImpact) cell.maxImpact = imp;
       // Capture first non-Chinese tag as actor proxy; cap at 3 unique
       (s.tags || []).forEach(function(t){
         if (!t || /[一-鿿]/.test(t)) return;
         if (cell.actors.length < 3 && cell.actors.indexOf(t) === -1) cell.actors.push(t);
       });
-    });
-
-    // Max for intensity normalization
-    var max = 0;
-    categories.forEach(function(c){
-      lenses.forEach(function(l){ if (grid[c][l].n > max) max = grid[c][l].n; });
     });
 
     var html = '';
@@ -1237,12 +1376,14 @@
         if (cell.n === 0) {
           html += '<div class="heatmap-cell empty" title="' + c + ' × ' + LENS_LABELS[l] + ' · 0">·</div>';
         } else {
-          var intensity = max > 0 ? cell.n / max : 0;
-          var bg = hexToRgba(CATEGORY_COLORS[c], 0.18 + intensity * 0.62);
-          var tip = c + ' × ' + LENS_LABELS[l] + ' · ' + cell.n + ' signal' + (cell.n === 1 ? '' : 's');
+          var bg = impactColor(cell.maxImpact);
+          // For dark backgrounds (impact 4-5), switch text to white for legibility
+          var textColor = cell.maxImpact >= 4 ? '#ffffff' : 'var(--navy)';
+          var tip = c + ' × ' + LENS_LABELS[l] + ' · ' + cell.n + ' signal' + (cell.n === 1 ? '' : 's') +
+                    ' · max impact ' + cell.maxImpact + '/5';
           if (cell.actors.length) tip += '\nTop tags: ' + cell.actors.join(', ');
           var safeTip = tip.replace(/"/g, '&quot;');
-          html += '<div class="heatmap-cell" style="background:' + bg + '" title="' + safeTip + '" data-cat="' + c + '" data-lens="' + l + '">' + cell.n + '</div>';
+          html += '<div class="heatmap-cell" style="background:' + bg + ';color:' + textColor + '" title="' + safeTip + '" data-cat="' + c + '" data-lens="' + l + '">' + cell.n + '</div>';
         }
       });
     });
@@ -1542,6 +1683,22 @@
       applyFilters();
     });
     document.getElementById('searchInput').addEventListener('input', applyFilters);
+
+    var toggle = document.getElementById('impactToggle');
+    var slider = document.getElementById('impactSlider');
+    var valueLabel = document.getElementById('impactSliderValue');
+    var sliderGroup = document.querySelector('.impact-slider-group');
+    if (toggle && slider) {
+      toggle.addEventListener('change', function(){
+        slider.disabled = !toggle.checked;
+        if (sliderGroup) sliderGroup.classList.toggle('active', toggle.checked);
+        renderHeatMap(signals);
+      });
+      slider.addEventListener('input', function(){
+        if (valueLabel) valueLabel.textContent = slider.value;
+        if (toggle.checked) renderHeatMap(signals);
+      });
+    }
   }
 
   window.showExpanded = function(id) {
@@ -1557,6 +1714,10 @@
     html += '<span class="signal-date">' + formatDate(s.date) + '</span>';
     html += '<span class="badge badge-category">' + s.category_emoji + ' ' + s.category + '</span>';
     html += '<span class="badge ' + strengthClass(s.signal_strength) + '">' + strengthLabel(s.signal_strength) + '</span>';
+    if (s.impact_score) {
+      html += '<span class="badge badge-impact" title="Impact score: 1 (early) to 5 (urgent)">' +
+              'Impact ' + s.impact_score + '/5</span>';
+    }
     if (s.content_type !== 'daily') {
       html += '<span class="badge" style="color:var(--accent);border-color:var(--accent-dim)">' + s.content_type.replace('_',' ').toUpperCase() + '</span>';
     }
