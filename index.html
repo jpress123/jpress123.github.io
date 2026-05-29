@@ -323,16 +323,42 @@
     .nav-links { display: none; }
     .sector-cards { grid-template-columns: repeat(2, 1fr); }
   }
-  .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
-  .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); margin: 5px 0; transition: 0.3s; }
+  /* PHONE breakpoint — patches ship-blockers at 375px (iPhone) */
+  @media (max-width: 600px) {
+    .nav-inner { padding: 0.9rem 1rem; }
+    .nav-name { font-size: 1rem; letter-spacing: 0; }
+    section { padding-left: 1.2rem; padding-right: 1.2rem; }
+    .hero { padding: 6rem 1.2rem 2.5rem; gap: 1.5rem; }
+    .hero-text h1 { font-size: 1.8rem; line-height: 1.15; }
+    .hero-photo { width: 100%; max-width: 240px; height: auto; aspect-ratio: 220 / 300; }
+    .hero-ctas { flex-direction: column; align-items: stretch; gap: 0.6rem; }
+    .hero-ctas a { text-align: center; }
+    .section-title.hero-size { font-size: 1.8rem; }
+    .sector-cards { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
+    .sector-card { padding: 1rem 0.8rem; }
+    .sector-label { font-size: 0.7rem; }
+    .sector-name { font-size: 0.78rem; line-height: 1.25; }
+    .credentials-grid { grid-template-columns: 1fr; gap: 1rem; }
+    .domain-header { gap: 1.2rem; }
+    .domain-cover img, .domain-cover-placeholder { width: 100px; }
+    .container { padding-left: 0; padding-right: 0; }
+    footer { font-size: 0.7rem; padding: 1.2rem 1rem; }
+  }
+  .hamburger {
+    display: none; background: none; border: none; cursor: pointer;
+    width: 44px; height: 44px; padding: 0;
+    align-items: center; justify-content: center; flex-direction: column;
+  }
+  .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); margin: 3px 0; transition: 0.3s; }
   @media (max-width: 768px) {
-    .hamburger { display: block; }
+    .hamburger { display: flex; }
     .nav-links.open {
       display: flex; flex-direction: column;
       position: absolute; top: 100%; left: 0; right: 0;
-      background: var(--white); padding: 1.5rem 2rem;
-      border-bottom: 1px solid var(--pale); gap: 1rem;
+      background: var(--white); padding: 1.2rem 1.5rem;
+      border-bottom: 1px solid var(--pale); gap: 0.9rem;
     }
+    .nav-links.open a { padding: 0.5rem 0; min-height: 44px; display: flex; align-items: center; }
   }
 
   /* TRILINGUAL TOGGLE — hide zh and fr by default, show based on body class */
