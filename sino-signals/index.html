@@ -98,12 +98,17 @@
     font-size: 0.85rem; font-weight: 500; letter-spacing: 0.03em;
   }
   .nav-links a:hover { color: var(--text-primary); text-decoration: none; }
-  .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
-  .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); margin: 5px 0; transition: 0.3s; }
+  .hamburger {
+    display: none; background: none; border: none; cursor: pointer;
+    width: 44px; height: 44px;
+    flex-direction: column; align-items: center; justify-content: center;
+    gap: 5px; padding: 0;
+  }
+  .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); transition: 0.3s; }
 
   @media (max-width: 768px) {
     .nav-links { display: none; }
-    .hamburger { display: block; }
+    .hamburger { display: flex; }
     .nav-links.open {
       display: flex; flex-direction: column;
       position: absolute; top: 100%; left: 0; right: 0;
@@ -171,7 +176,7 @@
   @media (max-width: 900px) {
     .header-wordcloud { width: 280px; margin-left: 1.5rem; }
   }
-  @media (max-width: 760px) {
+  @media (max-width: 600px) {
     .header-wordcloud {
       float: none;
       width: 100%;
@@ -561,10 +566,11 @@
     margin-left: 0.45rem; line-height: 1.2;
   }
 
-  @media (max-width: 768px) {
-    .filter-bar-inner { flex-direction: column; align-items: stretch; }
-    .search-input { min-width: auto; }
-    .filter-controls { flex-direction: column; align-items: stretch; }
+  @media (max-width: 600px) {
+    .filter-bar-inner { flex-direction: column; align-items: stretch; gap: 0.75rem; }
+    .filter-search-row { width: 100%; }
+    .search-input { min-width: 0; width: 100%; }
+    .filter-controls { flex-direction: column; align-items: stretch; gap: 0.5rem; }
     .filter-select { width: 100%; }
   }
 
@@ -791,10 +797,10 @@
   }
   .subscribe-btn:hover { background: var(--slate); border-color: var(--slate); }
 
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     .subscribe-form { flex-direction: column; border-radius: var(--radius-sm); }
     .subscribe-input { border-right: 1px solid var(--pale); border-bottom: none; border-radius: var(--radius-sm) var(--radius-sm) 0 0; }
-    .subscribe-btn { border-radius: 0 0 var(--radius-sm) var(--radius-sm); }
+    .subscribe-btn { border-radius: 0 0 var(--radius-sm) var(--radius-sm); padding: 0.85rem 1.5rem; }
   }
 
   /* FOOTER */
@@ -821,6 +827,104 @@
 
   /* NOSCRIPT FALLBACK */
   noscript .signal-tile { display: block; margin-bottom: 1rem; padding: 1.5rem; background: var(--white); border: 1px solid var(--pale); border-radius: var(--radius-md); }
+
+  /* ==========================================================================
+     MOBILE REBUILD ≤600px
+     Consolidated rules for iPhone-width viewports.
+     Heatmap uses Option A: horizontal scroll with sticky category column.
+     ========================================================================== */
+  @media (max-width: 600px) {
+
+    /* 8 — Nav padding cushion */
+    .nav-inner { padding: 0.9rem 1rem; }
+
+    /* 1 — KPI strip tightening */
+    .header-kpis { grid-template-columns: repeat(2, 1fr); gap: 0.55rem; }
+    .kpi-num { font-size: 1.3rem; }
+    .kpi-num.kpi-num-text { font-size: 0.9rem; }
+    .kpi-tile { padding: 0.7rem 0.5rem; min-height: 72px; }
+
+    /* 13 — Wordcloud minimum height fallback */
+    .wordcloud-wrap { min-height: 160px; }
+    .header-wordcloud.panel { padding: 0.75rem 0.85rem; }
+
+    /* 10 — Panel title scale */
+    .panel-title { font-size: 0.95rem; }
+    .heatmap-titlegroup .panel-title { font-size: 1.3rem; }
+
+    /* Panel padding cushion to give cells more room */
+    .heatmap-panel { padding: 1rem 0.85rem; }
+
+    /* ------------------------------------------------------------------
+       HEATMAP — Option A: horizontal scroll, sticky first column
+       ------------------------------------------------------------------ */
+    .heatmap-wrap {
+      overflow-x: auto;
+      overflow-y: hidden;
+      grid-template-columns: 108px repeat(6, 88px);
+      gap: 3px;
+      padding-bottom: 0.6rem;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+    }
+    .heatmap-corner,
+    .heatmap-rowlabel {
+      position: sticky;
+      left: 0;
+      background: var(--white);
+      z-index: 2;
+    }
+    .heatmap-rowlabel {
+      padding-right: 0.55rem;
+      font-size: 0.7rem;
+      box-shadow: 4px 0 6px -2px rgba(0,0,0,0.06);
+    }
+    .heatmap-collabel {
+      font-size: 0.55rem;
+      padding: 0 0.15rem 0.4rem;
+    }
+    .heatmap-cell {
+      aspect-ratio: auto;
+      height: 52px;
+      min-height: 48px;
+      font-size: 0.95rem;
+    }
+    /* Subtle right-edge hint that more columns exist offscreen */
+    .heatmap-panel { position: relative; }
+    .heatmap-panel::after {
+      content: "";
+      position: absolute;
+      top: 0; right: 0; bottom: 0;
+      width: 18px;
+      pointer-events: none;
+      background: linear-gradient(to left, rgba(255,255,255,0.85), rgba(255,255,255,0));
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+
+    /* 12 — Heatmap legend bar full-width */
+    .heatmap-legend { width: 100%; flex-wrap: wrap; gap: 0.4rem; }
+    .heatmap-legend-bar { flex: 1 1 100%; }
+    .heatmap-copyright { white-space: normal; }
+
+    /* 4 — Signal grid 1-column with tighter padding */
+    .signal-grid { grid-template-columns: 1fr; gap: 0.9rem; }
+    .signal-tile { padding: 1rem; }
+    .signal-tile.synthesis { grid-column: 1; }
+
+    /* 14 — Show-more button tap-zone cushion */
+    .show-more-btn { padding: 0.9rem 1.5rem; min-height: 44px; width: 100%; max-width: 320px; }
+
+    /* 15 — Expanded back button padding */
+    .expanded-back { padding: 0.75rem 1.5rem; min-height: 44px; }
+    .expanded-back-bottom { padding: 0.75rem 1.5rem; }
+
+    /* Section padding tighter on small screens */
+    .site-header { padding: 5.5rem 0 1.5rem; }
+    .header-left h1 { font-size: 1.85rem; }
+    section { padding: 2.5rem 0; }
+    .container { padding: 0 1rem; }
+    .filter-bar { padding: 1.25rem 0; }
+  }
 </style>
 </head>
 <body>
