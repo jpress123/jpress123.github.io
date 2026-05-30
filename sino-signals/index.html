@@ -177,11 +177,21 @@
     .header-wordcloud { width: 280px; margin-left: 1.5rem; }
   }
   @media (max-width: 600px) {
+    /* MOBILE REORDER — wordcloud below title/intro; dashboard hidden */
+    .header-layout {
+      display: flex;
+      flex-direction: column;
+    }
+    .header-left { order: 1; }
     .header-wordcloud {
+      order: 2;
       float: none;
       width: 100%;
-      margin: 0 0 1.5rem 0;
+      margin: 1.5rem 0 0 0;
     }
+    /* Skip the heatmap dashboard on phones; go straight to search + cards */
+    .dashboard-section { display: none; }
+    .filter-bar { margin-top: 0; }
   }
   /* DASHBOARD SECTION */
   .dashboard-section {
