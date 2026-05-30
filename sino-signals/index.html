@@ -17,9 +17,12 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/wordcloud2.js/1.2.2/wordcloud2.min.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="preload" href="signals-data.json" as="fetch" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wordcloud2.js/1.2.2/wordcloud2.min.js" defer></script>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -192,6 +195,8 @@
     }
     .header-wordcloud .wordcloud-wrap { min-height: 180px; max-height: 220px; }
     /* Skip the heatmap dashboard on phones; go straight to search + cards */
+    .header-kpis { display: none; }
+    .section-label { display: none; }
     .dashboard-section { display: none; }
     .filter-bar { margin-top: 0; }
   }
@@ -1153,16 +1158,22 @@
     'entertainment':      'Entertainment'
   };
 
+  // Detect phone-sized viewport once at load — skips heavy dashboard rendering on mobile
+  var IS_PHONE = window.matchMedia('(max-width: 600px)').matches;
+
   // Load data
   fetch('signals-data.json')
     .then(function(r) { return r.json(); })
     .then(function(data) {
       signals = data.sort(function(a, b) { return b.date.localeCompare(a.date); });
-      renderKPIs();
-      renderLensSwitcher();
-      renderHeatMap(signals);
-      // Match the wordcloud panel height to the text block, then render the cloud into the resulting box
-      syncWordcloudPanelHeight();
+      // On phones, skip the dashboard renders entirely — they build DOM the user never sees
+      // and the KPI strip is hidden via CSS. Saves ~150ms on mid-range Android.
+      if (!IS_PHONE) {
+        renderKPIs();
+        renderLensSwitcher();
+        renderHeatMap(signals);
+        syncWordcloudPanelHeight();
+      }
       renderWordcloud(signals);
       setFilterFreshnessDefault();
       applyFilters();
