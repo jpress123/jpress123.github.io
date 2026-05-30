@@ -210,20 +210,47 @@
     .dashboard-section { display: none; }
     .filter-bar { margin-top: 0; }
   }
-  /* Mobile DOM tag cloud — replaces the canvas wordcloud on phones */
+  /* Mobile DOM tag cloud — three tiers for visual hierarchy */
   .mobile-tagcloud {
     display: flex; flex-wrap: wrap;
-    gap: 0.45rem 0.65rem;
-    align-items: baseline;
-    padding: 0.2rem 0;
+    gap: 0.4rem 0.5rem;
+    align-items: center;
+    padding: 0.3rem 0;
     line-height: 1.4;
   }
-  .mobile-tag {
+  .mtag { transition: opacity 0.15s, transform 0.15s; }
+  .mtag:active { opacity: 0.7; transform: scale(0.96); }
+  /* Tier 1: large serif pills for the most frequent tags */
+  .mtag-pill {
+    font-family: 'Playfair Display', serif;
     font-weight: 600;
-    letter-spacing: -0.005em;
-    transition: opacity 0.15s;
+    font-size: 1.15rem;
+    color: var(--white);
+    padding: 0.3rem 0.85rem;
+    border-radius: 999px;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
   }
-  .mobile-tag:hover { opacity: 0.7; }
+  /* Tier 2: medium bordered chips */
+  .mtag-chip {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 0.2rem 0.65rem;
+    border-radius: 999px;
+    border: 1.5px solid;
+    background: rgba(255,255,255,0.6);
+    letter-spacing: 0.01em;
+  }
+  /* Tier 3: small plain text, italic for visual contrast */
+  .mtag-plain {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 0.78rem;
+    padding: 0 0.2rem;
+    letter-spacing: 0.005em;
+  }
   /* DASHBOARD SECTION */
   .dashboard-section {
     padding: 0.5rem 0 3rem;
@@ -1588,8 +1615,8 @@
     return map;
   }
 
-  // Lightweight DOM-based tag cloud for phones — no canvas, no library, no main-thread freeze.
-  // Renders the top N tags as styled spans with font-size scaled by frequency.
+  // Tiered mobile tag cloud — three visual tiers create hierarchy and variety.
+  // Top 3 = large Playfair pills, next 5 = bordered Inter chips, rest = plain inline tags.
   function renderMobileTagCloud(filtered) {
     var wrap = document.querySelector('.header-wordcloud .wordcloud-wrap');
     if (!wrap) return;
@@ -1610,31 +1637,42 @@
       .map(function(t){ return [t, freq[t]]; })
       .filter(function(e){ return e[1] >= 1; })
       .sort(function(a,b){ return b[1] - a[1]; })
-      .slice(0, 22);
+      .slice(0, 14);
 
     if (!entries.length) {
       wrap.innerHTML = '<div class="wordcloud-empty">No recurring tags.</div>';
       return;
     }
 
-    var maxN = entries[0][1];
-    var minN = entries[entries.length - 1][1];
-    var span = Math.max(1, maxN - minN);
     var tagColors = (typeof buildTagColorMap === 'function') ? buildTagColorMap(filtered) : {};
 
-    // Shuffle so the visual feels organic instead of sorted by size
-    var shuffled = entries.slice();
-    for (var i = shuffled.length - 1; i > 0; i--) {
-      var j = Math.floor(Math.random() * (i + 1));
-      var tmp = shuffled[i]; shuffled[i] = shuffled[j]; shuffled[j] = tmp;
+    // Split into tiers
+    var tier1 = entries.slice(0, 3);
+    var tier2 = entries.slice(3, 8);
+    var tier3 = entries.slice(8, 14);
+
+    // Interleave the three tiers so the layout feels organic rather than sorted
+    var mixed = [];
+    var i1 = 0, i2 = 0, i3 = 0;
+    while (i1 < tier1.length || i2 < tier2.length || i3 < tier3.length) {
+      if (i3 < tier3.length) mixed.push({ tier: 3, e: tier3[i3++] });
+      if (i2 < tier2.length) mixed.push({ tier: 2, e: tier2[i2++] });
+      if (i3 < tier3.length) mixed.push({ tier: 3, e: tier3[i3++] });
+      if (i1 < tier1.length) mixed.push({ tier: 1, e: tier1[i1++] });
+      if (i2 < tier2.length) mixed.push({ tier: 2, e: tier2[i2++] });
     }
 
     var html = '<div class="mobile-tagcloud">';
-    shuffled.forEach(function(e){
-      var weight = (e[1] - minN) / span;
-      var sizeRem = (0.75 + weight * 0.75).toFixed(2);
-      var color = tagColors[e[0]] || '#2c5282';
-      html += '<span class="mobile-tag" style="font-size:' + sizeRem + 'rem;color:' + color + '">' + e[0] + '</span>';
+    mixed.forEach(function(item){
+      var t = item.e[0];
+      var color = tagColors[t] || '#2c5282';
+      if (item.tier === 1) {
+        html += '<span class="mtag mtag-pill" style="background:' + color + '">' + t + '</span>';
+      } else if (item.tier === 2) {
+        html += '<span class="mtag mtag-chip" style="color:' + color + ';border-color:' + color + '40">' + t + '</span>';
+      } else {
+        html += '<span class="mtag mtag-plain" style="color:' + color + '">' + t + '</span>';
+      }
     });
     html += '</div>';
     wrap.innerHTML = html;
