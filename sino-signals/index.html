@@ -18,8 +18,6 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-<link rel="preload" href="signals-data.json" as="fetch" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wordcloud2.js/1.2.2/wordcloud2.min.js" defer></script>
@@ -1159,27 +1157,30 @@
   // Detect phone-sized viewport once at load — skips heavy dashboard rendering on mobile
   var IS_PHONE = window.matchMedia('(max-width: 600px)').matches;
 
-  // Load data
+  // Load data — each render wrapped in try/catch so one failure cannot break the chain
+  function safeRun(name, fn) {
+    try { fn(); } catch (e) { console.error('[' + name + ']', e); }
+  }
+
   fetch('signals-data.json')
     .then(function(r) { return r.json(); })
     .then(function(data) {
       signals = data.sort(function(a, b) { return b.date.localeCompare(a.date); });
-      // KPI strip is the only dashboard-flavoured element we keep on mobile —
-      // useful at-a-glance numbers, cheap to render.
-      renderKPIs();
-      // Skip the heavier dashboard renders on phones (heatmap, lens chips, height-sync)
+      // KPI strip kept on mobile — useful numeric summary, cheap to render
+      safeRun('renderKPIs', renderKPIs);
       if (!IS_PHONE) {
-        renderLensSwitcher();
-        renderHeatMap(signals);
-        syncWordcloudPanelHeight();
+        safeRun('renderLensSwitcher', renderLensSwitcher);
+        safeRun('renderHeatMap', function(){ renderHeatMap(signals); });
+        safeRun('syncWordcloudPanelHeight', syncWordcloudPanelHeight);
       }
-      renderWordcloud(signals);
-      setFilterFreshnessDefault();
-      applyFilters();
-      bindFilters();
-      bindWordcloudResize();
+      safeRun('renderWordcloud', function(){ renderWordcloud(signals); });
+      safeRun('setFilterFreshnessDefault', setFilterFreshnessDefault);
+      safeRun('applyFilters', applyFilters);
+      safeRun('bindFilters', bindFilters);
+      safeRun('bindWordcloudResize', bindWordcloudResize);
     })
     .catch(function(err) {
+      console.error('[signals-data fetch]', err);
       document.getElementById('signalGrid').innerHTML = '<p style="color:var(--text-tertiary)">Failed to load signal data.</p>';
     });
 
