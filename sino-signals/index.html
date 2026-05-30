@@ -204,12 +204,26 @@
       height: auto !important;
       margin: 1.5rem 0 0 0;
     }
-    /* Wordcloud canvas rasterization freezes mobile main thread — hidden on phones */
-    .header-wordcloud { display: none; }
+    /* Wordcloud renders as lightweight DOM tag chips on mobile (see .mobile-tagcloud) */
+    .header-wordcloud .wordcloud-wrap { min-height: 0; max-height: none; }
     /* Keep KPIs and "Intelligence Briefing" label; skip the heatmap dashboard */
     .dashboard-section { display: none; }
     .filter-bar { margin-top: 0; }
   }
+  /* Mobile DOM tag cloud — replaces the canvas wordcloud on phones */
+  .mobile-tagcloud {
+    display: flex; flex-wrap: wrap;
+    gap: 0.45rem 0.65rem;
+    align-items: baseline;
+    padding: 0.2rem 0;
+    line-height: 1.4;
+  }
+  .mobile-tag {
+    font-weight: 600;
+    letter-spacing: -0.005em;
+    transition: opacity 0.15s;
+  }
+  .mobile-tag:hover { opacity: 0.7; }
   /* DASHBOARD SECTION */
   .dashboard-section {
     padding: 0.5rem 0 3rem;
@@ -1182,7 +1196,10 @@
       signals = data.sort(function(a, b) { return b.date.localeCompare(a.date); });
       // KPI strip kept on mobile — useful numeric summary, cheap to render
       safeRun('renderKPIs', renderKPIs);
-      if (!IS_PHONE) {
+      if (IS_PHONE) {
+        // Lightweight DOM tag cloud — no canvas, no library
+        safeRun('renderMobileTagCloud', function(){ renderMobileTagCloud(signals); });
+      } else {
         safeRun('renderLensSwitcher', renderLensSwitcher);
         safeRun('renderHeatMap', function(){ renderHeatMap(signals); });
         safeRun('syncWordcloudPanelHeight', syncWordcloudPanelHeight);
@@ -1569,6 +1586,58 @@
       });
     });
     return map;
+  }
+
+  // Lightweight DOM-based tag cloud for phones — no canvas, no library, no main-thread freeze.
+  // Renders the top N tags as styled spans with font-size scaled by frequency.
+  function renderMobileTagCloud(filtered) {
+    var wrap = document.querySelector('.header-wordcloud .wordcloud-wrap');
+    if (!wrap) return;
+
+    var categorySet = {};
+    Object.keys(CATEGORY_COLORS).forEach(function(c){ categorySet[c.toLowerCase()] = 1; });
+    var freq = {};
+    filtered.forEach(function(s){
+      (s.tags || []).forEach(function(t){
+        if (!t) return;
+        if (/[一-鿿]/.test(t)) return;
+        if (categorySet[t.toLowerCase()]) return;
+        freq[t] = (freq[t] || 0) + 1;
+      });
+    });
+
+    var entries = Object.keys(freq)
+      .map(function(t){ return [t, freq[t]]; })
+      .filter(function(e){ return e[1] >= 1; })
+      .sort(function(a,b){ return b[1] - a[1]; })
+      .slice(0, 22);
+
+    if (!entries.length) {
+      wrap.innerHTML = '<div class="wordcloud-empty">No recurring tags.</div>';
+      return;
+    }
+
+    var maxN = entries[0][1];
+    var minN = entries[entries.length - 1][1];
+    var span = Math.max(1, maxN - minN);
+    var tagColors = (typeof buildTagColorMap === 'function') ? buildTagColorMap(filtered) : {};
+
+    // Shuffle so the visual feels organic instead of sorted by size
+    var shuffled = entries.slice();
+    for (var i = shuffled.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = shuffled[i]; shuffled[i] = shuffled[j]; shuffled[j] = tmp;
+    }
+
+    var html = '<div class="mobile-tagcloud">';
+    shuffled.forEach(function(e){
+      var weight = (e[1] - minN) / span;
+      var sizeRem = (0.75 + weight * 0.75).toFixed(2);
+      var color = tagColors[e[0]] || '#2c5282';
+      html += '<span class="mobile-tag" style="font-size:' + sizeRem + 'rem;color:' + color + '">' + e[0] + '</span>';
+    });
+    html += '</div>';
+    wrap.innerHTML = html;
   }
 
   function renderWordcloud(filtered) {
