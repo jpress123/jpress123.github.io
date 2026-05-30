@@ -194,9 +194,7 @@
       margin: 1.5rem 0 0 0;
     }
     .header-wordcloud .wordcloud-wrap { min-height: 180px; max-height: 220px; }
-    /* Skip the heatmap dashboard on phones; go straight to search + cards */
-    .header-kpis { display: none; }
-    .section-label { display: none; }
+    /* Keep KPIs and "Intelligence Briefing" label; skip the heatmap dashboard */
     .dashboard-section { display: none; }
     .filter-bar { margin-top: 0; }
   }
@@ -1166,10 +1164,11 @@
     .then(function(r) { return r.json(); })
     .then(function(data) {
       signals = data.sort(function(a, b) { return b.date.localeCompare(a.date); });
-      // On phones, skip the dashboard renders entirely — they build DOM the user never sees
-      // and the KPI strip is hidden via CSS. Saves ~150ms on mid-range Android.
+      // KPI strip is the only dashboard-flavoured element we keep on mobile —
+      // useful at-a-glance numbers, cheap to render.
+      renderKPIs();
+      // Skip the heavier dashboard renders on phones (heatmap, lens chips, height-sync)
       if (!IS_PHONE) {
-        renderKPIs();
         renderLensSwitcher();
         renderHeatMap(signals);
         syncWordcloudPanelHeight();
@@ -1788,7 +1787,7 @@
   function applyFilters() {
     var lensScoped = lensFilter(signals);
     // Heat map is an atlas: always show the full universe so cells stay navigable
-    renderHeatMap(signals);
+    if (!IS_PHONE) renderHeatMap(signals);
     renderWordcloud(lensScoped);
     var filtered = getFiltered();
     renderGrid(filtered);
