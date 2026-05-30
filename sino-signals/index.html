@@ -19,8 +19,21 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/wordcloud2.js/1.2.2/wordcloud2.min.js" defer></script>
+<script>
+  /* Chart.js (~200KB) and wordcloud2.js (~30KB) are desktop-only.
+     Skip them on phones to cut initial JS by ~230KB and avoid main-thread freeze. */
+  (function () {
+    if (window.matchMedia('(max-width: 600px)').matches) return;
+    var s1 = document.createElement('script');
+    s1.src = 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js';
+    s1.defer = true;
+    document.head.appendChild(s1);
+    var s2 = document.createElement('script');
+    s2.src = 'https://cdnjs.cloudflare.com/ajax/libs/wordcloud2.js/1.2.2/wordcloud2.min.js';
+    s2.defer = true;
+    document.head.appendChild(s2);
+  })();
+</script>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -191,7 +204,8 @@
       height: auto !important;
       margin: 1.5rem 0 0 0;
     }
-    .header-wordcloud .wordcloud-wrap { min-height: 180px; max-height: 220px; }
+    /* Wordcloud canvas rasterization freezes mobile main thread — hidden on phones */
+    .header-wordcloud { display: none; }
     /* Keep KPIs and "Intelligence Briefing" label; skip the heatmap dashboard */
     .dashboard-section { display: none; }
     .filter-bar { margin-top: 0; }
@@ -1071,7 +1085,7 @@
           <option value="Policy & Governance">Policy & Governance</option>
         </select>
         <select class="filter-select" id="filterStrength" aria-label="Filter by signal strength">
-          <option value="all">All Strengths</option>
+          <option value="all">All Impacts</option>
           <option value="weak">Early</option>
           <option value="emerging">Emerging</option>
           <option value="strong">Accelerating</option>
@@ -1172,12 +1186,12 @@
         safeRun('renderLensSwitcher', renderLensSwitcher);
         safeRun('renderHeatMap', function(){ renderHeatMap(signals); });
         safeRun('syncWordcloudPanelHeight', syncWordcloudPanelHeight);
+        safeRun('renderWordcloud', function(){ renderWordcloud(signals); });
+        safeRun('bindWordcloudResize', bindWordcloudResize);
       }
-      safeRun('renderWordcloud', function(){ renderWordcloud(signals); });
       safeRun('setFilterFreshnessDefault', setFilterFreshnessDefault);
       safeRun('applyFilters', applyFilters);
       safeRun('bindFilters', bindFilters);
-      safeRun('bindWordcloudResize', bindWordcloudResize);
     })
     .catch(function(err) {
       console.error('[signals-data fetch]', err);
