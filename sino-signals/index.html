@@ -187,8 +187,10 @@
       order: 2;
       float: none;
       width: 100%;
+      height: auto !important;
       margin: 1.5rem 0 0 0;
     }
+    .header-wordcloud .wordcloud-wrap { min-height: 180px; max-height: 220px; }
     /* Skip the heatmap dashboard on phones; go straight to search + cards */
     .dashboard-section { display: none; }
     .filter-bar { margin-top: 0; }
@@ -1177,6 +1179,8 @@
     if (!left || !cloud) return;
     // Reset before measuring to avoid feedback loops
     cloud.style.height = '';
+    // Skip height-matching on phones — wordcloud sits below the text, not beside it
+    if (window.matchMedia('(max-width: 600px)').matches) return;
     var leftHeight = left.getBoundingClientRect().height;
     if (leftHeight < 120) return;
     cloud.style.height = leftHeight + 'px';
