@@ -140,10 +140,9 @@
   .hero-photo img {
     width: 100%; height: 100%;
     object-fit: cover;
-    object-position: center 30%;
-    /* Zoom in so the head fills the frame */
-    transform: scale(1.45);
-    transform-origin: center 30%;
+    object-position: center 28%;
+    transform: scale(1.1);
+    transform-origin: center 35%;
   }
 
   /* LOGO BAR */
@@ -204,8 +203,9 @@
   }
   .domain:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
   .domain-header {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
+    display: grid; grid-template-columns: 2fr 1fr; gap: 3rem;
     margin-bottom: 1.2rem;
+    align-items: start;
   }
   .domain-left { text-align: left; }
   .domain-number {
