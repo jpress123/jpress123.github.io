@@ -148,13 +148,9 @@
   .hero-photo img {
     width: 100%; height: 100%;
     object-fit: cover;
-    object-position: center 28%;
-    transform: scale(1.1);
-    transform-origin: center 35%;
+    object-position: center 22%;
+    transform: none;
   }
-  /* Desktop uses photo-web.jpg; mobile keeps photo.jpg. Different per breakpoint. */
-  .photo-mobile { display: none; }
-  .photo-web { object-position: center 25%; transform: none; }
 
   /* LOGO BAR */
   .logo-bar {
@@ -377,8 +373,6 @@
     .domain-cover img { width: 120px; }
     .domain-cover-placeholder { width: 120px; }
     .domain-book-meta { width: 120px; }
-    .photo-web { display: none; }
-    .photo-mobile { display: block; }
     .about-intro-row { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
     .credentials-grid { grid-template-columns: 1fr; }
     .nav-links { display: none; }
@@ -518,8 +512,7 @@
     </p>
   </div>
   <div class="hero-photo">
-    <img class="photo-web" src="photo-web.png" onerror="this.onerror=null;this.src='photo.jpg';" alt="Joseph Press">
-    <img class="photo-mobile" src="photo.jpg" alt="Joseph Press">
+    <img src="photo-web.png" onerror="this.onerror=null;this.src='photo.jpg';" alt="Joseph Press">
   </div>
   <div class="hero-title">
     <h1 data-lang="en">Where China's AI Frontier<br>Meets Global Strategy</h1>
