@@ -376,6 +376,10 @@
     }
     .domain-cover img { width: 120px; }
     .domain-cover-placeholder { width: 120px; }
+    .domain-book-meta { width: 120px; }
+    .photo-web { display: none; }
+    .photo-mobile { display: block; }
+    .about-intro-row { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
     .credentials-grid { grid-template-columns: 1fr; }
     .nav-links { display: none; }
     .sector-cards { grid-template-columns: repeat(2, 1fr); }
@@ -399,6 +403,7 @@
     .credentials-grid { grid-template-columns: 1fr; gap: 1rem; }
     .domain-header { column-gap: 1rem; row-gap: 0.5rem; grid-template-columns: 1fr 100px; }
     .domain-cover img, .domain-cover-placeholder { width: 100px; }
+    .domain-book-meta { width: 100px; }
     .container { padding-left: 0; padding-right: 0; }
     footer { font-size: 0.7rem; padding: 1.2rem 1rem; }
   }
@@ -513,7 +518,8 @@
     </p>
   </div>
   <div class="hero-photo">
-    <img src="photo.jpg" alt="Joseph Press">
+    <img class="photo-web" src="photo-web.png" onerror="this.onerror=null;this.src='photo.jpg';" alt="Joseph Press">
+    <img class="photo-mobile" src="photo.jpg" alt="Joseph Press">
   </div>
   <div class="hero-title">
     <h1 data-lang="en">Where China's AI Frontier<br>Meets Global Strategy</h1>
@@ -987,19 +993,28 @@
     <h2 class="section-title hero-size" data-lang="en">About Me</h2>
     <h2 class="section-title hero-size" data-lang="fr">&Agrave; propos</h2>
     <h2 class="section-title hero-size" data-lang="zh">关于我</h2>
-    <p class="section-intro" data-lang="en">I work with leadership teams navigating AI-driven transformation &mdash; through advisory engagements, executive education programs, and keynote presentations. My approach draws on published research, two decades of enterprise consulting, and direct experience inside China's AI ecosystem.</p>
-    <p class="section-intro" data-lang="fr">Je travaille avec des &eacute;quipes dirigeantes qui naviguent la transformation par l'IA &mdash; &agrave; travers des missions de conseil, des programmes de formation des dirigeants et des conf&eacute;rences. Mon approche s'appuie sur des recherches publi&eacute;es, deux d&eacute;cennies de conseil aux entreprises et une exp&eacute;rience directe de l'&eacute;cosyst&egrave;me IA chinois.</p>
-    <p class="section-intro" data-lang="zh">我与正在驾驭AI驱动转型的领导团队合作——通过咨询项目、高管教育课程和主题演讲。我的方法基于已发表的研究、二十年的企业咨询经验以及在中国AI生态系统中的直接经历。</p>
+    <div class="about-intro-row">
+      <div class="about-intro-text">
+        <p class="section-intro" data-lang="en">I work with leadership teams navigating AI-driven transformation &mdash; through advisory engagements, executive education programs, and keynote presentations. My approach draws on published research, two decades of enterprise consulting, and direct experience inside China's AI ecosystem.</p>
+        <p class="section-intro" data-lang="fr">Je travaille avec des &eacute;quipes dirigeantes qui naviguent la transformation par l'IA &mdash; &agrave; travers des missions de conseil, des programmes de formation des dirigeants et des conf&eacute;rences. Mon approche s'appuie sur des recherches publi&eacute;es, deux d&eacute;cennies de conseil aux entreprises et une exp&eacute;rience directe de l'&eacute;cosyst&egrave;me IA chinois.</p>
+        <p class="section-intro" data-lang="zh">我与正在驾驭AI驱动转型的领导团队合作——通过咨询项目、高管教育课程和主题演讲。我的方法基于已发表的研究、二十年的企业咨询经验以及在中国AI生态系统中的直接经历。</p>
+      </div>
+      <a href="https://www.chartwellspeakers.com/speaker/joseph-press/?event=eyJldmVudE5hbWUiOiJDbGlja2VkIiwiaW5kZXgiOiJ3cF9wb3N0c19zcGVha2VyX25hbWUiLCJvYmplY3RJRHMiOlsiNTQ4MDctMCJdLCJwb3NpdGlvbnMiOlsxXSwicXVlcnlJRCI6IjEwZTNmYTlmMGJkYjI1N2Q4MGViZWYyMDFkMjgwYWMyIn0=" target="_blank" class="btn btn-primary about-chartwell-btn" style="font-size: 0.95rem; padding: 0.9rem 1.8rem;">
+        <span data-lang="en">Chartwell Speaker</span>
+        <span data-lang="fr">Conf&eacute;rencier Chartwell</span>
+        <span data-lang="zh">Chartwell演讲人</span>
+      </a>
+    </div>
     <div class="credentials-grid" data-lang="en">
       <div class="credential-group">
-        <h3>Based In</h3>
+        <h3>Current Roles</h3>
         <p class="credential-item"><strong>Full Professor</strong>, Shanghai University of Engineering Sciences</p>
         <p class="credential-item"><strong>China Foreign National Expert</strong>, Donghua University</p>
         <p class="credential-item"><strong>Associated Partner</strong>, Copenhagen Institute for Futures Studies</p>
         <p class="credential-item"><strong>Research Advisor</strong>, Institute for the Future</p>
       </div>
       <div class="credential-group">
-        <h3>Background</h3>
+        <h3>Previous Roles</h3>
         <p class="credential-item"><strong>Director</strong>, Deloitte Digital CH</p>
         <p class="credential-item"><strong>Program Lead</strong>, Center for Creative Leadership</p>
         <p class="credential-item"><strong>Research Advisor</strong>, MIT Media Lab</p>
@@ -1010,22 +1025,19 @@
         <h3>Education</h3>
         <p class="credential-item"><strong>Ph.D. Design Technology</strong>, MIT</p>
         <p class="credential-item"><strong>S.M. Architecture</strong>, MIT</p>
-        <p class="credential-item"><strong>B.S. Managerial Economics</strong>, Carnegie Mellon</p>
-        <div style="margin-top: 1.5rem;">
-          <a href="https://www.chartwellspeakers.com/speaker/joseph-press/?event=eyJldmVudE5hbWUiOiJDbGlja2VkIiwiaW5kZXgiOiJ3cF9wb3N0c19zcGVha2VyX25hbWUiLCJvYmplY3RJRHMiOlsiNTQ4MDctMCJdLCJwb3NpdGlvbnMiOlsxXSwicXVlcnlJRCI6IjEwZTNmYTlmMGJkYjI1N2Q4MGViZWYyMDFkMjgwYWMyIn0=" target="_blank" class="btn btn-primary" style="font-size: 1rem; padding: 1rem 2.5rem;">Chartwell Speaker</a>
-        </div>
+        <p class="credential-item"><strong>B.S. Managerial Economics</strong>, CMU</p>
       </div>
     </div>
     <div class="credentials-grid" data-lang="fr">
       <div class="credential-group">
-        <h3>Bas&eacute; &agrave;</h3>
+        <h3>R&ocirc;les actuels</h3>
         <p class="credential-item"><strong>Professeur titulaire</strong>, Shanghai University of Engineering Sciences</p>
         <p class="credential-item"><strong>Expert national &eacute;tranger</strong>, Donghua University</p>
         <p class="credential-item"><strong>Partenaire associ&eacute;</strong>, Copenhagen Institute for Futures Studies</p>
         <p class="credential-item"><strong>Conseiller scientifique</strong>, Institute for the Future</p>
       </div>
       <div class="credential-group">
-        <h3>Parcours</h3>
+        <h3>R&ocirc;les pr&eacute;c&eacute;dents</h3>
         <p class="credential-item"><strong>Directeur</strong>, Deloitte Digital CH</p>
         <p class="credential-item"><strong>Responsable de programme</strong>, Center for Creative Leadership</p>
         <p class="credential-item"><strong>Conseiller scientifique</strong>, MIT Media Lab</p>
@@ -1036,22 +1048,19 @@
         <h3>Formation</h3>
         <p class="credential-item"><strong>Doctorat en technologie du design</strong>, MIT</p>
         <p class="credential-item"><strong>Ma&icirc;trise en architecture</strong>, MIT</p>
-        <p class="credential-item"><strong>Licence en &eacute;conomie manag&eacute;riale</strong>, Carnegie Mellon</p>
-        <div style="margin-top: 1.5rem;">
-          <a href="https://www.chartwellspeakers.com/speaker/joseph-press/?event=eyJldmVudE5hbWUiOiJDbGlja2VkIiwiaW5kZXgiOiJ3cF9wb3N0c19zcGVha2VyX25hbWUiLCJvYmplY3RJRHMiOlsiNTQ4MDctMCJdLCJwb3NpdGlvbnMiOlsxXSwicXVlcnlJRCI6IjEwZTNmYTlmMGJkYjI1N2Q4MGViZWYyMDFkMjgwYWMyIn0=" target="_blank" class="btn btn-primary" style="font-size: 1rem; padding: 1rem 2.5rem;">Conf&eacute;rencier Chartwell</a>
-        </div>
+        <p class="credential-item"><strong>Licence en &eacute;conomie manag&eacute;riale</strong>, CMU</p>
       </div>
     </div>
     <div class="credentials-grid" data-lang="zh">
       <div class="credential-group">
-        <h3>现任机构</h3>
+        <h3>现任职务</h3>
         <p class="credential-item"><strong>正教授</strong>，上海工程技术大学</p>
         <p class="credential-item"><strong>中国外国专家</strong>，东华大学</p>
         <p class="credential-item"><strong>合作伙伴</strong>，哥本哈根未来研究所</p>
         <p class="credential-item"><strong>研究顾问</strong>，未来研究所</p>
       </div>
       <div class="credential-group">
-        <h3>职业经历</h3>
+        <h3>过往职务</h3>
         <p class="credential-item"><strong>总监</strong>，Deloitte Digital CH</p>
         <p class="credential-item"><strong>项目负责人</strong>，创意领导力中心</p>
         <p class="credential-item"><strong>研究顾问</strong>，MIT媒体实验室</p>
@@ -1062,10 +1071,7 @@
         <h3>教育背景</h3>
         <p class="credential-item"><strong>设计技术博士</strong>，麻省理工学院</p>
         <p class="credential-item"><strong>建筑学硕士</strong>，麻省理工学院</p>
-        <p class="credential-item"><strong>管理经济学学士</strong>，卡内基梅隆大学</p>
-        <div style="margin-top: 1.5rem;">
-          <a href="https://www.chartwellspeakers.com/speaker/joseph-press/?event=eyJldmVudE5hbWUiOiJDbGlja2VkIiwiaW5kZXgiOiJ3cF9wb3N0c19zcGVha2VyX25hbWUiLCJvYmplY3RJRHMiOlsiNTQ4MDctMCJdLCJwb3NpdGlvbnMiOlsxXSwicXVlcnlJRCI6IjEwZTNmYTlmMGJkYjI1N2Q4MGViZWYyMDFkMjgwYWMyIn0=" target="_blank" class="btn btn-primary" style="font-size: 1rem; padding: 1rem 2.5rem;">Chartwell演讲人</a>
-        </div>
+        <p class="credential-item"><strong>管理经济学学士</strong>，CMU</p>
       </div>
     </div>
   </div>
