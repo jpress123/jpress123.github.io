@@ -152,6 +152,9 @@
     transform: scale(1.1);
     transform-origin: center 35%;
   }
+  /* Desktop uses photo-web.jpg; mobile keeps photo.jpg. Different per breakpoint. */
+  .photo-mobile { display: none; }
+  .photo-web { object-position: center 25%; transform: none; }
 
   /* LOGO BAR */
   .logo-bar {
@@ -261,7 +264,7 @@
   }
   .domain-book-meta {
     font-size: 0.75rem; color: var(--light); text-align: center;
-    margin-top: 0.3rem;
+    margin-top: 0.3rem; width: 160px;
   }
   .domain-book-meta a {
     color: var(--light); text-decoration: underline;
