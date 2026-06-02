@@ -98,30 +98,35 @@
   .hero {
     padding: 8rem 2rem 3rem;
     max-width: 1100px; margin: 0 auto;
-    display: grid; grid-template-columns: 1fr 320px; gap: 4rem;
+    display: grid; grid-template-columns: 1fr 320px;
+    grid-template-areas:
+      "roles    photo"
+      "title    photo"
+      "subtitle photo"
+      "ctas     photo";
+    column-gap: 4rem; row-gap: 0;
     align-items: start;
   }
-  .hero-text {
-    text-align: left;
-    /* Match the photo height so the role block sits vertically aligned with the image */
-    min-height: 320px;
-    display: flex; flex-direction: column; justify-content: flex-start;
-  }
-  .hero-text h1 {
+  .hero-roles { grid-area: roles; text-align: left; }
+  .hero-title { grid-area: title; }
+  .hero-subtitle { grid-area: subtitle; }
+  .hero-ctas { grid-area: ctas; }
+  .hero h1 {
     font-family: 'Playfair Display', serif;
     font-size: 2.8rem; font-weight: 700; line-height: 1.15;
     color: var(--navy); margin-bottom: 1rem;
     text-align: left;
   }
-  .hero-text .byline {
+  .hero .byline {
     font-size: 0.88rem; color: var(--light); font-weight: 500;
     letter-spacing: 0.02em; margin-bottom: 1.2rem;
     text-align: left;
   }
-  .hero-text .subtitle {
+  .hero .subtitle {
     font-size: 1.05rem; color: var(--medium); line-height: 1.65;
     margin-bottom: 2rem; max-width: 540px;
   }
+  .affil-abbr { display: none; }
   .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
   .btn {
     display: inline-block; padding: 0.75rem 1.8rem;
@@ -134,6 +139,7 @@
   .btn-outline:hover { border-color: var(--slate); }
   .hero-photo {
     /* Square crop, zoomed in on the head */
+    grid-area: photo; align-self: start;
     width: 320px; height: 320px;
     border-radius: 16px; overflow: hidden;
     box-shadow: 0 20px 60px rgba(0,0,0,0.12);
@@ -196,6 +202,9 @@
     font-size: 1.02rem; color: var(--medium); max-width: 680px;
     margin-bottom: 3rem; line-height: 1.7;
   }
+  /* AI for Impact heading + intro span the full content width on desktop */
+  .domains-section .section-title,
+  .domains-section .section-intro { max-width: none; }
 
   /* DOMAINS */
   .domains-section { background: var(--white); }
@@ -205,11 +214,17 @@
   }
   .domain:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
   .domain-header {
-    display: grid; grid-template-columns: 2fr 1fr; gap: 3rem;
+    display: grid; grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "headtext cover"
+      "tags     cover";
+    column-gap: 3rem; row-gap: 0;
     margin-bottom: 1.2rem;
     align-items: start;
   }
-  .domain-left { text-align: left; }
+  .domain-head-text { text-align: left; grid-area: headtext; }
+  .domain-frameworks { grid-area: tags; }
+  .domain-right { grid-area: cover; }
   .domain-number {
     font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em;
     text-transform: uppercase; color: var(--light); margin-bottom: 0.5rem;
@@ -330,12 +345,27 @@
 
   /* RESPONSIVE */
   @media (max-width: 768px) {
-    .hero { grid-template-columns: 1fr 180px; gap: 2rem; padding-top: 7rem; }
-    .hero-text { min-height: 0; }
+    .hero {
+      grid-template-columns: 1fr 180px;
+      grid-template-areas:
+        "roles    photo"
+        "title    title"
+        "subtitle subtitle"
+        "ctas     ctas";
+      column-gap: 1.5rem; row-gap: 0.6rem; padding-top: 7rem;
+    }
     .hero-photo { width: 100%; max-width: 180px; height: auto; aspect-ratio: 1 / 1; }
-    .hero-text h1 { font-size: 2.1rem; }
+    .hero h1 { font-size: 2.1rem; }
+    .affil-abbr { display: inline; }
+    .affil-full { display: none; }
     .section-title.hero-size { font-size: 2.1rem; }
-    .domain-header { grid-template-columns: 1fr 130px; gap: 1.5rem; }
+    .domain-header {
+      grid-template-columns: 1fr 130px;
+      grid-template-areas:
+        "headtext headtext"
+        "tags     cover";
+      column-gap: 1.5rem; row-gap: 0.5rem;
+    }
     .domain-cover img { width: 120px; }
     .domain-cover-placeholder { width: 120px; }
     .credentials-grid { grid-template-columns: 1fr; }
@@ -347,19 +377,19 @@
     .nav-inner { padding: 0.9rem 1rem; }
     .nav-name { font-size: 1rem; letter-spacing: 0; }
     section { padding-left: 1.2rem; padding-right: 1.2rem; }
-    .hero { padding: 6rem 1.2rem 2.5rem; gap: 1rem; grid-template-columns: 1fr 110px; }
-    .hero-text h1 { font-size: 1.45rem; line-height: 1.18; }
-    .hero-text .subtitle { font-size: 0.92rem; margin-bottom: 1.2rem; }
-    .hero-photo { width: 100%; max-width: 110px; height: auto; aspect-ratio: 1 / 1; }
-    .hero-ctas { flex-direction: column; align-items: stretch; gap: 0.6rem; }
-    .hero-ctas a { text-align: center; }
+    .hero { padding: 6rem 1.2rem 2.5rem; column-gap: 1rem; row-gap: 0.4rem; grid-template-columns: 1fr 100px; }
+    .hero h1 { font-size: 1.45rem; line-height: 1.18; }
+    .hero .subtitle { font-size: 0.92rem; margin-bottom: 1.2rem; }
+    .hero-photo { width: 100%; max-width: 100px; height: auto; aspect-ratio: 1 / 1; }
+    .hero-ctas { flex-direction: row; gap: 0.5rem; }
+    .hero-ctas .btn { flex: 1; text-align: center; font-size: 0.78rem; padding: 0.7rem 0.5rem; }
     .section-title.hero-size { font-size: 1.8rem; }
     .sector-cards { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
     .sector-card { padding: 1rem 0.8rem; }
     .sector-label { font-size: 0.7rem; }
     .sector-name { font-size: 0.78rem; line-height: 1.25; }
     .credentials-grid { grid-template-columns: 1fr; gap: 1rem; }
-    .domain-header { gap: 1rem; grid-template-columns: 1fr 100px; }
+    .domain-header { column-gap: 1rem; row-gap: 0.5rem; grid-template-columns: 1fr 100px; }
     .domain-cover img, .domain-cover-placeholder { width: 100px; }
     .container { padding-left: 0; padding-right: 0; }
     footer { font-size: 0.7rem; padding: 1.2rem 1rem; }
@@ -462,30 +492,34 @@
 
 <!-- HERO -->
 <header class="hero">
-  <div class="hero-text">
+  <div class="hero-roles">
     <p class="byline" style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.08em;">
       <span data-lang="en">Educator &middot; Author &middot; Advisor &middot; Speaker</span>
       <span data-lang="fr">&Eacute;ducateur &middot; Auteur &middot; Conseiller &middot; Conf&eacute;rencier</span>
       <span data-lang="zh">教育者 &middot; 作者 &middot; 顾问 &middot; 演讲者</span>
     </p>
     <p class="byline" style="margin-top: -0.6rem; margin-bottom: 0.4rem;">
-      <span data-lang="en">Full Professor, School of Design<br>Program Head, Strategy+Management<br>Shanghai University of Engineering Sciences</span>
-      <span data-lang="fr">Professeur titulaire, &Eacute;cole de Design<br>Directeur de programme, Strat&eacute;gie+Management<br>Shanghai University of Engineering Sciences</span>
-      <span data-lang="zh">正教授，设计学院<br>项目负责人，战略+管理<br>上海工程技术大学</span>
+      <span data-lang="en">Full Professor, School of Design<span class="affil-abbr">, SUES</span><br>Program Head, Strategy+Management<span class="affil-full"><br>Shanghai University of Engineering Sciences</span></span>
+      <span data-lang="fr">Professeur titulaire, &Eacute;cole de Design<span class="affil-abbr">, SUES</span><br>Directeur de programme, Strat&eacute;gie+Management<span class="affil-full"><br>Shanghai University of Engineering Sciences</span></span>
+      <span data-lang="zh">正教授，设计学院<span class="affil-abbr">，上海工程技术大学</span><br>项目负责人，战略+管理<span class="affil-full"><br>上海工程技术大学</span></span>
     </p>
-    <h1 data-lang="en">Where China's AI Frontier<br>Meets Global Strategy</h1>
-    <h1 data-lang="fr">L&agrave; o&ugrave; la fronti&egrave;re IA de la Chine<br>rejoint la strat&eacute;gie mondiale</h1>
-    <h1 data-lang="zh" style="font-size:2.4rem">中国AI前沿<br>与全球战略的交汇</h1>
-    <p class="subtitle" data-lang="en">I research, educate, and advise on how organizations can navigate AI-driven transformation. Based in Shanghai, I bring firsthand perspective on China's AI ecosystem to leadership teams preparing for strategic change.</p>
-    <p class="subtitle" data-lang="fr">Je mene des recherches, enseigne et conseille sur la transformation par l'IA. Bas&eacute; &agrave; Shanghai, j'apporte une perspective directe sur l'&eacute;cosyst&egrave;me IA chinois aux &eacute;quipes dirigeantes qui pr&eacute;parent le changement strat&eacute;gique.</p>
-    <p class="subtitle" data-lang="zh">我研究、教育并为组织如何驾驭AI驱动的转型提供咨询。身在上海，我将中国AI生态系统的第一手视角带给准备战略变革的领导团队。</p>
-    <div class="hero-ctas">
-      <a href="/sino-signals/" class="btn btn-primary"><span data-lang="en">Explore AI Sino-Signals</span><span data-lang="fr">Explorer AI Sino-Signals</span><span data-lang="zh">探索 AI 中国信号</span></a>
-      <a href="#contact" class="btn btn-outline"><span data-lang="en">Let's Collaborate</span><span data-lang="fr">Collaborons</span><span data-lang="zh">让我们合作</span></a>
-    </div>
   </div>
   <div class="hero-photo">
     <img src="photo.jpg" alt="Joseph Press">
+  </div>
+  <div class="hero-title">
+    <h1 data-lang="en">Where China's AI Frontier<br>Meets Global Strategy</h1>
+    <h1 data-lang="fr">L&agrave; o&ugrave; la fronti&egrave;re IA de la Chine<br>rejoint la strat&eacute;gie mondiale</h1>
+    <h1 data-lang="zh" style="font-size:2.4rem">中国AI前沿<br>与全球战略的交汇</h1>
+  </div>
+  <div class="hero-subtitle">
+    <p class="subtitle" data-lang="en">I research, educate, and advise on how organizations can navigate AI-driven transformation. Based in Shanghai, I bring firsthand perspective on China's AI ecosystem to leadership teams preparing for strategic change.</p>
+    <p class="subtitle" data-lang="fr">Je mene des recherches, enseigne et conseille sur la transformation par l'IA. Bas&eacute; &agrave; Shanghai, j'apporte une perspective directe sur l'&eacute;cosyst&egrave;me IA chinois aux &eacute;quipes dirigeantes qui pr&eacute;parent le changement strat&eacute;gique.</p>
+    <p class="subtitle" data-lang="zh">我研究、教育并为组织如何驾驭AI驱动的转型提供咨询。身在上海，我将中国AI生态系统的第一手视角带给准备战略变革的领导团队。</p>
+  </div>
+  <div class="hero-ctas">
+    <a href="/sino-signals/" class="btn btn-primary"><span data-lang="en">Explore AI Sino-Signals</span><span data-lang="fr">Explorer AI Sino-Signals</span><span data-lang="zh">探索 AI 中国信号</span></a>
+    <a href="#contact" class="btn btn-outline"><span data-lang="en">Let's Collaborate</span><span data-lang="fr">Collaborons</span><span data-lang="zh">让我们合作</span></a>
   </div>
 </header>
 
@@ -502,7 +536,7 @@
     <!-- 1. AI-Human Collaboration (ACI) -->
     <div class="domain">
       <div class="domain-header">
-        <div class="domain-left">
+        <div class="domain-head-text">
           <h3 class="domain-title" data-lang="en">AI-Human Collaboration for Accelerated Innovation</h3>
           <h3 class="domain-title" data-lang="fr">Collaboration humain-IA pour une innovation acc&eacute;l&eacute;r&eacute;e</h3>
           <h3 class="domain-title" data-lang="zh">人机协作加速创新</h3>
@@ -512,6 +546,7 @@
           <p class="domain-text" data-lang="en"><strong><em>Agentic Creative Intelligence</em></strong> argues that authentic creativity is even more possible and potent with AI. Most organizations adopt AI faster than they build the capacity to use it well. ACI grounds our intelligence in real practices and platforms to creatively intervene in complex situations &mdash; with clarity of expression, embodied judgment, and more meaningful experiences. The book introduces the Creative Council: a model where the human practitioner leads and AI collaborates, so that computational reach never replaces the judgment it was designed to extend.</p>
           <p class="domain-text" data-lang="fr"><strong><em>Agentic Creative Intelligence</em></strong> soutient que la cr&eacute;ativit&eacute; authentique est encore plus possible et puissante avec l'IA. La plupart des organisations adoptent l'IA plus vite qu'elles ne d&eacute;veloppent la capacit&eacute; de bien l'utiliser. ACI ancre notre intelligence dans des pratiques et plateformes r&eacute;elles pour intervenir de mani&egrave;re cr&eacute;ative dans des situations complexes &mdash; avec clart&eacute; d'expression, jugement incarn&eacute; et exp&eacute;riences plus significatives. Le livre introduit le Creative Council : un mod&egrave;le o&ugrave; le praticien humain dirige et l'IA collabore, pour que la port&eacute;e computationnelle ne remplace jamais le jugement qu'elle est con&ccedil;ue pour &eacute;tendre.</p>
           <p class="domain-text" data-lang="zh"><strong><em>Agentic Creative Intelligence</em></strong>认为真实的创意与AI合作会更加可能和强大。大多数组织采用AI的速度快于建立良好使用AI的能力。ACI将我们的智能扎根于真实的实践和平台中，以创意的方式干预复杂情况——具有表达的清晰性、体现的判断力和更有意义的体验。该书介绍了创意委员会模式：人类从业者领导，AI协作，这样计算能力永远不会替代它被设计来扩展的判断。</p>
+        </div>
           <div class="domain-frameworks" data-lang="en">
             <span class="framework-tag">Human Agency</span>
             <span class="framework-tag">Design Dialogue</span>
@@ -536,7 +571,6 @@
             <span class="framework-tag">从业者驱动AI</span>
             <span class="framework-tag">AI配置</span>
           </div>
-        </div>
         <div class="domain-right domain-cover">
           <div class="domain-cover-placeholder">
             <span class="book-cover-text">Agentic<br>Creative<br>Intelligence:<br><small>Designing With AI<br>to Reclaim<br>Human Agency</small></span>
@@ -549,7 +583,7 @@
     <!-- 2. Augmented Foresight -->
     <div class="domain">
       <div class="domain-header">
-        <div class="domain-left">
+        <div class="domain-head-text">
           <h3 class="domain-title" data-lang="en">Augmented Foresight for Strategic Impact</h3>
           <h3 class="domain-title" data-lang="fr">Prospective augment&eacute;e pour un impact strat&eacute;gique</h3>
           <h3 class="domain-title" data-lang="zh">增强预见战略影响</h3>
@@ -559,6 +593,7 @@
           <p class="domain-text" data-lang="en">Applied futures thinking for strategic decision-making. <strong><em>Designing Sustainable Futures</em></strong> offers a framework for using generative AI in scenario simulation and policy forecasting so leaders can anticipate change and act on it &mdash; across industries, sectors, and functions.</p>
           <p class="domain-text" data-lang="fr">La pens&eacute;e prospective appliqu&eacute;e &agrave; la prise de d&eacute;cision strat&eacute;gique. <strong><em>Designing Sustainable Futures</em></strong> propose un cadre pour utiliser l'IA g&eacute;n&eacute;rative dans la simulation de sc&eacute;narios et la pr&eacute;vision de politiques, afin que les dirigeants puissent anticiper le changement et agir &mdash; tous secteurs, industries et fonctions confondus.</p>
           <p class="domain-text" data-lang="zh">应用未来思维进行战略决策。<strong><em>Designing Sustainable Futures</em></strong>提供了一个框架，用于在情景模拟和政策预测中使用生成式AI，使领导者能够预期变化并采取行动——跨行业、部门和职能。</p>
+        </div>
           <div class="domain-frameworks" data-lang="en">
             <span class="framework-tag">Scenario Planning</span>
             <span class="framework-tag">Trend Forecasting</span>
@@ -580,7 +615,6 @@
             <span class="framework-tag">可持续性路线图</span>
             <span class="framework-tag">战略韧性</span>
           </div>
-        </div>
         <div class="domain-right domain-cover">
           <img src="cover-dsf.jpg" alt="Designing Sustainable Futures">
           <p class="domain-book-meta"><a href="https://www.routledge.com/Designing-Sustainable-Futures-How-to-Imagine-Create-and-Lead-the-Transition-to-a-Better-World/Press-Celi/p/book/9781032588384" target="_blank">Routledge, 2024</a></p>
@@ -591,7 +625,7 @@
     <!-- 3. Entrepreneurship -->
     <div class="domain">
       <div class="domain-header">
-        <div class="domain-left">
+        <div class="domain-head-text">
           <h3 class="domain-title" data-lang="en">Design-Driven Entrepreneurship to Start &amp; Scale OPCs</h3>
           <h3 class="domain-title" data-lang="fr">Entrepreneuriat par le design pour cr&eacute;er et d&eacute;velopper des OPC</h3>
           <h3 class="domain-title" data-lang="zh">设计驱动创业初创与扩展</h3>
@@ -601,6 +635,7 @@
           <p class="domain-text" data-lang="en">The One Person Company (OPC) is the AI-native venture model &mdash; a single founder with the reach of an entire team. <strong><em>A Design Driven Guide for Entrepreneurs</em></strong> grounds this in strategic design as a mindset for framing problems, identifying opportunities, and creating pathways forward at every stage of growth.</p>
           <p class="domain-text" data-lang="fr">La One Person Company (OPC) est le mod&egrave;le d'entreprise natif IA &mdash; un fondateur unique avec la port&eacute;e d'une &eacute;quipe enti&egrave;re. <strong><em>A Design Driven Guide for Entrepreneurs</em></strong> ancre cette approche dans le design strat&eacute;gique comme &eacute;tat d'esprit pour cadrer les probl&egrave;mes, identifier les opportunit&eacute;s et cr&eacute;er des voies de croissance &agrave; chaque &eacute;tape.</p>
           <p class="domain-text" data-lang="zh">一人公司(OPC)是AI原生创业模式——一个创始人拥有整个团队的触及范围。<strong><em>A Design Driven Guide for Entrepreneurs</em></strong>以战略设计为基础，作为框架问题、识别机会和在每个增长阶段创建前进路径的思维方式。</p>
+        </div>
           <div class="domain-frameworks" data-lang="en">
             <span class="framework-tag">Venture Architecture</span>
             <span class="framework-tag">Problem Framing</span>
@@ -622,7 +657,6 @@
             <span class="framework-tag">创始人思维</span>
             <span class="framework-tag">可扩展设计</span>
           </div>
-        </div>
         <div class="domain-right domain-cover">
           <img src="cover-entrepreneur.jpg" alt="A Design Driven Guide for Entrepreneurs">
           <p class="domain-book-meta"><a href="https://www.routledge.com/A-Design-Driven-Guide-for-Entrepreneurs/Press/p/book/9781032129945" target="_blank">Routledge, 2023</a></p>
@@ -633,7 +667,7 @@
     <!-- 4. AI Integration -->
     <div class="domain">
       <div class="domain-header">
-        <div class="domain-left">
+        <div class="domain-head-text">
           <h3 class="domain-title" data-lang="en">AI Integration for Systemic Transformation</h3>
           <h3 class="domain-title" data-lang="fr">Int&eacute;gration de l'IA pour une transformation syst&eacute;mique</h3>
           <h3 class="domain-title" data-lang="zh">AI整合系统性转型</h3>
@@ -643,6 +677,7 @@
           <p class="domain-text" data-lang="en">Over half of digital transformations underperform because technology outpaces organizational readiness. <strong><em>Office Shock</em></strong> provides frameworks with diagnostic tools that help teams achieve purpose with greater judgment, accountability, and human agency while accelerating transformation.</p>
           <p class="domain-text" data-lang="fr">Plus de la moiti&eacute; des transformations num&eacute;riques sous-performent parce que la technologie d&eacute;passe la pr&eacute;paration organisationnelle. <strong><em>Office Shock</em></strong> fournit des cadres avec des outils diagnostiques qui aident les &eacute;quipes &agrave; atteindre leurs objectifs avec plus de discernement, de responsabilit&eacute; et d'agentivit&eacute; humaine tout en acc&eacute;l&eacute;rant la transformation.</p>
           <p class="domain-text" data-lang="zh">超过一半的数字化转型表现不佳，因为技术超过了组织的就绪程度。<strong><em>Office Shock</em></strong>提供了诊断工具框架，帮助团队在加速转型的同时以更大的判断力、责任感和人类代理来实现目标。</p>
+        </div>
           <div class="domain-frameworks" data-lang="en">
             <span class="framework-tag">Readiness Assessment</span>
             <span class="framework-tag">Process Automation</span>
@@ -664,7 +699,6 @@
             <span class="framework-tag">利益相关者协调</span>
             <span class="framework-tag">目的驱动变革</span>
           </div>
-        </div>
         <div class="domain-right domain-cover">
           <img src="cover-officeshock.jpg" alt="Office Shock">
           <p class="domain-book-meta"><a href="https://bkconnection.com/products/9781523003679_office-shock?_pos=1&amp;_psq=office+shock&amp;_ss=e&amp;_v=1.0" target="_blank">Berrett-Koehler, 2023</a></p>
@@ -675,7 +709,7 @@
     <!-- 5. Collective Intelligence -->
     <div class="domain">
       <div class="domain-header">
-        <div class="domain-left">
+        <div class="domain-head-text">
           <h3 class="domain-title" data-lang="en">Collective Intelligence for Future-Ready Leadership</h3>
           <h3 class="domain-title" data-lang="fr">Intelligence collective pour un leadership tourn&eacute; vers l'avenir</h3>
           <h3 class="domain-title" data-lang="zh">集体智能未来就绪领导力</h3>
@@ -685,6 +719,7 @@
           <p class="domain-text" data-lang="en">Innovation leadership fails when engagement is missing. Drawing on research with seven global companies, <strong><em>IDeaLs (Innovation and Design as Leadership): Transformation in the Digital Era</em></strong> shows how corporate university programs and executive education become the proving ground for leaders who harness collective intelligence &mdash; the combined capacity of people and AI to think, decide, and act together.</p>
           <p class="domain-text" data-lang="fr">Le leadership en innovation &eacute;choue sans engagement. S'appuyant sur des recherches avec sept entreprises mondiales, <strong><em>IDeaLs (Innovation and Design as Leadership): Transformation in the Digital Era</em></strong> montre comment les programmes d'universit&eacute; d'entreprise et la formation des dirigeants deviennent le terrain d'&eacute;preuve pour les leaders qui exploitent l'intelligence collective &mdash; la capacit&eacute; combin&eacute;e des humains et de l'IA &agrave; penser, d&eacute;cider et agir ensemble.</p>
           <p class="domain-text" data-lang="zh">当缺乏参与时，创新领导力失败。基于与七家全球公司的研究，<strong><em>IDeaLs (Innovation and Design as Leadership): Transformation in the Digital Era</em></strong>展示了公司大学项目和高管教育如何成为利用集体智能的领导者的试验场——人与AI思考、决策和一起行动的综合能力。</p>
+        </div>
           <div class="domain-frameworks" data-lang="en">
             <span class="framework-tag">Executive Programs</span>
             <span class="framework-tag">Innovation Culture</span>
@@ -706,7 +741,6 @@
             <span class="framework-tag">团队参与</span>
             <span class="framework-tag">共享决策</span>
           </div>
-        </div>
         <div class="domain-right domain-cover">
           <img src="cover-ideals.jpg" alt="IDeaLs: Innovation and Design as Leadership">
           <p class="domain-book-meta"><a href="https://bookstore.emerald.com/ideals-innovation-and-design-as-leadership.html" target="_blank">Emerald, 2021</a></p>
