@@ -101,6 +101,7 @@
     display: grid; grid-template-columns: 1fr 320px;
     grid-template-areas:
       "roles    photo"
+      "affil    photo"
       "title    photo"
       "subtitle photo"
       "ctas     photo";
@@ -108,6 +109,7 @@
     align-items: start;
   }
   .hero-roles { grid-area: roles; text-align: left; }
+  .hero-affil { grid-area: affil; text-align: left; }
   .hero-title { grid-area: title; }
   .hero-subtitle { grid-area: subtitle; }
   .hero-ctas { grid-area: ctas; }
@@ -126,7 +128,7 @@
     font-size: 1.05rem; color: var(--medium); line-height: 1.65;
     margin-bottom: 2rem; max-width: 540px;
   }
-  .affil-abbr { display: none; }
+  .affil-mobile { display: none; }
   .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
   .btn {
     display: inline-block; padding: 0.75rem 1.8rem;
@@ -353,6 +355,7 @@
       grid-template-columns: 1fr 180px;
       grid-template-areas:
         "roles    photo"
+        "affil    affil"
         "title    title"
         "subtitle subtitle"
         "ctas     ctas";
@@ -360,8 +363,8 @@
     }
     .hero-photo { width: 100%; max-width: 180px; height: auto; aspect-ratio: 1 / 1; }
     .hero h1 { font-size: 2.1rem; }
-    .affil-abbr { display: inline; }
-    .affil-full { display: none; }
+    .affil-desktop { display: none; }
+    .affil-mobile { display: inline; }
     .section-title.hero-size { font-size: 2.1rem; }
     .domain-header {
       grid-template-columns: 1fr 130px;
@@ -505,10 +508,12 @@
       <span data-lang="fr">&Eacute;ducateur &middot; Auteur &middot; Conseiller &middot; Conf&eacute;rencier</span>
       <span data-lang="zh">教育者 &middot; 作者 &middot; 顾问 &middot; 演讲者</span>
     </p>
+  </div>
+  <div class="hero-affil">
     <p class="byline" style="margin-top: -0.6rem; margin-bottom: 0.4rem;">
-      <span data-lang="en">Full Professor, School of Design<span class="affil-abbr">, SUES</span><br>Program Head, Strategy+Management<span class="affil-full"><br>Shanghai University of Engineering Sciences</span></span>
-      <span data-lang="fr">Professeur titulaire, &Eacute;cole de Design<span class="affil-abbr">, SUES</span><br>Directeur de programme, Strat&eacute;gie+Management<span class="affil-full"><br>Shanghai University of Engineering Sciences</span></span>
-      <span data-lang="zh">正教授，设计学院<span class="affil-abbr">，上海工程技术大学</span><br>项目负责人，战略+管理<span class="affil-full"><br>上海工程技术大学</span></span>
+      <span data-lang="en"><span class="affil-desktop">Full Professor, School of Design<br>Program Head, Strategy+Management<br>Shanghai University of Engineering Science</span><span class="affil-mobile">Full Professor<br>Program Head<br>Strategy+Management<br>School of Design<br>Shanghai University of Engineering Science</span></span>
+      <span data-lang="fr"><span class="affil-desktop">Professeur titulaire, &Eacute;cole de Design<br>Directeur de programme, Strat&eacute;gie+Management<br>Shanghai University of Engineering Science</span><span class="affil-mobile">Professeur titulaire<br>Directeur de programme<br>Strat&eacute;gie+Management<br>&Eacute;cole de Design<br>Shanghai University of Engineering Science</span></span>
+      <span data-lang="zh"><span class="affil-desktop">正教授，设计学院<br>项目负责人，战略+管理<br>上海工程技术大学</span><span class="affil-mobile">正教授<br>项目负责人<br>战略+管理<br>设计学院<br>上海工程技术大学</span></span>
     </p>
   </div>
   <div class="hero-photo">
@@ -1001,7 +1006,7 @@
     <div class="credentials-grid" data-lang="en">
       <div class="credential-group">
         <h3>Current Roles</h3>
-        <p class="credential-item"><strong>Full Professor</strong>, Shanghai University of Engineering Sciences</p>
+        <p class="credential-item"><strong>Full Professor</strong>, Shanghai University of Engineering Science</p>
         <p class="credential-item"><strong>China Foreign National Expert</strong>, Donghua University</p>
         <p class="credential-item"><strong>Associated Partner</strong>, Copenhagen Institute for Futures Studies</p>
         <p class="credential-item"><strong>Research Advisor</strong>, Institute for the Future</p>
@@ -1024,7 +1029,7 @@
     <div class="credentials-grid" data-lang="fr">
       <div class="credential-group">
         <h3>R&ocirc;les actuels</h3>
-        <p class="credential-item"><strong>Professeur titulaire</strong>, Shanghai University of Engineering Sciences</p>
+        <p class="credential-item"><strong>Professeur titulaire</strong>, Shanghai University of Engineering Science</p>
         <p class="credential-item"><strong>Expert national &eacute;tranger</strong>, Donghua University</p>
         <p class="credential-item"><strong>Partenaire associ&eacute;</strong>, Copenhagen Institute for Futures Studies</p>
         <p class="credential-item"><strong>Conseiller scientifique</strong>, Institute for the Future</p>
