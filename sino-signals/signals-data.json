@@ -1,5 +1,75 @@
 [
   {
+    "id": "2026-06-08-cac-anthropomorphic-ai-companion-interim-measures-take-effect",
+    "date": "2026-06-08",
+    "day_number": 101,
+    "category": "Policy & Governance",
+    "category_emoji": "📜",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "China Sets First National Rules for AI Companion Apps, Effective July",
+    "title_cn": "中国出台首部AI陪伴应用国家规则，7月15日生效",
+    "source_url": "https://www.globaltimes.cn/page/202604/1358662.shtml",
+    "source_name": "Global Times, China Issues Interim Measures to Regulate AI Anthropomorphic Services, April 2026",
+    "tags": [
+      "AI companions",
+      "AI陪伴",
+      "anthropomorphic AI",
+      "拟人化互动",
+      "CAC",
+      "minor protection",
+      "未成年人保护",
+      "emotional AI",
+      "interim measures"
+    ],
+    "related_signals": [],
+    "industry_lens": "entertainment",
+    "content_type": "daily",
+    "body": {
+      "signal": "The Cyberspace Administration of China and four other agencies, the National Development and Reform Commission, the Ministry of Industry and Information Technology, the Ministry of Public Security, and the State Administration for Market Regulation, finalized the Interim Measures for the Administration of AI Anthropomorphic Interactive Services, which take effect July 15, 2026. The rules cover virtual companions, emotional chatbots, and human-like assistants that simulate a real person's personality and sustain ongoing emotional interaction. Providers must obtain guardian consent for users under 14, supply guardian controls over usage time, spending, and character access, and offer an easy exit that halts the service the moment a user asks.",
+      "china_scale": "China's AI companion market already runs into the tens of millions of users across apps such as MiniMax's Talkie and Xingye, plus offerings from Baidu and Tencent. One national rule applied through the existing CAC filing, testing, and takedown system lets Beijing set product terms across every provider at once. Domestic platforms can comply fast because the labeling and registration plumbing was built for earlier generative AI rules.",
+      "global_impact": "China now holds one of the first dedicated national frameworks governing AI companionship and emotional dependency, giving EU and US lawmakers a concrete template as they weigh companion AI and minor-safety rules. Western apps such as Character.AI and Replika that reach Chinese users face direct compliance. The exit-on-request and guardian-control mechanics could migrate into global product norms within a year.",
+      "monday_morning": "Audit any consumer AI that simulates personality or builds emotional rapport for minor-safety gaps, exit friction, and weak disclosure before regulators at home write similar rules. Treat China's guardian controls and stop-on-request requirement as a product design checklist, not a foreign edge case.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-06-08-xtalpi-ai-engine-pushes-cancer-drug-into-human-trials",
+    "date": "2026-06-08",
+    "day_number": 100,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "XtalPi's AI Engine Pushes a Cancer Drug Into Human Trials",
+    "title_cn": "晶泰科技AI引擎推动抗癌药进入临床试验",
+    "source_url": "https://www.prnewswire.com/apac/news-releases/xtalpi-ai-drug-discovery-collaboration-reaches-milestone-as-pharmaengines-novel-prmt5-inhibitor-pep08-receives-clinical-trial-approvals-302550877.html",
+    "source_name": "PR Newswire, XtalPi and PharmaEngine PEP08 Receives Clinical Trial Approvals",
+    "tags": [
+      "AI drug discovery",
+      "AI制药",
+      "XtalPi",
+      "晶泰科技",
+      "PEP08",
+      "PRMT5 inhibitor",
+      "Dovetree",
+      "clinical trials",
+      "Four Little Dragons"
+    ],
+    "related_signals": [],
+    "industry_lens": "pharma",
+    "content_type": "daily",
+    "body": {
+      "signal": "XtalPi, the Hong Kong listed AI drug-discovery firm, said PEP08, a next-generation PRMT5 inhibitor it co-developed with PharmaEngine, cleared regulators to begin Phase 1 trials in solid tumors. The milestone lands alongside XtalPi's agreement with Dovetree worth up to 5.99 billion US dollars, with 51 million dollars paid upfront, and an expanded molecular-modeling collaboration with Pfizer. XtalPi pairs physics-based simulation, quantum chemistry, and robotics-run labs to design and screen small molecules at high speed.",
+      "china_scale": "Chinese biotechs now file close to 70 percent of the world's AI-driven drug-discovery patents and capture about 32 percent of global out-licensing deal value. Cheap automated wet labs, a deep pool of computational chemists, and large hospital datasets let Chinese platforms run more design-and-test cycles per dollar than Western peers. XtalPi sits among the Four Little Dragons of Chinese AI pharma, so competition at home keeps pushing cycle times down.",
+      "global_impact": "Western pharma is writing billion-dollar checks to license molecules discovered by Chinese AI platforms, which resets where early drug discovery happens and at what cost. A candidate moving from design to the clinic on a compressed timeline pressures the discovery economics of Pfizer, Merck, and their AI suppliers. The patent concentration also hands China leverage over the intellectual-property layer of future medicines.",
+      "monday_morning": "Map which parts of your discovery or R&D pipeline could be sourced from a Chinese AI platform at a fraction of in-house cost, and weigh the IP and supply-chain exposure that comes with it. Ask scientific teams to benchmark design-to-clinic timelines against XtalPi and its peers this quarter.",
+      "related_notes": ""
+    }
+  },
+  {
     "id": "2026-06-05-chinese-open-weight-models-lead-openrouter-developer-traffic",
     "date": "2026-06-05",
     "day_number": 99,
