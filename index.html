@@ -1093,14 +1093,14 @@
       </div>
       <div class="contact-card">
         <p class="contact-card-label">Advisory</p>
-        <a href="mailto:jp@josephpress.com" class="contact-btn">
+        <a href="mailto:josephpress1@gmail.com?subject=Advisory%20Inquiry" class="contact-btn" onclick="return openMail(event, 'josephpress1@gmail.com', 'Advisory Inquiry')">
           <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
           jp@josephpress.com
         </a>
       </div>
       <div class="contact-card">
         <p class="contact-card-label">Academic</p>
-        <a href="mailto:jp@sues.edu.cn" class="contact-btn">
+        <a href="mailto:jp@sues.edu.cn?subject=Academic%20Inquiry" class="contact-btn" onclick="return openMail(event, 'jp@sues.edu.cn', 'Academic Inquiry')">
           <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
           jp@sues.edu.cn
         </a>
@@ -1115,14 +1115,14 @@
       </div>
       <div class="contact-card">
         <p class="contact-card-label">Conseil</p>
-        <a href="mailto:jp@josephpress.com" class="contact-btn">
+        <a href="mailto:josephpress1@gmail.com?subject=Advisory%20Inquiry" class="contact-btn" onclick="return openMail(event, 'josephpress1@gmail.com', 'Advisory Inquiry')">
           <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
           jp@josephpress.com
         </a>
       </div>
       <div class="contact-card">
         <p class="contact-card-label">Acad&eacute;mique</p>
-        <a href="mailto:jp@sues.edu.cn" class="contact-btn">
+        <a href="mailto:jp@sues.edu.cn?subject=Academic%20Inquiry" class="contact-btn" onclick="return openMail(event, 'jp@sues.edu.cn', 'Academic Inquiry')">
           <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
           jp@sues.edu.cn
         </a>
@@ -1137,14 +1137,14 @@
       </div>
       <div class="contact-card">
         <p class="contact-card-label">咨询</p>
-        <a href="mailto:jp@josephpress.com" class="contact-btn">
+        <a href="mailto:josephpress1@gmail.com?subject=Advisory%20Inquiry" class="contact-btn" onclick="return openMail(event, 'josephpress1@gmail.com', 'Advisory Inquiry')">
           <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
           jp@josephpress.com
         </a>
       </div>
       <div class="contact-card">
         <p class="contact-card-label">学术</p>
-        <a href="mailto:jp@sues.edu.cn" class="contact-btn">
+        <a href="mailto:jp@sues.edu.cn?subject=Academic%20Inquiry" class="contact-btn" onclick="return openMail(event, 'jp@sues.edu.cn', 'Academic Inquiry')">
           <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
           jp@sues.edu.cn
         </a>
@@ -1168,6 +1168,24 @@
   document.querySelectorAll('.nav-links a').forEach(a => {
     a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
   });
+  // Email buttons: try the visitor's mail client; if none responds, fall back to Gmail compose.
+  function openMail(evt, to, subject) {
+    if (evt) evt.preventDefault();
+    var su = encodeURIComponent(subject);
+    var mailto = 'mailto:' + to + '?subject=' + su;
+    var gmail = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(to) + '&su=' + su;
+    var launched = false;
+    function onBlur() { launched = true; }
+    window.addEventListener('blur', onBlur, { once: true });
+    setTimeout(function () {
+      window.removeEventListener('blur', onBlur);
+      if (!launched && document.hasFocus()) {
+        window.open(gmail, '_blank', 'noopener');
+      }
+    }, 500);
+    window.location.href = mailto;
+    return false;
+  }
 </script>
 </body>
 </html>

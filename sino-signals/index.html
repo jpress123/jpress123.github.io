@@ -276,6 +276,19 @@
     display: flex; flex-direction: column; justify-content: center;
     min-height: 92px;
   }
+  .kpi-link {
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  }
+  .kpi-link:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  }
+  .kpi-link:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
   .kpi-num {
     font-family: 'Playfair Display', serif;
     font-size: 1.95rem; font-weight: 600; color: var(--navy);
@@ -1141,6 +1154,7 @@
           <option value="this_week">This Week</option>
           <option value="this_month">This Month</option>
           <option value="this_year">This Year</option>
+          <option value="all_time">All Time</option>
         </select>
         <select class="filter-select" id="filterLens" aria-label="Filter by industry">
           <option value="all">All Industries</option>
@@ -1195,7 +1209,10 @@
   <div class="container">
     <h2>Stay Ahead</h2>
     <p>Weekly digest every Sunday — 7 signals + the editorial pick of the week.</p>
-    <form class="subscribe-form" action="https://formspree.io/f/placeholder" method="POST">
+    <form class="subscribe-form" action="https://formsubmit.co/josephpress1@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New Sino-Signals subscriber">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
       <input type="email" name="email" class="subscribe-input" placeholder="your@email.com" required aria-label="Email address">
       <button type="submit" class="subscribe-btn">Subscribe</button>
     </form>
@@ -1442,6 +1459,24 @@
     return keys[0];
   }
 
+  // Underlying industry_lens key behind the "Trending" KPI (topIndustryThisMonth returns the display label)
+  function topIndustryKeyThisMonth() {
+    var counts = {};
+    signals.forEach(function(s){
+      if (!s.industry_lens) return;
+      if (!isDateInRange(s.date, 'this_month')) return;
+      counts[s.industry_lens] = (counts[s.industry_lens] || 0) + 1;
+    });
+    var keys = Object.keys(counts);
+    if (!keys.length) {
+      signals.forEach(function(s){ if (s.industry_lens) counts[s.industry_lens] = (counts[s.industry_lens] || 0) + 1; });
+      keys = Object.keys(counts);
+      if (!keys.length) return '';
+    }
+    keys.sort(function(a,b){ return counts[b] - counts[a]; });
+    return keys[0];
+  }
+
   function renderKPIs() {
     var totalSignals = signals.length;
 
@@ -1450,38 +1485,52 @@
     }).length;
 
     var iso = getISOWeek(new Date());
-    var trendingIndustry = topIndustryThisMonth();
+    var trendingKey = topIndustryKeyThisMonth();
+    var trendingIndustry = LENS_LABELS[trendingKey] || trendingKey || '—';
     var topTrend = topTrendTag();
 
     // Populate the heat map's Week / Year header
     var hwy = document.getElementById('heatmapWeekYear');
     if (hwy) hwy.textContent = 'Week ' + iso.week + ' / ' + iso.year;
 
+    // Each tile links into the DataBase like a wordcloud word: set a filter, run applyFilters, scroll.
     var tiles = [
       {
         num: '<span class="kpi-prefix">Week</span>' + iso.week,
         label: String(iso.year),
-        isText: false
+        isText: false,
+        action: 'freshness', value: 'this_week'
       },
       {
         num: weekCount + '<span class="kpi-divider">/</span>' + totalSignals,
         label: 'New This Week / Total to Date',
-        isText: false
+        isText: false,
+        action: 'all', value: ''
       },
       {
         num: trendingIndustry,
         label: 'Trending',
-        isText: true
+        isText: true,
+        action: 'lens', value: trendingKey
       },
       {
         num: topTrend,
         label: 'Top Trend from the word cloud',
-        isText: true
+        isText: true,
+        action: 'search', value: (topTrend === '—' ? '' : topTrend)
       }
     ];
     var html = tiles.map(function(t){
       var numCls = 'kpi-num' + (t.isText ? ' kpi-num-text' : '');
-      return '<div class="kpi-tile"><div class="' + numCls + '">' + t.num + '</div><div class="kpi-label">' + t.label + '</div></div>';
+      var act = t.action, val = t.value;
+      if ((act === 'lens' || act === 'search') && !val) { act = 'all'; val = ''; }
+      var safeVal = String(val).replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+      var safeAria = String(t.label).replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+      return '<div class="kpi-tile kpi-link" role="button" tabindex="0"' +
+             ' data-action="' + act + '" data-value="' + safeVal + '"' +
+             ' aria-label="Open the Sino-Signals DataBase: ' + safeAria + '">' +
+             '<div class="' + numCls + '">' + t.num + '</div>' +
+             '<div class="kpi-label">' + t.label + '</div></div>';
     }).join('');
     document.getElementById('kpiStrip').innerHTML = html;
   }
@@ -1958,6 +2007,46 @@
     updateCount(filtered.length);
   }
 
+  // KPI tiles act as quick links into the DataBase, mirroring the wordcloud click flow:
+  // set a filter, run applyFilters, then smooth-scroll to the DataBase.
+  function kpiNavigate(action, value) {
+    var searchEl = document.getElementById('searchInput');
+    var freshEl  = document.getElementById('filterFreshness');
+    var catEl    = document.getElementById('filterCategory');
+    var strEl    = document.getElementById('filterStrength');
+    var lensEl   = document.getElementById('filterLens');
+
+    function setLensUI(lens) {
+      currentLens = lens;
+      if (lensEl) lensEl.value = lens;
+      document.querySelectorAll('.lens-chip').forEach(function(b){
+        b.classList.toggle('active', b.getAttribute('data-lens') === lens);
+      });
+    }
+
+    if (action === 'search') {
+      if (freshEl) freshEl.value = 'all_time';
+      if (searchEl) searchEl.value = value;
+    } else if (action === 'lens') {
+      if (searchEl) searchEl.value = '';
+      if (freshEl) freshEl.value = 'all_time';
+      setLensUI(value);
+    } else if (action === 'freshness') {
+      if (searchEl) searchEl.value = '';
+      if (freshEl) freshEl.value = value;
+    } else { // 'all' — reset filters and show the full archive
+      if (searchEl) searchEl.value = '';
+      if (freshEl) freshEl.value = 'all_time';
+      if (catEl) catEl.value = 'all';
+      if (strEl) strEl.value = 'all';
+      setLensUI('all');
+    }
+
+    applyFilters();
+    var bar = document.getElementById('filterBar');
+    if (bar) bar.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
   function setLensFromDropdown(value) {
     currentLens = value;
     // Sync chip row active state
@@ -1975,6 +2064,20 @@
       applyFilters();
     });
     document.getElementById('searchInput').addEventListener('input', applyFilters);
+
+    // KPI tiles -> DataBase quick links (delegated, survives KPI re-render)
+    var kpiStrip = document.getElementById('kpiStrip');
+    if (kpiStrip) {
+      kpiStrip.addEventListener('click', function(e){
+        var tile = e.target.closest('.kpi-link');
+        if (tile) kpiNavigate(tile.getAttribute('data-action'), tile.getAttribute('data-value'));
+      });
+      kpiStrip.addEventListener('keydown', function(e){
+        if (e.key !== 'Enter' && e.key !== ' ' && e.key !== 'Spacebar') return;
+        var tile = e.target.closest('.kpi-link');
+        if (tile) { e.preventDefault(); kpiNavigate(tile.getAttribute('data-action'), tile.getAttribute('data-value')); }
+      });
+    }
 
     var toggle = document.getElementById('impactToggle');
     var slider = document.getElementById('impactSlider');
