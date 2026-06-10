@@ -1,5 +1,77 @@
 [
   {
+    "id": "2026-06-10-ai-generated-over-95-percent-of-chinas-new-micro-dramas",
+    "date": "2026-06-10",
+    "day_number": 103,
+    "category": "Creative & Culture",
+    "category_emoji": "🎨",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "AI Generated Over 95 Percent of China's New Micro Dramas Last Quarter",
+    "title_cn": "AI生成中国上季度超95%新微短剧",
+    "source_url": "https://www.caixinglobal.com/2026-06-01/cover-story-how-ai-took-over-chinas-micro-drama-industry-in-90-days-102449814.html",
+    "source_name": "Caixin Global, How AI Took Over China's Micro-Drama Industry in 90 Days, June 1, 2026",
+    "tags": [
+      "AI video",
+      "AI视频",
+      "micro-drama",
+      "微短剧",
+      "Seedance 2.0",
+      "ByteDance",
+      "字节跳动",
+      "Hongguo",
+      "红果短剧",
+      "generative video"
+    ],
+    "related_signals": [],
+    "industry_lens": "entertainment",
+    "content_type": "daily",
+    "body": {
+      "signal": "About 128,000 micro dramas were released across China in the first quarter of 2026, nearly four times the prior-year total, and roughly 122,000 of them, over 95 percent, were AI made, according to Caixin. ByteDance's Seedance 2.0 video model, released in February 2026, collapsed the economics so far that a 100-minute AI drama now costs under 20,000 yuan and can be finished in three to seven days, against a 300,000 to 400,000 yuan live-action shoot that needed a crew of nearly 40. After ByteDance's Hongguo platform cut subsidies for live-action productions in late February, nearly 50,000 new AI dramas went online in April alone.",
+      "china_scale": "China's micro-drama market is projected to top 120 billion yuan, about 16.5 billion US dollars, in 2026, and ByteDance controls the full value chain that feeds it, from Fanqie Novel scripts to Doubao and Jimeng generation tools, Volcano Engine cloud, and Hongguo and Douyin distribution with more than 100 million daily users. Volcano Engine held 49.5 percent of China's enterprise model-as-a-service call volume in 2025, so one company can push an AI production shift across the whole pipeline at once. Lower-tier-city audiences that consume micro dramas care about emotional story beats over polish, which suits standardized AI output.",
+      "global_impact": "China is running the world's first mass commercial deployment of AI-generated video, and the production-cost curve it has set will pressure every studio and streamer weighing AI for long-form content. Streaming platform iQiyi has said it wants AI to make most of its new films and TV shows and is targeting a fully AI-generated movie this summer, with 16 AI sci-fi and anime titles slated. Western incumbents from Netflix to Hollywood studios now face a competitor that makes watchable serialized content at near computing-power cost.",
+      "monday_morning": "Benchmark your content or marketing production cost base against a sub-20,000-yuan AI pipeline and decide which formats you can defend on quality, talent, or brand. Have your media teams test Chinese video models on a real brief this quarter so the cost gap is measured, not assumed.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-06-10-unitree-clears-ipo-review-as-humanoid-funding-tops-2025",
+    "date": "2026-06-10",
+    "day_number": 102,
+    "category": "Robotics & Embodied AI",
+    "category_emoji": "🤖",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "Unitree Clears IPO Review as China Humanoid Robot Funding Tops 2025",
+    "title_cn": "宇树过会，中国人形机器人融资单季超去年全年",
+    "source_url": "https://www.globaltimes.cn/page/202606/1362565.shtml",
+    "source_name": "Global Times, China's Humanoid Robot Industry Accelerates Commercialization, June 2, 2026",
+    "tags": [
+      "humanoid robots",
+      "人形机器人",
+      "embodied AI",
+      "具身智能",
+      "Unitree",
+      "宇树科技",
+      "UBTech",
+      "优必选",
+      "AgiBot",
+      "STAR Market IPO"
+    ],
+    "related_signals": [],
+    "industry_lens": "consumer",
+    "content_type": "daily",
+    "body": {
+      "signal": "Unitree Robotics cleared its STAR Market IPO review at the Shanghai Stock Exchange on June 1, 2026, aiming to raise 4.2 billion yuan to fund robot models and a manufacturing base. Industry-wide humanoid financing reached 68.1 billion yuan in the first quarter of 2026, more than the entire 2025 total, with 50 deals closing in March alone, per China Media Group. On the consumer side, UBTech's UWorld brand opened JD.com pre-orders for the world's first full-size hyper-realistic companion robot, set for release June 30, while UBTech, Unitree, and AgiBot all opened public experience stores in Shanghai.",
+      "china_scale": "Domestic humanoid shipments reached about 18,000 units in 2025 and are projected to climb to 62,500 in 2026, with analysts expecting leading makers to hit 10,000 annual units as early as next year. Rising localization of key components and a deep smart-manufacturing base keep cutting unit costs, and state industrial policy steers capital toward the sector. The same supply chain that scaled China's EV and drone industries now feeds embodied AI.",
+      "global_impact": "A funding quarter that outruns a full prior year, paired with a public listing and visible consumer launches, signals that China intends to set humanoid unit economics the way it set them for solar panels and batteries. That pace pressures Western developers such as Tesla's Optimus and Figure on both cost and deployment speed. Whoever reaches reliable mass production first will shape labor, manufacturing, and household-robot markets for a decade.",
+      "monday_morning": "Map where humanoid or embodied automation could enter your operations in the next three years and identify which suppliers are already Chinese. Ask procurement and operations to price a pilot against Chinese humanoid platforms this quarter before the cost advantage compounds.",
+      "related_notes": ""
+    }
+  },
+  {
     "id": "2026-06-08-cac-anthropomorphic-ai-companion-interim-measures-take-effect",
     "date": "2026-06-08",
     "day_number": 101,
