@@ -1,5 +1,76 @@
 [
   {
+    "id": "2026-06-11-nea-51-ai-energy-scenarios",
+    "date": "2026-06-11",
+    "day_number": 105,
+    "category": "Climate & Sustainability",
+    "category_emoji": "🌱",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 4,
+    "title_en": "China Names 51 AI Energy Scenarios to Rewire Its Power System",
+    "title_cn": "中国发布51个AI能源高价值场景",
+    "source_url": "https://www.news.cn/energy/20260529/456bbcde4b8c42e3a2774f3a2f8043d4/c.html",
+    "source_name": "Xinhua Energy Weekly, May 29, 2026",
+    "tags": [
+      "NEA",
+      "国家能源局",
+      "AI+Energy",
+      "人工智能+能源",
+      "power grid",
+      "virtual power plant",
+      "green compute",
+      "energy transition"
+    ],
+    "related_signals": [],
+    "industry_lens": "automotive",
+    "content_type": "daily",
+    "body": {
+      "signal": "On May 26 China's National Energy Administration convened a national AI plus energy meeting in Shenzhen and published its first list of 51 high-value scenarios for fusing AI into the energy system, from AI-generated grid planning to virtual power plant operation and vehicle-to-grid coordination. Twenty-five energy companies signed an initiative to open those scenarios to AI developers, and the agency released its China AI plus Energy Development Report 2026. The NEA also disclosed that China's computing centers consumed 170 billion kWh in 2025, 1.6 percent of national electricity, across 42 ten-thousand-GPU AI clusters.",
+      "china_scale": "The scenario list converts policy into procurement. State-owned grid and energy giants execute NEA mandates quickly, and a September 2025 implementation plan already commits to at least five specialized energy AI models and ten replicable demonstration projects by 2027. With 3.99 billion kW of generating capacity, including 1.25 billion kW of solar, China is the largest sandbox on earth for AI-run grid operations.",
+      "global_impact": "Beijing is coupling the world's largest power system to the world's largest AI deployment program and writing the playbook as it goes. The scenarios, standards, and demonstration projects that emerge will travel with Chinese grid equipment and EV charging infrastructure into export markets. Western utilities still treat AI as a pilot-stage add-on, while China is standardizing it as core grid infrastructure.",
+      "monday_morning": "Energy and mobility executives should map the 51 scenarios against their own operations and ask which ones their current vendors can match. Strategy teams should track which Chinese pilots win state funding, since those will define the cost benchmarks for AI-run grid services within three years.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-06-11-tencent-wechat-ai-agent",
+    "date": "2026-06-11",
+    "day_number": 104,
+    "category": "Platforms & Social",
+    "category_emoji": "🌐",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 3,
+    "title_en": "Tencent Builds a WeChat AI Agent for 1.4 Billion Users",
+    "title_cn": "腾讯打造微信AI智能体",
+    "source_url": "https://technode.com/2026/06/03/tencent-reportedly-developing-wechat-ai-agent-makes-it-a-top-priority/",
+    "source_name": "TechNode, June 3, 2026",
+    "tags": [
+      "Tencent",
+      "腾讯",
+      "WeChat",
+      "微信",
+      "AI agent",
+      "智能体",
+      "super-app",
+      "mini programs",
+      "agentic commerce"
+    ],
+    "related_signals": [
+      "2026-06-02-alibaba-qwen-agent-taobao"
+    ],
+    "industry_lens": "consumer",
+    "content_type": "daily",
+    "body": {
+      "signal": "Tencent is testing a prototype AI agent embedded directly in WeChat and has made it a top company priority, according to TechNode and Jiwei reporting on June 3. Users reach the agent by swiping right from the WeChat home screen, then issue commands it executes across WeChat's millions of mini programs, such as finding a cafe matching taste and price preferences and ordering the drink. Tencent plans to begin the required regulatory approval process as early as June, followed by a small external test group before wider rollout.",
+      "china_scale": "WeChat already wires together identity, payments, and fulfillment for 1.4 billion users through mini programs, so the agent inherits a transaction-ready execution layer on day one. The competitive clock is running, since Alibaba's Qwen assistant reached 300 million monthly active users on Taobao and opened its agent platform to brands including KFC and Luckin Coffee in early June, while JD.com is reportedly teaming up with Tencent on agent collaboration.",
+      "global_impact": "China's agentic interface war is being fought inside super-apps that already own the full transaction loop. Western platforms have no equivalent surface, so Apple, Google, and Meta must stitch agents across fragmented apps, app stores, and payment rails. Whoever ships an agent that completes purchases for a billion users first will set consumer expectations everywhere.",
+      "monday_morning": "Consumer brand leaders should ask how their products surface when an agent, not a human, does the browsing. If you sell in China, audit whether your mini programs expose structured menus, prices, and inventory an agent can act on, because agent-readability is becoming the new SEO.",
+      "related_notes": "Builds on the June 2 signal on Alibaba's Qwen agent shopping across Taobao."
+    }
+  },
+  {
     "id": "2026-06-10-ai-generated-over-95-percent-of-chinas-new-micro-dramas",
     "date": "2026-06-10",
     "day_number": 103,
