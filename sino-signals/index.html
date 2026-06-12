@@ -1221,7 +1221,7 @@
 
 <!-- FOOTER -->
 <footer>
-  Vibe-Coded by JP &amp; Claude &middot; <a href="https://www.josephpress.com">josephpress.com</a> &middot; <a href="https://www.linkedin.com/in/josephpress/" target="_blank" rel="noopener">LinkedIn</a>
+  &copy; 2026 Joseph Press
 </footer>
 
 <!-- NOSCRIPT FALLBACK -->
@@ -1815,11 +1815,22 @@
     var maxPx  = Math.max(basePx + 8, Math.floor(canvas.height * 0.22));
 
     if (typeof WordCloud !== 'function') {
-      // Library failed to load — fall back to a simple inline list
+      // wordcloud2.js is injected dynamically, and dynamically inserted scripts
+      // ignore `defer` (they load async). The local data fetch usually finishes
+      // first, so the library may still be downloading. Retry for up to 10s
+      // before falling back to a plain list.
+      renderWordcloud._waited = (renderWordcloud._waited || 0) + 250;
+      if (renderWordcloud._waited <= 10000) {
+        clearTimeout(renderWordcloud._timer);
+        renderWordcloud._timer = setTimeout(function(){ renderWordcloud(filtered); }, 250);
+        return;
+      }
+      // Library genuinely failed to load — fall back to a simple inline list
       wrap.innerHTML = '<div class="wordcloud-empty">' +
         entries.slice(0, 30).map(function(e){ return e[0]; }).join(', ') + '</div>';
       return;
     }
+    renderWordcloud._waited = 0;
 
     WordCloud(canvas, {
       list: entries,
