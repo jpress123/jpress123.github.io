@@ -1,5 +1,78 @@
 [
   {
+    "id": "2026-06-12-baai-world-models-bet",
+    "date": "2026-06-12",
+    "day_number": 107,
+    "category": "Deep Tech & Research",
+    "category_emoji": "🔬",
+    "signal_strength": "weak",
+    "strength_emoji": "🟡",
+    "impact_score": 3,
+    "title_en": "Beijing's BAAI Declares World Models the Next AI Battleground",
+    "title_cn": "智源全面押注世界模型",
+    "source_url": "https://news.sina.com.cn/o/2026-06-12/doc-iniccfxu1863022.shtml",
+    "source_name": "Beijing News Shell Finance via Sina, June 12, 2026",
+    "tags": [
+      "BAAI",
+      "智源研究院",
+      "world model",
+      "世界模型",
+      "Emu3.5",
+      "Physis",
+      "RoboBrain Orca",
+      "embodied AI",
+      "具身智能",
+      "Wang Zhongyuan"
+    ],
+    "related_signals": [],
+    "industry_lens": "automotive",
+    "content_type": "daily",
+    "body": {
+      "signal": "The Beijing Academy of Artificial Intelligence, the lab whose Wudao 1.0 opened China's large-model era in March 2021, told Beijing News on June 12 that large language models are no longer its main research direction. Director Wang Zhongyuan says the institute is now betting on world models, systems that predict the next physical state instead of the next token, and has already shipped the Emu3 and Emu3.5 multimodal world models in 2025 and the Physis and RoboBrain Orca models in 2026. The announcement frames the 2026 BAAI Conference, which opened June 12 in Beijing with over 200 experts and more than 40 AI company CEOs debating world models, embodied AI, and agents.",
+      "china_scale": "BAAI has converted research bets into industries before, since its Wudao program incubated Zhipu AI and ModelBest and trained talent like Moonshot founder Yang Zhilin. The institute hands matured fields to companies and moves on, and it staffs aggressively for the long game, with a fourth-year undergraduate, Chen Boyuan, leading its behavior world model center. Wang compares world models today to language models in 2012 and sets a deployment horizon of three years or longer, with data scarcity as the core bottleneck.",
+      "global_impact": "World models are the contested frontier where Yann LeCun, Fei-Fei Li, and Google DeepMind are also placing bets, and China's premier state-backed lab just declared them the main battleground of the next decade. Wang counts four competing technical routes, pixel-centric, 3D-centric, visual-representation-centric, and language-centric, and BAAI is publishing open models along the language-vision fusion path. If BAAI's track record repeats, today's research direction becomes China's robotics and autonomous-driving software stack within five years.",
+      "monday_morning": "Leaders in mobility, robotics, and logistics should assign someone to track BAAI's Physis and RoboBrain Orca releases the way they tracked early GPT papers. The upside case is that BAAI's last institutional bet produced China's entire LLM industry, so treat this as an early but high-credibility directional signal, and revisit your assumption that AI competition stays confined to chatbots.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-06-12-shantou-token-exports",
+    "date": "2026-06-12",
+    "day_number": 106,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 4,
+    "title_en": "Shantou Turns Cheap Green Power Into AI Token Exports",
+    "title_cn": "汕头把绿电变成出海词元",
+    "source_url": "https://www.news.cn/local/20260530/2cc5e28e948345638c50769283aad24c/c.html",
+    "source_name": "People's Daily via Xinhua, May 30, 2026",
+    "tags": [
+      "token exports",
+      "词元出海",
+      "Shantou",
+      "汕头",
+      "compute trade",
+      "算力出海",
+      "data processing trade",
+      "来数加工",
+      "AI toys",
+      "offshore wind",
+      "submarine cables"
+    ],
+    "related_signals": [],
+    "industry_lens": "consumer",
+    "content_type": "daily",
+    "body": {
+      "signal": "The coastal city of Shantou in Guangdong has built China's first compliant channel for exporting AI inference as a service, where overseas requests travel through submarine cables to a physically isolated compute zone, get processed on domestic models like DeepSeek and Qwen, and return abroad with per-token billing. Daily call volume jumped from 100 million tokens in late April to over 10 billion by late May, and the first full commercial loop closed on May 18 when a Singapore user's AI toy called roughly 100,000 tokens billed at 2 yuan per million. One 0.5-yuan kilowatt-hour of electricity becomes 11 yuan of exported token value, a 22-fold uplift.",
+      "china_scale": "Shantou stacks structural advantages no single Western hub matches, since it lands over half of China's submarine cable export bandwidth with 32.7-millisecond latency to Singapore, plans offshore wind capacity exceeding 53 percent of Guangdong's total to feed data centers with cheap green power, and holds a state-approved data processing trade pilot that solves the compliance problem. The local government adds 30 percent compute subsidies up to 500,000 yuan per company, and the Chenghai toy cluster is converting China's toy capital into an AI toy export base, with one maker estimating over 30 percent cost savings versus calling overseas compute.",
+      "global_impact": "China has found a route around both chip export controls and data-sovereignty objections, since the chips and the data center never leave China while the service crosses the border at one-third to one-half the price of international platforms, with reported customer retention above 70 percent. Southeast Asian businesses get frontier-adjacent AI at commodity prices, which undercuts US hyperscalers in the region's fastest-growing market. The model converts China's electricity surplus and model overcapacity into a tradeable export the way oil refineries convert crude into gasoline.",
+      "monday_morning": "Consumer electronics and device makers should price out a Chinese token-export pipeline against their current US cloud inference bill, because a 2-to-3x cost gap on the AI features inside a 20-dollar toy decides who wins the shelf. Strategy teams should watch whether other Chinese port cities replicate the Shantou pilot, since a network of such zones would make subsidized Chinese inference the default for emerging markets.",
+      "related_notes": ""
+    }
+  },
+  {
     "id": "2026-06-11-nea-51-ai-energy-scenarios",
     "date": "2026-06-11",
     "day_number": 105,
