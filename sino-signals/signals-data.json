@@ -1,5 +1,74 @@
 [
   {
+    "id": "2026-06-16-alibaba-full-stack-ai-factory",
+    "date": "2026-06-16",
+    "day_number": 111,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "Alibaba Builds a Full-Stack AI Factory to Mass-Produce Intelligence",
+    "title_cn": "阿里搭建全栈AI工厂量产智能",
+    "source_url": "https://www.scmp.com/tech/big-tech/article/3354212/alibaba-unveils-new-qwen-model-custom-chips-bid-become-chinas-ai-factory",
+    "source_name": "South China Morning Post, May 20, 2026",
+    "tags": [
+      "Alibaba",
+      "阿里云",
+      "Qwen3.7-Max",
+      "Zhenwu M890",
+      "平头哥",
+      "T-Head",
+      "AI factory",
+      "AI工厂",
+      "agentic AI"
+    ],
+    "related_signals": [],
+    "industry_lens": "financial services",
+    "content_type": "daily",
+    "body": {
+      "signal": "At the Alibaba Cloud Summit in Hangzhou on May 20, Alibaba positioned itself as China's AI factory, with cloud senior vice-president Liu Weiguang framing AI as a new form of manufacturing that earns revenue through training and inference factories. The company launched three products that form one stack, Qwen3.7-Max, the Zhenwu M890 accelerator from its T-Head chip unit, and the Panjiu AL128 rack server that links 128 M890 chips into a single unit. In an internal test, Qwen3.7-Max ran 35 hours without human input on an M890 it had never seen in training, made more than 1,000 tool calls, and wrote a computing kernel that beat the chip maker's own version tenfold.",
+      "china_scale": "Alibaba says it is the only company in China operating all five layers of the AI stack, spanning chips, agentic cloud, models, model-service platforms, and agentic applications. Owning the silicon, the cloud, and the model lets Alibaba tune unit economics across the whole chain and sell compute the way a factory sells output. Domestic demand from tens of thousands of enterprise customers and a state push for homegrown chips give the integrated stack a captive market as Nvidia access stays constrained.",
+      "global_impact": "A vertically integrated Chinese stack from custom silicon to autonomous agents undercuts the assumption that frontier AI requires US chips and US clouds. The AI-as-manufacturing framing reframes compute as an industrial commodity priced for volume, which pressures the margins of Western hyperscalers and chip vendors. Enterprises weighing AI infrastructure now have a full-stack alternative that prices intelligence as production output.",
+      "monday_morning": "Infrastructure and procurement leaders should benchmark Alibaba Cloud's training and inference pricing against AWS, Azure, and Google before renewing multi-year compute contracts. Strategy teams should war-game what happens to their cost structure if a rival runs on a Chinese full-stack at factory prices, and stress-test supply assumptions that depend on a single chip vendor.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-06-16-china-global-ai-education-platform",
+    "date": "2026-06-16",
+    "day_number": 110,
+    "category": "Platforms & Social",
+    "category_emoji": "🌐",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "China Opens a Global AI Education Platform Reaching 220 Countries",
+    "title_cn": "中国上线覆盖220国的全球AI教育平台",
+    "source_url": "https://english.news.cn/20260512/4cbe04435f52421ebba2c0c0bc53cc92/c.html",
+    "source_name": "Xinhua, May 12, 2026",
+    "tags": [
+      "AI education",
+      "智慧教育",
+      "Smart Education of China",
+      "World Digital Education Conference",
+      "世界数字教育大会",
+      "digital public infrastructure",
+      "soft power",
+      "ed-tech"
+    ],
+    "related_signals": [],
+    "industry_lens": "education",
+    "content_type": "daily",
+    "body": {
+      "signal": "On May 12 at the World Digital Education Conference in Hangzhou, China launched a global AI education service platform built on its Smart Education of China system, now reachable in around 220 countries and regions. The upgrade adds international features including a lifelong learning hub and a Chinese language learning community, and the conference also released a report on China's smart-education policy and an initiative urging wider use of AI to close the global digital divide. The system already runs AI learning platforms across every education stage and offers models for 13 disciplines from computer science to materials science.",
+      "china_scale": "China can scale this because the platform sits on national computing hubs and a centralized public-education system that pushes one toolset to schools nationwide, then exports the same stack abroad. Pairing AI tutoring with Chinese-language learning turns an education service into a soft-power channel that travels with Belt and Road digital infrastructure. State backing means the platform ships free to partner countries, which few commercial ed-tech firms can match.",
+      "global_impact": "Offering AI tutoring and curriculum tools to 220 countries lets China set default standards and pedagogy for AI in classrooms across the developing world. Western ed-tech firms and education ministries face a free, state-backed competitor shaping how a generation of students first meets AI. The platform also exports Chinese-language learning and content norms alongside the technology, embedding influence well beyond the classroom.",
+      "monday_morning": "Education ministries and ed-tech executives should review what China's free platform offers in their markets and decide where to compete, partner, or set guardrails on data and curriculum. Leaders running global training or workforce programs should evaluate whether to adopt, mirror, or counter a platform that is already live across most of the world.",
+      "related_notes": ""
+    }
+  },
+  {
     "id": "2026-06-15-china-companion-ai-rule",
     "date": "2026-06-15",
     "day_number": 108,
