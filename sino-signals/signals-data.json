@@ -1,5 +1,71 @@
 [
   {
+    "id": "2026-06-24-ai-micro-dramas-mass-market-generated-video",
+    "date": "2026-06-24",
+    "day_number": 123,
+    "category": "Creative & Culture",
+    "category_emoji": "🎨",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "AI Micro Dramas Become World's First Mass Market for Generated Video",
+    "title_cn": "AI漫剧成为全球首个生成式视频规模化市场",
+    "source_url": "https://www.thestandard.com.hk/innovation/article/328010/Chinese-mainland-AI-short-dramas-targets-24-bln-yuan-market-size",
+    "source_name": "The Standard (Sing Tao), March 29, 2026",
+    "tags": [
+      "AI漫剧",
+      "micro-drama",
+      "短剧",
+      "Seedance",
+      "Douyin",
+      "generative video",
+      "ReelShort"
+    ],
+    "related_signals": [],
+    "industry_lens": "entertainment",
+    "content_type": "daily",
+    "body": {
+      "signal": "China's AI generated micro dramas, known as manju, are on track to reach a 24 billion yuan market in 2026, with the audience projected to grow 1.3 times to 280 million viewers, according to mainland data reported by The Standard. More than 1,000 AI short dramas now ship every day, and during the 2026 Spring Festival season AI animated titles drew nearly 30 percent of 8.67 billion total views, with hyper realistic AI clips contributing over 80 percent of that share. ByteDance's Seedance 2.0 model, alongside Kuaishou Kling and Shengshu Vidu, drove the surge in output.",
+      "china_scale": "Short video platforms Douyin, Kuaishou, Tencent, and Baidu launched dedicated manju apps and creator incentives between November and February, giving AI dramas instant distribution to hundreds of millions of daily users. AI production collapses the cost structure, shifting spend from 80 percent labor to 20 percent, with compute and tokens becoming the main expense and making a one person, one drama a day pace realistic. A domestic stack of video models, distribution platforms, and payment rails lets a title scale from script to monetization inside one ecosystem.",
+      "global_impact": "Generative video has reached a mass paying audience at industrial scale, a milestone Hollywood and Western streamers have touched only in pilots. The economics reset what a short form video costs to make, pressuring studios, advertising agencies, and game cinematics teams worldwide. China's manju factories now offer a working template for AI native entertainment that exports through apps like TikTok and ReelShort.",
+      "monday_morning": "Media and entertainment leaders should commission a small AI native short series this quarter to learn the production economics firsthand instead of waiting for case studies. Marketing and content teams should test AI video pipelines against current vendor costs before the next budget cycle.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-06-24-china-humanoid-robot-work-mode-program",
+    "date": "2026-06-24",
+    "day_number": 122,
+    "category": "Robotics & Embodied AI",
+    "category_emoji": "🤖",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 4,
+    "title_en": "China Orders 10,000 Humanoid Robots Into Real Jobs by Year End",
+    "title_cn": "中国要求年底前部署一万台人形机器人上岗",
+    "source_url": "https://www.scmp.com/economy/china-economy/article/3356629/china-fast-tracks-humanoid-robots-and-embodied-ai-industry-under-nationwide-programme",
+    "source_name": "South China Morning Post, June 10, 2026",
+    "tags": [
+      "人形机器人",
+      "embodied AI",
+      "具身智能",
+      "工信部",
+      "UBTech",
+      "humanoid robots",
+      "work mode"
+    ],
+    "related_signals": [],
+    "industry_lens": "automotive",
+    "content_type": "daily",
+    "body": {
+      "signal": "On June 9, 2026, the Ministry of Industry and Information Technology and the State owned Assets Supervision and Administration Commission issued a document ordering local governments and state owned enterprises to test and deploy humanoid robots in real production and service settings within six months. Implementation plans are due by the end of June and progress reports by the end of November. Beijing set a target of more than 100 high value applications and deployment of 10,000 units by year end, spanning manufacturing, warehousing, healthcare, and disaster relief.",
+      "china_scale": "State ownership lets Beijing convert factories, warehouses, and hospitals into guaranteed deployment sites, giving robot makers like UBTech, AgiBot, and Unitree a captive demand base that Western startups lack. UBTech delivered more than 500 Walker S2 units in 2025 and targets 10,000 in 2026, while AgiBot shipped over 5,100 robots last year, so domestic supply can meet the order. A top down mandate compresses the path from demo to paid deployment into a single budget year.",
+      "global_impact": "China is using industrial policy to push humanoid robots past the demo stage into measured factory work, the threshold Western firms like Tesla and Figure are still chasing. A coordinated buying program at this scale hands Chinese makers the deployment data and unit volumes that drive down cost and improve reliability faster than rivals. Western manufacturers may meet Chinese humanoids with proven production records before their own units leave pilot lines.",
+      "monday_morning": "Operations and automation leaders should request deployment data from humanoid vendors and pick one repetitive task to pilot before competitors lock in supply. Strategy teams should track which Chinese makers hit the year end deployment targets, since those firms will set the global cost benchmark.",
+      "related_notes": ""
+    }
+  },
+  {
     "id": "2026-06-23-huawei-cloud-agentic-ai-enterprise-stack",
     "date": "2026-06-23",
     "day_number": 121,
