@@ -1,5 +1,69 @@
 [
   {
+    "id": "2026-06-30-china-industrial-ai-agents-factory-mandate",
+    "date": "2026-06-30",
+    "day_number": 125,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "China Orders 1,000 Industrial AI Agents Into Factories by 2027",
+    "title_cn": "中国部署千个工业智能体进工厂，2027年前落地",
+    "source_url": "https://www.nda.gov.cn/sjj/zwgk/zcfb/0112/20260107214358696030895_pc.html",
+    "source_name": "National Data Administration (nda.gov.cn), January 9, 2026",
+    "tags": [
+      "人工智能+制造",
+      "工业智能体",
+      "industrial agents",
+      "MIIT",
+      "工信部",
+      "smart manufacturing"
+    ],
+    "related_signals": [],
+    "industry_lens": "automotive",
+    "content_type": "daily",
+    "body": {
+      "signal": "Eight Chinese ministries led by the Ministry of Industry and Information Technology issued the AI Plus Manufacturing action plan, dated December 25, 2025 and published January 9, 2026, setting 2027 targets of 1,000 high level industrial AI agents, 500 typical application scenarios, 3 to 5 general models embedded deep in manufacturing, and 2 to 3 ecosystem leading firms of global scale. The plan also names 1,000 benchmark enterprises and 100 industrial datasets as shared deployment infrastructure. Adoption is already climbing fast, with the share of Chinese industrial firms using large models and agents rising from 9.6 percent in 2024 to 47.5 percent in 2025, according to IDC.",
+      "china_scale": "Coordination across eight ministries, backed by compute vouchers and model vouchers, lets Beijing push agents into steel, chemicals, autos, electronics, and consumer goods plants at once instead of factory by factory. State owned enterprises and industry leaders supply guaranteed deployment sites, while a domestic stack of chips, models, and industrial clouds keeps the cost of scaling inside one ecosystem. The plan converts a policy target into procurement demand that vendors can build against.",
+      "global_impact": "A national agent rollout at this scale hands Chinese manufacturers the operating data and unit volumes that drive reliability and cost ahead of rivals still running pilots. Deloitte found 67 percent of Chinese industrial firms have deployed AI in production versus 34 percent of US peers, a gap that widens as the program runs. Western industrial software vendors and factory operators face Chinese competitors moving from demo to line at policy speed.",
+      "monday_morning": "Operations and strategy leaders should benchmark their own production line AI adoption against the 47.5 percent Chinese figure and pick one high value process for an agent pilot this quarter. Industrial software vendors should map which of the 500 mandated scenarios overlap their roadmap before Chinese suppliers define the category.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-06-30-china-ai-required-course-universities",
+    "date": "2026-06-30",
+    "day_number": 124,
+    "category": "Policy & Governance",
+    "category_emoji": "📜",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 3,
+    "title_en": "China Makes AI a Required Course for Every University Student",
+    "title_cn": "中国将人工智能列为所有大学生必修课",
+    "source_url": "http://www.moe.gov.cn/srcsite/A16/s3342/202604/t20260410_1433240.html",
+    "source_name": "Ministry of Education (moe.gov.cn), April 10, 2026",
+    "tags": [
+      "人工智能+教育",
+      "AI education",
+      "教育部",
+      "curriculum",
+      "smart education",
+      "talent"
+    ],
+    "related_signals": [],
+    "industry_lens": "education",
+    "content_type": "daily",
+    "body": {
+      "signal": "Five Chinese ministries led by the Ministry of Education issued the AI Plus Education action plan, dated April 2 and published April 10, 2026, making artificial intelligence a required public course across universities and building a full segment AI education system from primary school through higher education by 2030. The plan commits the state to organized development of stage specific education large models, a national education AI compute service platform, and AI literacy standards for all teachers. It pairs the Ministry of Education with the National Development and Reform Commission, the Ministry of Industry and Information Technology, the Ministry of Science and Technology, and the National Data Administration.",
+      "china_scale": "A single national curriculum mandate reaches every university and the country's primary and secondary schools through the existing Smart Education public platform, so adoption does not depend on district by district choice. State organized education models avoid duplicate building by local governments and schools, and national compute and corpus infrastructure lowers the cost for any institution to deploy. Central direction turns AI literacy from an elective into a baseline credential for a generation of graduates.",
+      "global_impact": "China is building an AI literate workforce at population scale while most Western systems leave AI instruction to individual universities and instructors. A standardized national pipeline of AI fluent graduates compounds into a labor force advantage for employers operating in China. Education ministries and universities abroad now have a concrete benchmark for what a coordinated national AI curriculum looks like.",
+      "monday_morning": "University leaders and corporate learning heads should treat AI fluency as a baseline hiring credential and audit whether their own training pipelines produce it. Ed tech and enterprise training vendors should study the plan's stage specific model approach before designing curricula for the Chinese market.",
+      "related_notes": ""
+    }
+  },
+  {
     "id": "2026-06-24-ai-micro-dramas-mass-market-generated-video",
     "date": "2026-06-24",
     "day_number": 123,
