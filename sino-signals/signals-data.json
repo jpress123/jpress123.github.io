@@ -1,5 +1,69 @@
 [
   {
+    "id": "2026-07-02-china-first-full-green-electricity-ai-data-center",
+    "date": "2026-07-02",
+    "day_number": 127,
+    "category": "Climate & Sustainability",
+    "category_emoji": "🌱",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "China Opens First AI Data Center Running Entirely on Green Power",
+    "title_cn": "中国首个全绿电AI数据中心投运",
+    "source_url": "https://news.cgtn.com/news/2026-06-26/China-launches-first-AI-data-center-powered-by-100-green-electricity-1OhOFluzK3C/share_amp.html",
+    "source_name": "CGTN (news.cgtn.com), June 26, 2026",
+    "tags": [
+      "绿电",
+      "东数西算",
+      "green computing",
+      "data center",
+      "碳中和",
+      "Eastern Data Western Computing"
+    ],
+    "related_signals": [],
+    "industry_lens": "consumer",
+    "content_type": "daily",
+    "body": {
+      "signal": "China's first AI data center supplied entirely through a direct green electricity connection began operations in Zhongwei, Ningxia on June 26, 2026, built by China Telecom Ningxia Branch to a wind powered liquid cooling standard. The facility reaches a Power Usage Effectiveness of 1.15, well below conventional data centers, and draws 100 percent renewable power through a direct line to nearby wind and solar. It anchors the Eastern Data, Western Computing plan that shifts compute to renewable rich western regions.",
+      "china_scale": "Zhongwei already hosts 10 large data center parks with roughly 3.31 million standard server racks and six of China's top 10 computing providers, so the green direct supply model has an installed base to copy at once. Abundant Gobi wind and solar let operators sign direct power deals that cut both carbon and cost for energy hungry AI training. National policy targets renewables covering four fifths of AI data center power by 2030, up from about 11 percent in 2023.",
+      "global_impact": "Green powered AI compute at this scale attacks the tightest constraint on the AI buildout, clean electricity, while Western operators face grid queues and rising power prices. A demonstrated 1.15 PUE on fully renewable supply resets the benchmark for what a low carbon AI data center can cost. Chinese cloud and model firms gain a cheaper, lower emission compute base as global scrutiny of AI energy use rises.",
+      "monday_morning": "Infrastructure and sustainability leaders should ask where their AI compute draws power and whether direct renewable supply can match a 1.15 PUE. Data center operators should study China's colocation of compute with wind and solar before siting the next training cluster on a congested grid.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-07-02-ubtech-mass-produced-humanoid-robot-launch",
+    "date": "2026-07-02",
+    "day_number": 126,
+    "category": "Robotics & Embodied AI",
+    "category_emoji": "🤖",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "UBTECH Launches World's First Mass Produced Full Size Humanoid Robot",
+    "title_cn": "优必选发布全球首款量产全尺寸人形机器人",
+    "source_url": "https://www.prnewswire.com/news-releases/ubtech-launches-uworld-u1-the-worlds-first-full-size-mass-produced-ultra-bionic-humanoid-robot-302815272.html",
+    "source_name": "PR Newswire / UBTECH, June 30, 2026",
+    "tags": [
+      "人形机器人",
+      "优必选",
+      "UBTECH",
+      "humanoid robot",
+      "embodied AI",
+      "量产"
+    ],
+    "related_signals": [],
+    "industry_lens": "pharma",
+    "content_type": "daily",
+    "body": {
+      "signal": "UBTECH unveiled the UWORLD U1 Series at its Shenzhen global launch on June 30, 2026, calling it the world's first full size ultra bionic humanoid robot designed for mass production, with prices starting at 119,800 RMB. Cumulative orders passed 13,361 units by launch day across three models, the U1 Lite, U1 Pro, and U1 Ultra. Each robot carries 88 degrees of freedom and an emotion aware language model that reads more than 20 emotional states at over 90 percent accuracy.",
+      "china_scale": "UBTECH ranked first globally in full size humanoid robot revenue and sales in 2025 and already runs its industrial Walker S2 line in mass production and delivery, so it can move a consumer model down a proven supply chain. A domestic stack of actuators, chips, and assembly lets it price a full size humanoid near a mid range car. China's more than 90 million adults living alone and 118 million empty nest seniors give the companion and elder care use cases a vast home market.",
+      "global_impact": "A mass produced full size humanoid at 119,800 RMB resets the price expectation for a category where Western rivals still show prototypes. Order volume in the thousands signals real demand, moving humanoids from demo stage toward consumer shelves. Firms targeting elder care, hospitality, and domestic service now face a Chinese supplier setting the reference price and shipping units.",
+      "monday_morning": "Product and operations leaders in service and care sectors should model what a sub 20,000 dollar humanoid does to their labor and automation plans. Robotics competitors should benchmark against UBTECH's price and order book before positioning their own consumer humanoid.",
+      "related_notes": ""
+    }
+  },
+  {
     "id": "2026-06-30-china-industrial-ai-agents-factory-mandate",
     "date": "2026-06-30",
     "day_number": 125,
