@@ -1,5 +1,75 @@
 [
   {
+    "id": "2026-07-06-nfra-banking-insurance-ai-safety-guidance",
+    "date": "2026-07-06",
+    "day_number": 131,
+    "category": "Policy & Governance",
+    "category_emoji": "📜",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 4,
+    "title_en": "China's Financial Regulator Hands Banks a 32-Point AI Rulebook",
+    "title_cn": "金融监管总局为银行保险业立下32条AI规矩",
+    "source_url": "https://jingji.cctv.com/2026/06/18/ARTIBxtStckx4Tyx1X1Wywnd260618.shtml",
+    "source_name": "CCTV (jingji.cctv.com), June 18, 2026",
+    "tags": [
+      "金融监管总局",
+      "NFRA",
+      "AI governance",
+      "banking",
+      "insurance",
+      "风险管理"
+    ],
+    "related_signals": [
+      "2026-06-22-china-national-ai-agent-governance-guidelines",
+      "2026-07-03-alipay-abao-ai-native-super-app"
+    ],
+    "industry_lens": "financial services",
+    "content_type": "daily",
+    "body": {
+      "signal": "China's National Financial Regulatory Administration issued the Guiding Opinions on Safe AI Development and Application in Banking and Insurance on June 18, 2026, document Jin Fa 2026 No. 8. The framework sets 32 requirements across seven areas, covering governance architecture, model development, data governance, compute buildout, risk management, capability building, and supervision. It holds institutions accountable under a whoever-uses-it-is-responsible principle and requires human oversight and intervention mechanisms at key stages of high-risk AI applications.",
+      "china_scale": "The rules bind every bank and insurer in China at once, converting the world's largest banking system into a single testbed for classification-based AI risk management. The guidance directs large institutions to export compute services to smaller ones and to co-build shared infrastructure, so compliance doubles as sector-wide capability building. It implements the State Council's AI Plus action opinion, which puts central-government weight behind supervisory follow-through.",
+      "global_impact": "This is one of the first comprehensive AI rulebooks issued by a major national financial regulator, arriving while US and EU supervisors still work from general-purpose AI law and scattered guidance. Global banks and insurers operating in China must now build lifecycle AI governance to NFRA specifications. Regulators elsewhere gain a concrete template pairing risk tiers with mandatory human-override points and supply-chain audits.",
+      "monday_morning": "Chief risk officers at Western financial institutions should map the 32 requirements against their own AI inventories, since risk tiering, human-intervention points, and vendor audits tend to migrate across jurisdictions. Compliance teams with China operations should begin gap assessments now, because the document is already in force.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-07-06-kling-ai-3-billion-raise-video-model-record",
+    "date": "2026-07-06",
+    "day_number": 130,
+    "category": "Creative & Culture",
+    "category_emoji": "🎨",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 3,
+    "title_en": "Kuaishou's Kling Raises $3 Billion, a Record for Video AI",
+    "title_cn": "快手可灵融资30亿美元创视频大模型纪录",
+    "source_url": "https://finance.sina.com.cn/jjxw/2026-07-03/doc-inifntfa5595495.shtml",
+    "source_name": "Sina Finance / Jiemian News (finance.sina.com.cn), July 3, 2026",
+    "tags": [
+      "可灵",
+      "Kling AI",
+      "快手",
+      "video generation",
+      "funding",
+      "文生视频"
+    ],
+    "related_signals": [
+      "2026-05-19-kuaishou-kling-ai-spin-off-pre-ipo-20-billion-usd-valuation",
+      "2026-06-24-ai-micro-dramas-mass-market-generated-video"
+    ],
+    "industry_lens": "entertainment",
+    "content_type": "daily",
+    "body": {
+      "signal": "Kuaishou announced through a Hong Kong exchange filing on July 2, 2026 that its Beijing Kling unit completed an external capital raise of up to 3 billion US dollars at a post-money valuation near 18 billion, the largest funding round for a video-generation model company anywhere. CPE, Guofang Venture Capital, BlueFive, Tencent, a Zhongguancun Science City fund, and CITIC Securities co-led, with Alibaba Cloud, Baidu, Huace Film and TV, and Mango-affiliated investors participating. Kling passed 100 million global users in June 2026 and serves nearly 50,000 enterprise clients, and its annualized revenue reached 500 million dollars in March.",
+      "china_scale": "Kling grew first-quarter 2026 revenue past 650 million yuan, up more than 300 percent year over year, on three paying scenarios, e-commerce video, short drama, and film and television advertising. China's micro-drama industry supplies industrial demand for batch video generation that consumer-tool markets elsewhere lack. Backing from Tencent, Alibaba Cloud, and Baidu plus content groups Huace and Mango wires Kling into both compute supply and distribution channels at once.",
+      "global_impact": "An 18 billion dollar valuation on 500 million dollars of annualized revenue shows video generation monetizing at industrial scale while Western rivals still search for durable business models. Industry analysts expect the raise to reset competitive barriers, squeezing smaller video-AI startups on compute, capital, and clients, with consolidation likely within two years. Investors hold a buyback right if Kling misses an IPO by October 30, 2031, so a public-listing clock is now running.",
+      "monday_morning": "Media and advertising executives should price Kling's enterprise API against current production costs for commerce video and episodic content. Western video-model companies should study the revenue mix, since enterprise demand, not consumer subscriptions, is where video generation pays today.",
+      "related_notes": "Funding is an input signal. If ARR growth holds through 2026, the next Kling entry moves to impact 4 on cross-industry advertising economics."
+    }
+  },
+  {
     "id": "2026-07-03-zhipu-glm-5-2-mit-open-source-frontier-model",
     "date": "2026-07-03",
     "day_number": 129,
