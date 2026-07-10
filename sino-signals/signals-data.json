@@ -1,5 +1,69 @@
 [
   {
+    "id": "2026-07-10-jiuzhang-4-photonic-quantum-advantage",
+    "date": "2026-07-10",
+    "day_number": 135,
+    "category": "Deep Tech & Research",
+    "category_emoji": "🔬",
+    "signal_strength": "weak",
+    "strength_emoji": "🟡",
+    "impact_score": 2,
+    "title_en": "China's Jiuzhang 4.0 Claims Quantum Advantage Beyond Any Supercomputer",
+    "title_cn": "九章四号宣称实现超越超算的量子优势",
+    "source_url": "https://postquantum.com/quantum-research/china-jiuzhang-4-photonic-quantum/",
+    "source_name": "PostQuantum.com, May 16, 2026 (Nature, USTC)",
+    "tags": [
+      "九章四号",
+      "Jiuzhang 4.0",
+      "USTC",
+      "photonic quantum computing",
+      "Gaussian boson sampling",
+      "潘建伟"
+    ],
+    "related_signals": [],
+    "industry_lens": "pharma",
+    "content_type": "daily",
+    "body": {
+      "signal": "A team led by Chao-Yang Lu and Jian-Wei Pan at the University of Science and Technology of China published Jiuzhang 4.0 in Nature on May 15, 2026, reporting a programmable photonic processor that feeds 1,024 squeezed-light inputs into an 8,176-mode circuit and detects up to 3,050 photons in a single run. For its main benchmark the team estimates El Capitan, the world's fastest supercomputer, would need more than 10 to the 42nd power years to reproduce one sample that the machine generates in 25.6 microseconds. The paper is peer reviewed and the raw data are public, a level of scrutiny most quantum claims skip.",
+      "china_scale": "The result comes from the USTC-Hefei ecosystem, a concentration of talent, cryogenic detectors, and photonics fabrication that no rival lab matches at this scale. China has funded this program continuously since the first Jiuzhang in 2020, and each generation has widened the photon count by an order of magnitude. State backing lets the group pursue expensive, single-purpose hardware that private labs rarely justify.",
+      "global_impact": "Gaussian boson sampling is a narrow task chosen because photons are naturally good at it, so this is not general-purpose or code-breaking quantum computing. The strategic weight sits in the engineering, ultra-stable phase locking and 92 percent source efficiency, the same ingredients that measurement-based fault-tolerant photonics will need. Western photonic ventures such as PsiQuantum and Xanadu now face a state-funded group demonstrating the largest photonic system on record.",
+      "monday_morning": "R&D and security leaders should treat Jiuzhang 4.0 as a milestone in photonic engineering, not a threat to current encryption, and brief boards accordingly to avoid overreaction. Pharma and materials teams exploring quantum simulation should track which Chinese groups convert this hardware toward molecular sampling, the nearest practical application.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-07-10-catl-battery-swap-2000-stations",
+    "date": "2026-07-10",
+    "day_number": 134,
+    "category": "Climate & Sustainability",
+    "category_emoji": "🌱",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "CATL's Battery Swap Network Passes 2,000 Stations Across China",
+    "title_cn": "宁德时代换电网络突破两千座",
+    "source_url": "https://carnewschina.com/2026/07/01/catls-battery-swap-network-hits-2000-stations-milestone/",
+    "source_name": "CarNewsChina (carnewschina.com), July 1, 2026",
+    "tags": [
+      "宁德时代",
+      "CATL",
+      "battery swap",
+      "Choco-SEB",
+      "EV infrastructure",
+      "换电"
+    ],
+    "related_signals": [],
+    "industry_lens": "automotive",
+    "content_type": "daily",
+    "body": {
+      "signal": "CATL announced on July 1, 2026 that its Choco-SEB battery swap network reached 2,000 operational stations across China as of June 30, spanning 31 provinces and 180 cities with over 80 percent coverage in small and medium cities. The network added more than 200 stations a month through the second quarter, up from 700 stations in late 2025. CATL has opened its first two stations in Hong Kong and targets 3,000 stations across more than 190 mainland cities by the end of 2026.",
+      "china_scale": "CATL supplies close to half of China's EV batteries, so it controls the cell chemistry, the swap hardware, and the standards at once, which lets it roll out a national grid faster than any pure charging operator. New stations now ship with Shenxing supercharging piles, turning each site into a hybrid that both swaps packs and fast charges. Drivers can also earn about 40 yuan a day by returning batteries during peak power pricing, which turns parked packs into grid storage.",
+      "global_impact": "Battery swap converts an EV from a product into an energy service, cutting purchase price by unbundling the pack and removing charging waits, a model Western automakers have mostly abandoned. A 2,000-station base with standardized packs pressures global rivals to either license CATL's system or watch swap-ready EVs undercut them on upfront cost. The parked-battery revenue scheme also hands China a distributed grid-storage layer that utilities elsewhere lack.",
+      "monday_morning": "Automotive and energy executives should model how a swap network with grid-storage revenue changes total cost of ownership against their own charging bets, then decide whether to license, partner, or compete. Fleet operators running Chinese-built commercial EVs should evaluate swap contracts now, since downtime savings compound fastest in trucking and taxi duty cycles.",
+      "related_notes": ""
+    }
+  },
+  {
     "id": "2026-07-07-basepoint-origin-industrial-world-model",
     "date": "2026-07-07",
     "day_number": 133,
