@@ -1,5 +1,129 @@
 [
   {
+    "id": "2026-07-14-half-of-chinese-industrial-firms-run-ai-agents",
+    "date": "2026-07-14",
+    "day_number": 139,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "Nearly Half of China's Industrial Firms Now Run AI Agents",
+    "title_cn": "中国近半工业企业已部署AI智能体",
+    "source_url": "https://faxiangongchang.com/en/reports/china-industrial-ai-agent-2026",
+    "source_name": "Tianxia Gongchang Research (faxiangongchang.com), July 7, 2026",
+    "tags": [
+      "工业AI智能体",
+      "industrial AI agents",
+      "AI+制造",
+      "IDC",
+      "smart factories"
+    ],
+    "related_signals": [],
+    "industry_lens": "consumer",
+    "content_type": "daily",
+    "body": {
+      "signal": "Chinese industrial enterprises applying large models and AI agents rose from 9.6 percent in 2024 to 47.5 percent in 2025, IDC data cited by 36Kr and compiled in a July 7, 2026 Tianxia Gongchang report shows. Firms using them across several functions, including R&D, manufacturing, and supply chain, climbed from 1.7 percent to 35 percent. At Baosteel's hot-rolling line, Huawei's Pangu model raised finishing-mill prediction accuracy more than 5 percent and yield 0.5 percent, which Huawei Cloud values at over 90 million yuan in added annual revenue.",
+      "china_scale": "Beijing turned AI adoption into an execution program with quotas, published smart-factory lists, and subsidies. The January 2026 eight-ministry AI Plus Manufacturing plan targets 1,000 industrial AI agents and 100 industrial datasets by 2027, and hands computing-power and model vouchers to smaller factories. A dense supplier base and 4.8 million active factories give any working agent a vast installed base to spread across.",
+      "global_impact": "A manufacturing base where nearly half of firms run AI agents can compress the cost and quality gaps that took Western plants decades to build. IDC projects Chinese industrial AI spending near 90 billion yuan by 2028 at a 38 percent annual growth rate. The open question is monetization, since McKinsey finds only 6 percent of adopters capture real enterprise value, so scale alone leaves the productivity lead unsettled.",
+      "monday_morning": "Benchmark your own quality-inspection and scheduling workflows against Chinese lighthouse-factory results such as a 41 percent defect-rate cut. Buy proven agents instead of building in-house, since MIT finds purchased solutions succeed about three times as often, and fund the process redesign that actually moves profit.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-07-14-alipay-rebuilds-app-around-ai-agent",
+    "date": "2026-07-14",
+    "day_number": 138,
+    "category": "Platforms & Social",
+    "category_emoji": "🌐",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 4,
+    "title_en": "Alipay Rebuilds Its App Around an AI Agent to Race WeChat",
+    "title_cn": "支付宝以AI智能体重构App，抢先微信",
+    "source_url": "https://technode.com/2026/06/16/alipay-introduces-ai-powered-abao-taking-an-early-lead-in-chinas-super-app-ai-race/",
+    "source_name": "TechNode (technode.com), June 16, 2026",
+    "tags": [
+      "支付宝",
+      "Alipay Abao",
+      "super-app",
+      "agentic commerce",
+      "WeChat"
+    ],
+    "related_signals": [],
+    "industry_lens": "financial services",
+    "content_type": "daily",
+    "body": {
+      "signal": "Alipay opened invitation-only testing of Abao, an AI assistant it placed at the center of the app's biggest redesign, on June 16, 2026. Users swipe right to reach a chat interface that checks housing-fund balances, locates EV chargers, pays bills, and books services across tens of thousands of scenarios, with any fund transfer still requiring explicit confirmation. Tencent is testing a WeChat agent codenamed Xiaowei for a Q3 2026 public rollout, and Bloomberg reviewers called an early build promising on July 8.",
+      "china_scale": "Super apps make agentic commerce work because payments, identity, transport, and government services already sit inside one login for more than a billion people. Alipay reaches hundreds of millions of monthly users and WeChat about 1.4 billion, so one agent update ships to a national user base overnight. High-frequency, goal-directed tasks like paying a bill give these agents cleaner signal than open-ended chatbots.",
+      "global_impact": "China is productionizing the agent-does-the-shopping model that Amazon, Google, and Apple still describe as roadmap. Once an agent completes a purchase, the merchant relationship, ad placement, and default-service slot move to whoever owns the agent, resetting who controls consumer demand. Western platforms will meet Chinese proof that a conversational agent can replace the app grid as the primary interface.",
+      "monday_morning": "Map which customer touchpoints an AI agent could intermediate, then decide whether to build your own or plug into a platform agent before the default hardens. Treat agentic checkout as a live channel this year and test how your product gets discovered and bought when a machine, not a person, is browsing.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-07-13-beijing-curbs-overseas-access-top-ai-models",
+    "date": "2026-07-13",
+    "day_number": 137,
+    "category": "Policy & Governance",
+    "category_emoji": "📜",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 4,
+    "title_en": "Beijing Weighs Curbing Overseas Access to China's Top AI Models",
+    "title_cn": "北京考虑限制境外获取中国顶级AI模型",
+    "source_url": "https://www.reuters.com/world/china/beijing-is-looking-at-curbing-overseas-access-chinas-top-ai-models-sources-say-2026-07-07/",
+    "source_name": "Reuters, July 7, 2026",
+    "tags": [
+      "AI export controls",
+      "open-weight models",
+      "商务部",
+      "national security",
+      "GLM Qwen Doubao"
+    ],
+    "related_signals": [],
+    "industry_lens": "financial services",
+    "content_type": "daily",
+    "body": {
+      "signal": "Reuters reported on July 7, 2026 that China's Ministry of Commerce spent the past month meeting Alibaba, ByteDance, and Zhipu, maker of the GLM models under the Z.ai brand, about restricting overseas access to the country's most advanced AI systems, including models not yet released and those shipped as open weights. Officials weighed treating the unauthorized disclosure or theft of proprietary models as a national security crime and limiting which foreign investors may back domestic AI startups. A May roundtable of legal scholars, summarized in a Supreme People's Court journal, had already proposed a three-tier scheme that keeps frontier models domestic while routine open-source tools need only registration.",
+      "china_scale": "China routes the question through a single gatekeeper, the Ministry of Commerce, which already attaches export licenses to rare earths and chipmaking tools and can extend the same regime to model weights without new legislation. Since DeepSeek R1, the Qwen, GLM, and DeepSeek families have won global developer share on price and openness, giving Beijing leverage it can now meter. The security-review pipeline built for generative-AI filings gives regulators a ready mechanism to vet or withhold releases.",
+      "global_impact": "Businesses worldwide that route production traffic through Qwen, Doubao, and GLM APIs would face higher costs and supply risk if frontier access tightens or moves domestic-only. The move mirrors the US suspension of Anthropic's Fable 5 and Mythos 5 in June 2026, turning cutting-edge models into export-controlled technology on both sides. Weights already downloaded stay usable, so the contest is over the next model generation, not today's checkpoints.",
+      "monday_morning": "Stop building solely on Chinese frontier APIs. Map every product dependency on Qwen, GLM, or DeepSeek, mirror the open weights you rely on, and stand up a fallback route to a US or European provider before any geo-restriction lands in the terms of service.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-07-13-china-humanoid-robot-output-tops-100000",
+    "date": "2026-07-13",
+    "day_number": 136,
+    "category": "Robotics & Embodied AI",
+    "category_emoji": "🤖",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 3,
+    "title_en": "China's Humanoid Robot Output Will Top 100,000 Units This Year",
+    "title_cn": "中国今年人形机器人产量将超十万台",
+    "source_url": "https://www.chinadaily.com.cn/a/202607/07/WS6a4cb0a9a310986e2b463f35.html",
+    "source_name": "China Daily (Xinhua), July 7, 2026",
+    "tags": [
+      "人形机器人",
+      "humanoid robots",
+      "MIIT",
+      "WAIC 2026",
+      "embodied AI"
+    ],
+    "related_signals": [],
+    "industry_lens": "consumer",
+    "content_type": "daily",
+    "body": {
+      "signal": "China's humanoid robot output will exceed 100,000 units in 2026, Gan Xiaobin, deputy director of the science and technology department at the Ministry of Industry and Information Technology, said at a July 7 press conference for the World Artificial Intelligence Conference in Shanghai. He tied the surge to AI penetration among large industrial enterprises passing 30 percent and to the National AI Industry Investment Fund pulling in more private capital. WAIC 2026 runs July 17 to 20 with more than 1,100 exhibitors and over 300 global product debuts.",
+      "china_scale": "China pairs the world's deepest electronics and precision-parts supply chain with state investment funds that de-risk early volume, so makers like Unitree, UBTech, and Leju can drive unit costs down as output climbs. Local governments treat humanoids as a strategic industry and seed demand through factory pilots and public procurement. That combination turns lab demos into six-figure annual production faster than any rival manufacturing base.",
+      "global_impact": "A 100,000-unit year resets the cost curve for humanoids worldwide and pressures Tesla's Optimus alongside US and European entrants that still measure output in the thousands. Cheaper Chinese hardware will spread into logistics, manufacturing, and service work and set the reference price global buyers come to expect. Component suppliers and integrators outside China will compete against a domestic ecosystem already operating at scale.",
+      "monday_morning": "Request pilot units and pricing from both Chinese and Western humanoid vendors now to benchmark real capability against the marketing. Treat 2026 as the year to design one narrow, repetitive task around an embodied robot instead of waiting for a general-purpose machine.",
+      "related_notes": ""
+    }
+  },
+  {
     "id": "2026-07-10-jiuzhang-4-photonic-quantum-advantage",
     "date": "2026-07-10",
     "day_number": 135,
