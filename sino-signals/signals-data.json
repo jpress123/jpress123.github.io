@@ -1,5 +1,129 @@
 [
   {
+    "id": "2026-07-16-china-ties-ai-data-centers-to-green-power",
+    "date": "2026-07-16",
+    "day_number": 143,
+    "category": "Climate & Sustainability",
+    "category_emoji": "🌱",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 4,
+    "title_en": "China Ties AI Data Centers to Green Power in New Carbon Plan",
+    "title_cn": "中国新降碳计划要求AI数据中心提升绿电占比",
+    "source_url": "https://english.news.cn/20260710/650d029be6084c7d8da9a2591afc2eba/c.html",
+    "source_name": "Xinhua (english.news.cn), July 10, 2026",
+    "tags": [
+      "能源降碳行动计划",
+      "AI data centers",
+      "算电协同",
+      "green power",
+      "国家能源局"
+    ],
+    "related_signals": [],
+    "industry_lens": "automotive",
+    "content_type": "daily",
+    "body": {
+      "signal": "China's National Energy Administration released the Energy Sector Energy Conservation and Carbon Reduction Action Plan for 2026 to 2028 on July 10, 2026, the first national carbon plan to write artificial intelligence into its core. It directs AI-model innovation across energy production, supply, storage, and use, and pushes AI computing facilities to raise their green-electricity share while exposing computing loads as flexible demand the grid can shift. In transport it upgrades high-power charging first at stations above 40 percent holiday utilization and scales new-energy heavy trucks and green shipping fuels.",
+      "china_scale": "State planning turns a directive into installed capacity. China runs the world's largest EV charging network and its fastest data-center buildout, so one plan can steer where hundreds of new AI campuses draw power and how millions of chargers get sited. Authorities want renewables to supply roughly four-fifths of AI data-center power by 2030, up from about 11 percent in 2023.",
+      "global_impact": "Chinese data-center power demand is projected to rise 300 billion to 500 billion kilowatt-hours by 2030, close to a fifth of the country's total electricity-demand growth over the period. By making green-power share a metric for AI infrastructure, Beijing sets a template that Western regulators and hyperscalers will study as their own data centers strain local grids. The contest over AI now runs through who can power it cleanly and at low cost.",
+      "monday_morning": "Map the electricity source and cost behind every AI workload you run or buy, because carbon-linked power rules are moving from voluntary to mandatory. Treat compute-load flexibility, shifting training to off-peak green hours, as a lever you can pull now instead of a compliance problem for later.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-07-16-agibot-puts-humanoid-robots-on-assembly-lines",
+    "date": "2026-07-16",
+    "day_number": 142,
+    "category": "Robotics & Embodied AI",
+    "category_emoji": "🤖",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 5,
+    "title_en": "AgiBot Puts Humanoid Robots to Work on Chinese Assembly Lines",
+    "title_cn": "智元机器人让人形机器人正式上中国工厂流水线",
+    "source_url": "https://english.news.cn/20260414/5b2a807212414d68a59b55911bb54427/c.html",
+    "source_name": "Xinhua (english.news.cn), April 14, 2026",
+    "tags": [
+      "人形机器人",
+      "embodied AI",
+      "智元 AgiBot",
+      "Unitree 宇树",
+      "smart manufacturing"
+    ],
+    "related_signals": [],
+    "industry_lens": "consumer",
+    "content_type": "daily",
+    "body": {
+      "signal": "AgiBot's Genie G2 humanoid robots have worked full shifts on a live consumer-electronics assembly line in Nanchang, running final quality inspection at 310 units per hour with a success rate above 99.9 percent, Xinhua reported on April 14, 2026. The Shanghai-built machines calibrate to a new product in about five minutes and switch production lines in under four hours, tasks that fixed automation cannot do. Tablet maker Longcheer plans to expand its fleet to 100 units by the third quarter of 2026.",
+      "china_scale": "China shipped nearly 80 percent of the world's humanoid robots in 2025, and AgiBot alone took a 39 percent global share. Unitree is targeting up to 20,000 units in 2026 from a Yangtze Delta super-factory, and a June 2026 joint action by MIIT and SASAC targets more than 100 deployment scenarios and 10,000-unit rollouts. A dense supply base of motors, sensors, and low-cost batteries lets Chinese firms cut robot prices faster than rivals.",
+      "global_impact": "Robots that master delicate, high-mix work reset the labor math for consumer electronics, autos, and semiconductors, the sectors AgiBot names next. Chinese humanoid output is forecast to nearly double in 2026, which pressures Western manufacturers to answer on cost and speed this year. Whoever fields reliable embodied AI at factory scale first captures the data flywheel that trains the next generation.",
+      "monday_morning": "Pilot one embodied-AI cell on your hardest-to-automate task, because the payback now sits in months instead of years. Track Chinese unit prices and success rates as your benchmark, and lock in supply relationships before humanoid capacity gets booked out.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-07-15-mandarin-ai-music-model-enters-bytedance-apps",
+    "date": "2026-07-15",
+    "day_number": 141,
+    "category": "Creative & Culture",
+    "category_emoji": "🎨",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 3,
+    "title_en": "China's First Mandarin AI Music Model Wires Into ByteDance's Apps",
+    "title_cn": "国产首个纯中文AI音乐大模型接入字节跳动全平台",
+    "source_url": "https://hub.baai.ac.cn/view/56296",
+    "source_name": "BAAI Hub via Xinzhiyuan (hub.baai.ac.cn), July 13, 2026",
+    "tags": [
+      "歌歌AI",
+      "AI music",
+      "字节跳动",
+      "Suno",
+      "版权分成"
+    ],
+    "related_signals": [],
+    "industry_lens": "entertainment",
+    "content_type": "daily",
+    "body": {
+      "signal": "Hangzhou Yinlu Shandong AI released GeGe AI, a billion-parameter end-to-end Mandarin music model, and signed a nonexclusive royalty-sharing deal that places its catalog across ByteDance's seven apps, including Douyin, CapCut, Qishui Music, and Toutiao, around July 13, 2026. The model generates a full three-minute song in about 10 seconds on a single H-series GPU, roughly 20 times real-time. Founder Long Yong, a producer behind The Rap of China, built it from scratch to fix the flat pronunciation and off-key tone that Suno and Udio produce in Chinese.",
+      "china_scale": "Distribution is the moat. Piping GeGe AI into Douyin, CapCut, and the Fanqie apps ships a music engine to hundreds of millions of creators overnight, and the royalty split gives them a reason to use it. The company reports over a million creators and more than a hundred thousand paying users, with some earning thousands of yuan a day in royalties.",
+      "global_impact": "China is closing the loop that Suno, valued at 5.4 billion dollars in June, still leaves open, pairing generation with national-scale distribution and licensed monetization. IFPI ranks China the world's fourth-largest recorded-music market for the first time, and Deezer logged about 75,000 AI tracks uploaded daily by April. A model tuned to one language and welded to a super-app platform shows where the value in AI music actually settles.",
+      "monday_morning": "Assume machine-generated background music becomes free and default inside the platforms your audience already uses. Audit where your brand, catalog, or artists depend on stock and library music, then decide whether AI scoring is a threat to license around or a tool to adopt.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-07-15-cspc-astrazeneca-ai-designed-kidney-drug-pact",
+    "date": "2026-07-15",
+    "day_number": 140,
+    "category": "Deep Tech & Research",
+    "category_emoji": "🔬",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "AstraZeneca Pays CSPC to Design Kidney Drugs With Chinese AI",
+    "title_cn": "阿斯利康付费石药，以中国AI设计肾病药物",
+    "source_url": "https://www.fiercebiotech.com/biotech/astrazeneca-pays-go-chinese-partner-cspc-30m-form-kidney-drug-discovery-pact",
+    "source_name": "Fierce Biotech (fiercebiotech.com), July 3, 2026",
+    "tags": [
+      "石药集团 CSPC",
+      "AI drug design",
+      "AstraZeneca",
+      "siRNA",
+      "out-licensing"
+    ],
+    "related_signals": [],
+    "industry_lens": "pharma",
+    "content_type": "daily",
+    "body": {
+      "signal": "AstraZeneca paid CSPC Pharmaceutical 30 million dollars upfront on July 2, 2026 to jointly discover two kidney-disease drugs built on CSPC's AI molecular-design model and automated high-throughput screening system. The deal adds up to 540 million dollars in development milestones and 1.2 billion dollars tied to sales, with AstraZeneca holding an option for global or ex-China rights. It is the fourth CSPC alliance AstraZeneca has struck since 2024, following a January obesity pact worth up to 18.5 billion dollars.",
+      "china_scale": "CSPC runs AI design and robotic screening as one pipeline, letting it surface siRNA candidates that reach organs beyond the liver faster and cheaper than manual chemistry. China now files close to 70 percent of global AI-drug-discovery patents, and a deep bench of chemists plus state biotech funding lets platforms like CSPC's iterate on molecules at industrial pace. That turns AI-designed candidates into a repeatable export.",
+      "global_impact": "Chinese biotechs signed 169 licensing deals worth about 93 billion dollars in the first five months of 2026, up 87 percent from a year earlier, and now account for roughly half of global out-licensing. Western pharma keeps buying AI-designed molecules from China because its own early pipelines run thinner and more expensive. The contest has shifted from who runs the best lab to who owns the AI design platform feeding it.",
+      "monday_morning": "Treat Chinese AI-discovery platforms as suppliers, not only rivals. Map which of your preclinical programs could be sourced or co-developed through a partner like CSPC, and price in that a competitor may reach the clinic faster by licensing an AI-designed candidate this year.",
+      "related_notes": ""
+    }
+  },
+  {
     "id": "2026-07-14-half-of-chinese-industrial-firms-run-ai-agents",
     "date": "2026-07-14",
     "day_number": 139,
