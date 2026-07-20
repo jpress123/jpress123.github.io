@@ -1,5 +1,127 @@
 [
   {
+    "id": "2026-07-20-waico-rival-ai-governance-bloc",
+    "date": "2026-07-20",
+    "day_number": 146,
+    "category": "Policy & Governance",
+    "category_emoji": "📜",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 5,
+    "title_en": "China Launches a Rival Global AI Governance Body With 29 Founding Nations",
+    "title_cn": "中国联合29国成立世界人工智能合作组织",
+    "source_url": "https://www.sixthtone.com/news/1018788",
+    "source_name": "Sixth Tone, July 17, 2026",
+    "tags": [
+      "WAICO",
+      "global AI governance",
+      "世界人工智能合作组织",
+      "Global South",
+      "WAIC 2026"
+    ],
+    "related_signals": [],
+    "industry_lens": "education",
+    "content_type": "daily",
+    "body": {
+      "signal": "Twenty-nine countries signed the founding agreement for the World Artificial Intelligence Cooperation Organization on July 16, 2026, one day before the World AI Conference opened in Shanghai. Signatories include Russia, Indonesia, Brazil, Pakistan, Kazakhstan and Laos, with the organization permanently headquartered in Shanghai. Xi Jinping gave the opening keynote, his first at the conference in its nine year history, and pledged 5,000 AI training places for people from developing countries over five years plus AI application cooperation centers with ASEAN, the Arab League, the African Union and CELAC. UN Secretary-General Antonio Guterres attended the signing without joining the body.",
+      "china_scale": "Premier Li Qiang proposed the organization at WAIC 2025 and Beijing spent the following year converting the proposal into signatures. China pairs the institutional offer with concrete goods that most member states want and lack, namely open-weight models, training programs and affordable compute. Hosting the secretariat in Shanghai gives Chinese ministries permanent agenda-setting access to the members.",
+      "global_impact": "The world now carries two institutional frameworks for AI rules, one anchored in Brussels, Washington and the G7, the other assembling in Shanghai. Members aligning to WAICO can write AI regulation that owes nothing to the EU AI Act, the OECD AI Principles or the Hiroshima Process. Any company selling AI across both blocs will face two rulebooks that were designed by different authors for different ends.",
+      "monday_morning": "Ask your general counsel which of your growth markets signed the WAICO charter, and whether your AI compliance program assumes a single global standard. Where the answer is yes, start scoping the cost of a second compliance track before a member state publishes its first binding rule."
+    }
+  },
+  {
+    "id": "2026-07-20-huawei-atlas-950-superpod-debut",
+    "date": "2026-07-20",
+    "day_number": 147,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 4,
+    "title_en": "Huawei Shows Its 8,192 Chip AI Supercomputer Built Without American Parts",
+    "title_cn": "华为首次展出8192芯全国产AI超节点",
+    "source_url": "https://en.people.cn/n3/2026/0708/c90000-20475542.html",
+    "source_name": "People's Daily Online / Global Times, July 8, 2026",
+    "tags": [
+      "Huawei",
+      "Atlas 950",
+      "昇腾",
+      "compute sovereignty",
+      "WAIC 2026"
+    ],
+    "related_signals": [],
+    "industry_lens": "financial services",
+    "content_type": "daily",
+    "body": {
+      "signal": "Huawei put the physical Atlas 950 SuperPoD on a show floor for the first time at the World AI Conference in Shanghai, which ran July 17 to 20, 2026. Tang Wenkan of the Shanghai Municipal Commission of Economy and Informatization named it the largest super node in the industry when he previewed the conference lineup on July 7. The system wires 8,192 Ascend 950DT processors together over Huawei's UnifiedBus 2.0 interconnect so the chips share one memory pool and behave as a single logical machine. Huawei's own performance figures of 8 exaflops of FP8 compute and 6.7 times an Nvidia NVL144 remain self-reported and lack third-party benchmarks.",
+      "china_scale": "China ships more than 100 million AI smart terminals a year and the adoption rate of AI among large-scale industrial enterprises has passed 30 percent, according to MIIT official Gan Xiaobin. That demand base gives domestic silicon a guaranteed buyer even where per-chip performance trails Nvidia. State procurement rules that favor approved domestic chips supply the volume Huawei needs to fund the next architecture revision.",
+      "global_impact": "The strategic claim here is architectural, not raw speed. By treating interconnect as a memory fabric, Huawei compensates for weaker individual chips by linking far more of them, which weakens export controls as a ceiling on Chinese frontier training. The CANN software stack still trails CUDA in libraries and trained engineers, so the practical gap depends on how fast that closes.",
+      "monday_morning": "Ask your infrastructure team what a second, non-Nvidia training stack would cost you to support, and whether any supplier or joint-venture partner already runs on Ascend. Treat Huawei's published benchmarks as vendor claims until an independent party validates them at scale."
+    }
+  },
+  {
+    "id": "2026-07-17-china-opens-first-unmanned-ai-driven-lab",
+    "date": "2026-07-17",
+    "day_number": 145,
+    "category": "Deep Tech & Research",
+    "category_emoji": "🔬",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 4,
+    "title_en": "China Opens First Unmanned AI Lab to Run Experiments Without Humans",
+    "title_cn": "中国启用首个无人AI科研实验室",
+    "source_url": "http://www.ecns.cn/cns-wire/2026-07-09/detail-ihfhemcv3613446.shtml",
+    "source_name": "Ecns.cn (China News Service), July 8, 2026",
+    "tags": [
+      "AI for Science",
+      "无人实验室",
+      "复旦大学",
+      "materials discovery",
+      "WAIC 2026"
+    ],
+    "related_signals": [],
+    "industry_lens": "education",
+    "content_type": "daily",
+    "body": {
+      "signal": "China opened its first AI-driven laboratory that conducts scientific research without human operators, at Shanghai's Caohejing Hi-Tech Park, Ecns.cn reported on July 8, 2026. Built by the Shanghai Academy of AI for Science, affiliated with Fudan University, the platform links AI computing to experimental equipment for a fully automated workflow, and has completed validation trials in biomedicine, energy materials, and formulation science. A five-day live trial began that week, with results due at the World Artificial Intelligence Conference on July 18.",
+      "china_scale": "State-backed AI for Science funding, a dense scientific-instrument manufacturing base, and centralized research institutes let China stand up autonomous labs and copy the design across campuses. The platform's core modules transfer across tasks, so one build can serve many academic and industrial problems. Sugon already fields a 60,000-chip AI-for-science cluster on domestic hardware to feed this kind of work.",
+      "global_impact": "Autonomous labs compress the discover, test, and iterate loop that gates drug, battery, and materials breakthroughs, turning research speed into an industrial advantage. When Chinese labs run experiments around the clock without human bottlenecks, Western universities and R&D-heavy firms face a widening pace gap. The country that automates discovery first compounds a data and know-how lead that is hard to close.",
+      "monday_morning": "Ask where a self-driving lab could cut your discovery cycle, in formulation, materials, or assay screening, and fund one pilot instead of waiting for vendors. Track the WAIC July 18 results as a benchmark for what autonomous research now delivers.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-07-17-alipay-rebuilds-billion-user-app-around-ai-agent",
+    "date": "2026-07-17",
+    "day_number": 144,
+    "category": "Platforms & Social",
+    "category_emoji": "📱",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 4,
+    "title_en": "Alipay Rebuilds Its Billion-User Super App Around an AI Agent",
+    "title_cn": "支付宝以AI智能体重构十亿用户超级应用",
+    "source_url": "https://technode.com/2026/06/16/alipay-introduces-ai-powered-abao-taking-an-early-lead-in-chinas-super-app-ai-race/",
+    "source_name": "TechNode (technode.com), June 16, 2026",
+    "tags": [
+      "支付宝 Alipay",
+      "AI agent",
+      "蚂蚁集团 Ant Group",
+      "agentic commerce",
+      "super app"
+    ],
+    "related_signals": [],
+    "industry_lens": "financial services",
+    "content_type": "daily",
+    "body": {
+      "signal": "Ant Group's Alipay unveiled Abao, an AI assistant that becomes a primary entry point to the app, and opened invite-only testing on June 16, 2026, TechNode reported. Users swipe right to reach a chat interface that checks housing-fund balances, finds EV chargers, pays bills, and books services from a single prompt, across tens of thousands of real-world scenarios. It is the largest redesign in Alipay's history, and any fund transfer still requires explicit user confirmation.",
+      "china_scale": "Alipay carries about 1 billion users and already connects to government benefits, utilities, transport, and healthcare, so an agent layer reaches national scale the day it ships. High-frequency, goal-directed payment tasks give the agent clear intent to act on, and Ant controls the full stack from identity to settlement. WeChat, the larger social super-app, is still deciding how to add agents, which hands Alipay an opening.",
+      "global_impact": "Agentic commerce, where an assistant completes the purchase instead of surfacing a link, threatens the app-and-search economics that Western platforms depend on. A live agent at billion-user scale gives China a working template for the interface that could replace tapping through apps. Western banks, retailers, and platform owners now face a concrete model of conversational, action-taking money movement.",
+      "monday_morning": "Map which customer journeys an AI agent could complete end to end, from bill pay to booking, and decide whether you supply that agent or get intermediated by one. Watch Alipay's rollout pace as the clock on agentic commerce reaching your market.",
+      "related_notes": ""
+    }
+  },
+  {
     "id": "2026-07-16-china-ties-ai-data-centers-to-green-power",
     "date": "2026-07-16",
     "day_number": 143,
