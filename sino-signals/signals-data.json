@@ -1,5 +1,67 @@
 [
   {
+    "id": "2026-07-21-china-mobile-tiangong-industrial-platform",
+    "date": "2026-07-21",
+    "day_number": 148,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "China Mobile and Ten State Giants Launch a National Industrial AI Platform",
+    "title_cn": "中国移动联合十家央企发布工业互联网品牌“移动天工”",
+    "source_url": "https://finance.sina.com.cn/roll/2026-07-17/doc-iniickay1461793.shtml",
+    "source_name": "Sina Finance, July 17, 2026",
+    "tags": [
+      "移动天工",
+      "industrial internet",
+      "state-owned enterprises",
+      "AI-native platform",
+      "WAIC 2026"
+    ],
+    "related_signals": [],
+    "industry_lens": "automotive",
+    "content_type": "daily",
+    "body": {
+      "signal": "China Mobile launched a unified industrial internet brand called Mobile Tiangong on July 17, 2026, at the World AI Conference in Shanghai, joined by China Electronics Technology Group, China Electronics and eight other central state-owned enterprises. The company calls it the first AI-native industrial internet platform built by a central SOE, combining the Tiangong platform, Mobile Cloud, 5G private networks, satellite internet and industrial optical networking into one stack. The underlying platform already serves more than 300,000 Chinese enterprises, carries over 20 million public-cloud device connections, and holds more than 30,000 deployed 5G plus industrial projects.",
+      "china_scale": "Ten central SOEs sharing one platform brand means procurement, standards and data governance move together across steel, energy, shipping and electronics at the same time. China Mobile owns the network, the compute and the cloud, so a factory buys connectivity and AI decisioning from one vendor with one contract. State ownership on both the supply and demand side removes the commercial friction that slows industrial software adoption in fragmented Western markets.",
+      "global_impact": "Named deployments carry hard numbers. At Ansteel the platform cut safety administrative work by 90 percent and unplanned downtime by 60 percent. At COSCO Shipping ports China Mobile ran resident engineering teams through more than ten rounds of retrofit to lift vessel handling safety and logistics equipment efficiency. At PetroChina an oil and gas intelligence layer with roughly one hundred applications raised production stability 16.7 percent and overall production efficiency 30 percent. Siemens, PTC, Rockwell and Honeywell now face a competitor that bundles the network layer into the industrial software price.",
+      "monday_morning": "Pull the last three quotes your operations team received for industrial IoT connectivity, MES and predictive maintenance, and add them up. Ask your CIO what a single bundled contract covering network, compute and AI decisioning would have cost instead, then ask which of your Asian plants could be quoted on that basis within a year.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-07-21-seedance-25-api-public-launch",
+    "date": "2026-07-21",
+    "day_number": 149,
+    "category": "Creative & Culture",
+    "category_emoji": "🎨",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "ByteDance Opens Seedance to Any Developer at a Third of Google's Price",
+    "title_cn": "字节跳动开放Seedance接口，价格约为谷歌的三分之一",
+    "source_url": "https://www.techtimes.com/articles/320683/20260716/seedance-25-api-live-bytedances-30-second-ai-video-carries-unresolved-copyright-risk.htm",
+    "source_name": "Tech Times, July 16, 2026",
+    "tags": [
+      "Seedance 2.5",
+      "ByteDance",
+      "AI video",
+      "BytePlus",
+      "copyright"
+    ],
+    "related_signals": [],
+    "industry_lens": "entertainment",
+    "content_type": "daily",
+    "body": {
+      "signal": "ByteDance opened public API access to Seedance 2.5 through its BytePlus international cloud platform on July 16, 2026, completing a rollout announced at the Volcano Engine FORCE conference in Beijing on June 23. Any developer with a BytePlus account can now send one call and receive a continuous 30 second clip with synchronized audio, generated in a single pass with no stitching. The model accepts up to 50 multimodal reference assets, up from 15 in Seedance 2.0, and supports region-level editing that changes one element of a shot while holding the rest fixed. Artificial Analysis tracks Seedance audio-inclusive generation at roughly $9 per minute against about $24 per minute for Google Veo on Vertex AI. ByteDance reported $2 billion in annual recurring revenue for the enterprise platform as of June 23, before the public API opened.",
+      "china_scale": "China's short drama industry already generates the volume that makes 30 second single-pass output immediately useful, and Chinese studios ship hundreds of AI-assisted episodes a day. Domestic distribution through Douyin and Jianying gives ByteDance a training and feedback loop that no Western video model has. Sora went offline on April 26, 2026, leaving Seedance, Kling and Veo to divide the enterprise market.",
+      "global_impact": "Director Jason Zada priced 15 seconds of high-definition footage at roughly $5, and a 90 second concept reel at a few dozen dollars. That resets what a pitch reel, a previsualization pass or a regional ad variant costs anywhere in the world. The legal position stays unresolved. Disney, Warner Bros. Discovery, Paramount Skydance, Netflix and Sony Pictures each sent cease and desist letters in February 2026, the Motion Picture Association followed on February 22, and no major studio has filed a US federal suit. Studio employees are reportedly using Seedance without formal approval, routing scripts and unreleased footage through an API subject to China's National Intelligence Law.",
+      "monday_morning": "Ask your creative and marketing leads whether anyone on their teams has already submitted brand assets or unreleased material to a Chinese video API, and get the answer in writing. Then have legal and security publish a content classification rule separating public creative material from proprietary assets before the Andersen v. Stability AI trial opens on September 8, 2026.",
+      "related_notes": ""
+    }
+  },
+  {
     "id": "2026-07-20-waico-rival-ai-governance-bloc",
     "date": "2026-07-20",
     "day_number": 146,
