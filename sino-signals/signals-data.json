@@ -1,5 +1,130 @@
 [
   {
+    "id": "2026-07-23-csg-electricity-carbon-computing-platform",
+    "date": "2026-07-23",
+    "day_number": 152,
+    "category": "Climate & Sustainability",
+    "category_emoji": "🌱",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 3,
+    "title_en": "China Southern Power Grid Fuses Electricity, Carbon, and Computing Into One AI Platform",
+    "title_cn": "南方电网打造电碳算协同AI平台",
+    "source_url": "http://www.prnewswire.com/news-releases/china-southern-power-grid-showcases-ai-innovations-at-world-ai-conference-302831636.html",
+    "source_name": "PR Newswire (China Southern Power Grid), July 22, 2026",
+    "tags": [
+      "power grid",
+      "energy AI",
+      "WAIC 2026",
+      "carbon management"
+    ],
+    "related_signals": [
+      "2026-07-16-china-ties-ai-data-centers-to-green-power"
+    ],
+    "industry_lens": "automotive",
+    "content_type": "daily",
+    "body": {
+      "signal": "China Southern Power Grid unveiled what it calls China's first industry-level platform coordinating electricity, carbon, and computing at the World AI Conference in Shanghai, announced July 22, 2026. Its MegaWatt Yunrui planning agent generated a complete distribution-network plan, including risk assessment and grid topology, in 10 minutes during a live demonstration. The agent was named one of the conference's Top 10 Signature Exhibits, the only central state-owned enterprise project to make the list among more than 1,100 exhibitors.",
+      "china_scale": "Coordination between computing infrastructure and power systems entered China's Government Work Report for the first time this year, giving the utility a national mandate. CSG serves five provinces and hundreds of millions of connected devices, and its stack runs end to end on proprietary technology, from the MegaWatt Multimodal 2.0 power-sector foundation model to the PowerAtomOS operating system for grid IoT devices. One state utility can push the platform across an entire regional grid by decision, not by market adoption.",
+      "global_impact": "Western utilities treat AI data centers as a grid burden, with multi-year interconnection queues in the US and Europe. China is inverting the frame, treating computing load, carbon accounting, and grid dispatch as one co-optimized system. If the model works at CSG scale, it sets the reference architecture for how national grids absorb AI power demand while holding carbon targets.",
+      "monday_morning": "Energy-intensive operators, including EV charging networks and fleet electrification programs, should ask their utility partners whether grid planning is AI-assisted and how fast interconnection studies can run. Benchmark the 10-minute planning demo against your current interconnection timeline, then press regulators on what closes the gap.",
+      "related_notes": "Builds on the July 16 signal on China's energy-sector carbon plan writing AI into national policy."
+    }
+  },
+  {
+    "id": "2026-07-23-ubtech-u1-companion-robot-launch",
+    "date": "2026-07-23",
+    "day_number": 153,
+    "category": "Robotics & Embodied AI",
+    "category_emoji": "🤖",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 3,
+    "title_en": "UBTech Sells 13,000 Humanoid Companion Robots in One Day",
+    "title_cn": "优必选人形陪伴机器人首日订单破1.3万",
+    "source_url": "https://newatlas.com/robotics/u1-worlds-first-mass-produced-humanoid-robot/",
+    "source_name": "New Atlas, July 18, 2026",
+    "tags": [
+      "humanoid robots",
+      "UBTech",
+      "companion robots",
+      "eldercare"
+    ],
+    "related_signals": [
+      "2026-07-16-agibot-puts-humanoid-robots-on-assembly-lines",
+      "2026-07-13-china-humanoid-robot-output-tops-100000"
+    ],
+    "industry_lens": "consumer",
+    "content_type": "daily",
+    "body": {
+      "signal": "UBTech launched its Uworld U1 series in Shenzhen in mid-July 2026, calling it the world's first full-size, mass-produced ultrabionic companion robot, and logged more than 13,000 orders on launch day. The line spans a semi-torso U1 Lite to a full-body U1 Ultra, priced from 119,800 to 990,000 yuan, about 17,700 to 145,700 dollars. The robots carry silicone skin with pores and wrinkles, 88 servo joints, and 300 micro-expressions, and are marketed for emotional companionship in the home.",
+      "china_scale": "China already leads the world in industrial humanoids, with national output projected to top 100,000 units this year, and UBTech is the first to point that supply chain at the home. A meaningful share of day-one orders came from demonstration halls and government procurement programs, a distinctly Chinese channel that guarantees early volume while consumer demand matures. State interest in eldercare technology gives companion robots a policy tailwind no Western market matches.",
+      "global_impact": "The launch tests whether humanoids can sell as consumer products at luxury-car prices before the underlying AI is ready, and early demos show response lags of tens of seconds in conversation. If the category holds, Tesla, Figure, and 1X face a Chinese incumbent already in mass production for the home. The companionship framing also opens regulatory and ethical questions about AI intimacy that Western consumer-protection regimes have yet to address.",
+      "monday_morning": "Consumer-products and eldercare leaders should assign one analyst to track U1 delivery volumes, return rates, and user reviews through the autumn. Decide now whether your brand's answer to companion robotics is hardware, a service layer on someone else's robot, or a deliberate pass.",
+      "related_notes": "Follows the July 13 signal on 100,000-unit humanoid output and the July 16 AgiBot factory deployment, extending the arc from factory to living room."
+    }
+  },
+  {
+    "id": "2026-07-22-hongguo-thousand-drama-plan",
+    "date": "2026-07-22",
+    "day_number": 150,
+    "category": "Creative & Culture",
+    "category_emoji": "🎨",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 3,
+    "title_en": "Hongguo Funds 1,000 Human-Made Dramas Against the AI Flood",
+    "title_cn": "红果“千部计划”扶持千部真人短剧",
+    "source_url": "https://www.rmzxw.com.cn/c/2026-06-24/3937328.shtml",
+    "source_name": "People's CPPCC Daily Online, June 24, 2026",
+    "tags": [
+      "micro-drama",
+      "ByteDance",
+      "content funding",
+      "Hongguo"
+    ],
+    "related_signals": [],
+    "industry_lens": "entertainment",
+    "content_type": "daily",
+    "body": {
+      "signal": "At the Shanghai TV Festival's White Magnolia micro-drama forum on June 23, ByteDance's free short-drama platform Hongguo launched its Thousand Drama Plan, committing to fund at least 1,000 live-action micro-dramas on realistic themes this year at 200,000 yuan per title. Within the first month the platform confirmed investment in more than 200 projects, with most entering production in July. The program lands while AI-generated titles account for over 95 percent of China's new micro-drama releases.",
+      "china_scale": "Hongguo reaches 304 million monthly active users who average 125 minutes a day on the app, per QuestMobile. Douyin Group's short-drama copyright center backs live-action with a guarantee budget above 1.5 billion yuan for 2026, per-title incentives up to 1.5 million yuan, and a 200 million yuan fund for realist, suspense and ensemble content. One platform decision redirects spending across more than 1,000 partner studios at once.",
+      "global_impact": "The platform that hosts the world's largest flood of AI-generated drama is now paying a premium for human-made work, positioning live-action as a differentiated quality tier against viewer fatigue with formulaic AI titles. Netflix, YouTube and the US short-drama apps ReelShort and DramaBox face the same segmentation question as generated video fills their pipelines. China is running the human-versus-generated content experiment first, at full market scale.",
+      "monday_morning": "Ask your content or brand team where generated volume is eroding engagement in your category, and price what a certified human-made tier would cost. Track Hongguo's completion-rate and view-through data this autumn as the first market evidence of what audiences reward when generation is free.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-07-22-open-models-10-billion-downloads",
+    "date": "2026-07-22",
+    "day_number": 151,
+    "category": "Deep Tech & Research",
+    "category_emoji": "🔬",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "China's Open-Source AI Models Pass 10 Billion Global Downloads",
+    "title_cn": "中国开源大模型全球下载量突破百亿",
+    "source_url": "https://www.bjnews.com.cn/detail/1784516639129565.html",
+    "source_name": "The Beijing News, July 20, 2026",
+    "tags": [
+      "open source",
+      "MIIT",
+      "Qwen",
+      "DeepSeek"
+    ],
+    "related_signals": [],
+    "industry_lens": "education",
+    "content_type": "daily",
+    "body": {
+      "signal": "At a State Council Information Office briefing on July 20, MIIT chief engineer Wang Weiming reported that China's open-source large models have passed 10 billion cumulative downloads worldwide. The same half-year report put AI adoption above 30 percent among larger manufacturers and China's intelligent computing capacity at 2,185 exaflops, up 177 percent year on year. The figure is now an official national performance indicator, presented alongside industrial output and export data.",
+      "china_scale": "Open weights are China's distribution strategy for AI influence. Alibaba's Qwen family has overtaken Meta's Llama in cumulative Hugging Face downloads, and DeepSeek, Kimi and GLM release competitive weights at a fraction of Western training prices. Every download seeds a fine-tune, a course syllabus or a startup built on a Chinese base model, and the domestic compute buildout keeps the release cadence funded.",
+      "global_impact": "Developer mindshare compounds. Universities, research labs and cost-sensitive companies worldwide increasingly teach, benchmark and build on Chinese open weights because they are free and strong, which makes Chinese architectures the default substrate outside the closed US frontier. Western closed-model vendors now compete against free, and Western open-source efforts have lost the volume lead by an order of magnitude.",
+      "monday_morning": "Ask your engineering and data-science leads which Chinese open-weight models are already running in your stack, sanctioned or not. Set an evaluation, licensing and data-provenance policy for them this quarter, so the decision is deliberate before dependence becomes an audit finding.",
+      "related_notes": ""
+    }
+  },
+  {
     "id": "2026-07-21-china-mobile-tiangong-industrial-platform",
     "date": "2026-07-21",
     "day_number": 148,
