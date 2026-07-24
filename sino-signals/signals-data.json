@@ -1,5 +1,67 @@
 [
   {
+    "id": "2026-07-24-panshi-science-foundation-model-2",
+    "date": "2026-07-24",
+    "day_number": 154,
+    "category": "Deep Tech & Research",
+    "category_emoji": "🔬",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 3,
+    "title_en": "Chinese Academy of Sciences Deploys AI Science Model to Accelerate Discovery",
+    "title_cn": "中科院部署磐石科学大模型加速科学发现",
+    "source_url": "https://www.news.cn/tech/20260717/b9ad780bb2684050a3ea05bdf861619f/c.html",
+    "source_name": "Xinhua, July 17, 2026",
+    "tags": [
+      "AI for Science",
+      "Chinese Academy of Sciences",
+      "foundation model",
+      "scientific discovery"
+    ],
+    "related_signals": [],
+    "industry_lens": "pharma",
+    "content_type": "daily",
+    "body": {
+      "signal": "The Chinese Academy of Sciences released PanShi Science Foundation Model 2.0 at the World AI Conference in Shanghai on July 17, 2026, one year after the first version. The team assembled 8 million high-quality scientific reasoning records across more than 200 research tasks, training the model to reason along knowledge and evidence chains and to handle understanding, prediction, and generation across scientific modalities. PanShi 2.0 already runs in mechanics, astronomy, and chemistry and has reached more than 30 universities, research institutes, and central state-owned enterprises.",
+      "china_scale": "PanShi pairs a general-plus-specialist training path with a three-tier compute base combining supercomputing, intelligent computing, and high-speed scientific computers, letting it generate its own high-precision data for molecular dynamics and quantum chemistry. State research funding and a unified national compute network let one CAS platform serve dozens of institutions at once, and derivative agents for literature analysis and innovation scoring are already deployed. China can push a single research backbone across its academic and SOE ecosystem by direction, not by market adoption.",
+      "global_impact": "Western AI-for-science efforts sit inside private labs and individual universities, with no shared national backbone. A state-built foundation model that standardizes scientific reasoning and feeds its own simulation data compresses the research loop from literature review to experiment. If PanShi holds at CAS scale, it sets a template for state-directed scientific productivity that Western research systems, funded and organized very differently, will work hard to match.",
+      "monday_morning": "R&D and life-sciences leaders should map which parts of their discovery pipeline, from literature triage to simulation, an in-house science model could shorten. Pilot one narrow domain against a measured baseline this quarter, then decide whether to build, buy, or partner before the capability gap widens.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-07-24-china-launches-waico-ai-governance-body",
+    "date": "2026-07-24",
+    "day_number": 155,
+    "category": "Policy & Governance",
+    "category_emoji": "🏛️",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "China Launches Global AI Cooperation Organization With Twenty-Nine Founding Nations",
+    "title_cn": "中国牵头成立世界人工智能合作组织 29国签署",
+    "source_url": "http://en.cppcc.gov.cn/2026-07/20/c_1198497.htm",
+    "source_name": "Xinhua (CPPCC English), July 20, 2026",
+    "tags": [
+      "AI governance",
+      "WAICO",
+      "WAIC 2026",
+      "multilateralism"
+    ],
+    "related_signals": [
+      "2026-07-22-open-models-10-billion-downloads"
+    ],
+    "industry_lens": "education",
+    "content_type": "daily",
+    "body": {
+      "signal": "On July 16, 2026, twenty-nine countries signed the founding agreement for the World Artificial Intelligence Cooperation Organization, an intergovernmental body headquartered in Shanghai, which Xi Jinping announced at the World AI Conference the next day. Founding members include Russia, Pakistan, Indonesia, Brazil, and Kazakhstan alongside a mix of African and Asian states, with UN Secretary-General Antonio Guterres present at the opening. China paired the launch with a pledge of 5,000 AI training opportunities for developing countries over five years and an offer to share its MAZU meteorological warning system with 30 countries.",
+      "china_scale": "China has hosted WAIC annually since 2018 and now anchors a permanent governance body on its own soil, giving Beijing a standing convening role over Global South AI policy. Its open-source models, downloaded more than 10 billion times, and its capacity-building programs give the organization real infrastructure to offer members, well beyond declarations. One state can turn its export of models, training, and standards into a durable institutional bloc.",
+      "global_impact": "WAICO creates a China-centered alternative to Western-led AI governance forums at a moment when the United States and European Union are tightening export controls and diverging on rules. For developing countries weighing whose standards and models to adopt, a Shanghai-based body offering training, tools, and open models is a concrete draw. Western governments now face a competing standards track that could set defaults across much of the Global South.",
+      "monday_morning": "Executives with operations across Asia, Africa, or Latin America should map which markets are joining WAICO and whether Chinese AI standards will shape local procurement. Brief your policy and compliance teams now on a two-track governance world, and decide where interoperability with Chinese standards becomes a commercial requirement.",
+      "related_notes": "Connects to the July 22 signal on China's open-source models passing 10 billion downloads, the infrastructure WAICO offers members."
+    }
+  },
+  {
     "id": "2026-07-23-csg-electricity-carbon-computing-platform",
     "date": "2026-07-23",
     "day_number": 152,
