@@ -1,5 +1,67 @@
 [
   {
+    "id": "2026-07-27-china-anthropomorphic-ai-rules-in-force",
+    "date": "2026-07-27",
+    "day_number": 157,
+    "category": "Policy & Governance",
+    "category_emoji": "🏛️",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "China's AI Companion Rules Take Effect, Banning Virtual Partners for Minors",
+    "title_cn": "中国AI拟人化互动新规施行 禁向未成年人提供虚拟伴侣",
+    "source_url": "https://www.cac.gov.cn/2026-04/10/c_1777558395078289.htm",
+    "source_name": "Cyberspace Administration of China, effective July 15, 2026",
+    "tags": [
+      "AI companions",
+      "anthropomorphic AI",
+      "minor protection",
+      "CAC"
+    ],
+    "related_signals": [
+      "2026-07-24-china-launches-waico-ai-governance-body"
+    ],
+    "industry_lens": "entertainment",
+    "content_type": "daily",
+    "body": {
+      "signal": "China's Interim Measures for the Administration of Anthropomorphic AI Interaction Services took effect on July 15, 2026, the country's first national rules written specifically for AI companions and emotional chatbots. Five agencies issued the order, led by the Cyberspace Administration of China with the National Development and Reform Commission, the Ministry of Industry and Information Technology, the Ministry of Public Security, and the market regulator. Providers must label every interaction as machine generated, remind users after two continuous hours of use, ban virtual partner and virtual relative services for minors, and step in when a user signals self harm.",
+      "china_scale": "The rules bind any service offering ongoing emotional interaction to users inside China, and any app with 1 million registered or 100,000 monthly active users must file a security assessment with provincial regulators. App stores must verify that filing before listing, giving Beijing a single choke point across the whole companion market. Penalties reach 200,000 yuan where a user's life or health is harmed.",
+      "global_impact": "Western companion apps such as Character.AI and Replika face mounting lawsuits over minors and emotional dependency, yet no US or EU rule targets the category directly. China now has an enforceable template that names the harms, caps continuous use, and pins liability on the provider. Regulators in other markets will study it as they draft their own limits on emotionally manipulative AI.",
+      "monday_morning": "Any leader shipping a conversational or companion feature should audit it against these rules now, since compliance in China previews where Western regulators are heading. Build in machine identity disclosure, usage time reminders, minor detection, and a self harm escalation path before a regulator or plaintiff demands them.",
+      "related_notes": "Pairs with the July 24 signal on China launching the WAICO governance body, the outward face of the same regulatory push."
+    }
+  },
+  {
+    "id": "2026-07-27-ant-agentar-business-agent-super-factory",
+    "date": "2026-07-27",
+    "day_number": 156,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 3,
+    "title_en": "Ant Group Launches Enterprise Agent Factory to Set China's Deployment Standard",
+    "title_cn": "蚂蚁数科发布商业智能体超级工厂 抢定中国部署标准",
+    "source_url": "https://eu.36kr.com/en/p/3907590205085056",
+    "source_name": "36Kr, July 23, 2026",
+    "tags": [
+      "AI agents",
+      "Ant Group",
+      "enterprise AI",
+      "Agentar"
+    ],
+    "related_signals": [],
+    "industry_lens": "financial services",
+    "content_type": "daily",
+    "body": {
+      "signal": "Ant Group's digital technology arm unveiled a Super Factory for Business Agents at the World AI Conference in Shanghai, running on an application platform called Agentar 2.0 that ships with nearly 200 job level digital expert templates and hundreds of subscribable agent tools. Vice President Sun Lei said the platform cuts enterprise agent delivery time by 72 percent and research and development cost by more than 65 percent while holding 99.9 percent operational stability. In finance it reports answer accuracy of 90 to 95 percent and 85 percent consistency with human specialists.",
+      "china_scale": "Ant built the stack on its own vertical models and more than twenty years of payments, insurance, and wealth management experience, then packaged it for resale to banks, hospitals, and energy firms. A single vendor can hand any enterprise a pre-tested agent that clears financial compliance out of the box, collapsing the custom build most Western firms still commission. Ant is also drafting a China specific engineering standard it calls an industry Harness.",
+      "global_impact": "Ant, Tencent, Alibaba, and Baidu all launched competing enterprise agent platforms at the same conference, a capability and price race with no direct Western equivalent at this scale. Standardized, compliance ready agents sold as products reset the unit economics of enterprise AI, where US buyers still pay for bespoke integration. If pay by result pricing spreads, it pressures every vendor selling agents by the seat.",
+      "monday_morning": "Enterprise buyers should benchmark their current agent build cost and timeline against Ant's claimed 72 percent faster delivery, then ask vendors for outcome based pricing tied to accuracy and ROI. Treat regulated function agents in finance and health as the near term battleground and demand audited accuracy numbers.",
+      "related_notes": ""
+    }
+  },
+  {
     "id": "2026-07-24-panshi-science-foundation-model-2",
     "date": "2026-07-24",
     "day_number": 154,
