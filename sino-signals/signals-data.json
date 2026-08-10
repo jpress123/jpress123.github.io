@@ -1,5 +1,261 @@
 [
   {
+    "id": "2026-07-31-fudan-single-electron-quantum-flash-memory",
+    "date": "2026-07-31",
+    "day_number": 165,
+    "category": "Deep Tech & Research",
+    "category_emoji": "🔬",
+    "signal_strength": "weak",
+    "strength_emoji": "🟡",
+    "impact_score": 3,
+    "title_en": "Fudan Stores a Data Bit in One Electron, Reaching Memory's Physical Limit",
+    "title_cn": "复旦实现单电子存储一比特 逼近存储物理极限",
+    "source_url": "https://www.chinadaily.com.cn/a/202607/24/WS6a62c03fa310986e2b467125.html",
+    "source_name": "China Daily, July 24, 2026",
+    "tags": [
+      "single-electron memory",
+      "2D flash",
+      "semiconductors"
+    ],
+    "related_signals": [
+      "2026-07-10-jiuzhang-4-photonic-quantum-advantage",
+      "2026-05-01-wsi2n4-wafer-scale-p-type-2d-semiconductor"
+    ],
+    "industry_lens": "education",
+    "content_type": "daily",
+    "body": {
+      "signal": "A Fudan University team led by Liu Chunsen and Zhou Peng reported a two-dimensional quantum flash memory that stores one bit of data by trapping and reading a single electron at room temperature, published in Science on July 17, 2026. The device holds the charge with no power and opens a 0.5 volt memory window from that lone electron, a tenfold gain over earlier single-electron attempts. Today's DRAM needs about 200,000 electrons to hold one bit, and the work follows the group's PoX flash in Nature in April 2025 and its CY-01 two-dimensional flash chip in Nature in October 2025.",
+      "china_scale": "The result comes from Fudan's State Key Laboratory of Integrated Chips and Systems after more than a decade of patient device physics, the kind of long-horizon hardware bet that Chinese state key labs fund through slow cycles. China wants to control its own memory and chip stack, so a domestic result at the physical limit of storage fits national compute and self-reliance goals. A run of Nature and Science papers from one lab shows how fast the group moves from theory to a working device.",
+      "global_impact": "Memory that is fast, low power, and non-volatile at the single-electron limit would collapse the tradeoff that splits today's DRAM and NAND, and cut the energy AI systems spend moving and holding data. A design that reaches a fab resets the density and power math that Samsung, SK Hynix, and Micron now set. The path to production runs for years, and the team also reported a new quantum effect it calls a density of states scissors that could speed that engineering.",
+      "monday_morning": "Hardware and infrastructure leaders should treat memory energy, not only compute, as a first-order AI cost, and track Fudan's lab to fab timeline and its two-dimensional memory patents. Semiconductor strategists should watch whether China pairs this device physics with domestic foundry capacity over the next few years.",
+      "related_notes": "Builds on the July 10 Jiuzhang 4 quantum signal and the May 1 wafer-scale 2D semiconductor signal, the same Chinese push at the physical edge of computing hardware."
+    }
+  },
+  {
+    "id": "2026-07-31-insilico-ai-designed-drug-reaches-phase-iii",
+    "date": "2026-07-31",
+    "day_number": 164,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "Insilico's AI-Designed Drug Reaches Phase III as China Compresses Pharma Timelines",
+    "title_cn": "英矽智能AI设计药物进入三期临床 中国压缩制药周期",
+    "source_url": "https://www.artificialintelligence-news.com/news/ai-drug-discovery-china/",
+    "source_name": "AI News (TechForge), July 27, 2026",
+    "tags": [
+      "AI drug discovery",
+      "Insilico Medicine",
+      "clinical trials"
+    ],
+    "related_signals": [
+      "2026-07-15-cspc-astrazeneca-ai-designed-kidney-drug-pact",
+      "2026-06-08-xtalpi-ai-engine-pushes-cancer-drug-into-human-trials"
+    ],
+    "industry_lens": "pharma",
+    "content_type": "daily",
+    "body": {
+      "signal": "Insilico Medicine registered a Phase III trial of Rentosertib in July 2026, the first medicine with both an AI-found target and an AI-designed molecule to reach that stage. The oral drug treats idiopathic pulmonary fibrosis and will enroll 320 patients across 47 centers in China over 52 weeks against placebo, with the ClinicalTrials.gov record updated on July 7 and enrollment set to begin in August 2026. The Hong Kong-listed company says its fastest program reached candidate nomination in nine months against about four and a half years for conventional work, and it counts 31 preclinical candidates and 13 investigational new drug clearances since 2021.",
+      "china_scale": "Insilico runs its AI research in Montreal and Abu Dhabi and does its laboratory validation, screening, and scale-up in Shanghai, where CEO Alex Zhavoronkov says infrastructure, cost, and a 2025 30-working-day trial review pathway remove about two years from a program. A Pfizer executive put clinical development in China at three times faster and about half the cost of Europe. In 2025 more drugs made their first market debut in China than in any other country, the first time it passed the United States on that measure.",
+      "global_impact": "Chinese-linked biotechs featured in 6 of 26 major pharma licensing and acquisition deals over 16 months, worth about 53 billion dollars, with Lilly, Takeda, Merck, Sanofi, AstraZeneca, and AbbVie all sourcing assets from the country. An AI-designed drug reaching Phase III on a China-speed clock pressures Western biotech on cost and novelty at once. Whether AI-designed molecules succeed more often in late-stage trials stays unproven for now.",
+      "monday_morning": "Pharma and life-science leaders should benchmark their discovery to candidate timelines against a nine to thirteen month AI baseline and weigh a China-based validation arm. R&D strategists should decide now which assets to license from Chinese AI-biotech and which to build in-house.",
+      "related_notes": "Extends the July 15 CSPC and AstraZeneca AI drug pact and the June 8 XtalPi cancer-drug trial signal, the same shift of AI drug discovery from tool to clinical pipeline."
+    }
+  },
+  {
+    "id": "2026-07-30-hicloud-undersea-wind-powered-ai-data-center",
+    "date": "2026-07-30",
+    "day_number": 163,
+    "category": "Climate & Sustainability",
+    "category_emoji": "🌱",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 4,
+    "title_en": "China Operates the World's First Wind-Powered Undersea AI Data Center",
+    "title_cn": "中国首座风电海底AI数据中心投入运营",
+    "source_url": "https://www.bgr.com/2183251/china-underwater-data-center-wind-farm/",
+    "source_name": "BGR, June 7, 2026",
+    "tags": [
+      "undersea data center",
+      "offshore wind",
+      "green computing"
+    ],
+    "related_signals": [
+      "2026-07-16-china-ties-ai-data-centers-to-green-power",
+      "2026-07-02-china-first-full-green-electricity-ai-data-center"
+    ],
+    "industry_lens": "consumer",
+    "content_type": "daily",
+    "body": {
+      "signal": "Shanghai Hailanyun Technology, known as HiCloud, put the world's first offshore wind powered underwater data center into commercial operation off Shanghai's Lin-gang Special Area in May 2026. The roughly 228 million dollar facility houses about 2,000 AI servers at 24 megawatts and draws close to 97 percent of its power from an adjacent offshore wind farm of more than 50 turbines. Seawater passively cools the sealed modules, cutting the electricity a comparable land site spends on cooling by at least 30 percent, using no fresh water, and shrinking the land footprint by about 90 percent. HiCloud has since signed an agreement to build a 500 megawatt version.",
+      "china_scale": "China is building AI compute faster than its grid and water systems can comfortably absorb, so a design that removes land and fresh water from data-center siting fits a national constraint. HiCloud moved from a Hainan pilot begun in 2022 to commercial rollout in under 30 months, backed by government agencies that can place facilities in coastal special zones by administrative decision. Offshore wind along the eastern seaboard sits next to the coastal cities that generate the most AI demand, letting the country pair clean generation and compute in one location.",
+      "global_impact": "Microsoft proved the concept with Project Natick off Scotland in 2018, then shelved it, leaving China first to commercial scale. If the 500 megawatt follow-on works, undersea siting resets the water, land, and carbon math that Western hyperscalers face as they push data centers into deserts and strain local grids. South Korea, Japan, and Singapore are already studying submerged or floating centers, and China is setting the reference design.",
+      "monday_morning": "Sustainability and infrastructure leaders at consumer technology and cloud-heavy companies should ask their data-center partners for power usage effectiveness, water draw, and siting data, then benchmark against a sub 1.15 ocean-cooled facility. Treat water and land, not only electricity, as first-order constraints when planning the next AI build.",
+      "related_notes": "Extends the July 16 and July 2 signals on China tying AI data centers to green power, moving from green electricity supply to green siting and cooling."
+    }
+  },
+  {
+    "id": "2026-07-30-tencent-wechat-native-ai-agent-xiaowei",
+    "date": "2026-07-30",
+    "day_number": 162,
+    "category": "Platforms & Social",
+    "category_emoji": "📱",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 4,
+    "title_en": "Tencent Embeds a Native AI Agent in WeChat for 1.4 Billion Users",
+    "title_cn": "微信内置原生AI智能体小微 面向14亿用户",
+    "source_url": "https://www.cnbc.com/2026/06/22/tencent-ai-assistant-wechat-china.html",
+    "source_name": "CNBC, June 22, 2026",
+    "tags": [
+      "WeChat",
+      "AI agent",
+      "super-app"
+    ],
+    "related_signals": [
+      "2026-07-17-alipay-rebuilds-billion-user-app-around-ai-agent",
+      "2026-06-21-tencent-wechat-ai-agent-super-app"
+    ],
+    "industry_lens": "financial services",
+    "content_type": "daily",
+    "body": {
+      "signal": "Tencent is rolling out a native AI assistant called Xiaowei inside Weixin, the mainland version of WeChat, starting with gray-scale testing that reached the first users on June 20, 2026. Xiaowei takes text or voice commands, summarizes chats and Moments, drafts replies, searches, and dispatches the platform's mini-programs to book taxis, order food, or complete purchases without leaving the conversation. Tencent has sharply increased AI capital spending and targets a full WeChat 9.0 rollout of the super agent in the third quarter of 2026.",
+      "china_scale": "WeChat and Weixin together reach more than 1.4 billion monthly active users, and the app already bundles messaging, payments, and millions of mini-programs into one identity and one wallet. An agent that can call those mini-programs turns a super app into an operating system for daily tasks, with WeChat Pay settling the transactions it triggers. No Western platform controls a comparable closed loop of users, services, and payments through which an agent can act end to end.",
+      "global_impact": "A 1.4 billion user agent that both reads intent and executes payments pressures Apple, Google, and Meta, whose assistants still hand tasks back to separate apps. It advances a model where the platform, not the browser, becomes the gateway to services, giving whoever owns the agent leverage over every merchant inside it. Western regulators already scrutinizing app-store gatekeeping will see a sharper version of the same question.",
+      "monday_morning": "Payments and digital banking leaders should map how agent-initiated transactions change checkout, fraud, and authorization, since an assistant that completes purchases inside a chat rewrites the point of sale. Test how your own services would be discovered and called if an AI agent, not a customer tapping an app, becomes the buyer.",
+      "related_notes": "Pairs with the July 17 Alipay signal and the June 21 WeChat agent signal, as China's two largest super apps race to become agent-native."
+    }
+  },
+  {
+    "id": "2026-07-29-kuaishou-kling-ai-three-billion-raise",
+    "date": "2026-07-29",
+    "day_number": 161,
+    "category": "Creative & Culture",
+    "category_emoji": "🎨",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "Kuaishou's Kling AI Raises Three Billion to Scale Video Model Worldwide",
+    "title_cn": "快手可灵融资30亿美元 加速视频大模型出海",
+    "source_url": "https://finance.sina.com.cn/roll/2026-07-03/doc-inifqrwk3443647.shtml",
+    "source_name": "Sina Finance / Caijing, July 3, 2026",
+    "tags": [
+      "AI video generation",
+      "Kling",
+      "Kuaishou",
+      "generative video"
+    ],
+    "related_signals": [
+      "2026-07-28-china-first-licensed-aigc-feature-film"
+    ],
+    "industry_lens": "entertainment",
+    "content_type": "daily",
+    "body": {
+      "signal": "On July 2, 2026, Kuaishou disclosed that its Kling AI video generation unit is raising up to 20.4 billion yuan, about 3 billion dollars, at a post-money valuation near 18 billion dollars. Alibaba Cloud, Tencent, Baidu, CITIC Securities, Shanghai state capital, and Abu Dhabi's BlueFive joined 38 investors, and the raise cuts Kuaishou's stake from 100 percent to about 68 percent. Kling now reports more than 100 million registered users across 224 countries, roughly 50,000 enterprise clients, and over 600 million videos generated since its June 2024 launch.",
+      "china_scale": "Kling sits inside Kuaishou's 410 million daily users and 1.6 trillion yuan e-commerce base, which feed the model advertising, short drama, and product scenarios that turn generation into revenue. First quarter 2026 revenue passed 650 million yuan, up more than 300 percent year on year, and annualized recurring revenue reached about 500 million dollars by March. State funds, banks, and a listed film studio investing together show how fast Chinese capital can consolidate behind one leader.",
+      "global_impact": "A Chinese video model raising the largest round in its category resets the funding and pricing benchmark that OpenAI's Sora, Google's Veo, and Runway compete against. Kling already earns from paying users worldwide while Western rivals still gate access, and Kuaishou plans a Hong Kong listing within twelve months. Advertising, film, and game studios everywhere will weigh a cheaper, faster generation pipeline against incumbent tools.",
+      "monday_morning": "Marketing and content leaders should run a paid pilot of Kling against their current video stack and measure cost per finished asset, not demo quality. Legal teams should map rights and provenance rules before AI generated video enters a campaign or a product page.",
+      "related_notes": "Extends the July 28 signal on China's first licensed AI feature film, the same pipeline of industrialized generative video moving from novelty to market."
+    }
+  },
+  {
+    "id": "2026-07-29-china-humanoid-robots-cross-100000-units",
+    "date": "2026-07-29",
+    "day_number": 160,
+    "category": "Robotics & Embodied AI",
+    "category_emoji": "🤖",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "China Projects Its Humanoid Robot Output Will Top 100,000 Units This Year",
+    "title_cn": "工信部预计今年中国人形机器人产量突破10万台",
+    "source_url": "https://www.news.cn/20260707/a2287f0e6d424640b126479e06b697da/c.html",
+    "source_name": "Xinhua, July 7, 2026",
+    "tags": [
+      "humanoid robots",
+      "embodied intelligence",
+      "mass production",
+      "MIIT"
+    ],
+    "related_signals": [
+      "2026-07-28-cnbm-industrial-model-whole-factory-autonomy"
+    ],
+    "industry_lens": "automotive",
+    "content_type": "daily",
+    "body": {
+      "signal": "On July 7, 2026, Ministry of Industry and Information Technology official Gan Xiaobang told a World AI Conference briefing in Shanghai that China's full-year humanoid robot output should top 100,000 units this year. He said above-scale industrial firms already exceed 30 percent AI adoption, backed by a national embodied intelligence field-training program. The forecast lands as UBTech logged more than 13,361 orders for its UWORLD U1 line at a June 30 launch and Unitree cleared a fast-tracked Shanghai IPO with a 20,000-unit shipping target.",
+      "china_scale": "China ships humanoid units into its own auto plants first, with UBTech Walker S2 units working lines at BYD, Geely, FAW-Volkswagen, and Foxconn. Domestic shipments rose from about 18,000 in 2025 toward a projected 62,500 in 2026, and a dense supply chain in motors, actuators, and batteries pushes unit prices below 120,000 yuan. Central direction routes state capital, standards, and factory pilots toward the same target at once.",
+      "global_impact": "A hundred thousand humanoid units in one year would move the category from demonstration to industrial supply, ahead of Tesla's Optimus timeline. Western manufacturers weighing labor shortages will meet Chinese robots with a proven factory deployment record and a falling price curve. Whoever industrializes embodied AI first sets the cost floor that global buyers anchor to.",
+      "monday_morning": "Operations leaders in manufacturing and logistics should request a scoped pilot from at least one Chinese and one Western humanoid vendor and compare cost per task and uptime. Treat 2026 as the year to build an internal deployment and safety framework, before a single winner emerges.",
+      "related_notes": "Pairs with the July 28 signal on China National Building Material's 95 percent autonomous industrial model, the same push to automate physical production at scale."
+    }
+  },
+  {
+    "id": "2026-07-28-cnbm-industrial-model-whole-factory-autonomy",
+    "date": "2026-07-28",
+    "day_number": 159,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "China's Building Materials Giant Runs Industrial AI at 95 Percent Autonomy",
+    "title_cn": "中国建材工业大模型实现95%自主运行",
+    "source_url": "http://finance.people.com.cn/n1/2026/0724/c1004-40766968.html",
+    "source_name": "People's Daily, July 24, 2026",
+    "tags": [
+      "industrial large model",
+      "process manufacturing",
+      "China National Building Material",
+      "closed-loop control"
+    ],
+    "related_signals": [
+      "2026-07-27-ant-agentar-business-agent-super-factory"
+    ],
+    "industry_lens": "consumer",
+    "content_type": "daily",
+    "body": {
+      "signal": "At the World AI Conference in Shanghai, the Digital Intelligence Research Institute of China National Building Material Group detailed a 1+1+N industrial large model now running across more than 100 process manufacturing plants. Its production agents hold real-time closed-loop control of core processes, with a model autonomous operation rate above 95 percent and several million yuan of annual benefit per plant. The stack combines a real-time data base, one industrial model fusing data, mechanism, business logic, and safety layers, and clusters of agents spanning research, production, supply, sales, and service. The institute won a WAIC award for the deployment.",
+      "china_scale": "Process manufacturing in cement, glass, chemicals, and steel runs continuous, tightly coupled, and hard to stop, the toughest terrain for autonomous control, and a central state-owned group can push one proven stack across its own plants by direction. The institute builds models that grow out of the factory, encoding expert knowledge and plant conditions, then runs cloud training with edge inference wired straight to industrial control. It is already extending the same agents into chemicals, steel, and agricultural production.",
+      "global_impact": "Western industrial AI from Siemens and Schneider mostly automates engineering tasks and predictive maintenance, still short of whole-plant autonomous operation with audited ROI. A vendor that ships closed-loop control at 95 percent autonomy resets the benchmark for what process manufacturers should expect from AI. It also hands Chinese heavy industry a compounding cost and yield edge that rivals buying point solutions will struggle to match.",
+      "monday_morning": "Operations leaders in process industries should pick one continuous line and measure how much of it runs under autonomous closed-loop control today, then set a target against the 95 percent figure. Demand quantified per-plant ROI and safety fault tolerance from any industrial AI vendor before signing.",
+      "related_notes": "Pairs with the July 27 signal on Ant Group's enterprise agent super factory, the same WAIC push to sell standardized, deployable agents."
+    }
+  },
+  {
+    "id": "2026-07-28-china-first-licensed-aigc-feature-film",
+    "date": "2026-07-28",
+    "day_number": 158,
+    "category": "Creative & Culture",
+    "category_emoji": "🎨",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 3,
+    "title_en": "China Clears Its First Fully AI Made Feature Film for Licensed Streaming",
+    "title_cn": "中国首部AI全流程长片获证上线",
+    "source_url": "https://finance.sina.com.cn/jjxw/2026-07-27/doc-inikhcmc0655687.shtml",
+    "source_name": "Sina Finance, July 27, 2026",
+    "tags": [
+      "AIGC film",
+      "iQiyi",
+      "content regulation",
+      "generative video"
+    ],
+    "related_signals": [
+      "2026-07-27-china-anthropomorphic-ai-rules-in-force"
+    ],
+    "industry_lens": "entertainment",
+    "content_type": "daily",
+    "body": {
+      "signal": "On July 23, 2026, the AIGC feature Qitan: Paper Blade Crossing the Wasteland launched exclusively on iQiyi as the first fully AI-produced long-form film to clear China's Online Drama Distribution License. It is the first title to walk the entire pipeline, from AI full-process production to filing, content review, license, and platform release. A crew of about 20 people made it, including new roles such as prompt engineers and AI asset artists working beside directors and screenwriters through a workflow of prompt design, visual asset generation, AI redrawing, and 4K output.",
+      "china_scale": "China has built a regulatory pipeline for AI content, from the 2023 generative AI measures to June 2026 rules that label and grade AI micro-dramas, so a compliant path now exists where Western markets still improvise. That clarity lets studios, platforms, and investors treat AI feature production as a repeatable process instead of a one-off experiment. IQiyi's reach and a 20-person crew show how fast a licensed AI film can move from prompt to premiere.",
+      "global_impact": "Hollywood and European studios meet AI filmmaking through lawsuits and guild disputes, with no clear route to approve and release a fully AI-made feature. China has now demonstrated the full loop of production, approval, and distribution for a licensed long-form title. If AI pushes feature and animation costs toward a fraction of traditional budgets, the economics of premium screen content shift toward whoever industrializes the pipeline first.",
+      "monday_morning": "Studio and streaming leaders should map their own AI production pipeline against a compliance and release checklist, from asset generation to rights clearance, before greenlighting AI-heavy projects. Treat regulatory approval, not raw generation quality, as the gating step to market.",
+      "related_notes": "Echoes the July 27 AI companion rules, the same Chinese pattern of building enforceable governance that turns a new AI category into a regulated market."
+    }
+  },
+  {
     "id": "2026-07-27-china-anthropomorphic-ai-rules-in-force",
     "date": "2026-07-27",
     "day_number": 157,
