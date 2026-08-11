@@ -1,5 +1,69 @@
 [
   {
+    "id": "2026-08-11-us-firms-switch-ai-base-to-chinese-open-weight-models",
+    "date": "2026-08-11",
+    "day_number": 167,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 5,
+    "title_en": "US Firms Switch Their AI Base to Chinese Open-Weight Models",
+    "title_cn": "美国企业将AI底座切换至中国开源大模型",
+    "source_url": "https://finance.sina.com.cn/roll/2026-08-05/doc-inimfsht1548682.shtml",
+    "source_name": "Sina Finance, August 5, 2026",
+    "tags": [
+      "open-weight models",
+      "enterprise AI cost",
+      "OpenRouter"
+    ],
+    "related_signals": [
+      "2026-07-22-open-models-10-billion-downloads",
+      "2026-07-27-ant-agentar-business-agent-super-factory"
+    ],
+    "industry_lens": "financial services",
+    "content_type": "daily",
+    "body": {
+      "signal": "Over eight weeks to August 5, 2026, five Chinese labs shipped frontier models, Alibaba Qwen3.8-Max, Moonshot Kimi K3, DeepSeek-V4-Flash, Zhipu GLM-5.2, and ByteDance Seedance 2.5, and US companies began routing production traffic to them. OpenRouter data shows the share of US enterprise tokens served by Chinese models rose from 4.5 percent in the first half of 2025 to more than 30 percent after February 2026, peaking near 46 percent, a tenfold jump in 18 months. Coinbase set Kimi and GLM as the default models for all its engineers, DoorDash tested Kimi for customer service and basic coding, Airbnb has leaned on Qwen since October 2025, and the startup Lindy moved 100 percent of its traffic from Claude to DeepSeek-V4 and cut inference cost about 90 percent.",
+      "china_scale": "Chinese vendors ship open-weight models built on mixture-of-experts designs and heavy inference-side optimization, so they tune, test, and release a full high to low matrix of models on a fast cycle while holding total cost down. The Stanford 2026 AI Index puts the composite performance gap between the top US and Chinese frontier models at 2.7 percent, close enough that most business workloads stop needing the frontier. Open weights let overseas teams download the model, run it on their own servers, and fine-tune it, which removes the API lock-in that closed US labs depend on.",
+      "global_impact": "US closed-source leaders carry training costs in the hundreds of millions and recover them through high API prices, the exact structure that a 60 to 90 percent cheaper open-weight rival undercuts. Industry estimates put the same workload at about 25 dollars on Claude and 0.18 dollars on DeepSeek, a gap that widens at scale. American regulators are moving to restrict Chinese open models even as US firms adopt them for cost, setting policy against market pull.",
+      "monday_morning": "Technology and finance leaders should audit their AI spend now and adopt tiered model selection, sending high-throughput, non-critical work to open-weight Chinese models and reserving frontier US models for the hardest tasks. Test a private deployment of one open-weight model this quarter to measure cost and data-control gains before committing.",
+      "related_notes": "Extends the July 22 signal on open models passing 10 billion downloads and the July 27 Ant Group agent factory signal, the same shift from Chinese model supply to global enterprise deployment."
+    }
+  },
+  {
+    "id": "2026-08-11-unitree-prices-star-market-humanoid-robot-ipo",
+    "date": "2026-08-11",
+    "day_number": 166,
+    "category": "Robotics & Embodied AI",
+    "category_emoji": "🤖",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "Unitree Prices Its Humanoid Robot IPO on Shanghai's STAR Market",
+    "title_cn": "宇树科技科创板IPO定价 登陆资本市场",
+    "source_url": "https://finance.sina.com.cn/jjxw/2026-08-06/doc-inimksmf3808196.shtml",
+    "source_name": "Sina Finance, August 6, 2026",
+    "tags": [
+      "Unitree",
+      "humanoid robots",
+      "STAR Market IPO"
+    ],
+    "related_signals": [
+      "2026-07-29-china-humanoid-robots-cross-100000-units",
+      "2026-07-23-ubtech-u1-companion-robot-launch"
+    ],
+    "industry_lens": "consumer",
+    "content_type": "daily",
+    "body": {
+      "signal": "Unitree Robotics set the price for its Shanghai STAR Market listing at 150.80 yuan per share on August 6, 2026, with online subscription on August 10 under ticker 688836. The Hangzhou company is floating 40.4 million shares, about 10 percent of its stock, to raise 4.2 billion yuan, and market estimates put the listing valuation above 42 billion yuan, near 5.8 billion dollars. Its revenue grew from 159 million yuan to 393 million yuan to 1.699 billion yuan across the last three full years and swung to a net profit of 278 million yuan. The review ran 73 days from filing to approval, the fastest this year.",
+      "china_scale": "Unitree builds quadruped robots and G1 and H1 humanoids on China's dense robotics supply chain, which lets it price hardware far below Western rivals and ship in volume to developers, factories, and consumers. Founder Wang Xingxing has aligned the company with the 15th Five-Year Plan, which places embodied AI and humanoid robots at the center of industrial policy. A public listing on the STAR Market gives a hardware firm patient domestic capital that Western robotics startups struggle to raise.",
+      "global_impact": "A humanoid maker reaching public markets with real revenue and profit signals that embodied AI in China has moved from demo to industry. Unitree already undercuts Boston Dynamics, Tesla Optimus, and Figure on unit price, and IPO proceeds hand it a war chest to widen that lead. The listing gives global investors a direct way to buy Chinese embodied AI, which pulls capital and talent toward the sector.",
+      "monday_morning": "Industrial and operations leaders should benchmark humanoid and quadruped unit costs against Unitree's price list before scoping their own automation pilots. Robotics strategists should track how Unitree spends its raise, since the capital sets the pace for the next round of embodied AI competition.",
+      "related_notes": "Extends the July 29 signal on China's humanoid output crossing 100,000 units and the July 23 UBTech companion robot launch, the same move of Chinese embodied AI from the lab to the market."
+    }
+  },
+  {
     "id": "2026-07-31-fudan-single-electron-quantum-flash-memory",
     "date": "2026-07-31",
     "day_number": 165,
