@@ -1,5 +1,254 @@
 [
   {
+    "id": "2026-08-19-hongguo-ai-face-similarity-rules",
+    "date": "2026-08-19",
+    "day_number": 175,
+    "category": "Creative & Culture",
+    "category_emoji": "🎨",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "Hongguo Rejects AI Drama Characters More Than 65 Percent Alike",
+    "title_cn": "红果上线AI人脸比对，跨剧相似度超65%直接驳回",
+    "source_url": "https://lmtw.com/mzw/content/detail/id/256831",
+    "source_name": "Liumeiti Wang (流媒体网), August 3, 2026",
+    "tags": [
+      "AI micro-drama",
+      "likeness governance",
+      "content provenance",
+      "Hongguo",
+      "ByteDance"
+    ],
+    "related_signals": [
+      "2026-07-22-hongguo-thousand-drama-plan",
+      "2026-05-13-china-q1-2026-micro-drama-creation-guidelines-128000-titles-95-percent-ai-generated"
+    ],
+    "industry_lens": "entertainment",
+    "content_type": "daily",
+    "body": {
+      "signal": "Hongguo, ByteDance's free short-drama platform, published rules for AI drama character creation that took full effect at midnight on August 3, 2026, after a self-correction window running July 22 to August 2. The platform now runs an AI facial-similarity comparison system. Inside a single series, leads and core supporting characters must carry distinct features, expressions, and posture, and swapping only hairstyle and costume over one underlying face template counts as a violation. Across series, any character whose face scores above 65 percent similarity to an existing one is rejected. Urban romance, family warmth, and urban comeback titles fall under the standard, while fantasy, ancient-style, supernatural, and hand-drawn manhua dramas keep the old rules.",
+      "china_scale": "One platform decision reaches the entire supply chain because Hongguo and Douyin sit between tens of thousands of studios and the audience, and AI titles already make up more than 95 percent of new micro-drama releases. The rules are benchmarked to the National Radio and Television Administration's grading and content-provenance requirements, so platform enforcement and state policy point the same way. Urban titles must lip-sync dubbing to mouth movement, vary camera language, label opening credits as AI-assisted production, and embed provenance metadata in the file. Penalties escalate from rejection to takedown, revenue clawback, and account bans, while distinctive original characters can be filed for platform IP protection.",
+      "global_impact": "This is the first platform rule anywhere that treats generative sameness as a measurable defect with a numeric threshold, and it turns a face into an asset that gets registered, compared, and defended. Copyright terms bite as hard: training characters on unauthorized real-person photos, celebrity likenesses, or original illustrations is banned, custom virtual likenesses need written authorization on file, and scenes, costumes, and commercial fonts need commercial rights. YouTube, Netflix, ReelShort, and DramaBox face the same flood and have no comparable instrument. China is writing the enforcement playbook for generated likeness first.",
+      "monday_morning": "Ask whoever runs your generated-content pipeline what the reuse rate is on faces, voices, and character designs, and whether you can measure it at all. Build the provenance record now: written authorization for every likeness, commercial rights for every asset, and metadata embedded at export. Assume a similarity threshold and a labeling requirement land in your market within eighteen months, and that the audit trail you lack today becomes the cost you pay then.",
+      "related_notes": "Extends the July 22 signal on Hongguo funding 1,000 human-made dramas. The same platform now pays a premium for human work and polices the sameness of the generated work it hosts."
+    }
+  },
+  {
+    "id": "2026-08-19-ai-one-person-company-national-policy",
+    "date": "2026-08-19",
+    "day_number": 174,
+    "category": "Policy & Governance",
+    "category_emoji": "🏛️",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 3,
+    "title_en": "China Writes the AI One Person Company Into National Industrial Policy",
+    "title_cn": "人工智能一人公司首次写入国家级政策文件",
+    "source_url": "https://www.nbd.com.cn/articles/2026-06-18/4431274.html",
+    "source_name": "National Business Daily (每日经济新闻), June 18, 2026",
+    "tags": [
+      "AIOPC",
+      "one person company",
+      "platform economy",
+      "MIIT",
+      "firm formation"
+    ],
+    "related_signals": [],
+    "industry_lens": "financial services",
+    "content_type": "daily",
+    "body": {
+      "signal": "On June 18, 2026, the Ministry of Industry and Information Technology, the Cyberspace Administration of China, the National Development and Reform Commission, and four other departments issued a three-year action plan for coordinated development among large, medium, and small platform-economy firms covering 2026 to 2028. The plan names the AI one person company, AIOPC, as a cultivation target, the first time the category appears in the task text of a national policy document. Li Qiangzhi, deputy director of the policy and economics institute at the China Academy of Information and Communications Technology, describes AIOPC as the smallest unit in a growth ladder that runs up through specialized small giants, manufacturing champions, gazelles, and unicorns. The plan also commits to three batches of platform opening lists, at least 100 platform resource-opening pilots, and at least 60 deployable intelligent service scenarios by 2028.",
+      "china_scale": "Local governments moved before the central document landed. More than 20 cities have published OPC-specific support policies, and Shanghai, Jiangsu, and Guangdong have written the category into their 15th Five-Year Plan documents. Wuxi's market regulator bundled policy processing, bank credit, and intellectual property support into a single registration package for solo AI founders. Because AIOPC founders depend on platform compute, data, and tooling, the policy loops them directly into the platform opening lists the same document mandates.",
+      "global_impact": "Treating the solo AI operator as a formal industrial category, with registration, credit, and subsidy machinery attached, is a different move from celebrating solopreneurs in the abstract. It compresses the cost of forming a firm toward the cost of a software subscription, and it prices competitive entry into any vertical a Western incumbent occupies. Field evidence sits underneath it: Chinese AI film creators report ten-minute shorts made for roughly 2,000 yuan in software against 150,000 to 200,000 yuan under traditional production.",
+      "monday_morning": "Look at where your business defends margin through headcount, coordination, or process rather than through data, distribution, or relationships, and assume a one-person competitor can now reach that margin. Check whether your procurement and vendor-onboarding rules can even transact with a single-person supplier, since most cannot. Then ask what your own smallest viable operating unit looks like if you rebuilt a team of twelve as a team of one with agents.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-08-18-deepseek-peak-pricing-ends-token-price-war",
+    "date": "2026-08-18",
+    "day_number": 173,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 5,
+    "title_en": "DeepSeek Ends China's Token Price War With Peak Hour Surge Pricing",
+    "title_cn": "DeepSeek启用峰谷定价，国产大模型价格战结束",
+    "source_url": "https://finance.sina.com.cn/tech/roll/2026-08-17/doc-ininrkkm6905210.shtml",
+    "source_name": "Sina Tech / Jiemian, August 17, 2026",
+    "tags": [
+      "token economics",
+      "peak pricing",
+      "inference compute"
+    ],
+    "related_signals": [
+      "2026-08-11-us-firms-switch-ai-base-to-chinese-open-weight-models"
+    ],
+    "industry_lens": "financial services",
+    "content_type": "daily",
+    "body": {
+      "signal": "DeepSeek's new API price list took effect at midnight Beijing time on August 17, 2026, replacing flat rates with peak and off peak billing. Peak hours run 9am to noon and 2pm to 6pm Beijing time, and off peak costs half of peak. Flagship DeepSeek-V4-Pro now bills 9 yuan per million cache miss input tokens at peak, up 200 percent, and 27 yuan per million output tokens, up 350 percent, while cache hit input rose 1100 percent to 0.3 yuan from 0.025 yuan. Off peak rates are 4.5 yuan, 13.5 yuan, and 0.15 yuan. DeepSeek posted the change on August 13, the same day it shipped the production release of V4-Pro with stronger agent capability.",
+      "china_scale": "DeepSeek is rationing scarce domestic compute with a lever borrowed from electricity grids, pushing batch and overnight workloads out of the daytime peak so the platform stops falling over. The company crashed repeatedly in May 2026 as user volume grew 66.7 percent against 8.3 percent growth in compute reserves. Tencent Cloud, Alibaba Cloud, and Baidu Intelligent Cloud had already raised API prices, and Zhipu has raised them three times this year while call volume still grew 400 percent, which tells you the demand is inelastic.",
+      "global_impact": "DeepSeek-V4-Flash was the single most called model on OpenRouter for the week of August 3 to 9, at 8.83 trillion tokens, and Chinese models have topped that platform for 15 consecutive weeks. Every Western team that rebased production traffic onto Chinese APIs on cost grounds now watches the floor move under it. Hualong Securities reads the move as the formal end of a year of loss making price competition among Chinese labs and the start of a pricing recovery that will reprice compute and applications together.",
+      "monday_morning": "Pull your token spend by hour, by model, and by cache hit rate, then move every batch, evaluation, and offline pipeline out of Beijing daytime hours. Re-run the build versus buy math you closed when Chinese tokens cost a fifth of the alternative, because the arbitrage that justified the switch just narrowed. Treat cache hit rate as a first class engineering metric, since the steepest increase landed there.",
+      "related_notes": "Follows the August 11 signal on US firms rebasing their AI stacks on Chinese open-weight models. The migration was priced on an arbitrage that is now closing."
+    }
+  },
+  {
+    "id": "2026-08-18-alipay-aha-cross-vendor-agent-commerce-protocol",
+    "date": "2026-08-18",
+    "day_number": 172,
+    "category": "Platforms & Social",
+    "category_emoji": "📱",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 4,
+    "title_en": "Alipay Launches China's First Cross Vendor Protocol for Agent Commerce",
+    "title_cn": "支付宝发布国内首个智能体跨端互联协议",
+    "source_url": "https://finance.sina.com.cn/tech/discovery/2026-08-18/doc-ininrkkn9026458.shtml",
+    "source_name": "Sina Tech / Kuai Technology, August 17, 2026",
+    "tags": [
+      "agentic commerce",
+      "interoperability protocol",
+      "super-app"
+    ],
+    "related_signals": [
+      "2026-07-27-ant-agentar-business-agent-super-factory"
+    ],
+    "industry_lens": "automotive",
+    "content_type": "daily",
+    "body": {
+      "signal": "At its first AI ecosystem partner conference in Hangzhou on August 17, 2026, Alipay released a full stack commercial base for merchant agents and the AHA protocol suite, short for Agent Hub Access, covering skills interfaces, agent to agent interconnection, and device perception and execution. Its super service agent Abao has converted more than ten thousand services to agent callable form across ride hailing, food ordering, tourism, and government services since opening to testing in June. More than twenty partners signed on to co-build, including Qwen, Huawei, OPPO, vivo, Xiaomi, Honor, BYD, Geely, Li Auto, NIO, Dongfeng, and Rokid. Alipay is also giving developers 100 million free tokens each and opening 57 proprietary commerce primitives such as membership, coupons, and Zhima Credit.",
+      "china_scale": "Alipay is standardizing the layer where an agent on one company's device transacts through another company's merchant, and it owns the payment, identity, risk, and fulfillment rails that make the handoff settle. Abao already reaches handset brands holding more than 70 percent of the Chinese market and 16 automaker brands, with design wins at more than 60 automakers. Ant CEO Han Xinyi expects agent commerce to break out within 6 to 12 months, and OPPO reports its Xiaobu assistant added roughly 200 near term Alipay services and drove over 2 million new active users.",
+      "global_impact": "Western agent commerce still runs mostly inside single ecosystems, where an assistant completes a purchase within its own walled checkout. A cross vendor protocol backed by handset makers, automakers, and model providers at once creates a default standard before Western equivalents ship, and it establishes the car cockpit and smart glasses as transaction surfaces rather than screens. Whoever sets the handshake rules also sets the authorization, data isolation, and liability terms for every agent that crosses a vendor boundary.",
+      "monday_morning": "Ask which of your services an external agent could call today and what would happen commercially if a rival's assistant became the front door to your customer. Decide now whether you join an emerging interoperability standard or hold your transactions inside your own app, because the cost of that choice rises once a default protocol exists. Map your identity, authorization, and refund logic for a world where the buyer is software.",
+      "related_notes": "Extends the July 27 signal on Ant's AgentAR business agent factory from merchant tooling to a cross vendor transaction standard."
+    }
+  },
+  {
+    "id": "2026-08-14-cas-s1-omni-unified-science-model",
+    "date": "2026-08-14",
+    "day_number": 171,
+    "category": "Deep Tech & Research",
+    "category_emoji": "🔬",
+    "signal_strength": "weak",
+    "strength_emoji": "🟡",
+    "impact_score": 3,
+    "title_en": "Chinese Academy of Sciences Builds One AI That Rivals Frontier Science Models",
+    "title_cn": "中科院打造统一科学AI，比肩前沿大模型",
+    "source_url": "https://www.163.com/dy/article/L3177A740511DTVV.html",
+    "source_name": "NetEase Tech (科技行者), July 29, 2026",
+    "tags": [
+      "AI for Science",
+      "unified multimodal model",
+      "S1-Omni"
+    ],
+    "related_signals": [],
+    "industry_lens": "pharma",
+    "content_type": "daily",
+    "body": {
+      "signal": "A team led by the Chinese Academy of Sciences with Wengu AI released S1-Omni, a unified multimodal scientific reasoning model, as an arXiv preprint on July 29, 2026 (arXiv:2607.15686). One model handles 200 scientific tasks across chemistry, biology, materials, physics, and medical imaging, built on a 3.2 billion parameter vision language core and trained on more than 8 million curated reasoning records. Across more than 60 benchmarks it beat GPT-5.5 and Gemini-3.1-Pro on most, and matched or passed specialist models on several drug and imaging tasks. The team open-sourced the weights, the code, and a corpus subset.",
+      "china_scale": "Chinese science AI has run as separate specialist tools, one for protein folding, one for molecule generation, one for medical images, and S1-Omni folds them into a single reasoning core that keeps each field's native output format. State labs, the Chinese Academy of Sciences network, and university groups can fine-tune one open model instead of licensing many closed ones, which suits a national push that already routes AI for Science through domestic supercomputing clusters. A shared core also compounds across disciplines, since each new task sharpens the same representation.",
+      "global_impact": "Western drug and materials teams still stitch together four or five narrow models and act as the human integrator between them. A single open model that beats frontier US systems on most science benchmarks, including 16 of 18 ADMET drug-screening endpoints, resets what a research stack costs and who controls it. Open weights let any lab abroad download and adapt it, which erodes the subscription lock-in that closed US science tools rely on.",
+      "monday_morning": "Heads of R&D and computational science should download S1-Omni this quarter and benchmark it against their current specialist-model stack on one real pipeline, such as ADMET screening or spectra-to-structure. Procurement leaders should treat unified open science models as a live option before renewing closed single-task licenses.",
+      "related_notes": "Extends the run of Chinese open-weight models displacing closed US systems on cost, now reaching the scientific-research stack."
+    }
+  },
+  {
+    "id": "2026-08-14-iflytek-one-photo-livestream-digital-human",
+    "date": "2026-08-14",
+    "day_number": 170,
+    "category": "Platforms & Social",
+    "category_emoji": "📱",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "iFlytek Builds a Livestreaming Digital Human From One Photo",
+    "title_cn": "科大讯飞一张照片生成直播数字人",
+    "source_url": "https://www.chinadaily.com.cn/a/202608/01/WS6a6d2f2aa310986e2b46875c.html",
+    "source_name": "China Daily, August 1, 2026",
+    "tags": [
+      "digital humans",
+      "livestream commerce",
+      "iFlytek"
+    ],
+    "related_signals": [
+      "2026-05-27-cac-digital-human-draft-rules-mandatory-label-real-person-consent"
+    ],
+    "industry_lens": "consumer",
+    "content_type": "daily",
+    "body": {
+      "signal": "iFlytek unveiled ultra-realistic real-time digital human generation on August 1, 2026, cutting avatar creation from about two hours of video capture to a single still photo. The avatar lip-syncs, gestures, and performs complex actions such as picking up objects, drinking, singing, and dancing, driven by iFlytek's Spark model with vertical knowledge bases and long-term-memory personas. iFlytek pointed to live deployment in brand livestreaming, customer service, and unmanned retail stores. Tencent's game-streaming arm and Baidu shipped rival real-time digital human systems the same month, with Baidu claiming a 74 percent cut in production cost.",
+      "china_scale": "China's core digital human market reached 48.06 billion yuan, about 7.12 billion dollars, in 2025 and is projected to hit 93.56 billion yuan by 2030, according to iiMedia Research. Livestream commerce, where these avatars sell, is on track for 8.16 trillion yuan, more than one trillion dollars, in 2026, and JD reports more than 70,000 merchants already running AI digital-human hosts at roughly one-tenth the cost of human teams. A one-photo avatar removes the last setup barrier, so adoption spreads from large brands to small merchants across every major platform.",
+      "global_impact": "Western brands and retailers still pay human hosts, studios, and agencies to run livestream selling and branded content. A photo-to-avatar system that streams around the clock at a fraction of that cost resets the labor economics of live commerce and pressures Western retail-media and creator platforms. The open question is whether Western platforms match single-photo real-time generation or cede the low end of on-camera commerce to Chinese vendors.",
+      "monday_morning": "Retail, marketing, and content leaders should pilot one AI digital-human host this quarter and measure cost per streaming hour against their human teams. Brand and legal teams should set likeness-consent and AI-disclosure policies now, since China already requires a visible label on every digital human.",
+      "related_notes": "Sits above the April 3 draft rules that require a visible label on every digital human, the compliance layer now catching up to commercial scale."
+    }
+  },
+  {
+    "id": "2026-08-13-southern-power-grid-ai-plans-grid-in-ten-minutes",
+    "date": "2026-08-13",
+    "day_number": 169,
+    "category": "Climate & Sustainability",
+    "category_emoji": "🌱",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "China Southern Power Grid's AI Plans an Entire Grid in Ten Minutes",
+    "title_cn": "南方电网AI十分钟完成配网规划",
+    "source_url": "https://en.prnasia.com/releases/apac/china-southern-power-grid-showcases-ai-innovations-at-world-ai-conference-541505.shtml",
+    "source_name": "PR Newswire, China Southern Power Grid, July 22, 2026",
+    "tags": [
+      "power grid AI",
+      "electricity-carbon-computing",
+      "green computing"
+    ],
+    "related_signals": [
+      "2026-07-30-hicloud-undersea-wind-powered-ai-data-center"
+    ],
+    "industry_lens": "financial services",
+    "content_type": "daily",
+    "body": {
+      "signal": "At the 2026 World AI Conference in Shanghai on July 17, China Southern Power Grid demonstrated MegaWatt Yunrui, an AI-native agent that generated a complete distribution network plan, covering risk diagnosis, grid layout, simulation checks, and an investment report, in 10 minutes. Judges named it one of the conference's top 10 signature exhibits, the only entry from a central state-owned enterprise, chosen from more than 3,000 products across 1,100 exhibitors. The agent runs on MegaWatt Multimodal 2.0, the first power-sector model to pass the China Academy of Information and Communications Technology industrial model assessment, and sits inside China's first industry-level electricity-carbon-computing platform now running across Guangdong, Guangxi, Yunnan, Guizhou, and Hainan.",
+      "china_scale": "The platform compresses carbon measurement from monthly to minute-level and steers computing jobs toward the hours and places with cheap green power, using price, green-power supply, and carbon factors to schedule load. China is adding AI compute faster than its grid can comfortably absorb, so a system that plans networks and matches data-center demand to clean supply fits a national constraint. Coordination between computing and power entered China's Government Work Report for the first time this year, which gives the effort central backing and a fast path across provincial grids.",
+      "global_impact": "Western utilities face the same surge in AI electricity demand, while grid planning still takes teams weeks and carbon accounting lags by a month. An agent that cuts planning to minutes and prices carbon by the minute resets the speed and transparency baseline that Western operators and their regulators will be measured against. Southern Power Grid is also moving to build overseas demonstration projects in energy digitalization, which exports the reference design.",
+      "monday_morning": "Utility and data-center leaders should time how long their own grid connection and network planning take, then benchmark against a 10-minute agent baseline and ask vendors for minute-level carbon accounting. Sustainability officers should treat electricity-carbon-computing coordination as a procurement question this quarter, not a research topic.",
+      "related_notes": "Builds on the July 30 signal on China's wind-powered undersea AI data center, the same push to bind AI compute to clean power."
+    }
+  },
+  {
+    "id": "2026-08-13-chinajoy-ai-standard-infrastructure-game-industry",
+    "date": "2026-08-13",
+    "day_number": 168,
+    "category": "Creative & Culture",
+    "category_emoji": "🎨",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 3,
+    "title_en": "China's Game Industry Makes AI Standard Infrastructure, Not an Add-On",
+    "title_cn": "中国游戏业将AI变为常态化基础设施",
+    "source_url": "https://www.stcn.com/article/detail/4054067.html",
+    "source_name": "Securities Times, August 2, 2026",
+    "tags": [
+      "ChinaJoy 2026",
+      "AI game development",
+      "generative AI"
+    ],
+    "related_signals": [
+      "2026-07-29-kuaishou-kling-ai-three-billion-raise"
+    ],
+    "industry_lens": "entertainment",
+    "content_type": "daily",
+    "body": {
+      "signal": "At ChinaJoy 2026 in Shanghai from July 31 to August 3, the country's largest game expo ran under the theme Playing With AI, with 902 companies from 35 countries filling 140,000 square meters. Sun Shoushan, head of the China Audio-Video and Digital Publishing Association, told the opening forum that AI is no longer an optional extra but normalized infrastructure reshaping content production, development, and player service. Tencent showed Codename Craft, a tool that turns a plain-language description into a runnable game with no coding or art skills, while Unity China shipped Tuanjie Engine 2.0 with a built-in agent, Codely, that writes code, builds scenes, runs tests, and fixes its own bugs.",
+      "china_scale": "China ships more games and more developers than any other market, so a tool layer that lets non-coders build and lets studios cut costs spreads fast across thousands of teams. Domestic engines, models, and art pipelines now sit inside the same national supply chain that already leads mobile gaming, which lets Chinese studios adopt AI end to end without foreign software. Live demos drew long queues from players with no development background, a sign the tools are ready for mainstream hands.",
+      "global_impact": "When Chinese studios cut production cost and time with AI-native engines, Western publishers that price games on large art and code teams lose their margin cushion. The same tools lower the barrier for solo and indie creators worldwide, which widens the field of competitors for every studio. Watch whether Western engine makers match Unity China's agent-first architecture or cede the low end of game creation.",
+      "monday_morning": "Studio and content leaders should pilot one natural-language game-creation tool this quarter and measure how much of the art and prototyping pipeline it can absorb. Publishers should reprice projects on the assumption that AI-native engines will halve some production timelines within a year.",
+      "related_notes": "Extends the July 29 signal on Kuaishou's Kling AI raising three billion, moving Chinese generative AI from video models into the game production stack."
+    }
+  },
+  {
     "id": "2026-08-11-us-firms-switch-ai-base-to-chinese-open-weight-models",
     "date": "2026-08-11",
     "day_number": 167,
