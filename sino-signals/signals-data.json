@@ -1,5 +1,73 @@
 [
   {
+    "id": "2026-08-20-new-power-system-15th-five-year-plan",
+    "date": "2026-08-20",
+    "day_number": 177,
+    "category": "Climate & Sustainability",
+    "category_emoji": "🌱",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 4,
+    "title_en": "China Orders Its Grid to Reach 50 Percent Non-Fossil Power by 2030",
+    "title_cn": "中国要求2030年非化石能源发电占比达五成",
+    "source_url": "https://www.news.cn/politics/20260803/0a3793e7524d4950afd620ab6b3ca0d7/c.html",
+    "source_name": "Xinhua (新华社), August 3, 2026",
+    "tags": [
+      "new power system",
+      "15th Five-Year Plan",
+      "compute-power coordination",
+      "EV charging",
+      "NDRC"
+    ],
+    "related_signals": [
+      "2026-08-13-china-southern-power-grid-ai-planning",
+      "2026-07-16-china-ai-data-centers-green-power-carbon-plan"
+    ],
+    "industry_lens": "automotive",
+    "content_type": "daily",
+    "body": {
+      "signal": "The National Development and Reform Commission and the National Energy Administration issued the 15th Five-Year Plan for New Power System Construction, document 942, signed July 21 and released August 3, 2026. By 2030 non-fossil sources must supply 50 percent of generation, the grid must absorb more than 2.8 billion kilowatts of renewables at high utilization, and the charging network must support over 110 million electric vehicles. Conventional hydropower reaches roughly 410 million kilowatts, nuclear about 110 million kilowatts, and biomass, solar thermal, geothermal and marine generation together about 65 million kilowatts. Among the named priority tasks are coordinated development of electricity and computing power, and accelerated deployment of new productive forces across the power sector.",
+      "china_scale": "One document binds every provincial energy bureau, the two grid operators, and the state generators to the same numeric targets, so planning, capital, and procurement move together on a five-year clock. The plan reaches down to the meter, requiring faster grid-connection service for residential charging points and pilot programs for unified construction and operation of charging facilities in housing estates. It also names transport and energy convergence as a work item, placing wind, solar, storage, charging and battery-swap stations along expressways and national trunk roads and sharing corridors, ducts and pylons between the two networks.",
+      "global_impact": "China is choosing to treat data-center demand as a planning input to the power system instead of a shock to it, which is the opposite of how most Western grids are absorbing AI load today. If the compute and electricity build-outs stay coupled, Chinese AI capacity carries a lower and more predictable marginal power cost than capacity built where interconnection queues run five to seven years. The EV charging target also sets the reference point that European and North American charging economics will be measured against for the rest of the decade.",
+      "monday_morning": "Ask your infrastructure team what the interconnection wait is for your next compute site and what the delivered power price will be in 2030, and treat any answer wider than a range as an unpriced risk. Compare that with the coupled build China has now committed to, then decide whether your AI capacity plan needs a power strategy attached to it. Bring your energy procurement people into the compute roadmap conversation this quarter.",
+      "related_notes": "Follows the July 16 signal on tying AI data centers to green power. That was an energy-conservation action plan. This is the binding five-year construction plan behind it."
+    }
+  },
+  {
+    "id": "2026-08-20-beijing-tiangong-omni-home-humanoid",
+    "date": "2026-08-20",
+    "day_number": 176,
+    "category": "Robotics & Embodied AI",
+    "category_emoji": "🤖",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 3,
+    "title_en": "Beijing's Humanoid Lab Launches a Home Robot for the Mass Market",
+    "title_cn": "北京人形发布面向大众市场的家用人形机器人天工Omni",
+    "source_url": "https://www.chinanews.com.cn/cj/2026/08-19/10680643.shtml",
+    "source_name": "China News Service (中新网), August 19, 2026",
+    "tags": [
+      "World Robot Conference",
+      "Tiangong Omni",
+      "embodied foundation model",
+      "Beijing E-Town",
+      "home robotics"
+    ],
+    "related_signals": [
+      "2026-08-11-unitree-humanoid-ipo-star-market",
+      "2026-07-16-agibot-humanoids-chinese-assembly-lines"
+    ],
+    "industry_lens": "consumer",
+    "content_type": "daily",
+    "body": {
+      "signal": "At the 2026 World Robot Conference, which opened August 19 in Beijing E-Town, the Beijing Humanoid Robot Innovation Center unveiled Tiangong Omni, a small humanoid built for the consumer home market, alongside the embodied multimodal model Pelican-Unify 1.0. Tiangong Omni opens its joint control, sensor streams, motion control and data-collection interfaces to outside developers, and the center names household chores, companionship for the old and the young, and home security as target tasks. The exhibition runs about 50,000 square meters with more than 300 exhibitors, over 2,000 exhibits, and roughly 150 product debuts. In JD's 600 square meter zone, Honor, Hisense and TCL each showed a robot product for the first time.",
+      "china_scale": "China now has the full stack in one hall: foundation models, actuators, reducers, whole units, and a retail channel. Galaxea demonstrated robots taking live orders inside a working JD Logistics forward warehouse, handling picking, navigation, packing and placement with its G0.5 model and few-shot SKU recognition instead of per-item programming. Consumer electronics brands entering the category matter more than the demos, because Honor, Hisense and TCL bring distribution, service networks, and the manufacturing discipline that pushes a device from thousands of units to millions.",
+      "global_impact": "The center of gravity is shifting from industrial pilots to household products, and an open developer interface on a consumer humanoid invites the same third-party ecosystem that made Chinese drones and EVs hard to compete with on price. Tesla, Figure and 1X are building capable machines aimed at labor markets. Beijing is aiming at the living room, where volume and data accumulate faster. Whoever collects the most household interaction data will train the better home model.",
+      "monday_morning": "If your company sells anything that lives in a home, from appliances to insurance to eldercare services, ask who inside the business owns the question of what changes when a humanoid is in that room. Track Honor, Hisense and TCL rather than the robot startups, because they signal when the category crosses into retail. Put a price and a date on your own answer before a Chinese unit lands in your market.",
+      "related_notes": "Sits alongside the August 11 Unitree IPO signal. Capital markets and consumer channels are opening for Chinese humanoids in the same month."
+    }
+  },
+  {
     "id": "2026-08-19-hongguo-ai-face-similarity-rules",
     "date": "2026-08-19",
     "day_number": 175,
