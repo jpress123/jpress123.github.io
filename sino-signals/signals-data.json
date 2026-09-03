@@ -1,5 +1,520 @@
 [
   {
+    "id": "2026-09-03-fengwu-typhoon-dolphin-landfall-forecast",
+    "date": "2026-09-03",
+    "day_number": 192,
+    "category": "Climate & Sustainability",
+    "category_emoji": "🌱",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 4,
+    "title_en": "China's Fengwu AI Pinned Typhoon Dolphin's Landfall Five Days Ahead",
+    "title_cn": "风乌提前五天精准预测台风海豚登陆",
+    "source_url": "https://www.gmanetwork.com/news/scitech/technology/998625/china-bets-on-ai-weather-forecasting-as-extreme-weather-intensifies/story/",
+    "source_name": "Reuters",
+    "tags": [
+      "Shanghai AI Laboratory",
+      "weather forecasting",
+      "climate resilience",
+      "Fengwu"
+    ],
+    "related_signals": [],
+    "industry_lens": "automotive",
+    "content_type": "daily",
+    "body": {
+      "signal": "Shanghai AI Laboratory's Fengwu model predicted where and when Typhoon Dolphin would strike mainland China five days before landfall, coming within 30 kilometers and 30 minutes, according to Sun Zhi, chief technology officer of Techwind, the company that runs Fengwu's industrial applications. Dolphin submerged roads and village houses in Yantou town, Wenzhou, Zhejiang province on August 10, 2026. Fengwu ran alongside conventional forecasts together with Huawei's Pangu and Fudan University's Fuxi, and its developers report it beat Google's GraphCast on roughly 80 percent of evaluated weather variables while extending skillful global medium-range forecasts past ten days.",
+      "china_scale": "China now fields three serious AI weather models from a state lab, a national technology champion, and a university, each trained on decades of observation from one of the densest monitoring networks on earth. East Asian typhoon season supplies a live proving ground every summer, and a forecast that moves by 30 kilometers changes evacuation orders for millions of coastal residents within hours. Once trained, these models produce a forecast at a fraction of the compute a numerical weather supercomputer requires, which puts provincial bureaus and private operators inside the price envelope.",
+      "global_impact": "Fengwu puts a Chinese state laboratory in direct competition with Google's GraphCast and GenCast, Nvidia-backed FourCastNet, and the European Centre for Medium-Range Weather Forecasts' AIFS. Catastrophe reinsurers, port operators, airlines, and agricultural traders all price exposure on forecast skill, so track accuracy at five days feeds straight into premiums, routing, and hedging. Sun cautions that AI models still trail conventional systems on storm intensity and remain untested on seasonal signals such as El Nino, which is where the commercial value eventually sits.",
+      "monday_morning": "Ask your risk and operations teams which weather models actually feed your supply chain, insurance, and continuity decisions, and whether any of them are machine-learned. Run one AI model against your incumbent on last season's storms and compare track error, lead time, and compute cost. Forecast skill is now a procurement decision with a price attached.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-09-03-agibot-overtakes-unitree-global-humanoid-lead",
+    "date": "2026-09-03",
+    "day_number": 193,
+    "category": "Robotics & Embodied AI",
+    "category_emoji": "🤖",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "AgiBot Ships 8,400 Humanoids to Pass Unitree as World's Largest Maker",
+    "title_cn": "智元机器人上半年出货8400台，超越宇树位居全球第一",
+    "source_url": "https://www.scmp.com/tech/tech-trends/article/3363544/agibot-overtakes-unitree-top-global-humanoid-robot-vendor-first-half-amid-ipo-push",
+    "source_name": "South China Morning Post",
+    "tags": [
+      "AgiBot",
+      "Unitree",
+      "humanoid robots",
+      "IPO"
+    ],
+    "related_signals": [
+      "2026-08-26-china-97-percent-humanoid-shipments-h1",
+      "2026-08-11-unitree-prices-star-market-humanoid-robot-ipo"
+    ],
+    "industry_lens": "financial services",
+    "content_type": "daily",
+    "body": {
+      "signal": "Shanghai-based AgiBot shipped roughly 8,400 humanoid robots from January to June 2026, taking 44 percent of the global market and displacing Hangzhou's Unitree, which shipped about 5,900 units for 31 percent. The numbers come from San Francisco research firm Smart Analytics Global in a report published August 9, 2026. AgiBot's shipments rose 562 percent year on year across three lines, full-size A-series bipeds, compact X-series units, and wheeled G-series robots, while Unitree's volume stayed concentrated in its flagship G1 sold into education, research, and performance work.",
+      "china_scale": "AgiBot assembled a three-line portfolio in under three years by drawing on the component base built for China's electric vehicle industry, where actuators, reducers, sensors, and battery packs already ship at automotive volume and automotive cost. Both firms are now converting that volume into capital, with Unitree pricing its Shanghai STAR Market listing at 150.8 yuan a share to raise about 6.1 billion yuan, roughly 904 million dollars, and AgiBot preparing a Hong Kong offering. Provincial procurement and research budgets absorb early units while unit economics improve.",
+      "global_impact": "China took 97 percent of global humanoid shipments in the first half of 2026, so the fight for the top spot has become an internal contest among Chinese vendors, and Western buyers choose a Chinese supplier or wait. Analysts still place European and American labs ahead on the control models that give a robot useful behavior, which splits the stack into Chinese bodies and Western brains. That split decides where the margin lands, and hardware commoditizes faster than software does.",
+      "monday_morning": "Name the two Chinese humanoid vendors your operations team would realistically buy from this year, and price a single pilot cell against the labor it would displace. If your advantage lives in control software rather than the chassis, decide now whether you sell onto Chinese hardware or fund a platform that competes with it.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-09-02-tencent-game-ai-pipeline-gamescom",
+    "date": "2026-09-02",
+    "day_number": 191,
+    "category": "Creative & Culture",
+    "category_emoji": "🎭",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 3,
+    "title_en": "Tencent Takes Its In-House Game AI Pipeline to Gamescom and Global Studios",
+    "title_cn": "腾讯将自研游戏AI全流程技术带到科隆，面向全球工作室",
+    "source_url": "https://www.prnewswire.com/news-releases/tencent-games-central-tech-makes-its-gamescom-debut-accelerating-game-industry-innovation-with-full-pipeline-proprietary-ai-technologies-302861469.html",
+    "source_name": "PR Newswire",
+    "tags": [
+      "Tencent Games",
+      "generative animation",
+      "game agents",
+      "creative tooling"
+    ],
+    "related_signals": [],
+    "industry_lens": "entertainment",
+    "content_type": "daily",
+    "body": {
+      "signal": "Tencent Games Central Tech made its gamescom debut as a unified brand in Cologne on August 27, 2026, presenting six proprietary systems: Motus AI for character animation, GIGA for game agents, MagicDawn for rendering and global illumination, Anti-Cheat Expert for security, GVoice for voice, and WeTest for automated testing. Motus runs on Tencent's own family of generative animation foundation models and joins rigging, skinning, text-, video- and keyframe-driven motion generation, motion refinement, and real-time character interaction into one continuous pipeline, already applied across multiple shipping titles. On August 24 at gamescom dev, Motus technical lead Zijiao Zeng presented that unified 3D character animation pipeline to an audience of Western studio engineers.",
+      "china_scale": "Tencent runs games at a scale where animation cleanup is a line item measured in artist-years, so a pipeline that removes jitter, mesh penetration, joint anomalies, and foot sliding pays for itself inside a single title. The company trains these foundation models on motion data from its own live portfolio, a corpus no Western middleware vendor can assemble. Chinese studios also staff larger in-house tech teams than most Western publishers, which turns a research model into a production tool in months.",
+      "global_impact": "Western studios buy animation tooling from Autodesk, Epic, Unity, and a fragmented middleware layer, then pay the integration cost between them. Tencent is offering the integrated version, proven on its own titles, to the studios that compete with it. Selling the toolchain instead of the game moves leverage upstream, and every studio that adopts Motus or GIGA hands Tencent visibility into how the next generation of games gets made.",
+      "monday_morning": "Ask your production leads which parts of the creative pipeline you currently stitch together from three vendors, and price what an integrated alternative would save. Then decide, before a procurement team decides for you, whether your studio will run core creative infrastructure supplied by a direct competitor.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-09-02-china-vehicle-dimension-standard-sensors",
+    "date": "2026-09-02",
+    "day_number": 190,
+    "category": "Policy & Governance",
+    "category_emoji": "⚖️",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "China Rewrites Vehicle Size Rules to Make Room for Self-Driving Sensors",
+    "title_cn": "中国修订车辆外廓尺寸标准，为自动驾驶传感器让路",
+    "source_url": "https://cnevpost.com/2026/08/31/china-new-rules-smart-vehicle-sensors-more-design-freedom/",
+    "source_name": "CnEVPost",
+    "tags": [
+      "GB 1589-2026",
+      "SAMR",
+      "autonomous driving",
+      "V2X"
+    ],
+    "related_signals": [],
+    "industry_lens": "automotive",
+    "content_type": "daily",
+    "body": {
+      "signal": "China's State Administration for Market Regulation approved mandatory national standard GB 1589-2026 and announced it on August 31, 2026, rewriting the country's limits on vehicle exterior dimensions, axle loads, and masses. The revision carves out protrusion exemptions for radar, cameras, and V2X antennas so that blind-spot monitoring, autonomous-driving perception, and vehicle-road coordination hardware stop colliding with the physical envelope rules. It also raises the maximum single-axle load with single tires on each side from 7,000 to 8,000 kilograms, relieving front-axle overloading on battery-heavy commercial electric vehicles. New type approvals must comply from July 1, 2027, and existing type approvals from January 1, 2028.",
+      "china_scale": "One regulator sets one mandatory standard that every automaker selling in China follows on a published date, so the whole supply chain retools against a single deadline. Chinese suppliers already build the radar, cameras, and V2X modules the exemptions were written for, and they now have a sanctioned physical envelope to design into. The staged transition through January 2028 lets current models sell through while new platforms get drawn around the sensors from the first sketch.",
+      "global_impact": "Regulation usually lags autonomy hardware, and Western engineers have spent years fitting sensors inside dimension rules written for mirrors and bumpers. Beijing moved the rules to fit the sensors, which lowers the cost of perception coverage on every vehicle built to Chinese type approval. Foreign automakers selling into China face the same 2027 date, and vehicles engineered for the Chinese envelope will reach export markets carrying sensor placements their home regulators have yet to sanction.",
+      "monday_morning": "Have your homologation team map GB 1589-2026 against your 2027 and 2028 China product plans this week, and flag every sensor placement still constrained by the old envelope. Then ask regulatory affairs what it would take to file for equivalent exemptions at home, because the design advantage compounds with each platform cycle.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-09-01-china-factories-small-models",
+    "date": "2026-09-01",
+    "day_number": 189,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "China's Factories Get Their AI Returns From Small Models, Not Large Ones",
+    "title_cn": "中国工厂的AI回报来自小模型，而非大模型",
+    "source_url": "https://finance.sina.com.cn/jjxw/2026-08-12/doc-inimynrz7287757.shtml",
+    "source_name": "Securities Times",
+    "tags": [
+      "small models",
+      "industrial AI",
+      "Midea",
+      "AI Plus Manufacturing"
+    ],
+    "related_signals": [],
+    "industry_lens": "consumer",
+    "content_type": "daily",
+    "body": {
+      "signal": "Securities Times reported on August 12, 2026 that TCL CSOT has built roughly 20,000 image-recognition small models and more than 10,000 agents across its manufacturing operations, cutting minor line anomalies at one plant from over 400 a year to a few dozen and pushing LCD yield past 98 percent against an industry average of 95 to 96 percent. Midea runs 14 agents covering 38 core production scenarios at its Jingzhou plant under a single factory brain, lifting scheduling response speed about 90 percent, while its Thai air conditioner plant cut delivery lead time 43 percent and customer complaints 32 percent. IDC counts industrial small models at 70 percent of all industrial AI deployments in China.",
+      "china_scale": "Vision inspection and anomaly prediction have clear boundaries, abundant historical data, and fast payback, so a Chinese plant manager can calculate return on investment before committing. Training cycles are short and deployment costs stay controlled, which lets a factory prove one mature line and copy it sideways instead of rebuilding the whole site. The eight-ministry AI Plus Manufacturing plan issued in January 2026 targets 1,000 industrial agents, 100 high-quality industrial datasets, and 500 reference scenarios by 2027, giving every operator a template and a subsidy path.",
+      "global_impact": "Western enterprises book AI as frontier-model spend. Chinese factories book it as thousands of cheap specialist models, with a large model serving as adviser and an agent serving as dispatcher, a layered architecture that fits a shop floor where one bad inference stops the line. Guoxing Optoelectronics raised LED photoelectric consistency more than 10 percent and cut anomaly response time about 98 percent with one narrow model, the kind of result that never requires a frontier contract.",
+      "monday_morning": "Audit where your AI budget actually sits. If most of it buys frontier tokens for open-ended tasks, move a share into narrow perception models trained on your own process data, and pick one mature production line as the proving ground before any plant-wide rollout. Track yield, energy, and turnover, the three hard numbers Chinese operators use to judge industrial AI.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-09-01-mango-ai-drama-prime-time",
+    "date": "2026-09-01",
+    "day_number": 188,
+    "category": "Creative & Culture",
+    "category_emoji": "🎭",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "China's First All-AI Drama Tops Prime-Time Ratings on Hunan Satellite TV",
+    "title_cn": "国内首部全AI长剧登陆湖南卫视黄金档并收视第一",
+    "source_url": "https://ent.sina.cn/2026-09-01/detail-iniqfzhi8586508.d.html",
+    "source_name": "Sina Entertainment",
+    "tags": [
+      "AIGC",
+      "Mango TV",
+      "Seedance",
+      "television"
+    ],
+    "related_signals": [],
+    "industry_lens": "entertainment",
+    "content_type": "daily",
+    "body": {
+      "signal": "Hou Xi You Ji, China's first fully AI-generated long-form television drama, premiered on August 31, 2026 in Hunan Satellite TV's 20:00 prime-time slot and on Mango TV, and took first place in provincial satellite ratings on opening night. The series casts no human actors. Every frame, character, and line comes from Mango TV's Lingchuang AIGC platform running ByteDance's Seedance 2.0 and 2.5 video models, with humans handling script control, prompt tuning, and image correction. Season one runs 30 episodes of 40 minutes, made in about four months at roughly one tenth the cost of a live-action production.",
+      "china_scale": "The show is the first pilot under the broadcast regulator's 21-measure policy for a produce, review, and broadcast simultaneously model. Approved episodes air while later ones are still in production and can be revised from censor notes and live audience comments, a workflow that traditional drama, with its months of finish-then-submit, cannot support. AI drops the cost of reworking one episode from around a million yuan to a tenth of that, so audience co-creation becomes an industrial process. Mango Excellent Media shares hit their 20 percent daily limit that day.",
+      "global_impact": "Prime-time broadcast is the hardest venue for generated video, because a national audience judges it against live-action drama on the same schedule. Reviews split cleanly along the technology's real fault line: visual quality and mythological art direction drew praise, while pacing, editing, and facial expression drew criticism. Any studio weighing generative video now has a 1,200-minute reference point on cost, schedule, and audience tolerance instead of a demo reel.",
+      "monday_morning": "Pull the first five episodes and grade them against your own standard on visuals, performance, and story as three separate scores, because that is where the gap actually sits. Then price your next mid-budget series at one tenth of current cost and identify which fixed roles survive that number.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-08-31-china-small-processor-privacy-rules",
+    "date": "2026-08-31",
+    "day_number": 187,
+    "category": "Policy & Governance",
+    "category_emoji": "⚖️",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 3,
+    "title_en": "China Cuts Privacy Compliance for Small Data Handlers Starting September 1",
+    "title_cn": "中国9月1日起为小型个人信息处理者简化合规",
+    "source_url": "https://www.china-briefing.com/news/china-simplified-data-processing-rules/",
+    "source_name": "China Briefing",
+    "tags": [
+      "PIPL",
+      "data governance",
+      "compliance",
+      "startups"
+    ],
+    "related_signals": [],
+    "industry_lens": "financial services",
+    "content_type": "daily",
+    "body": {
+      "signal": "The Cyberspace Administration of China and the Ministry of Public Security issued Provisions on Simplified Personal Information Protection Measures for Small-Scale Handlers on July 24, 2026, effective September 1. Any company processing the personal information of fewer than 100,000 individuals can now meet its PIPL notification duty by publishing a plain processing notice instead of building layered consent flows. Simplified routes also cover cross-border transfers and compliance audits, on condition the firm handles no sensitive data and shares nothing with third parties.",
+      "china_scale": "China has 868 filed generative AI services and tens of thousands of small developers who could never afford full PIPL machinery. Under the new rules a tenant inside an industrial park, or a seller operating entirely on one platform, can adopt the park's or the platform's published rules wholesale. That pushes the compliance burden up to the landlord and the platform, converting a per-company legal cost into shared infrastructure.",
+      "global_impact": "Regulators in Brussels and Washington keep arguing about whether privacy law strangles small firms. Beijing has answered with a graduated regime that holds the substantive obligations constant and strips out the paperwork, anchored to a hard headcount threshold. Western subsidiaries in China with modest user bases qualify immediately, and this design will be cited in every future debate over SME carve-outs.",
+      "monday_morning": "Count the individuals whose data your China entity actually processes today, excluding records already deleted. If the total sits under 100,000 and you touch no sensitive data, move to the simplified track this week and redirect the saved legal spend. If you operate a platform in China, expect your own published rules to become the compliance floor for every small seller riding on it.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-08-31-tcl-ai-native-factory-nansha",
+    "date": "2026-08-31",
+    "day_number": 186,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "TCL's AI-Native Factory Ships One Air Conditioner Every Seven Seconds",
+    "title_cn": "TCL人工智能原生工厂每七秒下线一台空调",
+    "source_url": "https://english.news.cn/20260820/2c3b72b36d2c4b318db18997077b21f3/c.html",
+    "source_name": "Xinhua",
+    "tags": [
+      "smart manufacturing",
+      "AI agents",
+      "TCL",
+      "AI Plus"
+    ],
+    "related_signals": [],
+    "industry_lens": "consumer",
+    "content_type": "daily",
+    "body": {
+      "signal": "TCL's Nansha industrial park in Guangzhou turns out one air conditioner every seven seconds on unmanned lines. The site cost nearly 2 billion yuan, about 294 million US dollars, and holds three lights-out factories, 15 advanced laboratories, and 10 intelligent production lines. An on-site AI supercomputing center with 106 server cabinets ingests real-time data from 32,000 IoT sensors and runs more than 2,000 AI agents in parallel across the park.",
+      "china_scale": "China now counts more than 43,000 smart factories, and the eight-ministry AI Plus Manufacturing initiative issued in January 2026 targets 1,000 industrial AI agents and 100 industrial datasets by 2027. TCL built Nansha with AI in the foundation instead of retrofitting models onto existing lines, so agents supervise inspection, energy allocation, and scheduling from the first shift. Rival Gree cut one 480-meter outdoor unit line from over 70 workers to 20.",
+      "global_impact": "TCL reported European air conditioner sales up 30 percent year on year in the first half of 2026, with Britain, France, and the Nordics up 300 percent. Management intends to replicate the Nansha model at new bases in Thailand and Pakistan. Western appliance makers are now competing against a cost structure set by 2,000 software agents and a 50,000 square meter solar array, well beyond the reach of labor arbitrage.",
+      "monday_morning": "Ask your operations lead what an AI-native version of your newest plant would look like if it were designed from the sensor layer up instead of bolting models onto lines already running. Price that against your current retrofit roadmap before a competitor exports its version into your market.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-08-28-beijing-ai-for-science-implementation-plan",
+    "date": "2026-08-28",
+    "day_number": 185,
+    "category": "Deep Tech & Research",
+    "category_emoji": "🔬",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 4,
+    "title_en": "Beijing Orders 18 Tasks to Make Autonomous Labs Its Research Default",
+    "title_cn": "北京部署18项任务，让自主实验室成为科研常态",
+    "source_url": "https://www.news.cn/20260821/db61da5c04de4ea888939b35cb3387f0/c.html",
+    "source_name": "Xinhua Daily Telegraph, August 21, 2026",
+    "tags": [
+      "AI for science",
+      "autonomous labs",
+      "research infrastructure",
+      "Beijing",
+      "closed-loop experimentation"
+    ],
+    "related_signals": [
+      "2026-07-24-panshi-science-foundation-model-2",
+      "2026-07-17-china-opens-first-unmanned-ai-driven-lab",
+      "2026-08-14-cas-s1-omni-unified-science-model"
+    ],
+    "industry_lens": "pharma",
+    "content_type": "daily",
+    "body": {
+      "signal": "Xinhua reported on August 21 that Beijing has issued its Implementation Plan for Accelerating AI-Enabled Scientific Research (2026 to 2028), deploying 18 tasks across five tracks: autonomous laboratory systems, science model systems, a scientific data foundation, high-value application scenarios, and innovation ecosystem. The reporters walked working sites instead of launch stages. At Peking University, the platform built by CAS academician Deng Hongkui occupies six square meters and completes more than 120 steps from a fingertip blood draw to cultured stem cells with no human intervention, lifting throughput threefold and cutting experimental error from as much as 10 percent to under 1 percent. Islet cells produced this way have restored blood-glucose self-regulation in several type 1 diabetes patients.",
+      "china_scale": "Beijing has held R and D intensity above 6 percent of GDP for years, kept basic research at roughly 16 percent of that spend, and ranked first among global research cities in the Nature Index for nine consecutive years. The city counted more than 2,500 AI companies and a core AI industry above 450 billion yuan in 2025. The plan names six priority fields, high-energy physics, materials science, medical health, life science, quantum technology, and biological breeding, and puts instruments, models, data, scenarios, and talent under one municipal owner so the pieces arrive together.",
+      "global_impact": "Western pharmaceutical and materials R and D still budgets in scientist-hours. Beijing is buying validated hypotheses per week. The supporting layer already runs: the Chinese Academy of Sciences Panshi Science Foundation Model 2.0 bundles more than 8,000 specialist research tools, the Bohrium research workspace built by the Beijing Institute of AI for Science with DP Technology serves over 150 universities and institutes worldwide, and the Institute of High Energy Physics parses diffraction and scattering data seconds after collection at the High Energy Photon Source. Peking University executive vice president Zhang Jin expects autonomous labs to run unattended around the clock in experiment-intensive fields.",
+      "monday_morning": "Ask your R and D leadership for cost and cycle time per validated hypothesis, instead of publication counts or headcount. Then pick your single most experiment-intensive workflow and price what a closed loop from hypothesis to verification would cost if it ran unattended overnight.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-08-28-thomson-reuters-harvey-chinese-open-weight-swap",
+    "date": "2026-08-28",
+    "day_number": 184,
+    "category": "Platforms & Social",
+    "category_emoji": "📱",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 5,
+    "title_en": "Thomson Reuters and Harvey Swap US Frontier Models for Chinese Open Weights",
+    "title_cn": "汤森路透与Harvey改用中国开源权重模型",
+    "source_url": "https://fortune.com/2026/08/27/chinese-open-source-ai-is-starting-to-win-over-u-s-businesses/",
+    "source_name": "Fortune, August 27, 2026",
+    "tags": [
+      "open weights",
+      "enterprise AI procurement",
+      "Kimi K3",
+      "Qwen",
+      "model economics"
+    ],
+    "related_signals": [
+      "2026-08-11-us-firms-switch-ai-base-to-chinese-open-weight-models",
+      "2026-07-22-open-models-10-billion-downloads",
+      "2026-08-18-deepseek-peak-pricing-ends-token-price-war"
+    ],
+    "industry_lens": "financial services",
+    "content_type": "daily",
+    "body": {
+      "signal": "Fortune reported on August 27 that Thomson Reuters has built an in-house model called Thomson-1 on top of Snowdon, a system it developed by adapting Alibaba's open-source Qwen, and moved document-review work that previously ran on Anthropic's Claude. Harvey, the legal technology firm backed by OpenAI, Sequoia, and Andreessen Horowitz, post-trained its new model Harvey Tenet on Moonshot's open-weight Kimi K3 and reports it outperforms both its base model and US frontier systems, including Fable 5 and GPT-5.6 Sol, on complex legal agentic tasks. Ramp's AI Index shows the share of AI-spending businesses paying for model serving platforms rose to 6.1 percent in July from 4.5 percent in January 2026.",
+      "china_scale": "Chinese labs ship frontier-class open weights on a monthly cadence and price aggressively underneath. Z.AI confirmed this week that it built the anonymous benchmark performer Ox Alpha, renamed it GLM-5.3-Flash, and set a public price of 15 cents per million input tokens and 50 cents per million output. Reuters reported on August 26 that Moonshot is negotiating revenue-sharing terms with Microsoft, Amazon, and Google to host Kimi K3 on Azure, AWS, and Google Cloud, asking for up to 30 percent of K3-related service revenue. DeepSeek is meanwhile raising 50 billion yuan at a 500 billion yuan valuation on 475 million yuan of revenue in the first seven months of 2026 and an 82.9 percent API gross margin.",
+      "global_impact": "The buying pattern has changed shape. Anthropic still gained the most ground among businesses in July, rising 1.1 points to 43.5 percent share, yet Fable 5, the most advanced model on the market, accounts for only 6 percent of the tokens businesses buy from Anthropic and 11.4 percent of dollars spent there at roughly 10 dollars per million tokens. Ramp lead economist Ara Kharazian argues the top model has found the market's ceiling. Two named Western professional-services incumbents have now concluded that a specialized Chinese open base beats a general American frontier model on their own work, which turns a cost argument into a capability argument.",
+      "monday_morning": "Split your AI workloads into the ones that need frontier reasoning and the ones that need a good-enough model whose weights you control. Price a fine-tuned open-weight substitute for your highest-volume task, and put a date on the bake-off before your procurement cycle closes.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-08-27-green-computing-electricity-coordination-hohhot",
+    "date": "2026-08-27",
+    "day_number": 183,
+    "category": "Climate & Sustainability",
+    "category_emoji": "🌱",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "China Grades Data Centers on Efficiency as AI Power Use Jumps 30%",
+    "title_cn": "中国按能效为数据中心分级，算力用电一年增三成",
+    "source_url": "https://www.news.cn/tech/20260823/dbacd8a12eaa48c8b71c5c1fbb0f39ce/c.html",
+    "source_name": "Xinhua, August 23, 2026",
+    "tags": [
+      "green computing",
+      "data centers",
+      "grid planning",
+      "PUE",
+      "token economy"
+    ],
+    "related_signals": [
+      "2026-08-20-new-power-system-15th-five-year-plan",
+      "2026-08-13-southern-power-grid-ai-plans-grid-in-ten-minutes"
+    ],
+    "industry_lens": "financial services",
+    "content_type": "daily",
+    "body": {
+      "signal": "At the 2026 Green Computing (AI) Conference in Hohhot on August 22, the China Academy of Information and Communications Technology and the National Data Administration reported that China's computing facilities consumed 170 billion kWh of electricity in 2025, up roughly 30 percent year on year. More than 160 data centers now hold 4A or higher green ratings, average PUE at hyperscale sites has fallen to 1.34, and 42 clusters of 10,000 accelerators or more are operating. Hohhot and Ulanqab signed 13 projects worth 136.1 billion yuan covering chip testing, equipment manufacturing, compute centers, and token factories.",
+      "china_scale": "Compute-electricity coordination, suan dian xie tong, entered the government work report for the first time this year, which gives provinces a mandate to site compute where clean power already exists. Hohhot reports 7.12 million kW of installed new energy capacity, green electricity use above 85 percent at its data centers, and power at roughly 0.35 yuan per kWh. The National Energy Administration expects national compute electricity demand to grow by more than 100 billion kWh a year through the 15th Five-Year Plan, so the siting decision is being made once, centrally, for a decade.",
+      "global_impact": "Chinese operators are competing on delivered cost per token under a carbon constraint, not on raw cluster size. Daily token calls reached about 140 trillion by March 2026, up from roughly 100 billion in early 2024, a thousandfold rise in two years. Western hyperscalers stuck in multi-year grid interconnection queues face a competitor whose siting, tariffs, green certificate trading, and carbon accounting move through a single planning cycle.",
+      "monday_morning": "Ask your infrastructure team for cost per million tokens including electricity and carbon, not GPU hours, and benchmark it against 0.35 yuan per kWh with 85 percent green power. Then ask where the power for your next training run comes from, when it connects, and who else is queued ahead of you.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-08-27-noitom-hiphi-open-motion-dataset",
+    "date": "2026-08-27",
+    "day_number": 182,
+    "category": "Deep Tech & Research",
+    "category_emoji": "🔬",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 3,
+    "title_en": "Noitom Releases 617 Hours of Precision Motion Data Free to Robotics Researchers",
+    "title_cn": "诺亦腾免费开放617小时高精度人体运动数据",
+    "source_url": "https://www.globenewswire.com/news-release/2026/08/20/3348065/0/en/noitom-robotics-releases-hiphi-one-of-the-largest-high-precision-human-motion-datasets-ever-made-public-at-the-world-robot-conference.html",
+    "source_name": "Noitom Robotics via GlobeNewswire, August 20, 2026",
+    "tags": [
+      "motion capture",
+      "embodied AI",
+      "open datasets",
+      "humanoid training",
+      "digital humans"
+    ],
+    "related_signals": [
+      "2026-08-26-china-97-percent-humanoid-shipments-h1",
+      "2026-08-20-beijing-tiangong-omni-home-humanoid"
+    ],
+    "industry_lens": "entertainment",
+    "content_type": "daily",
+    "body": {
+      "signal": "Noitom Robotics released HiPHI on August 20 at the World Robot Conference in Beijing, 617.5 hours of optical motion capture from 132 performers recorded at 90 Hz with sub-millimeter marker tracking. The set splits into 371.8 hours of whole-body human motion and 245.7 hours of human-object interaction, where each object's trajectory and mesh are logged in sync with the performer, indexed by motion units drawn from FrameNet. It is free on Hugging Face under the ModalityNet Open Research License, with commercial terms through modalitynet.com and an accompanying paper at arXiv 2608.16222. Policies trained on HiPHI run on a physical Unitree G1 humanoid, running, sitting, crawling, carrying a box, and pulling a suitcase.",
+      "china_scale": "Noitom says its capture infrastructure produces more than 100,000 hours a year, so the public release is a sample of a running commercial pipeline instead of a one-time academic drop. China's humanoid makers now draw on a domestic supply of physically grounded training data while foreign labs scrape internet video that lacks contact and physical state. This year's World Robot Conference drew 373 exhibitors and more than 150 product debuts, concentrating the data producers and the robot buyers in the same hall.",
+      "global_impact": "High-precision human motion data has been the scarcest input in embodied AI, and it is normally held as a proprietary asset. Publishing it sets a public benchmark that Western labs will be measured against and shifts the competitive question from who owns the data to who owns the capture infrastructure that keeps making it. The same corpus feeds digital humans and computer graphics, so film, games, and animation pipelines inherit the standard as well.",
+      "monday_morning": "Download HiPHI and benchmark your own motion library against its published coverage and per-frame quality numbers before funding another capture campaign. If your robotics or animation roadmap treats proprietary motion data as a moat, price that assumption again this week.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-08-26-iqiyi-soul-ferryman-aigc-feature-trilogy",
+    "date": "2026-08-26",
+    "day_number": 181,
+    "category": "Creative & Culture",
+    "category_emoji": "🎨",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "iQIYI Puts Three AI-Generated Feature Films on a Paying Streaming Service",
+    "title_cn": "爱奇艺上线三部AIGC电影长片",
+    "source_url": "http://www.banyuetan.org/qyzx/detail/20260822/1000200033138371787401654824353854_1.html",
+    "source_name": "Banyuetan (Xinhua News Agency), August 22, 2026",
+    "tags": [
+      "AIGC film",
+      "iQIYI",
+      "IP franchise",
+      "performer image licensing",
+      "motion transfer"
+    ],
+    "related_signals": [
+      "2026-08-19-hongguo-ai-face-similarity-rules",
+      "2026-08-13-chinajoy-ai-standard-infrastructure-game-industry"
+    ],
+    "industry_lens": "entertainment",
+    "content_type": "daily",
+    "body": {
+      "signal": "iQIYI and Changxin Media confirmed the Soul Ferryman \"Fusheng Meng\" trilogy on August 21 and released the first two films, Butterfly Dream and Celestial Maiden Dream, at 10am on August 22, exclusive to iQIYI. Each runs over an hour and each was produced with generative AI. Guo Jingyu served as art director, Ding Kuan directed, Xiao Jixiangtian wrote, and Li Zhichao produced. To rebuild the franchise's original trio at a younger age, the production licensed the actors' likenesses, had original cast members Yu Yi, Liu Zhiyang, and Xiao Yin record live voice performances, and used motion transfer to drive the characters. iQIYI went from its first licensed AIGC feature, Qitan: Paper Blade Crossing the Ruins, to two more releases inside one month.",
+      "china_scale": "iQIYI owns the demand side and the supply side at once, so it can green-light AI features against its own subscriber data and put them in front of hundreds of millions of accounts on day one. The Soul Ferryman franchise already spans long-form drama, web film, a musical, and short drama, which gives the AI production a built-in audience and a pre-cleared rights position. Chinese regulators issued a licensing route for AI-generated features this summer, so the compliance question is answered before production starts.",
+      "global_impact": "A major streaming platform is now shipping AI-generated features at franchise cadence, roughly one release every two weeks, with feature-length runtimes and paid distribution. The likeness and voice arrangement here, licensed image plus original-cast voice plus motion transfer, is a working template for the question Hollywood is still litigating. Western streamers should expect the cost floor for franchise extension content to move, because catalog IP can now be expanded without assembling a full production.",
+      "monday_morning": "Ask which parts of your content or brand catalog exist mostly as IP with no economic case for a new production, and price what an AI-assisted extension would cost against the licensing terms you would need. If you hold talent contracts, review whether they address likeness plus voice plus motion capture as separable rights, because that is the structure this production used. Watch iQIYI's release cadence through Q4 as the practical read on whether the model sustains.",
+      "related_notes": "Follows the August 19 signal on Hongguo's AI face-similarity rules. Two sides of the same problem: one platform regulating synthetic likeness, another licensing it."
+    }
+  },
+  {
+    "id": "2026-08-26-china-97-percent-humanoid-shipments-h1",
+    "date": "2026-08-26",
+    "day_number": 180,
+    "category": "Robotics & Embodied AI",
+    "category_emoji": "🤖",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "China Ships 40,000 Humanoid Robots, Taking 97 Percent of Global Shipments",
+    "title_cn": "中国上半年人形机器人出货超4万台，占全球97%",
+    "source_url": "https://news.china.com/socialgd/10000169/20260823/49693014.html",
+    "source_name": "China.com, citing China National Radio, August 23, 2026",
+    "tags": [
+      "humanoid robots",
+      "embodied AI",
+      "World Robot Conference",
+      "manufacturing scale",
+      "AgiBot"
+    ],
+    "related_signals": [
+      "2026-08-20-beijing-tiangong-omni-home-humanoid"
+    ],
+    "industry_lens": "automotive",
+    "content_type": "daily",
+    "body": {
+      "signal": "Zhang Feng, party secretary of the China Institute of Electronics and chair of the China Humanoid Robot and Embodied Intelligence Council, released the 2026 Humanoid Robot Industry Development Report at the World Robot Conference in Beijing on August 20. Chinese makers shipped more than 40,000 humanoid robots in the first half of 2026, lifting China's share of global shipments to 97 percent. AgiBot and Unitree took the top two positions worldwide, ahead of Tesla, Figure AI, and Agility Robotics. The report describes the sector moving from small-batch builds to routine deployment, with a domestic supply chain running from chips and components through to finished units. The conference drew 373 exhibitors showing over 3,000 products, 311 of them debuts.",
+      "china_scale": "China built the component base for this over a decade of electric vehicle and drone manufacturing, so harmonic reducers, actuators, and battery packs are already domestic and cheap at volume. Central policy targets more than 100 high-value application scenarios and over 10,000 humanoids in commercial use by the end of 2027, which gives manufacturers a guaranteed floor of demand while unit costs fall. Provincial procurement in manufacturing, warehousing, and logistics converts pilots into repeat orders before the technology is fully mature.",
+      "global_impact": "A 97 percent shipment share means the learning curve for embodied AI now runs almost entirely through Chinese factories and Chinese deployment data. Whoever accumulates the most operating hours accumulates the most training data for manipulation policies, which compounds. Western industrial buyers face a choice between a thin domestic supply and a Chinese supply that is cheaper, more available, and improving faster, which is the same position they reached in solar and batteries.",
+      "monday_morning": "If your operations roadmap includes humanoid or embodied automation past 2028, map which vendors can actually deliver units at volume and what that implies for procurement policy and export controls. Ask your manufacturing and logistics leads to cost one pilot cell against a Chinese unit and a Western unit, so the gap is a number instead of an assumption. Treat deployment hours, not demo videos, as the metric worth tracking.",
+      "related_notes": "Extends the August 20 signal on the Beijing Tiangong Omni home humanoid from a single product to the shipment picture behind it."
+    }
+  },
+  {
+    "id": "2026-08-25-alibaba-hk80-billion-placement-all-ai",
+    "date": "2026-08-25",
+    "day_number": 179,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 5,
+    "title_en": "Alibaba Raises US$10 Billion and Commits Every Dollar to AI",
+    "title_cn": "阿里巴巴配售融资百亿美元，全部投入AI",
+    "source_url": "https://www.alibabagroup.com/en-US/document-2028384807859257344",
+    "source_name": "Alibaba Group, August 23, 2026",
+    "tags": [
+      "AI capex",
+      "equity placement",
+      "full-stack AI",
+      "Alibaba Cloud",
+      "Hong Kong listing"
+    ],
+    "related_signals": [
+      "2026-08-18-deepseek-peak-pricing-ends-token-price-war",
+      "2026-08-11-us-firms-switch-ai-base-to-chinese-open-weight-models"
+    ],
+    "industry_lens": "consumer",
+    "content_type": "daily",
+    "body": {
+      "signal": "Alibaba priced a placement of 710 million new Hong Kong shares at HK$112.70 each on August 23, 2026, raising HK$80 billion, about US$10.21 billion, with closing set for August 26. The company said it will use 100 percent of net proceeds to invest in its full stack AI capabilities and to expand and enhance its AI infrastructure. The book covered close to three times, roughly 40 percent went to long only and sovereign wealth investors, and the Hong Kong shares fell 8 percent on the news. This is Alibaba's first equity raise since its 2019 Hong Kong listing, and press reports describe it as the largest primary follow on ever by a Hong Kong listed company and the third largest in the world this year after Alphabet and Intel.",
+      "china_scale": "Alibaba can spend this money inside a stack it owns end to end, from the Qwen models through Alibaba Cloud down to its own silicon, and it told investors on August 21 that its second generation T-Head accelerator will tape out and enter production this year. Beijing has pushed the major platforms toward domestic chips, so the capital converts into domestic capacity instead of an export license queue. The placement also cleared in three days, which tells you how much global capital is looking for AI exposure priced outside the United States.",
+      "global_impact": "One company raising ten billion dollars of fresh equity and assigning all of it to AI infrastructure resets what counts as a serious capital commitment in this category. It also moves where AI capital gets priced, since Hong Kong just absorbed a follow on that sits alongside Alphabet's and Intel's on the global league table. Western cloud and enterprise buyers should expect Alibaba Cloud capacity, and the Qwen models running on it, to get cheaper and more available through 2027.",
+      "monday_morning": "Pull your 2027 AI infrastructure budget and find the line that assumes what inference capacity will cost, then test it against a competitor that just bought ten billion dollars of it. If you buy cloud or models, put Alibaba Cloud and Qwen into your next vendor review, if only to reprice your incumbent. If you raise capital, note that investors funded a pure AI use of proceeds at three times cover and accepted an 8 percent hit to the share price.",
+      "related_notes": "Follows the August 18 signal on DeepSeek ending China's token price war. Compute scarcity set the price. This is the capital answer to it."
+    }
+  },
+  {
+    "id": "2026-08-25-iflytek-flagship-model-domestic-compute",
+    "date": "2026-08-25",
+    "day_number": 178,
+    "category": "Deep Tech & Research",
+    "category_emoji": "🔬",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 3,
+    "title_en": "iFlytek Will Ship a Flagship Model Trained Only on Chinese Chips",
+    "title_cn": "科大讯飞将发布全国产算力训练的新一代主力大模型",
+    "source_url": "https://news.aibase.com/zh/news/30534",
+    "source_name": "AIBase, August 21, 2026",
+    "tags": [
+      "domestic compute",
+      "Huawei Ascend",
+      "iFlytek Spark",
+      "export controls",
+      "1024 Developer Festival"
+    ],
+    "related_signals": [
+      "2026-08-25-alibaba-hk80-billion-placement-all-ai"
+    ],
+    "industry_lens": "education",
+    "content_type": "daily",
+    "body": {
+      "signal": "iFlytek president Wu Xiaoru told the company's 2026 half year results briefing on August 21 that iFlytek will launch a new flagship general purpose model trained entirely on domestic compute at its 1024 Developer Festival in October, with a staged version released at the end of August for developers to test. The company claims the model reaches the domestic first tier on coding ability and on cost per token, and leads every general model trained wholly on Chinese silicon. In April, Wu said the October model would run on Huawei's Ascend 950 platform and would be the first Chinese flagship benchmarked directly against the world's leading models. iFlytek reported first half revenue of 11.62 billion yuan, up 6.52 percent, and a net loss of 204 million yuan, narrowed by 14.68 percent.",
+      "china_scale": "iFlytek is the only mainstream Chinese model maker running full stack training and inference on domestic accelerators, a position it has held since it built the Feixing compute platform with Huawei. That makes it the working proof for the rest of the industry that a frontier class training run is possible on Chinese hardware alone. Its distribution runs through schools, hospitals, courts, and government procurement, where a fully domestic stack is a qualifying requirement and the customer is already committed to buying it.",
+      "global_impact": "Export controls rest on the premise that Chinese labs training on domestic silicon stay a generation behind. A flagship model shipped on Ascend 950 and benchmarked against the leading Western models is the test of that premise, and October is when it gets graded. If the claim holds, the compute chokepoint stops being a strategic lever and becomes a cost difference, which is a much weaker instrument.",
+      "monday_morning": "Put the October 1024 Developer Festival on your watch list and plan to benchmark the released model yourself against the frontier models your teams use today. Ask your policy and supply chain leads what changes in your three year plan if Chinese frontier training runs entirely on Chinese hardware by 2027. If you sell AI infrastructure, price the scenario where Ascend becomes a credible second source for buyers outside the United States.",
+      "related_notes": "Pairs with today's Alibaba placement. One signal is the capital for AI infrastructure, the other is whether that infrastructure can be domestic all the way down."
+    }
+  },
+  {
     "id": "2026-08-20-new-power-system-15th-five-year-plan",
     "date": "2026-08-20",
     "day_number": 177,
