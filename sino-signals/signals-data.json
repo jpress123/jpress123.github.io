@@ -1,5 +1,37 @@
 [
   {
+    "id": "2026-09-14-supreme-court-ai-liability-rulebook",
+    "date": "2026-09-14",
+    "day_number": 204,
+    "category": "Policy & Governance",
+    "category_emoji": "⚖️",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 5,
+    "title_en": "China's Top Court Issues the First National Rulebook for AI Liability",
+    "title_cn": "最高法出台首部涉人工智能司法裁判规则",
+    "source_url": "https://www.scmp.com/news/china/politics/article/3366802/chinas-highest-court-sets-out-new-ai-red-lines-rules-deepfakes-and-privacy",
+    "source_name": "South China Morning Post",
+    "tags": [
+      "Supreme People's Court",
+      "AI liability",
+      "deepfakes",
+      "voice cloning",
+      "training data consent",
+      "深度伪造"
+    ],
+    "related_signals": [],
+    "industry_lens": "entertainment",
+    "content_type": "daily",
+    "body": {
+      "signal": "On September 7, 2026, the Supreme People's Court released its Opinion on the Lawful Adjudication of Disputes Involving Artificial Intelligence, document 2026 number 10, running to five parts and 24 articles. It is the first judicial rulebook on AI issued by China's highest court, and it instructs judges to decide AI cases under the Civil Code, Cybersecurity Law, Copyright Law, and Personal Information Protection Law while Beijing still has no dedicated AI statute. The opinion holds that generating an identifiable virtual likeness of a person without consent infringes name and portrait rights, and that using someone's voice as training material to synthesize recognizable speech infringes voice rights. It also reaches AI hallucination liability, doxxing, algorithmic price discrimination against loyal customers, autonomous driving, model training data, and open-source software.",
+      "china_scale": "China's court system handles tens of millions of civil cases a year, and a Supreme People's Court opinion binds every one of roughly 3,500 courts immediately, with no legislative calendar to wait on. Judicial guidance moves faster than statute and gets applied case by case, which gives plaintiffs a usable cause of action against deepfake and voice-cloning defendants within weeks. The consent standard for training data lands on an industry where synthetic celebrity endorsements, revived deceased performers, and cloned voice-over work already trade at scale.",
+      "global_impact": "The EU AI Act allocates duties to providers and deployers before harm occurs, and US law leaves likeness rights to a patchwork of state statutes. China has taken a third route, using courts to define AI liability through existing personal-rights law, which produces enforceable outcomes without the multi-year legislative fight. Any foreign firm running generative products, advertising, or customer service in China now faces a defined litigation exposure it did not face in August, and other jurisdictions will study whether judicial guidance beats waiting for a statute.",
+      "monday_morning": "Ask your China counsel to map which of your generative products touch a person's face, voice, or name, because those are the three the opinion names first. Audit your training corpora for voice and likeness data collected without documented consent, and treat undocumented consent as a live liability rather than a compliance backlog item. Brands running synthetic spokespeople or AI dubbing in the China market should freeze new deployments until the consent chain is evidenced.",
+      "related_notes": ""
+    }
+  },
+  {
     "id": "2026-09-11-pku-phase-change-memristor-brain-speed-chip",
     "date": "2026-09-11",
     "day_number": 203,
