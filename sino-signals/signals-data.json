@@ -1,5 +1,311 @@
 [
   {
+    "id": "2026-09-11-pku-phase-change-memristor-brain-speed-chip",
+    "date": "2026-09-11",
+    "day_number": 203,
+    "category": "Deep Tech & Research",
+    "category_emoji": "🔬",
+    "signal_strength": "weak",
+    "strength_emoji": "🟡",
+    "impact_score": 3,
+    "title_en": "Peking University Builds the First Chip That Models a Brain at Brain Speed",
+    "title_cn": "北大研制全球首款达到大脑速度的神经动力学芯片",
+    "source_url": "https://www.eurekalert.org/news-releases/1137055",
+    "source_name": "Peking University via EurekAlert",
+    "tags": [
+      "neuromorphic computing",
+      "phase-change memristor",
+      "in-memory computing",
+      "Peking University",
+      "brain-computer interface"
+    ],
+    "related_signals": [],
+    "industry_lens": "pharma",
+    "content_type": "daily",
+    "body": {
+      "signal": "A team led by Professor Yang Yuchao at Peking University, working with the Shanghai Institute of Microsystem and Information Technology under the Chinese Academy of Sciences, published a neural dynamical system chip in Science built on phase-change memristors. The chip completes a single integration step in 2.12 milliseconds and reconstructs cortical white and gray matter surfaces up to 478 times faster than an NVIDIA A100 GPU, drawing 11.75 to 24.73 times less power than the best comparable ASICs. It was fabricated on a 40-nanometer process, and its in-memory computing and conductance-drift arrays occupy 0.28 square millimeters. The design exploits the predictable conductance drift of phase-change memory instead of correcting for it, turning a known device flaw into the computation itself.",
+      "china_scale": "China has funded memristor and in-memory computing research for a decade through Peking University, Tsinghua, and CAS institutes, and brain-computer interfaces entered the 15th Five-Year Plan as one of six designated future industries. A 40-nanometer node sits well inside what SMIC produces today, so this architecture scales on domestic fabs while advanced-node access stays restricted. The clinical pull is large, with more than 35,000 hospitals and a rapidly aging population driving demand for real-time surgical navigation and neurodegenerative imaging.",
+      "global_impact": "Western AI hardware strategy assumes performance comes from smaller transistors and bigger GPU clusters. This result shows a second path, where device physics does the arithmetic and a mature node beats a leading-edge GPU on a specific workload by two orders of magnitude. If Chinese labs keep finding workloads where analog in-memory computing wins, export controls on advanced lithography will protect less of the frontier than Washington and Brussels assume.",
+      "monday_morning": "Ask your hardware team which latency-critical workloads are dominated by data movement rather than raw arithmetic, because those are the ones an in-memory architecture takes first. Medical imaging, surgical robotics, and BCI vendors should read the Science paper this quarter and decide whether to license, partner, or build. Treat mature-node analog computing as a live competitive threat, not a research curiosity.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-09-11-alibaba-qoderwake-digital-employees-rival-apps",
+    "date": "2026-09-11",
+    "day_number": 202,
+    "category": "Platforms & Social",
+    "category_emoji": "🌐",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "Alibaba Sends AI Digital Employees Into ByteDance and Tencent Workplaces",
+    "title_cn": "阿里数字员工进驻飞书与企业微信",
+    "source_url": "https://www.scmp.com/tech/big-tech/article/3366919/alibaba-sends-ai-digital-employees-work-rival-apps-bytedance-tencent",
+    "source_name": "South China Morning Post",
+    "tags": [
+      "enterprise AI agents",
+      "Alibaba Cloud",
+      "QoderWake",
+      "walled gardens",
+      "knowledge work"
+    ],
+    "related_signals": [],
+    "industry_lens": "education",
+    "content_type": "daily",
+    "body": {
+      "signal": "Alibaba Cloud released a new version of QoderWake on September 8, 2026, letting a user create a working AI colleague from a one-line description of the role. Those agents now run inside all three major Chinese workplace platforms, Alibaba's DingTalk, ByteDance's Feishu, and Tencent's WeCom, pulling context autonomously from shared documents, calendars, and group chats. QoderWake ships 10 pre-tuned roles including product manager, data analyst, UI designer, and front-end and back-end developer. Since its April release, Alibaba says it has deployed close to 100,000 digital employees that executed roughly 2 million tasks over three months.",
+      "china_scale": "DingTalk, Feishu, and WeCom together reach most of China's white-collar workforce, so an agent that crosses all three inherits a distribution base no Western equivalent can match. Alibaba is deliberately abandoning the walled-garden habit at the application layer because the revenue now sits in workflow execution rather than in seat licenses. Chinese enterprises also adopt agent tooling with less procurement friction than US firms, which compresses the pilot-to-production cycle to weeks.",
+      "global_impact": "Microsoft, Google, and Salesforce each sell agents that work best inside their own suite, and each treats that lock-in as the moat. Alibaba has priced interoperability as the feature instead, which resets what a buyer will accept. Expect procurement teams in Europe and Southeast Asia to start asking whether an agent runs across Teams, Slack, and Google Workspace, and to read a single-suite answer as a limitation.",
+      "monday_morning": "Audit which of your AI agent contracts assume a single collaboration suite, and price what a cross-platform requirement would cost at renewal. Ask HR and learning teams which of the 10 roles Alibaba pre-tuned overlap with jobs you are currently hiring for, because that list is a public forecast of which knowledge-work tasks get automated first. Decide now whether your answer is redeployment or headcount reduction.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-09-09-miit-time-honored-industries-ai",
+    "date": "2026-09-09",
+    "day_number": 201,
+    "category": "Creative & Culture",
+    "category_emoji": "🎭",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 3,
+    "title_en": "China Orders AI Into Its Time-Honored Crafts to Win Global Pricing Power",
+    "title_cn": "中国以人工智能改造老字号产业，争夺全球定价权",
+    "source_url": "http://www.china.org.cn/2026-09/08/content_118684824.shtml",
+    "source_name": "Xinhua via China.org.cn",
+    "tags": [
+      "intangible cultural heritage",
+      "MIIT",
+      "brand strategy",
+      "generative design",
+      "craft digitization"
+    ],
+    "related_signals": [],
+    "industry_lens": "consumer",
+    "content_type": "daily",
+    "body": {
+      "signal": "On September 7, 2026, MIIT and five other ministries issued China's first national policy document for silk, tea, porcelain, traditional Chinese medicine, brewing, arts and crafts, and the four treasures of the study. Vice Minister Xie Yuansheng set targets of 50 firms above 10 billion yuan in annual revenue and 100 consumer brands by 2028. The document assigns AI three jobs, digitizing craft knowledge, decoding traditional production processes, and lifting factory-floor quality. Xie said AI-assisted design already generates thousands of silk weaving patterns in minutes. The first national exposition of time-honored industries opens in Hangzhou in late October.",
+      "china_scale": "These sectors already run about 25,000 firms above designated size, employ nearly 3.5 million people, and turn over roughly 8 trillion yuan a year, so the policy lands on an existing industrial base instead of building one. China holds 45 UNESCO intangible heritage inscriptions and more than 100,000 nationally and locally listed items, a documented body of craft knowledge few countries can match in depth. Over 200 universities have trained more than 200,000 heritage practitioners in the past decade, and 14,900 heritage workshops support 1.3 million people.",
+      "global_impact": "China exports about 90 percent of its silk output as raw material or OEM goods, and Feng Haicang of MIIT named the recovery of pricing power as the explicit objective. Generative design applied to a documented pattern archive shortens the design cycle that European luxury houses treat as a defensible moat. Licensing deals this summer put hemp weaving, Huzhou brushes, and Zhuang brocade on 2026 FIFA World Cup products, showing the export channel is already open.",
+      "monday_morning": "Audit where your brand premium rests on design lead time and archive depth, because a state-backed competitor with a deeper archive can now compress both. Ask your heritage or craft suppliers in China whether they are moving from OEM contracts to their own labels, since the policy pays them to do exactly that. Book a look at the Hangzhou exposition in late October before your category shows up there.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-09-09-miit-15th-five-year-compute-blueprint",
+    "date": "2026-09-09",
+    "day_number": 200,
+    "category": "Policy & Governance",
+    "category_emoji": "⚖️",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 4,
+    "title_en": "China Commits 3.8 Trillion Yuan to Build AI Compute on Domestic Chips",
+    "title_cn": "中国投入3.8万亿元，以国产芯片建设智能算力",
+    "source_url": "https://www.scmp.com/tech/policy/article/3366733/china-targets-fourfold-boost-ai-computing-capacity-2030-major-tech-push",
+    "source_name": "South China Morning Post",
+    "tags": [
+      "MIIT",
+      "15th Five-Year Plan",
+      "intelligent computing",
+      "domestic chips",
+      "infrastructure investment"
+    ],
+    "related_signals": [],
+    "industry_lens": "financial services",
+    "content_type": "daily",
+    "body": {
+      "signal": "MIIT posted its 15th Five-Year Plan for the information and communications sector on September 7, 2026, dated August 12 and covering 2026 to 2030. It targets 9,800 exaflops of intelligent computing capacity by 2030, against a 2025 baseline of 1,590 exaflops, plus 1,700 exabytes of advanced storage. Cumulative information infrastructure investment is set at 3.8 trillion yuan, about 532 billion dollars, with private capital expected to supply most of it. The plan calls for orderly deployment of clusters running 100,000 or more accelerator cards and for greater efforts to adapt infrastructure to home-grown computing chips. Thirteen headline indicators and 26 key tasks sit across six priority areas.",
+      "china_scale": "Compute build-out in China runs through state grid planning, provincial land allocation, and the East Data West Computing corridors, so siting and power approvals move on one timetable instead of many. Domestic chipmakers now have a published demand curve to finance against, which converts a policy target into order books for Huawei, Cambricon, and their suppliers. China activated its first 100,000-chip cluster built entirely from domestic silicon at a Zhengzhou node in August 2026.",
+      "global_impact": "A public capacity target sized for Chinese hardware reduces the leverage of US export controls, because the binding constraint shifts from chip access to domestic fabrication yield. Western cloud buyers should expect Chinese inference capacity to price aggressively into Southeast Asia, the Gulf, and Africa well before 2030. The measurement method for intelligent computing capacity goes undefined in the document, so treat 9,800 exaflops as a direction of travel and watch delivered cluster counts instead.",
+      "monday_morning": "Model what your inference economics look like if Chinese capacity clears at half your current rate in third markets, and decide now whether you compete there or cede them. Ask your infrastructure team which of your suppliers depend on Chinese fabrication capacity that this plan will absorb. Track quarterly cluster activations in Zhengzhou, Shenzhen, and Hohhot as the real progress metric.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-09-08-iflytek-spark-x25-domestic-compute-agent-model",
+    "date": "2026-09-08",
+    "day_number": 199,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "iFlytek Ships an Agent-Grade Model Trained Entirely on Chinese Silicon",
+    "title_cn": "科大讯飞发布全国产算力训练的智能体级大模型",
+    "source_url": "https://www.ithome.com/0/999/204.htm",
+    "source_name": "IT之家 (IT Home)",
+    "tags": [
+      "iFlytek",
+      "domestic compute",
+      "agent capability",
+      "token pricing",
+      "edge models"
+    ],
+    "related_signals": [],
+    "industry_lens": "education",
+    "content_type": "daily",
+    "body": {
+      "signal": "iFlytek released Spark X2.5 on September 7, 2026, a 293B-parameter mixture-of-experts model activating roughly 30B parameters per inference, with a 256K context window and coverage of more than 200 languages. The company states the model was trained end to end on a fully domestic compute platform. It is live on iFlytek's Xingchen MaaS platform at 1.6 yuan per million input tokens, 0.24 yuan for cached input, and 6 yuan per million output tokens. On September 1 iFlytek also open-sourced two on-device versions, X2.5-4B and X2.5-1.7B, both with a one-million-token context window and both trained on the same domestic stack. The upgrade targets code generation and agent orchestration.",
+      "china_scale": "The pricing is the scaling mechanism. At 1.6 yuan per million input tokens, roughly 22 US cents, an agent workflow that fires thousands of calls per task becomes affordable to mid-sized Chinese manufacturers and schools that would never license a frontier Western model. iFlytek already sells into tens of thousands of Chinese classrooms and government procurement lists, and a domestic-silicon provenance clears the procurement rules that increasingly favor local compute. The open-weight 4B and 1.7B versions push the same capability onto learning tablets and factory edge boxes with no cloud bill at all.",
+      "global_impact": "Training a 293B model on domestic accelerators moves Chinese silicon past the inference-only assumption that held through 2025, joining Meituan's trillion-parameter run on 50,000 domestic chips and Baidu's Kunlunxin training of Ernie 5.1. For Western buyers the consequence is a price floor: agent-heavy products now compete against a capable model at a fraction of frontier token cost, in 200 languages, with a permissive on-device tier underneath it. Export controls shaped which chips China buys, and have done less to shape what China can train.",
+      "monday_morning": "Have your engineering lead price one real agent workflow, the kind that makes 5,000 model calls to finish a task, against Spark X2.5 rates and against your current vendor. If the gap is an order of magnitude, your product roadmap has a cost problem before it has a capability problem. Then check whether the 1.7B open-weight model runs your edge use case on hardware you already ship.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-09-08-guangxiang-tsinghua-world-model-exits-deployment",
+    "date": "2026-09-08",
+    "day_number": 198,
+    "category": "Deep Tech & Research",
+    "category_emoji": "🔬",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 3,
+    "title_en": "Tsinghua Spinout Cuts the World Model Out of Robot Deployment",
+    "title_cn": "清华系光象科技让世界模型在部署阶段退场",
+    "source_url": "https://www.qbitai.com/2026/09/484611.html",
+    "source_name": "量子位 (QbitAI)",
+    "tags": [
+      "world models",
+      "embodied AI",
+      "Tsinghua",
+      "inference cost",
+      "Guangxiang Technology"
+    ],
+    "related_signals": [],
+    "industry_lens": "automotive",
+    "content_type": "daily",
+    "body": {
+      "signal": "Guangxiang Technology and Professor Li Shengbo's group at Tsinghua released Phi-WM 1.0 ActEffect, a world model that scores the physical consequences of candidate actions during training and is then removed from the robot at deployment. The policy generates three complete action proposals, the world model predicts each outcome in a frozen DINOv3 feature space, and a ranking loss pushes refined proposals closer to the observed future. Reported results are 98.8 percent average success on LIBERO, 80.3 percent on the distribution-shifted LIBERO-PLUS against 51.5 percent for Fast-WAM, and 67.5 percent on RoboCasa-GR1 in a 29-dimensional action space, 9.2 points above the next system. The company, incubated in April 2025 by Tsinghua's School of Vehicle and Mobility and School of AI, ran its Phi-Bot X1 at a NIO welding load-and-unload station for three days, 21.5 cumulative operating hours, with no errors or interruptions.",
+      "china_scale": "Chinese factories buy robots by the fleet, so inference cost multiplies fast. A world model that runs at training time and disappears at execution removes GPU, power, and maintenance overhead from every workstation copy, which is the arithmetic that decides whether a pilot spreads from one welding cell to two hundred. Guangxiang raised over 100 million yuan in the first half of 2026 with IDG Capital leading, and sits inside an automotive supply chain that will validate or reject the approach within a production quarter.",
+      "global_impact": "Most Western embodied-AI programs are scaling world models up and running them online, betting that richer prediction at inference buys reliability. This work argues the opposite trade, that consequence supervision belongs in training and the deployed policy should stay short. If the real-machine numbers hold, the cost per deployed robot arm diverges between the two approaches, and the cheaper architecture wins factory contracts regardless of which one demos better.",
+      "monday_morning": "If you are evaluating embodied AI vendors, ask each one what runs on the robot at execution time and what only ran during training, then price the difference across the number of stations you actually plan to deploy. Treat benchmark success rates as the second question. The results here are simulation-based, and the new model has yet to be validated on production hardware.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-09-07-cac-ai-misuse-campaign-5-6-million-removals",
+    "date": "2026-09-07",
+    "day_number": 197,
+    "category": "Policy & Governance",
+    "category_emoji": "⚖️",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "China Removes 5.6 Million AI Fakes in Nationwide Enforcement Sweep",
+    "title_cn": "中国专项行动清理560万条AI违规内容",
+    "source_url": "https://english.news.cn/20260902/1ac6ec1c7d2346d29b9b759ab875217b/c.html",
+    "source_name": "Xinhua",
+    "tags": [
+      "Cyberspace Administration of China",
+      "content labeling",
+      "deepfakes",
+      "platform enforcement"
+    ],
+    "related_signals": [],
+    "industry_lens": "entertainment",
+    "content_type": "daily",
+    "body": {
+      "signal": "The Cyberspace Administration of China reported on September 2, 2026 that its nationwide campaign against AI misuse has removed more than 5.61 million pieces of unlawful or rule-violating content, acted against over 49,000 accounts, and disciplined more than 2,400 websites and apps. The campaign targets AI-fabricated false information, violent or vulgar output, AI impersonation of real people, and material that harms minors. Douyin, Kuaishou, Weibo, Tencent, Baidu, Bilibili, Xiaohongshu, Zhihu, Douban and Taobao expanded multimodal detection and built out databases of manipulated faces, cloned voices, and known violation samples. ByteDance's Doubao, Tencent's Yuanbao, Alibaba's Qwen and Baidu's Ernie Bot tightened review of training and output content, and the app stores run by Huawei, Xiaomi, OPPO and Vivo rechecked listings already live.",
+      "china_scale": "China built the enforcement plumbing before it ran the campaign. Labeling rules in force since September 2025 require visible or embedded identifiers on AI-generated text, images, audio and video, which gives regulators a machine-readable hook a takedown operation can pull at volume. The CAC can also direct every large platform at once, so Beijing regulators ordered review-system upgrades while Shanghai pushed internal audits, and both landed within the same campaign window.",
+      "global_impact": "Enforcement at this scale produces the world's first working data point on what synthetic-media moderation costs a national market. European regulators drafting Digital Services Act guidance and US platforms facing state deepfake statutes now have a reference implementation, including an app-store vetting layer that Western rulemaking has left largely untouched. The same detection stack that catches cloned voices also catches political speech, so the tooling travels more easily than the norms attached to it.",
+      "monday_morning": "Ask your trust and safety or communications leads whether your brand, executives, or products already appear in face-swap and voice-clone datasets, and who inside the company would notice. If you ship an AI feature into China, confirm your labeling and app-store filings match the current standard. Content provenance is turning into a market-access requirement, so fund it as one.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-09-07-deepseek-160000-huawei-ascend-ulanqab-cluster",
+    "date": "2026-09-07",
+    "day_number": 196,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 4,
+    "title_en": "DeepSeek Orders 160,000 Huawei Chips for a Gigawatt Inner Mongolia Cluster",
+    "title_cn": "深度求索订购16万颗华为昇腾芯片建吉瓦级算力中心",
+    "source_url": "https://tech-ish.com/2026/09/04/deepseek-turns-to-huawei-for-160000-ai-chips-as-nvidia-stays-locked-out-of-china/",
+    "source_name": "tech-ish (reporting Bloomberg)",
+    "tags": [
+      "DeepSeek",
+      "Huawei Ascend",
+      "Ulanqab",
+      "inference compute"
+    ],
+    "related_signals": [],
+    "industry_lens": "financial services",
+    "content_type": "daily",
+    "body": {
+      "signal": "Bloomberg reported on September 4, 2026 that DeepSeek plans to install at least 160,000 Huawei Ascend 950DT accelerators at a gigawatt-scale data center in Ulanqab, Inner Mongolia, roughly 350 kilometers northwest of Beijing. Part of the site is scheduled to come online by late 2027 or early 2028, which would make it one of the largest known clusters of Chinese-designed AI chips. DeepSeek intends to run inference on the Huawei parts and keep model training on Nvidia hardware, even though Huawei designed and marketed the 950DT for training. Huawei launches the 950DT in the fourth quarter of 2026 with its own high-bandwidth memory, and memory supply holds output to the low hundreds of thousands of units this year, so filling the order could take more than a year. Neither company has commented.",
+      "china_scale": "Ulanqab pairs cheap wind and solar with a 4.3 degree Celsius average temperature, so free cooling and stranded renewable power carry a gigawatt site that would be uneconomic in most of the world. DeepSeek raised more than 7 billion dollars in June 2026 to move off rented compute onto infrastructure it owns. State procurement rules already require Chinese chips in state-funded data centers, which gives Huawei guaranteed demand while it scales an unproven domestic memory supply chain.",
+      "global_impact": "Splitting training and inference across two silicon vendors is the workaround every export-controlled buyer will now copy, and it puts a floor under Huawei's accelerator business, which is tracking from 7.5 billion dollars of AI chip revenue in 2025 toward roughly 12 billion in 2026. Cheap domestic inference capacity is what lets Chinese open-weight models keep undercutting Western API prices, and that is where the pressure reaches Western buyers directly. Huawei's memory bottleneck is the constraint to watch, since any 950DT slip stalls the entire plan.",
+      "monday_morning": "Ask your infrastructure team what you pay per million inference tokens and how that compares with Chinese open-weight models served on domestic silicon. If you depend on Nvidia supply, model what a second credible inference vendor does to your negotiating position. Treat inference economics as a procurement question separate from training.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-09-04-shenzhen-university-depression-risk-mri-model",
+    "date": "2026-09-04",
+    "day_number": 195,
+    "category": "Deep Tech & Research",
+    "category_emoji": "🔬",
+    "signal_strength": "weak",
+    "strength_emoji": "🟡",
+    "impact_score": 3,
+    "title_en": "Shenzhen University AI Flags Depression Risk Four Years Before Symptoms Appear",
+    "title_cn": "深圳大学AI提前四年预测抑郁风险",
+    "source_url": "https://www.scmp.com/news/china/science/article/3364176/chinese-brain-reading-ai-model-may-help-predict-depression-risk-4-years-advance",
+    "source_name": "South China Morning Post",
+    "tags": [
+      "Shenzhen University",
+      "computational psychiatry",
+      "medical imaging",
+      "Science Advances"
+    ],
+    "related_signals": [],
+    "industry_lens": "pharma",
+    "content_type": "daily",
+    "body": {
+      "signal": "A team at Shenzhen University led by Lu Han published a deep-learning model in Science Advances on August 16, 2026 that predicts individual depression risk up to four years ahead from routine MRI scans. The model reads a specific computational fault in how the visual cortex encodes angry faces, and it was trained and validated on the European IMAGEN and STRATIFY adolescent cohorts, where participants were scanned and assessed at ages 16, 19, and 23. The researchers linked the biomarker to the depression-associated variant rs11123030 and to polygenic risk, tying a brain-imaging signature to genetic susceptibility. Major depressive disorder affects more than 332 million people worldwide.",
+      "china_scale": "China runs one of the largest installed bases of MRI scanners on earth, and domestic makers United Imaging and Neusoft supply hospitals down to the prefecture level, so an inference model that rides on scans clinicians already order faces a short deployment path. National mental health policy has pushed adolescent screening into schools and community health centers since 2021, which gives the model an obvious institutional customer. Chinese groups have also become fluent at mining open Western cohort data, turning European longitudinal studies into Chinese-authored clinical tools.",
+      "global_impact": "Prediction four years ahead of onset moves psychiatry toward the risk-stratification model that cardiology and oncology already use, and it changes what a scan is worth. Pharmaceutical companies running prevention trials gain a way to enrich cohorts with people who will actually convert, which is the single hardest problem in depression drug development. Insurers and employers will reach for the same signal for reasons that regulators have yet to address, and the paper rests on European adolescent data, so generalization across adult and non-European populations remains open.",
+      "monday_morning": "Ask your clinical, benefits, or R&D leadership whether predictive mental health biomarkers are on any roadmap, and who would be allowed to see the output. If you run trials, look at whether imaging-based enrichment could cut your prevention study size. Decide your position on predictive psychiatric risk data before a vendor decides it for you.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-09-04-apple-china-trained-model-alibaba-approval",
+    "date": "2026-09-04",
+    "day_number": 194,
+    "category": "Platforms & Social",
+    "category_emoji": "🌐",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 4,
+    "title_en": "Beijing Clears Apple to Ship Its Own China-Trained AI Model",
+    "title_cn": "北京批准苹果在华运行自研大模型",
+    "source_url": "https://www.macrumors.com/2026/08/14/apple-trained-own-ai-model-for-china/",
+    "source_name": "MacRumors",
+    "tags": [
+      "Apple Intelligence",
+      "Alibaba Qwen",
+      "market access",
+      "Cyberspace Administration of China"
+    ],
+    "related_signals": [],
+    "industry_lens": "consumer",
+    "content_type": "daily",
+    "body": {
+      "signal": "Reuters reported on August 14, 2026 that Apple trained its own large language model for the China market with help from Alibaba, breaking from its earlier plan to license a domestic model outright. The Cyberspace Administration of China logged Apple's service in July 2026, making Apple the first foreign company approved to run a proprietary AI model on the mainland, roughly 22 months after Apple Intelligence shipped elsewhere. Alibaba's Qwen family and Baidu technology sit alongside the new model in what Reuters describes as a dual-track deployment, and rollout is expected with iOS 27 in the coming months. Apple briefly posted and then pulled a Chinese support guide for connecting Siri to Qwen on August 8.",
+      "china_scale": "Greater China is Apple's second-largest market and the iPhone install base there runs into the hundreds of millions, so a cleared model reaches consumer scale on the day it ships. Alibaba brings Qwen's Chinese-language training data, a compliant filtering stack, and mainland inference capacity, which is the part a foreign firm cannot build alone under current data rules. Regulatory approval is the scarce asset here, and Apple obtained it by co-developing on Chinese infrastructure instead of importing a finished model.",
+      "global_impact": "The approval sets the template every foreign platform will now be measured against: train locally, partner with a licensed domestic lab, submit to filing, and accept a China-specific model that diverges from your global one. Google, Meta, Microsoft, and OpenAI have no equivalent clearance, so Apple gains a structural advantage in the largest smartphone market while accepting a bifurcated product. It also deepens Apple's dependence on Alibaba at the moment Chinese models are taking share from US labs on developer platforms abroad.",
+      "monday_morning": "If you sell software or devices into China, map which of your AI features would need a separate filed model and who your domestic training partner would be. Price the cost of maintaining two model stacks against the revenue at risk. Treat regulatory clearance as a product requirement with a lead time, not a legal afterthought.",
+      "related_notes": ""
+    }
+  },
+  {
     "id": "2026-09-03-fengwu-typhoon-dolphin-landfall-forecast",
     "date": "2026-09-03",
     "day_number": 192,
