@@ -1,5 +1,168 @@
 [
   {
+    "id": "2026-09-17-sugon-8000-domestic-chips-weather-forecast",
+    "date": "2026-09-17",
+    "day_number": 209,
+    "category": "Climate & Sustainability",
+    "category_emoji": "🌱",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "China's All-Domestic Supercluster Forecasts Weather Finer Than the US System",
+    "title_cn": "全国产超算集群助力中国气象预报精度超越美国",
+    "source_url": "https://www.scmp.com/news/china/science/article/3367747/china-uses-100000-home-grown-ai-chips-build-leading-weather-forecast-system",
+    "source_name": "South China Morning Post",
+    "tags": [
+      "Sugon 8000",
+      "China Meteorological Administration",
+      "domestic AI chips",
+      "weather forecasting",
+      "national computing network",
+      "曙光8000"
+    ],
+    "related_signals": [],
+    "industry_lens": "financial services",
+    "content_type": "daily",
+    "body": {
+      "signal": "The China Meteorological Administration and the Beijing computing company Sugon jointly announced on September 15, 2026 that a Chinese-developed weather model now produces ten-day global forecasts at 5km resolution. The model runs on Sugon 8000, nicknamed Dengfeng, China's first 100,000-card AI supercluster, completed in July at the Zhengzhou core node of the national supercomputing network and built with domestic accelerators, domestic immersion liquid cooling, and domestically made coolant. The Global Forecast System, the main global model operated by the US National Weather Service, tops out near 13km. Sugon 8000 carries more than 300 optimized computing workloads across 20 or more fields, from materials science to drug discovery.",
+      "china_scale": "China runs one power grid, one meteorological administration, and one national computing network, so a resolution gain at the model layer reaches every provincial forecast office and every grid dispatcher through existing channels. Wind and solar now form a large share of new generation capacity, and dispatchers need short-horizon output forecasts to decide how much thermal backup to hold, which makes sharper weather prediction an operating cost line instead of a research result. The compute sits inside the national grid of supercomputing centers, so the marginal cost of adding meteorological workloads is a scheduling decision.",
+      "global_impact": "Weather resolution sets the price of catastrophe risk. Insurers, reinsurers, commodity traders, and grid operators all buy forecasts, and a state meteorological service running a finer global model changes who supplies the reference forecast for Asia and for the Belt and Road markets China already serves. The second point lands harder in Washington: three years of export controls produced a 100,000-accelerator machine with no restricted imports in the rack, and its first public win is a civilian climate application rather than a language model.",
+      "monday_morning": "If your firm prices weather risk, ask your data team which global model underlies your catastrophe and renewable-output assumptions, and what a move from 13km to 5km resolution would do to your tail estimates. Ask procurement whether a Chinese-sourced forecast feed is permitted under your data governance rules before an analyst starts using one. Treat the compute story separately from the weather story, because the durable signal is that the domestic stack now delivers production workloads.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-09-17-ubtech-liuzhou-10000-unit-humanoid-factory",
+    "date": "2026-09-17",
+    "day_number": 208,
+    "category": "Robotics & Embodied AI",
+    "category_emoji": "🤖",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "UBTech Opens the First Humanoid Factory Built for 10,000 Robots a Year",
+    "title_cn": "优必选建成全球首座万台级人形机器人智能工厂",
+    "source_url": "https://www.globaltimes.cn/page/202609/1370528.shtml",
+    "source_name": "Global Times",
+    "tags": [
+      "UBTECH Robotics",
+      "Liuzhou",
+      "Walker S",
+      "Cruzr",
+      "Siemens Digital Industries Software",
+      "人形机器人"
+    ],
+    "related_signals": [],
+    "industry_lens": "automotive",
+    "content_type": "daily",
+    "body": {
+      "signal": "UBTECH Robotics announced on September 13, 2026 that its Liuzhou plant in Guangxi has started production, the first humanoid robot factory designed for 10,000 units a year, rolling out one industrial humanoid every 10 minutes. The 14,000 square meter building makes the Walker S bipedal series and the Cruzr wheeled series, and Cruzr Y1 and Cruzr S2 units work the line themselves on depalletizing, loading, and material handling. UBTECH built the plant with Siemens Digital Industries Software, whose manufacturing operations management system schedules work orders, distributes material, and tracks each robot by serial number. Every finished unit takes more than four hours of whole-machine testing and passes an automotive-grade lighting tunnel for appearance inspection. China produced 635,056 industrial robots from January to July 2026, up 28.5 percent year on year.",
+      "china_scale": "Liuzhou is an automotive manufacturing city, so UBTECH sited the plant inside a supply chain that already turns out actuators, harnesses, and precision castings at automotive volume and automotive cost. Vice president Pang Jianxin put the point plainly, saying mass production of complex components would be extremely difficult without the Chinese supply chain unless cost advantages were sacrificed. The Ministry of Industry and Information Technology has told local governments and state-owned enterprises to put more than 10,000 humanoids into commercial scenarios by the end of 2026, which supplies demand on the same clock as the capacity.",
+      "global_impact": "Tesla, Figure, and Agility are all racing toward volume humanoid production, and the scarce asset is a working assembly line rather than a working robot. A 10,000-unit line running now sets the reference cost curve, and unit economics at that volume determine which Western programs stay funded. Siemens supplied the factory software, a reminder that the manufacturing layer of China's robotics push still runs partly on European industrial technology.",
+      "monday_morning": "Ask your operations team what a humanoid at automotive-supply-chain cost would change in your highest-turnover manual roles, and price the scenario rather than dismissing it. If you buy industrial automation, add humanoid platforms to the next capital planning cycle as a line item to evaluate, so the comparison happens before a competitor runs it. Check whether your own suppliers in China are already quoting robot-assembled parts.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-09-16-china-first-micro-drama-rules-ai-labels",
+    "date": "2026-09-16",
+    "day_number": 207,
+    "category": "Creative & Culture",
+    "category_emoji": "🎨",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 4,
+    "title_en": "China Forces an AI Label Onto Every Episode of Its Micro-Drama Boom",
+    "title_cn": "中国要求AI微短剧每集标注，并禁止成瘾推荐算法",
+    "source_url": "https://technode.com/2026/09/03/from-wild-growth-to-tech-driven-growth-in-chinas-ai-short-drama-industry/",
+    "source_name": "TechNode, September 3, 2026",
+    "tags": [
+      "micro-dramas",
+      "AI disclosure labels",
+      "NRTA",
+      "recommendation algorithms",
+      "content exports"
+    ],
+    "related_signals": [
+      "2026-09-01-first-all-ai-drama-hunan-tv",
+      "2026-08-19-hongguo-rejects-ai-drama-characters",
+      "2026-06-24-ai-micro-dramas-mass-market"
+    ],
+    "industry_lens": "entertainment",
+    "content_type": "daily",
+    "body": {
+      "signal": "The Administrative Measures for the Development of Micro-Dramas, issued by the National Radio and Television Administration on July 31, 2026 and in force since September 1, put every serialized episode under twenty minutes under one national framework. AI-generated micro-dramas must now carry a prominent disclosure label in every episode, and platforms are barred from running recommendation algorithms tuned to compulsive viewing. Responsibility is assigned across production, review, and distribution, and platforms must pre-screen AI output for repeated synthetic faces, infringing material, and visual defects before formal review.",
+      "china_scale": "The rules land on a format China already industrialized. In the first half of 2026 the country released 367,000 micro-dramas, more than 74 percent of them AI-generated, at an average of over 1,500 new AI titles a day. Generative tools cut per-title cost from hundreds of thousands of yuan to a few thousand, so a single creator now does work that once took a dozen people and several months. Regulating at that volume means regulating the world's largest working sample of AI video.",
+      "global_impact": "Labeling is now a condition of distribution in the market that produces the most AI video on earth, which turns provenance metadata into an export requirement rather than a voluntary pledge. The same production stack is already moving abroad: TikTok short dramas paid out more than 110 million dollars in revenue sharing from January to July 2026, with July alone above 29 million. Western platforms that treat AI disclosure as a future compliance question will meet Chinese-origin content that already carries it.",
+      "monday_morning": "Ask your content and platform teams whether your systems can read, preserve, and display an AI provenance label that arrives attached to third-party video. Then ask whether your own recommendation logic would survive a rule that bans optimizing for compulsive consumption, because that constraint is now written into a working market, not a draft proposal."
+    }
+  },
+  {
+    "id": "2026-09-16-zai-five-billion-glm-financing",
+    "date": "2026-09-16",
+    "day_number": 206,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 4,
+    "title_en": "Z.ai Raises Five Billion Dollars to Train GLM Models on Domestic Chips",
+    "title_cn": "智谱融资约50亿美元，押注国产芯片训练新一代GLM",
+    "source_url": "https://technode.com/2026/09/14/z-ai-completes-around-us5-billion-financing-for-next-generation-glm-models/",
+    "source_name": "TechNode, September 14, 2026",
+    "tags": [
+      "Z.ai",
+      "Zhipu",
+      "GLM",
+      "convertible bonds",
+      "domestic chip adaptation"
+    ],
+    "related_signals": [
+      "2026-07-03-zhipu-frontier-model-giveaway",
+      "2026-08-11-us-firms-switch-to-chinese-open-weight-models"
+    ],
+    "industry_lens": "financial services",
+    "content_type": "daily",
+    "body": {
+      "signal": "Z.ai, the company behind the GLM model family, closed a combined financing round of about 5 billion dollars on September 13, 2026, split between roughly 2 billion dollars from a share placement and about 3 billion dollars in convertible bonds. The company says the money goes to next-generation GLM foundation models, a fully self-training system, large-scale training and inference capacity, automated training-data generation and filtering, task environments, long-range reasoning, domestic-chip adaptation, and inference optimization.",
+      "china_scale": "Public equity and convertible debt, rather than venture rounds, now fund Chinese frontier labs, which lets a single raise clear the capital bar that US labs meet through private mega-rounds. Naming domestic-chip adaptation as a funded workstream rather than a contingency shows the training stack is being rebuilt around Chinese silicon on purpose. Z.ai already gives GLM weights away, so the compute this buys converts into free global distribution rather than seat licenses.",
+      "global_impact": "A well-capitalized lab whose business model is open weights puts continuous downward pressure on the price of frontier capability everywhere. Western enterprises that switched their base models to Chinese open-weight systems this year now have a funded roadmap behind that choice. The self-training system is the line to watch, because a lab that automates its own data generation and filtering compresses the cycle time between model generations.",
+      "monday_morning": "Have your architecture team price the next twelve months of model spend against a scenario where a funded open-weight competitor matches your provider on the two or three capabilities you actually use. If the answer changes your build-versus-buy math, start the evaluation now instead of at renewal."
+    }
+  },
+  {
+    "id": "2026-09-14-qwen-drive-open-source-autonomous-driving",
+    "date": "2026-09-14",
+    "day_number": 205,
+    "category": "Robotics & Embodied AI",
+    "category_emoji": "🤖",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 4,
+    "title_en": "Alibaba Open-Sources a Self-Driving Foundation Model Free for Any Automaker",
+    "title_cn": "阿里开源自动驾驶基础模型，车企可免费使用",
+    "source_url": "https://technode.com/2026/09/07/qwen-drive-autonomous-driving/",
+    "source_name": "TechNode",
+    "tags": [
+      "Qwen-Drive-1.0-4B",
+      "Apache 2.0",
+      "autonomous driving",
+      "vision-language-action",
+      "open weights",
+      "华中科技大学"
+    ],
+    "related_signals": [],
+    "industry_lens": "automotive",
+    "content_type": "daily",
+    "body": {
+      "signal": "On September 7, 2026, Alibaba's Qwen team released Qwen-Drive-1.0-4B, a vision-language foundation model for autonomous driving developed with Huazhong University of Science and Technology. It folds 3D perception, visual question answering, and motion planning into one pretrained model built on a frozen Qwen3.5-4B backbone, adding a bird's-eye-view head that handles 3D object detection, semantic occupancy prediction, and map segmentation, plus a planning expert that generates the vehicle's future trajectory. Two planning variants ship together, one trained by imitation and one refined with reinforcement learning. Code, weights, and demo data sit on GitHub and Hugging Face under Apache 2.0. The model reaches 43.95 mAP and 60.99 map mIoU on nuScenes, and 43.45 mAP with 71.27 map mIoU on OpenScene.",
+      "china_scale": "At four billion parameters the model fits the automotive-grade compute Chinese suppliers already ship, so a domestic tier-one can test it on existing silicon instead of budgeting for a new inference platform. China has dozens of EV brands competing on assisted driving as a headline purchase feature, which creates immediate demand for a shared perception and planning baseline that each brand differentiates on top of. The academic partner matters as well, since Huazhong University of Science and Technology supplies engineers straight into the Wuhan and Shenzhen autonomous driving clusters.",
+      "global_impact": "Western autonomous driving stacks at Waymo, Tesla, and Mobileye stay proprietary, and their perception and planning code is the asset. Apache 2.0 permits commercial use with no reciprocal disclosure, so a European or American supplier can build a product on Qwen-Drive and owe nothing back, which moves the industry reference implementation to a Chinese codebase. Every startup that raised money to build perception from scratch now competes against a free baseline with published benchmark numbers.",
+      "monday_morning": "Have your autonomy or robotics team benchmark the in-house perception stack against Qwen-Drive-1.0-4B on nuScenes within the month, so the comparison comes from your own data instead of a vendor deck. Settle the licensing and provenance position before engineers adopt the weights informally, because a Chinese-origin base model inside a shipped vehicle becomes a procurement and homologation question. Add training-data and weights origin as a disclosure line in supplier RFPs.",
+      "related_notes": ""
+    }
+  },
+  {
     "id": "2026-09-14-supreme-court-ai-liability-rulebook",
     "date": "2026-09-14",
     "day_number": 204,
