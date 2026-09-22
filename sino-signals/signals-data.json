@@ -1,5 +1,73 @@
 [
   {
+    "id": "2026-09-22-stepfun-stepaudio-3-music-suno-rival",
+    "date": "2026-09-22",
+    "day_number": 215,
+    "category": "Creative & Culture",
+    "category_emoji": "🎨",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 3,
+    "title_en": "StepFun's Music Model Out-Scores Suno on Production Quality",
+    "title_cn": "阶跃星辰音乐模型在制作质量上超过 Suno",
+    "source_url": "https://en.tmtpost.com/news/8140509",
+    "source_name": "TMTPost, September 15, 2026",
+    "tags": [
+      "阶跃星辰 StepFun",
+      "music generation",
+      "MoE audio models",
+      "Suno",
+      "creative tooling"
+    ],
+    "related_signals": [
+      "2026-08-26-iqiyi-soul-ferryman-aigc-feature-trilogy",
+      "2026-07-15-mandarin-ai-music-model-enters-bytedance-apps"
+    ],
+    "industry_lens": "entertainment",
+    "content_type": "daily",
+    "body": {
+      "signal": "Shanghai lab StepFun released five StepAudio 3 models on September 15, covering real-time voice, speech recognition, text-to-speech, general audio generation, and music, all on its domestic and international developer platforms. The music model is a Mixture-of-Experts system trained on more than 100 million songs and over 5 million hours of audio, and it writes songs up to five minutes thirty seconds at 48 kHz. Its technical report, arXiv 2609.16034 dated September 11, records the highest AudioBox content-enjoyment, usefulness, and production-quality scores of any system tested, ahead of Suno V5.5, and a Quality Elo of 1105 on the Artificial Analysis Music Arena Vocals board, fourth overall.",
+      "china_scale": "China generated more than 2 billion AI video and audio pieces in 2025, roughly fourteen times the 2024 figure, so a competitive music model lands in a market already producing at industrial volume. Micro-drama studios, short-video platforms, and game publishers need cheap original scoring in quantity, and they need it cleared for the AI labelling rules that took effect this year. A domestic model served from domestic infrastructure satisfies both conditions at once.",
+      "global_impact": "Suno and Udio built their positions on being the only tools good enough for commercial use. A Chinese lab matching them on production-quality metrics, and publishing the method, moves music generation toward the pattern set by image and video models, where open Chinese weights set the price floor within months. Rights holders negotiating licensing terms with two US startups will soon be negotiating against a free alternative.",
+      "monday_morning": "If your company licenses stock or production music, ask what you are paying per placement and what an in-house model would cost to run against your own catalogue. If you own a catalogue, find out whether your licensing deals distinguish training from generation, because the leverage in that clause is about to change hands.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-09-22-hygon-cpu1000-edge-physical-ai",
+    "date": "2026-09-22",
+    "day_number": 214,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 4,
+    "title_en": "Hygon Pushes Domestic Compute Out of the Data Center and Into Factories",
+    "title_cn": "海光把国产算力从数据中心送进工厂",
+    "source_url": "https://www.scmp.com/tech/tech-trends/article/3368168/chinese-ai-chipmaker-hygon-plots-expansion-data-centres-robotics",
+    "source_name": "South China Morning Post, September 21, 2026",
+    "tags": [
+      "海光信息 Hygon",
+      "edge compute",
+      "physical AI",
+      "C86 architecture",
+      "machine vision"
+    ],
+    "related_signals": [
+      "2026-09-21-huawei-atlas-960e-superpod-npo",
+      "2026-06-02-cnitsec-nine-domestic-ai-chips-secure-reliable-state-procurement"
+    ],
+    "industry_lens": "consumer",
+    "content_type": "daily",
+    "body": {
+      "signal": "Hygon Information Technology launches its CPU1000 series in Shenzhen on September 22, a new product line built on the company's C86 architecture for low-power, embedded, and edge computing. The chips target robotics, machine vision, and intelligent manufacturing, and they sit below Hygon's existing 7000, 5000, and 3000 series, which serve data centers and high-performance systems. The company promoted the event with the slogan “let computing power reach the physical world,” reported by Jiemian News and the China Securities Journal on September 20.",
+      "china_scale": "Hygon already holds a place on the state procurement list for secure and reliable domestic processors, so a new edge line arrives with a guaranteed institutional buyer base in factories, utilities, and municipal systems. China operates more than 30,000 designated smart factories and the Ministry of Industry and Information Technology reported AI coverage above 70 percent of scenarios at flagship plants, which gives a domestic embedded CPU an installed base to grow into rather than a market to create.",
+      "global_impact": "Industrial edge compute has been a comfortable business for Intel, NXP, Texas Instruments, and Nvidia's Jetson line, priced on long design cycles and switching costs. A domestic C86 alternative aimed at the same sockets compresses those margins inside China first, then follows Chinese machine builders into export markets, the same path lidar and industrial robots took. Equipment sold into China will increasingly be specified with a domestic controller inside.",
+      "monday_morning": "Ask your hardware team which controllers in your industrial or robotics bill of materials are single-sourced from a US or European vendor, and what a Chinese-specified alternative would cost you in requalification time. If you sell capital equipment into China, expect procurement to start asking for a domestic compute option within a year. Price that engineering work now, while it is a choice.",
+      "related_notes": ""
+    }
+  },
+  {
     "id": "2026-09-21-miit-ai-plus-software-action-plan",
     "date": "2026-09-21",
     "day_number": 212,
