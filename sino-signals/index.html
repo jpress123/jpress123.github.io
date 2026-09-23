@@ -112,6 +112,22 @@
     font-size: 0.85rem; font-weight: 500; letter-spacing: 0.03em;
   }
   .nav-links a:hover { color: var(--text-primary); text-decoration: none; }
+
+  /* LANGUAGE TOGGLE */
+  .lang-toggle {
+    display: flex; align-items: center; gap: 0.2rem;
+    border: 1px solid var(--pale); border-radius: 999px; padding: 0.2rem;
+    background: var(--bg-elevated); flex-shrink: 0;
+  }
+  .lang-btn {
+    border: none; background: none; cursor: pointer;
+    font-family: 'Inter', sans-serif; font-size: 0.74rem; font-weight: 700;
+    padding: 0.32rem 0.65rem; border-radius: 999px; color: var(--text-tertiary);
+    transition: background 0.2s, color 0.2s; letter-spacing: 0.02em;
+  }
+  .lang-btn.active { background: var(--accent); color: #fff; }
+  .lang-btn:hover:not(.active) { color: var(--text-primary); }
+
   .hamburger {
     display: none; background: none; border: none; cursor: pointer;
     width: 44px; height: 44px;
@@ -119,6 +135,30 @@
     gap: 5px; padding: 0;
   }
   .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); transition: 0.3s; }
+
+  /* EN / FR / ZH interface toggle — signal content (title_en/title_cn, body text)
+     is untouched; this only shows/hides the trilingual chrome wrapped in [data-lang]. */
+  [data-lang="zh"], [data-lang="fr"] { display: none; }
+  body.zh [data-lang="zh"] { display: initial; }
+  body.zh [data-lang="en"], body.zh [data-lang="fr"] { display: none; }
+  body.fr [data-lang="fr"] { display: initial; }
+  body.fr [data-lang="en"], body.fr [data-lang="zh"] { display: none; }
+  body.zh div[data-lang="zh"], body.zh p[data-lang="zh"],
+  body.zh h1[data-lang="zh"], body.zh h2[data-lang="zh"], body.zh h3[data-lang="zh"],
+  body.zh li[data-lang="zh"] { display: block; }
+  body.fr div[data-lang="fr"], body.fr p[data-lang="fr"],
+  body.fr h1[data-lang="fr"], body.fr h2[data-lang="fr"], body.fr h3[data-lang="fr"],
+  body.fr li[data-lang="fr"] { display: block; }
+  span[data-lang="zh"], span[data-lang="fr"] { display: none; }
+  body.zh span[data-lang="zh"] { display: inline; }
+  body.zh span[data-lang="en"] { display: none; }
+  body.fr span[data-lang="fr"] { display: inline; }
+  body.fr span[data-lang="en"] { display: none; }
+  .kpi-num .kpi-suffix {
+    font-size: 0.75em; font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-left: 0.15em;
+  }
 
   @media (max-width: 768px) {
     .nav-links { display: none; }
@@ -1056,10 +1096,15 @@
     </div>
     <div class="nav-right">
       <ul class="nav-links" id="navLinks">
-        <li><a href="#signals">All Signals</a></li>
+        <li><a href="#signals"><span data-lang="en">All Signals</span><span data-lang="fr">Tous les signaux</span><span data-lang="zh">全部信号</span></a></li>
         <!-- Subscribe hidden until Substack digest is live: <li><a href="#subscribe">Subscribe</a></li> -->
-        <li><a href="../">Home</a></li>
+        <li><a href="../"><span data-lang="en">Home</span><span data-lang="fr">Accueil</span><span data-lang="zh">主页</span></a></li>
       </ul>
+      <div class="lang-toggle" id="langToggle">
+        <button class="lang-btn active" data-lang-btn="en" onclick="setUILang('en')">EN</button>
+        <button class="lang-btn" data-lang-btn="fr" onclick="setUILang('fr')">FR</button>
+        <button class="lang-btn" data-lang-btn="zh" onclick="setUILang('zh')">中文</button>
+      </div>
       <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -1070,21 +1115,25 @@
 <!-- SITE HEADER -->
 <header class="site-header">
   <div class="container">
-    <p class="section-label">Intelligence Briefing</p>
+    <p class="section-label"><span data-lang="en">Intelligence Briefing</span><span data-lang="fr">Bulletin de renseignement</span><span data-lang="zh">情报简报</span></p>
     <div class="header-kpis" id="kpiStrip">
       <!-- Filled by JS -->
     </div>
     <div class="header-layout">
       <div class="panel wordcloud-panel header-wordcloud">
-        <div class="panel-title">Trending</div>
+        <div class="panel-title"><span data-lang="en">Drivers of Change</span><span data-lang="fr">Moteurs du changement</span><span data-lang="zh">变革驱动力</span></div>
         <div class="wordcloud-wrap"><canvas id="wordcloud"></canvas></div>
       </div>
       <div class="header-left">
         <h1>Sino-Signals</h1>
-        <p class="header-tagline">AI disruption at the forefront of strategic decision-making.</p>
+        <p class="header-tagline"><span data-lang="en">AI disruption at the forefront of strategic decision-making.</span><span data-lang="fr">La disruption de l'IA &agrave; l'avant-garde de la d&eacute;cision strat&eacute;gique.</span><span data-lang="zh">AI颠覆，立于战略决策的最前沿。</span></p>
         <div class="header-intro">
-          <p>China is the world's largest signal amplifier for AI deployment. While frontier research grabs headlines in the West, they often fall between unscalable and slop. The signals that will reshape your industry over the next 3 to 5 years are appearing in China, now. Not only is China pulling ahead in foundational research, it operates at a scale and speed of deployment that has no Western equivalent.</p>
-          <p>Anticipate the future to be ready for any future.</p>
+          <p data-lang="en">China is the world's largest signal amplifier for AI deployment. While frontier research grabs headlines in the West, they often fall between unscalable and slop. The signals that will reshape your industry over the next 3 to 5 years are appearing in China, now. Not only is China pulling ahead in foundational research, it operates at a scale and speed of deployment that has no Western equivalent.</p>
+          <p data-lang="fr">La Chine est le plus grand amplificateur de signaux au monde pour le d&eacute;ploiement de l'IA. Si la recherche de pointe fait la une en Occident, elle reste souvent prise entre l'inapplicable &agrave; grande &eacute;chelle et le b&acirc;cl&eacute;. Les signaux qui red&eacute;finiront votre secteur au cours des 3 &agrave; 5 prochaines ann&eacute;es apparaissent en Chine, d&egrave;s maintenant. La Chine ne fait pas que prendre de l'avance dans la recherche fondamentale, elle op&egrave;re aussi &agrave; une &eacute;chelle et une vitesse de d&eacute;ploiement sans &eacute;quivalent en Occident.</p>
+          <p data-lang="zh">中国是全球最大的AI部署信号放大器。西方的前沿研究虽常占据头条，却往往介于难以规模化与粗制滥造之间。未来3到5年将重塑您所在行业的信号，此刻正在中国出现。中国不仅在基础研究上持续领先，其部署的规模和速度也是西方无法比拟的。</p>
+          <p data-lang="en">Anticipate the future to be ready for any future.</p>
+          <p data-lang="fr">Anticipez l'avenir pour &ecirc;tre pr&ecirc;t &agrave; tout avenir.</p>
+          <p data-lang="zh">预见未来，方能应对任何未来。</p>
         </div>
       </div>
     </div>
@@ -1101,19 +1150,19 @@
       <div class="panel heatmap-panel">
         <div class="heatmap-header">
           <div class="heatmap-titlegroup">
-            <div class="panel-title">Sino-Signals Heat Map</div>
-            <div class="panel-subtitle">Influencers × Industries</div>
+            <div class="panel-title"><span data-lang="en">Sino-Signals Heat Map</span><span data-lang="fr">Carte thermique Sino-Signals</span><span data-lang="zh">中国信号热力图</span></div>
+            <div class="panel-subtitle"><span data-lang="en">Influencers × Industries</span><span data-lang="fr">Influenceurs × Secteurs</span><span data-lang="zh">影响因素 × 行业</span></div>
           </div>
           <div class="heatmap-meta">
             <div class="heatmap-weekyear" id="heatmapWeekYear"></div>
-            <button class="heatmap-print" onclick="window.print()" aria-label="Print this heat map">Print</button>
+            <button class="heatmap-print" onclick="window.print()" aria-label="Print this heat map"><span data-lang="en">Print</span><span data-lang="fr">Imprimer</span><span data-lang="zh">打印</span></button>
           </div>
         </div>
         <div class="heatmap-controls">
           <label class="impact-toggle" for="impactToggle">
             <input type="checkbox" id="impactToggle" aria-label="Filter by impact threshold">
             <span class="impact-toggle-track"><span class="impact-toggle-thumb"></span></span>
-            <span class="impact-toggle-text">Drill into impact</span>
+            <span class="impact-toggle-text"><span data-lang="en">Drill into impact</span><span data-lang="fr">Filtrer par impact</span><span data-lang="zh">按影响力筛选</span></span>
           </label>
           <div class="impact-slider-group">
             <span class="impact-slider-label">≥</span>
@@ -1121,16 +1170,16 @@
                    aria-label="Minimum impact score"
                    disabled>
             <span class="impact-slider-value" id="impactSliderValue">3</span>
-            <span class="impact-slider-hint">of 5</span>
+            <span class="impact-slider-hint"><span data-lang="en">of 5</span><span data-lang="fr">sur 5</span><span data-lang="zh">/ 5</span></span>
           </div>
         </div>
         <div class="heatmap-wrap" id="heatmap"></div>
         <div class="heatmap-footer">
           <div class="heatmap-legend">
-            <span class="legend-prefix">Impacts:</span>
-            <span class="legend-label">Early</span>
+            <span class="legend-prefix"><span data-lang="en">Impacts:</span><span data-lang="fr">Impacts :</span><span data-lang="zh">影响力：</span></span>
+            <span class="legend-label"><span data-lang="en">Early</span><span data-lang="fr">Pr&eacute;coce</span><span data-lang="zh">早期</span></span>
             <span class="heatmap-legend-bar"></span>
-            <span class="legend-label">Urgent</span>
+            <span class="legend-label"><span data-lang="en">Urgent</span><span data-lang="fr">Urgent</span><span data-lang="zh">紧急</span></span>
           </div>
           <div class="heatmap-copyright">© Joseph Press 2026</div>
         </div>
@@ -1145,41 +1194,43 @@
     <div class="filter-bar-inner">
       <h2 class="filter-title" id="filterTitle" aria-live="polite"></h2>
       <div class="filter-search-row">
-        <input type="text" class="search-input" id="searchInput" placeholder="Search signals..." aria-label="Search signals">
+        <input type="text" class="search-input" id="searchInput"
+               data-ph-en="Search signals..." data-ph-fr="Rechercher des signaux..." data-ph-zh="搜索信号..."
+               placeholder="Search signals..." aria-label="Search signals">
       </div>
       <div class="filter-controls">
         <span class="filter-count" id="filterCount" aria-live="polite" style="display:none"></span>
         <select class="filter-select" id="filterFreshness" aria-label="Filter by freshness">
-          <option value="today">Today</option>
-          <option value="this_week">This Week</option>
-          <option value="this_month">This Month</option>
-          <option value="this_year">This Year</option>
-          <option value="all_time">All Time</option>
+          <option value="today" data-en="Today" data-fr="Aujourd'hui" data-zh="今天">Today</option>
+          <option value="this_week" data-en="This Week" data-fr="Cette semaine" data-zh="本周">This Week</option>
+          <option value="this_month" data-en="This Month" data-fr="Ce mois-ci" data-zh="本月">This Month</option>
+          <option value="this_year" data-en="This Year" data-fr="Cette ann&eacute;e" data-zh="今年">This Year</option>
+          <option value="all_time" data-en="All Time" data-fr="Toute la p&eacute;riode" data-zh="所有时间">All Time</option>
         </select>
         <select class="filter-select" id="filterLens" aria-label="Filter by industry">
-          <option value="all">All Industries</option>
-          <option value="automotive">Mobility</option>
-          <option value="consumer">Consumer Products</option>
-          <option value="pharma">Health &amp; Pharma</option>
-          <option value="education">Education</option>
-          <option value="financial services">Financial Services</option>
-          <option value="entertainment">Entertainment</option>
+          <option value="all" data-en="All Industries" data-fr="Tous les secteurs" data-zh="所有行业">All Industries</option>
+          <option value="automotive" data-en="Mobility" data-fr="Mobilit&eacute;" data-zh="出行">Mobility</option>
+          <option value="consumer" data-en="Consumer Products" data-fr="Produits de consommation" data-zh="消费产品">Consumer Products</option>
+          <option value="pharma" data-en="Health &amp; Pharma" data-fr="Sant&eacute; et pharma" data-zh="健康与制药">Health &amp; Pharma</option>
+          <option value="education" data-en="Education" data-fr="&Eacute;ducation" data-zh="教育">Education</option>
+          <option value="financial services" data-en="Financial Services" data-fr="Services financiers" data-zh="金融服务">Financial Services</option>
+          <option value="entertainment" data-en="Entertainment" data-fr="Divertissement" data-zh="娱乐">Entertainment</option>
         </select>
         <select class="filter-select" id="filterCategory" aria-label="Filter by influencer category">
-          <option value="all">All Influencers</option>
-          <option value="Intelligent Production">Intelligent Production</option>
-          <option value="Deep Tech & Research">Deep Tech & Research</option>
-          <option value="Robotics & Embodied AI">Robotics & Embodied AI</option>
-          <option value="Creative & Culture">Creative & Culture</option>
-          <option value="Climate & Sustainability">Climate & Sustainability</option>
-          <option value="Platforms & Social">Platforms & Social</option>
-          <option value="Policy & Governance">Policy & Governance</option>
+          <option value="all" data-en="All Influencers" data-fr="Tous les influenceurs" data-zh="全部影响因素">All Influencers</option>
+          <option value="Intelligent Production" data-en="Intelligent Production" data-fr="Production intelligente" data-zh="智能生产">Intelligent Production</option>
+          <option value="Deep Tech & Research" data-en="Deep Tech & Research" data-fr="Deep Tech et recherche" data-zh="深度科技与研究">Deep Tech &amp; Research</option>
+          <option value="Robotics & Embodied AI" data-en="Robotics & Embodied AI" data-fr="Robotique et IA incarn&eacute;e" data-zh="机器人与具身智能">Robotics &amp; Embodied AI</option>
+          <option value="Creative & Culture" data-en="Creative & Culture" data-fr="Cr&eacute;ativit&eacute; et culture" data-zh="创意与文化">Creative &amp; Culture</option>
+          <option value="Climate & Sustainability" data-en="Climate & Sustainability" data-fr="Climat et durabilit&eacute;" data-zh="气候与可持续发展">Climate &amp; Sustainability</option>
+          <option value="Platforms & Social" data-en="Platforms & Social" data-fr="Plateformes et r&eacute;seaux sociaux" data-zh="平台与社交">Platforms &amp; Social</option>
+          <option value="Policy & Governance" data-en="Policy & Governance" data-fr="Politique et gouvernance" data-zh="政策与治理">Policy &amp; Governance</option>
         </select>
         <select class="filter-select" id="filterStrength" aria-label="Filter by signal strength">
-          <option value="all">All Impacts</option>
-          <option value="weak">Early</option>
-          <option value="emerging">Emerging</option>
-          <option value="strong">Accelerating</option>
+          <option value="all" data-en="All Impacts" data-fr="Tous les impacts" data-zh="全部影响力">All Impacts</option>
+          <option value="weak" data-en="Early" data-fr="Pr&eacute;coce" data-zh="早期">Early</option>
+          <option value="emerging" data-en="Emerging" data-fr="&Eacute;mergent" data-zh="新兴">Emerging</option>
+          <option value="strong" data-en="Accelerating" data-fr="En acc&eacute;l&eacute;ration" data-zh="加速中">Accelerating</option>
         </select>
       </div>
     </div>
@@ -1192,8 +1243,8 @@
     <div class="signal-grid" id="signalGrid">
       <!-- Filled by JS -->
     </div>
-    <button class="show-more-btn" id="showMoreBtn" style="display:none;">Show more signals</button>
-    <div class="no-results" id="noResults" style="display:none;">No signals today. Try expanding to This Week.</div>
+    <button class="show-more-btn" id="showMoreBtn" style="display:none;"><span data-lang="en">Show more signals</span><span data-lang="fr">Afficher plus de signaux</span><span data-lang="zh">显示更多信号</span></button>
+    <div class="no-results" id="noResults" style="display:none;"><span data-lang="en">No signals today. Try expanding to This Week.</span><span data-lang="fr">Aucun signal aujourd'hui. Essayez d'&eacute;largir &agrave; Cette semaine.</span><span data-lang="zh">今天没有信号，请尝试展开至"本周"。</span></div>
   </div>
 </section>
 
@@ -1260,6 +1311,107 @@
     'entertainment':      'Entertainment'
   };
 
+  // --- INTERFACE LANGUAGE (EN / ZH) -----------------------------------
+  // This only translates UI chrome (labels, buttons, filters, tooltips).
+  // Signal content (title_en / title_cn / body.*) is authored bilingually
+  // per-signal already and is left exactly as written.
+  var UI_LANG = 'en';
+
+  var CATEGORY_LABELS_ZH = {
+    'Intelligent Production':   '智能生产',
+    'Deep Tech & Research':     '深度科技与研究',
+    'Robotics & Embodied AI':   '机器人与具身智能',
+    'Creative & Culture':       '创意与文化',
+    'Climate & Sustainability': '气候与可持续发展',
+    'Platforms & Social':       '平台与社交',
+    'Policy & Governance':      '政策与治理'
+  };
+
+  var CATEGORY_LABELS_FR = {
+    'Intelligent Production':   'Production intelligente',
+    'Deep Tech & Research':     'Deep Tech et recherche',
+    'Robotics & Embodied AI':   'Robotique et IA incarnée',
+    'Creative & Culture':       'Créativité et culture',
+    'Climate & Sustainability': 'Climat et durabilité',
+    'Platforms & Social':       'Plateformes et réseaux sociaux',
+    'Policy & Governance':      'Politique et gouvernance'
+  };
+
+  var LENS_LABELS_ZH = {
+    'all':                '所有行业',
+    'financial services': '金融服务',
+    'consumer':           '消费产品',
+    'education':          '教育',
+    'automotive':         '出行',
+    'pharma':             '健康与制药',
+    'entertainment':      '娱乐'
+  };
+
+  var LENS_LABELS_FR = {
+    'all':                'Tous les secteurs',
+    'financial services': 'Services financiers',
+    'consumer':           'Produits de consommation',
+    'education':          'Éducation',
+    'automotive':         'Mobilité',
+    'pharma':             'Santé et pharma',
+    'entertainment':      'Divertissement'
+  };
+
+  function categoryLabel(cat) {
+    if (UI_LANG === 'zh' && CATEGORY_LABELS_ZH[cat]) return CATEGORY_LABELS_ZH[cat];
+    if (UI_LANG === 'fr' && CATEGORY_LABELS_FR[cat]) return CATEGORY_LABELS_FR[cat];
+    return cat;
+  }
+  function lensLabel(key) {
+    if (UI_LANG === 'zh' && LENS_LABELS_ZH[key]) return LENS_LABELS_ZH[key];
+    if (UI_LANG === 'fr' && LENS_LABELS_FR[key]) return LENS_LABELS_FR[key];
+    return LENS_LABELS[key] || key;
+  }
+
+  // Pick a string by the current UI language. Usage: t3('English', 'Français', '中文')
+  function t3(en, fr, zh) {
+    if (UI_LANG === 'zh') return zh;
+    if (UI_LANG === 'fr') return fr;
+    return en;
+  }
+
+  function setUILang(lang) {
+    UI_LANG = (lang === 'zh' || lang === 'fr') ? lang : 'en';
+    document.body.classList.remove('zh', 'fr');
+    if (UI_LANG !== 'en') document.body.classList.add(UI_LANG);
+    document.documentElement.lang = (UI_LANG === 'zh') ? 'zh-CN' : (UI_LANG === 'fr' ? 'fr' : 'en');
+
+    // Toggle button active state
+    document.querySelectorAll('.lang-btn').forEach(function(btn){
+      btn.classList.toggle('active', btn.getAttribute('data-lang-btn') === UI_LANG);
+    });
+
+    // Search placeholder (can't hold nested [data-lang] spans)
+    var searchEl = document.getElementById('searchInput');
+    if (searchEl) {
+      searchEl.placeholder = searchEl.getAttribute('data-ph-' + UI_LANG) || searchEl.placeholder;
+    }
+
+    // <option> labels (can't hold nested [data-lang] spans either)
+    document.querySelectorAll('.filter-select option[data-en]').forEach(function(opt){
+      opt.textContent = opt.getAttribute('data-' + UI_LANG) || opt.textContent;
+    });
+
+    // Re-render everything that generates its own text in JS, so labels
+    // (category names, industry names, KPI copy) pick up the new language.
+    safeRun('renderKPIs', renderKPIs);
+    if (IS_PHONE) {
+      safeRun('renderMobileTagCloud', function(){ renderMobileTagCloud(lensFilter(signals)); });
+    } else {
+      safeRun('renderLensSwitcher', renderLensSwitcher);
+      safeRun('renderHeatMap', function(){ renderHeatMap(signals); });
+    }
+    // Signal tiles/expanded view read UI_LANG live via categoryLabel(), so a
+    // plain re-filter is enough to refresh anything currently on screen.
+    if (typeof applyFilters === 'function') safeRun('applyFilters', applyFilters);
+  }
+  window.setUILang = setUILang;
+
   // Detect phone-sized viewport once at load — skips heavy dashboard rendering on mobile
   var IS_PHONE = window.matchMedia('(max-width: 600px)').matches;
 
@@ -1290,7 +1442,7 @@
     })
     .catch(function(err) {
       console.error('[signals-data fetch]', err);
-      document.getElementById('signalGrid').innerHTML = '<p style="color:var(--text-tertiary)">Failed to load signal data.</p>';
+      document.getElementById('signalGrid').innerHTML = '<p style="color:var(--text-tertiary)">' + t3('Failed to load signal data.', 'Échec du chargement des données.', '信号数据加载失败。') + '</p>';
     });
 
   function syncWordcloudPanelHeight() {
@@ -1484,36 +1636,43 @@
 
     var iso = getISOWeek(new Date());
     var trendingKey = topIndustryKeyThisMonth();
-    var trendingIndustry = LENS_LABELS[trendingKey] || trendingKey || '—';
+    var trendingIndustry = lensLabel(trendingKey) || '—';
     var topTrend = topTrendTag();
 
     // Populate the heat map's Week / Year header
     var hwy = document.getElementById('heatmapWeekYear');
-    if (hwy) hwy.textContent = 'Week ' + iso.week + ' / ' + iso.year;
+    if (hwy) hwy.textContent = t3(
+      'Week ' + iso.week + ' / ' + iso.year,
+      'Semaine ' + iso.week + ' / ' + iso.year,
+      '第' + iso.week + '周 / ' + iso.year
+    );
 
     // Each tile links into the DataBase like a wordcloud word: set a filter, run applyFilters, scroll.
+    var weekNum = (UI_LANG === 'zh')
+      ? ('<span class="kpi-prefix">第</span>' + iso.week + '<span class="kpi-suffix">周</span>')
+      : ('<span class="kpi-prefix">' + t3('Week', 'Semaine', '') + '</span>' + iso.week);
     var tiles = [
       {
-        num: '<span class="kpi-prefix">Week</span>' + iso.week,
+        num: weekNum,
         label: String(iso.year),
         isText: false,
         action: 'freshness', value: 'this_week'
       },
       {
         num: weekCount + '<span class="kpi-divider">/</span>' + totalSignals,
-        label: 'New This Week / Total to Date',
+        label: t3('New This Week / Total to Date', 'Nouveaux cette semaine / Total à ce jour', '本周新增 / 累计总数'),
         isText: false,
         action: 'all', value: ''
       },
       {
         num: trendingIndustry,
-        label: 'Trending',
+        label: t3('Trending', 'Tendance', '热门行业'),
         isText: true,
         action: 'lens', value: trendingKey
       },
       {
         num: topTrend,
-        label: 'Top Trend from the word cloud',
+        label: t3('Top Trend from the word cloud', 'Tendance du nuage de mots', '词云热门词'),
         isText: true,
         action: 'search', value: (topTrend === '—' ? '' : topTrend)
       }
@@ -1544,7 +1703,7 @@
     var chipsHTML = keys.map(function(k){
       var c = counts[k] || 0;
       return '<button class="lens-chip' + (k === currentLens ? ' active' : '') +
-             '" data-lens="' + k + '">' + LENS_LABELS[k] +
+             '" data-lens="' + k + '">' + lensLabel(k) +
              '<span class="lens-count">' + c + '</span></button>';
     }).join('');
     sw.innerHTML = chipsHTML;
@@ -1635,23 +1794,29 @@
     // Header row: corner + lens column labels
     html += '<div class="heatmap-corner"></div>';
     lenses.forEach(function(l){
-      html += '<div class="heatmap-collabel">' + LENS_LABELS[l] + '</div>';
+      html += '<div class="heatmap-collabel">' + lensLabel(l) + '</div>';
     });
 
     // Body rows
     categories.forEach(function(c){
-      html += '<div class="heatmap-rowlabel">' + c + '</div>';
+      html += '<div class="heatmap-rowlabel">' + categoryLabel(c) + '</div>';
       lenses.forEach(function(l){
         var cell = grid[c][l];
+        var catLabel = categoryLabel(c), lensLbl = lensLabel(l);
         if (cell.n === 0) {
-          html += '<div class="heatmap-cell empty" title="' + c + ' × ' + LENS_LABELS[l] + ' · 0">·</div>';
+          html += '<div class="heatmap-cell empty" title="' + catLabel + ' × ' + lensLbl + ' · 0">·</div>';
         } else {
           var bg = impactColor(cell.maxImpact);
           // For dark backgrounds (impact 4-5), switch text to white for legibility
           var textColor = cell.maxImpact >= 4 ? '#ffffff' : 'var(--navy)';
-          var tip = c + ' × ' + LENS_LABELS[l] + ' · ' + cell.n + ' signal' + (cell.n === 1 ? '' : 's') +
-                    ' · max impact ' + cell.maxImpact + '/5';
-          if (cell.actors.length) tip += '\nTop tags: ' + cell.actors.join(', ');
+          var tip = t3(
+            catLabel + ' × ' + lensLbl + ' · ' + cell.n + ' signal' + (cell.n === 1 ? '' : 's') +
+              ' · max impact ' + cell.maxImpact + '/5',
+            catLabel + ' × ' + lensLbl + ' · ' + cell.n + ' sign' + (cell.n === 1 ? 'al' : 'aux') +
+              ' · impact max ' + cell.maxImpact + '/5',
+            catLabel + ' × ' + lensLbl + ' · ' + cell.n + ' 个信号 · 最高影响力 ' + cell.maxImpact + '/5'
+          );
+          if (cell.actors.length) tip += t3('\nTop tags: ', '\nTags principaux : ', '\n热门标签：') + cell.actors.join(', ');
           var safeTip = tip.replace(/"/g, '&quot;');
           html += '<div class="heatmap-cell" style="background:' + bg + ';color:' + textColor + '" title="' + safeTip + '" data-cat="' + c + '" data-lens="' + l + '">' + cell.n + '</div>';
         }
@@ -1728,7 +1893,7 @@
       .slice(0, 14);
 
     if (!entries.length) {
-      wrap.innerHTML = '<div class="wordcloud-empty">No recurring tags.</div>';
+      wrap.innerHTML = '<div class="wordcloud-empty">' + t3('No recurring tags.', 'Aucun tag récurrent.', '暂无常见标签。') + '</div>';
       return;
     }
 
@@ -1811,7 +1976,7 @@
       .slice(0, 60);
 
     if (!entries.length) {
-      wrap.innerHTML = '<div class="wordcloud-empty">No recurring tags in this view.</div>';
+      wrap.innerHTML = '<div class="wordcloud-empty">' + t3('No recurring tags in this view.', 'Aucun tag récurrent dans cette vue.', '当前视图暂无常见标签。') + '</div>';
       return;
     }
 
@@ -1940,7 +2105,7 @@
       html += '<div class="tile-footer">';
       html += '<span class="tile-source">' + s.source_name + '</span>';
       if (s.related_signals && s.related_signals.length > 0) {
-        html += '<span class="tile-trajectory">&harr; Trajectory</span>';
+        html += '<span class="tile-trajectory">&harr; ' + t3('Trajectory', 'Trajectoire', '相关轨迹') + '</span>';
       }
       html += '</div>';
       html += '<div class="tile-tags">';
@@ -1987,7 +2152,7 @@
       html += '<div class="tile-footer">';
       html += '<span class="tile-source">' + s.source_name + '</span>';
       if (s.related_signals && s.related_signals.length > 0) {
-        html += '<span class="tile-trajectory">&harr; Trajectory</span>';
+        html += '<span class="tile-trajectory">&harr; ' + t3('Trajectory', 'Trajectoire', '相关轨迹') + '</span>';
       }
       html += '</div>';
       html += '<div class="tile-tags">';
@@ -2008,11 +2173,15 @@
   });
 
   function updateCount(n) {
-    document.getElementById('filterCount').innerHTML =
-      n + '<span class="filter-count-label">Signal' + (n !== 1 ? 's' : '') + '</span>';
+    document.getElementById('filterCount').innerHTML = n + '<span class="filter-count-label">' + t3(
+      'Signal' + (n !== 1 ? 's' : ''),
+      n !== 1 ? 'Signaux' : 'Signal',
+      '个信号'
+    ) + '</span>';
     var title = document.getElementById('filterTitle');
     if (title) {
-      title.innerHTML = '<span class="filter-title-num">' + n + '</span> Sino-Signals <span class="filter-title-accent">DataBase</span>';
+      title.innerHTML = '<span class="filter-title-num">' + n + '</span> Sino-Signals <span class="filter-title-accent">' +
+        t3('DataBase', 'Base de donn\u00e9es', '数据库') + '</span>';
     }
   }
 
@@ -2142,14 +2311,16 @@
     if (!s) return;
     history.replaceState(null, '', '#' + id);
 
-    var html = '<button class="expanded-back" onclick="window.hideExpanded()">&larr; Back to Sino-Signals</button>';
+    var backLabel = t3('Back to Sino-Signals', 'Retour \u00e0 Sino-Signals', '返回 Sino-Signals');
+    var html = '<button class="expanded-back" onclick="window.hideExpanded()">&larr; ' + backLabel + '</button>';
     html += '<div class="expanded-meta">';
     html += '<span class="signal-date">' + formatDate(s.date) + '</span>';
-    html += '<span class="badge badge-category">' + s.category_emoji + ' ' + s.category + '</span>';
+    html += '<span class="badge badge-category">' + s.category_emoji + ' ' + categoryLabel(s.category) + '</span>';
     html += '<span class="badge ' + strengthClass(s.signal_strength) + '">' + strengthLabel(s.signal_strength) + '</span>';
     if (s.impact_score) {
-      html += '<span class="badge badge-impact" title="Impact score: 1 (early) to 5 (urgent)">' +
-              'Impact ' + s.impact_score + '/5</span>';
+      var impactTitle = t3('Impact score: 1 (early) to 5 (urgent)', "Score d'impact : 1 (pr\u00e9coce) \u00e0 5 (urgent)", '影响力评分：1（早期）至 5（紧急）');
+      var impactText = t3('Impact ' + s.impact_score + '/5', 'Impact ' + s.impact_score + '/5', '影响力 ' + s.impact_score + '/5');
+      html += '<span class="badge badge-impact" title="' + impactTitle + '">' + impactText + '</span>';
     }
     if (s.content_type !== 'daily') {
       html += '<span class="badge" style="color:var(--accent);border-color:var(--accent-dim)">' + s.content_type.replace('_',' ').toUpperCase() + '</span>';
@@ -2158,13 +2329,24 @@
     html += '<h2 class="expanded-title">' + s.title_en + '</h2>';
     html += '<p class="expanded-title-cn">' + s.title_cn + '</p>';
 
+    var sourceLabel = t3('Source: ', 'Source : ', '来源：');
     if (s.source_url) {
-      html += '<p class="signal-source" style="margin-bottom:2rem">Source: <a href="' + s.source_url + '" target="_blank" rel="noopener">' + s.source_name + '</a></p>';
+      html += '<p class="signal-source" style="margin-bottom:2rem">' + sourceLabel + '<a href="' + s.source_url + '" target="_blank" rel="noopener">' + s.source_name + '</a></p>';
     } else {
-      html += '<p class="signal-source" style="margin-bottom:2rem">Source: ' + s.source_name + '</p>';
+      html += '<p class="signal-source" style="margin-bottom:2rem">' + sourceLabel + s.source_name + '</p>';
     }
 
-    var sections = [
+    var sections = (UI_LANG === 'zh') ? [
+      { key: 'signal', label: '信号是什么？' },
+      { key: 'china_scale', label: '为何能在中国规模化？' },
+      { key: 'global_impact', label: '对全球可能产生什么影响？' },
+      { key: 'monday_morning', label: '您可以采取什么行动？' }
+    ] : (UI_LANG === 'fr') ? [
+      { key: 'signal', label: 'Quel est le signal\u00a0?' },
+      { key: 'china_scale', label: 'Pourquoi peut-il se d\u00e9velopper en Chine\u00a0?' },
+      { key: 'global_impact', label: 'Quel impact potentiel dans le monde\u00a0?' },
+      { key: 'monday_morning', label: 'Que pourriez-vous faire\u00a0?' }
+    ] : [
       { key: 'signal', label: 'What is the signal?' },
       { key: 'china_scale', label: 'Why can it scale in China?' },
       { key: 'global_impact', label: 'How might it impact the world?' },
@@ -2181,7 +2363,7 @@
 
     if (s.body.related_notes) {
       html += '<div class="expanded-section">';
-      html += '<p class="expanded-section-label">Related Signals</p>';
+      html += '<p class="expanded-section-label">' + t3('Related Signals', 'Signaux connexes', '相关信号') + '</p>';
       html += '<p>' + s.body.related_notes + '</p>';
       html += '</div>';
     }
@@ -2194,7 +2376,7 @@
 
     if (s.related_signals && s.related_signals.length > 0) {
       html += '<div class="expanded-related">';
-      html += '<p class="expanded-section-label">Signal Trajectory</p>';
+      html += '<p class="expanded-section-label">' + t3('Signal Trajectory', 'Trajectoire du signal', '信号轨迹') + '</p>';
       for (var r = 0; r < s.related_signals.length; r++) {
         var relId = s.related_signals[r];
         var rel = null;
@@ -2204,7 +2386,7 @@
         if (rel) {
           html += '<div class="related-card" onclick="window.showExpanded(\'' + rel.id + '\')">';
           html += '<h4>' + rel.title_en + '</h4>';
-          html += '<span class="related-date">' + formatDate(rel.date) + ' &middot; ' + rel.category + '</span>';
+          html += '<span class="related-date">' + formatDate(rel.date) + ' &middot; ' + categoryLabel(rel.category) + '</span>';
           html += '</div>';
         }
       }
@@ -2212,10 +2394,10 @@
     }
 
     html += '<div class="expanded-share">';
-    html += '<button class="share-btn" onclick="window.shareSignal(\'' + encodeURIComponent(s.title_en) + '\')">Share Signal</button>';
-    html += '<button class="share-btn" onclick="window.printSignal()">Print Signal</button>';
+    html += '<button class="share-btn" onclick="window.shareSignal(\'' + encodeURIComponent(s.title_en) + '\')">' + t3('Share Signal', 'Partager le signal', '分享信号') + '</button>';
+    html += '<button class="share-btn" onclick="window.printSignal()">' + t3('Print Signal', 'Imprimer le signal', '打印信号') + '</button>';
     html += '</div>';
-    html += '<button class="expanded-back expanded-back-bottom" onclick="window.hideExpanded()">&larr; Back to Sino-Signals</button>';
+    html += '<button class="expanded-back expanded-back-bottom" onclick="window.hideExpanded()">&larr; ' + backLabel + '</button>';
 
     document.getElementById('expandedContent').innerHTML = html;
     document.getElementById('expandedView').classList.add('active');
@@ -2261,8 +2443,8 @@
         var btns = document.querySelectorAll('.share-btn');
         if (btns.length > 0) {
           var btn = btns[0];
-          btn.textContent = 'Copied';
-          setTimeout(function() { btn.textContent = 'Share Signal'; }, 2000);
+          btn.textContent = t3('Copied', 'Copi\u00e9', '已复制');
+          setTimeout(function() { btn.textContent = t3('Share Signal', 'Partager le signal', '分享信号'); }, 2000);
         }
       });
     }
