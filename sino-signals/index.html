@@ -112,21 +112,26 @@
     font-size: 0.85rem; font-weight: 500; letter-spacing: 0.03em;
   }
   .nav-links a:hover { color: var(--text-primary); text-decoration: none; }
+  /* Tuck the language pill snug against the hamburger */
+  .lang-select + .hamburger { margin-left: -0.85rem; }
 
-  /* LANGUAGE TOGGLE */
-  .lang-toggle {
-    display: flex; align-items: center; gap: 0.2rem;
-    border: 1px solid var(--pale); border-radius: 999px; padding: 0.2rem;
-    background: var(--bg-elevated); flex-shrink: 0;
+  /* LANGUAGE SELECT — same component as josephpress.com's nav: arrow indicator
+     suppressed, width hugs content. Kept pixel-identical to that page's CSS. */
+  .lang-select {
+    appearance: none; -webkit-appearance: none; -moz-appearance: none;
+    background: var(--white); background-image: none;
+    color: var(--navy);
+    border: 1px solid var(--pale); border-radius: 20px;
+    padding: 0.32rem 0.85rem;
+    font-family: inherit; font-size: 0.8rem; font-weight: 600;
+    cursor: pointer; user-select: none;
+    width: auto; min-width: 0;
+    text-align: center; text-align-last: center;
+    transition: border-color 0.2s, background-color 0.2s;
   }
-  .lang-btn {
-    border: none; background: none; cursor: pointer;
-    font-family: 'Inter', sans-serif; font-size: 0.74rem; font-weight: 700;
-    padding: 0.32rem 0.65rem; border-radius: 999px; color: var(--text-tertiary);
-    transition: background 0.2s, color 0.2s; letter-spacing: 0.02em;
-  }
-  .lang-btn.active { background: var(--accent); color: #fff; }
-  .lang-btn:hover:not(.active) { color: var(--text-primary); }
+  .lang-select::-ms-expand { display: none; }
+  .lang-select:hover { border-color: var(--slate); }
+  .lang-select:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(49,130,206,0.15); }
 
   .hamburger {
     display: none; background: none; border: none; cursor: pointer;
@@ -1100,11 +1105,11 @@
         <!-- Subscribe hidden until Substack digest is live: <li><a href="#subscribe">Subscribe</a></li> -->
         <li><a href="../"><span data-lang="en">Home</span><span data-lang="fr">Accueil</span><span data-lang="zh">主页</span></a></li>
       </ul>
-      <div class="lang-toggle" id="langToggle">
-        <button class="lang-btn active" data-lang-btn="en" onclick="setUILang('en')">EN</button>
-        <button class="lang-btn" data-lang-btn="fr" onclick="setUILang('fr')">FR</button>
-        <button class="lang-btn" data-lang-btn="zh" onclick="setUILang('zh')">中文</button>
-      </div>
+      <select class="lang-select" id="langSelect" aria-label="Language" onchange="setUILang(this.value)">
+        <option value="en">EN</option>
+        <option value="fr">FR</option>
+        <option value="zh">中文</option>
+      </select>
       <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -1381,10 +1386,9 @@
     if (UI_LANG !== 'en') document.body.classList.add(UI_LANG);
     document.documentElement.lang = (UI_LANG === 'zh') ? 'zh-CN' : (UI_LANG === 'fr' ? 'fr' : 'en');
 
-    // Toggle button active state
-    document.querySelectorAll('.lang-btn').forEach(function(btn){
-      btn.classList.toggle('active', btn.getAttribute('data-lang-btn') === UI_LANG);
-    });
+    // Sync the <select> if this call didn't originate from its own onchange
+    var sel = document.getElementById('langSelect');
+    if (sel && sel.value !== UI_LANG) sel.value = UI_LANG;
 
     // Search placeholder (can't hold nested [data-lang] spans)
     var searchEl = document.getElementById('searchInput');
