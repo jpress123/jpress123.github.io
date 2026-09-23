@@ -1673,6 +1673,11 @@
         var lensSelect = document.getElementById('filterLens');
         if (lensSelect) lensSelect.value = lens;
         currentLens = lens;
+        // The heat map is built from the full archive, so a cell's signals
+        // are often older than the default "This Week" freshness filter.
+        // Clear it to "All Time" or the click would filter down to nothing.
+        var freshSelect = document.getElementById('filterFreshness');
+        if (freshSelect) freshSelect.value = 'all_time';
 
         // Sync the lens chip row
         document.querySelectorAll('.lens-chip').forEach(function(b){
@@ -1748,17 +1753,36 @@
     var html = '<div class="mobile-tagcloud">';
     mixed.forEach(function(item){
       var t = item.e[0];
+      var safeT = String(t).replace(/&/g, '&amp;').replace(/"/g, '&quot;');
       var color = tagColors[t] || '#2c5282';
       if (item.tier === 1) {
-        html += '<span class="mtag mtag-pill" style="background:' + color + '">' + t + '</span>';
+        html += '<span class="mtag mtag-pill" data-tag="' + safeT + '" style="background:' + color + '">' + t + '</span>';
       } else if (item.tier === 2) {
-        html += '<span class="mtag mtag-chip" style="color:' + color + ';border-color:' + color + '40">' + t + '</span>';
+        html += '<span class="mtag mtag-chip" data-tag="' + safeT + '" style="color:' + color + ';border-color:' + color + '40">' + t + '</span>';
       } else {
-        html += '<span class="mtag mtag-plain" style="color:' + color + '">' + t + '</span>';
+        html += '<span class="mtag mtag-plain" data-tag="' + safeT + '" style="color:' + color + '">' + t + '</span>';
       }
     });
     html += '</div>';
     wrap.innerHTML = html;
+
+    // Wire up taps: the pills/chips looked tappable (hover + :active CSS)
+    // but had no handler at all. Match the desktop word cloud's behavior:
+    // set the search box to the tag, clear the freshness filter (tags span
+    // the full archive, not just this week), filter, and scroll to results.
+    wrap.querySelectorAll('.mtag').forEach(function(tagEl){
+      tagEl.addEventListener('click', function(){
+        var tag = tagEl.getAttribute('data-tag');
+        if (!tag) return;
+        var searchEl = document.getElementById('searchInput');
+        if (searchEl) searchEl.value = tag;
+        var freshSelect = document.getElementById('filterFreshness');
+        if (freshSelect) freshSelect.value = 'all_time';
+        applyFilters();
+        var bar = document.getElementById('filterBar');
+        if (bar) bar.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
   }
 
   function renderWordcloud(filtered) {
@@ -1848,6 +1872,11 @@
       click: function(item){
         if (!item || !item[0]) return;
         document.getElementById('searchInput').value = item[0];
+        // Word cloud tags are tallied across the full archive, not just this
+        // week, so clear the freshness filter or the search can resolve to
+        // zero visible signals even though the tag is clearly present.
+        var freshSelect = document.getElementById('filterFreshness');
+        if (freshSelect) freshSelect.value = 'all_time';
         applyFilters();
         document.getElementById('filterBar').scrollIntoView({ behavior: 'smooth', block: 'start' });
       },
