@@ -1,5 +1,65 @@
 [
   {
+    "id": "2026-09-23-envision-wind-confidence-output",
+    "date": "2026-09-23",
+    "day_number": 217,
+    "category": "Climate & Sustainability",
+    "category_emoji": "🌱",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 3,
+    "title_en": "Envision's AI Agents Make Chinese Wind Farms Deliver Steadier Power",
+    "title_cn": "远景用AI智能体稳定风电出力",
+    "source_url": "https://finance.sina.com.cn/roll/2026-09-21/doc-inisqvrx7681057.shtml",
+    "source_name": "新浪财经 (Sina Finance), September 21, 2026",
+    "tags": [
+      "Envision Energy",
+      "wind power forecasting",
+      "grid AI",
+      "renewable energy China"
+    ],
+    "related_signals": [],
+    "industry_lens": "financial services",
+    "content_type": "daily",
+    "body": {
+      "signal": "Envision Energy has deployed AI equipment agents, built on its Tianji weather model and Tianshu energy model, at wind farms in Anhui and Shandong provinces. The system fuses weather, power, and load forecasting to coordinate wind, solar, and storage assets so output holds steady through peak demand instead of just maximizing total generation. Vice president Huang Hu says the agents have already improved wind farm returns, though the company has not published accuracy figures.",
+      "china_scale": "China's 14th Five-Year Plan sets a national target of 8 percent average confidence output by 2030, with new centralized wind and solar stations required to hit at least 10 percent, giving a domestic manufacturer like Envision a captive market and a regulatory mandate to iterate against. Its own turbine fleet and grid-integration business give it a direct feedback loop between model and hardware that few software-only vendors have.",
+      "global_impact": "Western grid operators and renewable developers face the same intermittency problem without a national output-reliability mandate forcing AI adoption on a fixed timeline. A domestic vendor tuning forecasting models against a regulatory target could reach commercial reliability metrics, and export readiness, well before Western equivalents are required to.",
+      "monday_morning": "Utility and renewable-asset executives should ask their forecasting vendors whether confidence-output guarantees are on the roadmap, not just generation-maximizing forecasts. Project financiers should watch whether China's output-reliability requirement becomes a template other regulators borrow, since it would reshape how renewable assets get underwritten.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-09-23-bund-ai-art-festival-yuri",
+    "date": "2026-09-23",
+    "day_number": 216,
+    "category": "Creative & Culture",
+    "category_emoji": "🎨",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 2,
+    "title_en": "Shanghai's Bund Summit Opens China's First AI Art Festival",
+    "title_cn": "外滩大会举办首届AI艺术节",
+    "source_url": "https://news.qq.com/rain/a/20260914A04IJS00",
+    "source_name": "腾讯新闻 (Tencent News), September 14, 2026",
+    "tags": [
+      "virtual idol",
+      "AI art festival",
+      "Bund Summit",
+      "China entertainment"
+    ],
+    "related_signals": [],
+    "industry_lens": "entertainment",
+    "content_type": "daily",
+    "body": {
+      "signal": "The 2026 Inclusion Bund Summit in Shanghai opened its first AI Art Festival on September 11, staging a Surrealism-themed concert headlined by Yuri, China's first AI virtual idol to receive official digital-identity certification, granted by Beijing's Economic-Technological Development Area in January 2026. Yuri performed alongside the folk group The Landlord's Cat and duetted with a children's choir on an AI-original composition, backed by a 100-meter screen with 10K AI visuals. Qinghan Studio, a nine-person team, built the show in 50 days.",
+      "china_scale": "A state-linked platform like the Ant Group-organized Bund Summit can fold cultural programming directly into a national AI-economy showcase, handing a virtual idol institutional legitimacy that Western performers lack. The festival also screened more than 100 AI-generated short films from domestic platforms, showing a pipeline of AI content already built for formal distribution rather than social-media-only release.",
+      "global_impact": "Western entertainment and events companies still treat AI performers as novelty acts or production tools rather than certified public figures with regulatory standing. China's approach of pairing state-linked identity certification with flagship-conference visibility compresses the path from experimental AI content to mainstream cultural legitimacy.",
+      "monday_morning": "Track how China licenses and certifies synthetic performers, since that framework will shape international IP and endorsement deals faster than Western regulators are moving. Media and events executives should scout whether virtual-idol tie-ins with financial or industry conferences abroad could reproduce this cross-sector amplification.",
+      "related_notes": ""
+    }
+  },
+  {
     "id": "2026-09-22-stepfun-stepaudio-3-music-suno-rival",
     "date": "2026-09-22",
     "day_number": 215,
