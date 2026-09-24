@@ -1,5 +1,65 @@
 [
   {
+    "id": "2026-09-24-china-slows-humanoid-robot-ipos",
+    "date": "2026-09-24",
+    "day_number": 219,
+    "category": "Robotics & Embodied AI",
+    "category_emoji": "🤖",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 3,
+    "title_en": "China Reins In Humanoid Robot IPOs After Unitree's $30 Billion Wipeout",
+    "title_cn": "宇树蒸发300亿美元后 中国收紧机器人IPO审批",
+    "source_url": "https://www.scmp.com/business/china-business/article/3367545/unitrees-us30-billion-stock-wipe-spurs-regulatory-caution-humanoid-robot-ipos",
+    "source_name": "South China Morning Post, September 15, 2026",
+    "tags": [
+      "Unitree Robotics",
+      "humanoid robot IPOs",
+      "CSRC",
+      "robotics valuation"
+    ],
+    "related_signals": [],
+    "industry_lens": "automotive",
+    "content_type": "daily",
+    "body": {
+      "signal": "Unitree Robotics has fallen 44 percent since its August 19 Hong Kong listing, wiping out roughly $30 billion in market value, and SCMP reported on September 15 that mainland securities regulators are moving toward tighter scrutiny of humanoid robot IPOs, weighing revenue quality and earnings prospects rather than headline growth. Follow-on reporting on September 21 said the China Securities Regulatory Commission has begun issuing informal window guidance steering humanoid makers away from public listings until they show recurring revenue, leaving at least six firms, including Deep Robotics and Leju Robot, waiting on their IPO plans, with private-market valuations across the sector cut 30 to 50 percent.",
+      "china_scale": "Unitree's debut spiked 460 percent before collapsing, and only 9 percent of its 2025 revenue came from industrial sales versus 73.6 percent from research and education customers, a revenue mix Beijing can now police directly through listing approval rather than after the fact. XPeng's robotics arm still raised more than $900 million in August, showing regulators are cooling the public-listing pipeline while keeping private capital and R&D subsidies flowing to keep the underlying industrial buildout on schedule.",
+      "global_impact": "Western humanoid entrants such as Figure and Apptronik are approaching similarly thin commercial revenue as they court public or late-stage private capital, and a visible Chinese regulatory correction hands investors elsewhere a concrete benchmark, real industrial revenue over research and related-party deals, for pricing the next humanoid funding round.",
+      "monday_morning": "Western investors evaluating a humanoid robotics deal should request a revenue breakdown by industrial customer, research and education customer, and related-party transaction before pricing it, mirroring the disclosure now driving Chinese listing scrutiny.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-09-24-ai-data-center-green-power-race",
+    "date": "2026-09-24",
+    "day_number": 218,
+    "category": "Climate & Sustainability",
+    "category_emoji": "🌱",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 4,
+    "title_en": "China's AI Data Centers Set to Consume 800 Billion Kilowatt-Hours by 2030",
+    "title_cn": "中国AI数据中心2030年用电或达8000亿度",
+    "source_url": "https://www.21jingji.com/article/20260918/herald/3a0fd150a25b55b952794b4f615726bc.html",
+    "source_name": "21st Century Business Herald, September 18, 2026",
+    "tags": [
+      "AI data centers",
+      "green power",
+      "grid capacity",
+      "National Energy Administration"
+    ],
+    "related_signals": [],
+    "industry_lens": "financial services",
+    "content_type": "daily",
+    "body": {
+      "signal": "21st Century Business Herald reported on September 18 that China's computing centers drew 170 billion kilowatt-hours in 2025, 1.6 percent of national electricity use, citing National Energy Administration data, and that figure is projected to reach roughly 800 billion kilowatt-hours by 2030 as AI compute expands. Tencent, Alibaba, China Mobile and China Telecom are racing to lock in renewable supply, with Tencent at 48.5 percent green power consumption, Alibaba above 34 percent, and Kuaishou's self-built data centers already at 93 percent.",
+      "china_scale": "An April 2026 four-ministry action plan already commits China to fully clean-powered AI infrastructure by 2030, letting Beijing pair new compute capacity with new renewable generation on one national timetable and route western wind and solar to eastern data centers through mandated power purchase agreements, a scale of coordinated green procurement fragmented Western grids cannot easily match.",
+      "global_impact": "Microsoft, Google and Amazon face the same AI power crunch without China's centralized ability to match compute build-out to renewable generation on a fixed schedule. If Chinese cloud providers can credibly claim near-total green AI compute by 2030, it becomes a competitive lever in cloud contracts and ESG-sensitive procurement decisions worldwide.",
+      "monday_morning": "Western cloud and AI infrastructure leaders should benchmark their own renewable procurement against the published green-power percentages of Tencent, Alibaba and Kuaishou, and treat power availability, not chip allocation, as the binding constraint in 2027 to 2030 capacity planning.",
+      "related_notes": ""
+    }
+  },
+  {
     "id": "2026-09-23-envision-wind-confidence-output",
     "date": "2026-09-23",
     "day_number": 217,
