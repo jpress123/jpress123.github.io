@@ -1847,6 +1847,14 @@
         // Clear it to "All Time" or the click would filter down to nothing.
         var freshSelect = document.getElementById('filterFreshness');
         if (freshSelect) freshSelect.value = 'all_time';
+        // A leftover search term or Impact/Strength filter from earlier
+        // browsing can silently zero out this cell's results too, so
+        // clear those as well. The heat map's promise is "show me every
+        // signal in this cell," and any stale filter breaks that promise.
+        var searchEl = document.getElementById('searchInput');
+        if (searchEl) searchEl.value = '';
+        var strengthSelect = document.getElementById('filterStrength');
+        if (strengthSelect) strengthSelect.value = 'all';
 
         // Sync the lens chip row
         document.querySelectorAll('.lens-chip').forEach(function(b){

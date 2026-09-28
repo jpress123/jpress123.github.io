@@ -1,5 +1,67 @@
 [
   {
+    "id": "2026-09-28-us-china-ai-super-intelligence-dialogue",
+    "date": "2026-09-28",
+    "day_number": 221,
+    "category": "Policy & Governance",
+    "category_emoji": "🏛️",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 5,
+    "title_en": "China Opens a Cold War Style AI Hotline With Washington",
+    "title_cn": "中美建立冷战式AI热线沟通渠道",
+    "source_url": "https://www.scmp.com/news/china/diplomacy/article/3368884/xi-trump-summit-china-and-us-open-super-intelligence-communications-channel",
+    "source_name": "South China Morning Post",
+    "tags": [
+      "US-China summit",
+      "AI hotline",
+      "super intelligence dialogue",
+      "He Lifeng",
+      "Xi Jinping"
+    ],
+    "related_signals": [],
+    "industry_lens": "financial services",
+    "content_type": "daily",
+    "body": {
+      "signal": "Xi Jinping's three-day state visit to Washington concluded September 26 with the White House announcing a US-China Super Intelligence (SI) Dialogue, a bilateral communication channel for AI incidents modeled on Cold War-era emergency hotlines. Chinese Vice-Premier He Lifeng and US Treasury Secretary Scott Bessent completed the first round of the underlying AI dialogue on September 20 during the eighth round of US-China trade talks in New York, which Commerce Ministry spokesman He Yadong confirmed on September 24. The next SI Dialogue session is scheduled by November 2026, announced alongside a $30 billion tariff cut agreed during the summit.",
+      "china_scale": "Beijing used the dialogue to negotiate from parity rather than catch-up: Xi told Trump the two nations share \"the capability and responsibility to develop and manage AI for good,\" and Foreign Minister Wang Yi framed the summit's goal as putting US-China relations on \"equal footing.\" The channel gives Beijing an institutional forum to contest Washington's chip export restrictions and its accusations that Chinese labs used \"distillation\" to replicate American models, moving that fight from unilateral export-control actions to head-of-state diplomacy.",
+      "global_impact": "This is the first formal government-to-government AI incident channel between the two AI superpowers, but its scope is undefined, neither side has specified what qualifies as an \"SI incident\" or what notification either side owes the other. For Western governments, it signals Washington now treats Beijing as a dialogue partner on frontier AI safety rather than solely a target of containment, a framing that will shape how the EU, UK, and other AI Safety Institute members structure their own bilateral tracks with China.",
+      "monday_morning": "Companies running dual US-China AI strategies should read this as a signal that export-control enforcement could ease incrementally as trust-building continues, not as detente, the incident-notification scope remains undefined and could tighten again quickly. Government affairs teams should watch the November 2026 session for the first concrete test of what the channel actually does.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-09-28-douyin-xiaohongshu-financial-marketing-crackdown",
+    "date": "2026-09-28",
+    "day_number": 222,
+    "category": "Platforms & Social",
+    "category_emoji": "📱",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 3,
+    "title_en": "China Forces Financial Influencers Off Social Media Without a License",
+    "title_cn": "中国强制财经网红持牌上岗",
+    "source_url": "https://news.qq.com/rain/a/20260917A0CXAT00",
+    "source_name": "Tencent News",
+    "tags": [
+      "financial content regulation",
+      "Douyin",
+      "Xiaohongshu",
+      "platform enforcement",
+      "licensing"
+    ],
+    "related_signals": [],
+    "industry_lens": "consumer",
+    "content_type": "daily",
+    "body": {
+      "signal": "China's Financial Product Online Marketing Management Measures (《金融产品网络营销管理办法》), issued by the People's Bank of China and seven other departments in April 2026, take full effect September 30. Ahead of the deadline, Douyin eliminated its \"financial advisor\" (理财师) yellow-V certification category entirely, removing 6,888 accounts, and says it processed more than 45,000 violations in the third quarter, including blocking over 1.5 million cross-border financial promotions, 30,000-plus illegal stock recommendations, and 1,000-plus unlicensed forex trading posts. Xiaohongshu published its first \"Community Financial Ecology Covenant\" on September 15 and reports removing more than 1.01 million violating notes and 157,000-plus accounts over six months.",
+      "china_scale": "Douyin and Xiaohongshu already run algorithmic content-classification systems built for earlier state campaigns, including mandatory AI-content labeling and micro-drama review, so retrofitting them to flag unlicensed financial marketing, self-styled \"advisors\" without brokerage or fund licenses, required no new infrastructure, only a policy trigger. The rule's core sequence, \"licensed institution first, then credentials, then marketing\" (先持牌、再认证、后营销), shifts financial content authority away from individual influencers and onto regulated institutions, a structural change only a market with centralized platform gatekeepers and existing real-name verification can execute in five months.",
+      "global_impact": "Western platforms including YouTube, TikTok, and Instagram face the same fake-financial-influencer problem, unlicensed \"finfluencers\" and cloned-voice stock tipsters driving retail investors into scams, but rely on reactive takedowns rather than a licensing gate. China's model previews a regulatory template other governments may reach for: forcing platforms to verify institutional credentials before any account can discuss financial products at all, a step ahead of EU and US finfluencer disclosure debates that do not yet require platform-level licensing checks.",
+      "monday_morning": "Financial services firms marketing into China through influencer or livestream channels should audit every partner account against the new credential requirements before September 30 or lose distribution access outright. Compliance and marketing leaders elsewhere should treat this as an early test case for how platform-level licensing gates perform at scale, worth revisiting once enforcement data accumulates.",
+      "related_notes": ""
+    }
+  },
+  {
     "id": "2026-09-25-deepseek-dsec-rsi-sandbox-loop",
     "date": "2026-09-25",
     "day_number": 220,
