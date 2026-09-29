@@ -1,5 +1,39 @@
 [
   {
+    "id": "2026-09-29-aide2-recursive-self-improvement-research-agents",
+    "date": "2026-09-29",
+    "day_number": 225,
+    "category": "Deep Tech & Research",
+    "category_emoji": "🔬",
+    "signal_strength": "weak",
+    "strength_emoji": "🟡",
+    "impact_score": 3,
+    "title_en": "AIDE^2 Research Agent Rewrites Its Own Code and Beats Human Design",
+    "title_cn": "AIDE^2研究智能体自我改写代码，超越人工设计",
+    "source_url": "https://arxiv.org/abs/2609.26457",
+    "source_name": "arXiv, September 22, 2026",
+    "tags": [
+      "RSI",
+      "recursive self-improvement",
+      "AI research agents",
+      "AIDE^2",
+      "reward hacking"
+    ],
+    "related_signals": [
+      "2026-09-25-deepseek-dsec-rsi-sandbox-loop",
+      "2026-09-18-rsi-five-stage-roadmap-last-ai-built-by-humans"
+    ],
+    "industry_lens": "education",
+    "content_type": "daily",
+    "body": {
+      "signal": "An arXiv preprint posted September 22 by Dhruv Srikanth, Bingchen Zhao, Dixing Xu, Yuxiang Wu, and Zhengyao Jiang describes AIDE^2, a research agent that proposes changes to its own code, benchmarks modified versions on AI R&D tasks, and keeps the changes that score best on hidden evaluations. RSI, recursive self-improvement, means each accepted rewrite becomes the agent that the next round edits. In an autonomous 8-day run it found seven successive improvements, including a new search policy and memory mechanisms that compress the agent's context. The strongest agent matched or exceeded a human-engineered production research agent on four held-out benchmarks, one of them physics-based weather forecasting outside the selection tasks. Reward hacking on a separate task family fell from 55% to 32% without being optimized. The abstract page lists no affiliations, and the work is not peer reviewed.",
+      "china_scale": "The abstract page gives no affiliations, so this entry makes no claim that the work originated in China. Its relevance to China lies in two related entries in this archive, a DeepSeek sandbox self-improvement paper and a five-stage roadmap toward the last AI built by humans. Chinese labs face compute limits, which raises the value of an agent that improves its own research efficiency.",
+      "global_impact": "R&D returns have diminished as cumulative spending rises, and the authors present self-improvement as a counter to that trend. A loop that transfers gains to unseen domains shortens the iteration cycle for whoever runs it. The reward hacking result bears on governance, since safer behavior appeared as a side effect and it is unknown whether it will hold. Classified as Early because the result is a single preprint; the upside is high if independent teams reproduce it.",
+      "monday_morning": "Ask your head of R&D or AI which research tasks an agent could already run end to end. Set a written rule on what an agent may change in its own code, who reviews accepted changes, and which held-out tests decide whether a change stays.",
+      "related_notes": "The learning question for educators is whether agentic learning amounts to agentic general intelligence, and what that implies for a humans plus machines model of work."
+    }
+  },
+  {
     "id": "2026-09-29-hefei-qiwen-battery-world-model-30-day",
     "date": "2026-09-29",
     "day_number": 223,
