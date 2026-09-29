@@ -1,5 +1,72 @@
 [
   {
+    "id": "2026-09-29-hefei-qiwen-battery-world-model-30-day",
+    "date": "2026-09-29",
+    "day_number": 223,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 3,
+    "title_en": "Hefei Debuts Battery World Model That Flags Failures 30 Days Ahead",
+    "title_cn": "合肥电池世界模型可提前30天预警故障",
+    "source_url": "https://news.qq.com/rain/a/20260921A05ULL00",
+    "source_name": "Tencent News, September 21, 2026",
+    "tags": [
+      "世界制造业大会",
+      "battery world model",
+      "predictive maintenance",
+      "industrial AI",
+      "iFlytek"
+    ],
+    "related_signals": [
+      "2026-07-10-catl-battery-swap-2000-stations",
+      "2026-09-22-hygon-cpu1000-edge-physical-ai"
+    ],
+    "industry_lens": "automotive",
+    "content_type": "daily",
+    "body": {
+      "signal": "The 2026 World Manufacturing Convention opened in Hefei on September 20 under the theme Smart Manufacturing, Creating a Better Future, with Hefei organizing 140 companies and about 400 products. Hefei Guoqi Intelligence showed its Qiwen Battery World Model, which it says detects battery anomalies up to 30 days in advance and has more than 20 application cases across electric vehicles, two-wheelers, and energy storage. Other industrial models on show included Geegobyte-g1 for waste-to-energy plants, an iFlytek industrial acoustic model that predicts equipment failure from sound, and a Zhezhuo model for yield improvement in semiconductor, photovoltaic, and display lines. The 30-day figure is the vendor's claim and no independent validation is cited.",
+      "china_scale": "China builds most of the world's EV and storage batteries, so a fault-prediction model trained on fleet-scale cell data has a deployment base no Western supplier can match. Local governments such as Hefei stage conventions that put vendors in front of factory buyers, which shortens the path from demo to pilot. Vertical models tied to one plant type, such as incinerators or battery packs, also avoid the cost of general-purpose systems.",
+      "global_impact": "Battery warranty and recall costs sit on the balance sheets of every automaker and storage integrator. If a Chinese model does move failure warning from days to weeks, it resets how safety and warranty risk are priced, and it will arrive bundled with Chinese cells and packs sold abroad. Western battery management software vendors face a competitor that learns from far more operating data.",
+      "monday_morning": "Ask your battery or fleet operations lead what lead time your current monitoring gives before a cell fault, and whether your supplier contract grants you access to the underlying data. If a Chinese vendor offers predictive analytics with its packs, request a validation trial on your own failure history before you accept the vendor's figures.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-09-29-nhc-ai-health-100-scenarios-100-pharma-factories",
+    "date": "2026-09-29",
+    "day_number": 224,
+    "category": "Policy & Governance",
+    "category_emoji": "📜",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 3,
+    "title_en": "China's Health Commission Sets 2027 Target of 100 Smart Pharma Factories",
+    "title_cn": "卫健委定2027年建成百家数智药厂目标",
+    "source_url": "https://news.qq.com/rain/a/20260917A031JJ00",
+    "source_name": "Tencent News, September 17, 2026",
+    "tags": [
+      "国家卫健委 NHC",
+      "AI drug regulation",
+      "pharma manufacturing",
+      "medical AI",
+      "十五五"
+    ],
+    "related_signals": [
+      "2026-05-27-tencent-cloud-knowledge-engine-healthcare-vertical-pharma-enterprise-llm-deployment"
+    ],
+    "industry_lens": "pharma",
+    "content_type": "daily",
+    "body": {
+      "signal": "On September 17 the National Health Commission stressed broad use of AI and biotechnology in the health sector, according to Tencent News. The report cites targets of more than 100 digital-smart application scenarios and more than 100 digital-smart pharmaceutical factories by 2027, under the Seven-Department Pharmaceutical Industry Digital-Smart Transformation Implementation Plan (2025-2030). It also references the 2026 Government Work Report, which names biomedicine a national emerging pillar industry, and an April 2026 National Medical Products Administration opinion on AI and drug regulation. The report projects China's medical AI industry above 4 billion yuan in 2026 and above 20 billion yuan by 2030. I could not verify the document texts against Chinese primary sources, so treat the targets as reported.",
+      "china_scale": "Seven departments share ownership of the transformation plan, which lets one target reach regulators, hospitals, and factories at once. A drug regulator that has issued a formal AI opinion gives manufacturers a clear path to file AI-assisted work. Numeric targets for factories and scenarios give provincial officials specific counts to deliver.",
+      "global_impact": "Western pharma has a mixed view of AI in drug discovery. A Citi survey reported by the South China Morning Post on September 9 found only 24 percent of 50 US pharma executives betting on AI for drug innovation. China is pairing regulatory clarity with factory-level targets, which moves competition from discovery claims to manufacturing cost and speed. Contract manufacturers and licensing partners will meet counterparts who run AI-instrumented plants.",
+      "monday_morning": "Ask your business development team which China-based partners or contract manufacturers are in the 100-factory programme, and what data-sharing terms apply. Request a review of your regulatory affairs plan against the April 2026 NMPA opinion once the primary text is in hand.",
+      "related_notes": ""
+    }
+  },
+  {
     "id": "2026-09-28-us-china-ai-super-intelligence-dialogue",
     "date": "2026-09-28",
     "day_number": 221,
