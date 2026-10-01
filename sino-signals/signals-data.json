@@ -1,5 +1,70 @@
 [
   {
+    "id": "2026-10-01-deepseek-opens-ascend-950-software-toolkit",
+    "date": "2026-10-01",
+    "day_number": 227,
+    "category": "Deep Tech & Research",
+    "category_emoji": "🔬",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 3,
+    "title_en": "DeepSeek Opens Its Software Toolkit to Huawei Chips, Targeting Nvidia's Moat",
+    "title_cn": "DeepSeek向华为芯片开源软件工具，直指英伟达护城河",
+    "source_url": "https://scmp.com/tech/tech-trends/article/3369301/chinas-deepseek-open-sources-tools-help-huawei-chips-supplant-nvidia-ai",
+    "source_name": "South China Morning Post, September 30, 2026",
+    "tags": [
+      "DeepSeek",
+      "Huawei Ascend",
+      "TileLang",
+      "open source",
+      "software ecosystem"
+    ],
+    "related_signals": [
+      "2026-09-07-deepseek-160000-huawei-ascend-ulanqab-cluster"
+    ],
+    "industry_lens": "education",
+    "content_type": "daily",
+    "body": {
+      "signal": "The South China Morning Post reported on September 30 that DeepSeek open-sourced six software modules for Huawei's Ascend AI processors. The one the article names is TileLang, a programming language for writing high-performance computing kernels. Its Ascend version adds native code generation, automatic scheduling, and synchronization for the Ascend 950 accelerator. DeepSeek says the aim is an independent and controllable software ecosystem for AI processors, and the article describes the release as mirroring earlier open-source tools DeepSeek built for Nvidia chips. The article does not name the other five modules or give benchmark results, and this entry makes no performance claim.",
+      "china_scale": "Chinese labs now run large training jobs on domestic accelerators, and a shared open toolchain lets each lab reuse the same kernels and scheduling code. Huawei supplies the hardware, DeepSeek supplies widely used open code, and universities and startups can adopt both without a license fee. That pairing turns chip supply into a coordinated national software effort.",
+      "global_impact": "Nvidia's lead rests partly on CUDA, the software layer developers already know. A maintained open alternative for Ascend lowers the switching cost for any buyer outside the US export-control perimeter. Western firms that sell into Asia, the Middle East, or Latin America may meet customers whose AI stack contains no Nvidia code. Classified as Emerging because the release is announced, but adoption and performance remain unverified.",
+      "monday_morning": "Ask your engineering and procurement leads which parts of your AI stack depend on CUDA-only code. Assign one team to test an open kernel language on non-Nvidia hardware, so your portability position is known before a customer or regulator asks.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-10-01-china-energy-storage-first-decline-overseas-orders-surge",
+    "date": "2026-10-01",
+    "day_number": 226,
+    "category": "Climate & Sustainability",
+    "category_emoji": "🌱",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 3,
+    "title_en": "China's Energy Storage Market Shrinks at Home While Overseas Orders Jump 83%",
+    "title_cn": "中国储能国内装机首次下滑，海外订单增长83%",
+    "source_url": "https://www.energy-storage.news/chinas-half-year-energy-storage-deployments-post-first-ever-decline-to-22gw-59gwh-while-overseas-orders-surge-83/",
+    "source_name": "Energy-Storage.news, citing CNESA DataLink half-year data",
+    "tags": [
+      "energy storage",
+      "CNESA",
+      "capacity pricing",
+      "overseas orders"
+    ],
+    "related_signals": [
+      "2026-05-14-catl-60gwh-sodium-ion-grid-storage-order-beijing-hyperstrong"
+    ],
+    "industry_lens": "financial services",
+    "content_type": "daily",
+    "body": {
+      "signal": "CNESA DataLink half-year data, reported by Energy-Storage.news, shows China commissioned 21.81 GW and 58.60 GWh of new-type energy storage in the first half of 2026. That is down 18 percent in power and 16 percent in energy from a year earlier, the first decline on record. Cumulative capacity reached 237.7 GW at the end of June, up 41.7 percent. Chinese suppliers signed 298 GWh of overseas contracts, up 83 percent, with Europe as the core market and growth in the Middle East, India, and Chile. Standalone storage made up 69.3 percent of additions, at an average duration of 2.69 hours. The source credits a national capacity pricing mechanism for standalone storage, cited as Document No. 114, and attributes the slowdown to narrower spot-market price spreads and higher charging costs. The document number is as reported by the source and was not checked against the Chinese primary text.",
+      "china_scale": "China holds a cumulative base of 237.7 GW, which gives manufacturers and integrators the largest domestic reference fleet for bankable project data. A national capacity tariff lets standalone projects stack capacity, energy, and ancillary revenue, so domestic demand now depends on project returns and no longer on installation targets. Suppliers with lithium and sodium-ion cell capacity at home can move surplus output to export contracts quickly.",
+      "global_impact": "Overseas orders of 298 GWh show that Chinese suppliers are converting a slowing home market into export volume, and Europe is the main destination. Western storage developers and cell makers face Chinese bids priced off a large domestic base. A single report supports these figures, so treat the 83 percent as an order-book measure and not as installed capacity. Classified as Accelerating because the systems are deployed at scale and sold abroad.",
+      "monday_morning": "If your firm buys or finances storage, ask each Chinese bidder for the share of its contracted GWh already delivered, and compare duration and warranty terms with your European tenders. Treat the capacity tariff model as a template for your own market design discussions with regulators.",
+      "related_notes": ""
+    }
+  },
+  {
     "id": "2026-09-29-aide2-recursive-self-improvement-research-agents",
     "date": "2026-09-29",
     "day_number": 225,
