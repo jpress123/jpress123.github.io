@@ -1,5 +1,73 @@
 [
   {
+    "id": "2026-10-02-provinces-mandate-school-ai-class-hours",
+    "date": "2026-10-02",
+    "day_number": 230,
+    "category": "Policy & Governance",
+    "category_emoji": "🏛️",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 3,
+    "title_en": "Chinese Provinces Mandate Minimum AI Class Hours in Every School This Autumn",
+    "title_cn": "多省份规定今秋中小学须开设人工智能课时",
+    "source_url": "https://hunan.voc.com.cn/news/202609/33880509.html",
+    "source_name": "Hunan Online (Voice of Hunan), September 2026; NetEase reporting on autumn school changes",
+    "tags": [
+      "AI education",
+      "K-12",
+      "Hunan",
+      "Shandong",
+      "Jiangsu",
+      "curriculum"
+    ],
+    "related_signals": [
+      "2026-05-27-china-ministry-education-ai-plus-education-national-plan-k12-university",
+      "2026-04-11-five-ministries-ai-education-action-plan"
+    ],
+    "industry_lens": "education",
+    "content_type": "daily",
+    "body": {
+      "signal": "Hunan's provincial education department issued a notice requiring every primary and secondary school to deliver at least 8 hours of AI education per academic year from the autumn 2026 semester. The notice grades content by stage, from perception in lower primary to project creation in high school, calls for provincial and municipal AI lecturer teams and school AI labs, and sets a basic curriculum system by 2027 and full integration by 2030. A NetEase roundup of autumn changes reports parallel rules elsewhere: Shandong requires at least 6 hours a year for grades 1 and 2 and 8 hours for grades 3 to 9, and Jiangsu requires AI literacy courses in all schools. I read the Hunan notice through a news report, not the document itself, and have not checked document numbers.",
+      "china_scale": "The Ministry of Education and four other departments issued the national AI+Education action plan in April 2026. Provincial departments now convert it into hour counts that schools must timetable, which moves AI from pilot classrooms to every enrolled student. Provinces with large school populations can set a floor within one semester.",
+      "global_impact": "A fixed annual hour requirement, applied to every school, creates a national cohort with AI literacy by the early 2030s. Western education systems mostly publish guidance without hour mandates. Employers and ed-tech suppliers should expect Chinese entrants to arrive with baseline AI fluency. Classified as Accelerating because the rules apply this semester, though instruction quality and teacher supply are unreported.",
+      "monday_morning": "If you lead an education or training business, compare your own AI literacy offer with an 8-hours-a-year school baseline, and ask what a graduate cohort that starts at that level will expect from you.",
+      "related_notes": "Hour counts for Shandong and Jiangsu come from one secondary roundup."
+    }
+  },
+  {
+    "id": "2026-10-02-china-national-carbon-market-report-2026",
+    "date": "2026-10-02",
+    "day_number": 231,
+    "category": "Climate & Sustainability",
+    "category_emoji": "🌱",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 3,
+    "title_en": "China's Carbon Market Hits Record Volume and Prepares Four More Industries",
+    "title_cn": "中国碳市场成交量创新高，四大行业筹备纳入",
+    "source_url": "https://finance.sina.com.cn/roll/2026-09-17/doc-iniscqxx4026968.shtml",
+    "source_name": "Sina Finance, reporting the Ministry of Ecology and Environment's National Carbon Market Development Report (2026)",
+    "tags": [
+      "carbon market",
+      "ETS",
+      "CCER",
+      "Ministry of Ecology and Environment",
+      "emissions"
+    ],
+    "related_signals": [
+      "2026-04-30-china-ets-steel-cement-aluminum-quota-pre-allocation"
+    ],
+    "industry_lens": "financial services",
+    "content_type": "daily",
+    "body": {
+      "signal": "China's Ministry of Ecology and Environment released the National Carbon Market Development Report (2026) on September 15. It reports 243 trading days in 2025, 235 million tonnes traded (up 24.36 percent) and 14.63 billion yuan in value, the highest annual volume since launch. The market covers power, steel, cement, and aluminum, with 3,680 emitters and about 8.3 billion tonnes of CO2, over 65 percent of national emissions. Petrochemicals, chemicals, paper, and civil aviation have begun preparation to enter. The voluntary CCER market holds 41 registered projects and 21.71 million tonnes traded worth 1.737 billion yuan through August 2026. China.org.cn separately reports cumulative volume of 961 million tonnes and 65.7 billion yuan by August. Steel, cement, and aluminum reported 100 percent compliance in the first expansion round.",
+      "china_scale": "One national registry now prices emissions for the sectors that produce most of China's industrial CO2, and the ministry plans to cover all major industrial sectors by 2027, per the China.org.cn report. Compliance is administrative, so coverage can widen by notice instead of legislation. Hubei's pilot market alone passed 10 billion yuan in cumulative transactions.",
+      "global_impact": "China's allowance price shapes the carbon cost embedded in exported steel, cement, aluminum, and, once added, chemicals. Western importers facing carbon border rules will compare that price with their own. Classified as Accelerating because the market operates at scale with full compliance reported for the new sectors. Average prices are not in the sources checked here.",
+      "monday_morning": "Ask your procurement and finance leads for the carbon cost per tonne of Chinese steel, aluminum, or chemicals you import, and check whether suppliers' China allowance costs appear in your border-adjustment filings.",
+      "related_notes": "Figures come from two reports of the ministry release. Not checked against the ministry's own text."
+    }
+  },
+  {
     "id": "2026-10-02-tsinghua-puro-2b-llm-consumer-gpus",
     "date": "2026-10-02",
     "day_number": 228,
