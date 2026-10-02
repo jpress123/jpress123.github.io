@@ -1,5 +1,70 @@
 [
   {
+    "id": "2026-10-02-tsinghua-puro-2b-llm-consumer-gpus",
+    "date": "2026-10-02",
+    "day_number": 228,
+    "category": "Deep Tech & Research",
+    "category_emoji": "🔬",
+    "signal_strength": "weak",
+    "strength_emoji": "🟡",
+    "impact_score": 2,
+    "title_en": "Tsinghua Trains a Competitive Open LLM on Gaming GPUs for About $6,900",
+    "title_cn": "清华用游戏显卡约6900美元训出可复现开源大模型",
+    "source_url": "https://arxiv.org/pdf/2608.27370",
+    "source_name": "arXiv 2608.27370 (Tsinghua University and Pengcheng Laboratory)",
+    "tags": [
+      "Tsinghua",
+      "PuRo-2B",
+      "open source",
+      "low-cost training",
+      "RTX 5090"
+    ],
+    "related_signals": [],
+    "industry_lens": "education",
+    "content_type": "daily",
+    "body": {
+      "signal": "A Tsinghua University and Pengcheng Laboratory team posted PuRo-2B, a 2-billion-parameter language model pretrained from scratch on consumer RTX 5090 GPUs. The paper reports about $6,900 to reproduce the canonical model, 1.4 trillion training tokens in two phases, and 22,514 GPU-hours on 24 cards in the first phase and 96 in the second. Methods include FP8 precision, the MuonH optimizer, curriculum model averaging, and data curation. Artifacts are released under Apache 2.0, with upstream datasets keeping their own terms. The authors project that a scaling law they fit would reach Qwen2-1.5B quality for about $4,400, and an AI Weekly summary says results are comparable to Qwen2.5-1.5B under the authors' own evaluation. No independent replication has been reported.",
+      "china_scale": "Chinese university labs face export limits on data-center GPUs and buy consumer cards in volume. A published recipe that fits that hardware turns the constraint into a method that any lab with roughly 100 gaming GPUs can copy. Pengcheng Laboratory adds a state-backed compute partner to the author list, and open release lets other Chinese labs reuse the pipeline.",
+      "global_impact": "The result shows that pretraining a small model from scratch no longer requires a data-center budget. Academic groups and small companies outside China can reproduce it if the released code and data hold up. Classified as Early because this is a single-institution preprint at 2 billion parameters, far below frontier scale, and the benchmark claims rest on the authors' evaluation.",
+      "monday_morning": "Ask your research or ML lead to price a from-scratch small model against your current fine-tuning spend, and to reproduce one PuRo-2B training phase before deciding whether to bring pretraining in house.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-10-02-huawei-cloud-aics-cluster-service-capacity-limit",
+    "date": "2026-10-02",
+    "day_number": 229,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 3,
+    "title_en": "Huawei Cloud Launches Cluster Service for 100,000-Card AI Training, Domestic Demand First",
+    "title_cn": "华为云推出支持十万卡训练的AI集群服务，优先满足国内需求",
+    "source_url": "https://techwireasia.com/2026/09/huawei-cloud-aics-enterprise-ai-agents/",
+    "source_name": "Tech Wire Asia, September 2026",
+    "tags": [
+      "Huawei Cloud",
+      "AICS",
+      "enterprise AI",
+      "UnifiedBus",
+      "Context Memory Storage"
+    ],
+    "related_signals": [
+      "2026-06-23-huawei-cloud-agentic-ai-enterprise-stack",
+      "2026-09-21-huawei-atlas-960e-superpod-npo"
+    ],
+    "industry_lens": "pharma",
+    "content_type": "daily",
+    "body": {
+      "signal": "Tech Wire Asia reports that Huawei Cloud launched AI Cluster Service (AICS) in China on September 30, 2026, with international availability set for November 30. Huawei claims support for training runs longer than 40 days, fault recovery within 10 minutes, and 20 percent higher token throughput than the previous generation, on clusters of more than 100,000 cards linked by its UnifiedBus interconnect. It also introduced Context Memory Storage for AI agents, with petabyte-scale storage and terabyte-scale memory reads. The report says the agentic infrastructure serves over 3,500 customers and lists healthcare, manufacturing, finance, embodied AI, and AI for science as target industries. Huawei supplied the performance figures and the report cites no independent benchmark.",
+      "china_scale": "Huawei sells the chip, the interconnect, the cluster service, and the industry software as one stack, so a Chinese hospital, factory, or bank buys a single contract. Rotating chairman Eric Xu said Huawei lacks enough capacity to satisfy demand in China, which shows domestic enterprise demand already exceeds supply and explains the delayed overseas date.",
+      "global_impact": "Western cloud buyers in Asia, the Middle East, and Latin America will see a Huawei cluster offer from November 30, subject to local policy and export rules that this report does not address. The stated capacity shortage limits near-term volume. Classified as Emerging because availability is announced, and all performance figures are vendor claims.",
+      "monday_morning": "If your firm sells AI services into markets where Huawei Cloud operates, ask your sales and cloud teams to map which accounts could be offered a Huawei-hosted cluster after November 30, and what your service-level terms would need to match.",
+      "related_notes": "Single source. Not checked against Huawei's own primary announcement."
+    }
+  },
+  {
     "id": "2026-10-01-deepseek-opens-ascend-950-software-toolkit",
     "date": "2026-10-01",
     "day_number": 227,
