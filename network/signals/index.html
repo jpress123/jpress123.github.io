@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sustainability Signals | SUES Design Network</title>
+<meta name="description" content="Daily verified signals of sustainable practice, placed on a sector by solution heat map and the DSF map.">
+<link rel="canonical" href="https://www.sues.design/network/signals/">
+<meta property="og:title" content="Sustainability Signals | SUES Design Network">
+<meta property="og:description" content="Daily verified signals of sustainable practice, placed on a sector by solution heat map and the DSF map.">
+<meta property="og:url" content="https://www.sues.design/network/signals/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f6f5c'/%3E%3Ccircle cx='11' cy='11' r='3' fill='%23fff'/%3E%3Ccircle cx='22' cy='22' r='3.5' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-root="../" data-page="signals">
+<main class="wrap">
+  <div id="notice"></div>
+  <header class="page-head">
+    <h1><span data-lang="en">Sustainability Signals</span><span data-lang="zh">可持续信号</span></h1>
+    <p class="lede"><span data-lang="en">Verified examples of practices that are changing how things are made, consumed or governed. Each signal is placed on a heat map of four sectors by four solution types, and on the DSF map.</span><span data-lang="zh">经核实的实践案例，正在改变事物的生产、消费或治理方式。每条信号都标注在“四个领域 × 四类方案”的热力图和 DSF 地图上。</span></p>
+  </header>
+  <div class="tabs" role="tablist" id="views">
+    <button role="tab" data-view="feed" aria-selected="true"><span data-lang="en">Feed</span><span data-lang="zh">信号流</span></button>
+    <button role="tab" data-view="heat" aria-selected="false"><span data-lang="en">Heat map</span><span data-lang="zh">热力图</span></button>
+    <button role="tab" data-view="cloud" aria-selected="false"><span data-lang="en">DSF signal cloud</span><span data-lang="zh">DSF 信号云</span></button>
+    <button role="tab" data-view="trajectory" aria-selected="false"><span data-lang="en">Trajectory</span><span data-lang="zh">演进轨迹</span></button>
+    <button role="tab" data-view="table" aria-selected="false"><span data-lang="en">Table</span><span data-lang="zh">表格</span></button>
+  </div>
+  <div class="filters" id="filters"></div>
+  <div class="result-count" id="count"></div>
+  <section data-panel="feed"><div class="cards" id="feed"></div></section>
+  <section data-panel="heat" hidden>
+    <p class="muted"><span data-lang="en">Cell colour shows the mean impact score. The number is the count of signals that match the other filters. Empty cells show zero coverage, so gaps stay visible. Select a cell to filter the feed.</span><span data-lang="zh">单元格颜色表示平均影响力评分，数字为符合其他筛选条件的信号数量。空单元格表示零覆盖，以便显示空白。选择单元格可筛选信号流。</span></p>
+    <div class="panel" id="heat"></div>
+  </section>
+  <section data-panel="cloud" hidden>
+    <p class="muted"><span data-lang="en">Tags from the last 90 days, placed in their DSF zone. Size shows the number of signals. The outline shows the strength of the newest signal: dotted for Early, dashed for Emerging, solid for Accelerating. Select a tag to filter the feed.</span><span data-lang="zh">最近 90 天的标签，按 DSF 区域排列。字号表示信号数量，边框表示最新信号的强度：点线为早期，虚线为兴起，实线为加速。选择标签可筛选信号流。</span></p>
+    <div style="display:grid;grid-template-columns:26px 1fr;gap:6px">
+      <div class="small muted" style="writing-mode:vertical-rl;transform:rotate(180deg);display:flex;justify-content:space-between;text-transform:uppercase;letter-spacing:.06em"><span data-lang="en">Individual</span><span data-lang="zh">个人</span><span data-lang="en">Collective</span><span data-lang="zh">集体</span></div>
+      <div class="cloud" id="cloud"></div>
+    </div>
+    <div class="small muted" style="display:flex;justify-content:space-between;margin-left:32px;margin-top:4px;text-transform:uppercase;letter-spacing:.06em"><span><span data-lang="en">Local production</span><span data-lang="zh">本地生产</span></span><span><span data-lang="en">Global production</span><span data-lang="zh">全球生产</span></span></div>
+    <p class="small muted" id="zone-note"></p>
+  </section>
+  <section data-panel="trajectory" hidden>
+    <p class="muted"><span data-lang="en">Practices that moved between strength tiers, traced through linked signals. Early means research stage or a single pilot. Emerging means announced, multiple pilots or policy alignment. Accelerating means in the market at scale.</span><span data-lang="zh">通过相互关联的信号追踪实践在强度层级间的变化。早期指研究阶段或单一试点；兴起指已公布、多个试点或政策配套；加速指已规模化进入市场。</span></p>
+    <div id="trajectory"></div>
+  </section>
+  <section data-panel="table" hidden><div class="table-wrap"><table class="data" id="table"></table></div></section>
+</main>
+<script src="../assets/config.js"></script>
+<script src="../assets/site.js"></script>
+<script src="../assets/js/cards.js"></script>
+<script src="../assets/js/signals.js"></script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+[
+  {
+    "id": "2026-05-ex-mining-learning-centres",
+    "date": "2026-05-29",
+    "type": "need",
+    "title_en": "Multiply ecological learning centres in former mining areas",
+    "title_zh": "在前矿区推广生态学习中心",
+    "description": "Design Harvests 3.0 proposes helping communities in ex-mining areas, including along Belt and Road geographies, set up ecological learning centres like Yunhe Forest School.",
+    "place": {
+      "country": "China",
+      "region": "",
+      "city": "",
+      "lat": 30.87,
+      "lng": 101.88
+    },
+    "sector": "Community choices",
+    "solution_type": "Agriculture",
+    "dsf_production": "local",
+    "dsf_consumption": "collective",
+    "scale": "Regional, several sites",
+    "timeline": "To be confirmed",
+    "budget_band": "To be confirmed",
+    "status": "Matched",
+    "matches": [
+      {
+        "practice": "Place-based forest school",
+        "origin": "Zhonglu village, Ganzi, China",
+        "solution_status": "Operating",
+        "conditions": "Long-term local relationships and committed local leadership.",
+        "signal_id": "2026-05-29-yunhe-forest-school-eleven-years",
+        "story_id": "2026-05-yunhe-forest-school",
+        "expert_id": "expert-suchin-shu",
+        "rationale": "Yunhe already operates in an ex-mining area and has eleven years of experience to share."
+      },
+      {
+        "practice": "Fifth Ecology living laboratory",
+        "origin": "Sheffield, United Kingdom",
+        "solution_status": "Concept",
+        "conditions": "Site access and a partner able to run a long-term programme.",
+        "signal_id": "2026-05-29-fifth-ecology-parkwood-springs",
+        "story_id": "",
+        "expert_id": "",
+        "rationale": "Frames post-industrial land as fertile ground for renewal, which suits ex-mining sites."
+      },
+      {
+        "practice": "Fellowship cohort model",
+        "origin": "Nukus, Uzbekistan",
+        "solution_status": "Pilot",
+        "conditions": "Government support and a cohort that returns findings to local publics.",
+        "signal_id": "2026-07-06-aral-school-first-cohort-results",
+        "story_id": "2026-07-aral-school-first-cohort",
+        "expert_id": "expert-jan-boelen",
+        "rationale": "A cohort of fellows can generate project briefs for several sites at once."
+      }
+    ],
+    "outcome": "",
+    "contact_route": "form",
+    "tags": [
+      "ex-mining area",
+      "ecological education"
+    ],
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 29 May 2026",
+    "draft": true
+  },
+  {
+    "id": "2026-05-yunhe-international-volunteers",
+    "date": "2026-05-29",
+    "type": "need",
+    "title_en": "Yunhe Forest School seeks volunteers to share its work internationally",
+    "title_zh": "云和森林学校寻求志愿者向国际传播其工作",
+    "description": "Yunhe Forest School would welcome volunteers to help get its message out internationally.",
+    "place": {
+      "country": "China",
+      "region": "Sichuan, Ganzi Tibetan Autonomous Prefecture",
+      "city": "Zhonglu village",
+      "lat": 30.87,
+      "lng": 101.88
+    },
+    "sector": "Community choices",
+    "solution_type": "Agriculture",
+    "dsf_production": "local",
+    "dsf_consumption": "collective",
+    "scale": "Small",
+    "timeline": "Open",
+    "budget_band": "Volunteer",
+    "status": "Open",
+    "matches": [],
+    "outcome": "",
+    "contact_route": "form",
+    "tags": [
+      "volunteers"
+    ],
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 29 May 2026",
+    "draft": true
+  },
+  {
+    "id": "2026-04-chedun-riverside-belt",
+    "date": "2026-04-04",
+    "type": "need",
+    "title_en": "Chedun Town seeks a rural innovation belt along its riverside",
+    "title_zh": "车墩镇寻求建设滨河乡村创新休闲带",
+    "description": "The local government wants speedy implementation of the Chedun Riverside Rural Innovation Leisure Belt. Design Harvests 3.0 proposes a hub and a semi-nomadic festival, and needs practices that combine visitor experiences with real rural livelihoods.",
+    "place": {
+      "country": "China",
+      "region": "Shanghai, Songjiang District",
+      "city": "Chedun Town",
+      "lat": 31.02,
+      "lng": 121.27
+    },
+    "sector": "Community choices",
+    "solution_type": "Agriculture",
+    "dsf_production": "local",
+    "dsf_consumption": "collective",
+    "scale": "Town and riverside belt",
+    "timeline": "To be confirmed",
+    "budget_band": "To be confirmed",
+    "status": "Matched",
+    "matches": [
+      {
+        "practice": "Next generation agritourism",
+        "origin": "Shanghai BioFarm and regenerative farm stays",
+        "solution_status": "Proposed",
+        "conditions": "Visitor spending must reach the farmer and the farm.",
+        "signal_id": "2025-08-24-regenerative-farm-stays-travel",
+        "story_id": "",
+        "expert_id": "expert-john-thackara",
+        "rationale": "The Ten Ideas note proposes combining the wellness tourism boom with agritourism so that the farmer and her farm benefit. BioFarm is a local Shanghai partner."
+      },
+      {
+        "practice": "Urban-rural exchange programme",
+        "origin": "Kentucky, United States",
+        "solution_status": "Operating",
+        "conditions": "Needs a convenor trusted by both urban and rural groups, and a recurring gathering.",
+        "signal_id": "2025-07-21-kentucky-urban-rural-exchange",
+        "story_id": "2025-07-kentucky-rux",
+        "expert_id": "",
+        "rationale": "Ten years of exchange across 65 counties shows how meals and stories build lasting urban-rural relationships."
+      },
+      {
+        "practice": "Tiers-lieux hybrid spaces",
+        "origin": "France",
+        "solution_status": "Operating at national scale",
+        "conditions": "Disused buildings and public co-funding.",
+        "signal_id": "2023-01-08-france-tiers-lieux-investment",
+        "story_id": "",
+        "expert_id": "",
+        "rationale": "Shared workshops in disused buildings could give the belt year-round activity beyond leisure."
+      }
+    ],
+    "outcome": "",
+    "contact_route": "form",
+    "tags": [
+      "Design Harvests",
+      "agritourism"
+    ],
+    "provenance": "John Thackara, Design Harvests 3.0 Ten Ideas note, 4 April 2026",
+    "draft": true
+  },
+  {
+    "id": "2026-04-urban-rural-worker-training",
+    "date": "2026-04-04",
+    "type": "need",
+    "title_en": "Design training for urban-rural project workers",
+    "title_zh": "面向城乡项目工作者的设计培训",
+    "description": "Participants in the Chedun Town Workshop asked for design training for people who work on urban-rural projects.",
+    "place": {
+      "country": "China",
+      "region": "Shanghai, Songjiang District",
+      "city": "Chedun Town",
+      "lat": 31.02,
+      "lng": 121.27
+    },
+    "sector": "Community choices",
+    "solution_type": "Construction",
+    "dsf_production": "local",
+    "dsf_consumption": "collective",
+    "scale": "Training cohort",
+    "timeline": "To be confirmed",
+    "budget_band": "To be confirmed",
+    "status": "Open",
+    "matches": [
+      {
+        "practice": "Open School for Village Hosts",
+        "origin": "Italy and partners in five European countries",
+        "solution_status": "Pilot",
+        "conditions": "A host organisation in each village and a vocational accreditation route.",
+        "signal_id": "",
+        "story_id": "",
+        "expert_id": "expert-andrea-paoletti",
+        "rationale": "An Erasmus+ project on post-tourism, place-based rural development, with strong interest in the Design Harvests legacy."
+      },
+      {
+        "practice": "Rurality 2.0 course",
+        "origin": "France",
+        "solution_status": "Operating",
+        "conditions": "Course content adapted to Chinese rural policy and finance.",
+        "signal_id": "2025-07-23-rurality-two-training-course",
+        "story_id": "",
+        "expert_id": "",
+        "rationale": "A 12-week format already trains people to plan finance and community for rural projects."
+      }
+    ],
+    "outcome": "",
+    "contact_route": "form",
+    "tags": [
+      "training"
+    ],
+    "provenance": "John Thackara, Design Harvests 3.0 Ten Ideas note, 4 April 2026",
+    "draft": true
+  },
+  {
+    "id": "2025-11-shanghai-wetlands-food",
+    "date": "2025-11-10",
+    "type": "need",
+    "title_en": "Add food resilience to Shanghai wetland restoration",
+    "title_zh": "为上海湿地修复加入食物韧性维度",
+    "description": "Wetland projects in Shanghai take a pioneering social-ecological approach. The proposal is to expand that work through a focus on food resilience and the social and cultural dimension of restoration.",
+    "place": {
+      "country": "China",
+      "region": "Shanghai",
+      "city": "Shanghai",
+      "lat": 31.23,
+      "lng": 121.47
+    },
+    "sector": "Community choices",
+    "solution_type": "Agriculture",
+    "dsf_production": "local",
+    "dsf_consumption": "collective",
+    "scale": "City wetlands",
+    "timeline": "To be confirmed",
+    "budget_band": "To be confirmed",
+    "status": "Open",
+    "matches": [
+      {
+        "practice": "Edible wetland plants",
+        "origin": "India",
+        "solution_status": "Documented",
+        "conditions": "Local knowledge of edible water plants and their safe harvest.",
+        "signal_id": "2025-11-10-india-edible-wetlands-report",
+        "story_id": "",
+        "expert_id": "expert-francesca-valsecchi",
+        "rationale": "The report shows how wetland foods can link food systems, watershed recovery and a new rural economy."
+      }
+    ],
+    "outcome": "",
+    "contact_route": "form",
+    "tags": [
+      "wetlands"
+    ],
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 10 November 2025",
+    "draft": true
+  }
+]

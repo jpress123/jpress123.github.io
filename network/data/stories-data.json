@@ -1,0 +1,316 @@
+[
+  {
+    "id": "2026-07-aral-school-first-cohort",
+    "date": "2026-07-06",
+    "title_en": "Aral School fellows prototype a post-irrigation economy",
+    "title_zh": "咸海学校学员探索后灌溉经济",
+    "summary_en": "A government-backed school in Karakalpakstan turns local knowledge into project briefs for future cohorts.",
+    "summary_zh": "卡拉卡尔帕克斯坦一所政府支持的学校把在地知识转化为后续项目课题。",
+    "place": {
+      "country": "Uzbekistan",
+      "region": "Karakalpakstan",
+      "city": "Nukus",
+      "lat": 42.46,
+      "lng": 59.603
+    },
+    "practitioners": [
+      {
+        "name": "Jan Boelen",
+        "organisation": "Aral School",
+        "role": "Programme director",
+        "expert_id": "expert-jan-boelen",
+        "consent": "pending"
+      },
+      {
+        "name": "John Thackara",
+        "organisation": "Design Harvests / SUES",
+        "role": "Visiting lecturer, Bioregioning as Health Care",
+        "expert_id": "expert-john-thackara",
+        "consent": "pending"
+      }
+    ],
+    "challenge": "The Aral Sea region needs healthy social, ecological and economic systems after the decline of irrigation. Many of the skills and the cultural energy needed already exist, but they are fragmented.",
+    "solution": {
+      "text": "The school's first cohort of 22 postgraduate fellows developed projects on soil, water, food and building with local materials, from vermicompost and clay pot irrigation to grafted melons, mushroom farming on cotton husk waste and sun-dried bricks. Results were shared with local publics before wider exhibition.",
+      "sector": "Community choices",
+      "solution_type": "Agriculture"
+    },
+    "dsf_production": "local",
+    "dsf_consumption": "collective",
+    "status": "Pilot",
+    "status_reviewed": "2026-07-06",
+    "results": [
+      {
+        "label": "Fellows in the first cohort",
+        "value": 22,
+        "unit": "fellows",
+        "baseline": "First cohort",
+        "period": "2025 to 2026",
+        "source": "John Thackara correspondence, 20 December 2025",
+        "verification": "reported"
+      },
+      {
+        "label": "Projects shared with local publics",
+        "value": 15,
+        "unit": "projects",
+        "baseline": "First cohort",
+        "period": "2025 to 2026",
+        "source": "Aral School project summaries, shared July 2026",
+        "verification": "reported"
+      }
+    ],
+    "lessons": "These results are descriptions of future project work, which later cohorts will build on. Value comes from strengthening the ability of watersheds, soils and local people to sustain life and livelihoods, not from scaling artefacts. National government support removes dependence on private sector partners.",
+    "evidence": [
+      {
+        "label": "Aral School announcement",
+        "url": "https://www.instagram.com/p/DIJnt96oJjU/"
+      }
+    ],
+    "image": {
+      "url": "",
+      "licence": ""
+    },
+    "related_signals": [
+      "2026-07-06-aral-school-first-cohort-results"
+    ],
+    "related_opportunities": [
+      "2026-05-ex-mining-learning-centres"
+    ],
+    "related_experts": [
+      "expert-jan-boelen",
+      "expert-john-thackara"
+    ],
+    "tags": [
+      "bioregioning"
+    ],
+    "contributed_by": "John Thackara",
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 6 July 2026",
+    "draft": true
+  },
+  {
+    "id": "2026-05-yunhe-forest-school",
+    "date": "2026-05-29",
+    "title_en": "Forest school grows ecological learning in a former mining area",
+    "title_zh": "森林学校在前矿区开展生态教育",
+    "summary_en": "Eleven years of project-based learning with the mountains and local people as teachers.",
+    "summary_zh": "十一年项目式学习，以山与当地人为师。",
+    "place": {
+      "country": "China",
+      "region": "Sichuan, Ganzi Tibetan Autonomous Prefecture",
+      "city": "Zhonglu village",
+      "lat": 30.87,
+      "lng": 101.88
+    },
+    "practitioners": [
+      {
+        "name": "Suchin Shu",
+        "organisation": "Yunhe Forest School",
+        "role": "Head of school",
+        "expert_id": "expert-suchin-shu",
+        "consent": "pending"
+      }
+    ],
+    "challenge": "Young people in rural areas have few kinds of work beyond farming and tourism. Many parents want their children to connect with nature, and the area carries the legacy of mining.",
+    "solution": {
+      "text": "Yunhe Forest School runs embodied, collaborative and place-specific project-based learning that combines Buddhism and ecological restoration. It treats the mountains and local people as its main teachers, and cites the Two Mountains Theory as its social and ecological framework.",
+      "sector": "Community choices",
+      "solution_type": "Agriculture"
+    },
+    "dsf_production": "local",
+    "dsf_consumption": "collective",
+    "status": "Operating",
+    "status_reviewed": "2026-05-29",
+    "results": [],
+    "lessons": "Local relationships built over eleven years are, in Suchin Shu's account, the key success factor. The school would welcome volunteers to help communicate its work internationally. Design Harvests 3.0 sees an opportunity to help multiply such centres in ex-mining areas along Belt and Road geographies.",
+    "evidence": [
+      {
+        "label": "John Thackara interview post, LinkedIn",
+        "url": "https://www.linkedin.com/posts/thackara_so-you-want-to-start-an-ecological-learningshare-7464551235535323136-xdlQ/"
+      }
+    ],
+    "image": {
+      "url": "",
+      "licence": ""
+    },
+    "related_signals": [
+      "2026-05-29-yunhe-forest-school-eleven-years"
+    ],
+    "related_opportunities": [
+      "2026-05-ex-mining-learning-centres",
+      "2026-05-yunhe-international-volunteers"
+    ],
+    "related_experts": [
+      "expert-suchin-shu"
+    ],
+    "tags": [
+      "ecological education"
+    ],
+    "contributed_by": "John Thackara",
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 29 May 2026",
+    "draft": true
+  },
+  {
+    "id": "2026-03-chedun-town-design-harvests",
+    "date": "2026-04-04",
+    "title_en": "Chedun Town workshop maps hopes for a riverside rural innovation belt",
+    "title_zh": "设计丰收车墩镇工作坊梳理乡村创新带的多方期待",
+    "summary_en": "Three lectures, a workshop and about 40 conversations set the next actions for Design Harvests 3.0.",
+    "summary_zh": "三场讲座、一次工作坊和约 40 次交流，确定设计丰收 3.0 的下一步行动。",
+    "place": {
+      "country": "China",
+      "region": "Shanghai, Songjiang District",
+      "city": "Chedun Town",
+      "lat": 31.02,
+      "lng": 121.27
+    },
+    "practitioners": [
+      {
+        "name": "Design Harvests 3.0 team",
+        "organisation": "SUES",
+        "role": "Project team",
+        "expert_id": "",
+        "consent": true
+      },
+      {
+        "name": "John Thackara",
+        "organisation": "Design Harvests / SUES",
+        "role": "Workshop co-lead",
+        "expert_id": "expert-john-thackara",
+        "consent": "pending"
+      },
+      {
+        "name": "Lou Yongqi",
+        "organisation": "Design Harvests",
+        "role": "Programme lead",
+        "expert_id": "expert-lou-yongqi",
+        "consent": "pending"
+      }
+    ],
+    "challenge": "The local government wants speedy implementation of the Chedun Riverside Rural Innovation Leisure Belt. Other groups want an event and an expo, design training for urban-rural project workers, research projects, immersive experiences for students, and Business-to-Place services that can be sold.",
+    "solution": {
+      "text": "In March 2026 the team held three open lectures and the Chedun Town Workshop, and spoke with about 40 people. Two next actions followed: a Design Harvests Hub as a physical and virtual knowledge ecosystem, and a three-day semi-nomadic festival of pop-up events across the region around Chedun Town.",
+      "sector": "Community choices",
+      "solution_type": "Agriculture"
+    },
+    "dsf_production": "local",
+    "dsf_consumption": "collective",
+    "status": "Pilot",
+    "status_reviewed": "2026-04-04",
+    "results": [
+      {
+        "label": "Conversations with stakeholders",
+        "value": 40,
+        "unit": "conversations",
+        "baseline": "",
+        "period": "March 2026",
+        "source": "John Thackara, Design Harvests 3.0 Ten Ideas note, 4 April 2026",
+        "verification": "reported"
+      },
+      {
+        "label": "Open lectures",
+        "value": 3,
+        "unit": "lectures",
+        "baseline": "",
+        "period": "March 2026",
+        "source": "John Thackara, Design Harvests 3.0 Ten Ideas note, 4 April 2026",
+        "verification": "reported"
+      }
+    ],
+    "lessons": "Diverse expectations are expected after 18 years of Design Harvests work. A physical hub lets the interest groups learn from each other, and every group wants to move beyond talk. The pop-up festival format could be replicated in other regions along the Green Belt and Road.",
+    "evidence": [
+      {
+        "label": "Design Harvests 3.0 Ten Ideas note (internal, April 2026)",
+        "url": ""
+      }
+    ],
+    "image": {
+      "url": "",
+      "licence": ""
+    },
+    "related_signals": [],
+    "related_opportunities": [
+      "2026-04-chedun-riverside-belt",
+      "2026-04-urban-rural-worker-training"
+    ],
+    "related_experts": [
+      "expert-john-thackara",
+      "expert-lou-yongqi"
+    ],
+    "tags": [
+      "Design Harvests",
+      "urban-rural"
+    ],
+    "contributed_by": "John Thackara",
+    "provenance": "John Thackara, Design Harvests 3.0 Ten Ideas note, 4 April 2026",
+    "draft": true
+  },
+  {
+    "id": "2025-07-kentucky-rux",
+    "date": "2025-07-21",
+    "title_en": "Urban-rural exchange builds trust across 65 Kentucky counties",
+    "title_zh": "城乡交流在肯塔基 65 个县之间建立信任",
+    "summary_en": "Ten years of shared stories, meals and an annual gathering in Appalachia.",
+    "summary_zh": "阿巴拉契亚地区十年的故事分享、共餐与年度聚会。",
+    "place": {
+      "country": "United States",
+      "region": "Kentucky",
+      "city": "",
+      "lat": 37.84,
+      "lng": -84.27
+    },
+    "practitioners": [
+      {
+        "name": "Kentucky Rural-Urban Exchange (RUX)",
+        "organisation": "",
+        "role": "Organiser",
+        "expert_id": "",
+        "consent": true
+      }
+    ],
+    "challenge": "Appalachia is economically marginal, and urban and rural residents of the state have few occasions to meet.",
+    "solution": {
+      "text": "RUX convenes Kentuckians from across the state to exchange stories, meals, traditions and ideas. Each year a gathering brings together teachers, farmers, artists, attorneys, students, factory workers, nurses and community leaders.",
+      "sector": "Community choices",
+      "solution_type": "Agriculture"
+    },
+    "dsf_production": "local",
+    "dsf_consumption": "collective",
+    "status": "Operating",
+    "status_reviewed": "2025-07-21",
+    "results": [
+      {
+        "label": "Counties represented",
+        "value": 65,
+        "unit": "counties",
+        "baseline": "",
+        "period": "2015 to 2025",
+        "source": "KY RUX 2025 case studies",
+        "verification": "reported"
+      }
+    ],
+    "lessons": "Many small grassroots activities work like a pebble in a pond. An explicit urban-rural focus sets the programme apart from traditional regional development.",
+    "evidence": [
+      {
+        "label": "Kentucky Rural-Urban Exchange",
+        "url": "https://www.kyrux.org/"
+      }
+    ],
+    "image": {
+      "url": "",
+      "licence": ""
+    },
+    "related_signals": [
+      "2025-07-21-kentucky-urban-rural-exchange"
+    ],
+    "related_opportunities": [
+      "2026-04-chedun-riverside-belt"
+    ],
+    "related_experts": [],
+    "tags": [
+      "urban-rural"
+    ],
+    "contributed_by": "John Thackara",
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 21 July 2025",
+    "draft": true
+  }
+]

@@ -1,0 +1,278 @@
+[
+  {
+    "id": "expert-john-thackara",
+    "name": "John Thackara",
+    "name_zh": "",
+    "organisation": "Design Harvests / SUES",
+    "role": "Senior advisor, writer and curator",
+    "country": "France",
+    "city": "",
+    "lat": 43.61,
+    "lng": 3.88,
+    "disciplines": [
+      "Bioregioning",
+      "Social-ecological design",
+      "Urban-rural development"
+    ],
+    "sectors": [
+      "Community choices",
+      "Conscious consumption"
+    ],
+    "solutions": [
+      "Agriculture"
+    ],
+    "bio_en": "Writer and curator. Senior advisor to Design Harvests at SUES. Works on bioregioning, soil and water care, urban-rural jobs, and design for ecological restoration.",
+    "bio_zh": "作家与策展人，SUES 设计丰收项目高级顾问，研究生物区域、土壤与水的照护、城乡新职业以及服务于生态修复的设计。",
+    "link": "",
+    "consent": "pending",
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 20 December 2025",
+    "draft": true
+  },
+  {
+    "id": "expert-lou-yongqi",
+    "name": "Lou Yongqi",
+    "name_zh": "娄永琪",
+    "organisation": "Design Harvests",
+    "role": "Founder of Design Harvests; chairman and chief curator, World Design Cities Conference",
+    "country": "China",
+    "city": "Shanghai",
+    "lat": 31.23,
+    "lng": 121.47,
+    "disciplines": [
+      "Social innovation",
+      "Urban-rural design",
+      "Design education"
+    ],
+    "sectors": [
+      "Community choices"
+    ],
+    "solutions": [
+      "Agriculture",
+      "Construction"
+    ],
+    "bio_en": "Leads Design Harvests, the urban-rural design programme with 18 years of practice, and chairs the World Design Cities Conference (WDCC) in Shanghai.",
+    "bio_zh": "主持设计丰收城乡设计项目（已有 18 年实践），并担任上海世界设计之都大会主席。",
+    "link": "",
+    "consent": "pending",
+    "provenance": "John Thackara, Design Harvests 3.0 Ten Ideas note, 4 April 2026",
+    "draft": true
+  },
+  {
+    "id": "expert-jan-boelen",
+    "name": "Jan Boelen",
+    "name_zh": "",
+    "organisation": "Aral School; Atelier Luma",
+    "role": "Programme director, Aral School",
+    "country": "Uzbekistan",
+    "city": "Nukus",
+    "lat": 42.46,
+    "lng": 59.6,
+    "disciplines": [
+      "Design education",
+      "Cultural regeneration",
+      "Ecological restoration"
+    ],
+    "sectors": [
+      "Community choices"
+    ],
+    "solutions": [
+      "Agriculture",
+      "Materials"
+    ],
+    "bio_en": "Programme director of the Aral School, which curates fellowships on cultural regeneration, ecological restoration and sustainable development in the Aral Sea region.",
+    "bio_zh": "咸海学校项目总监，策划咸海地区文化复兴、生态修复与可持续发展方向的研究员项目。",
+    "link": "",
+    "consent": "pending",
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 19 September 2025",
+    "draft": true
+  },
+  {
+    "id": "expert-rupa-marya",
+    "name": "Dr Rupa Marya",
+    "name_zh": "",
+    "organisation": "Centre for Land, Food and Medicine, Trinity College Dublin",
+    "role": "Founder, Deep Medicine Circle",
+    "country": "Ireland",
+    "city": "Dublin",
+    "lat": 53.34,
+    "lng": -6.25,
+    "disciplines": [
+      "Medicine",
+      "Food systems",
+      "Land care"
+    ],
+    "sectors": [
+      "Community choices"
+    ],
+    "solutions": [
+      "Agriculture"
+    ],
+    "bio_en": "Physician and founder of Deep Medicine Circle in California. Moved to Dublin to start the Centre for Land, Food and Medicine at Trinity College Dublin.",
+    "bio_zh": "医生，加州 Deep Medicine Circle 创始人，赴都柏林创立圣三一学院土地、食物与医学中心。",
+    "link": "",
+    "consent": "pending",
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 16 July 2026",
+    "draft": true
+  },
+  {
+    "id": "expert-suchin-shu",
+    "name": "Suchin Shu",
+    "name_zh": "",
+    "organisation": "Yunhe Forest School",
+    "role": "Head of school",
+    "country": "China",
+    "city": "Zhonglu village, Ganzi",
+    "lat": 30.87,
+    "lng": 101.88,
+    "disciplines": [
+      "Ecological education",
+      "Environmental art"
+    ],
+    "sectors": [
+      "Community choices"
+    ],
+    "solutions": [
+      "Agriculture"
+    ],
+    "bio_en": "Activist with a Masters in Environmental Art. Heads Yunhe Forest School, which has run project-based ecological learning for eleven years.",
+    "bio_zh": "环境艺术硕士，社会行动者，主持云和森林学校，十一年来坚持项目式生态教育。",
+    "link": "",
+    "consent": "pending",
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 29 May 2026",
+    "draft": true
+  },
+  {
+    "id": "expert-francesca-valsecchi",
+    "name": "Francesca Valsecchi",
+    "name_zh": "",
+    "organisation": "College of Design and Innovation, Tongji University",
+    "role": "Lab lead",
+    "country": "China",
+    "city": "Shanghai",
+    "lat": 31.28,
+    "lng": 121.5,
+    "disciplines": [
+      "Urban ecology",
+      "Design research"
+    ],
+    "sectors": [
+      "Community choices"
+    ],
+    "solutions": [
+      "Agriculture"
+    ],
+    "bio_en": "Leads a lab at Tongji University whose work on Shanghai wetlands takes a social-ecological approach.",
+    "bio_zh": "在同济大学设计创意学院主持实验室，以社会生态视角开展上海湿地研究。",
+    "link": "",
+    "consent": "pending",
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 10 November 2025",
+    "draft": true
+  },
+  {
+    "id": "expert-ezio-manzini",
+    "name": "Ezio Manzini",
+    "name_zh": "",
+    "organisation": "DESIS Network",
+    "role": "Founder, DESIS",
+    "country": "Italy",
+    "city": "Milan",
+    "lat": 45.46,
+    "lng": 9.19,
+    "disciplines": [
+      "Social innovation",
+      "Design for sustainability"
+    ],
+    "sectors": [
+      "Community choices"
+    ],
+    "solutions": [
+      "Production"
+    ],
+    "bio_en": "Design researcher on social innovation. Discussed social innovation and bioregioning with John Thackara in a DESIS interview on design and soil care.",
+    "bio_zh": "社会创新设计研究者，曾与约翰·萨卡拉在 DESIS 访谈中讨论社会创新与生物区域。",
+    "link": "",
+    "consent": "pending",
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 26 April 2024",
+    "draft": true
+  },
+  {
+    "id": "expert-andrea-paoletti",
+    "name": "Andrea Paoletti",
+    "name_zh": "",
+    "organisation": "Casa Netural",
+    "role": "Project lead, Open School for Village Hosts",
+    "country": "Italy",
+    "city": "Matera",
+    "lat": 40.67,
+    "lng": 16.6,
+    "disciplines": [
+      "Rural development",
+      "Post-tourism"
+    ],
+    "sectors": [
+      "Community choices"
+    ],
+    "solutions": [
+      "Construction"
+    ],
+    "bio_en": "Leads the Open School for Village Hosts, an Erasmus+ project on place-based rural development. Spoke at the Zhangyan Harvest Festival.",
+    "bio_zh": "主持伊拉斯谟+项目“乡村主人开放学校”，聚焦在地乡村发展，曾在张堰丰收节发言。",
+    "link": "",
+    "consent": "pending",
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 21 May 2023",
+    "draft": true
+  },
+  {
+    "id": "expert-alpha-lo",
+    "name": "Dr Alpha Lo",
+    "name_zh": "",
+    "organisation": "Climate Water Project",
+    "role": "Lead",
+    "country": "United States",
+    "city": "Northern California",
+    "lat": 38.58,
+    "lng": -121.49,
+    "disciplines": [
+      "Water cycle restoration"
+    ],
+    "sectors": [
+      "Community choices"
+    ],
+    "solutions": [
+      "Agriculture"
+    ],
+    "bio_en": "Leads the Climate Water Project, which published a research programme for water cycle restoration that bridges field practice and scientific inquiry.",
+    "bio_zh": "主持气候水项目，发布连接田野实践与科学研究的水循环修复研究计划。",
+    "link": "",
+    "consent": "pending",
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 11 December 2025",
+    "draft": true
+  },
+  {
+    "id": "expert-nina-moeller",
+    "name": "Nina Isabella Moeller",
+    "name_zh": "",
+    "organisation": "Agroecology Partnership",
+    "role": "Lead, UNMEASURED",
+    "country": "International",
+    "city": "",
+    "lat": null,
+    "lng": null,
+    "disciplines": [
+      "Agroecology",
+      "Indicators"
+    ],
+    "sectors": [
+      "Community choices"
+    ],
+    "solutions": [
+      "Agriculture"
+    ],
+    "bio_en": "Leads UNMEASURED, a project developing qualitative indicators for agroecology such as social cohesion, cultural resilience and care relations.",
+    "bio_zh": "主持 UNMEASURED 项目，为生态农业开发社会凝聚力、文化韧性与照护关系等定性指标。",
+    "link": "",
+    "consent": "pending",
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 29 May 2026",
+    "draft": true
+  }
+]

@@ -1,0 +1,218 @@
+[
+  {
+    "id": "2027-04-01-aral-school-milan",
+    "title_en": "Aral School first cohort exhibition, Milan",
+    "title_zh": "咸海学校首批成果展（米兰）",
+    "type": "exhibition",
+    "start_date": "2027-04-01",
+    "end_date": "2027-04-30",
+    "mode": "in person",
+    "place": {
+      "country": "Italy",
+      "region": "Lombardy",
+      "city": "Milan",
+      "lat": 45.464,
+      "lng": 9.19,
+      "venue": ""
+    },
+    "organiser": "Aral School",
+    "sectors": [
+      "Community choices"
+    ],
+    "solutions": [
+      "Agriculture"
+    ],
+    "dsf_production": "local",
+    "dsf_consumption": "collective",
+    "audience": "Practitioners, researchers, students, policy makers",
+    "cost": "free",
+    "registration_url": "",
+    "source_url": "https://www.instagram.com/p/DIJnt96oJjU/",
+    "status": "upcoming",
+    "date_confirmed": false,
+    "related_signals": [
+      "2026-07-06-aral-school-first-cohort-results"
+    ],
+    "related_stories": [
+      "2026-07-aral-school-first-cohort"
+    ],
+    "speakers": [
+      "expert-jan-boelen"
+    ],
+    "outcome_notes": "",
+    "contributed_by": "John Thackara",
+    "submission_id": "",
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 6 July 2026",
+    "draft": true
+  },
+  {
+    "id": "2026-09-01-aral-school-tashkent",
+    "title_en": "Aral School first cohort presentation, Tashkent",
+    "title_zh": "咸海学校首批成果发布（塔什干）",
+    "type": "exhibition",
+    "start_date": "2026-09-01",
+    "end_date": "2026-09-30",
+    "mode": "in person",
+    "place": {
+      "country": "Uzbekistan",
+      "region": "Tashkent",
+      "city": "Tashkent",
+      "lat": 41.311,
+      "lng": 69.279,
+      "venue": ""
+    },
+    "organiser": "Aral School",
+    "sectors": [
+      "Community choices"
+    ],
+    "solutions": [
+      "Agriculture"
+    ],
+    "dsf_production": "local",
+    "dsf_consumption": "collective",
+    "audience": "Practitioners, researchers, students, policy makers",
+    "cost": "free",
+    "registration_url": "",
+    "source_url": "https://www.instagram.com/p/DIJnt96oJjU/",
+    "status": "past",
+    "date_confirmed": false,
+    "related_signals": [
+      "2026-07-06-aral-school-first-cohort-results"
+    ],
+    "related_stories": [
+      "2026-07-aral-school-first-cohort"
+    ],
+    "speakers": [
+      "expert-jan-boelen"
+    ],
+    "outcome_notes": "",
+    "contributed_by": "John Thackara",
+    "submission_id": "",
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 6 July 2026",
+    "draft": true
+  },
+  {
+    "id": "2026-03-21-chedun-town-workshop",
+    "title_en": "Chedun Town Workshop",
+    "title_zh": "车墩镇工作坊",
+    "type": "network event",
+    "start_date": "2026-03-21",
+    "end_date": "2026-03-21",
+    "mode": "in person",
+    "place": {
+      "country": "China",
+      "region": "Shanghai, Songjiang District",
+      "city": "Chedun Town",
+      "lat": 31.02,
+      "lng": 121.27,
+      "venue": ""
+    },
+    "organiser": "Design Harvests 3.0, SUES",
+    "sectors": [
+      "Community choices"
+    ],
+    "solutions": [
+      "Agriculture"
+    ],
+    "dsf_production": "local",
+    "dsf_consumption": "collective",
+    "audience": "Practitioners, researchers, students, policy makers",
+    "cost": "invitation",
+    "registration_url": "",
+    "source_url": "",
+    "status": "past",
+    "date_confirmed": true,
+    "related_signals": [],
+    "related_stories": [
+      "2026-03-chedun-town-design-harvests"
+    ],
+    "speakers": [
+      "expert-john-thackara"
+    ],
+    "outcome_notes": "Set two next actions: the Design Harvests Hub and a semi-nomadic festival.",
+    "contributed_by": "John Thackara",
+    "submission_id": "",
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 22 March 2026",
+    "draft": true
+  },
+  {
+    "id": "2025-09-30-chedun-town-workshop",
+    "title_en": "Design Harvests workshop on urban-rural jobs, Chedun Town",
+    "title_zh": "设计丰收城乡新职业工作坊（车墩镇）",
+    "type": "network event",
+    "start_date": "2025-09-30",
+    "end_date": "2025-09-30",
+    "mode": "in person",
+    "place": {
+      "country": "China",
+      "region": "Shanghai, Songjiang District",
+      "city": "Chedun Town",
+      "lat": 31.02,
+      "lng": 121.27,
+      "venue": ""
+    },
+    "organiser": "Design Harvests 3.0",
+    "sectors": [
+      "Community choices"
+    ],
+    "solutions": [
+      "Agriculture"
+    ],
+    "dsf_production": "local",
+    "dsf_consumption": "collective",
+    "audience": "Practitioners, researchers, students, policy makers",
+    "cost": "invitation",
+    "registration_url": "",
+    "source_url": "",
+    "status": "past",
+    "date_confirmed": true,
+    "related_signals": [],
+    "related_stories": [],
+    "speakers": [
+      "expert-john-thackara"
+    ],
+    "outcome_notes": "Ten real-world case studies of new urban-rural jobs presented to business representatives.",
+    "contributed_by": "John Thackara",
+    "submission_id": "",
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 29 September 2025",
+    "draft": true
+  },
+  {
+    "id": "2025-08-28-yale-ecological-civilization-seminar",
+    "title_en": "Why Ecological Civilization, and Why Now?",
+    "title_zh": "为何是生态文明，为何是现在？",
+    "type": "webinar",
+    "start_date": "2025-08-28",
+    "end_date": "2025-08-28",
+    "mode": "online",
+    "place": {
+      "country": "",
+      "region": "",
+      "city": "",
+      "venue": "Online"
+    },
+    "organiser": "Yale Forum on Religion and Ecology",
+    "sectors": [
+      "Community choices"
+    ],
+    "solutions": [
+      "Agriculture"
+    ],
+    "dsf_production": "local",
+    "dsf_consumption": "collective",
+    "audience": "Practitioners, researchers, students, policy makers",
+    "cost": "free",
+    "registration_url": "https://mailchi.mp/yale/eco-civ-aug-28",
+    "source_url": "https://mailchi.mp/yale/eco-civ-aug-28",
+    "status": "past",
+    "date_confirmed": true,
+    "related_signals": [],
+    "related_stories": [],
+    "speakers": [],
+    "outcome_notes": "",
+    "contributed_by": "John Thackara",
+    "submission_id": "",
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 21 August 2025",
+    "draft": true
+  }
+]

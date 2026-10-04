@@ -1,0 +1,92 @@
+[
+  {
+    "submission_id": "seed-open-school-village-hosts",
+    "form": "signal",
+    "state": "Suggested",
+    "submitted_at": "2026-10-04T00:00:00Z",
+    "contributed_by": "John Thackara",
+    "data": {
+      "title_en": "Erasmus+ Open School for Village Hosts trains rural place-makers in five countries",
+      "sector": "Community choices",
+      "solution": "Construction",
+      "dsf_production": "local",
+      "dsf_consumption": "collective",
+      "signal": "Casa Netural leads an EU Erasmus+ Open School for Village Hosts with an initial grant of 400,000 euros and partners in France, Poland, Latvia, Serbia and Italy. Projects include a Village of Water Wheels in Serbia, a River Keeper Alliance in Portugal and Biodiversity Learning Walks in Latvia.",
+      "country": "Italy",
+      "source_url": "",
+      "note": "Needs a public source URL. John Thackara, email to Prof Lou Yongqi and Design Harvests, 21 May 2023 and 2022"
+    }
+  },
+  {
+    "submission_id": "seed-climate-water-project",
+    "form": "signal",
+    "state": "Suggested",
+    "submitted_at": "2026-10-04T00:00:00Z",
+    "contributed_by": "John Thackara",
+    "data": {
+      "title_en": "Climate Water Project sets out a research programme for water cycle restoration",
+      "sector": "Community choices",
+      "solution": "Agriculture",
+      "dsf_production": "local",
+      "dsf_consumption": "collective",
+      "signal": "Dr Alpha Lo's Climate Water Project published a research programme on slowing water to recharge land, groundwater as a defence against wildfire, regenerative agriculture and aquifer health, precipitation recycling and groundwater biodiversity.",
+      "country": "United States",
+      "source_url": "",
+      "note": "Needs a public source URL. John Thackara, email to Prof Lou Yongqi and Design Harvests, 11 December 2025"
+    }
+  },
+  {
+    "submission_id": "seed-rural-lab-altyre",
+    "form": "signal",
+    "state": "Suggested",
+    "submitted_at": "2026-10-04T00:00:00Z",
+    "contributed_by": "John Thackara",
+    "data": {
+      "title_en": "Glasgow School of Art develops a Rural Lab on the Altyre Estate",
+      "sector": "Community choices",
+      "solution": "Agriculture",
+      "dsf_production": "local",
+      "dsf_consumption": "collective",
+      "signal": "Glasgow School of Art plans a Rural Lab on the 800-year-old Altyre Estate in the Scottish Highlands, with ideas for an ecological field station, a living classroom, an edible forest garden and a forest school. Design Harvests 3.0 could partner on ecological field stations.",
+      "country": "United Kingdom",
+      "source_url": "",
+      "note": "Needs a public source URL. John Thackara, email to Prof Lou Yongqi and Design Harvests, 29 May 2026 and 26 April 2024"
+    }
+  },
+  {
+    "submission_id": "seed-agroecology-appropriate-tech",
+    "form": "signal",
+    "state": "Suggested",
+    "submitted_at": "2026-10-04T00:00:00Z",
+    "contributed_by": "John Thackara",
+    "data": {
+      "title_en": "Report calls for protocols to identify agroecologically appropriate technology",
+      "sector": "Community choices",
+      "solution": "Agriculture",
+      "dsf_production": "local",
+      "dsf_consumption": "collective",
+      "signal": "A report advocates a transparent framework and protocols for identifying agroecologically appropriate technology, as AgTech markets grow with little input from small agroecological farmers.",
+      "country": "International",
+      "source_url": "",
+      "note": "Needs the report title and URL. John Thackara, email to Prof Lou Yongqi and Design Harvests, 5 June 2025"
+    }
+  },
+  {
+    "submission_id": "seed-bunloit-natural-capital",
+    "form": "signal",
+    "state": "Suggested",
+    "submitted_at": "2026-10-04T00:00:00Z",
+    "contributed_by": "John Thackara",
+    "data": {
+      "title_en": "Scottish estate measures carbon and biodiversity with eDNA, drones and laser scanning",
+      "sector": "Community choices",
+      "solution": "Agriculture",
+      "dsf_production": "local",
+      "dsf_consumption": "collective",
+      "signal": "The Bunloit project in Scotland quantifies carbon and biodiversity at a granular level using eDNA, camera traps, drones, terrestrial laser scanning and manual surveys.",
+      "country": "United Kingdom",
+      "source_url": "https://static1.squarespace.com/static/621f9623d02fad4ef3e6b253/t/6234bdf20b6ee979d6ad6ca0/1647623770984/Bunloit+Natural+Capital+Report+2021.pdf",
+      "note": "Needs a date. John Thackara, email to Prof Lou Yongqi and Design Harvests, 2022"
+    }
+  }
+]

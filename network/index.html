@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SUES Design Network</title>
+<meta name="description" content="Verified signals of sustainable practice, stories of impact and innovation opportunities, mapped on the Designing Sustainable Futures matrix.">
+<link rel="canonical" href="https://www.sues.design/network/">
+<meta property="og:title" content="SUES Design Network">
+<meta property="og:description" content="Find, verify and connect sustainable solutions that already exist.">
+<meta property="og:url" content="https://www.sues.design/network/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f6f5c'/%3E%3Ccircle cx='11' cy='11' r='3' fill='%23fff'/%3E%3Ccircle cx='22' cy='22' r='3.5' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body data-root="./" data-page="home">
+<main class="wrap">
+  <div id="notice"></div>
+
+  <section class="hero">
+    <div>
+      <div class="kicker"><span data-lang="en">Sustainable solutions that already exist</span><span data-lang="zh">已经存在的可持续方案</span></div>
+      <h1><span data-lang="en">Find, verify and connect the practices building sustainable futures</span><span data-lang="zh">发现、核实并连接正在构建可持续未来的实践</span></h1>
+      <p class="lede"><span data-lang="en">SUES Design Network scans sources every day, publishes verified signals of sustainable practice, documents stories of impact, and matches people who have a need with people who hold a solution. Every entry sits on one shared map, the Designing Sustainable Futures matrix.</span><span data-lang="zh">SUES 设计网络每天扫描信息来源，发布经核实的可持续实践信号，记录影响力案例，并将有需求的人与拥有方案的人对接。每条记录都标注在同一张地图上，即“设计可持续未来”矩阵。</span></p>
+      <p style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn" href="signals/"><span data-lang="en">Explore signals</span><span data-lang="zh">浏览信号</span></a>
+        <a class="btn ghost" href="opportunities/"><span data-lang="en">Post a need</span><span data-lang="zh">发布需求</span></a>
+      </p>
+    </div>
+    <div class="card signal-hero" id="hero-signal"><div class="muted small">&nbsp;</div></div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2><span data-lang="en">The DSF map</span><span data-lang="zh">DSF 地图</span></h2>
+      <a href="signals/?view=cloud"><span data-lang="en">Open the signal cloud</span><span data-lang="zh">打开信号云</span></a>
+    </div>
+    <p class="muted"><span data-lang="en">Where is the value made, and who uses it? Counts show all published signals. Select a zone to filter the feed.</span><span data-lang="zh">价值在哪里产生，由谁使用？数字为全部已发布信号的数量。选择一个区域可筛选信号流。</span></p>
+    <div class="dsf" id="dsf-map" aria-label="DSF matrix"></div>
+    <p class="small muted" id="zone-note"></p>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2><span data-lang="en">Latest stories of impact</span><span data-lang="zh">最新影响力案例</span></h2>
+      <a href="stories/"><span data-lang="en">All stories</span><span data-lang="zh">全部案例</span></a>
+    </div>
+    <div class="cards" id="latest-stories"></div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2><span data-lang="en">Open opportunities</span><span data-lang="zh">开放的机会</span></h2>
+      <a href="opportunities/"><span data-lang="en">All opportunities</span><span data-lang="zh">全部机会</span></a>
+    </div>
+    <div class="cards" id="open-opps"></div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2><span data-lang="en">Next 30 days</span><span data-lang="zh">未来 30 天</span></h2>
+      <a href="events/"><span data-lang="en">Events calendar</span><span data-lang="zh">活动日历</span></a>
+    </div>
+    <div class="cards" id="next-events"></div>
+  </section>
+</main>
+<script src="assets/config.js"></script>
+<script src="assets/site.js"></script>
+<script src="assets/js/cards.js"></script>
+<script src="assets/js/home.js"></script>
+</body>
+</html>

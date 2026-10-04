@@ -1,0 +1,924 @@
+[
+  {
+    "id": "2026-07-16-centre-land-food-medicine-dublin",
+    "date": "2026-07-16",
+    "day_number": 19,
+    "sector": "Community choices",
+    "solution": "Agriculture",
+    "dsf_production": "local",
+    "dsf_consumption": "collective",
+    "dsf_secondary_zone": "",
+    "signal_strength": "emerging",
+    "impact_score": 3,
+    "title_en": "Trinity College Dublin opens a Centre for Land, Food and Medicine",
+    "title_zh": "都柏林圣三一学院成立土地、食物与医学中心",
+    "place": {
+      "country": "Ireland",
+      "region": "Leinster",
+      "city": "Dublin",
+      "lat": 53.344,
+      "lng": -6.254
+    },
+    "practitioners": [
+      "Centre for Land, Food and Medicine, Trinity College Dublin",
+      "Deep Medicine Circle",
+      "Dr Rupa Marya"
+    ],
+    "source_url": "https://www.deepmedicinecircle.org/",
+    "source_name": "Deep Medicine Circle",
+    "tags": [
+      "farming as medicine",
+      "health",
+      "food systems"
+    ],
+    "related_signals": [],
+    "related_stories": [],
+    "related_opportunities": [],
+    "content_type": "daily",
+    "body": {
+      "signal": "A Centre for Land, Food and Medicine has started at Trinity College Dublin to address root causes of illness through land and food. Its motto is \"When we heal the land we heal the people\". Dr Rupa Marya, founder of Deep Medicine Circle in California, moved to Dublin to start it, and Colin P Doherty, Head of the School of Medicine at Trinity, is a co-founder.",
+      "why_it_works": "The centre sits inside a medical school, so work on land and food can connect to clinical teaching and research. Participants include chefs, farmers, doctors, nurses, therapists, food policy workers, historians, artists and climate scientists.",
+      "transferability": "Universities with both a medical faculty and access to farmland could test joint courses. Dr Marya is reported to be open to joint courses or projects with Design Harvests. Outcomes are not yet reported.",
+      "next_step": "Identify one clinician and one farmer near your campus who could co-teach a session on food and health.",
+      "related_notes": "Single source. The editor has not yet opened the source link."
+    },
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 16 July 2026",
+    "verification": "pending",
+    "contributed_by": "John Thackara",
+    "submission_id": "",
+    "draft": true
+  },
+  {
+    "id": "2026-07-06-aral-school-first-cohort-results",
+    "date": "2026-07-06",
+    "day_number": 18,
+    "sector": "Community choices",
+    "solution": "Agriculture",
+    "dsf_production": "local",
+    "dsf_consumption": "collective",
+    "dsf_secondary_zone": "",
+    "signal_strength": "weak",
+    "impact_score": 3,
+    "title_en": "Aral School fellows share first projects for a post-irrigation economy",
+    "title_zh": "咸海学校首批学员发布后灌溉经济项目",
+    "place": {
+      "country": "Uzbekistan",
+      "region": "Karakalpakstan",
+      "city": "Nukus",
+      "lat": 42.46,
+      "lng": 59.603
+    },
+    "practitioners": [
+      "Aral School",
+      "Jan Boelen, programme director"
+    ],
+    "source_url": "https://www.instagram.com/p/DIJnt96oJjU/",
+    "source_name": "Aral School announcement",
+    "tags": [
+      "bioregioning",
+      "water",
+      "Aral Sea",
+      "soil"
+    ],
+    "related_signals": [],
+    "related_stories": [
+      "2026-07-aral-school-first-cohort"
+    ],
+    "related_opportunities": [
+      "2026-05-ex-mining-learning-centres"
+    ],
+    "content_type": "daily",
+    "body": {
+      "signal": "The Aral School in Nukus shared the first results of its 22-fellow cohort with local publics in Karakalpakstan. Projects include edible fruit canopies for public streets, a vermicompost system for soil health, unglazed clay pot irrigation, local melon varieties grafted onto wild camelthorn roots, cotton husk waste used for mushroom farming, plant-based sun-dried bricks, and a public drinking fountain as an alternative to bottled water.",
+      "why_it_works": "The school is supported by the national government and does not rely on private sector partners. Projects draw on local materials and knowledge, such as traditional water tools and local melon varieties.",
+      "transferability": "John Thackara reads the results as descriptions of future project work, which later cohorts will build on, not finished solutions. Other drylands and post-irrigation regions could adapt the cohort model. Results go on show in Tashkent in September 2026 and in Milan in April 2027.",
+      "next_step": "List the local materials and crop varieties in your region that no design studio has yet worked with.",
+      "related_notes": "Single source. The editor has not yet opened the source link."
+    },
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 6 July 2026 and 12 February 2026",
+    "verification": "pending",
+    "contributed_by": "John Thackara",
+    "submission_id": "",
+    "draft": true
+  },
+  {
+    "id": "2026-05-29-yunhe-forest-school-eleven-years",
+    "date": "2026-05-29",
+    "day_number": 17,
+    "sector": "Community choices",
+    "solution": "Agriculture",
+    "dsf_production": "local",
+    "dsf_consumption": "collective",
+    "dsf_secondary_zone": "",
+    "signal_strength": "emerging",
+    "impact_score": 3,
+    "title_en": "Yunhe Forest School marks eleven years of place-based ecological learning",
+    "title_zh": "云和森林学校十一年坚持在地生态教育",
+    "place": {
+      "country": "China",
+      "region": "Sichuan, Ganzi Tibetan Autonomous Prefecture",
+      "city": "Zhonglu village",
+      "lat": 30.87,
+      "lng": 101.88
+    },
+    "practitioners": [
+      "Yunhe Forest School",
+      "Suchin Shu"
+    ],
+    "source_url": "https://www.linkedin.com/posts/thackara_so-you-want-to-start-an-ecological-learningshare-7464551235535323136-xdlQ/",
+    "source_name": "John Thackara, LinkedIn interview post",
+    "tags": [
+      "ecological education",
+      "Two Mountains Theory",
+      "ex-mining area"
+    ],
+    "related_signals": [],
+    "related_stories": [
+      "2026-05-yunhe-forest-school"
+    ],
+    "related_opportunities": [
+      "2026-05-ex-mining-learning-centres"
+    ],
+    "content_type": "daily",
+    "body": {
+      "signal": "Yunhe Forest School in Zhonglu village, Ganzi Tibetan Autonomous Prefecture, has run project-based ecological learning for eleven years. Its head, Suchin Shu, describes a curriculum that combines Buddhism and ecological restoration, with the mountains and local people as the main teachers. The school cites President Xi Jinping's Two Mountains Theory as its social and ecological framework.",
+      "why_it_works": "In Suchin Shu's account, eleven years of local relationships are the key success factor. She estimates that ten percent of China's parents seek nature connection for their children, which is her own figure.",
+      "transferability": "The school sits in a former mining area, so the model may suit other ex-mining areas, including those along Belt and Road geographies. The school has asked for volunteers to help communicate its work internationally.",
+      "next_step": "Ask which former mining sites in your region have land and local partners for an ecological learning centre.",
+      "related_notes": "Single source. The editor has not yet opened the source link."
+    },
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 29 May 2026",
+    "verification": "pending",
+    "contributed_by": "John Thackara",
+    "submission_id": "",
+    "draft": true
+  },
+  {
+    "id": "2026-05-29-unmeasured-agroecology-indicators",
+    "date": "2026-05-29",
+    "day_number": 16,
+    "sector": "Community choices",
+    "solution": "Agriculture",
+    "dsf_production": "global",
+    "dsf_consumption": "collective",
+    "dsf_secondary_zone": "",
+    "signal_strength": "weak",
+    "impact_score": 3,
+    "title_en": "UNMEASURED project builds qualitative indicators for agroecology",
+    "title_zh": "UNMEASURED 项目为生态农业构建定性指标",
+    "place": {
+      "country": "International",
+      "region": "",
+      "city": "",
+      "lat": null,
+      "lng": null
+    },
+    "practitioners": [
+      "Nina Isabella Moeller",
+      "Agroecology Partnership"
+    ],
+    "source_url": "https://lnkd.in/gBiyYgrr",
+    "source_name": "Agroecology Partnership announcement",
+    "tags": [
+      "agroecology",
+      "indicators",
+      "social cohesion"
+    ],
+    "related_signals": [],
+    "related_stories": [],
+    "related_opportunities": [],
+    "content_type": "daily",
+    "body": {
+      "signal": "A new project called UNMEASURED, led by Nina Isabella Moeller and supported by the Agroecology Partnership, will develop qualitative indicators for dimensions of agroecology that resist standardisation. These include social cohesion, such as trust networks and mutual aid, cultural resilience, care relations and knowledge sovereignty.",
+      "why_it_works": "Funders and policy makers act on indicators. Qualitative indicators make visible the benefits that yield and carbon figures leave out.",
+      "transferability": "The method could inform how stories on this site report social results. Methods and pilot results are not yet published.",
+      "next_step": "List the social outcomes your project produces that no current metric captures.",
+      "related_notes": "Single source. The editor has not yet opened the source link."
+    },
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 29 May 2026",
+    "verification": "pending",
+    "contributed_by": "John Thackara",
+    "submission_id": "",
+    "draft": true
+  },
+  {
+    "id": "2026-05-29-fifth-ecology-parkwood-springs",
+    "date": "2026-05-29",
+    "day_number": 15,
+    "sector": "Community choices",
+    "solution": "Construction",
+    "dsf_production": "local",
+    "dsf_consumption": "collective",
+    "dsf_secondary_zone": "",
+    "signal_strength": "weak",
+    "impact_score": 2,
+    "title_en": "Award-winning Fifth Ecology project treats post-industrial land as fertile ground",
+    "title_zh": "获奖项目“第五生态”将后工业用地视为再生沃土",
+    "place": {
+      "country": "United Kingdom",
+      "region": "England",
+      "city": "Sheffield",
+      "lat": 53.396,
+      "lng": -1.481
+    },
+    "practitioners": [
+      "Baoyi Huang"
+    ],
+    "source_url": "https://bltawards.com/winner/blt/2025/22312/0/",
+    "source_name": "BLT Built Design Awards, 2025",
+    "tags": [
+      "post-industrial land",
+      "living laboratory",
+      "renewal"
+    ],
+    "related_signals": [],
+    "related_stories": [],
+    "related_opportunities": [
+      "2026-05-ex-mining-learning-centres"
+    ],
+    "content_type": "daily",
+    "body": {
+      "signal": "Baoyi Huang's project, an award winner in Milan with John Thackara and Lou Yongqi on the jury, frames the Parkwood Springs site through a \"Fifth Ecology\". In this frame, post-industrial land is fertile ground for renewal. The project proposes the site as a living laboratory of industrial renewal.",
+      "why_it_works": "Former industrial land is often close to cities and available. Treating it as a learning site creates value before full restoration is complete.",
+      "transferability": "Relevant to ex-mining and ex-industrial areas in China and elsewhere. An award concept does not yet show delivery, so the entry is rated Early.",
+      "next_step": "Map the post-industrial sites within an hour of your institution and note who owns them.",
+      "related_notes": "Single source. The editor has not yet opened the source link."
+    },
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 29 May 2026",
+    "verification": "pending",
+    "contributed_by": "John Thackara",
+    "submission_id": "",
+    "draft": true
+  },
+  {
+    "id": "2026-05-03-urban-agriculture-europe-vegetables",
+    "date": "2026-05-03",
+    "day_number": 14,
+    "sector": "Conscious consumption",
+    "solution": "Agriculture",
+    "dsf_production": "local",
+    "dsf_consumption": "collective",
+    "dsf_secondary_zone": "",
+    "signal_strength": "weak",
+    "impact_score": 3,
+    "title_en": "Study finds urban agriculture could meet 28 percent of European vegetable demand",
+    "title_zh": "研究显示城市农业可满足欧洲 28% 的蔬菜需求",
+    "place": {
+      "country": "Germany",
+      "region": "Saxony",
+      "city": "Dresden",
+      "lat": 51.05,
+      "lng": 13.738
+    },
+    "practitioners": [
+      "Leibniz Institute of Ecological Urban and Regional Development (IOER)"
+    ],
+    "source_url": "https://www.linkedin.com/posts/ioer-urbanagriculture-livablefuture-share-7454919468138307584-VHnL",
+    "source_name": "IOER announcement",
+    "tags": [
+      "urban agriculture",
+      "food security",
+      "cities"
+    ],
+    "related_signals": [],
+    "related_stories": [],
+    "related_opportunities": [],
+    "content_type": "daily",
+    "body": {
+      "signal": "Researchers modelled the potential of urban agriculture in 840 cities across 30 European countries. They report that urban agriculture could produce up to 20 million tonnes of vegetables a year, about 28 percent of Europe's vegetable demand and roughly one third of current regional production.",
+      "why_it_works": "Cities hold roofs, yards and vacant plots close to consumers. A continental estimate gives planners a reason to protect growing space.",
+      "transferability": "John Thackara suggests the figures for Chinese cities could be similar, which has not been tested. The figure is a modelled potential, not current output.",
+      "next_step": "Ask your city planning office whether growing space appears in its land-use plan.",
+      "related_notes": "Single source. The editor has not yet opened the source link."
+    },
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 3 May 2026",
+    "verification": "pending",
+    "contributed_by": "John Thackara",
+    "submission_id": "",
+    "draft": true
+  },
+  {
+    "id": "2026-04-04-kabadiwalla-connect-informal-waste",
+    "date": "2026-04-04",
+    "day_number": 13,
+    "sector": "Circular manufacturing",
+    "solution": "Production",
+    "dsf_production": "local",
+    "dsf_consumption": "collective",
+    "dsf_secondary_zone": "",
+    "signal_strength": "emerging",
+    "impact_score": 3,
+    "title_en": "Kabadiwalla Connect links informal waste systems in India",
+    "title_zh": "Kabadiwalla Connect 连接印度非正规废弃物回收体系",
+    "place": {
+      "country": "India",
+      "region": "Tamil Nadu",
+      "city": "Chennai",
+      "lat": 13.083,
+      "lng": 80.271
+    },
+    "practitioners": [
+      "Kabadiwalla Connect"
+    ],
+    "source_url": "https://www.kabadiwallaconnect.in/",
+    "source_name": "Kabadiwalla Connect",
+    "tags": [
+      "informal waste",
+      "recycling",
+      "social-ecological systems"
+    ],
+    "related_signals": [],
+    "related_stories": [],
+    "related_opportunities": [],
+    "content_type": "daily",
+    "body": {
+      "signal": "Kabadiwalla Connect works with grassroots and informal waste systems in India. The Design Harvests 3.0 Ten Ideas note proposes a joint pop-up on which informal waste systems work, how they were designed, and how design can connect the actors involved.",
+      "why_it_works": "Informal collectors already move large volumes of material. Connecting them to formal systems builds on what works instead of replacing it.",
+      "transferability": "Chinese cities with informal recyclers could test similar links. The editor should add figures from the organisation's own pages after opening them.",
+      "next_step": "Find out who collects recyclable material informally in your neighbourhood.",
+      "related_notes": "Single source. The editor has not yet opened the source link."
+    },
+    "provenance": "John Thackara, Design Harvests 3.0 Ten Ideas note, 4 April 2026",
+    "verification": "pending",
+    "contributed_by": "John Thackara",
+    "submission_id": "",
+    "draft": true
+  },
+  {
+    "id": "2026-04-04-green-river-protection-station",
+    "date": "2026-04-04",
+    "day_number": 12,
+    "sector": "Community choices",
+    "solution": "Agriculture",
+    "dsf_production": "local",
+    "dsf_consumption": "collective",
+    "dsf_secondary_zone": "",
+    "signal_strength": "emerging",
+    "impact_score": 2,
+    "title_en": "Green River protection station offers a model for grassroots river care",
+    "title_zh": "绿色江河保护站为基层河流保护提供样板",
+    "place": {
+      "country": "China",
+      "region": "Qinghai",
+      "city": "",
+      "lat": 34.2,
+      "lng": 92.4
+    },
+    "practitioners": [
+      "Green River (NGO)"
+    ],
+    "source_url": "https://chinadevelopmentbrief.org/ngos/green-river/",
+    "source_name": "China Development Brief",
+    "tags": [
+      "river protection",
+      "NGO",
+      "ecological restoration"
+    ],
+    "related_signals": [],
+    "related_stories": [],
+    "related_opportunities": [],
+    "content_type": "daily",
+    "body": {
+      "signal": "Green River, a Chinese environmental NGO, runs a river protection station. The Design Harvests 3.0 Ten Ideas note asks what activities happen there now, how they are enabled, and how design might amplify the work.",
+      "why_it_works": "A permanent station gives volunteers and researchers a base on site.",
+      "transferability": "The station's activities and results are not described in the note. The editor should add them after opening the source.",
+      "next_step": "Ask a river protection group near you what kind of support would help them most.",
+      "related_notes": "Single source. The editor has not yet opened the source link."
+    },
+    "provenance": "John Thackara, Design Harvests 3.0 Ten Ideas note, 4 April 2026",
+    "verification": "pending",
+    "contributed_by": "John Thackara",
+    "submission_id": "",
+    "draft": true
+  },
+  {
+    "id": "2025-11-10-india-edible-wetlands-report",
+    "date": "2025-11-10",
+    "day_number": 11,
+    "sector": "Community choices",
+    "solution": "Agriculture",
+    "dsf_production": "local",
+    "dsf_consumption": "collective",
+    "dsf_secondary_zone": "",
+    "signal_strength": "weak",
+    "impact_score": 2,
+    "title_en": "Indian report documents edible wetland plants disappearing from diets",
+    "title_zh": "印度报告记录湿地可食用植物正从饮食中消失",
+    "place": {
+      "country": "India",
+      "region": "Delhi",
+      "city": "New Delhi",
+      "lat": 28.614,
+      "lng": 77.209
+    },
+    "practitioners": [
+      "Centre for Science and Environment"
+    ],
+    "source_url": "https://www.cseindia.org/missing-from-the-plate-edible-plants-in-wetlands-lose-favour-12893",
+    "source_name": "Centre for Science and Environment",
+    "tags": [
+      "wetlands",
+      "food systems",
+      "rural economy"
+    ],
+    "related_signals": [],
+    "related_stories": [],
+    "related_opportunities": [
+      "2025-11-shanghai-wetlands-food"
+    ],
+    "content_type": "daily",
+    "body": {
+      "signal": "A 170-page report from India's Centre for Science and Environment documents the loss of wetland area and the decline of traditional edible water plants in diets.",
+      "why_it_works": "Wetland foods link three agendas that usually run apart: food systems, watershed recovery and rural income.",
+      "transferability": "China leads in wetland restoration, but John Thackara notes that the social-ecological dimension is often missing. Wetland projects in Shanghai could add food resilience as a design focus.",
+      "next_step": "Ask a wetland restoration team near you which edible plants grew on the site before.",
+      "related_notes": "Single source. The editor has not yet opened the source link."
+    },
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 10 November 2025",
+    "verification": "pending",
+    "contributed_by": "John Thackara",
+    "submission_id": "",
+    "draft": true
+  },
+  {
+    "id": "2025-10-29-tayside-bioregioning-gap-analysis",
+    "date": "2025-10-29",
+    "day_number": 10,
+    "sector": "Community choices",
+    "solution": "Agriculture",
+    "dsf_production": "local",
+    "dsf_consumption": "collective",
+    "dsf_secondary_zone": "",
+    "signal_strength": "weak",
+    "impact_score": 2,
+    "title_en": "Scottish catchment publishes gap analysis for landscape finance and governance",
+    "title_zh": "苏格兰流域发布景观融资与治理差距分析",
+    "place": {
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "city": "Blairgowrie",
+      "lat": 56.591,
+      "lng": -3.34
+    },
+    "practitioners": [
+      "Ericht Catchment",
+      "Bioregioning Tayside"
+    ],
+    "source_url": "https://erichtcatchment.scot/wp-content/uploads/2025/03/Stocktake-and-Gap-Analysis_summary-compressed.pdf",
+    "source_name": "Ericht Catchment, March 2025",
+    "tags": [
+      "bioregioning",
+      "catchment",
+      "green finance"
+    ],
+    "related_signals": [],
+    "related_stories": [],
+    "related_opportunities": [],
+    "content_type": "daily",
+    "body": {
+      "signal": "Bioregioning Tayside published a stocktake and gap analysis of landscape-scale finance and governance innovation in Scotland, focused on the Ericht catchment.",
+      "why_it_works": "A gap analysis gives funders and agencies a shared list of what is missing before they commit money.",
+      "transferability": "Catchment authorities elsewhere could use the same stocktake format. The analysis is a plan, not a delivered programme.",
+      "next_step": "Draft a one-page list of what your watershed or district lacks in finance and governance.",
+      "related_notes": "Single source. The editor has not yet opened the source link."
+    },
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 29 October 2025",
+    "verification": "pending",
+    "contributed_by": "John Thackara",
+    "submission_id": "",
+    "draft": true
+  },
+  {
+    "id": "2025-10-29-oogst-van-morgen-landscape-lab",
+    "date": "2025-10-29",
+    "day_number": 9,
+    "sector": "Community choices",
+    "solution": "Agriculture",
+    "dsf_production": "local",
+    "dsf_consumption": "collective",
+    "dsf_secondary_zone": "",
+    "signal_strength": "emerging",
+    "impact_score": 2,
+    "title_en": "Dutch Landscape Leadership Lab shifts government toward facilitating bottom-up change",
+    "title_zh": "荷兰景观领导力实验室推动政府转向支持自下而上的变革",
+    "place": {
+      "country": "Netherlands",
+      "region": "",
+      "city": "",
+      "lat": 52.13,
+      "lng": 5.29
+    },
+    "practitioners": [
+      "Oogst van Morgen (Harvest of Tomorrow)",
+      "Bioregional Weaving Labs Collective"
+    ],
+    "source_url": "https://www.linkedin.com/posts/bioregional-weaving-labs-collective_bioregionalweavingsystemicchange-communitygovernance-activity-7374435703583051776-43hv",
+    "source_name": "Bioregional Weaving Labs Collective",
+    "tags": [
+      "landscape governance",
+      "bioregioning",
+      "collaboration"
+    ],
+    "related_signals": [],
+    "related_stories": [],
+    "related_opportunities": [],
+    "content_type": "daily",
+    "body": {
+      "signal": "Oogst van Morgen, a two-year Landscape Leadership Lab in the Netherlands, tests how governments and regional stakeholders can shift from controlling processes to facilitating bottom-up transformation. It is part of a European movement experimenting with landscape-based collaboration.",
+      "why_it_works": "A fixed two-year format gives public officials time to practise a new role alongside farmers and residents.",
+      "transferability": "The lab format could suit Chinese townships working on rural revitalisation. Results of the first cycle are not yet reported.",
+      "next_step": "Name the one decision in your project that local stakeholders could take instead of the lead institution.",
+      "related_notes": "Single source. The editor has not yet opened the source link."
+    },
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 29 October 2025",
+    "verification": "pending",
+    "contributed_by": "John Thackara",
+    "submission_id": "",
+    "draft": true
+  },
+  {
+    "id": "2025-08-24-toronto-urban-ecological-design-lab",
+    "date": "2025-08-24",
+    "day_number": 8,
+    "sector": "Community choices",
+    "solution": "Construction",
+    "dsf_production": "local",
+    "dsf_consumption": "collective",
+    "dsf_secondary_zone": "",
+    "signal_strength": "weak",
+    "impact_score": 1,
+    "title_en": "Toronto opens an Urban Ecological Design Lab",
+    "title_zh": "多伦多成立城市生态设计实验室",
+    "place": {
+      "country": "Canada",
+      "region": "Ontario",
+      "city": "Toronto",
+      "lat": 43.653,
+      "lng": -79.383
+    },
+    "practitioners": [
+      "Urban Ecological Design Lab"
+    ],
+    "source_url": "https://ecologicaldesignlab.ca/",
+    "source_name": "Urban Ecological Design Lab",
+    "tags": [
+      "urban ecology",
+      "design lab"
+    ],
+    "related_signals": [],
+    "related_stories": [],
+    "related_opportunities": [],
+    "content_type": "daily",
+    "body": {
+      "signal": "Toronto has a new Urban Ecological Design Lab, one of several signals that the urban-rural and ecological design agenda is growing.",
+      "why_it_works": "A dedicated lab gives the city a place to test ecological design with residents and researchers.",
+      "transferability": "The lab's programme and partners are not described in the source. The editor should add detail after opening it.",
+      "next_step": "Find the nearest ecological design lab to your project and read its current programme.",
+      "related_notes": "Single source. The editor has not yet opened the source link."
+    },
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 24 August 2025",
+    "verification": "pending",
+    "contributed_by": "John Thackara",
+    "submission_id": "",
+    "draft": true
+  },
+  {
+    "id": "2025-08-24-regenerative-real-estate-journal",
+    "date": "2025-08-24",
+    "day_number": 7,
+    "sector": "Community choices",
+    "solution": "Construction",
+    "dsf_production": "global",
+    "dsf_consumption": "individual",
+    "dsf_secondary_zone": "",
+    "signal_strength": "weak",
+    "impact_score": 1,
+    "title_en": "Regenerative real estate gets its own journal in the United States",
+    "title_zh": "美国推出再生型房地产期刊",
+    "place": {
+      "country": "United States",
+      "region": "",
+      "city": "",
+      "lat": 39.83,
+      "lng": -98.58
+    },
+    "practitioners": [
+      "Latitude"
+    ],
+    "source_url": "https://chooselatitude.com/ecological-journal",
+    "source_name": "Latitude",
+    "tags": [
+      "regenerative real estate",
+      "land"
+    ],
+    "related_signals": [],
+    "related_stories": [],
+    "related_opportunities": [],
+    "content_type": "daily",
+    "body": {
+      "signal": "A journal of regenerative real estate has launched in the United States.",
+      "why_it_works": "A dedicated publication signals that property investors want a language for ecological value in land.",
+      "transferability": "Readership and influence are unknown. The entry records the launch only.",
+      "next_step": "Ask a property developer you work with how they would value restored land.",
+      "related_notes": "Single source. The editor has not yet opened the source link."
+    },
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 24 August 2025",
+    "verification": "pending",
+    "contributed_by": "John Thackara",
+    "submission_id": "",
+    "draft": true
+  },
+  {
+    "id": "2025-08-24-regenerative-farm-stays-travel",
+    "date": "2025-08-24",
+    "day_number": 6,
+    "sector": "Conscious consumption",
+    "solution": "Agriculture",
+    "dsf_production": "global",
+    "dsf_consumption": "individual",
+    "dsf_secondary_zone": "",
+    "signal_strength": "emerging",
+    "impact_score": 2,
+    "title_en": "Regenerative farm stays become a wellness travel trend",
+    "title_zh": "再生农场住宿成为健康旅行新趋势",
+    "place": {
+      "country": "International",
+      "region": "",
+      "city": "",
+      "lat": null,
+      "lng": null
+    },
+    "practitioners": [
+      "Vogue"
+    ],
+    "source_url": "https://www.vogue.com/article/agritourism-regenerative-farm-stays",
+    "source_name": "Vogue",
+    "tags": [
+      "agritourism",
+      "wellness tourism",
+      "regenerative farming"
+    ],
+    "related_signals": [],
+    "related_stories": [],
+    "related_opportunities": [
+      "2026-04-chedun-riverside-belt"
+    ],
+    "content_type": "daily",
+    "body": {
+      "signal": "Vogue reports that regenerative farm stays are the latest wellness travel trend.",
+      "why_it_works": "Wellness tourism is growing, and farm stays let visitors pay for experiences that also fund farm work.",
+      "transferability": "The Design Harvests 3.0 Ten Ideas note proposes next generation agritourism with Shanghai's BioFarm, designed so that the farmer and the farm benefit. Whether farm stays improve soil or farm income is not shown in the source.",
+      "next_step": "Ask a farm partner what share of visitor spending reaches the farm itself.",
+      "related_notes": "Single source. The editor has not yet opened the source link."
+    },
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 24 August 2025",
+    "verification": "pending",
+    "contributed_by": "John Thackara",
+    "submission_id": "",
+    "draft": true
+  },
+  {
+    "id": "2025-07-23-rurality-two-training-course",
+    "date": "2025-07-23",
+    "day_number": 5,
+    "sector": "Community choices",
+    "solution": "Construction",
+    "dsf_production": "local",
+    "dsf_consumption": "individual",
+    "dsf_secondary_zone": "",
+    "signal_strength": "weak",
+    "impact_score": 2,
+    "title_en": "French course trains city dwellers to set up rural eco-places",
+    "title_zh": "法国课程培训城市居民创建乡村生态社区",
+    "place": {
+      "country": "France",
+      "region": "",
+      "city": "",
+      "lat": 46.6,
+      "lng": 1.9
+    },
+    "practitioners": [
+      "Frédéric Bosqué"
+    ],
+    "source_url": "https://www.linkedin.com/pulse/comment-financer-son-%C3%A9colieu-en-transition-et-quitter-fr%C3%A9d%C3%A9ric-bosqu%C3%A9-bplhe/",
+    "source_name": "Frédéric Bosqué, LinkedIn article",
+    "tags": [
+      "Rurality 2.0",
+      "rural migration",
+      "ecolieu"
+    ],
+    "related_signals": [],
+    "related_stories": [],
+    "related_opportunities": [
+      "2026-04-urban-rural-worker-training"
+    ],
+    "content_type": "daily",
+    "body": {
+      "signal": "Frédéric Bosqué launched Rurality 2.0, a 12-week training course on how to finance an eco-place in transition and leave the city. John Thackara reports that 57 percent of city dwellers in France say they dream of leaving the city to live closer to nature.",
+      "why_it_works": "Many people have already moved on their own. A structured course helps them plan finance and community before they go.",
+      "transferability": "Comparable demand may exist among Chinese urban residents interested in rural revitalisation. The 57 percent figure is a survey of wishes, not of moves.",
+      "next_step": "Ask your rural partners what newcomers most often get wrong in their first year.",
+      "related_notes": "Single source. The editor has not yet opened the source link."
+    },
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 23 July 2025",
+    "verification": "pending",
+    "contributed_by": "John Thackara",
+    "submission_id": "",
+    "draft": true
+  },
+  {
+    "id": "2025-07-21-kentucky-urban-rural-exchange",
+    "date": "2025-07-21",
+    "day_number": 4,
+    "sector": "Community choices",
+    "solution": "Agriculture",
+    "dsf_production": "local",
+    "dsf_consumption": "collective",
+    "dsf_secondary_zone": "",
+    "signal_strength": "emerging",
+    "impact_score": 2,
+    "title_en": "Kentucky Urban-Rural Exchange marks ten years across 65 counties",
+    "title_zh": "肯塔基城乡交流项目十年覆盖 65 个县",
+    "place": {
+      "country": "United States",
+      "region": "Kentucky",
+      "city": "",
+      "lat": 37.84,
+      "lng": -84.27
+    },
+    "practitioners": [
+      "Kentucky Rural-Urban Exchange (RUX)"
+    ],
+    "source_url": "https://www.kyrux.org/",
+    "source_name": "Kentucky Rural-Urban Exchange",
+    "tags": [
+      "urban-rural",
+      "Appalachia",
+      "community exchange"
+    ],
+    "related_signals": [],
+    "related_stories": [
+      "2025-07-kentucky-rux"
+    ],
+    "related_opportunities": [
+      "2026-04-chedun-riverside-belt"
+    ],
+    "content_type": "daily",
+    "body": {
+      "signal": "The Kentucky Urban-Rural Exchange (RUX) is ten years old. Kentuckians from 65 counties have exchanged stories, meals, traditions and ideas, and an annual gathering brings together teachers, farmers, artists, attorneys, students, factory workers, nurses and community leaders.",
+      "why_it_works": "It works in Appalachia, an economically marginal region, through many small grassroots activities that John Thackara describes as \"a pebble in a pond making ripples of change\".",
+      "transferability": "Its focus on urban-rural exchange sets it apart from traditional regional development programmes, which makes it a reference for Design Harvests in China.",
+      "next_step": "Plan one shared meal that brings urban and rural participants of your project together.",
+      "related_notes": "Single source. The editor has not yet opened the source link."
+    },
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 21 July 2025",
+    "verification": "pending",
+    "contributed_by": "John Thackara",
+    "submission_id": "",
+    "draft": true
+  },
+  {
+    "id": "2023-09-02-anglesey-community-open-map",
+    "date": "2023-09-02",
+    "day_number": 3,
+    "sector": "Community choices",
+    "solution": "Construction",
+    "dsf_production": "local",
+    "dsf_consumption": "collective",
+    "dsf_secondary_zone": "",
+    "signal_strength": "emerging",
+    "impact_score": 3,
+    "title_en": "Cambridge team wins 4.6 million pounds to map Anglesey's eco-social assets",
+    "title_zh": "剑桥团队获 460 万英镑绘制安格尔西岛生态社会资产地图",
+    "place": {
+      "country": "United Kingdom",
+      "region": "Wales",
+      "city": "Isle of Anglesey",
+      "lat": 53.27,
+      "lng": -4.36
+    },
+    "practitioners": [
+      "University of Cambridge, Department of Architecture",
+      "Professor Flora Samuel"
+    ],
+    "source_url": "https://www.ukri.org/news/four-projects-to-design-the-uks-green-future/",
+    "source_name": "UK Research and Innovation",
+    "tags": [
+      "Green Transition Ecosystems",
+      "community mapping",
+      "social value"
+    ],
+    "related_signals": [],
+    "related_stories": [],
+    "related_opportunities": [],
+    "content_type": "daily",
+    "body": {
+      "signal": "A Cambridge-led team secured 4.6 million pounds through the Green Transition Ecosystems call, run by the Arts and Humanities Research Council with the Design Museum's Future Observatory, to build a community open map platform of eco-social assets for the Isle of Anglesey.",
+      "why_it_works": "Public research money funds a platform that residents can use, which links design research to local decisions.",
+      "transferability": "John Thackara notes a risk that a map is not the destination, and that a gap remains between policy maps and changemakers on the ground. Rural regions in China could adapt the mapping approach with a delivery plan attached.",
+      "next_step": "List the eco-social assets in your district that appear on no official map.",
+      "related_notes": "Single source. The editor has not yet opened the source link."
+    },
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 2 September 2023",
+    "verification": "pending",
+    "contributed_by": "John Thackara",
+    "submission_id": "",
+    "draft": true
+  },
+  {
+    "id": "2023-01-08-france-tiers-lieux-investment",
+    "date": "2023-01-08",
+    "day_number": 2,
+    "sector": "Community choices",
+    "solution": "Production",
+    "dsf_production": "local",
+    "dsf_consumption": "collective",
+    "dsf_secondary_zone": "",
+    "signal_strength": "strong",
+    "impact_score": 3,
+    "title_en": "France invests 130 million euros in urban-rural tiers-lieux",
+    "title_zh": "法国投入 1.3 亿欧元建设城乡“第三空间”",
+    "place": {
+      "country": "France",
+      "region": "Ile-de-France",
+      "city": "Paris",
+      "lat": 48.857,
+      "lng": 2.352
+    },
+    "practitioners": [
+      "Government of France"
+    ],
+    "source_url": "https://www.gouvernement.fr/actualite/l-etat-confirme-son-engagement-en-faveur-des-tiers-lieux",
+    "source_name": "Gouvernement de la France",
+    "tags": [
+      "tiers-lieux",
+      "makerspaces",
+      "adaptive reuse"
+    ],
+    "related_signals": [],
+    "related_stories": [],
+    "related_opportunities": [
+      "2026-04-chedun-riverside-belt"
+    ],
+    "content_type": "daily",
+    "body": {
+      "signal": "The French government announced an investment of 130 million euros in tiers-lieux, hybrid spaces that combine coworking, micro-fabrication, connected campuses, shared workshops, fablabs and makerspaces. Most are being established in old factories and other disused sites.",
+      "why_it_works": "An interministerial recovery programme funds the network, so local groups can open spaces without carrying the full capital cost.",
+      "transferability": "One group, Lustrac, estimates that 35 million French citizens want to leave big cities and that 20,000 small communes could welcome them, as its own figure. Chinese townships with disused industrial buildings could test similar hubs.",
+      "next_step": "List the disused buildings in your town that could host shared workshops.",
+      "related_notes": "Single source. The editor has not yet opened the source link."
+    },
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 8 January 2023",
+    "verification": "pending",
+    "contributed_by": "John Thackara",
+    "submission_id": "",
+    "draft": true
+  },
+  {
+    "id": "2022-03-28-microbiome-inspired-green-infrastructure",
+    "date": "2022-03-28",
+    "day_number": 1,
+    "sector": "Community choices",
+    "solution": "Construction",
+    "dsf_production": "local",
+    "dsf_consumption": "collective",
+    "dsf_secondary_zone": "",
+    "signal_strength": "weak",
+    "impact_score": 3,
+    "title_en": "Researcher publishes roadmap for microbiome-inspired green infrastructure",
+    "title_zh": "研究者发布受微生物组启发的绿色基础设施路线图",
+    "place": {
+      "country": "Australia",
+      "region": "South Australia",
+      "city": "Adelaide",
+      "lat": -34.929,
+      "lng": 138.601
+    },
+    "practitioners": [
+      "Dr Jake Robinson"
+    ],
+    "source_url": "https://www.jakemrobinson.com/blog/a-microbioscience-roadmap-to-urban-ecosystem-health",
+    "source_name": "Jake Robinson blog",
+    "tags": [
+      "microbiome",
+      "urban health",
+      "green infrastructure"
+    ],
+    "related_signals": [],
+    "related_stories": [],
+    "related_opportunities": [],
+    "content_type": "daily",
+    "body": {
+      "signal": "Jake Robinson published a roadmap for Microbiome Inspired Green Infrastructure (MIGI), which designs urban green space to support beneficial environmental microbes and human health.",
+      "why_it_works": "The approach links planting and surface design to measurable exposure to microbial diversity.",
+      "transferability": "John Thackara proposes a campus as a test site, generating data on links between microbial diversity exposure and health, and on the effect of design interventions. Health outcomes are still at research stage.",
+      "next_step": "Ask your campus estates team whether any planting plan considers soil and microbial diversity.",
+      "related_notes": "Single source. The editor has not yet opened the source link."
+    },
+    "provenance": "John Thackara, email to Prof Lou Yongqi and Design Harvests, 28 March 2022",
+    "verification": "pending",
+    "contributed_by": "John Thackara",
+    "submission_id": "",
+    "draft": true
+  }
+]

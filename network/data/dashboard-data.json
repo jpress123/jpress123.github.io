@@ -1,0 +1,302 @@
+{
+  "generated_at": "2026-10-04T03:12:29+00:00",
+  "as_of": "2026-10-04",
+  "example_records": 0,
+  "draft_records": 43,
+  "totals": {
+    "signals": 19,
+    "verified_signals": 0,
+    "stories": 4,
+    "experts": 10,
+    "opportunities": 5,
+    "matched": 4,
+    "events": 5,
+    "subscribers": null
+  },
+  "targets": {
+    "signals": 500,
+    "stories": 40,
+    "experts": 60,
+    "matched": 15,
+    "subscribers": 1000
+  },
+  "heat": {
+    "Renewable energy|Materials": {
+      "n": 0,
+      "mean_impact": 0
+    },
+    "Conscious consumption|Materials": {
+      "n": 0,
+      "mean_impact": 0
+    },
+    "Circular manufacturing|Materials": {
+      "n": 0,
+      "mean_impact": 0
+    },
+    "Community choices|Materials": {
+      "n": 0,
+      "mean_impact": 0
+    },
+    "Renewable energy|Production": {
+      "n": 0,
+      "mean_impact": 0
+    },
+    "Conscious consumption|Production": {
+      "n": 0,
+      "mean_impact": 0
+    },
+    "Circular manufacturing|Production": {
+      "n": 1,
+      "mean_impact": 3.0
+    },
+    "Community choices|Production": {
+      "n": 1,
+      "mean_impact": 3.0
+    },
+    "Renewable energy|Agriculture": {
+      "n": 0,
+      "mean_impact": 0
+    },
+    "Conscious consumption|Agriculture": {
+      "n": 2,
+      "mean_impact": 2.5
+    },
+    "Circular manufacturing|Agriculture": {
+      "n": 0,
+      "mean_impact": 0
+    },
+    "Community choices|Agriculture": {
+      "n": 9,
+      "mean_impact": 2.44
+    },
+    "Renewable energy|Construction": {
+      "n": 0,
+      "mean_impact": 0
+    },
+    "Conscious consumption|Construction": {
+      "n": 0,
+      "mean_impact": 0
+    },
+    "Circular manufacturing|Construction": {
+      "n": 0,
+      "mean_impact": 0
+    },
+    "Community choices|Construction": {
+      "n": 6,
+      "mean_impact": 2.0
+    }
+  },
+  "dsf": {
+    "last_90": {
+      "local-collective": 2,
+      "global-collective": 0,
+      "local-individual": 0,
+      "global-individual": 0
+    },
+    "all_time": {
+      "local-collective": 15,
+      "global-collective": 1,
+      "local-individual": 1,
+      "global-individual": 2
+    }
+  },
+  "strength_movement": {
+    "up": 0,
+    "down": 0,
+    "unchanged": 0,
+    "chains": []
+  },
+  "story_status": {
+    "Idea": 0,
+    "Pilot": 2,
+    "Operating": 2,
+    "Scaling": 0,
+    "Paused": 0,
+    "Closed": 0
+  },
+  "results": [
+    {
+      "unit": "fellows",
+      "total": 22.0,
+      "reported": 22.0,
+      "third_party": 0,
+      "items": [
+        {
+          "story_id": "2026-07-aral-school-first-cohort",
+          "title_en": "Aral School fellows prototype a post-irrigation economy",
+          "title_zh": "咸海学校学员探索后灌溉经济",
+          "label": "Fellows in the first cohort",
+          "value": 22.0,
+          "period": "2025 to 2026",
+          "verification": "reported"
+        }
+      ]
+    },
+    {
+      "unit": "projects",
+      "total": 15.0,
+      "reported": 15.0,
+      "third_party": 0,
+      "items": [
+        {
+          "story_id": "2026-07-aral-school-first-cohort",
+          "title_en": "Aral School fellows prototype a post-irrigation economy",
+          "title_zh": "咸海学校学员探索后灌溉经济",
+          "label": "Projects shared with local publics",
+          "value": 15.0,
+          "period": "2025 to 2026",
+          "verification": "reported"
+        }
+      ]
+    },
+    {
+      "unit": "conversations",
+      "total": 40.0,
+      "reported": 40.0,
+      "third_party": 0,
+      "items": [
+        {
+          "story_id": "2026-03-chedun-town-design-harvests",
+          "title_en": "Chedun Town workshop maps hopes for a riverside rural innovation belt",
+          "title_zh": "设计丰收车墩镇工作坊梳理乡村创新带的多方期待",
+          "label": "Conversations with stakeholders",
+          "value": 40.0,
+          "period": "March 2026",
+          "verification": "reported"
+        }
+      ]
+    },
+    {
+      "unit": "lectures",
+      "total": 3.0,
+      "reported": 3.0,
+      "third_party": 0,
+      "items": [
+        {
+          "story_id": "2026-03-chedun-town-design-harvests",
+          "title_en": "Chedun Town workshop maps hopes for a riverside rural innovation belt",
+          "title_zh": "设计丰收车墩镇工作坊梳理乡村创新带的多方期待",
+          "label": "Open lectures",
+          "value": 3.0,
+          "period": "March 2026",
+          "verification": "reported"
+        }
+      ]
+    },
+    {
+      "unit": "counties",
+      "total": 65.0,
+      "reported": 65.0,
+      "third_party": 0,
+      "items": [
+        {
+          "story_id": "2025-07-kentucky-rux",
+          "title_en": "Urban-rural exchange builds trust across 65 Kentucky counties",
+          "title_zh": "城乡交流在肯塔基 65 个县之间建立信任",
+          "label": "Counties represented",
+          "value": 65.0,
+          "period": "2015 to 2025",
+          "verification": "reported"
+        }
+      ]
+    }
+  ],
+  "story_points": [
+    {
+      "id": "2026-07-aral-school-first-cohort",
+      "title_en": "Aral School fellows prototype a post-irrigation economy",
+      "title_zh": "咸海学校学员探索后灌溉经济",
+      "lat": 42.46,
+      "lng": 59.603,
+      "place": "Nukus, Uzbekistan",
+      "zone": "local-collective"
+    },
+    {
+      "id": "2026-05-yunhe-forest-school",
+      "title_en": "Forest school grows ecological learning in a former mining area",
+      "title_zh": "森林学校在前矿区开展生态教育",
+      "lat": 30.87,
+      "lng": 101.88,
+      "place": "Zhonglu village, China",
+      "zone": "local-collective"
+    },
+    {
+      "id": "2026-03-chedun-town-design-harvests",
+      "title_en": "Chedun Town workshop maps hopes for a riverside rural innovation belt",
+      "title_zh": "设计丰收车墩镇工作坊梳理乡村创新带的多方期待",
+      "lat": 31.02,
+      "lng": 121.27,
+      "place": "Chedun Town, China",
+      "zone": "local-collective"
+    },
+    {
+      "id": "2025-07-kentucky-rux",
+      "title_en": "Urban-rural exchange builds trust across 65 Kentucky counties",
+      "title_zh": "城乡交流在肯塔基 65 个县之间建立信任",
+      "lat": 37.84,
+      "lng": -84.27,
+      "place": "United States",
+      "zone": "local-collective"
+    }
+  ],
+  "funnel": {
+    "Needs received": 5,
+    "Matched": 4,
+    "In conversation": 0,
+    "Piloting": 0,
+    "Closed": 0
+  },
+  "experts_by_country": {
+    "China": 3,
+    "Italy": 2,
+    "France": 1,
+    "Uzbekistan": 1,
+    "Ireland": 1,
+    "United States": 1,
+    "International": 1
+  },
+  "experts_by_discipline": {
+    "Social innovation": 2,
+    "Design education": 2,
+    "Bioregioning": 1,
+    "Social-ecological design": 1,
+    "Urban-rural development": 1,
+    "Urban-rural design": 1,
+    "Cultural regeneration": 1,
+    "Ecological restoration": 1,
+    "Medicine": 1,
+    "Food systems": 1,
+    "Land care": 1,
+    "Ecological education": 1,
+    "Environmental art": 1,
+    "Urban ecology": 1,
+    "Design research": 1,
+    "Design for sustainability": 1,
+    "Rural development": 1,
+    "Post-tourism": 1,
+    "Water cycle restoration": 1,
+    "Agroecology": 1,
+    "Indicators": 1
+  },
+  "events": {
+    "by_type": {
+      "exhibition": 2,
+      "network event": 2,
+      "webinar": 1
+    },
+    "by_region": {
+      "China": 2,
+      "Italy": 1,
+      "Uzbekistan": 1,
+      "Online": 1
+    },
+    "by_month": {
+      "2025-08": 1,
+      "2025-09": 1,
+      "2026-03": 1,
+      "2026-09": 1,
+      "2027-04": 1
+    },
+    "produced_story": 3
+  }
+}
