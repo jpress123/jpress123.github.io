@@ -19,21 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-<script>
-  /* Chart.js (~200KB) and wordcloud2.js (~30KB) are desktop-only.
-     Skip them on phones to cut initial JS by ~230KB and avoid main-thread freeze. */
-  (function () {
-    if (window.matchMedia('(max-width: 600px)').matches) return;
-    var s1 = document.createElement('script');
-    s1.src = 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js';
-    s1.defer = true;
-    document.head.appendChild(s1);
-    var s2 = document.createElement('script');
-    s2.src = 'https://cdnjs.cloudflare.com/ajax/libs/wordcloud2.js/1.2.2/wordcloud2.min.js';
-    s2.defer = true;
-    document.head.appendChild(s2);
-  })();
-</script>
+
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -529,7 +515,8 @@
     cursor: pointer; user-select: none;
     font-size: 0.78rem; font-weight: 500; color: var(--text-secondary);
   }
-  .impact-toggle input { display: none; }
+  .impact-toggle input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+  .impact-toggle input:focus-visible + .impact-toggle-track { outline: 3px solid var(--accent); outline-offset: 4px; }
   .impact-toggle-track {
     position: relative;
     width: 36px; height: 20px;
@@ -1086,6 +1073,49 @@
     .container { padding: 0 1rem; }
     .filter-bar { padding: 1.25rem 0; }
   }
+
+  .share-link { width: 100%; padding: 0.75rem; font: inherit; border: 1px solid var(--border); border-radius: var(--radius-sm); }
+  #shareFeedback { margin: 1rem 0; }
+  .header-wordcloud.panel { height: auto !important; }
+  .mobile-tagcloud { gap: 0.55rem; justify-content: center; padding: 1rem 0; }
+  .mtag { min-height: 36px; max-width: 100%; overflow-wrap: anywhere; }
+  /* Briefing navigation and accessible controls */
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+  #filterBar, #signals, #expandedView { scroll-margin-top: 100px; }
+  .header-actions { display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: 1.2rem; }
+  .briefing-button { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0.65rem 1rem; border: 1px solid var(--navy); border-radius: var(--radius-sm); background: var(--navy); color: white; font: 600 0.85rem 'Inter', sans-serif; cursor: pointer; }
+  .briefing-button.secondary { background: white; color: var(--navy); border-color: var(--border); }
+  .briefing-button:hover { text-decoration: none; filter: brightness(0.95); }
+  .data-freshness { display: flex; align-items: center; flex-wrap: wrap; gap: 0.4rem 0.8rem; margin: 0.8rem 0; color: var(--text-secondary); font-size: 0.78rem; }
+  .refresh-data { min-height: 44px; padding: 0.4rem 0.7rem; border: 1px solid var(--border); border-radius: var(--radius-sm); background: white; color: var(--accent); font: inherit; cursor: pointer; }
+  .refresh-data:disabled { opacity: 0.6; cursor: wait; }
+  .heatmap-note { color: var(--text-secondary); font-size: 0.78rem; margin: 0 0 0.8rem; }
+  button.heatmap-cell { padding: 0; min-width: 0; }
+  .no-results p { margin-bottom: 1rem; }
+  .header-mobile-intro { display: none; }
+  .signal-tile[role="button"]:focus-visible, .related-card:focus-visible { border-color: var(--accent); }
+  .mtag { border: 0; cursor: pointer; }
+  .mtag-chip { border: 1.5px solid; }
+  .mtag-plain { background: transparent; }
+  @media (max-width: 600px) {
+    .site-header { padding: 7rem 0 1.5rem; }
+    .header-tagline { margin-bottom: 0.75rem; }
+    .header-intro { display: none; }
+    .header-mobile-intro { display: block; color: var(--text-secondary); font-size: 0.9rem; }
+    .header-wordcloud.panel { display: none; }
+    .header-kpis { margin-bottom: 1.25rem; }
+    .header-kpis .kpi-tile:nth-child(n+3) { display: none; }
+    .header-actions .briefing-button { flex: 1; }
+    .signal-grid-wrapper { padding-top: 1.25rem; }
+    .nav-name { font-size: 0.95rem; }
+    .nav-right { gap: 0.8rem; }
+    .heatmap-note { font-size: 0.75rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition: none !important; }
+  }
+
 </style>
 </head>
 <body>
@@ -1101,7 +1131,7 @@
     </div>
     <div class="nav-right">
       <ul class="nav-links" id="navLinks">
-        <li><a href="#signals"><span data-lang="en">All Signals</span><span data-lang="fr">Tous les signaux</span><span data-lang="zh">全部信号</span></a></li>
+        <li><a href="#signals" data-browse="archive"><span data-lang="en">All Signals</span><span data-lang="fr">Tous les signaux</span><span data-lang="zh">全部信号</span></a></li>
         <!-- Subscribe hidden until Substack digest is live: <li><a href="#subscribe">Subscribe</a></li> -->
         <li><a href="../"><span data-lang="en">Home</span><span data-lang="fr">Accueil</span><span data-lang="zh">主页</span></a></li>
       </ul>
@@ -1110,7 +1140,7 @@
         <option value="fr">FR</option>
         <option value="zh">中文</option>
       </select>
-      <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+      <button class="hamburger" onclick="var open = document.getElementById('navLinks').classList.toggle('open'); this.setAttribute('aria-expanded', open)" aria-label="Menu" aria-controls="navLinks" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -1127,7 +1157,7 @@
     <div class="header-layout">
       <div class="panel wordcloud-panel header-wordcloud">
         <div class="panel-title"><span data-lang="en">Drivers of Change</span><span data-lang="fr">Moteurs du changement</span><span data-lang="zh">变革驱动力</span></div>
-        <div class="wordcloud-wrap"><canvas id="wordcloud"></canvas></div>
+        <div class="wordcloud-wrap"></div>
       </div>
       <div class="header-left">
         <h1>Sino-Signals</h1>
@@ -1140,6 +1170,12 @@
           <p data-lang="fr">Anticipez l'avenir pour &ecirc;tre pr&ecirc;t &agrave; tout avenir.</p>
           <p data-lang="zh">预见未来，方能应对任何未来。</p>
         </div>
+        <p class="header-mobile-intro"><span data-lang="en">Signals from China. Evidence, implications, and practical actions for your next decision.</span><span data-lang="fr">Des signaux de Chine. Des faits, des implications et des actions pour vos prochaines décisions.</span><span data-lang="zh">来自中国的信号，用事实、影响分析与行动建议支持您的决策。</span></p>
+        <div class="header-actions">
+          <a class="briefing-button" href="#signals" data-browse="latest"><span data-lang="en">Latest signals</span><span data-lang="fr">Derniers signaux</span><span data-lang="zh">最新信号</span></a>
+          <a class="briefing-button secondary" href="#signals" data-browse="archive"><span data-lang="en">Explore archive</span><span data-lang="fr">Explorer les archives</span><span data-lang="zh">浏览归档</span></a>
+        </div>
+        <div class="data-freshness"><span id="dataStatus" role="status" aria-live="polite"></span><button class="refresh-data" id="refreshData" type="button"><span data-lang="en">Refresh</span><span data-lang="fr">Actualiser</span><span data-lang="zh">刷新</span></button></div>
       </div>
     </div>
   </div>
@@ -1178,6 +1214,7 @@
             <span class="impact-slider-hint"><span data-lang="en">of 5</span><span data-lang="fr">sur 5</span><span data-lang="zh">/ 5</span></span>
           </div>
         </div>
+        <p class="heatmap-note"><span data-lang="en">All-time archive. Numbers count signals; colour shows the highest impact score. Select a cell to explore.</span><span data-lang="fr">Toutes les archives. Le nombre indique les signaux ; la couleur, l’impact maximal. Sélectionnez une cellule.</span><span data-lang="zh">全部归档。数字代表信号数量，颜色代表最高影响力评分。选择单元格查看信号。</span></p>
         <div class="heatmap-wrap" id="heatmap"></div>
         <div class="heatmap-footer">
           <div class="heatmap-legend">
@@ -1197,7 +1234,7 @@
 <div class="filter-bar" id="filterBar">
   <div class="container">
     <div class="filter-bar-inner">
-      <h2 class="filter-title" id="filterTitle" aria-live="polite"></h2>
+      <h2 class="filter-title" id="filterTitle" tabindex="-1" aria-live="polite"></h2>
       <div class="filter-search-row">
         <input type="text" class="search-input" id="searchInput"
                data-ph-en="Search signals..." data-ph-fr="Rechercher des signaux..." data-ph-zh="搜索信号..."
@@ -1249,7 +1286,7 @@
       <!-- Filled by JS -->
     </div>
     <button class="show-more-btn" id="showMoreBtn" style="display:none;"><span data-lang="en">Show more signals</span><span data-lang="fr">Afficher plus de signaux</span><span data-lang="zh">显示更多信号</span></button>
-    <div class="no-results" id="noResults" style="display:none;"><span data-lang="en">No signals today. Try expanding to This Week.</span><span data-lang="fr">Aucun signal aujourd'hui. Essayez d'&eacute;largir &agrave; Cette semaine.</span><span data-lang="zh">今天没有信号，请尝试展开至"本周"。</span></div>
+    <div class="no-results" id="noResults" style="display:none;"><p id="noResultsMessage" role="status"></p><button type="button" class="briefing-button" data-browse="latest"><span data-lang="en">View latest signals</span><span data-lang="fr">Voir les derniers signaux</span><span data-lang="zh">查看最新信号</span></button></div>
   </div>
 </section>
 
@@ -1290,10 +1327,16 @@
   'use strict';
 
   let signals = [];
-  let currentView = 'grid';
+  let expandedSignalId = null;
+  let returnSignalId = null;
+  let dataLoaded = false;
+  let dataLoading = false;
+  let lastDataCheck = 0;
+  let dataError = false;
+  let dataSnapshot = '';
+  let gridImpactThreshold = 0;
   let visibleCount = 5;
   let currentLens = 'all';
-  let categoryChart = null;
   const MAX_VISIBLE = 10;
 
   const CATEGORY_COLORS = {
@@ -1404,74 +1447,90 @@
     // Re-render everything that generates its own text in JS, so labels
     // (category names, industry names, KPI copy) pick up the new language.
     safeRun('renderKPIs', renderKPIs);
-    if (IS_PHONE) {
-      safeRun('renderMobileTagCloud', function(){ renderMobileTagCloud(lensFilter(signals)); });
-    } else {
-      safeRun('renderLensSwitcher', renderLensSwitcher);
-      safeRun('renderHeatMap', function(){ renderHeatMap(signals); });
-    }
+    safeRun('renderLensSwitcher', renderLensSwitcher);
     // Signal tiles/expanded view read UI_LANG live via categoryLabel(), so a
     // plain re-filter is enough to refresh anything currently on screen.
     if (typeof applyFilters === 'function') safeRun('applyFilters', applyFilters);
+    updateDataStatus();
+    if (expandedSignalId) window.showExpanded(expandedSignalId, false);
   }
   window.setUILang = setUILang;
-
-  // Detect phone-sized viewport once at load — skips heavy dashboard rendering on mobile
-  var IS_PHONE = window.matchMedia('(max-width: 600px)').matches;
 
   // Load data — each render wrapped in try/catch so one failure cannot break the chain
   function safeRun(name, fn) {
     try { fn(); } catch (e) { console.error('[' + name + ']', e); }
   }
 
-  fetch('signals-data.json')
-    .then(function(r) { return r.json(); })
-    .then(function(data) {
-      signals = data.sort(function(a, b) { return b.date.localeCompare(a.date); });
-      // KPI strip kept on mobile — useful numeric summary, cheap to render
-      safeRun('renderKPIs', renderKPIs);
-      if (IS_PHONE) {
-        // Lightweight DOM tag cloud — no canvas, no library
-        safeRun('renderMobileTagCloud', function(){ renderMobileTagCloud(signals); });
-      } else {
+  function updateDataStatus() {
+    var status = document.getElementById('dataStatus');
+    if (dataError) {
+      status.textContent = dataLoaded
+        ? t3('Refresh failed. Showing previously loaded signals.', 'Actualisation impossible. Les signaux précédents restent affichés.', '刷新失败，正在显示此前加载的信号。')
+        : t3('Could not load signals. Please try Refresh.', 'Impossible de charger les signaux. Essayez Actualiser.', '无法加载信号，请点击刷新重试。');
+    } else if (dataLoading) {
+      status.textContent = t3('Checking for updates…', 'Recherche de mises à jour…', '正在检查更新…');
+    } else if (signals.length) {
+      status.textContent = t3('Latest signal ', 'Dernier signal ', '最新信号 ') + formatDate(signals[0].date) +
+        ' · ' + signals.length + t3(' in the archive', ' dans les archives', ' 条归档');
+    } else {
+      status.textContent = t3('No signals published yet.', 'Aucun signal publié.', '暂无已发布信号。');
+    }
+  }
+
+  function loadSignalData() {
+    if (dataLoading) return;
+    dataLoading = true;
+    dataError = false;
+    document.getElementById('refreshData').disabled = true;
+    updateDataStatus();
+    // A unique request bypasses both browser and shared CDN caches.
+    return fetch('signals-data.json?v=' + Date.now(), { cache: 'no-store' })
+      .then(function(response) {
+        if (!response.ok) throw new Error('Signal data HTTP ' + response.status);
+        return response.json();
+      })
+      .then(function(data) {
+        if (!Array.isArray(data) || !data.every(function(s) {
+          return s && typeof s.id === 'string' && typeof s.date === 'string' &&
+            typeof s.title_en === 'string' && s.body && Array.isArray(s.tags);
+        })) throw new Error('Invalid signal data');
+        var firstLoad = !dataLoaded;
+        var nextSnapshot = JSON.stringify(data);
+        lastDataCheck = Date.now();
+        dataLoaded = true;
+        if (!firstLoad && nextSnapshot === dataSnapshot) return;
+        dataSnapshot = nextSnapshot;
+        signals = data.slice().sort(function(a, b) { return b.date.localeCompare(a.date); });
+        safeRun('renderKPIs', renderKPIs);
         safeRun('renderLensSwitcher', renderLensSwitcher);
-        safeRun('renderHeatMap', function(){ renderHeatMap(signals); });
-        safeRun('syncWordcloudPanelHeight', syncWordcloudPanelHeight);
-        safeRun('renderWordcloud', function(){ renderWordcloud(signals); });
-        safeRun('bindWordcloudResize', bindWordcloudResize);
-      }
-      safeRun('setFilterFreshnessDefault', setFilterFreshnessDefault);
-      safeRun('applyFilters', applyFilters);
-      safeRun('bindFilters', bindFilters);
-    })
-    .catch(function(err) {
-      console.error('[signals-data fetch]', err);
-      document.getElementById('signalGrid').innerHTML = '<p style="color:var(--text-tertiary)">' + t3('Failed to load signal data.', 'Échec du chargement des données.', '信号数据加载失败。') + '</p>';
-    });
-
-  function syncWordcloudPanelHeight() {
-    var left = document.querySelector('.header-left');
-    var cloud = document.querySelector('.header-wordcloud');
-    if (!left || !cloud) return;
-    // Reset before measuring to avoid feedback loops
-    cloud.style.height = '';
-    // Skip height-matching on phones — wordcloud sits below the text, not beside it
-    if (window.matchMedia('(max-width: 600px)').matches) return;
-    var leftHeight = left.getBoundingClientRect().height;
-    if (leftHeight < 120) return;
-    cloud.style.height = leftHeight + 'px';
+        if (firstLoad) setFilterFreshnessDefault();
+        safeRun('applyFilters', applyFilters);
+        if (firstLoad) openHashSignal();
+      })
+      .catch(function(err) {
+        console.error('[signals-data fetch]', err);
+        dataError = true;
+        if (!dataLoaded) {
+          document.getElementById('signalGrid').textContent = '';
+          document.getElementById('noResults').style.display = 'none';
+        }
+      })
+      .finally(function() {
+        dataLoading = false;
+        document.getElementById('refreshData').disabled = false;
+        updateDataStatus();
+      });
   }
 
-  var _cloudResizeTimer = null;
-  function bindWordcloudResize() {
-    window.addEventListener('resize', function(){
-      clearTimeout(_cloudResizeTimer);
-      _cloudResizeTimer = setTimeout(function(){
-        syncWordcloudPanelHeight();
-        renderWordcloud(signals);
-      }, 180);
-    });
+  document.getElementById('refreshData').addEventListener('click', loadSignalData);
+  function refreshIfStale() {
+    if (!document.hidden && Date.now() - lastDataCheck > 5 * 60 * 1000) loadSignalData();
   }
+  document.addEventListener('visibilitychange', refreshIfStale);
+  window.addEventListener('focus', refreshIfStale);
+  setInterval(refreshIfStale, 5 * 60 * 1000);
+  bindFilters();
+  loadSignalData();
 
   function strengthClass(s) {
     if (s === 'weak') return 'badge-strength-weak';
@@ -1509,22 +1568,17 @@
     if (freshnessValue === 'today') {
       return dateStr === today;
     }
+    var rangeStart = new Date(today + 'T00:00:00Z');
     if (freshnessValue === 'this_week') {
-      var sevenDaysAgo = new Date(todayDate);
-      sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
-      return signalDate >= sevenDaysAgo && signalDate <= todayDate;
+      rangeStart.setUTCDate(rangeStart.getUTCDate() - (rangeStart.getUTCDay() + 6) % 7);
+    } else if (freshnessValue === 'this_month') {
+      rangeStart.setUTCDate(1);
+    } else if (freshnessValue === 'this_year') {
+      rangeStart.setUTCMonth(0, 1);
+    } else {
+      return true;
     }
-    if (freshnessValue === 'this_month') {
-      var thirtyDaysAgo = new Date(todayDate);
-      thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
-      return signalDate >= thirtyDaysAgo && signalDate <= todayDate;
-    }
-    if (freshnessValue === 'this_year') {
-      var yearAgo = new Date(todayDate);
-      yearAgo.setFullYear(yearAgo.getFullYear() - 1);
-      return signalDate >= yearAgo && signalDate <= todayDate;
-    }
-    return true;
+    return dateStr >= rangeStart.toISOString().slice(0, 10) && dateStr <= today;
   }
 
   function hexToRgba(hex, a) {
@@ -1643,13 +1697,8 @@
     var trendingIndustry = lensLabel(trendingKey) || '—';
     var topTrend = topTrendTag();
 
-    // Populate the heat map's Week / Year header
     var hwy = document.getElementById('heatmapWeekYear');
-    if (hwy) hwy.textContent = t3(
-      'Week ' + iso.week + ' / ' + iso.year,
-      'Semaine ' + iso.week + ' / ' + iso.year,
-      '第' + iso.week + '周 / ' + iso.year
-    );
+    if (hwy) hwy.textContent = t3('All-time archive', 'Toutes les archives', '全部归档');
 
     // Each tile links into the DataBase like a wordcloud word: set a filter, run applyFilters, scroll.
     var weekNum = (UI_LANG === 'zh')
@@ -1822,7 +1871,7 @@
           );
           if (cell.actors.length) tip += t3('\nTop tags: ', '\nTags principaux : ', '\n热门标签：') + cell.actors.join(', ');
           var safeTip = tip.replace(/"/g, '&quot;');
-          html += '<div class="heatmap-cell" style="background:' + bg + ';color:' + textColor + '" title="' + safeTip + '" data-cat="' + c + '" data-lens="' + l + '">' + cell.n + '</div>';
+          html += '<button type="button" class="heatmap-cell" aria-label="' + safeTip + '" style="background:' + bg + ';color:' + textColor + '" title="' + safeTip + '" data-cat="' + c + '" data-lens="' + l + '">' + cell.n + '</button>';
         }
       });
     });
@@ -1861,7 +1910,9 @@
           b.classList.toggle('active', b.getAttribute('data-lens') === lens);
         });
 
+        gridImpactThreshold = threshold;
         applyFilters();
+        document.getElementById('filterTitle').focus({ preventScroll: true });
         document.getElementById('filterBar').scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
@@ -1933,11 +1984,11 @@
       var safeT = String(t).replace(/&/g, '&amp;').replace(/"/g, '&quot;');
       var color = tagColors[t] || '#2c5282';
       if (item.tier === 1) {
-        html += '<span class="mtag mtag-pill" data-tag="' + safeT + '" style="background:' + color + '">' + t + '</span>';
+        html += '<button type="button" class="mtag mtag-pill" data-tag="' + safeT + '" style="background:' + color + '">' + escapeAttribute(t) + '</button>';
       } else if (item.tier === 2) {
-        html += '<span class="mtag mtag-chip" data-tag="' + safeT + '" style="color:' + color + ';border-color:' + color + '40">' + t + '</span>';
+        html += '<button type="button" class="mtag mtag-chip" data-tag="' + safeT + '" style="color:' + color + ';border-color:' + color + '40">' + escapeAttribute(t) + '</button>';
       } else {
-        html += '<span class="mtag mtag-plain" data-tag="' + safeT + '" style="color:' + color + '">' + t + '</span>';
+        html += '<button type="button" class="mtag mtag-plain" data-tag="' + safeT + '" style="color:' + color + '">' + escapeAttribute(t) + '</button>';
       }
     });
     html += '</div>';
@@ -1951,6 +2002,8 @@
       tagEl.addEventListener('click', function(){
         var tag = tagEl.getAttribute('data-tag');
         if (!tag) return;
+        window.hideExpanded(false);
+        gridImpactThreshold = 0;
         var searchEl = document.getElementById('searchInput');
         if (searchEl) searchEl.value = tag;
         var freshSelect = document.getElementById('filterFreshness');
@@ -1963,109 +2016,54 @@
   }
 
   function renderWordcloud(filtered) {
-    var canvas = document.getElementById('wordcloud');
-    var wrap = canvas && canvas.parentNode;
-    if (!canvas || !wrap) return;
+    renderMobileTagCloud(filtered);
+  }
 
-    // Tally frequencies, English tags only, excluding category-name tags
-    var categorySet = {};
-    Object.keys(CATEGORY_COLORS).forEach(function(c){ categorySet[c.toLowerCase()] = 1; });
-    var freq = {};
-    filtered.forEach(function(s){
-      (s.tags || []).forEach(function(t){
-        if (!t) return;
-        if (/[一-鿿]/.test(t)) return;
-        if (categorySet[t.toLowerCase()]) return;
-        freq[t] = (freq[t] || 0) + 1;
-      });
-    });
-
-    var minFreq = filtered.length >= 20 ? 2 : 1;
-    var entries = Object.keys(freq)
-      .map(function(t){ return [t, freq[t]]; })
-      .filter(function(e){ return e[1] >= minFreq; })
-      .sort(function(a,b){ return b[1] - a[1]; })
-      .slice(0, 60);
-
-    if (!entries.length) {
-      wrap.innerHTML = '<div class="wordcloud-empty">' + t3('No recurring tags in this view.', 'Aucun tag récurrent dans cette vue.', '当前视图暂无常见标签。') + '</div>';
-      return;
-    }
-
-    // Ensure the canvas is present (we may have replaced it with the empty div on a previous render)
-    if (!wrap.querySelector('canvas')) {
-      wrap.innerHTML = '<canvas id="wordcloud"></canvas>';
-      canvas = document.getElementById('wordcloud');
-    }
-
-    // Size canvas to its container (accounting for devicePixelRatio for crisp text)
-    var rect = wrap.getBoundingClientRect();
-    var dpr = window.devicePixelRatio || 1;
-    canvas.width  = Math.max(300, Math.floor(rect.width * dpr));
-    canvas.height = Math.max(200, Math.floor(rect.height * dpr));
-    canvas.style.width  = rect.width + 'px';
-    canvas.style.height = rect.height + 'px';
-
-    var tagColors = buildTagColorMap(filtered);
-
-    var maxN = entries[0][1];
-    // Tuned so the largest word fills ~22% of canvas height, smallest is ~5%
-    var basePx = Math.max(10, Math.floor(canvas.height * 0.05));
-    var maxPx  = Math.max(basePx + 8, Math.floor(canvas.height * 0.22));
-
-    if (typeof WordCloud !== 'function') {
-      // wordcloud2.js is injected dynamically, and dynamically inserted scripts
-      // ignore `defer` (they load async). The local data fetch usually finishes
-      // first, so the library may still be downloading. Retry for up to 10s
-      // before falling back to a plain list.
-      renderWordcloud._waited = (renderWordcloud._waited || 0) + 250;
-      if (renderWordcloud._waited <= 10000) {
-        clearTimeout(renderWordcloud._timer);
-        renderWordcloud._timer = setTimeout(function(){ renderWordcloud(filtered); }, 250);
-        return;
-      }
-      // Library genuinely failed to load — fall back to a simple inline list
-      wrap.innerHTML = '<div class="wordcloud-empty">' +
-        entries.slice(0, 30).map(function(e){ return e[0]; }).join(', ') + '</div>';
-      return;
-    }
-    renderWordcloud._waited = 0;
-
-    WordCloud(canvas, {
-      list: entries,
-      gridSize: Math.round(8 * dpr),
-      weightFactor: function(n){
-        return basePx + (maxPx - basePx) * (n / maxN);
-      },
-      fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif',
-      fontWeight: '500',
-      color: function(word){ return tagColors[word] || '#2e4057'; },
-      backgroundColor: 'transparent',
-      rotateRatio: 0.25,
-      rotationSteps: 2,
-      shuffle: false,
-      drawOutOfBound: false,
-      shrinkToFit: true,
-      click: function(item){
-        if (!item || !item[0]) return;
-        document.getElementById('searchInput').value = item[0];
-        // Word cloud tags are tallied across the full archive, not just this
-        // week, so clear the freshness filter or the search can resolve to
-        // zero visible signals even though the tag is clearly present.
-        var freshSelect = document.getElementById('filterFreshness');
-        if (freshSelect) freshSelect.value = 'all_time';
-        applyFilters();
-        document.getElementById('filterBar').scrollIntoView({ behavior: 'smooth', block: 'start' });
-      },
-      hover: function(item, dimension, event){
-        canvas.style.cursor = item ? 'pointer' : 'default';
-      }
-    });
+  function escapeAttribute(value) {
+    return String(value).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   }
 
   function setFilterFreshnessDefault() {
-    document.getElementById('filterFreshness').value = 'this_week';
+    document.getElementById('filterFreshness').value = signals.some(function(s) {
+      return isDateInRange(s.date, 'this_week');
+    }) ? 'this_week' : 'all_time';
   }
+
+  function browseSignals(mode) {
+    window.hideExpanded(false);
+    currentLens = 'all';
+    gridImpactThreshold = 0;
+    document.getElementById('filterLens').value = 'all';
+    document.getElementById('filterCategory').value = 'all';
+    document.getElementById('filterStrength').value = 'all';
+    document.getElementById('filterFreshness').value = 'all_time';
+    if (mode === 'latest') setFilterFreshnessDefault();
+    document.getElementById('searchInput').value = '';
+    document.getElementById('impactToggle').checked = false;
+    document.getElementById('impactSlider').disabled = true;
+    document.querySelector('.impact-slider-group').classList.remove('active');
+    document.querySelectorAll('.lens-chip').forEach(function(chip){ chip.classList.remove('active'); });
+    applyFilters();
+    history.replaceState(null, '', '#signals');
+    document.getElementById('filterTitle').focus({ preventScroll: true });
+    document.getElementById('filterBar').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  document.querySelectorAll('[data-browse]').forEach(function(control) {
+    control.addEventListener('click', function(event) {
+      event.preventDefault();
+      browseSignals(control.getAttribute('data-browse'));
+    });
+  });
+
+  document.addEventListener('keydown', function(event) {
+    var card = event.target.closest('.signal-tile[role="button"], .related-card[role="button"]');
+    if (card && (event.key === 'Enter' || event.key === ' ')) {
+      event.preventDefault();
+      card.click();
+    }
+    if (event.key === 'Escape' && expandedSignalId) window.hideExpanded();
+  });
 
   function truncate(text, len) {
     if (!text) return '';
@@ -2090,6 +2088,9 @@
       grid.style.display = 'none';
       showMoreBtn.style.display = 'none';
       noResults.style.display = 'block';
+      document.getElementById('noResultsMessage').textContent = signals.length
+        ? t3('No signals match these filters. Explore the latest entries or change your search.', 'Aucun signal ne correspond à ces filtres. Explorez les dernières publications ou modifiez votre recherche.', '没有符合筛选条件的信号。请查看最新内容或修改搜索。')
+        : t3('No signals published yet. Try Refresh to check again.', 'Aucun signal publié. Essayez Actualiser.', '暂无已发布信号，请点击刷新重试。');
       return;
     }
 
@@ -2101,7 +2102,7 @@
     for (var i = 0; i < toDisplay.length; i++) {
       var s = toDisplay[i];
       var isSynthesis = s.content_type === 'monthly_synthesis' || s.content_type === 'quarterly_report';
-      html += '<div class="signal-tile' + (isSynthesis ? ' synthesis' : '') + '" data-signal-id="' + s.id + '" onclick="window.showExpanded(\'' + s.id + '\')">';
+      html += '<div class="signal-tile' + (isSynthesis ? ' synthesis' : '') + '" role="button" tabindex="0" aria-label="' + escapeAttribute(s.title_en) + '" data-signal-id="' + s.id + '" onclick="window.showExpanded(\'' + s.id + '\')">';
       html += '<span class="tile-impact-corner" style="background:' + impactColor(s.impact_score) + '" aria-label="Impact ' + (s.impact_score || 0) + '"></span>';
       html += '<div class="tile-meta">';
       html += '<span class="tile-badge badge-category">' + s.category_emoji + '</span>';
@@ -2148,7 +2149,7 @@
     for (var i = 0; i < toDisplay.length; i++) {
       var s = toDisplay[i];
       var isSynthesis = s.content_type === 'monthly_synthesis' || s.content_type === 'quarterly_report';
-      html += '<div class="signal-tile' + (isSynthesis ? ' synthesis' : '') + '" data-signal-id="' + s.id + '" onclick="window.showExpanded(\'' + s.id + '\')">';
+      html += '<div class="signal-tile' + (isSynthesis ? ' synthesis' : '') + '" role="button" tabindex="0" aria-label="' + escapeAttribute(s.title_en) + '" data-signal-id="' + s.id + '" onclick="window.showExpanded(\'' + s.id + '\')">';
       html += '<span class="tile-impact-corner" style="background:' + impactColor(s.impact_score) + '" aria-label="Impact ' + (s.impact_score || 0) + '"></span>';
       html += '<div class="tile-meta">';
       html += '<span class="tile-badge badge-category">' + s.category_emoji + '</span>';
@@ -2207,6 +2208,7 @@
       if (currentLens !== 'all' && s.industry_lens !== currentLens) return false;
       if (cat !== 'all' && s.category !== cat) return false;
       if (str !== 'all' && s.signal_strength !== str) return false;
+      if (gridImpactThreshold && (s.impact_score || 0) < gridImpactThreshold) return false;
       if (!isDateInRange(s.date, fresh)) return false;
       if (q) {
         var haystack = (s.title_en + ' ' + s.title_cn + ' ' + s.body.signal + ' ' + s.tags.join(' ')).toLowerCase();
@@ -2219,7 +2221,7 @@
   function applyFilters() {
     var lensScoped = lensFilter(signals);
     // Heat map is an atlas: always show the full universe so cells stay navigable
-    if (!IS_PHONE) renderHeatMap(signals);
+    renderHeatMap(signals);
     renderWordcloud(lensScoped);
     var filtered = getFiltered();
     renderGrid(filtered);
@@ -2229,6 +2231,8 @@
   // KPI tiles act as quick links into the DataBase, mirroring the wordcloud click flow:
   // set a filter, run applyFilters, then smooth-scroll to the DataBase.
   function kpiNavigate(action, value) {
+    window.hideExpanded(false);
+    gridImpactThreshold = 0;
     var searchEl = document.getElementById('searchInput');
     var freshEl  = document.getElementById('filterFreshness');
     var catEl    = document.getElementById('filterCategory');
@@ -2275,6 +2279,10 @@
   }
 
   function bindFilters() {
+    document.querySelectorAll('.filter-select, #searchInput').forEach(function(control) {
+      control.addEventListener('input', function(){ gridImpactThreshold = 0; });
+      control.addEventListener('change', function(){ gridImpactThreshold = 0; });
+    });
     document.getElementById('filterCategory').addEventListener('change', applyFilters);
     document.getElementById('filterStrength').addEventListener('change', applyFilters);
     document.getElementById('filterFreshness').addEventListener('change', applyFilters);
@@ -2306,21 +2314,25 @@
       toggle.addEventListener('change', function(){
         slider.disabled = !toggle.checked;
         if (sliderGroup) sliderGroup.classList.toggle('active', toggle.checked);
-        renderHeatMap(signals);
+        gridImpactThreshold = 0;
+        applyFilters();
       });
       slider.addEventListener('input', function(){
         if (valueLabel) valueLabel.textContent = slider.value;
-        if (toggle.checked) renderHeatMap(signals);
+        gridImpactThreshold = 0;
+        applyFilters();
       });
     }
   }
 
-  window.showExpanded = function(id) {
+  window.showExpanded = function(id, moveFocus) {
     var s = null;
     for (var i = 0; i < signals.length; i++) {
       if (signals[i].id === id) { s = signals[i]; break; }
     }
     if (!s) return;
+    if (!expandedSignalId) returnSignalId = id;
+    expandedSignalId = id;
     history.replaceState(null, '', '#' + id);
 
     var backLabel = t3('Back to Sino-Signals', 'Retour \u00e0 Sino-Signals', '返回 Sino-Signals');
@@ -2338,7 +2350,7 @@
       html += '<span class="badge" style="color:var(--accent);border-color:var(--accent-dim)">' + s.content_type.replace('_',' ').toUpperCase() + '</span>';
     }
     html += '</div>';
-    html += '<h2 class="expanded-title">' + s.title_en + '</h2>';
+    html += '<h2 class="expanded-title" tabindex="-1">' + s.title_en + '</h2>';
     html += '<p class="expanded-title-cn">' + s.title_cn + '</p>';
 
     var sourceLabel = t3('Source: ', 'Source : ', '来源：');
@@ -2396,7 +2408,7 @@
           if (signals[j].id === relId) { rel = signals[j]; break; }
         }
         if (rel) {
-          html += '<div class="related-card" onclick="window.showExpanded(\'' + rel.id + '\')">';
+          html += '<div class="related-card" role="button" tabindex="0" aria-label="' + escapeAttribute(rel.title_en) + '" onclick="window.showExpanded(\'' + rel.id + '\')">';
           html += '<h4>' + rel.title_en + '</h4>';
           html += '<span class="related-date">' + formatDate(rel.date) + ' &middot; ' + categoryLabel(rel.category) + '</span>';
           html += '</div>';
@@ -2409,6 +2421,7 @@
     html += '<button class="share-btn" onclick="window.shareSignal(\'' + encodeURIComponent(s.title_en) + '\')">' + t3('Share Signal', 'Partager le signal', '分享信号') + '</button>';
     html += '<button class="share-btn" onclick="window.printSignal()">' + t3('Print Signal', 'Imprimer le signal', '打印信号') + '</button>';
     html += '</div>';
+    html += '<div id="shareFeedback" hidden><p id="shareStatus" role="status"></p><input class="share-link" aria-label="Signal link" readonly onclick="this.select()"></div>';
     html += '<button class="expanded-back expanded-back-bottom" onclick="window.hideExpanded()">&larr; ' + backLabel + '</button>';
 
     document.getElementById('expandedContent').innerHTML = html;
@@ -2416,23 +2429,35 @@
     document.getElementById('filterBar').style.display = 'none';
     document.querySelector('.signal-grid-wrapper').style.display = 'none';
     var expEl = document.getElementById('expandedView');
-    expEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (moveFocus !== false) {
+      document.querySelector('.expanded-title').focus({ preventScroll: true });
+      expEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
 
-  window.hideExpanded = function() {
+  window.hideExpanded = function(restoreFocus) {
+    var wasExpanded = !!expandedSignalId;
+    expandedSignalId = null;
     document.getElementById('expandedView').classList.remove('active');
     document.getElementById('filterBar').style.display = '';
     document.querySelector('.signal-grid-wrapper').style.display = '';
-    history.replaceState(null, '', window.location.pathname);
+    history.replaceState(null, '', window.location.pathname + window.location.search);
+    if (wasExpanded && restoreFocus !== false) {
+      var card = Array.from(document.querySelectorAll('[data-signal-id]')).find(function(el){ return el.getAttribute('data-signal-id') === returnSignalId; });
+      (card || document.getElementById('filterTitle')).focus();
+    }
   };
 
-  // Deep link: open signal from URL hash on page load
-  (function() {
-    var hash = window.location.hash.replace('#', '');
-    if (hash && hash.length > 0) {
-      setTimeout(function() { window.showExpanded(hash); }, 300);
-    }
-  })();
+  // Resolve links after data is ready, rather than racing a fixed timeout.
+  function openHashSignal() {
+    var hash = window.location.hash.slice(1);
+    if (hash && hash !== 'signals') window.showExpanded(decodeURIComponent(hash));
+  }
+  window.addEventListener('hashchange', function() {
+    if (!dataLoaded) return;
+    if (window.location.hash === '#signals' || !window.location.hash) window.hideExpanded();
+    else openHashSignal();
+  });
 
   window.printSignal = function() {
     var content = document.getElementById('expandedContent').innerHTML;
@@ -2449,15 +2474,20 @@
 
   window.shareSignal = function(encodedTitle) {
     var title = decodeURIComponent(encodedTitle);
-    var text = title + ' // Sino-Signals by Joseph Press\nhttps://www.josephpress.com/sino-signals/';
-    if (navigator.clipboard) {
+    var text = title + ' // Sino-Signals by Joseph Press\nhttps://www.josephpress.com/sino-signals/' + window.location.hash;
+    var feedback = document.getElementById('shareFeedback');
+    feedback.hidden = false;
+    var input = feedback.querySelector('input');
+    input.value = 'https://www.josephpress.com/sino-signals/' + window.location.hash;
+    var status = document.getElementById('shareStatus');
+    status.textContent = t3('Copy this signal link:', 'Copiez le lien de ce signal :', '复制此信号链接：');
+    input.focus();
+    input.select();
+    if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(text).then(function() {
-        var btns = document.querySelectorAll('.share-btn');
-        if (btns.length > 0) {
-          var btn = btns[0];
-          btn.textContent = t3('Copied', 'Copi\u00e9', '已复制');
-          setTimeout(function() { btn.textContent = t3('Share Signal', 'Partager le signal', '分享信号'); }, 2000);
-        }
+        status.textContent = t3('Signal link copied.', 'Lien du signal copié.', '信号链接已复制。');
+      }).catch(function() {
+        // Keep the selectable link available when clipboard permission is denied.
       });
     }
   };
@@ -2468,6 +2498,7 @@
   document.querySelectorAll('.nav-links a').forEach(function(a) {
     a.addEventListener('click', function() {
       document.getElementById('navLinks').classList.remove('open');
+      document.querySelector('.hamburger').setAttribute('aria-expanded', 'false');
     });
   });
 })();
