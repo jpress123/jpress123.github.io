@@ -1,5 +1,63 @@
 [
   {
+    "id": "2026-10-19-china-ai-export-registration",
+    "date": "2026-10-19",
+    "day_number": 232,
+    "category": "Policy & Governance",
+    "category_emoji": "🏛️",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 4,
+    "title_en": "China Proposes AI Export Curbs and Starts Technology Registration",
+    "title_cn": "中国拟限制人工智能技术出口并启动登记",
+    "source_url": "https://www.mofcom.gov.cn/zcfb/dwmygl/art/2026/art_61446ab4beee4f63973d4d0ab3097648.html",
+    "source_name": "Ministry of Commerce and Ministry of Science and Technology, Announcement 2026 No. 48",
+    "tags": [
+      "technology exports",
+      "AI governance",
+      "cross-border AI"
+    ],
+    "related_signals": [],
+    "industry_lens": "financial services",
+    "content_type": "daily",
+    "body": {
+      "signal": "On October 16, the Ministry of Commerce and Ministry of Science and Technology issued Announcement 2026 No. 48, consulting on 40 technology additions to the export catalogue, including 23 AI technologies. Comments close November 15; temporary pre-export registration applies from publication to covered transfers, including transactions already underway but incomplete. The proposed catalogue changes are not yet final prohibitions.",
+      "china_scale": "The notice uses a central registration system rather than requiring a separate industry rollout. Our interpretation is that this gives authorities a common view of covered technology transfers across companies, while the proposed exclusion for technology already in the public domain preserves an important distinction for open research.",
+      "global_impact": "Our assessment is that technology ownership and deployment structure become more important procurement questions for multinational firms. A foreign bank evaluating a Chinese AI supplier should distinguish access to a service from a transfer of controlled technology, and have counsel assess the actual transaction rather than assume every model is banned.",
+      "monday_morning": "Inventory planned Chinese AI technology transfers and licensing arrangements, then ask counsel and suppliers to check the notice and attachments against each transaction. Record dependencies and an alternative deployment plan before signing or changing ownership.",
+      "related_notes": "Primary notice verified October 19. The ministry clarification at https://www.mofcom.gov.cn/zwgk/zcjd/art/2026/art_b11d5c1e9374421e93e85dc87eba6e38.html distinguishes proposed treatment of overseas deployment and API services. Individual technical thresholds in the WPS attachment were not independently assessed. Emerging describes the proposed catalogue, not the already-effective registration requirement."
+    }
+  },
+  {
+    "id": "2026-10-19-cnnic-generative-ai-adoption",
+    "date": "2026-10-19",
+    "day_number": 233,
+    "category": "Platforms & Social",
+    "category_emoji": "📱",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 3,
+    "title_en": "CNNIC Reports More Than 700 Million Generative AI Users",
+    "title_cn": "CNNIC报告中国生成式人工智能用户突破七亿",
+    "source_url": "https://www.cnnic.org.cn/n4/2026/1008/c88-11704.html",
+    "source_name": "China Internet Network Information Center, 2026 generative AI application report",
+    "tags": [
+      "AI adoption",
+      "consumer AI",
+      "CNNIC"
+    ],
+    "related_signals": [],
+    "industry_lens": "consumer",
+    "content_type": "daily",
+    "body": {
+      "signal": "CNNIC released its 2026 generative AI application report on September 29 and posted its summary on October 8. It reports more than 700 million users by the first half of 2026, with question answering the leading use case. These are reported adoption figures, not a count of paying customers.",
+      "china_scale": "Our interpretation is that a large audience already familiar with AI gives consumer businesses a substantial pool for testing new services. Reach alone does not establish retention, trust, or willingness to pay; those need product-level evidence.",
+      "global_impact": "For Western consumer brands, the strategic question shifts from whether customers recognize AI to which interactions deserve an AI interface. The report supports testing that premise in China, but does not establish that an assistant converts better than search or an existing app.",
+      "monday_morning": "Choose one customer journey and compare an AI-assisted version with the current experience. Measure completed tasks, repeat use, errors, and cost per successful outcome before expanding.",
+      "related_notes": "Report publication predates today; this is a newly curated signal, not an October 19 event. Primary summary verified; the full PDF could not be retrieved. Strong reflects reported broad adoption, not independent verification of the survey or commercial success."
+    }
+  },
+  {
     "id": "2026-10-02-provinces-mandate-school-ai-class-hours",
     "date": "2026-10-02",
     "day_number": 230,
