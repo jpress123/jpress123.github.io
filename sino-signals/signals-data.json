@@ -1,5 +1,63 @@
 [
   {
+    "id": "2026-10-20-siemens-engineering-agent",
+    "date": "2026-10-20",
+    "day_number": 234,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 3,
+    "title_en": "Siemens Expands Engineering AI Across Chinese Factories",
+    "title_cn": "西门子扩大工程智能体在中国工厂的应用",
+    "source_url": "https://w1.siemens.com.cn/news/news_articles/21992.aspx",
+    "source_name": "Siemens China",
+    "tags": [
+      "industrial AI",
+      "engineering agents",
+      "factory software"
+    ],
+    "related_signals": [],
+    "industry_lens": "automotive",
+    "content_type": "daily",
+    "body": {
+      "signal": "Siemens reported on October 12 that its Eigen engineering agent had served hundreds of Chinese manufacturers since its July launch. Its latest update adds automatic project-structure generation and multi-axis drive configuration; Siemens claims programming time reductions of up to 50%, without publishing independent validation in this release.",
+      "china_scale": "The reported users span automotive, machinery, electrical equipment, chemicals and life sciences. Our interpretation is that existing automation relationships give engineering agents a practical distribution route into factories, with engineers retaining responsibility for validation.",
+      "global_impact": "The competitive benchmark is shifting from code suggestions to completed engineering workflows. Western manufacturers should compare verified delivery costs and rework rates, rather than treating vendor time-saving claims as guaranteed productivity gains.",
+      "monday_morning": "Select one bounded automation project and compare assisted versus conventional engineering under identical acceptance tests. Record programming time, review effort, defects and commissioning delays before considering a broader rollout.",
+      "related_notes": "Company-reported deployment and performance; this is not an independent factory productivity study."
+    }
+  },
+  {
+    "id": "2026-10-20-shenzhen-medical-ai-validation",
+    "date": "2026-10-20",
+    "day_number": 235,
+    "category": "Deep Tech & Research",
+    "category_emoji": "🔬",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 2,
+    "title_en": "Shenzhen Builds a Medical AI Validation Network",
+    "title_cn": "深圳搭建智能医工概念验证协作网络",
+    "source_url": "https://ime.sztu.edu.cn/info/1049/1371.htm",
+    "source_name": "Shenzhen Technology University",
+    "tags": [
+      "medical AI",
+      "proof of concept",
+      "clinical translation"
+    ],
+    "related_signals": [],
+    "industry_lens": "pharma",
+    "content_type": "daily",
+    "body": {
+      "signal": "Shenzhen Technology University reported on October 19 that the Shenzhen Association for Artificial Intelligence launched an intelligent medical-engineering committee on October 14. The accompanying proof-of-concept forum brought university, hospital and medical-device representatives together to discuss research translation; the report does not establish clinical efficacy or regulatory clearance.",
+      "china_scale": "The new committee links local clinical needs with engineering and device-industry expertise. Our interpretation is that repeated collaboration around specific projects can expose practical adoption barriers earlier, although the report provides no evidence of scaled deployment.",
+      "global_impact": "For medical technology companies, the useful development is an organised route between research teams and potential clinical partners. A committee announcement is an ecosystem signal, not a reason to upgrade a product's evidence rating.",
+      "monday_morning": "Map which research partnerships have named clinical validation owners and written acceptance criteria. Require prospective evidence, data-governance review and a clear regulatory pathway before treating an attractive prototype as a commercial opportunity.",
+      "related_notes": "Early institutional collaboration, not a clinical trial result or approved medical product."
+    }
+  },
+  {
     "id": "2026-10-19-china-ai-export-registration",
     "date": "2026-10-19",
     "day_number": 232,
