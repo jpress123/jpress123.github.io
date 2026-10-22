@@ -1,5 +1,63 @@
 [
   {
+    "id": "2026-10-22-tianjin-storage-education-model",
+    "date": "2026-10-22",
+    "day_number": 238,
+    "category": "Climate & Sustainability",
+    "category_emoji": "🌱",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 2,
+    "title_en": "Tianjin University Launches AI for Energy Storage Education",
+    "title_cn": "天津大学发布储能学科教育大模型",
+    "source_url": "https://news.tju.edu.cn/info/1003/617239.htm",
+    "source_name": "Tianjin University",
+    "tags": [
+      "energy storage",
+      "engineering education",
+      "domain AI"
+    ],
+    "related_signals": [],
+    "industry_lens": "education",
+    "content_type": "daily",
+    "body": {
+      "signal": "Tianjin University reported on October 21 that it launched version 1.0 of an energy-storage discipline model on October 20. The announcement describes teaching support and course agents, not demonstrated improvements in storage-system performance or student outcomes.",
+      "china_scale": "Our interpretation is that connecting specialist teaching material with engineering cases offers a practical route to training energy-storage talent. Reuse across institutions would require shared evaluation and maintained technical content.",
+      "global_impact": "For engineering educators, the strategic question is whether specialist AI develops independent reasoning about physical constraints. Faster answers alone do not establish competence in designing or operating energy systems.",
+      "monday_morning": "Test one storage-design lesson with and without AI assistance, followed by an unaided assessment. Measure reasoning quality and instructor correction time before expanding access.",
+      "related_notes": "University launch announcement. Climate category reflects energy-transition workforce development; industry lens is education."
+    }
+  },
+  {
+    "id": "2026-10-22-mobo-home-robot-reservations",
+    "date": "2026-10-22",
+    "day_number": 239,
+    "category": "Robotics & Embodied AI",
+    "category_emoji": "🤖",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 3,
+    "title_en": "Chery Opens Global Reservations for a Home Companion Robot",
+    "title_cn": "奇瑞旗下墨甲开启家庭陪伴机器人全球预订",
+    "source_url": "https://www.prnasia.com/story/552626-1.shtml",
+    "source_name": "Mojia Robotics via PR Newswire",
+    "tags": [
+      "home robots",
+      "embodied AI",
+      "consumer robotics"
+    ],
+    "related_signals": [],
+    "industry_lens": "consumer",
+    "content_type": "daily",
+    "body": {
+      "signal": "Chery subsidiary Mojia Robotics announced Mobo's launch and global reservations in Wuhu on October 21. Its company release describes a home companion robot; reservations do not establish deliveries, paid demand or reliable household performance.",
+      "china_scale": "Our interpretation is that an automotive parent gives this effort a potential route to manufacturing and service capabilities. Whether those advantages transfer economically to household robots remains a commercial test.",
+      "global_impact": "Consumer-product competitors should evaluate the service model alongside the machine. Installation, repair, software support and repeat use determine whether an engaging demonstration becomes a durable product.",
+      "monday_morning": "Define a small supervised household trial with explicit task boundaries and an easy stop procedure. Track intervention rates, repeat use and support time, and require clear delivery and data-handling terms.",
+      "related_notes": "Supplier-authored launch release, not independent testing. Classified emerging despite reservations being open."
+    }
+  },
+  {
     "id": "2026-10-21-dfagent-film-production",
     "date": "2026-10-21",
     "day_number": 236,
