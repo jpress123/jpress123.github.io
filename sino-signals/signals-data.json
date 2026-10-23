@@ -1,5 +1,63 @@
 [
   {
+    "id": "2026-10-23-intern-s2-ghys-proof",
+    "date": "2026-10-23",
+    "day_number": 240,
+    "category": "Deep Tech & Research",
+    "category_emoji": "🔬",
+    "signal_strength": "weak",
+    "strength_emoji": "🟡",
+    "impact_score": 2,
+    "title_en": "Shanghai AI Lab Helps Mathematicians Prove a Ghys Conjecture Case",
+    "title_cn": "上海AI实验室助力数学家证明Ghys猜想特例",
+    "source_url": "https://www.shlab.org.cn/shlab-s2-ghys",
+    "source_name": "Shanghai AI Laboratory",
+    "tags": [
+      "AI for science",
+      "formal verification",
+      "mathematics"
+    ],
+    "related_signals": [],
+    "industry_lens": "education",
+    "content_type": "daily",
+    "body": {
+      "signal": "Shanghai AI Laboratory's October 15 account describes mathematicians using Intern-S2 to develop a proof of the codimension-one Ghys conjecture, including complex dimension three. Jiesong Zhang's public preprint was revised October 13; the associated Lean repository reports four formalised theorems, three conditional on an explicit classical rigidity result.",
+      "china_scale": "Our interpretation is that collaboration between model developers, domain researchers and formalisation specialists creates a reusable research workflow. The result does not establish that an autonomous system can solve arbitrary open problems.",
+      "global_impact": "Research organisations should distinguish generating plausible arguments from producing independently checkable work. Model-assisted exploration becomes more useful when expert review and explicit assumptions are built into the workflow.",
+      "monday_morning": "Choose one bounded research claim and define its verification method before asking an AI to explore approaches. Record rejected arguments, human corrections and unproved dependencies alongside the final result.",
+      "related_notes": "Newly added to this archive, not an October 23 discovery. Research-stage preprint; higher-dimensional cases remain open in general. Sources: https://arxiv.org/abs/2609.37695 and https://github.com/frenzymath/HolomorphicAnosov . Repository inspected; formal proofs were not independently rerun."
+    }
+  },
+  {
+    "id": "2026-10-23-nuaa-moving-ship-drone-delivery",
+    "date": "2026-10-23",
+    "day_number": 241,
+    "category": "Robotics & Embodied AI",
+    "category_emoji": "🤖",
+    "signal_strength": "weak",
+    "strength_emoji": "🟡",
+    "impact_score": 2,
+    "title_en": "Nanjing Researchers Develop Drone Delivery to Moving Ships",
+    "title_cn": "南京科研团队研发航行船舶无人机配送技术",
+    "source_url": "https://cog.nuaa.edu.cn/2026/1022/c757a415432/page.htm",
+    "source_name": "Nanjing University of Aeronautics and Astronautics",
+    "tags": [
+      "drone logistics",
+      "moving-target tracking",
+      "maritime delivery"
+    ],
+    "related_signals": [],
+    "industry_lens": "automotive",
+    "content_type": "daily",
+    "body": {
+      "signal": "An October 22 NUAA laboratory report describes a waterborne low-altitude logistics agent developed with maritime authorities and an industry partner, recognised in an October 19 transport-AI competition. The university reports moving-deck tracking and stable delivery capabilities, but provides no independently verified operational volumes or commercial service metrics.",
+      "china_scale": "Our interpretation is that a defined river-shipping task gives researchers a concrete setting for integrating perception and delivery control. Expansion depends on performance across vessel types, weather and operating restrictions, not on competition recognition alone.",
+      "global_impact": "Ports and logistics operators should assess complete missions rather than isolated tracking demonstrations. Abort decisions, failed delivery recovery and supervision costs determine whether a trial improves an existing replenishment process.",
+      "monday_morning": "Define a controlled moving-target delivery trial with measurable weather limits, delivery accuracy and abort criteria. Compare successful missions and operator intervention time with the existing logistics method.",
+      "related_notes": "Research-team claims and competition recognition. No independent evaluation of the reported centimetre-level tracking performance; classified Early rather than commercial deployment."
+    }
+  },
+  {
     "id": "2026-10-22-tianjin-storage-education-model",
     "date": "2026-10-22",
     "day_number": 238,
