@@ -1,5 +1,63 @@
 [
   {
+    "id": "2026-10-26-zust-ai-teacher-development",
+    "date": "2026-10-26",
+    "day_number": 242,
+    "category": "Policy & Governance",
+    "category_emoji": "🏛️",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 3,
+    "title_en": "Zhejiang Tech Sets Department Targets for AI Teacher Training",
+    "title_cn": "浙江科技大学明确各专业教师AI培训要求",
+    "source_url": "https://tqma.zust.edu.cn/info/1009/5868.htm",
+    "source_name": "Zhejiang University of Science and Technology",
+    "tags": [
+      "teacher development",
+      "education leadership",
+      "AI governance"
+    ],
+    "related_signals": [],
+    "industry_lens": "education",
+    "content_type": "daily",
+    "body": {
+      "signal": "An October 23 university notice translates the Ministry of Education higher-education department's training programme into participation targets for each degree programme. Teachers must complete at least 16 online courses and testing by November 30; the notice reports requirements, not completed participation or improved teaching.",
+      "china_scale": "Our interpretation is that departmental responsibility gives a national initiative an institutional delivery mechanism. Shared training infrastructure can lower setup work, but completion certificates do not establish classroom change.",
+      "global_impact": "For education leaders, implementation design matters as much as tool access. Professional development needs time, subject relevance and a way to examine how teaching decisions change.",
+      "monday_morning": "Choose one department and pair AI training with redesign of a real learning activity. Compare students' unaided reasoning and teachers' correction workload before expanding the programme.",
+      "related_notes": "Published in this archive October 26; underlying university notice dated October 23. Policy implementation in education, not a claim that a new national law was enacted."
+    }
+  },
+  {
+    "id": "2026-10-26-sunmi-store-agent",
+    "date": "2026-10-26",
+    "day_number": 243,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 3,
+    "title_en": "SUNMI Introduces an AI Agent for Store Operations",
+    "title_cn": "商米发布面向门店经营的AI智能体",
+    "source_url": "https://www.prnasia.com/story/552872-1.shtml",
+    "source_name": "SUNMI via PR Newswire",
+    "tags": [
+      "retail operations",
+      "service design",
+      "business agents"
+    ],
+    "related_signals": [],
+    "industry_lens": "consumer",
+    "content_type": "daily",
+    "body": {
+      "signal": "SUNMI's October 22 developer-conference release introduces Hi Sunmi and describes demonstrations of voice interaction, store diagnostics, footfall analysis and marketing. This is supplier-reported launch evidence, with no independently verified improvement in store performance.",
+      "china_scale": "Our interpretation is that integrating assistance with existing retail terminals offers a practical distribution route. Adoption still depends on reliable data, staff training and clear responsibility for decisions.",
+      "global_impact": "Retail leaders should assess how an assistant changes the store manager's working day. Recommendations only create value when people can understand, challenge and act on them without increasing customer friction.",
+      "monday_morning": "Trial one manager-facing recommendation in a small store group. Record staff review time, incorrect suggestions and customer complaints, and keep consequential actions subject to human approval.",
+      "related_notes": "Company-authored release; no assumption that the new agent is deployed across the supplier's existing terminal base. Published October 26 from an October 22 announcement."
+    }
+  },
+  {
     "id": "2026-10-23-intern-s2-ghys-proof",
     "date": "2026-10-23",
     "day_number": 240,
