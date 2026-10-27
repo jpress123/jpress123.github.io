@@ -1,5 +1,63 @@
 [
   {
+    "id": "2026-10-27-dongfeng-ai-operations",
+    "date": "2026-10-27",
+    "day_number": 244,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 3,
+    "title_en": "Dongfeng Embeds AI Agents Across Automotive Operations",
+    "title_cn": "东风将AI智能体融入汽车运营",
+    "source_url": "https://www1.xinhuanet.com/auto/20261022/3d1190c75570419a8102bb789e3e8dc9/c.html",
+    "source_name": "Xinhua, reporting Dongfeng's announcement",
+    "tags": [
+      "automotive",
+      "workflow design",
+      "leadership"
+    ],
+    "related_signals": [],
+    "industry_lens": "automotive",
+    "content_type": "daily",
+    "body": {
+      "signal": "At the October 21–23 World Intelligent Connected Vehicles Conference, Dongfeng reported more than 500 AI application scenarios and over 1,500 agents online. Xinhua's October 22 account also describes humanoid work on the Mengshi production line. These are company-reported deployments, without independently audited productivity or safety results.",
+      "china_scale": "A vehicle group can connect engineering and factory teams around shared tools and operational experience. The organisational opportunity is to reuse successful workflows across plants while preserving local responsibility for quality and exceptions.",
+      "global_impact": "For automotive leaders, the useful comparison is how work changes around AI, rather than the number of agents installed. Faster recommendations do not establish lower rework, safer production or reduced material waste; those outcomes need separate measurement.",
+      "monday_morning": "Choose one recurring production exception and map the handoffs between operators, engineers and an AI assistant. Run a supervised comparison that records resolution time, rework, material waste and staff interventions, with named authority to stop or override the system.",
+      "related_notes": "Published in today's scan from an October 22 report. Emerging classification reflects the limits of company-reported evidence."
+    }
+  },
+  {
+    "id": "2026-10-27-huaxi-care-platform",
+    "date": "2026-10-27",
+    "day_number": 245,
+    "category": "Deep Tech & Research",
+    "category_emoji": "🔬",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 3,
+    "title_en": "Huaxi Connects Hospital AI to Patient and Staff Services",
+    "title_cn": "华西将医院AI连接患者与医护服务",
+    "source_url": "https://news.scu.edu.cn/info/1135/54513.htm",
+    "source_name": "Sichuan University / West China Second Hospital",
+    "tags": [
+      "healthcare",
+      "service design",
+      "clinical oversight"
+    ],
+    "related_signals": [],
+    "industry_lens": "pharma",
+    "content_type": "daily",
+    "body": {
+      "signal": "Sichuan University's October 19 report describes West China Second Hospital connecting its Huashu Zhiyi models, NEMO AIOS and hospital information systems with patient and staff applications. It identifies digital-doctor, medical-record assistant and smart-ward products and reports a platform launch in Astana. The report does not establish improved patient outcomes.",
+      "china_scale": "Linking applications to an existing hospital information environment offers a route beyond stand-alone demonstrations. Reuse depends on local clinical validation, data permissions and integration work, not simply access to a model.",
+      "global_impact": "The service-design question is whether assistance reduces the work patients and clinicians do between appointments, documentation and follow-up. A hospital-controlled platform also makes leadership choices about review, accountability and escalation more visible.",
+      "monday_morning": "Map a single documentation workflow with clinicians and patients before selecting an assistant. Test it under staff supervision, measuring correction burden and missed information; require a separate clinical evaluation before extending it into care decisions.",
+      "related_notes": "Selected for its evidenced hospital applications, not the benchmark ranking in the source headline. October 19 institutional report, newly added to the October 27 scan; benefits remain unverified."
+    }
+  },
+  {
     "id": "2026-10-26-zust-ai-teacher-development",
     "date": "2026-10-26",
     "day_number": 242,
