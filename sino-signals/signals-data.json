@@ -1,5 +1,63 @@
 [
   {
+    "id": "2026-10-29-tesa-circular-manufacturing",
+    "date": "2026-10-29",
+    "day_number": 246,
+    "category": "Climate & Sustainability",
+    "category_emoji": "🌱",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 3,
+    "title_en": "Tesa Connects Digital Tools With Circular Manufacturing in Suzhou",
+    "title_cn": "德莎在苏州连接数字工具与循环制造",
+    "source_url": "https://www.prnasia.com/story/551964-1.shtml",
+    "source_name": "Tesa via PR Newswire",
+    "tags": [
+      "circular design",
+      "automotive supply chain",
+      "sustainability"
+    ],
+    "related_signals": [],
+    "industry_lens": "automotive",
+    "content_type": "daily",
+    "body": {
+      "signal": "Tesa's October 16 release describes its Suzhou sustainability open day, including a digital circularity dashboard and 18 AI application examples. Automotive-relevant exhibits included wire-harness tape automation and exploration of on-demand debonding. The announcement does not quantify emissions reductions attributable to those AI applications.",
+      "china_scale": "The Suzhou site connects manufacturing with procurement, innovation and customer engineering, according to Tesa's own plant description. That creates a practical setting to test changes with automotive suppliers, although transfer to another line still requires validation.",
+      "global_impact": "For mobility leaders, adhesive choices connect assembly efficiency with later repair and material separation. The design opportunity is to evaluate these stages together; a digital dashboard is useful only when its measurements inform decisions and can be checked.",
+      "monday_morning": "Select one bonded component and review assembly, repair and disassembly with its supplier. Trial a change using measured material recovery, energy use and rework, and separate any AI contribution from improvements caused by equipment or process changes.",
+      "related_notes": "Newly added October 29 from an October 16 company release, not a new event today. Supporting plant context: https://www.tesa.com/en/about-tesa/locations-subsidiaries/tesa-plant-suzhou . Company claims are not an independent environmental audit."
+    }
+  },
+  {
+    "id": "2026-10-29-donghua-teacher-student-cocreation",
+    "date": "2026-10-29",
+    "day_number": 247,
+    "category": "Creative & Culture",
+    "category_emoji": "🎨",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 2,
+    "title_en": "Donghua Puts Teacher–Student Co-Creation on Its AI Training Agenda",
+    "title_cn": "东华将师生共创纳入AI教师培训议程",
+    "source_url": "https://jw.dhu.edu.cn/2026/1026/c22080a383484/page.htm",
+    "source_name": "Donghua University Academic Affairs Office",
+    "tags": [
+      "co-creation",
+      "teaching design",
+      "human agency"
+    ],
+    "related_signals": [],
+    "industry_lens": "education",
+    "content_type": "daily",
+    "body": {
+      "signal": "Donghua University's October 26 notice scheduled an October 28 faculty session led by Xu Bo on moving from teacher enablement to teacher–student co-creation. The notice links computational-thinking/AI and machine-learning courses as practical context. It documents the programme design, not attendance, completion or learning outcomes.",
+      "china_scale": "A university teaching-development programme can give instructors a shared setting to compare classroom practices. Linked course examples create a starting point for adaptation, but evidence of adoption across departments is not provided.",
+      "global_impact": "The education signal is a shift in the proposed relationship between teacher, learner and AI. For curriculum leaders, co-creation needs an explicit account of which decisions students make and how their own reasoning is assessed.",
+      "monday_morning": "Ask a teacher and students to redesign one learning activity together, identifying when AI may suggest and when the learner must decide. Compare students' explanations and revisions with an unaided task rather than treating polished output as evidence of learning.",
+      "related_notes": "Newly added October 29; source notice October 26 for a session scheduled October 28. No claim that the event occurred or that the approach has proven effective."
+    }
+  },
+  {
     "id": "2026-10-27-dongfeng-ai-operations",
     "date": "2026-10-27",
     "day_number": 244,
