@@ -1,5 +1,34 @@
 [
   {
+    "id": "2026-10-29-bankcomm-ai-governance",
+    "date": "2026-10-29",
+    "day_number": 248,
+    "category": "Policy & Governance",
+    "category_emoji": "🏛️",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 3,
+    "title_en": "Bank of Communications Makes Governance Central to Scaling Financial AI",
+    "title_cn": "交通银行将治理置于金融AI规模化应用核心",
+    "source_url": "https://www.financeun.com/newsDetail/66484.shtml",
+    "source_name": "China Finance Network, supplied by Bank of Communications",
+    "tags": [
+      "banking",
+      "AI governance",
+      "leadership"
+    ],
+    "related_signals": [],
+    "industry_lens": "financial services",
+    "content_type": "daily",
+    "body": {
+      "signal": "In an October 28 bank-supplied account of the Financial Street Forum, Bank of Communications CIO Liu Lei described AI applications in cross-border finance, wealth management and integrated operations. He called for staff participation, redesigned business processes and risk backstops, alongside monitoring, circuit breakers and fallback arrangements before scaling AI. The account establishes the bank's stated approach, not independently measured outcomes.",
+      "china_scale": "A common technology foundation and group-wide governance give the bank a route to reuse controls across business units. The leadership question is how branch staff, business owners and risk teams participate in that expansion, rather than treating each application as an isolated technology project.",
+      "global_impact": "For overseas banks, the relevant comparison is the design of accountability around AI-assisted financial services. My interpretation is that decision rights, escalation and recovery procedures deserve the same executive attention as model capability; the source does not demonstrate that this approach has already improved customer outcomes.",
+      "monday_morning": "Trial one AI-assisted banking workflow with frontline staff and risk colleagues. Identify who can pause it, rehearse a fallback and track customer outcomes alongside time saved before expanding.",
+      "related_notes": "Published October 29 from an October 28 account attributed to the bank. Added at Joseph's request as a non-Mobility LinkedIn lead; earlier website entries are retained. No quantified performance or independent effectiveness claim."
+    }
+  },
+  {
     "id": "2026-10-29-tesa-circular-manufacturing",
     "date": "2026-10-29",
     "day_number": 246,
