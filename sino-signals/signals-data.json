@@ -1,5 +1,63 @@
 [
   {
+    "id": "2026-10-30-henan-hospital-ai-procurement",
+    "date": "2026-10-30",
+    "day_number": 250,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 2,
+    "title_en": "Henan Hospital Bundles AI Models With Integration and Staff Training",
+    "title_cn": "河南医院将AI模型与系统集成员工培训打包采购",
+    "source_url": "https://xinmi.zfcg.henan.gov.cn/henan/content?bz=1&channelCode=H600101&infoId=2037016",
+    "source_name": "Henan Government Procurement Network",
+    "tags": [
+      "hospital operations",
+      "service design",
+      "AI procurement"
+    ],
+    "related_signals": [],
+    "industry_lens": "pharma",
+    "content_type": "daily",
+    "body": {
+      "signal": "On October 29, the First Affiliated Hospital of Henan University of Science and Technology issued tender 豫财招标采购-2026-1424 for AI infrastructure and medical models, with an RMB8.18 million budget and ceiling. Its scope includes integration with existing hospital systems, maintenance, technical support and staff training. This is a procurement notice, not an awarded contract, deployed service or demonstration of clinical benefit.",
+      "china_scale": "The hospital is specifying a combined implementation package rather than a model purchase alone. The organisational opportunity is to align software connections, support and staff readiness, although one hospital's tender does not establish nationwide adoption.",
+      "global_impact": "For overseas hospital leaders, this is a concrete example of making implementation responsibilities visible before vendor selection. My interpretation is that service design and operational ownership should be assessed alongside technical capability, with clinical effectiveness evaluated separately.",
+      "monday_morning": "Review one proposed AI workflow with frontline staff, IT and clinical governance colleagues. Specify integration ownership, escalation and training requirements, then define evidence needed before expanding beyond a supervised pilot.",
+      "related_notes": "Official notice published October 29; bids due November 19 at 09:00 Beijing time. Budget is not expenditure. No vendor, patient outcome or clinical performance is claimed."
+    }
+  },
+  {
+    "id": "2026-10-30-bona-ai-cinema",
+    "date": "2026-10-30",
+    "day_number": 249,
+    "category": "Creative & Culture",
+    "category_emoji": "🎨",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 3,
+    "title_en": "Bona Takes AI Filmmaking Into Cinemas and Tests Audience Demand",
+    "title_cn": "博纳将AI电影推向院线检验观众需求",
+    "source_url": "https://m.nbd.com.cn/articles/2026-10-26/4618530.html",
+    "source_name": "National Business Daily",
+    "tags": [
+      "filmmaking",
+      "creative leadership",
+      "audience demand"
+    ],
+    "related_signals": [],
+    "industry_lens": "entertainment",
+    "content_type": "daily",
+    "body": {
+      "signal": "Bona's AI-assisted feature Sanxingdui: Future Past opened in Chinese cinemas on October 23. National Business Daily reported weak early attendance on October 26; JETRO's October 29 account describes AI-generated imagery with creative planning and production decisions retained by humans. A commercial release is established, but audience acceptance and profitability are not.",
+      "china_scale": "The project connects generative production with an established cinema distribution channel. My interpretation is that creative teams now face a more demanding test than producing impressive clips: sustaining characters, narrative and audience attention across a feature.",
+      "global_impact": "For film and entertainment leaders outside China, the useful comparison is the entire production and audience-development process. Generating footage does not establish that viewers value the story, and early box-office observations should not be treated as a final result.",
+      "monday_morning": "Test a short sequence with viewers who are not told how it was made. Track story comprehension, emotional engagement and revision effort, and give a named creative lead authority over the final cut.",
+      "related_notes": "Release date October 23, not October 30. Additional production reporting: https://www.jetro.go.jp/biznews/2026/10/cb75ca69116f1bcb.html . Strong denotes market release, not commercial success; no cost-saving or final box-office claim."
+    }
+  },
+  {
     "id": "2026-10-29-bankcomm-ai-governance",
     "date": "2026-10-29",
     "day_number": 248,
