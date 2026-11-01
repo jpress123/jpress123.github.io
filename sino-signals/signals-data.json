@@ -1,5 +1,63 @@
 [
   {
+    "date": "2026-11-01",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 3,
+    "related_signals": [],
+    "content_type": "daily",
+    "id": "2026-11-01-beijing-school-ai-review",
+    "day_number": 252,
+    "category": "Policy & Governance",
+    "category_emoji": "🏛️",
+    "title_en": "Beijing Reviews School AI Through Classroom Practice and Governance",
+    "title_cn": "北京从课堂实践与治理审视学校AI应用",
+    "source_url": "https://ai.bnu.edu.cn/ggjxz/xyxw/9da4dfeaf9364cccbae0e9a1ef7e0f4d.htm",
+    "source_name": "Beijing Normal University School of Artificial Intelligence",
+    "tags": [
+      "school leadership",
+      "learning design",
+      "AI governance"
+    ],
+    "industry_lens": "education",
+    "body": {
+      "signal": "Beijing Normal University's October 30 announcement describes a school-AI bluebook released on October 29 with the Beijing Digital Education Centre. Its September survey covered 106 schools and 18 education departments, and it examines teaching design, language learning, homework and other classroom applications. The announcement identifies human-AI collaboration, suitability, data governance and educational equity as issues requiring attention.",
+      "china_scale": "The review connects city-level coordination with district and school experience. That provides an organisational route for sharing lessons, although the announcement does not establish representative causal evidence of improved learning across Beijing.",
+      "global_impact": "For education leaders elsewhere, the transferable practice is to assess AI through actual teaching situations and explicit boundaries. Our interpretation is that product selection should follow learning goals and teacher judgment, with access and governance reviewed alongside capability.",
+      "monday_morning": "Choose one classroom activity and ask teachers to identify what AI supports and what remains their responsibility. Compare student work, teacher effort and access barriers, and set data-use rules before widening the trial.",
+      "related_notes": "Added November 1; release October 29 and university report October 30. Survey coverage is not proof of learning gains. Source is the team's own account of its review."
+    }
+  },
+  {
+    "date": "2026-11-01",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 3,
+    "related_signals": [],
+    "content_type": "daily",
+    "id": "2026-11-01-wechat-store-robot",
+    "day_number": 251,
+    "category": "Robotics & Embodied AI",
+    "category_emoji": "🤖",
+    "title_en": "WeChat Pay Brings a Service Robot Into Convenience Retail",
+    "title_cn": "微信支付将服务机器人带入便利店",
+    "source_url": "https://www.sohu.com/a/1094483521_121010226",
+    "source_name": "Shenzhen Commercial Daily via Sohu",
+    "tags": [
+      "retail service",
+      "human robot collaboration",
+      "service design"
+    ],
+    "industry_lens": "consumer",
+    "body": {
+      "signal": "On October 29, a WeChat Pay service robot began operating at the 7-ELEVEN store in Tencent's Shenzhen headquarters campus, according to Shenzhen Commercial Daily. The report describes product questions, promotion guidance, ordering and payment assistance alongside staff service. This establishes a first-store deployment, not independently measured productivity or a chain-wide rollout.",
+      "china_scale": "Connecting a familiar payment service with in-store assistance gives the operator a practical setting to test customer interactions. The organisational opportunity is to redesign the handoff between routine questions and the physical work handled by employees, rather than assuming a robot replaces a whole role.",
+      "global_impact": "For retail leaders outside China, the useful question is whether assistance improves the shopping experience while preserving an easy route to a person. Our interpretation is that service design and staff responsibilities matter as much as conversational capability; the report supplies no controlled evidence of shorter queues or higher sales.",
+      "monday_morning": "Trial one repetitive customer request with store colleagues and a clear human fallback. Measure completion, incorrect orders, staff interventions and customer preference before expanding the robot's responsibilities.",
+      "related_notes": "Added November 1 from an October 29 report. Classified emerging because this is one reported store deployment. No quantified savings or workforce replacement claim."
+    }
+  },
+  {
     "id": "2026-10-30-henan-hospital-ai-procurement",
     "date": "2026-10-30",
     "day_number": 250,
