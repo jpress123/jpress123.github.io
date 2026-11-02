@@ -1,5 +1,63 @@
 [
   {
+    "id": "2026-11-02-licheng-ai-cultural-drama",
+    "date": "2026-11-02",
+    "day_number": 254,
+    "category": "Creative & Culture",
+    "category_emoji": "🎨",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 2,
+    "title_en": "Licheng Studio Brings Local Heritage Into AI Drama",
+    "title_cn": "黎城本土工作室以AI短剧讲述地方文化",
+    "source_url": "http://sx.people.com.cn/n2/2026/1031/c189130-41737954.html",
+    "source_name": "Shanxi Daily via People's Daily Online",
+    "tags": [
+      "creative collaboration",
+      "cultural storytelling",
+      "short drama"
+    ],
+    "related_signals": [],
+    "industry_lens": "entertainment",
+    "content_type": "daily",
+    "body": {
+      "signal": "Shanxi Daily reported on October 31 that a Licheng studio's AI-assisted cultural short drama, 我在古黎当上仙, premiered on Youku on October 30. The report describes local creators combining generated imagery with a fantasy story rooted in the area's heritage.",
+      "china_scale": "The case connects a local creative team with an established streaming outlet. Our interpretation is that local knowledge and distribution relationships deserve as much attention as generation tools when assessing repeatability.",
+      "global_impact": "For entertainment and cultural organisations, the practical question is who controls the story when AI enters production. The report offers no production budget, audience results or evidence of increased tourism, so commercial impact remains unproven.",
+      "monday_morning": "Prototype one short scene with local storytellers and an editor responsible for accuracy and permissions. Compare audience understanding and revision effort before commissioning a series.",
+      "related_notes": "A reported release, not evidence of commercial scale. Publisher's HTTP article verified directly; HTTPS returned a certificate error."
+    }
+  },
+  {
+    "id": "2026-11-02-wangfu-ai-pharmacist",
+    "date": "2026-11-02",
+    "day_number": 253,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 2,
+    "title_en": "Wangfu Hospital Adds AI Answers to Pharmacy Services",
+    "title_cn": "王府医院将AI问答引入药学服务",
+    "source_url": "https://www.rimh.cn/28376.html",
+    "source_name": "Beijing Royal Integrative Medicine Hospital",
+    "tags": [
+      "pharmacy services",
+      "service design",
+      "human oversight"
+    ],
+    "related_signals": [],
+    "industry_lens": "pharma",
+    "content_type": "daily",
+    "body": {
+      "signal": "On October 30, Beijing's Wangfu Hospital announced a QR-accessible AI pharmacy question service using a language model and pharmacy knowledge base. The hospital describes round-the-clock reference answers and directs complex individual medication questions to professional pharmacists.",
+      "china_scale": "The announcement places AI inside an existing hospital service rather than a separate consumer advice app. Our interpretation is that pharmacy teams offer a practical setting for testing responsibility, escalation and knowledge maintenance; the report supplies no adoption or safety evaluation.",
+      "global_impact": "For healthcare leaders, the relevant design decision is where automated information ends and professional judgement begins. This single-hospital announcement does not establish fewer medication errors, lower workload or readiness for wider deployment.",
+      "monday_morning": "Evaluate a narrow information service with pharmacy staff before expanding its scope. Audit incorrect answers, escalation quality and accessibility, with clear ownership of clinical content.",
+      "related_notes": "Hospital announcement, not independent clinical validation. Source event October 30; archived November 2."
+    }
+  },
+  {
     "date": "2026-11-01",
     "signal_strength": "emerging",
     "strength_emoji": "🟠",
