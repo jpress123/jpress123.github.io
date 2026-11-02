@@ -1,0 +1,24 @@
+{
+  "test_date": "2026-11-02",
+  "status": "verified-ready",
+  "discovery_url": "https://technode.com/2026/10/29/chinese-aaa-wuxia-action-game-phantom-blade-zero-launches-on-ps5-and-pc/",
+  "published_source_url": "https://www.3dmgame.com/news/202610/3958201.html",
+  "published_source_name": "3DM",
+  "corroboration": "https://store.steampowered.com/app/4115450/Phantom_Blade_Zero/",
+  "checks": [
+    "No duplicate story or URL in 254-entry remote archive",
+    "China report October 29; English Steam listing October 28, both disclosed",
+    "No AI-use or commercial-success claims",
+    "Extra Entertainment entry explicitly requested for source test",
+    "254 existing entries preserved"
+  ],
+  "linkedin_status": "Working material only; no submission or approval request. Today's post already published.",
+  "linkedin_working_draft": "Sino-Signals | November 2, 2026\n\nCan a game's cultural identity become part of how it plays?\n\nS-GAME's Phantom Blade Zero brings wuxia storytelling into a released console and PC action game. 3DM reports an October 29 China launch, with the standard PC edition priced at RMB 268. Steam confirms availability, displaying October 28 on its English storefront.\n\nFor China's entertainment industry, the interesting design question is how martial-arts traditions become interactive experiences. A distinctive setting earns attention; combat, controls and narrative must sustain it.\n\nFor creative leaders elsewhere, this offers a practical case for examining cultural specificity alongside international distribution. Multilingual availability makes the work accessible, but it does not establish commercial success. The sources also do not establish AI-assisted production, so this is a creativity and design signal rather than evidence of AI adoption.\n\nThinking futureback about this signal, consider testing one culturally rooted scene with local specialists and unfamiliar players. Track comprehension, emotional engagement and control usability before deciding what to localise.\n\nOriginal article:\nhttps://www.3dmgame.com/news/202610/3958201.html\n\nSee it on Sino-Signals:\nhttps://www.josephpress.com/sino-signals/#2026-11-02-phantom-blade-zero\n\n#ChinaAI #CreativeAndCulture #Entertainment #GameDesign #sinosignals #aci",
+  "substack_working_material": {
+    "signal": "3DM reports that S-GAME released Phantom Blade Zero in China on October 29 for PlayStation 5 and PC, with the standard PC edition priced at RMB 268. The Steam listing confirms availability and describes a fusion of wuxia storytelling and action built with Unreal Engine 5; its English storefront displays October 28 as the release date.",
+    "china_scale": "The project pairs Chinese martial-arts storytelling with distribution through established console and PC stores. The design opportunity is to make a culturally specific world playable through combat and narrative, rather than treating heritage only as visual decoration.",
+    "global_impact": "For entertainment leaders, this is a concrete case of Chinese creative work reaching international storefronts with multilingual support. Availability is not proof of commercial success, and the sources do not establish sales, production economics or AI-assisted creation.",
+    "monday_morning": "Test one culturally rooted game scene with local creative specialists and players unfamiliar with its references. Compare comprehension, emotional engagement and control usability before deciding which elements to localise.",
+    "related_notes": "Published November 2; reported China launch October 29. Source is the underlying 3DM report, corroborated against the official Steam listing."
+  }
+}

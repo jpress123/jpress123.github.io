@@ -1,5 +1,34 @@
 [
   {
+    "id": "2026-11-02-phantom-blade-zero",
+    "date": "2026-11-02",
+    "day_number": 255,
+    "category": "Creative & Culture",
+    "category_emoji": "🎨",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "impact_score": 2,
+    "title_en": "Phantom Blade Zero Brings Wuxia Design to Global Game Stores",
+    "title_cn": "影之刃零将武侠设计带入全球游戏平台",
+    "source_url": "https://www.3dmgame.com/news/202610/3958201.html",
+    "source_name": "3DM",
+    "tags": [
+      "game design",
+      "wuxia",
+      "cultural storytelling"
+    ],
+    "related_signals": [],
+    "industry_lens": "entertainment",
+    "content_type": "daily",
+    "body": {
+      "signal": "3DM reports that S-GAME released Phantom Blade Zero in China on October 29 for PlayStation 5 and PC, with the standard PC edition priced at RMB 268. The Steam listing confirms availability and describes a fusion of wuxia storytelling and action built with Unreal Engine 5; its English storefront displays October 28 as the release date.",
+      "china_scale": "The project pairs Chinese martial-arts storytelling with distribution through established console and PC stores. The design opportunity is to make a culturally specific world playable through combat and narrative, rather than treating heritage only as visual decoration.",
+      "global_impact": "For entertainment leaders, this is a concrete case of Chinese creative work reaching international storefronts with multilingual support. Availability is not proof of commercial success, and the sources do not establish sales, production economics or AI-assisted creation.",
+      "monday_morning": "Test one culturally rooted game scene with local creative specialists and players unfamiliar with its references. Compare comprehension, emotional engagement and control usability before deciding which elements to localise.",
+      "related_notes": "Published November 2; reported China launch October 29. Source is the underlying 3DM report, corroborated against the official Steam listing."
+    }
+  },
+  {
     "id": "2026-11-02-licheng-ai-cultural-drama",
     "date": "2026-11-02",
     "day_number": 254,
