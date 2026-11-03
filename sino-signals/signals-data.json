@@ -1,5 +1,63 @@
 [
   {
+    "date": "2026-11-03",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "related_signals": [],
+    "content_type": "daily",
+    "id": "2026-11-03-guangdong-teaching-agent-workshop",
+    "day_number": 257,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "impact_score": 2,
+    "title_en": "Guangdong University Puts Teachers Into Agent Design Workshops",
+    "title_cn": "广东财经大学安排教师教学智能体设计实训",
+    "source_url": "https://jwc.gdufe.edu.cn/2026/1102/c4133a244843/page.htm",
+    "source_name": "Guangdong University of Finance and Economics",
+    "tags": [
+      "teacher development",
+      "learning design",
+      "teaching agents"
+    ],
+    "industry_lens": "education",
+    "body": {
+      "signal": "Guangdong University of Finance and Economics announced a November 6 training session for up to 60 teachers, combining a lecture with a hands-on teaching-agent design workshop. Its November 2 notice, 教务〔2026〕125号, connects participation to teaching-unit assessment and continuing-education credit.",
+      "china_scale": "The institutional lever is staff development: teachers are being asked to practise designing classroom assistants, rather than only attend a product demonstration. Linking training to departmental assessment creates an organisational route for participation, but does not establish classroom adoption.",
+      "global_impact": "For education leaders, the case raises a design question about whether teachers have time and authority to shape the assistants they will use. The workshop is still scheduled, and the notice provides no evidence of completed deployments or improved student outcomes.",
+      "monday_morning": "Invite a small teacher group to design one assistant for a bounded learning activity using synthetic student work. Assess correction effort, pedagogical usefulness and teacher control before involving students or real student data.",
+      "related_notes": "Training announced November 2 for November 6; not yet completed. Early institutional implementation signal."
+    }
+  },
+  {
+    "date": "2026-11-03",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "related_signals": [],
+    "content_type": "daily",
+    "id": "2026-11-03-hkma-sage-agent-governance",
+    "day_number": 256,
+    "category": "Policy & Governance",
+    "category_emoji": "🏛️",
+    "impact_score": 3,
+    "title_en": "Hong Kong Links Financial Agent Trials to Governance",
+    "title_cn": "香港将金融智能体应用探索与治理结合",
+    "source_url": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261102-4/",
+    "source_name": "Hong Kong Monetary Authority",
+    "tags": [
+      "agent governance",
+      "financial services",
+      "leadership"
+    ],
+    "industry_lens": "financial services",
+    "body": {
+      "signal": "Hong Kong's Monetary Authority launched Project SAGE on November 2 and established an expert group spanning finance, technology, professional services and academia. The programme pairs exploration of agent-led payments, procurement and treasury services with work on identity, delegated authority, interoperability and accountability.",
+      "china_scale": "Hong Kong is bringing service providers and governance specialists into one programme while financial-agent applications are still being explored. This is a Hong Kong initiative, not a mainland-wide mandate or a certification of deployed agents.",
+      "global_impact": "For financial-services leaders, the practical issue is how an agent proves both who it is and what a customer has authorised it to do. The announcement sets an exploration agenda; it does not demonstrate safer transactions or establish new binding requirements.",
+      "monday_morning": "Map a single agent-assisted payment journey with product, operations and risk teams. Specify authorisation limits, human escalation and an auditable record of each action before testing with simulated transactions.",
+      "related_notes": "Announced November 2; published here November 3. Programme launch, not evidence of scaled deployment."
+    }
+  },
+  {
     "id": "2026-11-02-phantom-blade-zero",
     "date": "2026-11-02",
     "day_number": 255,
