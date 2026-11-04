@@ -1,5 +1,63 @@
 [
   {
+    "date": "2026-11-04",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 2,
+    "related_signals": [],
+    "content_type": "daily",
+    "id": "2026-11-04-douyin-creator-ai-animation",
+    "day_number": 259,
+    "category": "Creative & Culture",
+    "category_emoji": "🎨",
+    "title_en": "Douyin Creators Combine AI Animation With Human Editorial Judgment",
+    "title_cn": "抖音创作者以人工智能动画结合人工编辑判断",
+    "source_url": "https://newrank.cn/article/detail/34823",
+    "source_name": "Newrank",
+    "tags": [
+      "creative collaboration",
+      "animation",
+      "creator economy"
+    ],
+    "industry_lens": "entertainment",
+    "body": {
+      "signal": "In a November 3 interview, Newrank describes how Douyin creator 电子智人 used AI for code and animation while personally specifying requirements, reviewing output and changing direction. The creator says a recent explainer reused an existing rendering engine and visual assets, with much of the work spent on revision and rendering.",
+      "china_scale": "Douyin and Douyin Select are encouraging this format through a creator activity, according to Newrank's interviews with the platform. Existing distribution and reusable production assets offer a route for creators to experiment, but the report does not establish typical production costs.",
+      "global_impact": "For media and entertainment teams, the evidenced change is a division of creative labour between generated execution and human direction. A single creator's account cannot establish industry-wide productivity, and reported popularity is not proof of factual accuracy or audience learning.",
+      "monday_morning": "Prototype a short explainer with an editor, a subject specialist and an AI animation workflow. Track revision effort and factual errors, and test whether viewers understand the intended message before expanding production.",
+      "related_notes": "Interview-based reporting, not an independently audited productivity study. Selected for creative production practice, not abstract mathematical research."
+    }
+  },
+  {
+    "date": "2026-11-04",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 2,
+    "related_signals": [],
+    "content_type": "daily",
+    "id": "2026-11-04-hunan-principal-ai-plans",
+    "day_number": 258,
+    "category": "Policy & Governance",
+    "category_emoji": "🏛️",
+    "title_en": "Hunan Principals Turn AI Training Into School Action Plans",
+    "title_cn": "湖南校长将人工智能培训转化为学校行动方案",
+    "source_url": "https://jyt.hunan.gov.cn/jyt/sjyt/dhjyg/djgxwdt/202611/t20261103_34093942.html",
+    "source_name": "Hunan Provincial Department of Education",
+    "tags": [
+      "school leadership",
+      "teacher development",
+      "AI governance"
+    ],
+    "industry_lens": "education",
+    "body": {
+      "signal": "A November 3 Hunan education-department report describes AI training held in Changsha during October 25–30 for 100 school principals from Changsha, Zhuzhou and Xiangtan. Participants visited three schools and worked in ten groups, presenting ten school digital-transformation action plans.",
+      "china_scale": "The programme connects school leadership, practical observation and planning within an existing regional teacher-development system. It offers an organisational route from tool demonstrations to decisions about teaching and management, rather than evidence of region-wide implementation.",
+      "global_impact": "For education leaders elsewhere, the useful question is what principals must change around AI use: staff support, classroom routines and responsibility for decisions. The report documents training and plans, but does not establish improved learning outcomes or completed rollout.",
+      "monday_morning": "Bring a small group of school leaders and teachers together around one classroom problem. Visit an existing practice, draft a bounded trial and name who reviews errors, supports staff and decides whether to expand it.",
+      "related_notes": "Report published November 3 about October 25–30 training. Action plans are not evidence of measured classroom impact."
+    }
+  },
+  {
     "date": "2026-11-03",
     "signal_strength": "emerging",
     "strength_emoji": "🟠",
