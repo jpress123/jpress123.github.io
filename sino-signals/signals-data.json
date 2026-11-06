@@ -1,5 +1,63 @@
 [
   {
+    "date": "2026-11-06",
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 2,
+    "related_signals": [],
+    "content_type": "daily",
+    "id": "2026-11-06-nanjing-bank-industry-agents",
+    "day_number": 261,
+    "title_en": "Nanjing Bank Uses AI to Prepare Industry Financing Conversations",
+    "title_cn": "南京银行以AI辅助产业融资对接",
+    "source_url": "https://wap.njcb.com.cn/njcb/2026-11/04/article_2026110416224221585.html",
+    "source_name": "Bank of Nanjing",
+    "tags": [
+      "banking workflows",
+      "industry intelligence",
+      "human oversight"
+    ],
+    "industry_lens": "financial services",
+    "body": {
+      "signal": "At a November 3 finance roadshow, Bank of Nanjing demonstrated AI support for understanding industry customers and matching financing proposals. Its account describes a pre-visit one-page briefing, agents that capture experience, and integration of industry data.",
+      "china_scale": "The municipal event brought financial institutions and technology companies together around application needs. The bank's example locates AI within relationship preparation and sector analysis rather than a standalone customer chatbot.",
+      "global_impact": "For banking leaders, the organisational question is how staff check and challenge machine-prepared views of a business. The bank's own report does not quantify credit quality, time savings or customer outcomes.",
+      "monday_morning": "Examine a pre-meeting briefing workflow with relationship managers. Require traceable evidence and human review of financing suggestions before expanding its role.",
+      "related_notes": "Bank-authored account of a November 3 demonstration, published on a November 4 URL. Not evidence of autonomous credit approval or measured lending performance."
+    }
+  },
+  {
+    "date": "2026-11-06",
+    "category": "Platforms & Social",
+    "category_emoji": "🌐",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 3,
+    "related_signals": [],
+    "content_type": "daily",
+    "id": "2026-11-06-qwen-livestream-retail",
+    "day_number": 260,
+    "title_en": "Qwen Turns AI Subscriptions Into Livestream Shopping",
+    "title_cn": "千问将AI订阅带入直播购物",
+    "source_url": "https://finance.sina.com.cn/tech/it/2026-11-03/doc-inixnitv8608104.shtml",
+    "source_name": "Sina Technology",
+    "tags": [
+      "retail design",
+      "AI subscriptions",
+      "consumer adoption"
+    ],
+    "industry_lens": "consumer",
+    "body": {
+      "signal": "On November 2, Qwen Office CEO Chen Yusen joined Li Jiaqi's livestream to sell a one-month AI membership for RMB 0.01. Sina reports nearly 100,000 memberships sold in about half an hour, alongside demonstrations including an interactive fishing map.",
+      "china_scale": "The offer connects AI services to an established shopping host and checkout experience. Our interpretation is that familiar retail conventions can make unfamiliar digital services easier to try.",
+      "global_impact": "Consumer brands can study how demonstrations and packaging translate technical capabilities into understandable tasks. Promotional purchases do not establish sustained use, renewal or profitable demand.",
+      "monday_morning": "Review how customers first experience an AI service. Test whether a practical demonstration and clear membership terms improve understanding, then measure use after the promotion ends.",
+      "related_notes": "Event November 2; Sina report November 3; archived November 6. Sales figures are reported livestream figures, not independently audited retention."
+    }
+  },
+  {
     "date": "2026-11-04",
     "signal_strength": "emerging",
     "strength_emoji": "🟠",
