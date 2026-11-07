@@ -1,5 +1,63 @@
 [
   {
+    "date": "2026-11-07",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "content_type": "daily",
+    "related_signals": [],
+    "id": "2026-11-07-xuan-paper-ai-storyboards",
+    "day_number": 263,
+    "category": "Creative & Culture",
+    "category_emoji": "🎨",
+    "industry_lens": "entertainment",
+    "impact_score": 2,
+    "title_en": "Drama Makers Learn Papermaking Before Generating Their Storyboards",
+    "title_cn": "《桃花潭记》主创先学造纸再用AI创作",
+    "source_name": "Wenyi Bao (文艺报)",
+    "source_url": "https://wyb.chinawriter.com.cn/content/202611/04/content85810.html",
+    "tags": [
+      "short drama",
+      "Xuan paper",
+      "art direction"
+    ],
+    "body": {
+      "signal": "In a November 4 report, the director of 桃花潭记 described visiting Jing County in Anhui to learn from Xuan papermaking practitioners. The team used AI for initial storyboards, images and music, while people retained responsibility for the script, visual design and editorial review.",
+      "china_scale": "The reproducible part is the commissioning decision: learn from the people who practise a craft before asking a model to depict it. A studio can repeat that sequence across subjects, but each craft requires its own reference work.",
+      "global_impact": "A convincing picture can still show a gesture that would ruin a sheet of paper. For producers working with living traditions, approval by someone who knows the process tests something that visual continuity alone cannot.",
+      "monday_morning": "Choose one generated sequence and give a practitioner the reference footage and storyboard. Ask them to mark the first physically implausible action and budget for the revision.",
+      "related_notes": ""
+    }
+  },
+  {
+    "date": "2026-11-07",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "content_type": "daily",
+    "related_signals": [],
+    "id": "2026-11-07-intuitive-fosun-surgical-feedback",
+    "day_number": 262,
+    "category": "Robotics & Embodied AI",
+    "category_emoji": "🤖",
+    "industry_lens": "pharma",
+    "impact_score": 3,
+    "title_en": "Intuitive Fosun Brings Force Feedback to Its China Surgical Showcase",
+    "title_cn": "直观复星在华展示手术机器人力反馈",
+    "source_name": "Guangzhou Daily (新花城)",
+    "source_url": "https://huacheng.gz-cmc.com/pages/2026/11/05/f6e15763224a49a8b8cd25cf936e138f.html",
+    "tags": [
+      "surgical robotics",
+      "force feedback",
+      "clinical training"
+    ],
+    "body": {
+      "signal": "At Shanghai’s import expo, Intuitive Fosun showed the da Vinci 5 surgical robot in China for the first time, Guangzhou Daily reported on November 5. The system offers force feedback to the surgeon; the company also launched its locally developed My Intuitive digital platform.",
+      "china_scale": "The company reports a network of 28 da Vinci training centres. That gives hospitals a place to teach how to interpret a new signal at the console, although it does not establish how many clinicians have trained on this model.",
+      "global_impact": "For hospital leaders, the useful comparison is how a surgical team learns to act on tactile information. A trade-show demonstration establishes neither improved patient outcomes nor authorisation for routine use.",
+      "monday_morning": "Ask a surgical educator to design a simulator exercise in which visual and tactile cues disagree. Specify who pauses the exercise and what would count as a safe response before comparing equipment.",
+      "related_notes": ""
+    }
+  },
+  {
     "date": "2026-11-06",
     "category": "Intelligent Production",
     "category_emoji": "🏭",
