@@ -1,4 +1,62 @@
 [
+{
+  "date": "2026-11-09",
+  "signal_strength": "emerging",
+  "strength_emoji": "🟠",
+  "content_type": "daily",
+  "related_signals": [],
+  "id": "2026-11-09-ningbo-bank-trade-matching",
+  "day_number": 267,
+  "category": "Platforms & Social",
+  "category_emoji": "🌐",
+  "industry_lens": "financial services",
+  "impact_score": 3,
+  "title_en": "Bank of China Pairs Digital Matching With Buyer Meetings for Ningbo Firms",
+  "title_cn": "中行宁波市分行以智能匹配衔接进博会买家面谈",
+  "source_name": "China Financial Information Network",
+  "source_url": "https://www.cnfin.com/cmjj-lb/detail/20261107/4492436_1.html",
+  "tags": [
+    "trade finance",
+    "buyer matching",
+    "relationship banking"
+  ],
+  "body": {
+    "signal": "At Shanghai’s import expo, Bank of China’s Ningbo branch brought companies from sectors including medical equipment and international supply chains into buyer meetings. A November 7 report describes system-assisted matching followed by several rounds of face-to-face talks. It gives no conversion rate attributable to the matching system or details of its model.",
+    "china_scale": "The bank can draw on its cross-border matchmaking platform and on branch staff who know local businesses. At the expo, a buyer is available for a conversation after a potential partner surfaces on screen.",
+    "global_impact": "A bank organising introductions can affect which exporters get time with a buyer. The quality of a shortlist matters to firms that never reach a meeting as well as to those that do.",
+    "monday_morning": "Trace a buyer request from shortlist to meeting and follow-up. Ask which qualified suppliers were left out and whether staff could put one forward.",
+    "related_notes": ""
+  }
+},
+{
+  "date": "2026-11-09",
+  "signal_strength": "emerging",
+  "strength_emoji": "🟠",
+  "content_type": "daily",
+  "related_signals": [],
+  "id": "2026-11-09-nansha-ai-shopping-reviews",
+  "day_number": 266,
+  "category": "Policy & Governance",
+  "category_emoji": "🏛️",
+  "industry_lens": "consumer",
+  "impact_score": 4,
+  "title_en": "Guangzhou District Tells Sellers to Label AI Ads and Stop Inventing Customer Experiences",
+  "title_cn": "广州南沙要求标注AI营销内容，禁止虚构消费体验",
+  "source_name": "Guangzhou Nansha District Administration for Market Regulation",
+  "source_url": "https://www.gzns.gov.cn/gznsscjg/gkmlpt/content/11/11081/post_11081332.html",
+  "tags": [
+    "consumer reviews",
+    "synthetic media",
+    "retail platforms"
+  ],
+  "body": {
+    "signal": "In guidance for the November 11 shopping festival, Guangzhou’s Nansha district told platforms to oversee AI marketing materials, customer-service scripts and virtual livestream hosts. Sellers using generated material in reviews must not invent product experiences. The guidance also calls for prominent labels on generated marketing imagery and records of how promotional traffic is allocated.",
+    "china_scale": "A marketplace can apply these checks where sellers submit campaign materials and where the platform distributes them. A shopper who sees a labelled image still needs to know whether anyone actually tried the product.",
+    "global_impact": "Retail teams buying generated creative work need two different answers from an agency. Who made the image, and whose experience supports the claim? An AI label answers only the first question.",
+    "monday_morning": "Pick a promoted review and ask the seller to trace its claim to a real customer experience. Check what happens to the listing if the seller cannot supply that evidence.",
+    "related_notes": ""
+  }
+},
   {
     "date": "2026-11-08",
     "signal_strength": "emerging",
