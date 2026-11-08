@@ -1,5 +1,63 @@
 [
   {
+    "date": "2026-11-08",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "content_type": "daily",
+    "related_signals": [],
+    "id": "2026-11-08-agentar-clinical-workbench",
+    "day_number": 265,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "industry_lens": "pharma",
+    "impact_score": 3,
+    "title_en": "Ant Digital Brings Record Checks and Patient Histories Into One Clinical Workbench",
+    "title_cn": "蚂蚁数科将病历质控与患者全景信息整合至医疗工作台",
+    "source_name": "DOIT Media",
+    "source_url": "https://www.doit.com.cn/ai/866196905549893.html",
+    "tags": [
+      "clinical documentation",
+      "hospital information systems",
+      "clinical oversight"
+    ],
+    "body": {
+      "signal": "At Wuzhen on November 2, Ant Digital launched the medical edition of Agentar. DOIT reports that it combines record quality checks, a consolidated patient view and diagnostic assistance, with more than 80 specialty templates. The report describes use in an unnamed hospital department caring for older patients with multiple conditions. Independent clinical outcomes were not reported.",
+      "china_scale": "Specialty templates give hospital teams a common starting point for configuring their own records and review steps. Each site still has to reconcile its data and decide who checks the result.",
+      "global_impact": "An integrated patient view shifts a practical responsibility to the hospital: clinicians need to see which record a suggestion came from and who can correct it when accounts disagree.",
+      "monday_morning": "Ask a care team to trace one flagged record across two specialties. Check whether staff can identify the underlying note, resolve a discrepancy and see the correction on both sides.",
+      "related_notes": ""
+    }
+  },
+  {
+    "date": "2026-11-08",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "content_type": "daily",
+    "related_signals": [],
+    "id": "2026-11-08-shanghai-expo-travel-assistant",
+    "day_number": 264,
+    "category": "Platforms & Social",
+    "category_emoji": "🌐",
+    "industry_lens": "automotive",
+    "impact_score": 4,
+    "title_en": "Shanghai Connects Expo Visitors’ Parking Questions to Bookings",
+    "title_cn": "上海进博会出行助手衔接停车咨询与预约",
+    "source_name": "Minhang District People’s Government, via Shanghai Municipal Government",
+    "source_url": "https://www.shanghai.gov.cn/nw17239/20261102/7b92eb019a044a88950e1dc2bd0b09a4.html",
+    "tags": [
+      "public transport",
+      "parking reservations",
+      "service design"
+    ],
+    "body": {
+      "signal": "For the November 5–10 import expo, Shanghai added Xiaojiao to the Suishenxing travel app and WeChat mini program. Visitors can ask in English or Chinese, by voice or text. A parking question opens the reservation service. The driver chooses a lot and time, enters the plate number and completes the booking. The assistant also links to walking directions from the lot to the entrance.",
+      "china_scale": "A city transport platform already connects parking and passenger information. Adding a conversational entrance lets operators reuse their booking systems and published directions across two interfaces.",
+      "global_impact": "A travel assistant can give a plausible route even when the traveller cannot reserve the space it recommends. Procurement teams can test the whole journey, including confirmation and access at the gate.",
+      "monday_morning": "Ask a first-time visitor to reserve a space and reach the correct entrance. Record every point where a different service, language or printed document interrupts the trip.",
+      "related_notes": ""
+    }
+  },
+  {
     "date": "2026-11-07",
     "signal_strength": "emerging",
     "strength_emoji": "🟠",
