@@ -1,5 +1,63 @@
 [
 {
+  "date": "2026-11-10",
+  "signal_strength": "emerging",
+  "strength_emoji": "🟠",
+  "content_type": "daily",
+  "related_signals": [],
+  "id": "2026-11-10-kerastase-shanghai-scalp-consultation",
+  "day_number": 269,
+  "category": "Intelligent Production",
+  "category_emoji": "🏭",
+  "industry_lens": "consumer",
+  "impact_score": 4,
+  "title_en": "Kérastase Puts a Scalp Scan at the Start of a Salon Consultation",
+  "title_cn": "卡诗在护理咨询前加入AI头皮检测",
+  "source_name": "International Finance News (国际金融报)",
+  "source_url": "https://www.ifnews.com/news.html?aid=884860&cid=49",
+  "tags": [
+    "salon services",
+    "consumer choice",
+    "beauty technology"
+  ],
+  "body": {
+    "signal": "At Shanghai’s November import expo, an International Finance News reporter tried Kérastase’s K-SCAN. In under five minutes, the screen displayed magnified images and a scored report. The scan is the opening step in the K-SPA service shown with K-STATION, a care device developed with a Chinese startup. The demonstration documented a consultation, without measuring treatment outcomes.",
+    "china_scale": "A stylist and customer can examine the same image before discussing a paid service. The care device grew out of a connection made at an earlier Shanghai expo, bringing a local supplier into the design of a global brand’s salon service.",
+    "global_impact": "A score can carry particular weight when the person interpreting it also sells the recommended service. Retailers can design the consultation so customers can inspect the evidence and decline care.",
+    "monday_morning": "Observe a consultation. Ask the customer which feature they saw in the image, what the score added and whether they understood that leaving without buying was an option.",
+    "related_notes": ""
+  }
+},
+{
+  "date": "2026-11-10",
+  "signal_strength": "emerging",
+  "strength_emoji": "🟠",
+  "content_type": "daily",
+  "related_signals": [],
+  "id": "2026-11-10-jinan-cylinder-lesson",
+  "day_number": 268,
+  "category": "Intelligent Production",
+  "category_emoji": "🏭",
+  "industry_lens": "education",
+  "impact_score": 3,
+  "title_en": "Jinan Teachers Build an Interactive Geometry Lesson With AI",
+  "title_cn": "济南教师用AI制作圆柱体积互动课件",
+  "source_name": "Jinan High-tech Zone Bole Experimental School, via China Education Online",
+  "source_url": "https://shandong.eol.cn/sdjc/202611/t20261106_2791330.shtml",
+  "tags": [
+    "lesson design",
+    "teacher development",
+    "geometry"
+  ],
+  "body": {
+    "signal": "During a November 5 workshop, teachers at Bole Experimental School made interactive courseware illustrating the derivation of a cylinder’s volume. They also practised setting up workspaces for teaching and grade-level administration. The school reported the exercises on November 6. It supplied no pupil assessment results.",
+    "china_scale": "Giving colleagues a common geometry problem makes the resulting materials easy to compare. A teacher can show exactly where an animation skips a step in the reasoning.",
+    "global_impact": "Schools purchasing AI tools for lesson preparation can evaluate a finished explanation against the misconception it is meant to resolve. A smooth animation alone cannot tell a teacher what pupils understood.",
+    "monday_morning": "Ask pupils to explain one transition in the animation with the screen off. Use their explanations to decide which frame the teacher should change.",
+    "related_notes": ""
+  }
+},
+{
   "date": "2026-11-09",
   "signal_strength": "emerging",
   "strength_emoji": "🟠",
