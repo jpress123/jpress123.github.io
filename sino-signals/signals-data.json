@@ -1,5 +1,63 @@
 [
 {
+  "date": "2026-11-11",
+  "signal_strength": "emerging",
+  "strength_emoji": "🟠",
+  "content_type": "daily",
+  "related_signals": [],
+  "id": "2026-11-11-nissan-n7-primera-philippines",
+  "day_number": 271,
+  "category": "Intelligent Production",
+  "category_emoji": "🏭",
+  "industry_lens": "automotive",
+  "impact_score": 3,
+  "title_en": "Nissan Brings Its China-Sourced N7 to Philippine Drivers as the Primera",
+  "title_cn": "日产中国出口电动车N7以Primera之名进入菲律宾",
+  "source_name": "Nissan China",
+  "source_url": "https://www.nissan.com.cn/all-news/all-pressrelease/6042",
+  "tags": [
+    "vehicle exports",
+    "driver assistance",
+    "localisation"
+  ],
+  "body": {
+    "signal": "Nissan China identified November 6 as the Philippine launch date for the China-sourced electric N7 under the Primera name. The local Nissan product page now offers a test drive and describes ProPILOT assistance with lane centring and following distance. These are driver-assistance features. The sources supply no comparative safety results.",
+    "china_scale": "Nissan reported shipping N7 sedans from China to Southeast Asia in September. The Philippine model gives overseas dealers a specific vehicle and feature set to demonstrate.",
+    "global_impact": "Regional sales and training teams need to explain what a driver can expect from the version on sale locally. A familiar feature name or a demonstration recorded in another market is an incomplete basis for that conversation.",
+    "monday_morning": "Ask a dealer to demonstrate the locally offered assistance, show its operating limits in the local manual and explain when the driver must take over.",
+    "related_notes": ""
+  }
+},
+{
+  "date": "2026-11-11",
+  "signal_strength": "emerging",
+  "strength_emoji": "🟠",
+  "content_type": "daily",
+  "related_signals": [],
+  "id": "2026-11-11-golden-rooster-ai-film-record",
+  "day_number": 270,
+  "category": "Creative & Culture",
+  "category_emoji": "🎨",
+  "industry_lens": "entertainment",
+  "impact_score": 4,
+  "title_en": "Golden Rooster Film Festival Asks AI Filmmakers to Show Their Working Process",
+  "title_cn": "金鸡电影AI单元让创作过程可追溯",
+  "source_name": "Fujian Daily, via Fujian Provincial Government",
+  "source_url": "https://www.fj.gov.cn/xwdt/mszx/202611/t20261110_7246829.htm",
+  "tags": [
+    "film festivals",
+    "creative authorship",
+    "production records"
+  ],
+  "body": {
+    "signal": "At its first AI film unit in Xiamen, the Golden Rooster and Hundred Flowers Film Festival announced its recommendations on November 9. Fujian Daily reports that 20 teams selected from 287 applicants completed a 72-hour filmmaking challenge. The festival’s published format called for teams to document the creative process throughout.",
+    "china_scale": "The festival paired a public showcase with a common assignment and production records. That gives other filmmakers material for studying how teams worked through the same constraints.",
+    "global_impact": "Festivals and commissioners can ask which decisions were made in the edit, where source material came from and how contributors were credited. A finished sequence alone rarely answers those questions.",
+    "monday_morning": "Ask a team to show two versions of a scene, identify who chose between them and explain what changed the decision.",
+    "related_notes": ""
+  }
+},
+{
   "date": "2026-11-10",
   "signal_strength": "emerging",
   "strength_emoji": "🟠",
