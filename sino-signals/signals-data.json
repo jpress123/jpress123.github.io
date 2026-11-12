@@ -1,4 +1,62 @@
 [
+  {
+    "date": "2026-11-12",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "content_type": "daily",
+    "related_signals": [],
+    "id": "2026-11-12-jd-parcel-route-adoption",
+    "day_number": 273,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "industry_lens": "consumer",
+    "impact_score": 3,
+    "title_en": "JD Uses Parcel Forecasts to Plan Singles’ Day Deliveries",
+    "title_cn": "京东用包裹量预测规划双十一配送",
+    "source_url": "http://finance.people.com.cn/n1/2026/1112/c1004-40832336.html",
+    "source_name": "People’s Daily",
+    "tags": [
+      "retail fulfilment",
+      "route planning",
+      "demand forecasting"
+    ],
+    "body": {
+      "signal": "People’s Daily reports that JD Logistics uses its Super Brain 3.0 model to forecast parcel volumes on express routes. During Singles’ Day reporting, forecast accuracy exceeded 95% and adoption of AI-recommended delivery routes exceeded 90%.",
+      "china_scale": "A retail promotion concentrates demand across many delivery routes. Network planners can compare forecasts with actual parcel counts and see which recommendations dispatchers use.",
+      "global_impact": "Route acceptance measures use. Retailers assessing similar systems still need delivery times, missed promises and local exceptions to judge customer outcomes.",
+      "monday_morning": "Sample one peak-period route and compare the recommendation with the dispatcher’s choice. Record whether the alternative protected a delivery window.",
+      "related_notes": ""
+    }
+  },
+  {
+    "date": "2026-11-12",
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "content_type": "daily",
+    "related_signals": [],
+    "id": "2026-11-12-kecheng-hospital-carbon-account",
+    "day_number": 272,
+    "category": "Climate & Sustainability",
+    "category_emoji": "🌱",
+    "industry_lens": "pharma",
+    "impact_score": 3,
+    "title_en": "Quzhou Hospital Uses Carbon Accounts to Target Energy Upgrades",
+    "title_cn": "衢州医院用碳账户指导节能改造",
+    "source_url": "https://www.ezhejiang.gov.cn/2026-11/11/c_1227481.htm",
+    "source_name": "China Daily",
+    "tags": [
+      "hospital operations",
+      "carbon accounting",
+      "energy retrofits"
+    ],
+    "body": {
+      "signal": "Kecheng District People’s Hospital monitors electricity, gas and water through connected sensors. After changes including a heat pump and new chillers, China Daily reported an 8.22% overall energy-saving rate and over 506 tonnes of carbon emissions avoided in the first nine months of 2026.",
+      "china_scale": "Quzhou reports 1,098 organisations with carbon accounts, including hospitals and schools. A shared measurement system gives their facilities teams a starting point, though each building needs its own assessment.",
+      "global_impact": "Hospital leaders can connect metering to decisions about equipment replacement. The reported figures cover multiple measures and do not isolate the contribution of any single device.",
+      "monday_morning": "Ask facilities and finance to trace one unusually high reading to a funded change. Agree how to verify savings while maintaining reliable heating and cooling.",
+      "related_notes": ""
+    }
+  },
 {
   "date": "2026-11-11",
   "signal_strength": "emerging",
