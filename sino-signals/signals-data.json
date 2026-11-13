@@ -1,5 +1,63 @@
 [
   {
+    "id": "2026-11-13-china-film-pegasus-english-dub",
+    "date": "2026-11-13",
+    "day_number": 275,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "industry_lens": "entertainment",
+    "title_en": "China Film Reports a Six-Day English Dub for Pegasus 3",
+    "title_cn": "中影披露《飞驰人生3》英语配音用时六天",
+    "source_url": "http://finance.people.com.cn/n1/2026/1113/c1004-40833035.html",
+    "source_name": "Science and Technology Daily via People.cn",
+    "tags": [
+      "film localisation",
+      "voice modelling",
+      "dubbing"
+    ],
+    "impact_score": 3,
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "content_type": "daily",
+    "related_signals": [],
+    "body": {
+      "signal": "China Film’s AI research institute used its own dubbing model to produce the English dub of Pegasus 3 in six days, according to director Ma Ping in a November 13 report. He described the model reproducing characteristics of the actors’ voices. The account concerns an already released film.",
+      "china_scale": "A studio with access to the original performances and a model built for dubbing can plan another language version alongside the domestic release. The reported turnaround concerns one production.",
+      "global_impact": "Distributors deciding whether to commission a dub need to budget for dialogue adaptation and performance review. Elapsed time alone tells them little about consent, audience comprehension or the cost of correcting a scene.",
+      "monday_morning": "Ask a localisation team to screen a dubbed scene with bilingual listeners and the performer’s representative. Record which changes each can request before the distributor accepts delivery.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-11-13-mingde-bone-age-course",
+    "date": "2026-11-13",
+    "day_number": 274,
+    "category": "Deep Tech & Research",
+    "category_emoji": "🔬",
+    "industry_lens": "education",
+    "title_en": "Mingde Students Examine Where a Bone-Age Model Goes Wrong",
+    "title_cn": "西安明德理工学院用骨龄模型教学生分析误差",
+    "source_url": "https://www.mdit.edu.cn/info/1343/130826.htm",
+    "source_name": "Xi’an Mingde Institute of Technology",
+    "tags": [
+      "medical imaging",
+      "model evaluation",
+      "engineering education"
+    ],
+    "impact_score": 2,
+    "signal_strength": "weak",
+    "strength_emoji": "🟡",
+    "content_type": "daily",
+    "related_signals": [],
+    "body": {
+      "signal": "A deep-learning teaching case recognised at the November 6–8 national university AI education conference uses the public RSNA paediatric bone-age dataset. Students work through three levels of tasks, examine error distributions and document their collaboration with generative AI.",
+      "china_scale": "Other teaching teams can use the same public data and vary model capacity or image transformations. That gives instructors a way to compare explanations of errors alongside students’ code.",
+      "global_impact": "The assignment offers engineering schools a concrete way to assess judgement when students can generate code. The institute describes a teaching case and supplies no evidence of clinical validation.",
+      "monday_morning": "Give two groups the same image data and different preprocessing choices. Ask each to identify which cases its model misjudges and defend one change before revealing its aggregate score.",
+      "related_notes": ""
+    }
+  },
+  {
     "date": "2026-11-12",
     "signal_strength": "strong",
     "strength_emoji": "🔴",
