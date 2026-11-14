@@ -1,5 +1,63 @@
 [
   {
+    "id": "2026-11-14-spdb-card-application-fraud",
+    "date": "2026-11-14",
+    "day_number": 277,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "industry_lens": "financial services",
+    "title_en": "Shanghai Pudong Development Bank Links Devices Across Card Applications",
+    "title_cn": "浦发银行关联多笔信用卡申请的设备线索识别欺诈",
+    "source_url": "https://www.shbanking.cn/ContentDL/ComDetail.aspx?id=6970&st=00060001",
+    "source_name": "Shanghai Banking Association",
+    "tags": [
+      "credit cards",
+      "fraud detection",
+      "model governance"
+    ],
+    "impact_score": 3,
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "content_type": "daily",
+    "related_signals": [],
+    "body": {
+      "signal": "Shanghai Pudong Development Bank’s credit card centre describes checking both individual application details and links among devices and applicants. In a November 13 case report it said more than 95% of application anti-fraud decisions were made in real time. That measures decision speed coverage, not detection accuracy.",
+      "china_scale": "The centre gives business users a visual tool to configure, test and roll back rules. It reports shortening the time needed to change a strategy from weeks to days.",
+      "global_impact": "Shared devices can reveal an organised fraud ring, but legitimate applicants can also share devices. Credit teams need a way to find out which groups their rules flag incorrectly.",
+      "monday_morning": "Trace a shared-device alert through the review process. Check who can reverse the decision, how the applicant learns the outcome and whether the correction reaches the next version of the rule.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-11-14-tongji-antalya-wuhan-robotic-surgery",
+    "date": "2026-11-14",
+    "day_number": 276,
+    "category": "Robotics & Embodied AI",
+    "category_emoji": "🤖",
+    "industry_lens": "pharma",
+    "title_en": "Tongji Surgeon Operates From Antalya With a Team in Wuhan",
+    "title_cn": "同济医生在安塔利亚远程操控机器人与武汉团队协作手术",
+    "source_url": "https://www.tjh.com.cn/TjhNews/20261113_59905.html",
+    "source_name": "Tongji Hospital",
+    "tags": [
+      "telesurgery",
+      "surgical training",
+      "clinical governance"
+    ],
+    "impact_score": 3,
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "content_type": "daily",
+    "related_signals": [],
+    "body": {
+      "signal": "On October 30, Yang Jun controlled a surgical robot from Antalya while colleagues in Wuhan cared for a patient undergoing prostate cancer surgery. In its November 13 account, Tongji Hospital said the patient recovered and left hospital. The surgeon controlled the instruments throughout the reported procedure.",
+      "china_scale": "Tongji is a provincial training base for robotic surgery and has run two specialist training sessions. Preparing the team beside the patient matters as much as training a surgeon to use the remote console.",
+      "global_impact": "A hospital considering a remote specialist needs to know what the bedside team can handle independently. One discharge cannot establish comparative safety or show that a smaller hospital could reproduce the arrangement.",
+      "monday_morning": "Ask the remote surgeon and the bedside lead to rehearse a lost connection. Have each name who can stop the procedure and who can take control locally.",
+      "related_notes": ""
+    }
+  },
+  {
     "id": "2026-11-13-china-film-pegasus-english-dub",
     "date": "2026-11-13",
     "day_number": 275,
