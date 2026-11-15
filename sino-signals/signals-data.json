@@ -1,5 +1,63 @@
 [
   {
+    "id": "2026-11-15-haidian-students-audit-battery-proposals",
+    "date": "2026-11-15",
+    "day_number": 279,
+    "category": "Deep Tech & Research",
+    "category_emoji": "🔬",
+    "industry_lens": "education",
+    "title_en": "Haidian Chemistry Students Challenge AI Battery Proposals",
+    "title_cn": "海淀学生在化学课上质询AI固态电解质方案",
+    "source_url": "https://www.bjhdedu.cn/xw/jwdt/202611/t20261113_97093.html",
+    "source_name": "Haidian Education",
+    "tags": [
+      "chemistry education",
+      "source evaluation",
+      "battery materials"
+    ],
+    "impact_score": 2,
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "content_type": "daily",
+    "related_signals": [],
+    "body": {
+      "signal": "At a November 8 teaching forum, Peng Dan described a chemistry lesson in which students assessed AI proposals for solid electrolytes in a mock research tender. A collection of more than 20 research papers informed the AI exercise. Haidian Education published the account on November 13.",
+      "china_scale": "Teachers at the Beijing school demonstrated different uses of AI across subjects. A chemistry department elsewhere could reuse the tender format while choosing papers appropriate to its students.",
+      "global_impact": "The exercise gives science teachers a way to assess whether students can challenge a plausible materials claim. The report describes classroom practice and provides no comparative learning results.",
+      "monday_morning": "Give students two competing proposals and access to the papers behind them. Ask which claim the evidence supports and which would still require an experiment.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-11-15-ride-hailing-aggregator-permits",
+    "date": "2026-11-15",
+    "day_number": 278,
+    "category": "Platforms & Social",
+    "category_emoji": "🌐",
+    "industry_lens": "automotive",
+    "title_en": "China Ranks Ride Aggregators by Driver and Vehicle Permits",
+    "title_cn": "交通运输部按司机和车辆双证合规率公布聚合平台排名",
+    "source_url": "https://www.mot.gov.cn/shuju/fenxigongbao/yunlifenxi/202611/t20261111_4227558.html",
+    "source_name": "Ministry of Transport of China",
+    "tags": [
+      "ride aggregation",
+      "licensing",
+      "platform accountability"
+    ],
+    "impact_score": 3,
+    "signal_strength": "strong",
+    "strength_emoji": "🔴",
+    "content_type": "daily",
+    "related_signals": [],
+    "body": {
+      "signal": "China’s transport ministry reported on November 11 that ride aggregators completed 324 million orders in September. It ranked seven aggregators by the share of rides for which both driver and vehicle held permits. Amap ranked first. The ministry gave no individual platform percentages.",
+      "china_scale": "The national reporting system received 981 million ride orders for September. Reporting on aggregators separately makes the passenger-facing intermediary visible alongside the operator supplying the ride.",
+      "global_impact": "A travel buyer comparing booking services can ask how often both credentials were valid for the ride actually supplied. A licensing ranking alone says nothing about crashes, waiting times or service quality.",
+      "monday_morning": "Pick a sample of bookings made through an intermediary. Ask who checked both permits at dispatch and who can retrieve the record when a passenger raises a concern.",
+      "related_notes": ""
+    }
+  },
+  {
     "id": "2026-11-14-spdb-card-application-fraud",
     "date": "2026-11-14",
     "day_number": 277,
