@@ -1,5 +1,61 @@
 [
   {
+    "id": "2026-11-17-sanya-traffic-drone-service",
+    "date": "2026-11-17",
+    "day_number": 283,
+    "category": "Policy & Governance",
+    "category_emoji": "🏛️",
+    "industry_lens": "automotive",
+    "title_en": "Sanya Seeks Drone Operators and Algorithm Maintenance in One Traffic Contract",
+    "title_cn": "三亚交警征集无人机巡飞及交管算法运维服务供应商",
+    "source_url": "https://gaj.sanya.gov.cn/gajsite/zagl/202611/30c7e8d5b2e1445fb7bec43d45eb59a8.shtml",
+    "source_name": "Sanya Public Security Bureau Traffic Management Detachment",
+    "tags": [
+      "traffic management",
+      "drone services"
+    ],
+    "impact_score": 3,
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "content_type": "daily",
+    "related_signals": [],
+    "body": {
+      "signal": "In a November 9 supplier solicitation, Sanya traffic police requested a year of drone services, including two licensed pilots and a maintenance worker stationed with the detachment. Suppliers were asked to explain how they would maintain traffic algorithms and connect flight data to police systems.",
+      "china_scale": "Sanya already has drone docks. The proposed purchase puts responsibility for staffing, flights and equipment upkeep into the same service agreement. The notice announces a solicitation, with no supplier award reported.",
+      "global_impact": "Cities buying aerial traffic monitoring could compare how bids handle a missed incident, a faulty alert and a grounded aircraft. Each failure calls for a different operational response.",
+      "monday_morning": "Ask bidders to walk through a faulty traffic alert from detection to human review and correction.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-11-17-meilan-iv-preparation",
+    "date": "2026-11-17",
+    "day_number": 282,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "industry_lens": "pharma",
+    "title_en": "Meilan Demonstrates a Robot That Records Every IV Preparation Step",
+    "title_cn": "美蓝展示全流程留痕的静脉用药调配机器人",
+    "source_url": "https://www.ncsti.gov.cn/kjdt/yqdy/yqdt/202611/t20261113_263327.html",
+    "source_name": "Zhongguancun Jingxi AI Science Park via Beijing International Science and Technology Innovation Center",
+    "tags": [
+      "hospital pharmacy",
+      "IV preparation"
+    ],
+    "impact_score": 3,
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "content_type": "daily",
+    "related_signals": [],
+    "body": {
+      "signal": "Meilan’s North China Innovation Center demonstrated a system that receives medication orders, labels containers, disinfects vials, mixes and checks preparations, and handles waste. The park’s November 13 account says the machine records the process on video.",
+      "china_scale": "Handling hazardous drugs exposes pharmacy staff during repetitive preparation. Automating those steps could give pharmacists more time for prescription review. The demonstration supplies no independent clinical outcome data.",
+      "global_impact": "A hospital assessing a compounding robot needs to know whether pharmacists can trace a questionable dose and intervene before it reaches a ward.",
+      "monday_morning": "Ask a pharmacist to trace one interrupted preparation through the video and order record before signing off on a trial.",
+      "related_notes": ""
+    }
+  },
+  {
     "id": "2026-11-16-picc-shenzhen-ai-service-insurance",
     "date": "2026-11-16",
     "day_number": 281,
@@ -289,180 +345,180 @@
       "related_notes": ""
     }
   },
-{
-  "date": "2026-11-11",
-  "signal_strength": "emerging",
-  "strength_emoji": "🟠",
-  "content_type": "daily",
-  "related_signals": [],
-  "id": "2026-11-11-nissan-n7-primera-philippines",
-  "day_number": 271,
-  "category": "Intelligent Production",
-  "category_emoji": "🏭",
-  "industry_lens": "automotive",
-  "impact_score": 3,
-  "title_en": "Nissan Brings Its China-Sourced N7 to Philippine Drivers as the Primera",
-  "title_cn": "日产中国出口电动车N7以Primera之名进入菲律宾",
-  "source_name": "Nissan China",
-  "source_url": "https://www.nissan.com.cn/all-news/all-pressrelease/6042",
-  "tags": [
-    "vehicle exports",
-    "driver assistance",
-    "localisation"
-  ],
-  "body": {
-    "signal": "Nissan China identified November 6 as the Philippine launch date for the China-sourced electric N7 under the Primera name. The local Nissan product page now offers a test drive and describes ProPILOT assistance with lane centring and following distance. These are driver-assistance features. The sources supply no comparative safety results.",
-    "china_scale": "Nissan reported shipping N7 sedans from China to Southeast Asia in September. The Philippine model gives overseas dealers a specific vehicle and feature set to demonstrate.",
-    "global_impact": "Regional sales and training teams need to explain what a driver can expect from the version on sale locally. A familiar feature name or a demonstration recorded in another market is an incomplete basis for that conversation.",
-    "monday_morning": "Ask a dealer to demonstrate the locally offered assistance, show its operating limits in the local manual and explain when the driver must take over.",
-    "related_notes": ""
-  }
-},
-{
-  "date": "2026-11-11",
-  "signal_strength": "emerging",
-  "strength_emoji": "🟠",
-  "content_type": "daily",
-  "related_signals": [],
-  "id": "2026-11-11-golden-rooster-ai-film-record",
-  "day_number": 270,
-  "category": "Creative & Culture",
-  "category_emoji": "🎨",
-  "industry_lens": "entertainment",
-  "impact_score": 4,
-  "title_en": "Golden Rooster Film Festival Asks AI Filmmakers to Show Their Working Process",
-  "title_cn": "金鸡电影AI单元让创作过程可追溯",
-  "source_name": "Fujian Daily, via Fujian Provincial Government",
-  "source_url": "https://www.fj.gov.cn/xwdt/mszx/202611/t20261110_7246829.htm",
-  "tags": [
-    "film festivals",
-    "creative authorship",
-    "production records"
-  ],
-  "body": {
-    "signal": "At its first AI film unit in Xiamen, the Golden Rooster and Hundred Flowers Film Festival announced its recommendations on November 9. Fujian Daily reports that 20 teams selected from 287 applicants completed a 72-hour filmmaking challenge. The festival’s published format called for teams to document the creative process throughout.",
-    "china_scale": "The festival paired a public showcase with a common assignment and production records. That gives other filmmakers material for studying how teams worked through the same constraints.",
-    "global_impact": "Festivals and commissioners can ask which decisions were made in the edit, where source material came from and how contributors were credited. A finished sequence alone rarely answers those questions.",
-    "monday_morning": "Ask a team to show two versions of a scene, identify who chose between them and explain what changed the decision.",
-    "related_notes": ""
-  }
-},
-{
-  "date": "2026-11-10",
-  "signal_strength": "emerging",
-  "strength_emoji": "🟠",
-  "content_type": "daily",
-  "related_signals": [],
-  "id": "2026-11-10-kerastase-shanghai-scalp-consultation",
-  "day_number": 269,
-  "category": "Intelligent Production",
-  "category_emoji": "🏭",
-  "industry_lens": "consumer",
-  "impact_score": 4,
-  "title_en": "Kérastase Puts a Scalp Scan at the Start of a Salon Consultation",
-  "title_cn": "卡诗在护理咨询前加入AI头皮检测",
-  "source_name": "International Finance News (国际金融报)",
-  "source_url": "https://www.ifnews.com/news.html?aid=884860&cid=49",
-  "tags": [
-    "salon services",
-    "consumer choice",
-    "beauty technology"
-  ],
-  "body": {
-    "signal": "At Shanghai’s November import expo, an International Finance News reporter tried Kérastase’s K-SCAN. In under five minutes, the screen displayed magnified images and a scored report. The scan is the opening step in the K-SPA service shown with K-STATION, a care device developed with a Chinese startup. The demonstration documented a consultation, without measuring treatment outcomes.",
-    "china_scale": "A stylist and customer can examine the same image before discussing a paid service. The care device grew out of a connection made at an earlier Shanghai expo, bringing a local supplier into the design of a global brand’s salon service.",
-    "global_impact": "A score can carry particular weight when the person interpreting it also sells the recommended service. Retailers can design the consultation so customers can inspect the evidence and decline care.",
-    "monday_morning": "Observe a consultation. Ask the customer which feature they saw in the image, what the score added and whether they understood that leaving without buying was an option.",
-    "related_notes": ""
-  }
-},
-{
-  "date": "2026-11-10",
-  "signal_strength": "emerging",
-  "strength_emoji": "🟠",
-  "content_type": "daily",
-  "related_signals": [],
-  "id": "2026-11-10-jinan-cylinder-lesson",
-  "day_number": 268,
-  "category": "Intelligent Production",
-  "category_emoji": "🏭",
-  "industry_lens": "education",
-  "impact_score": 3,
-  "title_en": "Jinan Teachers Build an Interactive Geometry Lesson With AI",
-  "title_cn": "济南教师用AI制作圆柱体积互动课件",
-  "source_name": "Jinan High-tech Zone Bole Experimental School, via China Education Online",
-  "source_url": "https://shandong.eol.cn/sdjc/202611/t20261106_2791330.shtml",
-  "tags": [
-    "lesson design",
-    "teacher development",
-    "geometry"
-  ],
-  "body": {
-    "signal": "During a November 5 workshop, teachers at Bole Experimental School made interactive courseware illustrating the derivation of a cylinder’s volume. They also practised setting up workspaces for teaching and grade-level administration. The school reported the exercises on November 6. It supplied no pupil assessment results.",
-    "china_scale": "Giving colleagues a common geometry problem makes the resulting materials easy to compare. A teacher can show exactly where an animation skips a step in the reasoning.",
-    "global_impact": "Schools purchasing AI tools for lesson preparation can evaluate a finished explanation against the misconception it is meant to resolve. A smooth animation alone cannot tell a teacher what pupils understood.",
-    "monday_morning": "Ask pupils to explain one transition in the animation with the screen off. Use their explanations to decide which frame the teacher should change.",
-    "related_notes": ""
-  }
-},
-{
-  "date": "2026-11-09",
-  "signal_strength": "emerging",
-  "strength_emoji": "🟠",
-  "content_type": "daily",
-  "related_signals": [],
-  "id": "2026-11-09-ningbo-bank-trade-matching",
-  "day_number": 267,
-  "category": "Platforms & Social",
-  "category_emoji": "🌐",
-  "industry_lens": "financial services",
-  "impact_score": 3,
-  "title_en": "Bank of China Pairs Digital Matching With Buyer Meetings for Ningbo Firms",
-  "title_cn": "中行宁波市分行以智能匹配衔接进博会买家面谈",
-  "source_name": "China Financial Information Network",
-  "source_url": "https://www.cnfin.com/cmjj-lb/detail/20261107/4492436_1.html",
-  "tags": [
-    "trade finance",
-    "buyer matching",
-    "relationship banking"
-  ],
-  "body": {
-    "signal": "At Shanghai’s import expo, Bank of China’s Ningbo branch brought companies from sectors including medical equipment and international supply chains into buyer meetings. A November 7 report describes system-assisted matching followed by several rounds of face-to-face talks. It gives no conversion rate attributable to the matching system or details of its model.",
-    "china_scale": "The bank can draw on its cross-border matchmaking platform and on branch staff who know local businesses. At the expo, a buyer is available for a conversation after a potential partner surfaces on screen.",
-    "global_impact": "A bank organising introductions can affect which exporters get time with a buyer. The quality of a shortlist matters to firms that never reach a meeting as well as to those that do.",
-    "monday_morning": "Trace a buyer request from shortlist to meeting and follow-up. Ask which qualified suppliers were left out and whether staff could put one forward.",
-    "related_notes": ""
-  }
-},
-{
-  "date": "2026-11-09",
-  "signal_strength": "emerging",
-  "strength_emoji": "🟠",
-  "content_type": "daily",
-  "related_signals": [],
-  "id": "2026-11-09-nansha-ai-shopping-reviews",
-  "day_number": 266,
-  "category": "Policy & Governance",
-  "category_emoji": "🏛️",
-  "industry_lens": "consumer",
-  "impact_score": 4,
-  "title_en": "Guangzhou District Tells Sellers to Label AI Ads and Stop Inventing Customer Experiences",
-  "title_cn": "广州南沙要求标注AI营销内容，禁止虚构消费体验",
-  "source_name": "Guangzhou Nansha District Administration for Market Regulation",
-  "source_url": "https://www.gzns.gov.cn/gznsscjg/gkmlpt/content/11/11081/post_11081332.html",
-  "tags": [
-    "consumer reviews",
-    "synthetic media",
-    "retail platforms"
-  ],
-  "body": {
-    "signal": "In guidance for the November 11 shopping festival, Guangzhou’s Nansha district told platforms to oversee AI marketing materials, customer-service scripts and virtual livestream hosts. Sellers using generated material in reviews must not invent product experiences. The guidance also calls for prominent labels on generated marketing imagery and records of how promotional traffic is allocated.",
-    "china_scale": "A marketplace can apply these checks where sellers submit campaign materials and where the platform distributes them. A shopper who sees a labelled image still needs to know whether anyone actually tried the product.",
-    "global_impact": "Retail teams buying generated creative work need two different answers from an agency. Who made the image, and whose experience supports the claim? An AI label answers only the first question.",
-    "monday_morning": "Pick a promoted review and ask the seller to trace its claim to a real customer experience. Check what happens to the listing if the seller cannot supply that evidence.",
-    "related_notes": ""
-  }
-},
+  {
+    "date": "2026-11-11",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "content_type": "daily",
+    "related_signals": [],
+    "id": "2026-11-11-nissan-n7-primera-philippines",
+    "day_number": 271,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "industry_lens": "automotive",
+    "impact_score": 3,
+    "title_en": "Nissan Brings Its China-Sourced N7 to Philippine Drivers as the Primera",
+    "title_cn": "日产中国出口电动车N7以Primera之名进入菲律宾",
+    "source_name": "Nissan China",
+    "source_url": "https://www.nissan.com.cn/all-news/all-pressrelease/6042",
+    "tags": [
+      "vehicle exports",
+      "driver assistance",
+      "localisation"
+    ],
+    "body": {
+      "signal": "Nissan China identified November 6 as the Philippine launch date for the China-sourced electric N7 under the Primera name. The local Nissan product page now offers a test drive and describes ProPILOT assistance with lane centring and following distance. These are driver-assistance features. The sources supply no comparative safety results.",
+      "china_scale": "Nissan reported shipping N7 sedans from China to Southeast Asia in September. The Philippine model gives overseas dealers a specific vehicle and feature set to demonstrate.",
+      "global_impact": "Regional sales and training teams need to explain what a driver can expect from the version on sale locally. A familiar feature name or a demonstration recorded in another market is an incomplete basis for that conversation.",
+      "monday_morning": "Ask a dealer to demonstrate the locally offered assistance, show its operating limits in the local manual and explain when the driver must take over.",
+      "related_notes": ""
+    }
+  },
+  {
+    "date": "2026-11-11",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "content_type": "daily",
+    "related_signals": [],
+    "id": "2026-11-11-golden-rooster-ai-film-record",
+    "day_number": 270,
+    "category": "Creative & Culture",
+    "category_emoji": "🎨",
+    "industry_lens": "entertainment",
+    "impact_score": 4,
+    "title_en": "Golden Rooster Film Festival Asks AI Filmmakers to Show Their Working Process",
+    "title_cn": "金鸡电影AI单元让创作过程可追溯",
+    "source_name": "Fujian Daily, via Fujian Provincial Government",
+    "source_url": "https://www.fj.gov.cn/xwdt/mszx/202611/t20261110_7246829.htm",
+    "tags": [
+      "film festivals",
+      "creative authorship",
+      "production records"
+    ],
+    "body": {
+      "signal": "At its first AI film unit in Xiamen, the Golden Rooster and Hundred Flowers Film Festival announced its recommendations on November 9. Fujian Daily reports that 20 teams selected from 287 applicants completed a 72-hour filmmaking challenge. The festival’s published format called for teams to document the creative process throughout.",
+      "china_scale": "The festival paired a public showcase with a common assignment and production records. That gives other filmmakers material for studying how teams worked through the same constraints.",
+      "global_impact": "Festivals and commissioners can ask which decisions were made in the edit, where source material came from and how contributors were credited. A finished sequence alone rarely answers those questions.",
+      "monday_morning": "Ask a team to show two versions of a scene, identify who chose between them and explain what changed the decision.",
+      "related_notes": ""
+    }
+  },
+  {
+    "date": "2026-11-10",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "content_type": "daily",
+    "related_signals": [],
+    "id": "2026-11-10-kerastase-shanghai-scalp-consultation",
+    "day_number": 269,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "industry_lens": "consumer",
+    "impact_score": 4,
+    "title_en": "Kérastase Puts a Scalp Scan at the Start of a Salon Consultation",
+    "title_cn": "卡诗在护理咨询前加入AI头皮检测",
+    "source_name": "International Finance News (国际金融报)",
+    "source_url": "https://www.ifnews.com/news.html?aid=884860&cid=49",
+    "tags": [
+      "salon services",
+      "consumer choice",
+      "beauty technology"
+    ],
+    "body": {
+      "signal": "At Shanghai’s November import expo, an International Finance News reporter tried Kérastase’s K-SCAN. In under five minutes, the screen displayed magnified images and a scored report. The scan is the opening step in the K-SPA service shown with K-STATION, a care device developed with a Chinese startup. The demonstration documented a consultation, without measuring treatment outcomes.",
+      "china_scale": "A stylist and customer can examine the same image before discussing a paid service. The care device grew out of a connection made at an earlier Shanghai expo, bringing a local supplier into the design of a global brand’s salon service.",
+      "global_impact": "A score can carry particular weight when the person interpreting it also sells the recommended service. Retailers can design the consultation so customers can inspect the evidence and decline care.",
+      "monday_morning": "Observe a consultation. Ask the customer which feature they saw in the image, what the score added and whether they understood that leaving without buying was an option.",
+      "related_notes": ""
+    }
+  },
+  {
+    "date": "2026-11-10",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "content_type": "daily",
+    "related_signals": [],
+    "id": "2026-11-10-jinan-cylinder-lesson",
+    "day_number": 268,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "industry_lens": "education",
+    "impact_score": 3,
+    "title_en": "Jinan Teachers Build an Interactive Geometry Lesson With AI",
+    "title_cn": "济南教师用AI制作圆柱体积互动课件",
+    "source_name": "Jinan High-tech Zone Bole Experimental School, via China Education Online",
+    "source_url": "https://shandong.eol.cn/sdjc/202611/t20261106_2791330.shtml",
+    "tags": [
+      "lesson design",
+      "teacher development",
+      "geometry"
+    ],
+    "body": {
+      "signal": "During a November 5 workshop, teachers at Bole Experimental School made interactive courseware illustrating the derivation of a cylinder’s volume. They also practised setting up workspaces for teaching and grade-level administration. The school reported the exercises on November 6. It supplied no pupil assessment results.",
+      "china_scale": "Giving colleagues a common geometry problem makes the resulting materials easy to compare. A teacher can show exactly where an animation skips a step in the reasoning.",
+      "global_impact": "Schools purchasing AI tools for lesson preparation can evaluate a finished explanation against the misconception it is meant to resolve. A smooth animation alone cannot tell a teacher what pupils understood.",
+      "monday_morning": "Ask pupils to explain one transition in the animation with the screen off. Use their explanations to decide which frame the teacher should change.",
+      "related_notes": ""
+    }
+  },
+  {
+    "date": "2026-11-09",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "content_type": "daily",
+    "related_signals": [],
+    "id": "2026-11-09-ningbo-bank-trade-matching",
+    "day_number": 267,
+    "category": "Platforms & Social",
+    "category_emoji": "🌐",
+    "industry_lens": "financial services",
+    "impact_score": 3,
+    "title_en": "Bank of China Pairs Digital Matching With Buyer Meetings for Ningbo Firms",
+    "title_cn": "中行宁波市分行以智能匹配衔接进博会买家面谈",
+    "source_name": "China Financial Information Network",
+    "source_url": "https://www.cnfin.com/cmjj-lb/detail/20261107/4492436_1.html",
+    "tags": [
+      "trade finance",
+      "buyer matching",
+      "relationship banking"
+    ],
+    "body": {
+      "signal": "At Shanghai’s import expo, Bank of China’s Ningbo branch brought companies from sectors including medical equipment and international supply chains into buyer meetings. A November 7 report describes system-assisted matching followed by several rounds of face-to-face talks. It gives no conversion rate attributable to the matching system or details of its model.",
+      "china_scale": "The bank can draw on its cross-border matchmaking platform and on branch staff who know local businesses. At the expo, a buyer is available for a conversation after a potential partner surfaces on screen.",
+      "global_impact": "A bank organising introductions can affect which exporters get time with a buyer. The quality of a shortlist matters to firms that never reach a meeting as well as to those that do.",
+      "monday_morning": "Trace a buyer request from shortlist to meeting and follow-up. Ask which qualified suppliers were left out and whether staff could put one forward.",
+      "related_notes": ""
+    }
+  },
+  {
+    "date": "2026-11-09",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "content_type": "daily",
+    "related_signals": [],
+    "id": "2026-11-09-nansha-ai-shopping-reviews",
+    "day_number": 266,
+    "category": "Policy & Governance",
+    "category_emoji": "🏛️",
+    "industry_lens": "consumer",
+    "impact_score": 4,
+    "title_en": "Guangzhou District Tells Sellers to Label AI Ads and Stop Inventing Customer Experiences",
+    "title_cn": "广州南沙要求标注AI营销内容，禁止虚构消费体验",
+    "source_name": "Guangzhou Nansha District Administration for Market Regulation",
+    "source_url": "https://www.gzns.gov.cn/gznsscjg/gkmlpt/content/11/11081/post_11081332.html",
+    "tags": [
+      "consumer reviews",
+      "synthetic media",
+      "retail platforms"
+    ],
+    "body": {
+      "signal": "In guidance for the November 11 shopping festival, Guangzhou’s Nansha district told platforms to oversee AI marketing materials, customer-service scripts and virtual livestream hosts. Sellers using generated material in reviews must not invent product experiences. The guidance also calls for prominent labels on generated marketing imagery and records of how promotional traffic is allocated.",
+      "china_scale": "A marketplace can apply these checks where sellers submit campaign materials and where the platform distributes them. A shopper who sees a labelled image still needs to know whether anyone actually tried the product.",
+      "global_impact": "Retail teams buying generated creative work need two different answers from an agency. Who made the image, and whose experience supports the claim? An AI label answers only the first question.",
+      "monday_morning": "Pick a promoted review and ask the seller to trace its claim to a real customer experience. Check what happens to the listing if the seller cannot supply that evidence.",
+      "related_notes": ""
+    }
+  },
   {
     "date": "2026-11-08",
     "signal_strength": "emerging",
