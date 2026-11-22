@@ -1,5 +1,63 @@
 [
   {
+    "id": "2026-11-22-qinqing-ai-lessons",
+    "date": "2026-11-22",
+    "day_number": 285,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "industry_lens": "education",
+    "title_en": "Qinqing High School Uses AI Lessons to Address Teacher Shortages",
+    "title_cn": "亲情高中以人工智能课程应对师资短缺",
+    "source_url": "https://www.investing.com/news/world-news/inside-chinas-drive-to-build-an-ainative-generation-5028222",
+    "source_name": "Reuters via Investing.com",
+    "tags": [
+      "AI lessons",
+      "teacher shortages",
+      "assessment"
+    ],
+    "impact_score": 3,
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "content_type": "daily",
+    "related_signals": [],
+    "body": {
+      "signal": "Reuters reported on November 16 that Funan County Qinqing High School uses AI-generated lessons for its 4,000 pupils, according to its headmaster. Tablet lessons include agents that pose questions when pupils struggle.",
+      "china_scale": "The headmaster described combining Chinese models with small-group projects. His claimed improvement in university admissions was not independently verified by Reuters.",
+      "global_impact": "The example raises a practical question for schools facing teacher shortages. Access to a lesson is only the first step toward independent understanding.",
+      "monday_morning": "Observe what students can explain after closing the tablet. Keep teacher review and unaided assessment central to any expansion.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-11-22-beijing-clinical-ai-platform",
+    "date": "2026-11-22",
+    "day_number": 284,
+    "category": "Platforms & Social",
+    "category_emoji": "🌐",
+    "industry_lens": "pharma",
+    "title_en": "Beijing Links Hospital AI Development to Shared Clinical Validation",
+    "title_cn": "北京以共享验证平台连接医院人工智能研发",
+    "source_url": "https://kfqgw.beijing.gov.cn/ywdt/gzdt/202611/t20261118_4950839.html",
+    "source_name": "Yicheng Times via Beijing Economic-Technological Development Area",
+    "tags": [
+      "clinical validation",
+      "hospital networks",
+      "data governance"
+    ],
+    "impact_score": 3,
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "content_type": "daily",
+    "related_signals": [],
+    "body": {
+      "signal": "A November 18 report describes Beijing’s national medical AI pilot base combining data governance, annotation and clinical validation. It reports that a brain CT assistant jointly developed with Tiantan Hospital has reached more than 40 medical institutions.",
+      "china_scale": "The base connects hospitals and developers around clinical requirements. Shared validation services offer a route for institutions to test tools before expanding their use.",
+      "global_impact": "The reported deployment count does not establish patient benefit. Western hospital networks can examine how shared infrastructure affects who can test a tool and challenge its results.",
+      "monday_morning": "Ask clinical teams which validation resources they can share across hospitals. Require local performance evidence before expanding a deployment.",
+      "related_notes": ""
+    }
+  },
+  {
     "id": "2026-11-17-sanya-traffic-drone-service",
     "date": "2026-11-17",
     "day_number": 283,
