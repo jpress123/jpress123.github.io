@@ -1,5 +1,63 @@
 [
   {
+    "id": "2026-11-23-mofcom-ai-token-retail",
+    "date": "2026-11-23",
+    "day_number": 287,
+    "category": "Platforms & Social",
+    "category_emoji": "🌐",
+    "industry_lens": "consumer",
+    "title_en": "China’s Shopping Platforms Add Dedicated AI Token Sections",
+    "title_cn": "电商平台开设词元消费专区",
+    "source_url": "https://www.mofcom.gov.cn/xwfbzt/2026/swbzklxxwfbh2026n11y19r/index.html",
+    "source_name": "Ministry of Commerce of China",
+    "tags": [
+      "AI tokens",
+      "e-commerce",
+      "consumer experience"
+    ],
+    "impact_score": 3,
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "content_type": "daily",
+    "related_signals": [],
+    "body": {
+      "signal": "At its November 19 briefing, the Ministry of Commerce said major e-commerce platforms had introduced dedicated token sections during Singles’ Day. It presented purchasing AI computing access as part of the shopping experience.",
+      "china_scale": "Retail platforms already bring buyers, payments and product discovery together. Adding model usage makes an unfamiliar digital service available through an established purchasing channel.",
+      "global_impact": "The briefing gives no token sales volumes, named vendors or retention data. Retailers elsewhere can examine whether their product descriptions make usage allowances and expiry understandable.",
+      "monday_morning": "Walk through a first-time buyer’s purchase and first use. Check how the seller explains model access, usage limits, refunds and recurring charges.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-11-23-cac-ai-impersonation-enforcement",
+    "date": "2026-11-23",
+    "day_number": 286,
+    "category": "Policy & Governance",
+    "category_emoji": "🏛️",
+    "industry_lens": "entertainment",
+    "title_en": "China Targets AI Impersonation Across Celebrity Content Accounts",
+    "title_cn": "网信部门整治人工智能仿冒公众人物账号",
+    "source_url": "https://www.cac.gov.cn/2026-11/06/c_1795720746219974.htm",
+    "source_name": "Cyberspace Administration of China",
+    "tags": [
+      "digital likeness",
+      "consent",
+      "platform enforcement"
+    ],
+    "impact_score": 3,
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "content_type": "daily",
+    "related_signals": [],
+    "body": {
+      "signal": "In a November 6 enforcement notice, China’s internet regulator reported removing more than 47,000 items and taking action against 3,961 accounts linked to AI impersonation of public figures. Cases included fabricated first-person stories, synthetic voices and manipulated images.",
+      "china_scale": "The notice names accounts on multiple major platforms. Enforcement addresses the distribution and monetisation of impersonations as well as the generated material.",
+      "global_impact": "For talent managers and media companies, consent records must travel with digital likenesses. The notice reports enforcement activity rather than measuring how much impersonation remains online.",
+      "monday_morning": "Trace one licensed digital likeness through production, distribution and promotion. Check who can request removal when an unauthorised version appears.",
+      "related_notes": ""
+    }
+  },
+  {
     "id": "2026-11-22-qinqing-ai-lessons",
     "date": "2026-11-22",
     "day_number": 285,
