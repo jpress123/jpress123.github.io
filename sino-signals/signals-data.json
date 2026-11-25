@@ -1,5 +1,63 @@
 [
   {
+    "date": "2026-11-25",
+    "impact_score": 3,
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "content_type": "daily",
+    "related_signals": [],
+    "id": "2026-11-25-psbc-quant-agents",
+    "day_number": 289,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "industry_lens": "financial services",
+    "title_en": "Postal Savings Bank Integrates Agents Into Quantitative Strategy Development",
+    "title_cn": "邮储银行将智能体融入量化策略研发",
+    "source_url": "https://ningxia.chinapost.com.cn/cn/report/2611/6080-1.htm",
+    "source_name": "China Post News",
+    "tags": [
+      "quantitative research",
+      "banking",
+      "AI agents"
+    ],
+    "body": {
+      "signal": "China Post News reported on November 23 that Postal Savings Bank launched U-Quant.AI for interbank trading. Coding and backtesting agents support strategy development inside its financial markets system. Earlier reporting dates the announcement to November 12.",
+      "china_scale": "The platform brings contract search, market queries, strategy generation, simulation and trading workflows together. It also makes established research methods available as shared system knowledge.",
+      "global_impact": "The corporate report does not disclose independent risk-adjusted performance or approval controls. Faster strategy generation increases the importance of verifying assumptions and execution limits.",
+      "monday_morning": "Follow one generated strategy from research to approval. Identify the human owner of its assumptions, tests and live trading limits.",
+      "related_notes": ""
+    }
+  },
+  {
+    "date": "2026-11-25",
+    "impact_score": 3,
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "content_type": "daily",
+    "related_signals": [],
+    "id": "2026-11-25-shenzhen-ai-feature",
+    "day_number": 288,
+    "category": "Creative & Culture",
+    "category_emoji": "🎨",
+    "industry_lens": "entertainment",
+    "title_en": "Shenzhen Film Team Releases a Feature Built With Generated Images",
+    "title_cn": "深圳团队推出全生成式影像长篇故事片",
+    "source_url": "https://www.chinanews.com/cul/2026/11-23/10736480.shtml",
+    "source_name": "China News Service",
+    "tags": [
+      "film production",
+      "creative leadership",
+      "generated imagery"
+    ],
+    "body": {
+      "signal": "The approximately 90-minute film 奇妙连接 launched on Shenzhen TV, Hunan TV and Mango TV on November 23. China News Service reports that its imagery was generated without conventional location filming.",
+      "china_scale": "The Shenzhen Sunshine Pictures team retained responsibility for script, characters, digital assets, composition and lighting. Location research supplied material for digital city settings.",
+      "global_impact": "Distribution through established broadcasters makes the production process commercially relevant. The report provides no independent audience results or production-cost comparison.",
+      "monday_morning": "Ask a production team to identify who approves generated shots and how location research, rights and revisions are documented.",
+      "related_notes": ""
+    }
+  },
+  {
     "id": "2026-11-23-mofcom-ai-token-retail",
     "date": "2026-11-23",
     "day_number": 287,
