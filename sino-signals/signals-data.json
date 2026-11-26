@@ -1,5 +1,63 @@
 [
   {
+    "id": "2026-11-26-iflyhealth-follow-up",
+    "date": "2026-11-26",
+    "day_number": 291,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "industry_lens": "pharma",
+    "title_en": "iFlyHealth Connects AI Follow-Up With Hospital Escalation",
+    "title_cn": "讯飞医疗将人工智能随访接入医院处置流程",
+    "source_url": "https://paper.people.com.cn/rmrb/pc/content/202611/25/content_30192978.html",
+    "source_name": "People's Daily",
+    "tags": [
+      "patient follow-up",
+      "care coordination",
+      "clinical responsibility"
+    ],
+    "impact_score": 3,
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "content_type": "daily",
+    "related_signals": [],
+    "body": {
+      "signal": "People’s Daily reported on November 25 that iFlyHealth combines patient records and specialist care pathways in a hospital-linked follow-up service. AI supports questions, symptom recording and alerts for clinical attention.",
+      "china_scale": "The reported case connects a family using a mobile mini-program with care managers and a doctor. Staff checked worsening symptoms before the doctor recommended further hospital treatment.",
+      "global_impact": "The article describes one patient experience and company statements, not a controlled clinical evaluation. Its practical lesson is to examine the handoff from an automated alert to a named professional.",
+      "monday_morning": "Trace one high-risk alert from patient submission to clinical response. Check ownership, response times and support for patients who cannot use the app.",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-11-26-xpeng-adaptive-recovery",
+    "date": "2026-11-26",
+    "day_number": 290,
+    "category": "Climate & Sustainability",
+    "category_emoji": "🌱",
+    "industry_lens": "automotive",
+    "title_en": "XPeng Uses AI to Adapt Energy Recovery During Manual Driving",
+    "title_cn": "小鹏以人工智能调节人驾能量回收",
+    "source_url": "https://bbs.xiaopeng.com/article/3981859?tidType=1",
+    "source_name": "XPeng Official Community",
+    "tags": [
+      "energy recovery",
+      "driver experience",
+      "vehicle efficiency"
+    ],
+    "impact_score": 3,
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "content_type": "daily",
+    "related_signals": [],
+    "body": {
+      "signal": "XPeng says its VLA adaptive deceleration feature adjusts energy recovery when a driver releases the accelerator. November 25 event reporting places the first software rollout in December for G9L and MONA L05.",
+      "china_scale": "The company plans to extend the feature to more vehicles through software updates. It integrates road-scene interpretation with vehicle control during manual driving.",
+      "global_impact": "XPeng claims 12.4% greater usable range in congested urban conditions compared with energy recovery switched off. That is not an independently verified gain over conventional regenerative braking.",
+      "monday_morning": "Ask vehicle teams to compare efficiency, predictability and driver override behaviour against existing regeneration modes. Keep the test baseline visible.",
+      "related_notes": ""
+    }
+  },
+  {
     "date": "2026-11-25",
     "impact_score": 3,
     "signal_strength": "emerging",
