@@ -1,5 +1,63 @@
 [
   {
+    "id": "2026-11-27-ccfa-retail-ai-integration",
+    "date": "2026-11-27",
+    "day_number": 293,
+    "category": "Intelligent Production",
+    "category_emoji": "🏭",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 3,
+    "title_en": "China’s Retail Survey Exposes the Gap Between AI Deployment and Scale",
+    "title_cn": "中国零售业调查揭示AI部署与规模化之间的差距",
+    "source_url": "https://www.deloitte.com/cn/zh/Industries/consumer/perspectives/ccfa-gai-white-paper-2026.html",
+    "source_name": "Deloitte China and CCFA",
+    "tags": [
+      "retail",
+      "AI adoption",
+      "organisation design"
+    ],
+    "related_signals": [],
+    "industry_lens": "consumer",
+    "content_type": "daily",
+    "body": {
+      "signal": "Deloitte China’s November 25 summary of its joint CCFA retail study reports that more than half of surveyed enterprises have deployed agents or use public generative AI applications, while more than eight in ten have not reached scale. The research draws on association members and partners, not a representative census of Chinese retail.",
+      "china_scale": "An industry association provides a channel for retailers to compare practices across firms. The report separates technical feasibility, real pilots and scaled operation, with permissions matched to risk.",
+      "global_impact": "Western retailers should test whether a successful demonstration can survive different stores, staff and data conditions. Survey responses and consultant recommendations do not prove revenue gains or independently audited productivity improvements.",
+      "monday_morning": "Thinking futureback about this signal, who would own the work of making an AI process repeatable across stores? Which incentives and decision rights must change, and whose agency is lost if deployment expands before staff can contest its decisions?",
+      "related_notes": ""
+    }
+  },
+  {
+    "id": "2026-11-27-cnaes-education-research-agent",
+    "date": "2026-11-27",
+    "day_number": 292,
+    "category": "Deep Tech & Research",
+    "category_emoji": "🔬",
+    "signal_strength": "emerging",
+    "strength_emoji": "🟠",
+    "impact_score": 3,
+    "title_en": "China’s Education Research Institute Launches a Specialist AI Agent",
+    "title_cn": "中国教科院发布教育科研专业智能体",
+    "source_url": "https://www.cnaes.edu.cn/post/151972",
+    "source_name": "Chinese National Academy of Educational Sciences",
+    "tags": [
+      "education research",
+      "AI agents",
+      "institutional governance"
+    ],
+    "related_signals": [],
+    "industry_lens": "education",
+    "content_type": "daily",
+    "body": {
+      "signal": "On November 15, the Chinese National Academy of Educational Sciences introduced Jiaozhi No. 1 and announced initial pilot partners. Its November 16 report describes a specialist education-research agent using retrieval-augmented generation and education research data, operated by the academy’s audiovisual publishing house.",
+      "china_scale": "The organisational design brings a research institution, a publishing operator and pilot organisations into one programme. This creates a route for testing shared research support, rather than leaving every teacher to assemble separate tools.",
+      "global_impact": "For education leaders elsewhere, the useful comparison is who curates evidence and owns the service. The launch report does not establish independent accuracy, classroom outcomes or widespread adoption.",
+      "monday_morning": "Thinking futureback about this signal, what would it take to connect research support with accountable editorial review? If institutions leave evidence selection to vendors, who sets the questions teachers can ask, and who retains authority to challenge the answers?",
+      "related_notes": ""
+    }
+  },
+  {
     "id": "2026-11-26-iflyhealth-follow-up",
     "date": "2026-11-26",
     "day_number": 291,
